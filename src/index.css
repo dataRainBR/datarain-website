@@ -7,7 +7,12 @@ All colors MUST be HSL.
 */
 
 @layer base {
-  :root {
+:root {
+    /* Glassmorphism */
+    --glass-blur: blur(12px);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
     /* DataRain Color Palette - 60% branco, 30% azul, 10% laranja */
     --background: 0 0% 100%;
     --foreground: 205 63% 35%;

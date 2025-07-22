@@ -21,8 +21,8 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-90" />
         
         <div className="container relative z-10 mx-auto px-4">
-          <nav className="absolute top-0 left-0 right-0 py-6">
-            <div className="container mx-auto px-4 flex justify-between items-center">
+          <nav className="absolute top-0 left-0 right-0 py-6 z-50">
+            <div className="container mx-auto px-4 flex justify-between items-center backdrop-blur-md bg-white/10 rounded-full border border-white/20 py-3 px-6 shadow-lg">
               <Logo className="text-white" />
               <div className="hidden md:flex items-center gap-8">
                 <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Soluções</a>
@@ -36,7 +36,7 @@ const Index = () => {
             </div>
           </nav>
 
-          <div className="max-w-4xl mx-auto text-center text-white mt-20">
+          <div className="max-w-4xl mx-auto text-center text-white mt-20 backdrop-blur-md bg-black/10 p-8 rounded-2xl border border-white/20 shadow-xl">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Parceiro estratégico em soluções de cloud
             </h1>
@@ -48,7 +48,7 @@ const Index = () => {
             <Button variant="hero" size="xl">
               Conheça Nossas Soluções
             </Button>
-            <Button variant="outline" size="xl">
+            <Button variant="glass" size="xl">
               Agende uma Demonstração
             </Button>
           </div>
@@ -65,7 +65,7 @@ const Index = () => {
       {/* Certifications Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="max-w-4xl mx-auto text-center mb-12 backdrop-blur-md bg-white/30 p-6 rounded-2xl border border-white/40 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Líder em Certificações AWS
             </h2>
@@ -74,7 +74,7 @@ const Index = () => {
               garantindo excelência e qualidade em nossos serviços.
             </p>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center backdrop-blur-md bg-white/30 p-6 rounded-2xl border border-white/40 shadow-lg">
             <img 
               src={awsCertifications} 
               alt="AWS Certifications" 
@@ -90,7 +90,7 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
             Alguns de Nossos Projetos
           </h2>
-          <div className="flex justify-center">
+          <div className="flex justify-center backdrop-blur-md bg-white/30 p-8 rounded-2xl border border-white/40 shadow-lg">
             <img 
               src={clientLogos} 
               alt="Client Logos" 

@@ -4,7 +4,7 @@ const CTA = () => {
   return (
     <section className="py-20 bg-primary/5">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center backdrop-blur-md bg-white/40 p-8 rounded-2xl border border-white/40 shadow-lg">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
             Pronto para transformar seu negócio?
           </h2>
@@ -17,8 +17,9 @@ const CTA = () => {
               Agende uma Demonstração
             </Button>
             <Button 
-              variant="outline" 
+              variant="glass" 
               size="xl"
+              className="!bg-primary/10 !text-primary hover:!bg-primary/20"
             >
               Entre em Contato
             </Button>

@@ -68,6 +68,12 @@ export default {
 				'gradient-subtle': 'var(--gradient-subtle)',
 				'gradient-modern': 'var(--gradient-modern)',
 			},
+			backdropBlur: {
+				'glass': 'var(--glass-blur)',
+			},
+			backdropFilter: {
+				'glass': 'var(--glass-blur)',
+			},
 			boxShadow: {
 				'primary': 'var(--shadow-primary)',
 				'accent': 'var(--shadow-accent)',
