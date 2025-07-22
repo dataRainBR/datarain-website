@@ -24,7 +24,7 @@ const AboutSection = () => {
             </Button>
           </div>
           
-          <div className="bg-gradient-hero rounded-lg p-8 text-white">
+          <div className="bg-primary rounded-xl p-8 text-white shadow-lg">
             <h3 className="text-2xl font-bold mb-6">
               <span className="text-accent">LÍDER</span> EM{" "}
               <span className="text-accent">5 DE 6</span> QUADRANTES

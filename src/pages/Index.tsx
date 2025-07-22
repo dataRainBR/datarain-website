@@ -25,12 +25,12 @@ const Index = () => {
             <div className="container mx-auto px-4 flex justify-between items-center">
               <Logo className="text-white" />
               <div className="hidden md:flex items-center gap-8">
-                <a href="#" className="text-white/90 hover:text-white">Soluções</a>
-                <a href="#" className="text-white/90 hover:text-white">Sobre</a>
-                <a href="#" className="text-white/90 hover:text-white">Parceiros</a>
-                <a href="#" className="text-white/90 hover:text-white">Blog</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Soluções</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Sobre</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Parceiros</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Blog</a>
               </div>
-              <Button variant="accent" size="lg">
+              <Button variant="accent" size="lg" className="shadow-lg">
                 Fale Conosco
               </Button>
             </div>
@@ -44,14 +44,14 @@ const Index = () => {
               Entregamos soluções em cloud, dados e inteligência artificial com segurança,
               agilidade e foco em resultados.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Button variant="accent" size="xl">
-                Conheça Nossas Soluções
-              </Button>
-              <Button variant="outline" size="xl" className="bg-white/10 border-white/20 hover:bg-white/20">
-                Agende uma Demonstração
-              </Button>
-            </div>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <Button variant="hero" size="xl">
+              Conheça Nossas Soluções
+            </Button>
+            <Button variant="outline" size="xl">
+              Agende uma Demonstração
+            </Button>
+          </div>
           </div>
         </div>
       </header>
@@ -63,7 +63,7 @@ const Index = () => {
       <ServicesSection />
 
       {/* Certifications Section */}
-      <section className="py-20 bg-gradient-subtle">
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
