@@ -93,17 +93,17 @@ const Index = () => {
           <div className="backdrop-blur-md bg-white/30 p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
             <div className="animate-scroll-infinite flex items-center justify-center">
               <img 
-                src=https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
                 alt="Client Logos" 
                 className="max-w-4xl w-full opacity-80 flex-shrink-0"
               />
               <img 
-                src=https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
                 alt="Client Logos" 
                 className="max-w-4xl w-full opacity-80 flex-shrink-0 ml-8"
               />
               <img 
-                src=https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
                 alt="Client Logos" 
                 className="max-w-4xl w-full opacity-80 flex-shrink-0 ml-8"
               />
