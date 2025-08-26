@@ -24,14 +24,15 @@ const Index = () => {
           <nav className="absolute top-0 left-0 right-0 py-6 z-50">
             <div className="container mx-auto px-4 flex justify-between items-center backdrop-blur-md bg-white/10 rounded-full border border-white/20 py-3 px-6 shadow-lg">
               <Logo className="text-white" />
-              <div className="hidden md:flex items-center gap-8">
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Soluções</a>
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Sobre</a>
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Parceiros</a>
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300">Blog</a>
+              <div className="hidden md:flex items-center gap-4 lg:gap-8">
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Soluções</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Sobre</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Parceiros</a>
+                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Blog</a>
               </div>
-              <Button variant="accent" size="lg" className="shadow-lg">
-                Fale Conosco
+              <Button variant="accent" size="sm" className="shadow-lg md:size-lg">
+                <span className="hidden sm:inline">Fale Conosco</span>
+                <span className="sm:hidden">Contato</span>
               </Button>
             </div>
           </nav>
@@ -74,11 +75,11 @@ const Index = () => {
               garantindo excelência e qualidade em nossos serviços.
             </p>
           </div>
-          <div className="flex justify-center backdrop-blur-md bg-white/30 p-6 rounded-2xl border border-white/40 shadow-lg">
+          <div className="flex justify-center backdrop-blur-md bg-white/30 p-4 md:p-6 rounded-2xl border border-white/40 shadow-lg">
             <img 
               src={awsCertifications} 
               alt="AWS Certifications" 
-              className="max-w-2xl w-full"
+              className="max-w-xs md:max-w-lg lg:max-w-2xl w-full"
             />
           </div>
         </div>
@@ -90,27 +91,27 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
             Alguns de Nossos Projetos
           </h2>
-          <div className="backdrop-blur-md bg-white/30 p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
+          <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
             <div className="animate-scroll-infinite flex items-center justify-center">
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
                 alt="Client Logos" 
-                className="max-w-4xl w-full opacity-80 flex-shrink-0"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
               />
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
                 alt="Client Logos" 
-                className="max-w-4xl w-full opacity-80 flex-shrink-0 ml-8"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0 ml-4 md:ml-8"
               />
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
                 alt="Client Logos" 
-                className="max-w-4xl w-full opacity-80 flex-shrink-0 ml-8"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0 ml-4 md:ml-8"
               /> 
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
                 alt="Client Logos" 
-                className="max-w-4xl w-full opacity-80 flex-shrink-0 ml-8"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0 ml-4 md:ml-8"
               />
             </div>
           </div>
