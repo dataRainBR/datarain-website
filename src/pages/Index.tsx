@@ -92,7 +92,7 @@ const Index = () => {
             Alguns de Nossos Projetos
           </h2>
           <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
-            <div className="animate-scroll-infinite flex items-center justify-center">
+            <div className="animate-scroll-infinite flex items-center gap-8 md:gap-12">
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
                 alt="Client Logos" 
@@ -101,17 +101,38 @@ const Index = () => {
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
                 alt="Client Logos" 
-                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0 ml-4 md:ml-8"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
               />
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
                 alt="Client Logos" 
-                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0 ml-4 md:ml-8"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
               /> 
               <img 
                 src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
                 alt="Client Logos" 
-                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0 ml-4 md:ml-8"
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
+              />
+              {/* Duplicated logos for smoother carousel */}
+              <img 
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
+                alt="Client Logos" 
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
+              />
+              <img 
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
+                alt="Client Logos" 
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
+              />
+              <img 
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
+                alt="Client Logos" 
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
+              /> 
+              <img 
+                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
+                alt="Client Logos" 
+                className="h-12 md:h-16 lg:h-20 w-auto opacity-80 flex-shrink-0"
               />
             </div>
           </div>
