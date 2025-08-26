@@ -90,12 +90,19 @@ const Index = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center mb-12">
             Alguns de Nossos Projetos
           </h2>
-          <div className="flex justify-center backdrop-blur-md bg-white/30 p-8 rounded-2xl border border-white/40 shadow-lg">
-            <img 
-              src={clientLogos} 
-              alt="Client Logos" 
-              className="max-w-4xl w-full opacity-80"
-            />
+          <div className="backdrop-blur-md bg-white/30 p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
+            <div className="animate-scroll-infinite flex items-center justify-center">
+              <img 
+                src={clientLogos} 
+                alt="Client Logos" 
+                className="max-w-4xl w-full opacity-80 flex-shrink-0"
+              />
+              <img 
+                src={clientLogos} 
+                alt="Client Logos" 
+                className="max-w-4xl w-full opacity-80 flex-shrink-0 ml-8"
+              />
+            </div>
           </div>
         </div>
       </section>
