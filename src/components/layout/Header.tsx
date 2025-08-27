@@ -142,7 +142,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         {/* Hero Content */}
         <div className="flex-1 flex items-center relative z-10 pt-20">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-0 items-center min-h-[60vh]">
+            <div className="grid lg:grid-cols-2 gap-1 items-center min-h-[60vh]">
               {/* Left side - Image placeholder */}
               <div className="h-full min-h-[60vh] flex items-center justify-center">
                 <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center shadow-2xl">
@@ -158,7 +158,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
               </div>
 
               {/* Right side - Content */}
-              <div className="flex justify-start">
+              <div className="flex justify-center lg:justify-end">
                 <div className="max-w-xl">
                   <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-10 shadow-2xl">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
