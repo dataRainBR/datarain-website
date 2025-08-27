@@ -44,7 +44,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
               : 'backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-4 md:px-6 shadow-2xl'
           }`}>
             <div className="flex justify-between items-center">
-              <Logo className={isScrolled ? 'text-primary' : 'text-white'} />
+              <Logo variant={isScrolled ? 'original' : 'white'} />
               
               <div className="flex items-center gap-8">
                 {/* Desktop Navigation */}
