@@ -70,9 +70,9 @@ export default function CasesSection() {
                 />
                 <div className="flex items-center h-[350px] relative z-10">
                   <div className="w-full">
-                    <div className="container mx-auto px-4 py-8 md:py-12">
+                    <div className="container mx-auto px-4 py-12 md:py-16">
                       <div className="max-w-4xl text-left">
-                        <div className="mb-8">
+                        <div className="mb-12">
                           <img
                             src={caseStudy.clientLogo}
                             alt={caseStudy.clientName}
@@ -80,11 +80,11 @@ export default function CasesSection() {
                           />
                         </div>
                         
-                        <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                        <h3 className="text-3xl md:text-4xl font-bold mb-12 leading-tight">
                           {caseStudy.title}
                         </h3>
                         
-                        <p className="text-white/90 text-xl leading-relaxed mb-10 max-w-2xl">
+                        <p className="text-white/90 text-xl leading-relaxed mb-12 max-w-2xl">
                           {caseStudy.description}
                         </p>
                         
