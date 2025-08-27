@@ -24,7 +24,7 @@ All colors MUST be HSL.
     --popover-foreground: 194 51% 25%;
 
     /* Main blue #3893af as primary (30% rule) */
-    --primary: 194 51% 45%;
+    --primary: 194 51% 45%; /* #3893af */
     --primary-foreground: 0 0% 100%;
 
     /* Light blue tones for secondary (60% rule) */
