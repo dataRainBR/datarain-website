@@ -25,7 +25,7 @@ const Index = () => {
       <ServicesSection />
 
       {/* Certifications Section */}
-      <CertificationsSection certificationImage={awsCertifications} />
+      <CertificationsSection />
 
       {/* Clients Section */}
       <ClientsSection />
