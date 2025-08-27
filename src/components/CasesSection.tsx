@@ -18,8 +18,8 @@ interface CaseStudy {
 const cases: CaseStudy[] = [
   {
     id: 1,
-    title: "Implementação de DevOps garante economia",
-    description: "A empresa incorpora tecnologia de ponta em suas práticas médicas",
+    title: "DevOps transforma infraestrutura e impulsiona eficiência operacional",
+    description: "A Intelbras precisava estabelecer uma infraestrutura capaz de acompanhar o crescimento e as demandas do seu negócio de energia. Carecia de uma boa abordagem que garantisse escalabilidade, segurança e confiabilidade em seu ambiente de TI.",
     clientName: "Preventiv Senior",
     clientLogo: "/placeholder.svg",
     backgroundImage: "https://datarain.com.br/wp-content/uploads/2024/02/Modernizacao.png"
