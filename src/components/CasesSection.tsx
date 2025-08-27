@@ -62,37 +62,39 @@ export default function CasesSection() {
       >
         <CarouselContent className="-ml-0">
           {cases.map((caseStudy) => (
-            <CarouselItem key={caseStudy.id} className="pl-0 my-4">
-              <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full mx-8 md:mx-16 rounded-lg overflow-hidden">
+            <CarouselItem key={caseStudy.id} className="pl-0">
+              <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full">
                 <div 
                   className="absolute inset-0 bg-cover bg-center opacity-20" 
                   style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                 />
                 <div className="flex items-center min-h-[400px] relative z-10">
-                  <div className="w-full px-8 md:px-16">
-                    <div className="max-w-4xl text-left pl-4 md:pl-8 pr-4 md:pr-8">
-                      <div className="mb-8">
-                        <img
-                          src={caseStudy.clientLogo}
-                          alt={caseStudy.clientName}
-                          className="h-12 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2"
-                        />
+                  <div className="w-full">
+                    <div className="max-w-7xl mx-auto px-6 md:px-12 my-8">
+                      <div className="max-w-4xl text-left">
+                        <div className="mb-8">
+                          <img
+                            src={caseStudy.clientLogo}
+                            alt={caseStudy.clientName}
+                            className="h-12 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2"
+                          />
+                        </div>
+                        
+                        <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                          {caseStudy.title}
+                        </h3>
+                        
+                        <p className="text-white/90 text-xl leading-relaxed mb-10 max-w-2xl">
+                          {caseStudy.description}
+                        </p>
+                        
+                        <button className="text-accent hover:text-accent/80 font-semibold text-lg inline-flex items-center gap-2 transition-colors">
+                          Leia o case completo
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          </svg>
+                        </button>
                       </div>
-                      
-                      <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
-                        {caseStudy.title}
-                      </h3>
-                      
-                      <p className="text-white/90 text-xl leading-relaxed mb-10 max-w-2xl">
-                        {caseStudy.description}
-                      </p>
-                      
-                      <button className="text-accent hover:text-accent/80 font-semibold text-lg inline-flex items-center gap-2 transition-colors">
-                        Leia o case completo
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </button>
                     </div>
                   </div>
                 </div>
