@@ -62,8 +62,8 @@ export default function CasesSection() {
       >
         <CarouselContent className="-ml-0">
           {cases.map((caseStudy) => (
-            <CarouselItem key={caseStudy.id} className="pl-0">
-              <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full">
+            <CarouselItem key={caseStudy.id} className="pl-0 my-4">
+              <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full mx-8 md:mx-16 rounded-lg overflow-hidden">
                 <div 
                   className="absolute inset-0 bg-cover bg-center opacity-20" 
                   style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
