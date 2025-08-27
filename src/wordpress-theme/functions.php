@@ -24,10 +24,13 @@ add_action('after_setup_theme', 'datarain_theme_setup');
 // Enqueue styles and scripts
 function datarain_scripts() {
     // Enqueue main stylesheet
-    wp_enqueue_style('datarain-style', get_stylesheet_uri(), array(), '1.0.0');
+    wp_enqueue_style('datarain-style', get_stylesheet_uri(), array(), wp_get_theme()->get('Version'));
     
     // Enqueue custom JavaScript
-    wp_enqueue_script('datarain-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true);
+    wp_enqueue_script('datarain-script', get_template_directory_uri() . '/js/script.js', array(), wp_get_theme()->get('Version'), true);
+    
+    // Remove jQuery dependency for faster loading
+    wp_deregister_script('jquery');
 }
 add_action('wp_enqueue_scripts', 'datarain_scripts');
 

@@ -3,7 +3,7 @@
 <main id="main" class="site-main">
     <!-- Hero Section -->
     <section class="hero-section">
-        <img src="<?php echo get_theme_file_uri('/assets/hero-background.jpg'); ?>" alt="DataRain Hero Background" class="hero-bg" />
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/hero-background.jpg" alt="DataRain Hero Background" class="hero-bg" />
         <div class="hero-overlay"></div>
         
         <!-- Navigation -->
@@ -15,7 +15,7 @@
                         <?php if (has_custom_logo()) : ?>
                             <?php the_custom_logo(); ?>
                         <?php else : ?>
-                            <img src="<?php echo get_theme_file_uri('/assets/datarain-logo.png'); ?>" alt="DataRain" class="logo" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/datarain-logo.png" alt="DataRain" class="logo" />
                         <?php endif; ?>
                     </div>
                     
@@ -49,7 +49,7 @@
                     <!-- Left side - Image -->
                     <div class="hero-image-container">
                         <div class="hero-image-card">
-                            <img src="<?php echo get_theme_file_uri('/assets/hero-people-technology.jpg'); ?>" alt="Pessoas felizes com tecnologia e ícones de cloud" class="hero-image" />
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/hero-people-technology.jpg" alt="Pessoas felizes com tecnologia e ícones de cloud" class="hero-image" />
                         </div>
                     </div>
                     
