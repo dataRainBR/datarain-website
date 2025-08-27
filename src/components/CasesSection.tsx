@@ -60,17 +60,17 @@ export default function CasesSection() {
         }}
         className="w-full relative"
       >
-        <CarouselContent>
+        <CarouselContent className="-ml-0">
           {cases.map((caseStudy) => (
-            <CarouselItem key={caseStudy.id}>
-              <div className="relative bg-gradient-to-r from-primary/95 to-primary">
+            <CarouselItem key={caseStudy.id} className="pl-0">
+              <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full">
                 <div 
                   className="absolute inset-0 bg-cover bg-center opacity-20" 
                   style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                 />
                 <div className="flex items-center min-h-[400px] relative z-10">
-                  <div className="container mx-auto px-8 md:px-16">
-                    <div className="w-full max-w-4xl text-left pl-4 md:pl-8">
+                  <div className="w-full px-8 md:px-16">
+                    <div className="max-w-4xl text-left pl-4 md:pl-8 pr-4 md:pr-8">
                       <div className="mb-8">
                         <img
                           src={caseStudy.clientLogo}
