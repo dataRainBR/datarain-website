@@ -153,72 +153,51 @@ const Index = () => {
             Alguns de Nossos Projetos
           </h2>
           <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
-            <div className="animate-scroll-infinite flex items-center gap-6 md:gap-8 lg:gap-12 whitespace-nowrap">
-              {/* First set of logos */}
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              /> 
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              
-              {/* Second set of logos (duplicate) */}
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              /> 
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              
-              {/* Third set of logos (duplicate) */}
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              /> 
-              <img 
-                src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
-                alt="Client Logos" 
-                className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-              />
+            <div className="relative">
+              <div className="marquee flex items-center gap-6 md:gap-8 lg:gap-12">
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                />
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                />
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                /> 
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                />
+              </div>
+              <div className="marquee2 flex items-center gap-6 md:gap-8 lg:gap-12">
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                />
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                />
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                /> 
+                <img 
+                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
+                  alt="Client Logos" 
+                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
+                />
+              </div>
             </div>
           </div>
         </div>
