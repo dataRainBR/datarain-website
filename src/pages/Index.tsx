@@ -4,6 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 import awsCertifications from "@/assets/aws-certifications.png";
 import clientLogos from "@/assets/client-logos.png";
 import AboutSection from "@/components/AboutSection";
+import CasesSection from "@/components/CasesSection";
 import ServicesSection from "@/components/ServicesSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
@@ -85,6 +86,9 @@ const Index = () => {
 
       {/* About Section */}
       <AboutSection />
+
+      {/* Cases Section */}
+      <CasesSection />
 
       {/* Services Section */}
       <ServicesSection />
