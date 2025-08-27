@@ -52,7 +52,7 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="py-16 text-white relative overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 text-white relative overflow-hidden">
       <Carousel
         opts={{
           align: "center",
@@ -67,30 +67,31 @@ export default function CasesSection() {
                 <div 
                   className="absolute inset-0 bg-cover bg-center opacity-20" 
                   style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
-                />
-                <div className="flex items-center h-[350px] relative z-10">
+                 />
+                <div className="flex items-center h-[300px] sm:h-[350px] md:h-[400px] relative z-10">
                   <div className="w-full">
-                    <div className="container mx-auto px-4 py-8 md:py-12">
+                    <div className="container mx-auto px-4 py-6 md:py-8 lg:py-12">
                       <div className="max-w-5xl text-left">
-                        <div className="mb-8">
+                        <div className="mb-6 md:mb-8">
                           <img
                             src={caseStudy.clientLogo}
                             alt={caseStudy.clientName}
-                            className="h-12 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2"
+                            className="h-8 md:h-12 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 md:px-4 py-2"
                           />
                         </div>
                         
-                        <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 leading-tight">
                           {caseStudy.title}
                         </h3>
                         
-                        <p className="text-white/90 text-xl leading-relaxed mb-10 max-w-3xl">
+                        <p className="text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-3xl">
                           {caseStudy.description}
                         </p>
                         
-                        <button className="text-accent hover:text-accent/80 font-semibold text-lg inline-flex items-center gap-2 transition-colors">
-                          Leia o case completo
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button className="text-accent hover:text-accent/80 font-semibold text-base md:text-lg inline-flex items-center gap-2 transition-colors">
+                          <span className="hidden sm:inline">Leia o case completo</span>
+                          <span className="sm:hidden">Ver case</span>
+                          <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                           </svg>
                         </button>
@@ -103,15 +104,15 @@ export default function CasesSection() {
           ))}
         </CarouselContent>
         
-        <CarouselPrevious className="left-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-12 w-12" />
-        <CarouselNext className="right-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-12 w-12" />
+        <CarouselPrevious className="left-2 md:left-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
+        <CarouselNext className="right-2 md:right-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
         
         {/* Indicadores de paginação */}
-        <div className="flex justify-center gap-3 mt-8">
+        <div className="flex justify-center gap-2 md:gap-3 mt-6 md:mt-8">
           {cases.map((_, index) => (
             <div
               key={index}
-              className="w-3 h-3 rounded-full bg-white/40"
+              className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white/40"
             />
           ))}
         </div>
