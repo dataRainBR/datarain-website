@@ -13,48 +13,48 @@ All colors MUST be HSL.
     --glass-border: 1px solid rgba(255, 255, 255, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    /* Color Palette with #3893af - 60% neutral, 30% blue, 10% accent */
+    /* DataRain Color Palette - 60% branco, 30% azul, 10% laranja */
     --background: 0 0% 100%;
-    --foreground: 194 51% 25%;
+    --foreground: 205 63% 35%;
 
     --card: 0 0% 100%;
-    --card-foreground: 194 51% 25%;
+    --card-foreground: 205 63% 35%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 194 51% 25%;
+    --popover-foreground: 205 63% 35%;
 
-    /* Main blue #3893af as primary (30% rule) */
-    --primary: 194 51% 45%; /* #3893af */
+    /* Azul DataRain como cor primária (#3893af) */
+    --primary: 205 63% 35%;
     --primary-foreground: 0 0% 100%;
 
-    /* Light blue tones for secondary (60% rule) */
-    --secondary: 194 30% 97%;
-    --secondary-foreground: 194 51% 25%;
+    /* Tons mais claros do azul para secondary */
+    --secondary: 205 40% 96%;
+    --secondary-foreground: 205 63% 35%;
 
-    --muted: 194 20% 96%;
-    --muted-foreground: 194 25% 40%;
+    --muted: 205 20% 95%;
+    --muted-foreground: 205 20% 45%;
 
-    /* Bright accent color (10% rule) */
-    --accent: 196 85% 60%;
+    /* Laranja DataRain como accent (#f78504) */
+    --accent: 25 95% 49%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 194 25% 88%;
-    --input: 194 25% 88%;
-    --ring: 194 51% 45%;
+    --border: 205 30% 90%;
+    --input: 205 30% 90%;
+    --ring: 205 63% 35%;
 
-    /* Gradients with new blue palette */
-    --gradient-hero: linear-gradient(135deg, hsl(194, 51%, 45%) 0%, hsl(194, 65%, 55%) 35%, hsl(196, 85%, 60%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(194, 30%, 98%) 100%);
-    --gradient-modern: linear-gradient(to right, hsl(194, 51%, 45%) 0%, hsl(194, 65%, 55%) 100%);
+    /* Gradientes DataRain */
+    --gradient-hero: linear-gradient(135deg, hsl(205, 63%, 35%) 0%, hsl(190, 70%, 45%) 35%, hsl(25, 95%, 49%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(205, 40%, 98%) 100%);
+    --gradient-modern: linear-gradient(to right, hsl(205, 63%, 35%) 0%, hsl(190, 70%, 45%) 100%);
     
-    /* Shadows with new blue */
-    --shadow-primary: 0 10px 30px -10px hsl(194 51% 45% / 0.3);
-    --shadow-accent: 0 0 40px hsl(196 85% 60% / 0.2);
+    /* Sombras com cores da marca */
+    --shadow-primary: 0 10px 30px -10px hsl(205 63% 35% / 0.3);
+    --shadow-accent: 0 0 40px hsl(25 95% 49% / 0.2);
     
-    /* Smooth transitions */
+    /* Transições suaves */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.75rem;
@@ -77,38 +77,38 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 194 51% 8%;
+    --background: 205 63% 15%;
     --foreground: 0 0% 100%;
 
-    --card: 194 51% 12%;
+    --card: 205 63% 20%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 194 51% 8%;
+    --popover: 205 63% 15%;
     --popover-foreground: 0 0% 100%;
 
-    /* Dark mode colors with #3893af palette */
-    --primary: 194 51% 65%;
-    --primary-foreground: 194 51% 8%;
+    /* Inverted colors in dark mode */
+    --primary: 0 0% 100%;
+    --primary-foreground: 205 63% 35%;
 
-    --secondary: 194 40% 18%;
+    --secondary: 205 50% 25%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 194 30% 15%;
-    --muted-foreground: 194 20% 75%;
+    --muted: 205 40% 25%;
+    --muted-foreground: 205 20% 80%;
 
-    /* Brighter accent in dark mode */
-    --accent: 196 85% 70%;
-    --accent-foreground: 194 51% 8%;
+    /* Laranja mais vibrante no dark mode */
+    --accent: 25 95% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 194 30% 20%;
-    --input: 194 30% 20%;
-    --ring: 194 51% 65%;
+    --border: 205 40% 25%;
+    --input: 205 40% 25%;
+    --ring: 0 0% 100%;
     
-    /* Dark mode gradients with new blue */
-    --gradient-hero: linear-gradient(135deg, hsl(194, 51%, 20%) 0%, hsl(194, 65%, 30%) 50%, hsl(196, 85%, 40%) 100%);
+    /* Gradientes no dark mode */
+    --gradient-hero: linear-gradient(135deg, hsl(205, 63%, 25%) 0%, hsl(190, 70%, 30%) 50%, hsl(25, 95%, 35%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
