@@ -132,7 +132,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative min-h-[85vh] flex flex-col overflow-hidden">
+      <header className="relative min-h-[95vh] flex flex-col overflow-hidden">
         <img 
           src={backgroundImage} 
           alt="DataRain Hero Background" 
@@ -141,11 +141,11 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         <div className="absolute inset-0 bg-gradient-hero opacity-95" />
         
         {/* Hero Content */}
-        <div className="flex-1 flex items-center relative z-10 pt-20">
+        <div className="flex-1 flex items-center relative z-10 pt-32">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[60vh]">
+            <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[65vh]">
               {/* Left side - Image placeholder */}
-              <div className="h-full min-h-[60vh] flex items-center justify-end pr-2">
+              <div className="h-full min-h-[65vh] flex items-center justify-end pr-2">
                 <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 overflow-hidden shadow-2xl">
                   <img 
                     src={heroPeopleImage} 
