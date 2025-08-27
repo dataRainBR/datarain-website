@@ -1,4 +1,3 @@
-
 import {
   Carousel,
   CarouselContent,
@@ -53,8 +52,7 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="py-8 bg-gradient-to-r from-primary/95 to-primary text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-20" />
+    <section className="py-8 text-white relative overflow-hidden">
       <Carousel
         opts={{
           align: "center",
@@ -62,43 +60,49 @@ export default function CasesSection() {
         }}
         className="w-full relative"
       >
-          <CarouselContent>
-            {cases.map((caseStudy) => (
-              <CarouselItem key={caseStudy.id}>
-                <div className="flex items-center min-h-[260px]">
+        <CarouselContent>
+          {cases.map((caseStudy) => (
+            <CarouselItem key={caseStudy.id}>
+              <div className="relative bg-gradient-to-r from-primary/95 to-primary">
+                <div 
+                  className="absolute inset-0 bg-cover bg-center opacity-20" 
+                  style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
+                />
+                <div className="flex items-center min-h-[260px] relative z-10">
                   <div className="container mx-auto px-4">
                     <div className="w-full md:w-2/3 text-left pr-8 md:pr-24">
-                    <div className="mb-6">
-                      <img
-                        src={caseStudy.clientLogo}
-                        alt={caseStudy.clientName}
-                        className="h-10 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2"
-                      />
-                    </div>
-                    
-                    <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
-                      {caseStudy.title}
-                    </h3>
-                    
-                    <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-2xl">
-                      {caseStudy.description}
-                    </p>
-                    
-                    <button className="text-accent hover:text-accent/80 font-semibold inline-flex items-center gap-2 transition-colors">
-                      Leia o case completo
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </button>
+                      <div className="mb-6">
+                        <img
+                          src={caseStudy.clientLogo}
+                          alt={caseStudy.clientName}
+                          className="h-10 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2"
+                        />
+                      </div>
+                      
+                      <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                        {caseStudy.title}
+                      </h3>
+                      
+                      <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-2xl">
+                        {caseStudy.description}
+                      </p>
+                      
+                      <button className="text-accent hover:text-accent/80 font-semibold inline-flex items-center gap-2 transition-colors">
+                        Leia o case completo
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          
-          <CarouselPrevious className="left-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
-          <CarouselNext className="right-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        
+        <CarouselPrevious className="left-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+        <CarouselNext className="right-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
         
         {/* Indicadores de paginação */}
         <div className="flex justify-center gap-2 mt-6">
