@@ -96,7 +96,7 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
 
           {/* Right side - Certification image */}
           <div className="lg:col-span-5 flex justify-center">
-            <div className="relative group max-w-sm">
+            <div className="relative group w-full">
               <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/70 to-white/50 p-4 md:p-6 rounded-2xl border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
