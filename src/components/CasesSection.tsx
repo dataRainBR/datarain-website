@@ -70,7 +70,7 @@ export default function CasesSection() {
                 />
                 <div className="flex items-center min-h-[400px] relative z-10">
                   <div className="w-full">
-                    <div className="max-w-7xl mx-auto px-6 md:px-12 my-8">
+                    <div className="container mx-auto px-4 py-8 md:py-12">
                       <div className="max-w-4xl text-left">
                         <div className="mb-8">
                           <img
