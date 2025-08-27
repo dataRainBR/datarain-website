@@ -12,7 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <header className="relative min-h-screen flex flex-col overflow-hidden">
+      <header className="relative min-h-[85vh] flex flex-col overflow-hidden">
         <img 
           src={heroBackground} 
           alt="DataRain Hero Background" 
