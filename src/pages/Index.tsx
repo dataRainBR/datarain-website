@@ -12,47 +12,88 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <header className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+      <header className="relative min-h-screen flex flex-col overflow-hidden">
         <img 
           src={heroBackground} 
           alt="DataRain Hero Background" 
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-95" />
         
-        <div className="container relative z-10 mx-auto px-4">
-          <nav className="absolute top-0 left-0 right-0 py-6 z-50">
-            <div className="container mx-auto px-4 flex justify-between items-center backdrop-blur-md bg-white/10 rounded-full border border-white/20 py-3 px-6 shadow-lg">
-              <Logo className="text-white" />
-              <div className="hidden md:flex items-center gap-4 lg:gap-8">
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Soluções</a>
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Sobre</a>
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Parceiros</a>
-                <a href="#" className="text-white/90 hover:text-white transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent hover:after:w-full after:transition-all after:duration-300 text-sm lg:text-base">Blog</a>
+        {/* Navigation */}
+        <nav className="relative z-50 pt-6">
+          <div className="container mx-auto px-4">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-6 shadow-2xl">
+              <div className="flex justify-between items-center">
+                <Logo className="text-white" />
+                <div className="hidden lg:flex items-center gap-8">
+                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
+                    <span className="relative z-10">Soluções</span>
+                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
+                  </a>
+                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
+                    <span className="relative z-10">Sobre</span>
+                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
+                  </a>
+                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
+                    <span className="relative z-10">Parceiros</span>
+                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
+                  </a>
+                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
+                    <span className="relative z-10">Blog</span>
+                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
+                  </a>
+                </div>
+                <Button variant="accent" size="sm" className="shadow-xl backdrop-blur-sm">
+                  <span className="hidden sm:inline">Fale Conosco</span>
+                  <span className="sm:hidden">Contato</span>
+                </Button>
               </div>
-              <Button variant="accent" size="sm" className="shadow-lg md:size-lg">
-                <span className="hidden sm:inline">Fale Conosco</span>
-                <span className="sm:hidden">Contato</span>
-              </Button>
             </div>
-          </nav>
-
-          <div className="max-w-4xl mx-auto text-center text-white mt-20 backdrop-blur-md bg-black/10 p-8 rounded-2xl border border-white/20 shadow-xl">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Parceiro estratégico em soluções de cloud
-            </h1>
-            <p className="text-xl md:text-2xl mb-12 text-white/90">
-              Entregamos soluções em cloud, dados e inteligência artificial com segurança,
-              agilidade e foco em resultados.
-            </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button variant="hero" size="xl">
-              Conheça Nossas Soluções
-            </Button>
-            <Button variant="glass" size="xl">
-              Agende uma Demonstração
-            </Button>
           </div>
+        </nav>
+
+        {/* Hero Content */}
+        <div className="flex-1 flex items-center justify-center relative z-10">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-5xl mx-auto">
+              {/* Main Title Card */}
+              <div className="backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl mb-8">
+                <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                  Parceiro estratégico em
+                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
+                </h1>
+                <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                  Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
+                  agilidade e foco em resultados.
+                </p>
+              </div>
+
+              {/* Action Cards */}
+              <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                <div className="backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 p-6 group hover:bg-white/10 transition-all duration-300">
+                  <Button variant="hero" size="xl" className="w-full shadow-xl">
+                    Conheça Nossas Soluções
+                  </Button>
+                </div>
+                <div className="backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 p-6 group hover:bg-white/10 transition-all duration-300">
+                  <Button variant="glass" size="xl" className="w-full shadow-xl">
+                    Agende uma Demonstração
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Accent */}
+        <div className="relative z-10 pb-8">
+          <div className="container mx-auto px-4">
+            <div className="backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-6 max-w-2xl mx-auto">
+              <p className="text-white/70 text-center text-sm md:text-base">
+                ✨ Reconhecida como líder em 5 de 6 quadrantes no ecossistema AWS
+              </p>
+            </div>
           </div>
         </div>
       </header>
