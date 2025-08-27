@@ -144,8 +144,8 @@ const Header = ({ backgroundImage }: HeaderProps) => {
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[60vh]">
               {/* Left side - Image placeholder */}
-              <div className="flex justify-center lg:justify-start">
-                <div className="w-80 h-80 lg:w-96 lg:h-96 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center shadow-2xl">
+              <div className="h-full min-h-[60vh] flex items-center justify-center">
+                <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center shadow-2xl">
                   <div className="text-white/60 text-center">
                     <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
                       <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
