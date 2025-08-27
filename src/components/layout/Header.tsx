@@ -161,12 +161,11 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                   <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-10 shadow-2xl">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
                       Seus desafios de
-                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">tecnologia</span>
+                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> tecnologia </span>
                       estão travando o seu crescimento?
                     </h1>
                     <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 leading-relaxed">
-                      Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
-                      agilidade e foco em resultados.
+A dataRain ajuda empresas a vencer os gargalos que impedem escala, performance e inovação.
                     </p>
 
                     <div className="flex flex-col gap-3 md:gap-4">
