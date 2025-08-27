@@ -22,7 +22,7 @@ const cases: CaseStudy[] = [
     description: "A empresa incorpora tecnologia de ponta em suas práticas médicas",
     clientName: "Preventiv Senior",
     clientLogo: "/placeholder.svg",
-    backgroundImage: "/placeholder.svg"
+    backgroundImage: "https://datarain.com.br/wp-content/uploads/2024/02/Modernizacao.png"
   },
   {
     id: 2,
