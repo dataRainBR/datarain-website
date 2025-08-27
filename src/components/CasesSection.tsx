@@ -80,11 +80,11 @@ export default function CasesSection() {
                           />
                         </div>
                         
-                        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 lg:mb-8 leading-tight">
+                        <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 lg:mb-8 leading-tight">
                           {caseStudy.title}
                         </h3>
                         
-                        <p className="text-white/90 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-3xl">
+                        <p className="text-white/90 text-base sm:text-lg md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-3xl">
                           {caseStudy.description}
                         </p>
                         
