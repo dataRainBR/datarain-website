@@ -62,7 +62,7 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
 
         <div className="grid lg:grid-cols-12 gap-10 items-stretch">
           {/* Left side - Achievements cards */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 min-h-0">
             <div className="grid md:grid-cols-2 gap-6">
               {achievements.map((achievement, index) => (
                 <div 
@@ -94,15 +94,15 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
           </div>
 
           {/* Right side - Certification image */}
-          <div className="lg:col-span-5 flex h-full justify-center lg:justify-start">
-            <div className="relative group w-full h-full">
-              <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/70 to-white/50 p-6 md:p-8 rounded-2xl border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500 h-full flex items-center justify-center overflow-hidden">
+          <div className="lg:col-span-5 flex justify-center lg:justify-start min-h-0">
+            <div className="relative group w-full h-full min-h-0">
+              <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/70 to-white/50 p-6 md:p-8 rounded-2xl border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500 h-full flex items-center justify-center overflow-hidden min-h-0">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
                   src={certificationImage} 
                   alt="AWS Certifications e Conquistas" 
                   loading="lazy"
-                  className="relative w-full h-full object-fill rounded-xl shadow-lg transition-transform duration-500"
+                  className="relative w-full h-full max-h-full object-fill rounded-xl shadow-lg transition-transform duration-500"
                 />
                 
                 {/* Floating badge */}
