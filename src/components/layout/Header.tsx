@@ -44,9 +44,9 @@ const Header = ({ backgroundImage }: HeaderProps) => {
               : 'backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-4 md:px-6 shadow-2xl'
           }`}>
             <div className="flex justify-between items-center">
+              <Logo className={isScrolled ? 'text-primary' : 'text-white'} />
+              
               <div className="flex items-center gap-8">
-                <Logo className={isScrolled ? 'text-primary' : 'text-white'} />
-                
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center gap-6">
                   {navItems.map((item) => (
@@ -77,29 +77,29 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                 >
                   Fale Conosco
                 </Button>
-              </div>
 
-              {/* Mobile menu button & Mobile CTA */}
-              <div className="flex items-center gap-4 lg:hidden">
-                <Button 
-                  variant={isScrolled ? "default" : "accent"} 
-                  size="sm" 
-                  className="shadow-xl backdrop-blur-sm"
-                >
-                  <span className="hidden sm:inline">Fale Conosco</span>
-                  <span className="sm:hidden">Contato</span>
-                </Button>
-                
-                <button
-                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className={`p-2 rounded-lg transition-colors ${
-                    isScrolled
-                      ? 'text-foreground hover:bg-muted'
-                      : 'text-white hover:bg-white/10'
-                  }`}
-                >
-                  {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                </button>
+                {/* Mobile menu button & Mobile CTA */}
+                <div className="flex items-center gap-4 lg:hidden">
+                  <Button 
+                    variant={isScrolled ? "default" : "accent"} 
+                    size="sm" 
+                    className="shadow-xl backdrop-blur-sm"
+                  >
+                    <span className="hidden sm:inline">Fale Conosco</span>
+                    <span className="sm:hidden">Contato</span>
+                  </Button>
+                  
+                  <button
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    className={`p-2 rounded-lg transition-colors ${
+                      isScrolled
+                        ? 'text-foreground hover:bg-muted'
+                        : 'text-white hover:bg-white/10'
+                    }`}
+                  >
+                    {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                  </button>
+                </div>
               </div>
             </div>
             
