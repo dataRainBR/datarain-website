@@ -178,7 +178,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                   <Button 
                     variant="outline" 
                     size="xl" 
-                    className="flex-1 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    className="flex-1 border-2 text-white bg-[#3893af] hover:bg-[#2d7a94] border-[#3893af] hover:border-[#2d7a94] shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                   >
                     <span className="hidden sm:inline">Agende uma Demonstração</span>
                     <span className="sm:hidden">Demonstração</span>
