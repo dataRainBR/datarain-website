@@ -47,22 +47,22 @@ const Header = ({ backgroundImage }: HeaderProps) => {
               <Logo className={isScrolled ? 'text-primary' : 'text-white'} />
               
               {/* Desktop Navigation */}
-              <div className="hidden lg:flex items-center gap-8">
+              <div className="hidden lg:flex items-center gap-6">
                 {navItems.map((item) => (
                   <a 
                     key={item.label}
                     href={item.href} 
-                    className={`transition-all duration-300 relative group ${
+                    className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
                       isScrolled 
                         ? 'text-foreground/80 hover:text-primary' 
                         : 'text-white/80 hover:text-white'
                     }`}
                   >
                     <span className="relative z-10">{item.label}</span>
-                    <div className={`absolute inset-0 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ${
+                    <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
                       isScrolled
-                        ? 'bg-primary/10'
-                        : 'bg-white/10 backdrop-blur-sm'
+                        ? 'bg-primary/10 border border-primary/20'
+                        : 'bg-white/10 backdrop-blur-sm border border-white/20'
                     }`}></div>
                   </a>
                 ))}
