@@ -52,7 +52,7 @@ const CertificationsSection = () => {
             Algumas de nossas conquistas
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4 rounded-full"></div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto whitespace-nowrap">
             Reconhecimento e excelência que nos posicionam como <span className="text-primary font-semibold">líderes em transformação digital</span>
           </p>
         </div>
