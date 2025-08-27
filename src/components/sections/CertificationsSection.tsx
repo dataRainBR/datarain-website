@@ -61,19 +61,19 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+        <div className="grid lg:grid-cols-12 gap-12 items-stretch">
           {/* Left side - Achievements cards */}
           <div className="lg:col-span-7">
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-6 h-full">
               {achievements.map((achievement, index) => (
                 <div 
                   key={index}
-                  className="group relative p-6 bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-xl rounded-2xl border border-white/50 shadow-xl hover:shadow-accent/20 transition-all duration-500 hover:-translate-y-1 hover:rotate-1"
+                  className="group relative p-6 bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-xl rounded-2xl border border-white/50 shadow-xl hover:shadow-accent/20 transition-all duration-500 hover:-translate-y-1 hover:rotate-1 flex flex-col h-full"
                 >
                   {/* Gradient border effect */}
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
                   
-                  <div className="relative">
+                  <div className="relative flex-1 flex flex-col">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform duration-300">
                       <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-primary group-hover:to-accent group-hover:text-white transition-all duration-300">
                         {achievement.icon}
@@ -82,7 +82,7 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
                     <h3 className="text-lg font-bold text-primary mb-2 group-hover:text-accent transition-colors duration-300">
                       {achievement.title}
                     </h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">
+                    <p className="text-muted-foreground text-sm leading-relaxed flex-1">
                       {achievement.description}
                     </p>
                   </div>
@@ -95,9 +95,9 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
           </div>
 
           {/* Right side - Certification image */}
-          <div className="lg:col-span-5 flex justify-center">
-            <div className="relative group">
-              <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/70 to-white/50 p-6 md:p-8 rounded-2xl border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105">
+          <div className="lg:col-span-5 flex justify-center h-full">
+            <div className="relative group h-full flex flex-col">
+              <div className="relative backdrop-blur-xl bg-gradient-to-br from-white/70 to-white/50 p-6 md:p-8 rounded-2xl border border-white/60 shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105 flex-1 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <img 
                   src={certificationImage} 
