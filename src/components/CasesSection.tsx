@@ -68,7 +68,7 @@ export default function CasesSection() {
                           <img
                             src={caseStudy.clientLogo}
                             alt={caseStudy.clientName}
-                            className="h-8 md:h-12 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 md:px-4 py-2"
+                            className="h-10 md:h-16 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 md:px-4 py-2"
                           />
                         </div>
                         
