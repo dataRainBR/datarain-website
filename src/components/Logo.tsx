@@ -1,7 +1,3 @@
-import dataRainLogoOriginal from '@/assets/datarain-logo-original.png';
-import dataRainLogoBlack from '@/assets/datarain-logo-black.png';
-import dataRainLogoWhite from '@/assets/datarain-logo-white.png';
-
 interface LogoProps {
   className?: string;
   variant?: 'original' | 'black' | 'white';
@@ -9,9 +5,9 @@ interface LogoProps {
 
 const Logo = ({ className = "", variant = 'original' }: LogoProps) => {
   const logoSrc = {
-    original: dataRainLogoOriginal,
-    black: dataRainLogoBlack,
-    white: dataRainLogoWhite
+    original: 'https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/DR_LOGO_ORIGINAL.png',
+    black: 'https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/DR_LOGO_BLACK+(1).png',
+    white: 'https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/DR_LOGO_WHITE.png'
   }[variant];
 
   return (
