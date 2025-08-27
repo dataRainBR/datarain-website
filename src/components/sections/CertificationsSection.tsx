@@ -51,9 +51,6 @@ const CertificationsSection = ({ certificationImage }: CertificationsSectionProp
       <div className="container mx-auto px-4 relative z-10">
         {/* Header with distinctive styling */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-primary to-accent rounded-xl mb-4">
-            <Trophy className="h-6 w-6 text-white" />
-          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-6 leading-tight">
             Algumas de nossas conquistas
           </h2>
