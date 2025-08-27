@@ -69,8 +69,8 @@ export default function CasesSection() {
                   style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                 />
                 <div className="flex items-center min-h-[400px] relative z-10">
-                  <div className="container mx-auto px-6">
-                    <div className="w-full max-w-3xl text-left">
+                  <div className="container mx-auto px-8 md:px-16">
+                    <div className="w-full max-w-4xl text-left pl-4 md:pl-8">
                       <div className="mb-8">
                         <img
                           src={caseStudy.clientLogo}
