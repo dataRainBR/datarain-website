@@ -132,53 +132,70 @@ const Header = ({ backgroundImage }: HeaderProps) => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative min-h-[95vh] flex flex-col overflow-hidden">
-        <img 
-          src={backgroundImage} 
-          alt="DataRain Hero Background" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-hero opacity-95" />
+      <header className="relative min-h-[95vh] flex flex-col overflow-hidden bg-white">
+        {/* Modern Background with Splashes */}
+        <div className="absolute inset-0">
+          {/* Blue splashes */}
+          <div className="absolute top-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-32 right-32 w-64 h-64 bg-blue-600/15 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/2 right-0 w-48 h-48 bg-blue-400/20 rounded-full blur-xl"></div>
+          
+          {/* Orange splashes */}
+          <div className="absolute top-40 left-20 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute bottom-20 left-10 w-72 h-72 bg-orange-400/15 rounded-full blur-2xl"></div>
+          <div className="absolute top-20 left-1/3 w-56 h-56 bg-orange-600/20 rounded-full blur-xl"></div>
+          
+          {/* Additional subtle elements */}
+          <div className="absolute top-1/3 left-1/2 w-32 h-32 bg-gradient-to-br from-blue-400/10 to-orange-400/10 rounded-full blur-xl"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-40 h-40 bg-gradient-to-tl from-orange-500/10 to-blue-500/10 rounded-full blur-2xl"></div>
+        </div>
         
         {/* Hero Content */}
         <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[65vh]">
-              {/* Left side - Image placeholder */}
-              <div className="h-full min-h-[65vh] flex items-center justify-end pr-2">
-                <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 overflow-hidden shadow-2xl">
-                  <img 
-                    src={heroPeopleImage} 
-                    alt="Pessoas felizes com tecnologia e ícones de cloud" 
-                    className="w-full h-full object-cover"
-                  />
+            <div className="max-w-4xl">
+              {/* Main Content */}
+              <div className="text-left">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+                  <span className="text-gray-900">Seus desafios de</span>
+                  <br />
+                  <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent"> tecnologia </span>
+                  <span className="text-gray-900">estão travando</span>
+                  <br />
+                  <span className="text-gray-900">o seu </span>
+                  <span className="bg-gradient-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">crescimento?</span>
+                </h1>
+                
+                <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-10 md:mb-12 leading-relaxed max-w-3xl">
+                  A dataRain ajuda empresas a vencer os gargalos que impedem escala, performance e inovação.
+                </p>
+
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 max-w-2xl">
+                  <Button 
+                    size="xl" 
+                    className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <span className="hidden sm:inline">Conheça Nossas Soluções</span>
+                    <span className="sm:hidden">Nossas Soluções</span>
+                  </Button>
+                  
+                  <Button 
+                    variant="outline" 
+                    size="xl" 
+                    className="flex-1 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <span className="hidden sm:inline">Agende uma Demonstração</span>
+                    <span className="sm:hidden">Demonstração</span>
+                  </Button>
                 </div>
-              </div>
 
-              {/* Right side - Content */}
-              <div className="flex justify-start pl-2">
-                <div className="max-w-xl">
-                  <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-10 shadow-2xl">
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                      Seus desafios de
-                      <span className="bg-gradient-to-r from-[#f78504] to-[#ff9524] bg-clip-text text-transparent"> tecnologia </span>
-                      estão travando o seu crescimento?
-                    </h1>
-                    <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 leading-relaxed">
-A dataRain ajuda empresas a vencer os gargalos que impedem escala, performance e inovação.
-                    </p>
-
-                    <div className="flex flex-col gap-3 md:gap-4">
-                      <Button variant="hero" size="xl" className="w-full shadow-xl">
-                        <span className="hidden sm:inline">Conheça Nossas Soluções</span>
-                        <span className="sm:hidden">Nossas Soluções</span>
-                      </Button>
-                      <Button variant="glass" size="xl" className="w-full shadow-xl">
-                        <span className="hidden sm:inline">Agende uma Demonstração</span>
-                        <span className="sm:hidden">Demonstração</span>
-                      </Button>
-                    </div>
-                  </div>
+                {/* Subtle accent elements */}
+                <div className="mt-16 flex items-center gap-8 opacity-60">
+                  <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full"></div>
+                  <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">
+                    Transformação Digital Inteligente
+                  </p>
+                  <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full"></div>
                 </div>
               </div>
             </div>
