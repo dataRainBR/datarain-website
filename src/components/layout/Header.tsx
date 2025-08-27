@@ -45,7 +45,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
               : 'backdrop-blur-md bg-white/10 rounded-2xl border border-white/20 py-4 px-4 md:px-6 shadow-lg'
           }`}>
             <div className="flex justify-between items-center">
-              <Logo variant={isScrolled ? 'original' : 'white'} />
+              <Logo variant="original" />
               
               <div className="flex items-center gap-8">
                 {/* Desktop Navigation */}
@@ -56,15 +56,15 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                       href={item.href} 
                       className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
                         isScrolled 
-                          ? 'text-foreground/80 hover:text-primary' 
-                          : 'text-white/90 hover:text-white'
+                          ? 'text-gray-700 hover:text-primary' 
+                          : 'text-gray-700 hover:text-primary'
                       }`}
                     >
                       <span className="relative z-10">{item.label}</span>
                       <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
                         isScrolled
                           ? 'bg-primary/10 border border-primary/20'
-                          : 'bg-white/20 backdrop-blur-sm border border-white/30'
+                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
                       }`}></div>
                     </a>
                   ))}
@@ -72,7 +72,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
 
                 {/* Desktop CTA */}
                 <Button 
-                  variant={isScrolled ? "default" : "accent"} 
+                  variant="default"
                   size="sm" 
                   className="shadow-xl backdrop-blur-sm hidden lg:flex"
                 >
@@ -82,7 +82,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                 {/* Mobile menu button & Mobile CTA */}
                 <div className="flex items-center gap-4 lg:hidden">
                   <Button 
-                    variant={isScrolled ? "default" : "accent"} 
+                    variant="default"
                     size="sm" 
                     className="shadow-xl backdrop-blur-sm"
                   >
@@ -94,8 +94,8 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     className={`p-2 rounded-lg transition-colors ${
                       isScrolled
-                        ? 'text-foreground hover:bg-muted'
-                        : 'text-white hover:bg-white/20'
+                        ? 'text-gray-700 hover:bg-muted'
+                        : 'text-gray-700 hover:bg-white/20'
                     }`}
                   >
                     {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -107,7 +107,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
             {/* Mobile Navigation Menu */}
             {mobileMenuOpen && (
               <div className={`lg:hidden mt-4 pt-4 border-t ${
-                isScrolled ? 'border-border/20' : 'border-white/30'
+                isScrolled ? 'border-gray-300' : 'border-gray-300'
               }`}>
                 <div className="flex flex-col gap-4">
                   {navItems.map((item) => (
@@ -116,8 +116,8 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                       href={item.href} 
                       className={`transition-colors py-2 ${
                         isScrolled
-                          ? 'text-foreground/80 hover:text-primary'
-                          : 'text-white/90 hover:text-white'
+                          ? 'text-gray-700 hover:text-primary'
+                          : 'text-gray-700 hover:text-primary'
                       }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
