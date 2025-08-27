@@ -53,43 +53,34 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="py-16 bg-gradient-to-r from-primary/95 to-primary text-white relative overflow-hidden">
+    <section className="py-12 bg-gradient-to-r from-primary/95 to-primary text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-20" />
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Cases de <span className="text-accent">Sucesso</span>
-          </h2>
-          <p className="text-white/90 text-lg max-w-2xl mx-auto">
-            Transformamos negócios através de soluções inovadoras
-          </p>
-        </div>
-
         <Carousel
           opts={{
             align: "center",
             loop: true,
           }}
-          className="w-full max-w-5xl mx-auto"
+          className="w-full"
         >
           <CarouselContent>
             {cases.map((caseStudy) => (
               <CarouselItem key={caseStudy.id}>
-                <div className="text-center px-4 md:px-12">
-                  <div className="mb-8">
-                    <img
-                      src={caseStudy.clientLogo}
-                      alt={caseStudy.clientName}
-                      className="h-12 md:h-16 w-auto mx-auto bg-white/10 backdrop-blur-sm rounded-lg px-4 py-2"
-                    />
-                  </div>
-                  
-                  <div className="max-w-3xl mx-auto">
-                    <h3 className="text-2xl md:text-3xl font-bold mb-6 leading-tight">
+                <div className="flex items-center min-h-[300px]">
+                  <div className="w-2/3 text-left pr-8">
+                    <div className="mb-6">
+                      <img
+                        src={caseStudy.clientLogo}
+                        alt={caseStudy.clientName}
+                        className="h-10 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 py-2"
+                      />
+                    </div>
+                    
+                    <h3 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
                       {caseStudy.title}
                     </h3>
                     
-                    <p className="text-white/90 text-lg leading-relaxed mb-8">
+                    <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-2xl">
                       {caseStudy.description}
                     </p>
                     
@@ -100,17 +91,18 @@ export default function CasesSection() {
                       </svg>
                     </button>
                   </div>
+                  <div className="w-1/3"></div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
           
-          <CarouselPrevious className="left-4 bg-white/10 border-white/20 text-white hover:bg-white/20" />
-          <CarouselNext className="right-4 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+          <CarouselPrevious className="left-2 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+          <CarouselNext className="right-2 bg-white/10 border-white/20 text-white hover:bg-white/20" />
         </Carousel>
         
         {/* Indicadores de paginação */}
-        <div className="flex justify-center gap-2 mt-8">
+        <div className="flex justify-center gap-2 mt-6">
           {cases.map((_, index) => (
             <div
               key={index}
