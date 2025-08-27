@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
+import heroPeopleImage from "@/assets/hero-people-technology.jpg";
 import { Button } from "@/components/ui/button";
 
 interface HeaderProps {
@@ -145,15 +146,12 @@ const Header = ({ backgroundImage }: HeaderProps) => {
             <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[60vh]">
               {/* Left side - Image placeholder */}
               <div className="h-full min-h-[60vh] flex items-center justify-end pr-2">
-                <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center shadow-2xl">
-                  <div className="text-white/60 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
-                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <p className="text-sm">Espaço para imagem</p>
-                  </div>
+                <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 overflow-hidden shadow-2xl">
+                  <img 
+                    src={heroPeopleImage} 
+                    alt="Pessoas felizes com tecnologia e ícones de cloud" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
 
