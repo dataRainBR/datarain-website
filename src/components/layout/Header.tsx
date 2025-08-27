@@ -160,8 +160,8 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                 <div className="max-w-xl">
                   <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-10 shadow-2xl">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                      Parceiro estratégico em
-                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
+                     Seus desafios de tecnologia estão travando o seu
+                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> crescimento?</span>
                     </h1>
                     <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 leading-relaxed">
                       Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
