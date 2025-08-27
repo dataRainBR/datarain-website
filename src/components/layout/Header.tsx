@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
@@ -9,29 +9,42 @@ interface HeaderProps {
 
 const Header = ({ backgroundImage }: HeaderProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { label: "Soluções", href: "#" },
-    { label: "Sobre", href: "#" },
-    { label: "Parceiros", href: "#" },
-    { label: "Blog", href: "#" }
+    { label: "Quem Somos", href: "#sobre" },
+    { label: "Soluções", href: "#solucoes" },
+    { label: "Serviços Gerenciados", href: "#servicos" },
+    { label: "Cases", href: "#cases" },
+    { label: "Conteúdo", href: "#conteudo" },
+    { label: "Academy", href: "#academy" }
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="relative min-h-[85vh] flex flex-col overflow-hidden">
-      <img 
-        src={backgroundImage} 
-        alt="DataRain Hero Background" 
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute inset-0 bg-gradient-hero opacity-95" />
-      
-      {/* Navigation */}
-      <nav className="relative z-50 pt-4 md:pt-6">
+    <>
+      {/* Sticky Navigation */}
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled 
+          ? 'bg-white shadow-lg py-2' 
+          : 'bg-transparent py-4 md:py-6'
+      }`}>
         <div className="container mx-auto px-4">
-          <div className="backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-4 md:px-6 shadow-2xl">
+          <div className={`transition-all duration-300 ${
+            isScrolled
+              ? 'bg-white rounded-lg border border-border/20 py-3 px-4 md:px-6'
+              : 'backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-4 md:px-6 shadow-2xl'
+          }`}>
             <div className="flex justify-between items-center">
-              <Logo className="text-white" />
+              <Logo className={isScrolled ? 'text-primary' : 'text-white'} />
               
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center gap-8">
@@ -39,24 +52,40 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                   <a 
                     key={item.label}
                     href={item.href} 
-                    className="text-white/80 hover:text-white transition-all duration-300 relative group"
+                    className={`transition-all duration-300 relative group ${
+                      isScrolled 
+                        ? 'text-foreground/80 hover:text-primary' 
+                        : 'text-white/80 hover:text-white'
+                    }`}
                   >
                     <span className="relative z-10">{item.label}</span>
-                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
+                    <div className={`absolute inset-0 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 ${
+                      isScrolled
+                        ? 'bg-primary/10'
+                        : 'bg-white/10 backdrop-blur-sm'
+                    }`}></div>
                   </a>
                 ))}
               </div>
 
               {/* Mobile menu button & Desktop CTA */}
               <div className="flex items-center gap-4">
-                <Button variant="accent" size="sm" className="shadow-xl backdrop-blur-sm">
+                <Button 
+                  variant={isScrolled ? "default" : "accent"} 
+                  size="sm" 
+                  className="shadow-xl backdrop-blur-sm"
+                >
                   <span className="hidden sm:inline">Fale Conosco</span>
                   <span className="sm:hidden">Contato</span>
                 </Button>
                 
                 <button
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                  className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+                  className={`lg:hidden p-2 rounded-lg transition-colors ${
+                    isScrolled
+                      ? 'text-foreground hover:bg-muted'
+                      : 'text-white hover:bg-white/10'
+                  }`}
                 >
                   {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                 </button>
@@ -65,13 +94,20 @@ const Header = ({ backgroundImage }: HeaderProps) => {
             
             {/* Mobile Navigation Menu */}
             {mobileMenuOpen && (
-              <div className="lg:hidden mt-4 pt-4 border-t border-white/20">
+              <div className={`lg:hidden mt-4 pt-4 border-t ${
+                isScrolled ? 'border-border/20' : 'border-white/20'
+              }`}>
                 <div className="flex flex-col gap-4">
                   {navItems.map((item) => (
                     <a 
                       key={item.label}
                       href={item.href} 
-                      className="text-white/80 hover:text-white transition-colors py-2"
+                      className={`transition-colors py-2 ${
+                        isScrolled
+                          ? 'text-foreground/80 hover:text-primary'
+                          : 'text-white/80 hover:text-white'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.label}
                     </a>
@@ -83,35 +119,45 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         </div>
       </nav>
 
-      {/* Hero Content */}
-      <div className="flex-1 flex items-center justify-center relative z-10">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-5xl mx-auto">
-            <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-12 shadow-2xl">
-              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                Parceiro estratégico em
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-                Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
-                agilidade e foco em resultados.
-              </p>
+      {/* Hero Section */}
+      <header className="relative min-h-[85vh] flex flex-col overflow-hidden">
+        <img 
+          src={backgroundImage} 
+          alt="DataRain Hero Background" 
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-hero opacity-95" />
+        
+        {/* Hero Content */}
+        <div className="flex-1 flex items-center justify-center relative z-10 pt-20">
+          <div className="container mx-auto px-4 text-center">
+            <div className="max-w-5xl mx-auto">
+              <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-12 shadow-2xl">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                  Parceiro estratégico em
+                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
+                </h1>
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
+                  Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
+                  agilidade e foco em resultados.
+                </p>
 
-              <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 md:gap-4 max-w-2xl mx-auto">
-                <Button variant="hero" size="xl" className="w-full shadow-xl">
-                  <span className="hidden sm:inline">Conheça Nossas Soluções</span>
-                  <span className="sm:hidden">Nossas Soluções</span>
-                </Button>
-                <Button variant="glass" size="xl" className="w-full shadow-xl">
-                  <span className="hidden sm:inline">Agende uma Demonstração</span>
-                  <span className="sm:hidden">Demonstração</span>
-                </Button>
+                <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 md:gap-4 max-w-2xl mx-auto">
+                  <Button variant="hero" size="xl" className="w-full shadow-xl">
+                    <span className="hidden sm:inline">Conheça Nossas Soluções</span>
+                    <span className="sm:hidden">Nossas Soluções</span>
+                  </Button>
+                  <Button variant="glass" size="xl" className="w-full shadow-xl">
+                    <span className="hidden sm:inline">Agende uma Demonstração</span>
+                    <span className="sm:hidden">Demonstração</span>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </>
   );
 };
 
