@@ -68,7 +68,7 @@ export default function CasesSection() {
                   className="absolute inset-0 bg-cover bg-center opacity-20" 
                   style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                 />
-                <div className="flex items-center min-h-[400px] relative z-10">
+                <div className="flex items-center h-[500px] relative z-10">
                   <div className="w-full">
                     <div className="container mx-auto px-4 py-8 md:py-12">
                       <div className="max-w-4xl text-left">
@@ -80,7 +80,7 @@ export default function CasesSection() {
                           />
                         </div>
                         
-                        <h3 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                        <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
                           {caseStudy.title}
                         </h3>
                         
