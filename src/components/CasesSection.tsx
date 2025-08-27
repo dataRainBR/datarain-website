@@ -52,7 +52,7 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 text-white relative overflow-hidden px-4 md:px-0">
+    <section className="pt-16 pb-6 md:pt-24 md:pb-8 lg:pt-32 lg:pb-10 text-white relative overflow-hidden px-4 md:px-0">
       <Carousel
         opts={{
           align: "center",
@@ -108,7 +108,7 @@ export default function CasesSection() {
           <CarouselNext className="right-2 md:right-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
           
           {/* Indicadores de paginação */}
-          <div className="flex justify-center gap-2 md:gap-3 mt-6 md:mt-8">
+          <div className="flex justify-center gap-2 md:gap-3 mt-3 md:mt-4">
             {cases.map((_, index) => (
               <div
                 key={index}
