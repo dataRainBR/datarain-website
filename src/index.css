@@ -15,24 +15,24 @@ All colors MUST be HSL.
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
     /* DataRain Color Palette - 60% branco, 30% azul, 10% laranja */
     --background: 0 0% 100%;
-    --foreground: 205 63% 35%;
+    --foreground: 194 51% 45%;
 
     --card: 0 0% 100%;
-    --card-foreground: 205 63% 35%;
+    --card-foreground: 194 51% 45%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 205 63% 35%;
+    --popover-foreground: 194 51% 45%;
 
     /* Azul DataRain como cor primária (#3893af) */
-    --primary: 205 63% 35%;
+    --primary: 194 51% 45%;
     --primary-foreground: 0 0% 100%;
 
     /* Tons mais claros do azul para secondary */
-    --secondary: 205 40% 96%;
-    --secondary-foreground: 205 63% 35%;
+    --secondary: 194 30% 96%;
+    --secondary-foreground: 194 51% 45%;
 
-    --muted: 205 20% 95%;
-    --muted-foreground: 205 20% 45%;
+    --muted: 194 20% 95%;
+    --muted-foreground: 194 20% 55%;
 
     /* Laranja DataRain como accent (#f78504) */
     --accent: 25 95% 49%;
@@ -41,17 +41,17 @@ All colors MUST be HSL.
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 205 30% 90%;
-    --input: 205 30% 90%;
-    --ring: 205 63% 35%;
+    --border: 194 30% 90%;
+    --input: 194 30% 90%;
+    --ring: 194 51% 45%;
 
     /* Gradientes DataRain */
     --gradient-hero: linear-gradient(135deg, hsl(205, 63%, 35%) 0%, hsl(190, 70%, 45%) 35%, hsl(25, 95%, 49%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(205, 40%, 98%) 100%);
-    --gradient-modern: linear-gradient(to right, hsl(205, 63%, 35%) 0%, hsl(190, 70%, 45%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(194, 30%, 98%) 100%);
+    --gradient-modern: linear-gradient(to right, hsl(194, 51%, 45%) 0%, hsl(194, 60%, 50%) 100%);
     
     /* Sombras com cores da marca */
-    --shadow-primary: 0 10px 30px -10px hsl(205 63% 35% / 0.3);
+    --shadow-primary: 0 10px 30px -10px hsl(194 51% 45% / 0.3);
     --shadow-accent: 0 0 40px hsl(25 95% 49% / 0.2);
     
     /* Transições suaves */
@@ -77,24 +77,24 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 205 63% 15%;
+    --background: 194 51% 15%;
     --foreground: 0 0% 100%;
 
-    --card: 205 63% 20%;
+    --card: 194 51% 20%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 205 63% 15%;
+    --popover: 194 51% 15%;
     --popover-foreground: 0 0% 100%;
 
     /* Inverted colors in dark mode */
     --primary: 0 0% 100%;
-    --primary-foreground: 205 63% 35%;
+    --primary-foreground: 194 51% 45%;
 
-    --secondary: 205 50% 25%;
+    --secondary: 194 40% 25%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 205 40% 25%;
-    --muted-foreground: 205 20% 80%;
+    --muted: 194 30% 25%;
+    --muted-foreground: 194 20% 80%;
 
     /* Laranja mais vibrante no dark mode */
     --accent: 25 95% 55%;
@@ -103,8 +103,8 @@ All colors MUST be HSL.
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 205 40% 25%;
-    --input: 205 40% 25%;
+    --border: 194 30% 25%;
+    --input: 194 30% 25%;
     --ring: 0 0% 100%;
     
     /* Gradientes no dark mode */
