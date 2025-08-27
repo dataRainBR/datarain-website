@@ -44,7 +44,7 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="pt-16 pb-6 md:pt-24 md:pb-8 lg:pt-32 lg:pb-10 text-white relative overflow-hidden px-4 md:px-0">
+    <section className="pt-8 pb-6 md:pt-12 md:pb-8 lg:pt-16 lg:pb-10 text-white relative overflow-hidden px-4 md:px-0">
       <Carousel
         opts={{
           align: "center",
