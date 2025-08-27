@@ -53,25 +53,24 @@ const cases: CaseStudy[] = [
 export default function CasesSection() {
   return (
     <section className="py-16 md:py-24 lg:py-32 text-white relative overflow-hidden">
-      <div className="container mx-auto px-4">
-        <Carousel
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          className="w-full relative"
-        >
-          <CarouselContent className="-ml-0">
+      <Carousel
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        className="w-full relative"
+      >
+        <CarouselContent className="-ml-0">
             {cases.map((caseStudy) => (
               <CarouselItem key={caseStudy.id} className="pl-0">
-                <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full mx-4 md:mx-0 rounded-lg md:rounded-none overflow-hidden">
+                <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full">
                   <div 
                     className="absolute inset-0 bg-cover bg-center opacity-20" 
                     style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                   />
                   <div className="flex items-center h-[300px] sm:h-[350px] md:h-[400px] relative z-10">
                     <div className="w-full">
-                      <div className="px-6 md:px-8 lg:px-12 py-6 md:py-8 lg:py-12">
+                      <div className="container mx-auto px-4 py-6 md:py-8 lg:py-12">
                       <div className="max-w-5xl text-left">
                         <div className="mb-6 md:mb-8">
                           <img
@@ -118,7 +117,6 @@ export default function CasesSection() {
             ))}
           </div>
         </Carousel>
-      </div>
     </section>
   );
 }
