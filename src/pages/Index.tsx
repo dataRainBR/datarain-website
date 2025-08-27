@@ -154,50 +154,30 @@ const Index = () => {
           </h2>
           <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
             <div className="overflow-hidden">
-              <div className="marquee flex items-center gap-6 md:gap-8 lg:gap-12">
+              <div className="marquee items-center gap-6 md:gap-8 lg:gap-12">
                 {/* Set A */}
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                />
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                />
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                /> 
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
 
-                {/* Set B (duplicate) */}
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                />
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                />
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                /> 
-                <img 
-                  src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6"
-                  alt="Client Logos" 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
-                />
+                {/* Set B */}
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+
+                {/* Set C */}
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+
+                {/* Set D */}
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
+                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
               </div>
             </div>
           </div>

@@ -134,13 +134,14 @@ All colors MUST be HSL.
 @layer utilities {
   @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
+    100% { transform: translateX(-25%); }
   }
   .marquee {
-    animation: marquee 12s linear infinite;
+    animation: marquee 15s linear infinite;
     display: flex;
     width: max-content;
     will-change: transform;
+    white-space: nowrap;
   }
   /* .marquee2 no longer needed; keeping for compatibility but unused */
   .marquee2 { display: none; }
