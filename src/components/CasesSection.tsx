@@ -19,7 +19,7 @@ const cases: CaseStudy[] = [
   {
     id: 1,
     title: "Implementação de DevOps garante economia",
-    description: "A empresa incorpora tecnologia de ponta em suas práticas médicas, incluindo equipamentos avançados de diagnóstico, terapias inovadoras e soluções médicas baseadas em evidências científicas. Além de investir em telemedicina e inteligência artificial.",
+    description: "A empresa incorpora tecnologia de ponta em suas práticas médicas",
     clientName: "Preventiv Senior",
     clientLogo: "/placeholder.svg",
     backgroundImage: "/placeholder.svg"
