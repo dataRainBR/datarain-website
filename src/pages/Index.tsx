@@ -54,7 +54,7 @@ const Index = () => {
         </nav>
 
         {/* Hero Content */}
-        <div className="flex-1 flex items-center justify-center relative z-10">
+        <div className="flex-1 flex items-start justify-center relative z-10 pt-12 md:pt-16">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
               {/* Main Hero Card */}
