@@ -57,26 +57,22 @@ const Index = () => {
         <div className="flex-1 flex items-center justify-center relative z-10">
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-5xl mx-auto">
-              {/* Main Title Card */}
-              <div className="backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl mb-8">
+              {/* Main Hero Card */}
+              <div className="backdrop-blur-xl bg-white/5 rounded-3xl border border-white/10 p-8 md:p-12 shadow-2xl">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
                   Parceiro estratégico em
                   <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
                 </h1>
-                <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-xl md:text-2xl lg:text-3xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
                   Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
                   agilidade e foco em resultados.
                 </p>
-              </div>
 
-              {/* Action Cards */}
-              <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
-                <div className="backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 p-6 group hover:bg-white/10 transition-all duration-300">
+                {/* Action Buttons */}
+                <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
                   <Button variant="hero" size="xl" className="w-full shadow-xl">
                     Conheça Nossas Soluções
                   </Button>
-                </div>
-                <div className="backdrop-blur-xl bg-white/5 rounded-2xl border border-white/10 p-6 group hover:bg-white/10 transition-all duration-300">
                   <Button variant="glass" size="xl" className="w-full shadow-xl">
                     Agende uma Demonstração
                   </Button>
