@@ -55,19 +55,19 @@ export default function CasesSection() {
   return (
     <section className="py-8 bg-gradient-to-r from-primary/95 to-primary text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('/placeholder.svg')] bg-cover bg-center opacity-20" />
-      <div className="container mx-auto px-4 relative z-10">
-        <Carousel
-          opts={{
-            align: "center",
-            loop: true,
-          }}
-          className="w-screen relative left-1/2 right-1/2 -ml-[50vw]"
-        >
+      <Carousel
+        opts={{
+          align: "center",
+          loop: true,
+        }}
+        className="w-full relative"
+      >
           <CarouselContent>
             {cases.map((caseStudy) => (
               <CarouselItem key={caseStudy.id}>
                 <div className="flex items-center min-h-[260px]">
-                  <div className="w-full md:w-2/3 text-left pl-6 md:pl-16 pr-8 md:pr-24">
+                  <div className="container mx-auto px-4">
+                    <div className="w-full md:w-2/3 text-left pr-8 md:pr-24">
                     <div className="mb-6">
                       <img
                         src={caseStudy.clientLogo}
@@ -90,16 +90,15 @@ export default function CasesSection() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </button>
+                    </div>
                   </div>
-                  <div className="hidden md:block w-1/3"></div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
           
-          <CarouselPrevious className="left-2 md:left-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
-          <CarouselNext className="right-2 md:right-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
-        </Carousel>
+          <CarouselPrevious className="left-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+          <CarouselNext className="right-4 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20" />
         
         {/* Indicadores de paginação */}
         <div className="flex justify-center gap-2 mt-6">
@@ -110,7 +109,7 @@ export default function CasesSection() {
             />
           ))}
         </div>
-      </div>
+      </Carousel>
     </section>
   );
 }
