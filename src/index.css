@@ -52,7 +52,7 @@ All colors MUST be HSL.
     
     /* Sombras com cores da marca */
     --shadow-primary: 0 10px 30px -10px hsl(194 51% 45% / 0.3);
-    --shadow-accent: 0 0 40px hsl(25 95% 49% / 0.2);
+    --shadow-accent: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     
     /* Transições suaves */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
