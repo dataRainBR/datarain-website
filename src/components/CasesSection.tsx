@@ -20,34 +20,26 @@ const cases: CaseStudy[] = [
     id: 1,
     title: "DevOps transforma infraestrutura e impulsiona eficiência operacional",
     description: "A Intelbras precisava estabelecer uma infraestrutura capaz de acompanhar o crescimento e as demandas do seu negócio de energia. Carecia de uma boa abordagem que garantisse escalabilidade, segurança e confiabilidade em seu ambiente de TI.",
-    clientName: "Preventiv Senior",
-    clientLogo: "/placeholder.svg",
+    clientName: "Intelbras",
+    clientLogo: "https://datarain.com.br/wp-content/uploads/2024/01/Copia-de-Intelbras.png",
     backgroundImage: "https://datarain.com.br/wp-content/uploads/2024/02/Modernizacao.png"
   },
   {
     id: 2,
-    title: "Modernização completa de infraestrutura cloud",
-    description: "Migração para AWS com arquitetura serverless resultou em redução de 60% nos custos operacionais e aumento significativo na performance e disponibilidade dos sistemas críticos.",
-    clientName: "Banco Digital Leader",
-    clientLogo: "/placeholder.svg",
-    backgroundImage: "/placeholder.svg"
+    title: "Implementação de DevOps garante economia",
+    description: "A empresa incorpora tecnologia de ponta em suas práticas médicas, incluindo equipamentos avançados de diagnóstico, terapias inovadoras e soluções médicas baseadas em evidências científicas. Além de investir em telemedicina e IA",
+    clientName: "Prevent Senior",
+    clientLogo: "https://datarain.com.br/wp-content/uploads/2024/01/Copia-de-Intelbras.png",
+    backgroundImage: "https://datarain.com.br/wp-content/uploads/2024/02/Modernizacao.png"
   },
   {
     id: 3,
-    title: "Data Lake e Analytics em tempo real",
-    description: "Implementação de arquitetura moderna de dados permitindo análises avançadas e machine learning para tomada de decisões estratégicas baseadas em dados.",
-    clientName: "Varejo Nacional",
-    clientLogo: "/placeholder.svg",
-    backgroundImage: "/placeholder.svg"
+    title: "Centralização de dados com Amazon Glue",
+    description: "Um dos desafios mais significativos enfrentados pela Cemig foi lidar com 160 operações de consulta a diferentes sistemas distribuídos. Para superar esse desafio, foi implementado o Amazon Glue",
+    clientName: "Cemig",
+    clientLogo: "https://datarain.com.br/wp-content/uploads/2024/01/Copia-de-Intelbras.png",
+    backgroundImage: "https://datarain.com.br/wp-content/uploads/2024/02/Modernizacao.png"
   },
-  {
-    id: 4,
-    title: "IA Generativa transformando atendimento",
-    description: "Chatbots inteligentes com GPT e automação de processos reduziram o tempo de atendimento em 70% e aumentaram a satisfação dos clientes para 95%.",
-    clientName: "E-commerce Global",
-    clientLogo: "/placeholder.svg",
-    backgroundImage: "/placeholder.svg"
-  }
 ];
 
 export default function CasesSection() {
