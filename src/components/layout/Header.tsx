@@ -132,7 +132,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
       </nav>
 
       {/* Hero Section */}
-      <header className="relative min-h-[80vh] flex flex-col overflow-hidden">
+      <header className="relative min-h-[85vh] flex flex-col overflow-hidden">
         <img 
           src={backgroundImage} 
           alt="DataRain Hero Background" 
@@ -141,11 +141,11 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         <div className="absolute inset-0 bg-gradient-hero opacity-95" />
         
         {/* Hero Content */}
-        <div className="flex-1 flex items-center relative z-10 pt-20 pb-8">
+        <div className="flex-1 flex items-center relative z-10 pt-20">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[50vh]">
+            <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[60vh]">
               {/* Left side - Image placeholder */}
-              <div className="h-full min-h-[50vh] flex items-center justify-end pr-2">
+              <div className="h-full min-h-[60vh] flex items-center justify-end pr-2">
                 <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 overflow-hidden shadow-2xl">
                   <img 
                     src={heroPeopleImage} 
@@ -160,13 +160,13 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                 <div className="max-w-xl">
                   <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-10 shadow-2xl">
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                      Parceiro estratégico em
-                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
+                      Seus desafios de
+                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">tecnologia</span>
+                      estão travando o seu crescimento?
                     </h1>
                     <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 leading-relaxed">
-                      A dataRain ajuda empresas a vencer os gargalos que impedem
-escala, performance e inovação.
-Do planejamento à execução, entregamos soluções em nuvem, dados, IA e Cibersecurity com foco nos resultados do seu negócio
+                      Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
+                      agilidade e foco em resultados.
                     </p>
 
                     <div className="flex flex-col gap-3 md:gap-4">
