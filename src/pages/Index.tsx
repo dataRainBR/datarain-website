@@ -153,8 +153,9 @@ const Index = () => {
             Alguns de Nossos Projetos
           </h2>
           <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
-            <div className="relative">
+            <div className="overflow-hidden">
               <div className="marquee flex items-center gap-6 md:gap-8 lg:gap-12">
+                {/* Set A */}
                 <img 
                   src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
                   alt="Client Logos" 
@@ -175,8 +176,8 @@ const Index = () => {
                   alt="Client Logos" 
                   className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0"
                 />
-              </div>
-              <div className="marquee2 flex items-center gap-6 md:gap-8 lg:gap-12">
+
+                {/* Set B (duplicate) */}
                 <img 
                   src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz"
                   alt="Client Logos" 
