@@ -140,28 +140,47 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         <div className="absolute inset-0 bg-gradient-hero opacity-95" />
         
         {/* Hero Content */}
-        <div className="flex-1 flex items-center justify-center relative z-10 pt-20">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
-              <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-12 shadow-2xl">
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                  Parceiro estratégico em
-                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
-                </h1>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-                  Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
-                  agilidade e foco em resultados.
-                </p>
+        <div className="flex-1 flex items-center relative z-10 pt-20">
+          <div className="container mx-auto px-4">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[60vh]">
+              {/* Left side - Image placeholder */}
+              <div className="flex justify-center lg:justify-start">
+                <div className="w-80 h-80 lg:w-96 lg:h-96 bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center shadow-2xl">
+                  <div className="text-white/60 text-center">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-white/20 rounded-full flex items-center justify-center">
+                      <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <p className="text-sm">Espaço para imagem</p>
+                  </div>
+                </div>
+              </div>
 
-                <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 md:gap-4 max-w-2xl mx-auto">
-                  <Button variant="hero" size="xl" className="w-full shadow-xl">
-                    <span className="hidden sm:inline">Conheça Nossas Soluções</span>
-                    <span className="sm:hidden">Nossas Soluções</span>
-                  </Button>
-                  <Button variant="glass" size="xl" className="w-full shadow-xl">
-                    <span className="hidden sm:inline">Agende uma Demonstração</span>
-                    <span className="sm:hidden">Demonstração</span>
-                  </Button>
+              {/* Right side - Content */}
+              <div className="flex justify-center lg:justify-end">
+                <div className="max-w-xl">
+                  <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-10 shadow-2xl">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6 leading-tight">
+                      Parceiro estratégico em
+                      <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
+                    </h1>
+                    <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-8 md:mb-10 leading-relaxed">
+                      Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
+                      agilidade e foco em resultados.
+                    </p>
+
+                    <div className="flex flex-col gap-3 md:gap-4">
+                      <Button variant="hero" size="xl" className="w-full shadow-xl">
+                        <span className="hidden sm:inline">Conheça Nossas Soluções</span>
+                        <span className="sm:hidden">Nossas Soluções</span>
+                      </Button>
+                      <Button variant="glass" size="xl" className="w-full shadow-xl">
+                        <span className="hidden sm:inline">Agende uma Demonstração</span>
+                        <span className="sm:hidden">Demonstração</span>
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
