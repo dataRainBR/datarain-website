@@ -125,29 +125,43 @@
     </div>
 </div>
 
+<!-- Cases Section -->
+<div class="section" id="casos">
+    <div class="container">
+        <h2 class="section-title">Cases de Sucesso</h2>
+        <div class="services-grid">
+            <div class="card">
+                <div class="service-icon">📈</div>
+                <h3 class="service-title">E-commerce em Nuvem</h3>
+                <p class="service-description">Migração de plataforma de e-commerce para AWS com 99.9% de uptime e redução de 40% nos custos de infraestrutura.</p>
+            </div>
+            
+            <div class="card">
+                <div class="service-icon">🏥</div>
+                <h3 class="service-title">Sistema Hospitalar</h3>
+                <p class="service-description">Implementação de sistema de gestão hospitalar com análise de dados em tempo real e compliance LGPD.</p>
+            </div>
+            
+            <div class="card">
+                <div class="service-icon">🏭</div>
+                <h3 class="service-title">Indústria 4.0</h3>
+                <p class="service-description">Automação de processos industriais com IoT e IA, aumentando produtividade em 35%.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Clients Section -->
 <div class="section" id="parceiros">
     <div class="container">
-        <h2 class="section-title">Alguns de Nossos Projetos</h2>
+        <h2 class="section-title">Nossos Parceiros</h2>
         <div class="section-glass p-8">
             <div class="marquee-container">
                 <div class="marquee">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Cliente 1">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Cliente 2">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Cliente 3">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Cliente 4">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Cliente 1">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Cliente 2">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Cliente 3">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Cliente 4">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Cliente 1">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Cliente 2">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Cliente 3">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Cliente 4">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Cliente 1">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Cliente 2">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Cliente 3">
-                    <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Cliente 4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/client-logos.png" alt="Logotipos dos Clientes" style="height: 4rem; width: auto;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/client-logos.png" alt="Logotipos dos Clientes" style="height: 4rem; width: auto;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/client-logos.png" alt="Logotipos dos Clientes" style="height: 4rem; width: auto;">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/client-logos.png" alt="Logotipos dos Clientes" style="height: 4rem; width: auto;">
                 </div>
             </div>
         </div>

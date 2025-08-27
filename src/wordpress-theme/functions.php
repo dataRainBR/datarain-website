@@ -24,12 +24,25 @@ add_action('after_setup_theme', 'datarain_theme_setup');
 // Enqueue styles and scripts
 function datarain_scripts() {
     // Enqueue main stylesheet
-    wp_enqueue_style('datarain-style', get_stylesheet_uri());
+    wp_enqueue_style('datarain-style', get_stylesheet_uri(), array(), '1.0.0');
     
     // Enqueue custom JavaScript
-    wp_enqueue_script('datarain-script', get_template_directory_uri() . '/js/script.js', array(), '1.0.0', true);
+    wp_enqueue_script('datarain-script', get_template_directory_uri() . '/js/script.js', array('jquery'), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'datarain_scripts');
+
+// Add SEO meta tags
+function datarain_add_meta_tags() {
+    if (is_home() || is_front_page()) {
+        echo '<meta name="description" content="DataRain - Parceiro estratégico em cloud computing, dados e inteligência artificial">';
+        echo '<meta name="keywords" content="cloud computing, AWS, dados, inteligência artificial, transformação digital">';
+        echo '<meta property="og:title" content="DataRain - Parceiro estratégico em cloud">';
+        echo '<meta property="og:description" content="Entregamos soluções em cloud, dados e inteligência artificial com segurança, agilidade e foco em resultados.">';
+        echo '<meta property="og:type" content="website">';
+        echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+    }
+}
+add_action('wp_head', 'datarain_add_meta_tags');
 
 // Customizer settings
 function datarain_customize_register($wp_customize) {
