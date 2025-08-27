@@ -97,8 +97,8 @@ export default function CasesSection() {
             ))}
           </CarouselContent>
           
-          <CarouselPrevious className="left-2 bg-white/10 border-white/20 text-white hover:bg-white/20" />
-          <CarouselNext className="right-2 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+          <CarouselPrevious className="left-0 bg-white/10 border-white/20 text-white hover:bg-white/20" />
+          <CarouselNext className="right-0 bg-white/10 border-white/20 text-white hover:bg-white/20" />
         </Carousel>
         
         {/* Indicadores de paginação */}
