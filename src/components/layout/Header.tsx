@@ -141,7 +141,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         <div className="absolute inset-0 bg-gradient-hero opacity-95" />
         
         {/* Hero Content */}
-        <div className="flex-1 flex items-center relative z-10 pt-32">
+        <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-[1.2fr,0.8fr] gap-4 items-center min-h-[65vh]">
               {/* Left side - Image placeholder */}
