@@ -3,14 +3,14 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const mobileMenu = document.querySelector('.mobile-menu');
-    
-    if (mobileMenuBtn && mobileMenu) {
-        mobileMenuBtn.addEventListener('click', function() {
-            mobileMenu.style.display = mobileMenu.style.display === 'none' || mobileMenu.style.display === '' ? 'block' : 'none';
-        });
-    }
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', function() {
+        navLinks.classList.toggle('open');
+    });
+}
     
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -183,11 +183,11 @@ style.textContent = `
     }
     
     .nav-container.scrolled .nav-link {
-        color: rgba(59, 130, 246, 0.8);
+        color: hsl(var(--primary));
     }
     
     .nav-container.scrolled .nav-link:hover {
-        color: rgb(59, 130, 246);
+        color: hsl(var(--primary));
     }
     
     .btn.loading {
@@ -225,12 +225,13 @@ style.textContent = `
     }
     
     @media (max-width: 768px) {
-        .mobile-menu {
-            display: none;
-        }
-        
         .mobile-menu-btn {
             display: block !important;
+        }
+        .nav-links.open {
+            display: flex !important;
+            flex-direction: column;
+            gap: 1rem;
         }
     }
 `;

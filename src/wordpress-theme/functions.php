@@ -39,7 +39,15 @@ function datarain_add_meta_tags() {
         echo '<meta property="og:title" content="DataRain - Parceiro estratégico em cloud">';
         echo '<meta property="og:description" content="Entregamos soluções em cloud, dados e inteligência artificial com segurança, agilidade e foco em resultados.">';
         echo '<meta property="og:type" content="website">';
-        echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
+        echo '<link rel="canonical" href="' . esc_url( home_url('/') ) . '">';
+        $org = array(
+            "@context" => "https://schema.org",
+            "@type" => "Organization",
+            "name" => get_bloginfo('name'),
+            "url" => home_url('/'),
+            "logo" => get_template_directory_uri() . "/assets/datarain-logo.png"
+        );
+        echo '<script type="application/ld+json">' . wp_json_encode( $org ) . '</script>';
     }
 }
 add_action('wp_head', 'datarain_add_meta_tags');

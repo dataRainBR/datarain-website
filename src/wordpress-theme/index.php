@@ -14,7 +14,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/datarain-logo.png" alt="DataRain" style="height: 2rem;">
                     </div>
                     
-                    <div class="nav-links">
+                    <div class="nav-links-wrap">
                         <?php
                         wp_nav_menu(array(
                             'theme_location' => 'primary',
@@ -28,7 +28,7 @@
 
                     <div style="display: flex; align-items: center; gap: 1rem;">
                         <a href="#contato" class="btn btn-hero">Fale Conosco</a>
-                        <button class="mobile-menu-btn" style="display: none; background: none; border: none; color: white; font-size: 1.5rem;">☰</button>
+                        <button class="mobile-menu-btn" aria-label="Abrir menu">☰</button>
                     </div>
                 </div>
             </div>

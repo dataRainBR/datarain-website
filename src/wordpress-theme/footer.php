@@ -63,12 +63,10 @@
     // Menu mobile toggle
     document.addEventListener('DOMContentLoaded', function() {
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        if (mobileMenuBtn) {
+        const navLinks = document.querySelector('.nav-links');
+        if (mobileMenuBtn && navLinks) {
             mobileMenuBtn.addEventListener('click', function() {
-                const mobileMenu = document.querySelector('.mobile-menu');
-                if (mobileMenu) {
-                    mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
-                }
+                navLinks.classList.toggle('open');
             });
         }
         
