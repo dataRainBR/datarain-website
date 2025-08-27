@@ -142,7 +142,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
         {/* Hero Content */}
         <div className="flex-1 flex items-center relative z-10 pt-20">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-2 items-center min-h-[60vh]">
+            <div className="grid lg:grid-cols-2 gap-1 items-center min-h-[60vh]">
               {/* Left side - Image placeholder */}
               <div className="h-full min-h-[60vh] flex items-center justify-center">
                 <div className="w-full h-full bg-white/10 backdrop-blur-sm rounded-3xl border border-white/20 flex items-center justify-center shadow-2xl">
