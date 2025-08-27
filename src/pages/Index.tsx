@@ -81,17 +81,6 @@ const Index = () => {
             </div>
           </div>
         </div>
-
-        {/* Bottom Accent */}
-        <div className="relative z-10 pb-8">
-          <div className="container mx-auto px-4">
-            <div className="backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-6 max-w-2xl mx-auto">
-              <p className="text-white/70 text-center text-sm md:text-base">
-                ✨ Reconhecida como líder em 5 de 6 quadrantes no ecossistema AWS
-              </p>
-            </div>
-          </div>
-        </div>
       </header>
 
       {/* About Section */}
