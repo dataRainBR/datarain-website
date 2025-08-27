@@ -1,119 +1,19 @@
-import Logo from "@/components/Logo";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import awsCertifications from "@/assets/aws-certifications.png";
-import clientLogos from "@/assets/client-logos.png";
+import Header from "@/components/layout/Header";
 import AboutSection from "@/components/AboutSection";
 import CasesSection from "@/components/CasesSection";
 import ServicesSection from "@/components/ServicesSection";
+import CertificationsSection from "@/components/sections/CertificationsSection";
+import ClientsSection from "@/components/sections/ClientsSection";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <header className="relative min-h-[85vh] flex flex-col overflow-hidden">
-        <img 
-          src={heroBackground} 
-          alt="DataRain Hero Background" 
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-hero opacity-95" />
-        
-        {/* Navigation */}
-        <nav className="relative z-50 pt-4 md:pt-6">
-          <div className="container mx-auto px-4">
-            <div className="backdrop-blur-md bg-white/5 rounded-2xl border border-white/10 py-4 px-4 md:px-6 shadow-2xl">
-              <div className="flex justify-between items-center">
-                <Logo className="text-white" />
-                
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-8">
-                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
-                    <span className="relative z-10">Soluções</span>
-                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
-                  </a>
-                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
-                    <span className="relative z-10">Sobre</span>
-                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
-                  </a>
-                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
-                    <span className="relative z-10">Parceiros</span>
-                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
-                  </a>
-                  <a href="#" className="text-white/80 hover:text-white transition-all duration-300 relative group">
-                    <span className="relative z-10">Blog</span>
-                    <div className="absolute inset-0 bg-white/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300 backdrop-blur-sm"></div>
-                  </a>
-                </div>
-
-                {/* Mobile menu button & Desktop CTA */}
-                <div className="flex items-center gap-4">
-                  <Button variant="accent" size="sm" className="shadow-xl backdrop-blur-sm">
-                    <span className="hidden sm:inline">Fale Conosco</span>
-                    <span className="sm:hidden">Contato</span>
-                  </Button>
-                  
-                  <button
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
-                  >
-                    {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-                  </button>
-                </div>
-              </div>
-              
-              {/* Mobile Navigation Menu */}
-              {mobileMenuOpen && (
-                <div className="lg:hidden mt-4 pt-4 border-t border-white/20">
-                  <div className="flex flex-col gap-4">
-                    <a href="#" className="text-white/80 hover:text-white transition-colors py-2">Soluções</a>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors py-2">Sobre</a>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors py-2">Parceiros</a>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors py-2">Blog</a>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </nav>
-
-        {/* Hero Content */}
-        <div className="flex-1 flex items-center justify-center relative z-10">
-          <div className="container mx-auto px-4 text-center">
-            <div className="max-w-5xl mx-auto">
-              {/* Main Hero Card */}
-              <div className="backdrop-blur-xl bg-white/5 rounded-2xl md:rounded-3xl border border-white/10 p-6 md:p-8 lg:p-12 shadow-2xl">
-                <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 md:mb-6 leading-tight">
-                  Parceiro estratégico em
-                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> cloud</span>
-                </h1>
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed">
-                  Entregamos soluções em cloud, dados e inteligência artificial com segurança, 
-                  agilidade e foco em resultados.
-                </p>
-
-                {/* Action Buttons */}
-                <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 md:gap-4 max-w-2xl mx-auto">
-                  <Button variant="hero" size="xl" className="w-full shadow-xl">
-                    <span className="hidden sm:inline">Conheça Nossas Soluções</span>
-                    <span className="sm:hidden">Nossas Soluções</span>
-                  </Button>
-                  <Button variant="glass" size="xl" className="w-full shadow-xl">
-                    <span className="hidden sm:inline">Agende uma Demonstração</span>
-                    <span className="sm:hidden">Demonstração</span>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header backgroundImage={heroBackground} />
 
       {/* About Section */}
       <AboutSection />
@@ -125,64 +25,10 @@ const Index = () => {
       <ServicesSection />
 
       {/* Certifications Section */}
-      <section className="py-16 md:py-20 bg-secondary/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-8 md:mb-12 backdrop-blur-md bg-white/30 p-4 md:p-6 rounded-2xl border border-white/40 shadow-lg">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-              Líder em Certificações AWS
-            </h2>
-            <p className="text-base md:text-lg text-muted-foreground">
-              Reconhecida como líder em 5 de 6 quadrantes no ecossistema AWS,
-              garantindo excelência e qualidade em nossos serviços.
-            </p>
-          </div>
-          <div className="flex justify-center backdrop-blur-md bg-white/30 p-4 md:p-6 rounded-2xl border border-white/40 shadow-lg">
-            <img 
-              src={awsCertifications} 
-              alt="AWS Certifications" 
-              className="max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl w-full h-auto"
-            />
-          </div>
-        </div>
-      </section>
+      <CertificationsSection certificationImage={awsCertifications} />
 
       {/* Clients Section */}
-      <section className="py-16 md:py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary text-center mb-8 md:mb-12">
-            Alguns de Nossos Projetos
-          </h2>
-          <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
-            <div className="overflow-hidden">
-              <div className="marquee items-center gap-6 md:gap-8 lg:gap-12">
-                {/* Set A */}
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-
-                {/* Set B */}
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4 dup" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-
-                {/* Set C */}
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4 c" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-
-                {/* Set D */}
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz" alt="Client logo 1 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy" alt="Client logo 2 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p" alt="Client logo 3 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-                <img src="https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6" alt="Client logo 4 d" className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ClientsSection />
       
       {/* CTA Section */}
       <CTA />
