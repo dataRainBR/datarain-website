@@ -52,7 +52,7 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="py-16 text-white relative overflow-hidden">
+    <section className="py-24 md:py-32 text-white relative overflow-hidden">
       <Carousel
         opts={{
           align: "center",
