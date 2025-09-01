@@ -1,8 +1,15 @@
 /*
 Theme Name: DataRain
-Description: Tema moderno para empresa de tecnologia em nuvem
-Version: 1.0
+Description: Tema moderno para empresa de tecnologia em nuvem especializada em Cloud Computing e AWS
+Version: 1.0.0
 Author: DataRain
+Text Domain: datarain
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: business, technology, cloud-computing, responsive, custom-header, custom-menu, featured-images, threaded-comments, translation-ready
 */
 
 :root {
