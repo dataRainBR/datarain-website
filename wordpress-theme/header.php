@@ -49,18 +49,17 @@
                     <?php endif; ?>
                 </div>
                 
-                <ul class="nav-links">
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Soluções</a></li>
-                    <li><a href="#cases">Cases</a></li>
-                    <li><a href="#clientes">Clientes</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                    <li><a href="#contato" class="btn btn-primary">Fale Conosco</a></li>
-                    <li><a href="#demo" class="btn btn-outline">Agende uma Demonstração</a></li>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>#sobre">Sobre</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>#servicos">Soluções</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/blog')); ?>">Blog</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>#contato">Contato</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>#contato" class="btn btn-primary">Fale Conosco</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/')); ?>#demo" class="btn btn-outline">Agende uma Demonstração</a></li>
                 </ul>
                 
                 <!-- Mobile menu button -->
-                <button class="mobile-menu-btn" style="display: none; background: none; border: none; font-size: 1.5rem; color: var(--gray-600);">
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
                     ☰
                 </button>
             </nav>
