@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "@/components/Logo";
 import heroPeopleImage from "@/assets/hero-people-technology.jpg";
 import { Button } from "@/components/ui/button";
@@ -18,7 +19,8 @@ const Header = ({ backgroundImage }: HeaderProps) => {
     { label: "Serviços Gerenciados", href: "#servicos" },
     { label: "Cases", href: "#cases" },
     { label: "Conteúdo", href: "#conteudo" },
-    { label: "Academy", href: "#academy" }
+    { label: "Academy", href: "#academy" },
+    { label: "Blog", href: "/blog", isRoute: true }
   ];
 
   useEffect(() => {
@@ -51,22 +53,41 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center gap-6">
                   {navItems.map((item) => (
-                    <a 
-                      key={item.label}
-                      href={item.href} 
-                      className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
-                        isScrolled 
-                          ? 'text-gray-700 hover:text-primary' 
-                          : 'text-gray-700 hover:text-primary'
-                      }`}
-                    >
-                      <span className="relative z-10">{item.label}</span>
-                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
-                        isScrolled
-                          ? 'bg-primary/10 border border-primary/20'
-                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
-                      }`}></div>
-                    </a>
+                    item.isRoute ? (
+                      <Link 
+                        key={item.label}
+                        to={item.href} 
+                        className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
+                          isScrolled 
+                            ? 'text-gray-700 hover:text-primary' 
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
+                      >
+                        <span className="relative z-10">{item.label}</span>
+                        <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                          isScrolled
+                            ? 'bg-primary/10 border border-primary/20'
+                            : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                        }`}></div>
+                      </Link>
+                    ) : (
+                      <a 
+                        key={item.label}
+                        href={item.href} 
+                        className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
+                          isScrolled 
+                            ? 'text-gray-700 hover:text-primary' 
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
+                      >
+                        <span className="relative z-10">{item.label}</span>
+                        <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                          isScrolled
+                            ? 'bg-primary/10 border border-primary/20'
+                            : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                        }`}></div>
+                      </a>
+                    )
                   ))}
                 </div>
 
