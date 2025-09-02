@@ -32,40 +32,26 @@ const AboutSection = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20 relative overflow-hidden">
-              {/* Background accent */}
-              <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary to-accent"></div>
-              
-              <div className="space-y-6">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-                    <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-sm font-medium text-primary">AWS PARTNER</span>
-                  </div>
-                  <h3 className="text-xl md:text-2xl font-bold text-primary mb-2">
-                    Líder em <span className="text-accent">5 de 6</span> Quadrantes
-                  </h3>
-                  <p className="text-muted-foreground text-sm md:text-base">
-                    No Ecossistema AWS
-                  </p>
+            <div className="bg-muted/50 rounded-2xl border-2 border-dashed border-border/30 aspect-square flex items-center justify-center hover:bg-muted/70 transition-colors">
+              <div className="text-center space-y-4">
+                <div className="w-16 h-16 mx-auto bg-muted rounded-lg flex items-center justify-center">
+                  <svg 
+                    className="w-8 h-8 text-muted-foreground"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
+                    />
+                  </svg>
                 </div>
-                
-                <div className="space-y-3">
-                  {[
-                    "Amazon DynamoDB Delivery",
-                    "DevOps Services Competency", 
-                    "Amazon EC2 for Windows Server Delivery",
-                    "Migration and Modernization Services",
-                    "Generative AI Services Competency"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3 group">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full mt-2.5 flex-shrink-0 group-hover:scale-125 transition-transform"></div>
-                      <span className="text-sm md:text-base text-foreground group-hover:text-primary transition-colors">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-sm text-muted-foreground font-medium">
+                  Placeholder para Imagem
+                </p>
               </div>
             </div>
           </div>

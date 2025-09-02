@@ -55,6 +55,6 @@ export const getWordPressEndpoint = (endpoint: string) => {
 };
 
 // Função para obter URL de mídia
-export const getMediaUrl = (mediaId: number, size: keyof typeof WORDPRESS_CONFIG.MEDIA_SIZES = 'medium') => {
+export const getMediaUrl = (mediaId: number, size: (typeof WORDPRESS_CONFIG.MEDIA_SIZES)[number] = 'medium') => {
   return `${WORDPRESS_CONFIG.BASE_URL}/wp-json/wp/v2/media/${mediaId}`;
 };
