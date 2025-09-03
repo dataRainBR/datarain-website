@@ -6,22 +6,51 @@ import heroBackground from "@/assets/hero-background.jpg";
 const QuemSomos = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header padrão igual à home */}
-      <Header backgroundImage={heroBackground} />
-      
-      {/* Conteúdo específico da página - título interno */}
-      <div className="relative -mt-96 pt-96 pb-20">
-        <div className="container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
-              <span>Quem</span> <span style={{ color: '#f78504' }}>Somos</span>
-            </h1>
-            <p className="text-xl md:text-2xl max-w-3xl mx-auto text-white/90 mb-12">
-              Entre os melhores parceiros na América Latina
-            </p>
+      {/* Navbar consistente */}
+      <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg py-2">
+        <div className="container mx-auto px-4">
+          <div className="bg-white rounded-lg border border-border/20 py-3 px-4 md:px-6">
+            <div className="flex justify-between items-center">
+              <div className="text-primary font-bold text-xl">dataRain</div>
+              
+              <div className="flex items-center gap-8">
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex items-center gap-6">
+                  {["Quem Somos", "Soluções", "Serviços Gerenciados", "Cases", "Conteúdo", "Academy", "Blog"].map((item) => (
+                    <a key={item} href="#" className="text-gray-700 hover:text-primary transition-colors px-4 py-2 rounded-lg">
+                      {item}
+                    </a>
+                  ))}
+                </div>
+                
+                {/* CTA Button */}
+                <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors">
+                  Fale Conosco
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </nav>
+
+      {/* Hero Section específica para Quem Somos */}
+      <header className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+        >
+          <div className="absolute inset-0 bg-primary/80"></div>
+        </div>
+
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Quem Somos
+          </h1>
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+            Entre os melhores parceiros na América Latina
+          </p>
+        </div>
+      </header>
 
       {/* Leadership Section */}
       <section className="py-20 bg-background">
