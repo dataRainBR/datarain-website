@@ -6,36 +6,20 @@ import heroBackground from "@/assets/hero-background.jpg";
 const QuemSomos = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header with Hero */}
-      <header className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBackground})` }}
-        >
-          <div className="absolute inset-0 bg-primary/80"></div>
-        </div>
-
-        {/* Navigation */}
-        <nav className="absolute top-0 left-0 right-0 z-50 px-4 py-6">
-          <div className="container mx-auto flex items-center justify-between">
-            <div className="text-white font-bold text-xl">DataRain</div>
-            <Button variant="glass" size="lg" className="text-white border-white/20">
-              Fale Conosco
-            </Button>
-          </div>
-        </nav>
-
-        {/* Hero Content */}
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Quem Somos
+      {/* Header com Hero customizado para Quem Somos */}
+      <Header backgroundImage={heroBackground} />
+      
+      {/* Hero customizado para página Quem Somos */}
+      <section className="relative -mt-20 pt-32 pb-20 min-h-[40vh] flex items-center justify-center">
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-900">
+            <span style={{ color: '#3893af' }}>Quem</span> Somos
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl max-w-3xl mx-auto text-gray-600">
             Entre os melhores parceiros na América Latina
           </p>
         </div>
-      </header>
+      </section>
 
       {/* Leadership Section */}
       <section className="py-20 bg-background">
