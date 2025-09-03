@@ -14,7 +14,7 @@ const Header = ({ backgroundImage }: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
-    { label: "Quem Somos", href: "#sobre" },
+    { label: "Quem Somos", href: "/quem-somos", isRoute: true },
     { label: "Soluções", href: "#solucoes" },
     { label: "Serviços Gerenciados", href: "#servicos" },
     { label: "Cases", href: "#cases" },
