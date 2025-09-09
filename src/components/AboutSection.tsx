@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import aboutImage from "@/assets/about-datarain.jpg";
 
 const AboutSection = () => {
   return (
@@ -32,27 +33,12 @@ const AboutSection = () => {
           </div>
           
           <div className="relative">
-            <div className="bg-muted/50 rounded-2xl border-2 border-dashed border-border/30 aspect-square flex items-center justify-center hover:bg-muted/70 transition-colors">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-muted rounded-lg flex items-center justify-center">
-                  <svg 
-                    className="w-8 h-8 text-muted-foreground"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth={2} 
-                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
-                    />
-                  </svg>
-                </div>
-                <p className="text-sm text-muted-foreground font-medium">
-                  Placeholder para Imagem
-                </p>
-              </div>
+            <div className="rounded-2xl overflow-hidden shadow-lg border border-border/20">
+              <img 
+                src={aboutImage} 
+                alt="Equipe DataRain - Especialistas em Cloud, IA e Tecnologia"
+                className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
