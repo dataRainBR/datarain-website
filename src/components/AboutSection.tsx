@@ -33,7 +33,7 @@ const AboutSection = () => {
           </div>
           
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-lg border border-border/20">
+            <div className="rounded-2xl overflow-hidden">
               <img 
                 src={aboutImage} 
                 alt="Equipe DataRain - Especialistas em Cloud, IA e Tecnologia"
