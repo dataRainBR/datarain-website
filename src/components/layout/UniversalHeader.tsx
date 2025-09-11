@@ -18,8 +18,8 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
     { label: "Soluções", href: "/solucoes", isRoute: true },
     { label: "Serviços Gerenciados", href: "/servicos", isRoute: true },
     { label: "Cases", href: "/cases", isRoute: true },
-    { label: "Academy", href: "/academy", isRoute: true },
-    { label: "Blog", href: "/blog", isRoute: true }
+    { label: "Blog", href: "/blog", isRoute: true },
+    { label: "Academy", href: "/academy", isRoute: true }
   ];
 
   useEffect(() => {
