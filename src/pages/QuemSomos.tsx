@@ -1,67 +1,12 @@
 import { Button } from "@/components/ui/button";
-import Header from "@/components/layout/Header";
+import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
-import Logo from "@/components/Logo";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const QuemSomos = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Navbar padrão idêntica à home */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        true 
-          ? 'bg-white shadow-lg py-2' 
-          : 'bg-transparent py-4 md:py-6'
-      }`}>
-        <div className="container mx-auto px-4">
-          <div className={`transition-all duration-300 ${
-            true
-              ? 'bg-white rounded-lg border border-border/20 py-3 px-4 md:px-6'
-              : 'backdrop-blur-md bg-white/10 rounded-2xl border border-white/20 py-4 px-4 md:px-6 shadow-lg'
-          }`}>
-            <div className="flex justify-between items-center">
-              <Logo variant="original" />
-              
-              <div className="flex items-center gap-8">
-                {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-6">
-                  {["Quem Somos", "Soluções", "Serviços Gerenciados", "Cases", "Conteúdo", "Academy", "Blog"].map((item) => (
-                    <a 
-                      key={item}
-                      href="#" 
-                      className={`transition-all duration-300 relative group px-4 py-2 rounded-lg text-gray-700 hover:text-primary`}
-                    >
-                      <span className="relative z-10">{item}</span>
-                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 bg-primary/10 border border-primary/20`}></div>
-                    </a>
-                  ))}
-                </div>
-
-                {/* Desktop CTA */}
-                <Button 
-                  variant="default"
-                  size="sm" 
-                  className="shadow-xl backdrop-blur-sm hidden lg:flex"
-                >
-                  Fale Conosco
-                </Button>
-
-                {/* Mobile menu button & Mobile CTA */}
-                <div className="flex items-center gap-4 lg:hidden">
-                  <Button 
-                    variant="default"
-                    size="sm" 
-                    className="shadow-xl backdrop-blur-sm"
-                  >
-                    <span className="hidden sm:inline">Fale Conosco</span>
-                    <span className="sm:hidden">Contato</span>
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <UniversalHeader />
 
       {/* Hero Section específica para Quem Somos */}
       <header className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24">
