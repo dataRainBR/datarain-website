@@ -15,11 +15,10 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
 
   const navItems = [
     { label: "Quem Somos", href: "/quem-somos", isRoute: true },
-    { label: "Soluções", href: "#solucoes" },
-    { label: "Serviços Gerenciados", href: "#servicos" },
-    { label: "Cases", href: "#cases" },
-    { label: "Conteúdo", href: "#conteudo" },
-    { label: "Academy", href: "#academy" },
+    { label: "Soluções", href: "/solucoes", isRoute: true },
+    { label: "Serviços Gerenciados", href: "/servicos", isRoute: true },
+    { label: "Cases", href: "/cases", isRoute: true },
+    { label: "Academy", href: "/academy", isRoute: true },
     { label: "Blog", href: "/blog", isRoute: true }
   ];
 

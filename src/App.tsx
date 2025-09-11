@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import QuemSomos from "./pages/QuemSomos";
+import Solucoes from "./pages/Solucoes";
+import Servicos from "./pages/Servicos";
+import Cases from "./pages/Cases";
+import Academy from "./pages/Academy";
 import WordPressBlog from "./pages/WordPressBlog";
 import WordPressPostView from "./components/wordpress/WordPressPostView";
 
@@ -20,6 +24,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/quem-somos" element={<QuemSomos />} />
+          <Route path="/solucoes" element={<Solucoes />} />
+          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/cases" element={<Cases />} />
+          <Route path="/academy" element={<Academy />} />
           <Route path="/blog" element={<WordPressBlog />} />
           <Route path="/blog/:id" element={<WordPressPostView />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
