@@ -45,50 +45,40 @@ const QuemSomos = () => {
       <UniversalHeader />
 
       {/* Modern Hero Section - It's About People */}
-      <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background with modern gradient overlay */}
-        <div className="absolute inset-0">
-          <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 transition-transform duration-[20s] ease-out"
-            style={{ backgroundImage: `url(${heroBackground})` }}
-          />
-          {/* Modern gradient overlay with glassmorphism */}
-          <div className="absolute inset-0 bg-gradient-hero opacity-90" />
-          <div className="absolute inset-0 backdrop-blur-[1px]" />
-        </div>
-
+      <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
         {/* Floating elements for depth */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000" />
+          <div className="absolute top-1/2 left-3/4 w-48 h-48 bg-muted/20 rounded-full blur-2xl animate-pulse delay-500" />
         </div>
 
-        {/* Content with glassmorphism card */}
+        {/* Content with modern glass card */}
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl">
+          <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 md:p-12 lg:p-16 shadow-primary">
             <div className="space-y-8">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white tracking-tight">
-                <span className="bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight">
+                <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
                   It's About
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent animate-pulse">
+                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent animate-pulse">
                   People
                 </span>
               </h1>
               
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-light">
+                <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed font-light">
                   A tecnologia por si só não move montanhas, mas as 
                   <span className="font-semibold text-accent"> pessoas corretas </span>
                   sim, e quando juntamos essas duas peças, essa união tem 
-                  <span className="font-semibold text-white"> potencial de mudar o mundo.</span>
+                  <span className="font-semibold text-primary"> potencial de mudar o mundo.</span>
                 </p>
               </div>
 
               {/* Subtle call-to-action hint */}
               <div className="flex justify-center pt-8">
-                <div className="w-1 h-16 bg-gradient-to-b from-white/60 to-transparent rounded-full animate-pulse" />
+                <div className="w-1 h-16 bg-gradient-to-b from-primary/60 to-transparent rounded-full animate-pulse" />
               </div>
             </div>
           </div>
@@ -96,8 +86,8 @@ const QuemSomos = () => {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
+          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-primary/60 rounded-full mt-2 animate-bounce" />
           </div>
         </div>
       </header>
