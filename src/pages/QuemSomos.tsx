@@ -46,7 +46,20 @@ const QuemSomos = () => {
 
       {/* Modern Hero Section - It's About People */}
       <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
-        {/* Floating elements for depth */}
+        {/* Background with subtle gradient splashes like home */}
+        <div className="absolute inset-0">
+          {/* Large Blue splash - top right */}
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-primary/15 rounded-full blur-3xl animate-pulse"></div>
+          
+          {/* Large Orange splash - bottom left */}
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-accent/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          {/* Medium accent splashes */}
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-accent/10 rounded-full blur-2xl"></div>
+        </div>
+
+        {/* Floating elements for additional depth */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
           <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000" />
