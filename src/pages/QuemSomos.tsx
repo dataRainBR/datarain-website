@@ -1,15 +1,51 @@
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import ClientsSection from "@/components/sections/ClientsSection";
 import heroBackground from "@/assets/hero-background.jpg";
 
 const QuemSomos = () => {
+  const teamMembers = [
+    {
+      name: "João Silva",
+      role: "CEO & Founder",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://linkedin.com/in/joaosilva"
+    },
+    {
+      name: "Maria Santos",
+      role: "CTO",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b29c?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://linkedin.com/in/mariasantos"
+    },
+    {
+      name: "Pedro Costa",
+      role: "Head of Cloud",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://linkedin.com/in/pedrocosta"
+    },
+    {
+      name: "Ana Oliveira",
+      role: "Head of AI",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://linkedin.com/in/anaoliveira"
+    },
+    {
+      name: "Carlos Lima",
+      role: "Head of Security",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://linkedin.com/in/carloslima"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader />
 
-      {/* Hero Section específica para Quem Somos */}
-      <header className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-24">
+      {/* Hero Section - It's About People */}
+      <header className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroBackground})` }}
@@ -17,204 +53,135 @@ const QuemSomos = () => {
           <div className="absolute inset-0 bg-primary/80"></div>
         </div>
 
-        <div className="relative z-10 text-center text-white px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Quem Somos
+        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
+            It's About People
           </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Entre os melhores parceiros na América Latina
+          <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed">
+            A tecnologia por si só não move montanhas, mas as pessoas corretas sim, 
+            e quando juntamos essas duas peças, essa união tem potencial de mudar o mundo.
           </p>
         </div>
       </header>
 
-      {/* Leadership Section */}
+      {/* Main Content Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Líder ISG Provider Lens Report 2022 & 2023
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+              É nisso que a dataRain acredita
             </h2>
-            <div className="w-24 h-1 bg-accent mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div key={item} className="bg-white rounded-xl p-6 shadow-lg border border-border/20 hover:shadow-xl transition-shadow">
-                <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <div className="w-8 h-8 bg-primary rounded"></div>
-                </div>
-                <p className="text-xs text-muted-foreground mt-2 text-center">
-                  Certificação {item}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Innovation Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Uma das primeiras empresas do mundo habilitadas a desenvolver com IA
-            </h2>
-            <div className="w-24 h-1 bg-accent mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <div className="w-6 h-6 bg-primary rounded"></div>
-                  </div>
-                  <h3 className="text-xl font-bold text-primary">
-                    Inovação em IA
-                  </h3>
-                </div>
-                <p className="text-muted-foreground">
-                  Pioneiros no desenvolvimento de soluções com inteligência artificial,
-                  sempre à frente das principais tendências tecnológicas.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-muted/50 rounded-2xl border-2 border-dashed border-border/30 aspect-square flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-muted rounded-lg flex items-center justify-center">
-                  <svg className="w-8 h-8 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <p className="text-sm text-muted-foreground font-medium">
-                  Imagem de Inovação
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Girls in Cloud Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="bg-muted/50 rounded-2xl border-2 border-dashed border-border/30 aspect-square flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <div className="w-16 h-16 mx-auto bg-muted rounded-lg flex items-center justify-center">
-                  <svg className="w-8 h-8 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </div>
-                <p className="text-sm text-muted-foreground font-medium">
-                  Girls in Cloud
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <h2 className="text-3xl md:text-4xl font-bold text-primary">
-                  Girls in Cloud
-                </h2>
-                <div className="w-12 h-1 bg-accent rounded-full"></div>
-              </div>
-              
-              <p className="text-lg text-foreground leading-relaxed">
-                Nosso projeto que impulsiona mulheres a entrarem na área da tecnologia 
-                e capacita-las para o mercado de trabalho.
-              </p>
-
-              <div className="grid grid-cols-3 gap-6 mt-8">
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">3600</div>
-                  <p className="text-muted-foreground italic">inscritas</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-accent mb-2">200</div>
-                  <p className="text-muted-foreground italic">selecionadas</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">180</div>
-                  <p className="text-muted-foreground italic">formadas</p>
-                </div>
-              </div>
-
-              <div className="text-center mt-6">
-                <span className="text-2xl font-bold text-accent italic">2023</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Areas Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-              Muito além da nuvem
-            </h2>
-            <h3 className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Explore nossas áreas de atuação
-            </h3>
-            <div className="w-24 h-1 bg-accent mx-auto"></div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Cloud", description: "Soluções completas em nuvem" },
-              { title: "Cyber Security", description: "Proteção e segurança digital" },
-              { title: "AI & ML", description: "Inteligência artificial e machine learning" }
-            ].map((area, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-border/20 hover:shadow-xl transition-shadow">
-                <div className="text-center space-y-4">
-                  <div className="w-16 h-16 mx-auto bg-primary/10 rounded-lg flex items-center justify-center">
-                    <div className="w-8 h-8 bg-primary rounded"></div>
-                  </div>
-                  <h4 className="text-xl font-bold text-primary">{area.title}</h4>
-                  <p className="text-muted-foreground">{area.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-16">
-            <p className="text-lg text-muted-foreground italic mb-8">
-              Aqui todos somos certificados AWS, desde o estagiário até o CEO!
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              É por isso que somos a referência N°1 em nuvem AWS no Brasil. Com os melhores 
+              profissionais em Cloud, IA & Dados e Cibersegurança. Ajudamos você a não apenas 
+              resolver problemas com a tecnologia da sua empresa, mas nos tornamos sua parceira 
+              estratégica, traçando um plano de desenvolvimento de maturidade para sua empresa 
+              ganhar mais, gastar melhor e inovar sempre.
             </p>
+            <p className="text-lg md:text-xl font-semibold text-primary">
+              E quem afirma isso não somos nós, mas todos que já passaram por esse processo:
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      <ClientsSection />
+
+      {/* Explorar Cases Button */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4 text-center">
+          <Button variant="hero" size="xl">
+            Explorar Cases
+          </Button>
+        </div>
+      </section>
+
+      {/* Como conseguimos isso */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+              E como conseguimos isso?
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Se o processo com o desenvolvimento tecnológico da sua empresa parece complexo, 
+              aqui nós facilitamos através de um método construído e validado com dezenas de 
+              clientes, dos mais variados portes e setores. Uma jornada capaz de te guiar do 
+              mais absoluto zero, até os mais avançados modelos de Inteligência Artificial.
+            </p>
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20 mt-12">
+              <p className="text-lg md:text-xl font-semibold text-primary mb-6">
+                Entre em contato agora e ganhe uma consultoria de 5h para receber o seu 
+                diagnóstico gratuito e descubra onde a sua empresa está nessa jornada!
+              </p>
+              <Button variant="hero" size="xl">
+                Fazer Avaliação
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Conheça quem faz a dataRain ser a maior especialista AWS do país:
+            </h2>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {teamMembers.map((member, index) => (
+                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <div className="p-4">
+                      <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20 hover:shadow-xl transition-shadow text-center">
+                        <Avatar className="w-24 h-24 mx-auto mb-4">
+                          <AvatarImage src={member.image} alt={member.name} />
+                          <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                        </Avatar>
+                        <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
+                        <p className="text-muted-foreground mb-4">{member.role}</p>
+                        <a 
+                          href={member.linkedin} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                          LinkedIn
+                        </a>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-20 bg-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center backdrop-blur-md bg-white/40 p-8 rounded-2xl border border-white/40 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
+              Pronto para transformar seu negócio?
+            </h2>
             <Button variant="hero" size="xl">
-              VEJA NOSSAS VAGAS
+              Fale com um dos nossos especialistas
             </Button>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-primary/5">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center backdrop-blur-md bg-white/40 p-8 rounded-2xl border border-white/40 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary">
-              Quer fazer parte do nosso time e se tornar um RainMaker?
-            </h2>
-            <div className="flex flex-col md:flex-row gap-4 justify-center">
-              <Button variant="hero" size="xl">
-                Ver Vagas Disponíveis
-              </Button>
-              <Button 
-                variant="glass" 
-                size="xl"
-                className="!bg-primary/10 !text-primary hover:!bg-primary/20"
-              >
-                Fale Conosco
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
       <Footer />
     </div>
   );
