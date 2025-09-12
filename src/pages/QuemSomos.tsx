@@ -44,23 +44,61 @@ const QuemSomos = () => {
     <div className="min-h-screen bg-background">
       <UniversalHeader />
 
-      {/* Hero Section - It's About People */}
-      <header className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24">
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBackground})` }}
-        >
-          <div className="absolute inset-0 bg-primary/80"></div>
+      {/* Modern Hero Section - It's About People */}
+      <header className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background with modern gradient overlay */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110 transition-transform duration-[20s] ease-out"
+            style={{ backgroundImage: `url(${heroBackground})` }}
+          />
+          {/* Modern gradient overlay with glassmorphism */}
+          <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+          <div className="absolute inset-0 backdrop-blur-[1px]" />
         </div>
 
-        <div className="relative z-10 text-center text-white px-4 max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-            It's About People
-          </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl leading-relaxed">
-            A tecnologia por si só não move montanhas, mas as pessoas corretas sim, 
-            e quando juntamos essas duas peças, essa união tem potencial de mudar o mundo.
-          </p>
+        {/* Floating elements for depth */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse" />
+          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        </div>
+
+        {/* Content with glassmorphism card */}
+        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
+          <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 shadow-2xl">
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white tracking-tight">
+                <span className="bg-gradient-to-r from-white via-white to-accent bg-clip-text text-transparent">
+                  It's About
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-accent to-white bg-clip-text text-transparent animate-pulse">
+                  People
+                </span>
+              </h1>
+              
+              <div className="max-w-4xl mx-auto">
+                <p className="text-lg md:text-xl lg:text-2xl text-white/90 leading-relaxed font-light">
+                  A tecnologia por si só não move montanhas, mas as 
+                  <span className="font-semibold text-accent"> pessoas corretas </span>
+                  sim, e quando juntamos essas duas peças, essa união tem 
+                  <span className="font-semibold text-white"> potencial de mudar o mundo.</span>
+                </p>
+              </div>
+
+              {/* Subtle call-to-action hint */}
+              <div className="flex justify-center pt-8">
+                <div className="w-1 h-16 bg-gradient-to-b from-white/60 to-transparent rounded-full animate-pulse" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-bounce" />
+          </div>
         </div>
       </header>
 
