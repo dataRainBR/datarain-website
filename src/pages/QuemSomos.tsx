@@ -223,6 +223,395 @@ const QuemSomos = () => {
         </div>
       </section>
 
+      {/* AWS Partnership Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h3 className="text-xl md:text-2xl font-semibold text-primary mb-8">
+              Entre os melhores parceiros na América Latina
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/DR_LOGO_WHITE.png" 
+                alt="dataRain Logo" 
+                className="h-12 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/aws-logo-png.png" 
+                alt="AWS Logo" 
+                className="h-12 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-e1746550889233.png" 
+                alt="AWS Badge 1" 
+                className="h-16 md:h-20 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-2-e1746550979294.png" 
+                alt="AWS Badge 2" 
+                className="h-16 md:h-20 w-auto opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ISG Provider Lens Report Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold text-primary mb-4">
+              Líder
+            </h2>
+            <h3 className="text-xl md:text-2xl font-semibold text-muted-foreground">
+              ISG<br />
+              PROVIDER<br />
+              LENS<br />
+              REPORT<br />
+              2022 & <span className="text-accent">2023</span>
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
+                alt="ISG Report Badge 1" 
+                className="max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
+                alt="ISG Report Badge 2" 
+                className="max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
+                alt="ISG Report Badge 3" 
+                className="max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
+                alt="ISG Report Badge 4" 
+                className="max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
+                alt="ISG Report Badge 5" 
+                className="max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform"
+              />
+            </div>
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
+                alt="ISG Report Badge 6" 
+                className="max-w-full h-auto opacity-90 hover:opacity-100 transition-opacity hover:scale-105 transform transition-transform"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Primeira empresa do mundo Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:order-2">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-5.png" 
+                alt="Primeiras empresas habilitadas" 
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="lg:order-1">
+              <h3 className="text-2xl md:text-3xl font-semibold text-primary mb-8 leading-relaxed">
+                Uma das primeiras empresas do<br />
+                mundo habilitadas a<br />
+                desenvolver com:
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Girls in Cloud Section */}
+      <section className="py-20 bg-gradient-to-r from-primary/10 to-accent/10 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h3 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+                Girls in Cloud
+              </h3>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
+                Nosso projeto que impulsiona mulheres a entrarem na área da tecnologia e capacita-las para o mercado de trabalho.
+              </p>
+              
+              <div className="grid grid-cols-3 gap-8 text-center">
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">3600</div>
+                  <div className="text-lg text-muted-foreground italic">inscritas</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">200</div>
+                  <div className="text-lg text-muted-foreground italic">Selecionadas</div>
+                </div>
+                <div>
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">180</div>
+                  <div className="text-lg text-muted-foreground italic">Formadas</div>
+                </div>
+              </div>
+              
+              <div className="mt-8">
+                <span className="text-6xl md:text-8xl font-bold text-accent/20 italic">2023</span>
+              </div>
+            </div>
+            
+            <div className="flex justify-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/02/Copy-of-Home-2-1.png" 
+                alt="Girls in Cloud" 
+                className="w-full max-w-md h-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Áreas de Atuação Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Muito além da nuvem
+            </h2>
+            <h3 className="text-xl md:text-2xl text-muted-foreground">
+              Explore nossas áreas de atuação
+            </h3>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-border/20 hover:shadow-xl transition-shadow">
+              <h4 className="text-2xl font-bold text-primary mb-4">Cloud</h4>
+              <p className="text-muted-foreground">Soluções completas em nuvem AWS</p>
+            </div>
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-border/20 hover:shadow-xl transition-shadow">
+              <h4 className="text-2xl font-bold text-primary mb-4">Cyber Security</h4>
+              <p className="text-muted-foreground">Proteção avançada para seus dados</p>
+            </div>
+            <div className="text-center p-8 bg-white rounded-2xl shadow-lg border border-border/20 hover:shadow-xl transition-shadow">
+              <h4 className="text-2xl font-bold text-primary mb-4">AI & ML</h4>
+              <p className="text-muted-foreground">Inteligência artificial aplicada</p>
+            </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <p className="text-lg text-muted-foreground italic max-w-2xl mx-auto">
+              Aqui todos somos certificados AWS, desde o estagiário até o CEO!
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* RainMaker Section */}
+      <section className="py-16 bg-primary/5">
+        <div className="container mx-auto px-4 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-primary mb-8">
+            Quer fazer parte do nosso time e se tornar um RainMaker?
+          </h3>
+          <Button variant="hero" size="xl" asChild>
+            <a href="https://www.linkedin.com/company/datarainconsulting" target="_blank" rel="noopener noreferrer">
+              VEJA NOSSAS VAGAS
+            </a>
+          </Button>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+                Fale com um especialista
+              </h2>
+              <p className="text-lg text-muted-foreground">
+                Preencha o formulário para que um de nossos consultores entre em contato com você, e possa agendar uma reunião com o especialista mais adequado para sua necessidade.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20">
+              <form className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
+                      Nome*
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                      Email corporativo*
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-foreground mb-2">
+                    Empresa*
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    required
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label htmlFor="employees" className="block text-sm font-medium text-foreground mb-2">
+                      Número de funcionários*
+                    </label>
+                    <select
+                      id="employees"
+                      name="employees"
+                      required
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    >
+                      <option value="">Selecione</option>
+                      <option value="1-100">1 a 100</option>
+                      <option value="101-500">101 a 500</option>
+                      <option value="501-1500">501 a 1500</option>
+                      <option value="1501-5000">1501 a 5000</option>
+                      <option value="5000+">Mais de 5000</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="position" className="block text-sm font-medium text-foreground mb-2">
+                      Cargo*
+                    </label>
+                    <select
+                      id="position"
+                      name="position"
+                      required
+                      className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    >
+                      <option value="">Selecione</option>
+                      <option value="ceo">Presidência / CEO</option>
+                      <option value="director">Diretoria</option>
+                      <option value="manager">Gerência</option>
+                      <option value="coordinator">Coordenação</option>
+                      <option value="specialist">Especialista</option>
+                      <option value="analyst">Analista</option>
+                      <option value="other">Outro</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="sector" className="block text-sm font-medium text-foreground mb-2">
+                    Setor onde atua*
+                  </label>
+                  <select
+                    id="sector"
+                    name="sector"
+                    required
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  >
+                    <option value="">Selecione</option>
+                    <option value="admin">Administrativo/Financeiro</option>
+                    <option value="hr">Recursos Humanos</option>
+                    <option value="marketing">Marketing/Vendas</option>
+                    <option value="logistics">Logística/Compras</option>
+                    <option value="it">TI e Infraestrutura</option>
+                    <option value="rd">Pesquisa e Desenvolvimento</option>
+                  </select>
+                </div>
+                
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                    Celular
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="challenge" className="block text-sm font-medium text-foreground mb-2">
+                    Qual seu principal desafio na tecnologia?
+                  </label>
+                  <textarea
+                    id="challenge"
+                    name="challenge"
+                    rows={4}
+                    className="w-full px-4 py-3 border border-border rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  ></textarea>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-foreground mb-2">
+                    Já utiliza AWS?
+                  </label>
+                  <div className="flex gap-4">
+                    <label className="flex items-center">
+                      <input type="radio" name="aws_usage" value="yes" className="mr-2" />
+                      Sim
+                    </label>
+                    <label className="flex items-center">
+                      <input type="radio" name="aws_usage" value="no" className="mr-2" />
+                      Não
+                    </label>
+                  </div>
+                </div>
+                
+                <div className="text-center">
+                  <Button type="submit" variant="hero" size="xl">
+                    Submeter
+                  </Button>
+                </div>
+                
+                <p className="text-sm text-muted-foreground text-center">
+                  Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
