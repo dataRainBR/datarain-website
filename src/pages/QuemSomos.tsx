@@ -42,7 +42,7 @@ const QuemSomos = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <UniversalHeader />
+      <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Modern Hero Section - It's About People */}
       <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
