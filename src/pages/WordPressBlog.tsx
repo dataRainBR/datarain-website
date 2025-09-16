@@ -1,109 +1,72 @@
 import React from 'react';
 import { WordPressPostsList } from '@/components/wordpress/WordPressPostsList';
-import { WordPressStatus } from '@/components/wordpress/WordPressStatus';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Home } from 'lucide-react';
+import { ArrowLeft, BookOpen } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import UniversalHeader from '@/components/layout/UniversalHeader';
 
 const WordPressBlog: React.FC = () => {
   const navigate = useNavigate();
-
-
 
   const handleGoHome = () => {
     navigate('/');
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      {/* Header */}
-      <div className="mb-8">
-        <div className="flex items-center gap-4 mb-4">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleGoHome}
-            className="flex items-center gap-2"
-          >
-            <ArrowLeft className="h-4 w-4" />
-            Voltar
-          </Button>
-          
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleGoHome}
-            className="flex items-center gap-2"
-          >
-            <Home className="h-4 w-4" />
-            Início
-          </Button>
+    <>
+      <UniversalHeader />
+      
+      {/* Hero Section */}
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        {/* Background splashes */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700"></div>
+          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
-        <Card>
-          <CardHeader className="text-center">
-            <CardTitle className="text-3xl font-bold">
-              Blog WordPress
-            </CardTitle>
-            <p className="text-muted-foreground">
-              Conteúdo gerenciado pelo WordPress
-            </p>
-          </CardHeader>
-        </Card>
-      </div>
 
-      {/* Status do WordPress */}
-      <div className="mb-8">
-        <WordPressStatus showDetails={true} />
-      </div>
+        <div className="relative z-10 container mx-auto px-4 py-16 text-center">
+          <div className="max-w-4xl mx-auto">
+            {/* Navigation */}
+            <div className="mb-8">
+              <Button
+                variant="outline"
+                onClick={handleGoHome}
+                className="mb-6 bg-background/80 backdrop-blur-sm hover:bg-background/90"
+              >
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Voltar ao início
+              </Button>
+            </div>
+            
+            {/* Title */}
+            <div className="flex items-center justify-center gap-3 mb-6">
+              <BookOpen className="h-12 w-12 text-primary" />
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                Blog
+              </h1>
+            </div>
 
-      {/* Lista de Posts */}
-      <WordPressPostsList
-        postsPerPage={9}
-        showSearch={true}
-        showFilters={true}
-      />
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Descubra artigos, insights e novidades sobre tecnologia, inovação e desenvolvimento
+            </p>
+          </div>
+        </div>
+      </section>
 
-      {/* Informações sobre a configuração */}
-      <Card className="mt-8">
-        <CardHeader>
-          <CardTitle>Como configurar o WordPress</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <div className="bg-muted p-4 rounded-lg">
-            <h4 className="font-semibold mb-2">1. Instalar WordPress</h4>
-            <p className="text-sm text-muted-foreground">
-              Instale o WordPress em seu servidor ou localmente (XAMPP, MAMP, etc.)
-            </p>
-          </div>
-          
-          <div className="bg-muted p-4 rounded-lg">
-            <h4 className="font-semibold mb-2">2. Configurar variáveis de ambiente</h4>
-            <p className="text-sm text-muted-foreground">
-              Crie um arquivo .env na raiz do projeto com:
-            </p>
-            <code className="block bg-background p-2 rounded mt-2 text-xs">
-              VITE_WORDPRESS_URL=https://seusite.com
-            </code>
-          </div>
-          
-          <div className="bg-muted p-4 rounded-lg">
-            <h4 className="font-semibold mb-2">3. Habilitar API REST</h4>
-            <p className="text-sm text-muted-foreground">
-              A API REST do WordPress deve estar habilitada (padrão em versões recentes)
-            </p>
-          </div>
-          
-          <div className="bg-muted p-4 rounded-lg">
-            <h4 className="font-semibold mb-2">4. Criar conteúdo</h4>
-            <p className="text-sm text-muted-foreground">
-              Crie posts, páginas e mídia no painel administrativo do WordPress
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    </div>
+      {/* Main content */}
+      <main className="bg-gradient-to-b from-background via-background/95 to-background">
+        <div className="container mx-auto px-4 py-16">
+          {/* Lista de Posts */}
+          <WordPressPostsList
+            postsPerPage={9}
+            showSearch={true}
+            showFilters={true}
+          />
+        </div>
+      </main>
+    </>
   );
 };
 

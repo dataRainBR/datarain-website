@@ -9,6 +9,7 @@ import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { Loader2 } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
+import WordPressRelatedPosts from '@/components/wordpress/WordPressRelatedPosts';
 
 const WordPressPostView: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -227,6 +228,9 @@ const WordPressPostView: React.FC = () => {
                 </CardContent>
               </Card>
             )}
+
+            {/* Related Posts Carousel */}
+            <WordPressRelatedPosts currentPostId={Number(id)} />
 
             {/* Actions */}
             <Card className="bg-muted/30">
