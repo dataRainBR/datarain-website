@@ -15,6 +15,7 @@ interface WordPressPostsListProps {
   categoryFilter?: number;
   tagFilter?: number;
   tagSlug?: string;
+  searchTerm?: string;
 }
 
 export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
@@ -24,11 +25,15 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   categoryFilter,
   tagFilter,
   tagSlug,
+  searchTerm: externalSearchTerm,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<number | undefined>(categoryFilter);
   const [selectedTag, setSelectedTag] = useState<number | undefined>(tagFilter);
+
+  // Use external search term if provided, otherwise use internal state
+  const activeSearchTerm = externalSearchTerm || searchTerm;
 
   // Use different hooks based on whether we have a tag slug
   const regularPostsQuery = useWordPressPosts({
@@ -36,13 +41,13 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     page: currentPage,
     category: selectedCategory,
     tag: selectedTag,
-    search: searchTerm || undefined,
+    search: activeSearchTerm || undefined,
   });
 
   const tagSlugPostsQuery = useWordPressPostsByTagSlug(tagSlug || '', {
     per_page: postsPerPage,
     page: currentPage,
-    search: searchTerm || undefined,
+    search: activeSearchTerm || undefined,
   });
 
   // Use the appropriate query based on whether tagSlug is provided
@@ -163,7 +168,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
                 key={post.id}
                 post={post}
                 showExcerpt={true}
-                showCategories={true}
+                showCategories={false}
                 showTags={false}
               />
             ))}

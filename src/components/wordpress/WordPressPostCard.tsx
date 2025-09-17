@@ -71,15 +71,6 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
       </CardHeader>
 
       <CardContent className="flex-1 flex flex-col justify-end">
-        {showCategories && post.categories.length > 0 && (
-          <div className="flex flex-wrap gap-1 mb-3">
-            {post.categories.slice(0, 3).map((categoryId) => (
-              <Badge key={categoryId} variant="secondary" className="text-xs">
-                Categoria {categoryId}
-              </Badge>
-            ))}
-          </div>
-        )}
 
         {showTags && post.tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mb-3">
