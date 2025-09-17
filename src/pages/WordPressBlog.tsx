@@ -62,7 +62,8 @@ const WordPressBlog: React.FC = () => {
           <WordPressPostsList
             postsPerPage={9}
             showSearch={true}
-            showFilters={true}
+            showFilters={false}
+            tagSlug="blog"
           />
         </div>
       </main>

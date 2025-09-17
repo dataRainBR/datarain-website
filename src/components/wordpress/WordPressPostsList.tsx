@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { WordPressPostCard } from './WordPressPostCard';
-import { useWordPressPosts } from '@/hooks/useWordPress';
+import { useWordPressPosts, useWordPressPostsByTagSlug } from '@/hooks/useWordPress';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -14,6 +14,7 @@ interface WordPressPostsListProps {
   showFilters?: boolean;
   categoryFilter?: number;
   tagFilter?: number;
+  tagSlug?: string;
 }
 
 export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
@@ -22,19 +23,30 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   showFilters = true,
   categoryFilter,
   tagFilter,
+  tagSlug,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<number | undefined>(categoryFilter);
   const [selectedTag, setSelectedTag] = useState<number | undefined>(tagFilter);
 
-  const { data: posts, isLoading, error, isFetching } = useWordPressPosts({
+  // Use different hooks based on whether we have a tag slug
+  const regularPostsQuery = useWordPressPosts({
     per_page: postsPerPage,
     page: currentPage,
     category: selectedCategory,
     tag: selectedTag,
     search: searchTerm || undefined,
   });
+
+  const tagSlugPostsQuery = useWordPressPostsByTagSlug(tagSlug || '', {
+    per_page: postsPerPage,
+    page: currentPage,
+    search: searchTerm || undefined,
+  });
+
+  // Use the appropriate query based on whether tagSlug is provided
+  const { data: posts, isLoading, error, isFetching } = tagSlug ? tagSlugPostsQuery : regularPostsQuery;
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();

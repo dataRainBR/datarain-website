@@ -148,3 +148,39 @@ export const useWordPressPageBySlug = (slug: string) => {
     staleTime: 10 * 60 * 1000, // 10 minutos
   });
 };
+
+// Hook para buscar posts por tag slug
+export const useWordPressPostsByTagSlug = (tagSlug: string, params: {
+  per_page?: number;
+  page?: number;
+  search?: string;
+} = {}) => {
+  return useQuery({
+    queryKey: ['wordpress-posts-tag-slug', tagSlug, params],
+    queryFn: async () => {
+      // Primeiro buscar a tag pelo slug
+      const tagsResponse = await fetch(getWordPressUrl(`/tags?slug=${tagSlug}`));
+      if (!tagsResponse.ok) throw new Error('Erro ao buscar tag');
+      const tags = await tagsResponse.json() as WordPressTag[];
+      
+      if (tags.length === 0) {
+        return [];
+      }
+      
+      const tagId = tags[0].id;
+      
+      // Agora buscar posts por tag ID
+      const queryString = new URLSearchParams();
+      if (params.per_page) queryString.append('per_page', params.per_page.toString());
+      if (params.page) queryString.append('page', params.page.toString());
+      if (params.search) queryString.append('search', params.search);
+      queryString.append('tags', tagId.toString());
+      
+      const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
+      if (!postsResponse.ok) throw new Error('Erro ao buscar posts');
+      return postsResponse.json() as Promise<WordPressPost[]>;
+    },
+    enabled: !!tagSlug,
+    staleTime: 5 * 60 * 1000, // 5 minutos
+  });
+};
