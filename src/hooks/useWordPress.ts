@@ -149,7 +149,7 @@ export const useWordPressPageBySlug = (slug: string) => {
   });
 };
 
-// Hook para buscar posts por tag slug
+// Hook para buscar posts por tag slug com fallback
 export const useWordPressPostsByTagSlug = (tagSlug: string, params: {
   per_page?: number;
   page?: number;
@@ -158,27 +158,53 @@ export const useWordPressPostsByTagSlug = (tagSlug: string, params: {
   return useQuery({
     queryKey: ['wordpress-posts-tag-slug', tagSlug, params],
     queryFn: async () => {
-      // Primeiro buscar a tag pelo slug
-      const tagsResponse = await fetch(getWordPressUrl(`/tags?slug=${tagSlug}`));
-      if (!tagsResponse.ok) throw new Error('Erro ao buscar tag');
-      const tags = await tagsResponse.json() as WordPressTag[];
-      
-      if (tags.length === 0) {
-        return [];
+      try {
+        // Primeiro buscar a tag pelo slug
+        const tagsResponse = await fetch(getWordPressUrl(`/tags?slug=${tagSlug}`));
+        
+        if (tagsResponse.ok) {
+          const tags = await tagsResponse.json() as WordPressTag[];
+          
+          if (tags.length > 0) {
+            const tagId = tags[0].id;
+            
+            // Buscar posts por tag ID
+            const queryString = new URLSearchParams();
+            if (params.per_page) queryString.append('per_page', params.per_page.toString());
+            if (params.page) queryString.append('page', params.page.toString());
+            if (params.search) queryString.append('search', params.search);
+            queryString.append('tags', tagId.toString());
+            
+            const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
+            if (postsResponse.ok) {
+              return postsResponse.json() as Promise<WordPressPost[]>;
+            }
+          }
+        }
+        
+        // Fallback: buscar todos os posts se a busca por tag falhar
+        console.warn(`Falha ao buscar posts por tag "${tagSlug}", usando busca geral como fallback`);
+        const queryString = new URLSearchParams();
+        if (params.per_page) queryString.append('per_page', params.per_page.toString());
+        if (params.page) queryString.append('page', params.page.toString());
+        if (params.search) queryString.append('search', params.search);
+        
+        const fallbackResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
+        if (!fallbackResponse.ok) throw new Error('Erro ao buscar posts');
+        return fallbackResponse.json() as Promise<WordPressPost[]>;
+        
+      } catch (error) {
+        // Último fallback: buscar todos os posts
+        console.error(`Erro ao buscar posts por tag "${tagSlug}":`, error);
+        const queryString = new URLSearchParams();
+        if (params.per_page) queryString.append('per_page', params.per_page.toString());
+        if (params.page) queryString.append('page', params.page.toString());
+        if (params.search) queryString.append('search', params.search);
+        
+        const fallbackResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
+        if (!fallbackResponse.ok) throw new Error('Erro ao buscar posts');
+        return fallbackResponse.json() as Promise<WordPressPost[]>;
       }
-      
-      const tagId = tags[0].id;
-      
-      // Agora buscar posts por tag ID
-      const queryString = new URLSearchParams();
-      if (params.per_page) queryString.append('per_page', params.per_page.toString());
-      if (params.page) queryString.append('page', params.page.toString());
-      if (params.search) queryString.append('search', params.search);
-      queryString.append('tags', tagId.toString());
-      
-      const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-      if (!postsResponse.ok) throw new Error('Erro ao buscar posts');
-      return postsResponse.json() as Promise<WordPressPost[]>;
     },
     enabled: !!tagSlug,
     staleTime: 5 * 60 * 1000, // 5 minutos
