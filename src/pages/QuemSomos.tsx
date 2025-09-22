@@ -105,72 +105,37 @@ const QuemSomos = () => {
         </div>
       </header>
 
-      {/* Main Content Section */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+      {/* Nossa Historia - Seção com background moderno */}
+      <section className="py-20 bg-muted/20 relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">
-              É nisso que a dataRain acredita
+              Nossa História
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              É por isso que somos a referência N°1 em nuvem AWS no Brasil. Com os melhores 
-              profissionais em Cloud, IA & Dados e Cibersegurança. Ajudamos você a não apenas 
-              resolver problemas com a tecnologia da sua empresa, mas nos tornamos sua parceira 
-              estratégica, traçando um plano de desenvolvimento de maturidade para sua empresa 
-              ganhar mais, gastar melhor e inovar sempre.
-            </p>
-            <p className="text-lg md:text-xl font-semibold text-primary">
-              E quem afirma isso não somos nós, mas todos que já passaram por esse processo:
+              É nisso que a dataRain acredita. É por isso que somos a referência N°1 em nuvem AWS no Brasil. 
+              Com os melhores profissionais em Cloud, IA & Dados e Cibersegurança. Ajudamos você a não apenas 
+              resolver problemas com a tecnologia da sua empresa, mas nos tornamos sua parceira estratégica, 
+              traçando um plano de desenvolvimento de maturidade para sua empresa ganhar mais, gastar melhor e inovar sempre.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Clients Section */}
-      <ClientsSection />
-
-      {/* Explorar Cases Button */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4 text-center">
-          <Button variant="hero" size="xl">
-            Explorar Cases
-          </Button>
-        </div>
-      </section>
-
-      {/* Como conseguimos isso */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
-              E como conseguimos isso?
-            </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Se o processo com o desenvolvimento tecnológico da sua empresa parece complexo, 
-              aqui nós facilitamos através de um método construído e validado com dezenas de 
-              clientes, dos mais variados portes e setores. Uma jornada capaz de te guiar do 
-              mais absoluto zero, até os mais avançados modelos de Inteligência Artificial.
-            </p>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20 mt-12">
-              <p className="text-lg md:text-xl font-semibold text-primary mb-6">
-                Entre em contato agora e ganhe uma consultoria de 5h para receber o seu 
-                diagnóstico gratuito e descubra onde a sua empresa está nessa jornada!
-              </p>
-              <Button variant="hero" size="xl">
-                Fazer Avaliação
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
+      {/* Team Section - Reorganizada para vir antes */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Conheça quem faz a dataRain ser a maior especialista AWS do país:
+              Conheça nossa equipe
             </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Os especialistas que fazem a dataRain ser referência em tecnologia
+            </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
@@ -179,10 +144,12 @@ const QuemSomos = () => {
                 {teamMembers.map((member, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                     <div className="p-4">
-                      <div className="bg-white rounded-2xl p-8 shadow-lg border border-border/20 hover:shadow-xl transition-shadow text-center">
-                        <Avatar className="w-24 h-24 mx-auto mb-4">
+                      <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 shadow-primary hover:shadow-accent transition-all duration-300 text-center group">
+                        <Avatar className="w-24 h-24 mx-auto mb-4 ring-2 ring-primary/20 group-hover:ring-accent/40 transition-all duration-300">
                           <AvatarImage src={member.image} alt={member.name} />
-                          <AvatarFallback>{member.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                          <AvatarFallback className="bg-primary/10 text-primary text-lg font-semibold">
+                            {member.name.split(' ').map(n => n[0]).join('')}
+                          </AvatarFallback>
                         </Avatar>
                         <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
                         <p className="text-muted-foreground mb-4">{member.role}</p>
@@ -190,7 +157,7 @@ const QuemSomos = () => {
                           href={member.linkedin} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+                          className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
                         >
                           <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
@@ -209,150 +176,159 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-20 bg-primary/5">
+      {/* Nossa Metodologia */}
+      <section className="py-20 bg-muted/30 relative">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center backdrop-blur-md bg-white/40 p-8 rounded-2xl border border-white/40 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-primary">
-              Pronto para transformar seu negócio?
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-8">
+              Nossa Metodologia
             </h2>
-            <Button variant="hero" size="xl">
-              Fale com um dos nossos especialistas
-            </Button>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              Se o processo com o desenvolvimento tecnológico da sua empresa parece complexo, 
+              aqui nós facilitamos através de um método construído e validado com dezenas de 
+              clientes, dos mais variados portes e setores. Uma jornada capaz de te guiar do 
+              mais absoluto zero, até os mais avançados modelos de Inteligência Artificial.
+            </p>
+            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 shadow-primary mt-12">
+              <p className="text-lg md:text-xl font-semibold text-primary mb-6">
+                Entre em contato agora e ganhe uma consultoria de 5h para receber o seu 
+                diagnóstico gratuito e descubra onde a sua empresa está nessa jornada!
+              </p>
+              <Button variant="hero" size="xl">
+                Fazer Avaliação
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* AWS Partnership Section - Fundo Escuro como no original */}
-      <section className="py-16 bg-slate-900 relative">
+      {/* Resultados - Social Proof */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h3 className="text-xl md:text-2xl font-semibold text-white mb-8">
-              Entre os melhores parceiros na América Latina
-            </h3>
+          <div className="max-w-4xl mx-auto text-center space-y-8 mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+              Resultados Comprovados
+            </h2>
+            <p className="text-lg md:text-xl font-semibold text-primary">
+              E quem afirma isso não somos nós, mas todos que já passaram por esse processo:
+            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
-            <div className="flex justify-center">
+        </div>
+      </section>
+
+      {/* Clients Section */}
+      <ClientsSection />
+
+      {/* AWS Partnership Section - Redesenhado */}
+      <section className="py-20 bg-background relative">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-accent/5 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+              Nossos Reconhecimentos
+            </h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
+              Entre os melhores parceiros na América Latina
+            </p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/DR_LOGO_WHITE.png" 
                 alt="dataRain Logo" 
-                className="h-12 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-12 md:h-16 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity filter brightness-0"
               />
             </div>
-            <div className="flex justify-center">
+            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/aws-logo-png.png" 
                 alt="AWS Logo" 
-                className="h-12 md:h-16 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-12 md:h-16 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
               />
             </div>
-            <div className="flex justify-center">
+            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-e1746550889233.png" 
                 alt="AWS Badge 1" 
-                className="h-16 md:h-20 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-16 md:h-20 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
               />
             </div>
-            <div className="flex justify-center">
+            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-2-e1746550979294.png" 
                 alt="AWS Badge 2" 
-                className="h-16 md:h-20 w-auto opacity-80 hover:opacity-100 transition-opacity"
+                className="h-16 md:h-20 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ISG Provider Lens Report Section - Layout correto com texto à esquerda */}
-      <section className="py-20 bg-slate-900 relative overflow-hidden min-h-screen">
-        <div className="container mx-auto px-4 h-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
-            
-            {/* Coluna da Esquerda - Texto */}
-            <div className="flex flex-col justify-center text-center lg:text-left">
-              <h2 className="text-6xl md:text-8xl lg:text-9xl font-bold text-white mb-8 leading-none">
-                Líder
-              </h2>
-              <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white leading-tight">
-                ISG<br />
-                PROVIDER<br />
-                LENS<br />
-                REPORT<br />
-                2022 & <span className="text-accent">2023</span>
-              </h3>
+      {/* ISG Provider Lens Report Section - Organizado em grid */}
+      <section className="py-20 bg-slate-900 relative overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-none">
+              Líder ISG
+            </h2>
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-tight">
+              PROVIDER LENS REPORT 2022 & <span className="text-accent">2023</span>
+            </h3>
+          </div>
+          
+          {/* Grid organizado de badges */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
+                alt="ISG Report Badge 1" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
             </div>
-            
-            {/* Coluna da Direita - Badges em posições específicas */}
-            <div className="relative h-[600px] lg:h-[800px]">
-              {/* Badge 1 - Canto superior direito */}
-              <div className="absolute top-0 right-0 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
-                  alt="ISG Report Badge 1" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                />
-              </div>
-              
-              {/* Badge 2 - Meio superior esquerda */}
-              <div className="absolute top-16 left-0 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
-                  alt="ISG Report Badge 2" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                  style={{ animationDelay: '0.2s' }}
-                />
-              </div>
-              
-              {/* Badge 3 - Centro esquerda */}
-              <div className="absolute top-1/3 left-8 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
-                  alt="ISG Report Badge 3" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                  style={{ animationDelay: '0.4s' }}
-                />
-              </div>
-              
-              {/* Badge 4 - Centro direita */}
-              <div className="absolute top-1/2 right-8 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
-                  alt="ISG Report Badge 4" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                  style={{ animationDelay: '0.6s' }}
-                />
-              </div>
-              
-              {/* Badge 5 - Inferior esquerda */}
-              <div className="absolute bottom-16 left-0 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
-                  alt="ISG Report Badge 5" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                  style={{ animationDelay: '0.8s' }}
-                />
-              </div>
-              
-              {/* Badge 6 - Inferior direita */}
-              <div className="absolute bottom-0 right-0 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
-                  alt="ISG Report Badge 6" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                  style={{ animationDelay: '1s' }}
-                />
-              </div>
-              
-              {/* Badge 7 - Centro superior */}
-              <div className="absolute top-8 left-1/2 transform -translate-x-1/2 w-48 md:w-64">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/777.png" 
-                  alt="ISG Report Badge 7" 
-                  className="w-full h-auto animate-fade-in hover:scale-105 transition-transform"
-                  style={{ animationDelay: '1.2s' }}
-                />
-              </div>
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
+                alt="ISG Report Badge 2" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
+                alt="ISG Report Badge 3" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
+                alt="ISG Report Badge 4" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
+                alt="ISG Report Badge 5" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
+                alt="ISG Report Badge 6" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="flex justify-center items-center md:col-span-2 lg:col-span-2">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/777.png" 
+                alt="ISG Report Badge 7" 
+                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+              />
             </div>
           </div>
         </div>
