@@ -108,8 +108,8 @@ const QuemSomos = () => {
       {/* Nossa Historia - Cards com estatísticas */}
       <section className="py-20 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-accent/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-blue-600/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -121,7 +121,7 @@ const QuemSomos = () => {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight">
                   Nossa História
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
               </div>
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -133,14 +133,14 @@ const QuemSomos = () => {
                 Ajudamos você a não apenas resolver problemas com a tecnologia da sua empresa, mas nos tornamos 
                 sua parceira estratégica, traçando um plano de desenvolvimento de maturidade para sua empresa 
                 <span className="font-semibold text-primary"> ganhar mais</span>, 
-                <span className="font-semibold text-accent"> gastar melhor</span> e 
+                <span className="font-semibold text-blue-600"> gastar melhor</span> e 
                 <span className="font-semibold text-primary"> inovar sempre</span>.
               </p>
             </div>
             
             {/* Lado direito - Cards de estatísticas */}
             <div className="grid grid-cols-2 gap-4 md:gap-6">
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.1s' }}>
                 <div className="text-center space-y-2">
                   <div className="text-3xl md:text-4xl font-bold text-primary">#1</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
@@ -149,16 +149,16 @@ const QuemSomos = () => {
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-accent">100%</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600">100%</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
                     Certificados<br />AWS
                   </div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.3s' }}>
                 <div className="text-center space-y-2">
                   <div className="text-3xl md:text-4xl font-bold text-primary">200+</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
@@ -167,9 +167,9 @@ const QuemSomos = () => {
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-accent">5+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-600">5+</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
                     Anos de<br />Experiência
                   </div>
@@ -338,44 +338,45 @@ const QuemSomos = () => {
       {/* Clients Section */}
       <ClientsSection />
 
-      {/* AWS Partnership Section - Redesenhado */}
-      <section className="py-20 bg-background relative">
+      {/* AWS Partnership Section - Redesenhado com estilo uniforme */}
+      <section className="py-20 bg-white relative">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-accent/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-blue-600/5 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Nossos Reconhecimentos
             </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto mb-6"></div>
             <p className="text-lg md:text-xl text-muted-foreground">
               Entre os melhores parceiros na América Latina
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-5xl mx-auto">
-            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center max-w-5xl mx-auto">
+            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/DR_LOGO_WHITE.png" 
                 alt="dataRain Logo" 
                 className="h-12 md:h-16 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity filter brightness-0"
               />
             </div>
-            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
+            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/aws-logo-png.png" 
                 alt="AWS Logo" 
                 className="h-12 md:h-16 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
               />
             </div>
-            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
+            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-e1746550889233.png" 
                 alt="AWS Badge 1" 
                 className="h-16 md:h-20 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
               />
             </div>
-            <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 shadow-primary hover:shadow-accent transition-all duration-300 group">
+            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-2-e1746550979294.png" 
                 alt="AWS Badge 2" 
@@ -466,11 +467,11 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Primeira empresa do mundo - Design moderno com cards */}
+      {/* Primeira empresa do mundo - Design uniforme */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -480,7 +481,7 @@ const QuemSomos = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="bg-gradient-to-r from-accent/20 to-primary/20 text-accent border border-accent/30 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-blue-500/20 text-blue-400 border border-blue-400/30 px-4 py-2 rounded-full text-sm font-medium">
                     Pioneiros no Mundo
                   </span>
                 </div>
@@ -492,19 +493,19 @@ const QuemSomos = () => {
               {/* Technology badges */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg mx-auto mb-2"></div>
                   <div className="text-white font-medium text-sm">AWS GenAI</div>
                 </div>
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-blue-600/20 rounded-lg mx-auto mb-2"></div>
                   <div className="text-white font-medium text-sm">Machine Learning</div>
                 </div>
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg mx-auto mb-2"></div>
                   <div className="text-white font-medium text-sm">Cloud Native</div>
                 </div>
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-blue-600/20 rounded-lg mx-auto mb-2"></div>
                   <div className="text-white font-medium text-sm">AI Solutions</div>
                 </div>
               </div>
@@ -513,7 +514,7 @@ const QuemSomos = () => {
             {/* Lado direito - Imagem com efeito */}
             <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-3xl blur-2xl transform rotate-6"></div>
                 <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
                   <img 
                     src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-5.png" 
@@ -527,15 +528,20 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Section com homem certificado - Parallax like no original */}
+      {/* Section com homem certificado - Estilo uniforme */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
-        <div className="container mx-auto px-4">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-center">
-            <img 
-              src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
-              alt="Homem certificado AWS" 
-              className="max-w-md lg:max-w-lg h-auto opacity-90"
-            />
+            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-8 hover-scale">
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
+                alt="Homem certificado AWS" 
+                className="max-w-md lg:max-w-lg h-auto opacity-90 rounded-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -690,9 +696,9 @@ const QuemSomos = () => {
       {/* Trabalhe Conosco - Seção integrada com selo */}
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-accent/5 rounded-full blur-2xl"></div>
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-400/5 rounded-full blur-2xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -702,7 +708,7 @@ const QuemSomos = () => {
             <div className="text-center lg:text-left animate-fade-in">
               <div className="inline-block">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                   <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
                     <img 
                       src="https://datarain.com.br/wp-content/uploads/2024/09/Selo-de-Feedback-12a-Edicao-1024x1024.png" 
@@ -728,7 +734,7 @@ const QuemSomos = () => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   Trabalhe Conosco
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-primary rounded-full mx-auto lg:mx-0"></div>
+                <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto lg:mx-0"></div>
               </div>
               
               <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-8 md:p-10 lg:p-12">
@@ -745,21 +751,21 @@ const QuemSomos = () => {
                 {/* Stats em cards menores */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-1">100%</div>
+                    <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">100%</div>
                     <div className="text-white/80 text-sm">Certificados AWS</div>
                   </div>
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-1">5+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">5+</div>
                     <div className="text-white/80 text-sm">Anos de Mercado</div>
                   </div>
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-orange-400 mb-1">200+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">200+</div>
                     <div className="text-white/80 text-sm">Projetos Entregues</div>
                   </div>
                 </div>
                 
                 <div className="text-center lg:text-left">
-                  <Button variant="default" size="xl" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg shadow-2xl hover-scale" asChild>
+                  <Button variant="default" size="xl" className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 text-lg shadow-2xl hover-scale" asChild>
                     <a href="https://www.linkedin.com/company/datarainconsulting" target="_blank" rel="noopener noreferrer">
                       VEJA NOSSAS VAGAS
                     </a>
