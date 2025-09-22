@@ -352,54 +352,6 @@ const QuemSomos = () => {
       {/* Clients Section */}
       <ClientsSection />
 
-      {/* AWS Partnership Section - Redesenhado com estilo uniforme */}
-      <section className="py-20 bg-white relative">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-primary/5 rounded-full blur-3xl"></div>
-        </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-              Nossos Reconhecimentos
-            </h2>
-            <div className="w-24 h-1 bg-gradient-modern rounded-full mx-auto mb-6"></div>
-            <p className="text-lg md:text-xl text-muted-foreground">
-              Entre os melhores parceiros na América Latina
-            </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center justify-items-center max-w-5xl mx-auto">
-            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
-              <img 
-                src="https://datarain.com.br/wp-content/uploads/2024/01/DR_LOGO_WHITE.png" 
-                alt="dataRain Logo" 
-                className="h-12 md:h-16 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity filter brightness-0"
-              />
-            </div>
-            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
-              <img 
-                src="https://datarain.com.br/wp-content/uploads/2024/01/aws-logo-png.png" 
-                alt="AWS Logo" 
-                className="h-12 md:h-16 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
-              <img 
-                src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-e1746550889233.png" 
-                alt="AWS Badge 1" 
-                className="h-16 md:h-20 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            </div>
-            <div className="backdrop-blur-sm bg-white border border-slate-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group w-full">
-              <img 
-                src="https://datarain.com.br/wp-content/uploads/2025/05/nova-badge-2-e1746550979294.png" 
-                alt="AWS Badge 2" 
-                className="h-16 md:h-20 w-auto mx-auto opacity-80 group-hover:opacity-100 transition-opacity"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ISG Provider Lens Report Section - Grid responsivo e organizável */}
       <section className="py-20 bg-slate-900 relative overflow-hidden">
