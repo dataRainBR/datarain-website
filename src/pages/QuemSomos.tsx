@@ -267,67 +267,80 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* ISG Provider Lens Report Section - Organizado em grid */}
+      {/* ISG Provider Lens Report Section - Grid responsivo e organizável */}
       <section className="py-20 bg-slate-900 relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-none">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Líder ISG
             </h2>
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white leading-tight">
-              PROVIDER LENS REPORT 2022 & <span className="text-accent">2023</span>
+            <h3 className="text-lg md:text-xl lg:text-2xl font-semibold text-white leading-tight">
+              PROVIDER LENS REPORT 2022 & <span className="text-orange-400">2023</span>
             </h3>
           </div>
           
-          {/* Grid organizado de badges */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="flex justify-center items-center">
+          {/* Grid responsivo e facilmente editável */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
+            {/* Badge 1 */}
+            <div className="flex justify-center items-center p-4">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
-                alt="ISG Report Badge 1" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - Cloud Migration Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
-            <div className="flex justify-center items-center">
+            
+            {/* Badge 2 */}
+            <div className="flex justify-center items-center p-4">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
-                alt="ISG Report Badge 2" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - Cloud Management Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
-            <div className="flex justify-center items-center">
+            
+            {/* Badge 3 */}
+            <div className="flex justify-center items-center p-4">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
-                alt="ISG Report Badge 3" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - Cloud Development Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
-            <div className="flex justify-center items-center">
+            
+            {/* Badge 4 */}
+            <div className="flex justify-center items-center p-4">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
-                alt="ISG Report Badge 4" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - Data Analytics Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
-            <div className="flex justify-center items-center">
+            
+            {/* Badge 5 */}
+            <div className="flex justify-center items-center p-4">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
-                alt="ISG Report Badge 5" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - AI Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
-            <div className="flex justify-center items-center">
+            
+            {/* Badge 6 */}
+            <div className="flex justify-center items-center p-4">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
-                alt="ISG Report Badge 6" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - Security Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
-            <div className="flex justify-center items-center md:col-span-2 lg:col-span-2">
+            
+            {/* Badge 7 - Spanning 2 columns on larger screens for balance */}
+            <div className="flex justify-center items-center p-4 col-span-2 sm:col-span-1 lg:col-span-2">
               <img 
                 src="https://datarain.com.br/wp-content/uploads/2024/01/777.png" 
-                alt="ISG Report Badge 7" 
-                className="w-32 md:w-40 lg:w-48 h-auto hover:scale-105 transition-transform duration-300"
+                alt="ISG Report Badge - Leader 2023" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 xl:w-40 h-auto hover:scale-105 transition-transform duration-300 object-contain"
               />
             </div>
           </div>
@@ -369,7 +382,7 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Girls in Cloud Section - Fundo branco como no original */}
+      {/* Girls in Cloud Section - Única seção responsiva */}
       <section className="py-20 bg-white relative overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -383,21 +396,21 @@ const QuemSomos = () => {
                 Nosso projeto que impulsiona mulheres a entrarem na área da tecnologia e capacita-las para o mercado de trabalho.
               </p>
               
-              {/* Estatísticas */}
-              <div className="space-y-8">
+              {/* Estatísticas - Grid responsivo */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6 lg:gap-8">
                 <div className="text-center lg:text-left">
-                  <div className="text-6xl md:text-7xl font-bold text-slate-900 mb-2">3600</div>
-                  <div className="text-xl text-slate-600 italic">inscritas</div>
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">3600</div>
+                  <div className="text-lg lg:text-xl text-slate-600 italic">inscritas</div>
                 </div>
                 
                 <div className="text-center lg:text-left">
-                  <div className="text-6xl md:text-7xl font-bold text-slate-900 mb-2">200</div>
-                  <div className="text-xl text-slate-600 italic">Selecionadas</div>
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">200</div>
+                  <div className="text-lg lg:text-xl text-slate-600 italic">Selecionadas</div>
                 </div>
                 
                 <div className="text-center lg:text-left">
-                  <div className="text-6xl md:text-7xl font-bold text-slate-900 mb-2">180</div>
-                  <div className="text-xl text-slate-600 italic">Formadas</div>
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">180</div>
+                  <div className="text-lg lg:text-xl text-slate-600 italic">Formadas</div>
                 </div>
               </div>
             </div>
@@ -405,8 +418,8 @@ const QuemSomos = () => {
             {/* Coluna da Direita - Imagem e Ano */}
             <div className="lg:order-2 relative">
               {/* Ano em destaque */}
-              <div className="absolute -top-8 right-8 lg:right-16">
-                <span className="text-8xl md:text-9xl font-bold text-orange-400/30 italic">2023</span>
+              <div className="absolute -top-8 right-8 lg:right-16 z-0">
+                <span className="text-6xl md:text-8xl lg:text-9xl font-bold text-orange-400/30 italic">2023</span>
               </div>
               
               {/* Imagem principal */}
@@ -414,47 +427,9 @@ const QuemSomos = () => {
                 <img 
                   src="https://datarain.com.br/wp-content/uploads/2024/02/Copy-of-Home-2-1.png" 
                   alt="Girls in Cloud" 
-                  className="w-full max-w-md h-auto"
+                  className="w-full max-w-sm md:max-w-md h-auto"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Segunda seção Girls in Cloud - Mobile responsiva */}
-      <section className="py-20 bg-white lg:hidden">
-        <div className="container mx-auto px-4">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-slate-900 mb-6">
-              Girls in Cloud
-            </h3>
-            <p className="text-lg text-slate-700 leading-relaxed mb-12">
-              Nosso projeto que impulsiona mulheres a entrarem na área da tecnologia e capacita-las para o mercado de trabalho.
-            </p>
-            
-            <div className="grid grid-cols-3 gap-4 mb-8">
-              <div>
-                <div className="text-5xl font-bold text-slate-900 mb-2">3600</div>
-                <div className="text-lg text-slate-600 italic">inscritas</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-slate-900 mb-2">200</div>
-                <div className="text-lg text-slate-600 italic">Selecionadas</div>
-              </div>
-              <div>
-                <div className="text-5xl font-bold text-slate-900 mb-2">180</div>
-                <div className="text-lg text-slate-600 italic">Formadas</div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <span className="text-6xl font-bold text-orange-400/30 italic">2023</span>
-              <img 
-                src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-2.png" 
-                alt="Girls in Cloud Mobile" 
-                className="w-full max-w-sm h-auto mx-auto mt-8"
-              />
             </div>
           </div>
         </div>
@@ -497,17 +472,52 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* RainMaker Section - Fundo escuro */}
-      <section className="py-16 bg-slate-900">
-        <div className="container mx-auto px-4 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-8">
-            Quer fazer parte do nosso time e se tornar um RainMaker?
-          </h3>
-          <Button variant="default" size="xl" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4" asChild>
-            <a href="https://www.linkedin.com/company/datarainconsulting" target="_blank" rel="noopener noreferrer">
-              VEJA NOSSAS VAGAS
-            </a>
-          </Button>
+      {/* Trabalhe Conosco - Seção única e integrada */}
+      <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-orange-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              Trabalhe Conosco
+            </h2>
+            
+            <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">
+                Quer fazer parte do nosso time e se tornar um RainMaker?
+              </h3>
+              
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
+                Junte-se a uma equipe de especialistas apaixonados por tecnologia e inovação. 
+                Na dataRain, você terá a oportunidade de trabalhar com as tecnologias mais avançadas 
+                e fazer parte da transformação digital de grandes empresas.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">100%</div>
+                  <div className="text-white/80">Certificados AWS</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">5+</div>
+                  <div className="text-white/80">Anos de Mercado</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">180+</div>
+                  <div className="text-white/80">Projetos Entregues</div>
+                </div>
+              </div>
+              
+              <Button variant="default" size="xl" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg shadow-xl" asChild>
+                <a href="https://www.linkedin.com/company/datarainconsulting" target="_blank" rel="noopener noreferrer">
+                  VEJA NOSSAS VAGAS
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -522,185 +532,6 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Contact Form Section - Fundo claro */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-                Fale com um especialista
-              </h2>
-              <p className="text-lg text-slate-700">
-                Preencha o formulário para que um de nossos consultores entre em contato com você, e possa agendar uma reunião com o especialista mais adequado para sua necessidade.
-              </p>
-            </div>
-            
-            <div className="bg-white rounded-2xl p-8 shadow-xl border border-slate-200">
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-900 mb-2">
-                      Nome*
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-slate-900 mb-2">
-                      Email corporativo*
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-slate-900 mb-2">
-                    Empresa*
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="employees" className="block text-sm font-medium text-slate-900 mb-2">
-                      Número de funcionários em sua empresa*
-                    </label>
-                    <select
-                      id="employees"
-                      name="employees"
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    >
-                      <option value="">Selecione</option>
-                      <option value="1-100">1 a 100</option>
-                      <option value="101-500">101 a 500</option>
-                      <option value="501-1500">501 a 1500</option>
-                      <option value="1501-5000">1501 a 5000</option>
-                      <option value="5000+">Mais de 5000</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label htmlFor="position" className="block text-sm font-medium text-slate-900 mb-2">
-                      Cargo*
-                    </label>
-                    <select
-                      id="position"
-                      name="position"
-                      required
-                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                    >
-                      <option value="">Selecione</option>
-                      <option value="autonomo">Autônomo</option>
-                      <option value="trainee">Jovem Aprendiz/Estágio/Trainee</option>
-                      <option value="assistente">Assistente</option>
-                      <option value="analista">Analista</option>
-                      <option value="especialista">Especialista</option>
-                      <option value="supervisao">Supervisão</option>
-                      <option value="coordenacao">Coordenação</option>
-                      <option value="business-partner">Business Partner</option>
-                      <option value="gerencia">Gerência</option>
-                      <option value="superintendencia">Superintendência</option>
-                      <option value="diretoria">Diretoria</option>
-                      <option value="vice-presidencia">Vice-Presidência</option>
-                      <option value="ceo">Presidência / CEO</option>
-                      <option value="consultoria">Consultoria</option>
-                      <option value="outro">Outro</option>
-                      <option value="nao-trabalhando">Não estou trabalhando</option>
-                    </select>
-                  </div>
-                </div>
-                
-                <div>
-                  <label htmlFor="sector" className="block text-sm font-medium text-slate-900 mb-2">
-                    Qual o setor onde você atua?*
-                  </label>
-                  <select
-                    id="sector"
-                    name="sector"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  >
-                    <option value="">Selecione</option>
-                    <option value="admin-financeiro">Administrativo/Financeiro</option>
-                    <option value="recursos-humanos">Recursos Humanos</option>
-                    <option value="marketing-vendas">Marketing/Vendas</option>
-                    <option value="logistica-compras">Logística/Compras</option>
-                    <option value="ti-infraestrutura">TI e Infraestrutura</option>
-                    <option value="pesquisa-desenvolvimento">Pesquisa e Desenvolvimento</option>
-                  </select>
-                </div>
-                
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-slate-900 mb-2">
-                    Celular
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  />
-                </div>
-                
-                <div>
-                  <label htmlFor="challenge" className="block text-sm font-medium text-slate-900 mb-2">
-                    Qual seu principal desafio na tecnologia?
-                  </label>
-                  <textarea
-                    id="challenge"
-                    name="challenge"
-                    rows={4}
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent"
-                  ></textarea>
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-slate-900 mb-2">
-                    Já utiliza AWS?
-                  </label>
-                  <div className="flex gap-6">
-                    <label className="flex items-center">
-                      <input type="radio" name="aws_usage" value="yes" className="mr-2 text-orange-500 focus:ring-orange-500" />
-                      <span className="text-slate-700">Sim</span>
-                    </label>
-                    <label className="flex items-center">
-                      <input type="radio" name="aws_usage" value="no" className="mr-2 text-orange-500 focus:ring-orange-500" />
-                      <span className="text-slate-700">Não</span>
-                    </label>
-                  </div>
-                </div>
-                
-                <div className="text-center">
-                  <Button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 text-lg">
-                    Submeter
-                  </Button>
-                </div>
-                
-                <p className="text-sm text-slate-500 text-center">
-                  Prometemos não utilizar suas informações de contato para enviar qualquer tipo de SPAM.
-                </p>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
