@@ -5,6 +5,20 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import ClientsSection from "@/components/sections/ClientsSection";
 import heroBackground from "@/assets/hero-background.jpg";
+import { 
+  Cloud, 
+  Shield, 
+  Lightbulb, 
+  Users, 
+  Award, 
+  Target,
+  Building2,
+  Rocket,
+  Heart,
+  GraduationCap,
+  Brain,
+  Lock
+} from "lucide-react";
 
 const QuemSomos = () => {
   const teamMembers = [
@@ -108,8 +122,8 @@ const QuemSomos = () => {
       {/* Nossa Historia - Cards com estatísticas */}
       <section className="py-20 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/8 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-blue-600/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-primary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -121,7 +135,7 @@ const QuemSomos = () => {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight">
                   Nossa História
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full"></div>
+                <div className="w-24 h-1 bg-gradient-modern rounded-full"></div>
               </div>
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -133,7 +147,7 @@ const QuemSomos = () => {
                 Ajudamos você a não apenas resolver problemas com a tecnologia da sua empresa, mas nos tornamos 
                 sua parceira estratégica, traçando um plano de desenvolvimento de maturidade para sua empresa 
                 <span className="font-semibold text-primary"> ganhar mais</span>, 
-                <span className="font-semibold text-blue-600"> gastar melhor</span> e 
+                <span className="font-semibold text-primary"> gastar melhor</span> e 
                 <span className="font-semibold text-primary"> inovar sempre</span>.
               </p>
             </div>
@@ -151,7 +165,7 @@ const QuemSomos = () => {
               
               <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600">100%</div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary">100%</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
                     Certificados<br />AWS
                   </div>
@@ -169,7 +183,7 @@ const QuemSomos = () => {
               
               <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600">5+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary">5+</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
                     Anos de<br />Experiência
                   </div>
@@ -341,15 +355,15 @@ const QuemSomos = () => {
       {/* AWS Partnership Section - Redesenhado com estilo uniforme */}
       <section className="py-20 bg-white relative">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-blue-500/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-blue-600/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-[700px] h-[700px] bg-primary/5 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Nossos Reconhecimentos
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto mb-6"></div>
+            <div className="w-24 h-1 bg-gradient-modern rounded-full mx-auto mb-6"></div>
             <p className="text-lg md:text-xl text-muted-foreground">
               Entre os melhores parceiros na América Latina
             </p>
@@ -470,8 +484,8 @@ const QuemSomos = () => {
       {/* Primeira empresa do mundo - Design uniforme */}
       <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -481,7 +495,7 @@ const QuemSomos = () => {
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="bg-blue-500/20 text-blue-400 border border-blue-400/30 px-4 py-2 rounded-full text-sm font-medium">
+                  <span className="bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-medium">
                     Pioneiros no Mundo
                   </span>
                 </div>
@@ -493,19 +507,27 @@ const QuemSomos = () => {
               {/* Technology badges */}
               <div className="grid grid-cols-2 gap-4">
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Brain className="w-4 h-4 text-primary" />
+                  </div>
                   <div className="text-white font-medium text-sm">AWS GenAI</div>
                 </div>
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-blue-600/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Target className="w-4 h-4 text-primary" />
+                  </div>
                   <div className="text-white font-medium text-sm">Machine Learning</div>
                 </div>
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-blue-500/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Cloud className="w-4 h-4 text-primary" />
+                  </div>
                   <div className="text-white font-medium text-sm">Cloud Native</div>
                 </div>
                 <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-blue-600/20 rounded-lg mx-auto mb-2"></div>
+                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
+                    <Rocket className="w-4 h-4 text-primary" />
+                  </div>
                   <div className="text-white font-medium text-sm">AI Solutions</div>
                 </div>
               </div>
@@ -514,7 +536,7 @@ const QuemSomos = () => {
             {/* Lado direito - Imagem com efeito */}
             <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-3xl blur-2xl transform rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/20 rounded-3xl blur-2xl transform rotate-6"></div>
                 <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
                   <img 
                     src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-5.png" 
@@ -531,7 +553,7 @@ const QuemSomos = () => {
       {/* Section com homem certificado - Estilo uniforme */}
       <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-center">
@@ -619,9 +641,7 @@ const QuemSomos = () => {
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-                    </svg>
+                    <Cloud className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl md:text-3xl font-bold text-slate-900">Cloud</h4>
                   <p className="text-slate-600 leading-relaxed">
@@ -640,9 +660,7 @@ const QuemSomos = () => {
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-accent to-accent/80 rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
+                    <Shield className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl md:text-3xl font-bold text-slate-900">
                     Cyber<br />Security
@@ -663,9 +681,7 @@ const QuemSomos = () => {
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale">
                 <div className="text-center space-y-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary via-accent to-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                    </svg>
+                    <Lightbulb className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl md:text-3xl font-bold text-slate-900">AI & ML</h4>
                   <p className="text-slate-600 leading-relaxed">
@@ -696,9 +712,9 @@ const QuemSomos = () => {
       {/* Trabalhe Conosco - Seção integrada com selo */}
       <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-blue-400/5 rounded-full blur-2xl"></div>
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/5 rounded-full blur-2xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -708,7 +724,7 @@ const QuemSomos = () => {
             <div className="text-center lg:text-left animate-fade-in">
               <div className="inline-block">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                   <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
                     <img 
                       src="https://datarain.com.br/wp-content/uploads/2024/09/Selo-de-Feedback-12a-Edicao-1024x1024.png" 
@@ -734,7 +750,7 @@ const QuemSomos = () => {
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                   Trabalhe Conosco
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto lg:mx-0"></div>
+                <div className="w-24 h-1 bg-gradient-modern rounded-full mx-auto lg:mx-0"></div>
               </div>
               
               <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-8 md:p-10 lg:p-12">
@@ -751,21 +767,21 @@ const QuemSomos = () => {
                 {/* Stats em cards menores */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">100%</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">100%</div>
                     <div className="text-white/80 text-sm">Certificados AWS</div>
                   </div>
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">5+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">5+</div>
                     <div className="text-white/80 text-sm">Anos de Mercado</div>
                   </div>
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-blue-400 mb-1">200+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">200+</div>
                     <div className="text-white/80 text-sm">Projetos Entregues</div>
                   </div>
                 </div>
                 
                 <div className="text-center lg:text-left">
-                  <Button variant="default" size="xl" className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-4 text-lg shadow-2xl hover-scale" asChild>
+                  <Button variant="default" size="xl" className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-4 text-lg shadow-2xl hover-scale" asChild>
                     <a href="https://www.linkedin.com/company/datarainconsulting" target="_blank" rel="noopener noreferrer">
                       VEJA NOSSAS VAGAS
                     </a>
