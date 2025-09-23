@@ -57,55 +57,58 @@ const QuemSomos = () => {
     <div className="min-h-screen bg-background">
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
-      {/* Modern Hero Section - It's About People */}
+      {/* Hero Section Humanizada */}
       <header className="relative pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-background">
-        {/* Background with subtle gradient splashes like home */}
+        {/* Background more subtle */}
         <div className="absolute inset-0">
-          {/* Large Blue splash - top right */}
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-primary/15 rounded-full blur-3xl animate-pulse"></div>
-          
-          {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-accent/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          
-          {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-accent/10 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-accent/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        {/* Floating elements for additional depth */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-primary/5 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-pulse delay-1000" />
-          <div className="absolute top-1/2 left-3/4 w-48 h-48 bg-muted/20 rounded-full blur-2xl animate-pulse delay-500" />
-        </div>
-
-        {/* Content with modern glass card */}
-        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
-          <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-primary">
-            <div className="space-y-6 md:space-y-8">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight">
-                <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
-                  It's About
-                </span>
+        {/* Content more human and relatable */}
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto w-full">
+          <div className="space-y-8 md:space-y-12">
+            {/* More human headline */}
+            <div className="space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight">
+                Construímos o futuro
                 <br />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent animate-pulse">
-                  People
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black">
+                  com pessoas reais
                 </span>
               </h1>
               
-              <div className="max-w-4xl mx-auto">
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed font-light">
-                  A tecnologia por si só não move montanhas, mas as 
-                  <span className="font-semibold text-accent"> pessoas corretas </span>
-                  sim, e quando juntamos essas duas peças, essa união tem 
-                  <span className="font-semibold text-primary"> potencial de mudar o mundo.</span>
+              <div className="max-w-3xl mx-auto">
+                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                  Somos uma equipe de pessoas apaixonadas por tecnologia que acredita que 
+                  <span className="font-semibold text-primary"> as melhores soluções nascem da colaboração humana</span>, 
+                  não apenas de códigos e algoritmos.
                 </p>
               </div>
+            </div>
 
-              {/* Subtle call-to-action hint */}
-              <div className="flex justify-center pt-6 md:pt-8">
-                <div className="w-1 h-12 md:h-16 bg-gradient-to-b from-primary/60 to-transparent rounded-full animate-pulse" />
+            {/* Human touch elements */}
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center">
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Heart className="w-6 h-6 text-accent" />
+                <span className="text-base font-medium">Paixão por inovação</span>
               </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Users className="w-6 h-6 text-primary" />
+                <span className="text-base font-medium">Trabalho em equipe</span>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <GraduationCap className="w-6 h-6 text-accent" />
+                <span className="text-base font-medium">Aprendizado contínuo</span>
+              </div>
+            </div>
+
+            {/* Call to connection */}
+            <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto">
+              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
+                "Cada projeto é uma oportunidade de fazer a diferença. 
+                <span className="font-semibold text-primary"> Vamos construir algo incrível juntos?</span>"
+              </p>
             </div>
           </div>
         </div>
@@ -461,94 +464,83 @@ const QuemSomos = () => {
             </h3>
           </div>
           
-          {/* Grid melhorado sem fundos nos badges */}
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
+          {/* Grid quadrado responsivo sem fundos nem gradientes */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {/* Badge 1 */}
-            <div className="group animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="flex justify-center p-4">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
-                  alt="ISG Report Badge - Cloud Migration Services" 
-                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.1s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
+                alt="ISG Report Badge - Cloud Migration Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             
             {/* Badge 2 */}
-            <div className="group animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="flex justify-center p-4">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
-                  alt="ISG Report Badge - Cloud Management Services" 
-                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.2s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
+                alt="ISG Report Badge - Cloud Management Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             
             {/* Badge 3 */}
-            <div className="group animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="flex justify-center p-4">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
-                  alt="ISG Report Badge - Cloud Development Services" 
-                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.3s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
+                alt="ISG Report Badge - Cloud Development Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             
             {/* Badge 4 */}
-            <div className="group animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="flex justify-center p-4">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
-                  alt="ISG Report Badge - Data Analytics Services" 
-                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.4s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
+                alt="ISG Report Badge - Data Analytics Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             
             {/* Badge 5 */}
-            <div className="group animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <div className="flex justify-center p-4">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
-                  alt="ISG Report Badge - AI Services" 
-                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.5s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
+                alt="ISG Report Badge - AI Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             
             {/* Badge 6 */}
-            <div className="group animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <div className="flex justify-center p-4">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
-                  alt="ISG Report Badge - Security Services" 
-                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.6s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
+                alt="ISG Report Badge - Security Services" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
             </div>
             
-            {/* Badge 7 - Destaque especial para o último */}
-            <div className="group w-full flex justify-center animate-fade-in" style={{ animationDelay: '0.7s' }}>
-              <div className="backdrop-blur-sm bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 rounded-3xl p-6 md:p-8 hover-scale transition-all duration-300 hover:from-accent/30 hover:to-primary/30">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/777.png" 
-                    alt="ISG Report Badge - Leader 2023" 
-                    className="w-32 sm:w-36 md:w-40 lg:w-44 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-              </div>
+            {/* Badge 7 */}
+            <div className="group animate-fade-in flex justify-center" style={{ animationDelay: '0.7s' }}>
+              <img 
+                src="https://datarain.com.br/wp-content/uploads/2024/01/777.png" 
+                alt="ISG Report Badge - Leader 2023" 
+                className="w-24 sm:w-28 md:w-32 lg:w-36 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+              />
+            </div>
+            
+            {/* Badge 8 - Para completar o grid se necessário */}
+            <div className="group animate-fade-in flex justify-center md:hidden lg:block" style={{ animationDelay: '0.8s' }}>
+              {/* Espaço vazio para manter grid quadrado */}
             </div>
           </div>
           
-          {/* Texto de destaque */}
+          {/* Texto de destaque sem gradiente */}
           <div className="text-center mt-16 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-            <div className="backdrop-blur-sm bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto">
+            <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto">
               <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                <span className="font-bold text-accent">Reconhecidos mundialmente</span> como líderes em 
-                <span className="font-bold text-primary"> soluções de nuvem e transformação digital</span>
+                <span className="font-bold text-white">Reconhecidos mundialmente</span> como líderes em 
+                <span className="font-bold text-white"> soluções de nuvem e transformação digital</span>
               </p>
             </div>
           </div>
@@ -558,17 +550,12 @@ const QuemSomos = () => {
       {/* Separador visual */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
-      {/* Amazon Bedrock - Design limpo e com máximo contraste */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Amazon Bedrock - Design original com logo contrastado */}
+      <section className="py-20 bg-background relative">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* Lado esquerdo - Texto e badges com contraste perfeito */}
+            {/* Lado esquerdo - Texto */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-6">
                 <div className="inline-block">
@@ -576,54 +563,54 @@ const QuemSomos = () => {
                     PIONEIROS NO MUNDO
                   </span>
                 </div>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 leading-tight">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
                   Uma das primeiras empresas do mundo habilitadas a desenvolver com:
                 </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
               
-              {/* Technology badges com fundo sólido para máximo contraste */}
+              {/* Technology badges originais */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Brain className="w-6 h-6 text-slate-900 group-hover:text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Brain className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm md:text-base">AWS GenAI</div>
+                  <div className="text-foreground font-bold text-sm md:text-base">AWS GenAI</div>
                 </div>
-                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Target className="w-6 h-6 text-slate-900 group-hover:text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Target className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm md:text-base">Machine Learning</div>
+                  <div className="text-foreground font-bold text-sm md:text-base">Machine Learning</div>
                 </div>
-                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Cloud className="w-6 h-6 text-slate-900 group-hover:text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm md:text-base">Cloud Native</div>
+                  <div className="text-foreground font-bold text-sm md:text-base">Cloud Native</div>
                 </div>
-                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Rocket className="w-6 h-6 text-slate-900 group-hover:text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Rocket className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-bold text-sm md:text-base">AI Solutions</div>
+                  <div className="text-foreground font-bold text-sm md:text-base">AI Solutions</div>
                 </div>
               </div>
               
               {/* Destaque adicional */}
-              <div className="bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-6 shadow-lg">
-                <p className="text-slate-700 text-lg leading-relaxed">
+              <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 rounded-2xl p-6 shadow-lg">
+                <p className="text-muted-foreground text-lg leading-relaxed">
                   <span className="font-bold text-primary">Primeiro parceiro AWS</span> no Brasil 
                   habilitado para Amazon Bedrock e soluções de IA Generativa
                 </p>
               </div>
             </div>
             
-            {/* Lado direito - Imagem melhorada */}
+            {/* Lado direito - Imagem com fundo escuro para contraste do logo Amazon Bedrock */}
             <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-6 group-hover:rotate-3 transition-transform duration-500"></div>
-                <div className="relative bg-white/80 border border-slate-200 rounded-3xl p-6 hover-scale shadow-xl">
+                <div className="relative bg-slate-900 border border-slate-700 rounded-3xl p-6 hover-scale shadow-xl">
                   <img 
                     src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-5.png" 
                     alt="Primeiras empresas habilitadas para Amazon Bedrock" 
