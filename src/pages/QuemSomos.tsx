@@ -519,66 +519,76 @@ const QuemSomos = () => {
       {/* Separador visual */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
-      {/* Primeira empresa do mundo - Design uniforme */}
-      <section className="py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 relative overflow-hidden">
+      {/* Amazon Bedrock - Design tecnológico com contraste melhorado */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/15 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-accent/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/10 rounded-full blur-2xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* Lado esquerdo - Texto e badges */}
+            {/* Lado esquerdo - Texto e badges com contraste melhorado */}
             <div className="space-y-8 animate-fade-in">
               <div className="space-y-6">
                 <div className="inline-block">
-                  <span className="bg-primary/20 text-primary border border-primary/30 px-4 py-2 rounded-full text-sm font-medium">
-                    Pioneiros no Mundo
+                  <span className="bg-primary/30 text-white border border-primary/50 px-6 py-3 rounded-full text-sm font-bold tracking-wide uppercase">
+                    PIONEIROS NO MUNDO
                   </span>
                 </div>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
                   Uma das primeiras empresas do mundo habilitadas a desenvolver com:
                 </h3>
+                <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
               
-              {/* Technology badges */}
+              {/* Technology badges com contraste muito melhorado */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Brain className="w-4 h-4 text-primary" />
+                <div className="backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl p-6 text-center hover-scale group">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300">
+                    <Brain className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-medium text-sm">AWS GenAI</div>
+                  <div className="text-white font-bold text-sm md:text-base">AWS GenAI</div>
                 </div>
-                <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Target className="w-4 h-4 text-primary" />
+                <div className="backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl p-6 text-center hover-scale group">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300">
+                    <Target className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-medium text-sm">Machine Learning</div>
+                  <div className="text-white font-bold text-sm md:text-base">Machine Learning</div>
                 </div>
-                <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Cloud className="w-4 h-4 text-primary" />
+                <div className="backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl p-6 text-center hover-scale group">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300">
+                    <Cloud className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-medium text-sm">Cloud Native</div>
+                  <div className="text-white font-bold text-sm md:text-base">Cloud Native</div>
                 </div>
-                <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                  <div className="w-8 h-8 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <Rocket className="w-4 h-4 text-primary" />
+                <div className="backdrop-blur-sm bg-white/20 border border-white/30 rounded-2xl p-6 text-center hover-scale group">
+                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300">
+                    <Rocket className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-white font-medium text-sm">AI Solutions</div>
+                  <div className="text-white font-bold text-sm md:text-base">AI Solutions</div>
                 </div>
+              </div>
+              
+              {/* Destaque adicional */}
+              <div className="backdrop-blur-sm bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 rounded-2xl p-6">
+                <p className="text-white/90 text-lg leading-relaxed">
+                  <span className="font-bold text-primary">Primeiro parceiro AWS</span> no Brasil 
+                  habilitado para Amazon Bedrock e soluções de IA Generativa
+                </p>
               </div>
             </div>
             
-            {/* Lado direito - Imagem com efeito */}
+            {/* Lado direito - Imagem melhorada */}
             <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/20 rounded-3xl blur-2xl transform rotate-6"></div>
-                <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-3xl blur-2xl transform rotate-6 group-hover:rotate-3 transition-transform duration-500"></div>
+                <div className="relative backdrop-blur-sm bg-white/10 border border-white/30 rounded-3xl p-6 hover-scale">
                   <img 
                     src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-5.png" 
-                    alt="Primeiras empresas habilitadas" 
+                    alt="Primeiras empresas habilitadas para Amazon Bedrock" 
                     className="w-full max-w-md lg:max-w-lg h-auto rounded-2xl"
                   />
                 </div>
@@ -612,54 +622,112 @@ const QuemSomos = () => {
       {/* Separador visual */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
-      {/* Girls in Cloud Section - Única seção responsiva */}
-      <section className="py-20 bg-white relative overflow-hidden">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Girls in Cloud Section - Design mais interessante e moderno */}
+      <section className="py-20 bg-gradient-to-br from-white via-slate-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-accent/5 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
-            {/* Coluna da Esquerda - Texto e Estatísticas */}
-            <div className="lg:order-1">
-              <h3 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 text-center lg:text-left">
-                Girls in Cloud
-              </h3>
-              <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-12 text-center lg:text-left">
-                Nosso projeto que impulsiona mulheres a entrarem na área da tecnologia e capacita-las para o mercado de trabalho.
-              </p>
+            {/* Coluna da Esquerda - Texto e Estatísticas melhoradas */}
+            <div className="lg:order-1 space-y-8">
+              <div className="space-y-6 animate-fade-in">
+                <div className="inline-block">
+                  <span className="bg-accent/20 text-accent border border-accent/30 px-6 py-3 rounded-full text-sm font-bold tracking-wide uppercase">
+                    PROJETO SOCIAL
+                  </span>
+                </div>
+                <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                    Girls in Cloud
+                  </span>
+                </h3>
+                <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full"></div>
+                <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
+                  Nosso projeto que <span className="font-bold text-accent">impulsiona mulheres</span> a entrarem na área da tecnologia e 
+                  <span className="font-bold text-primary"> capacita-las para o mercado de trabalho</span>.
+                </p>
+              </div>
               
-              {/* Estatísticas - Grid responsivo */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6 lg:gap-8">
-                <div className="text-center lg:text-left">
-                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">3600</div>
-                  <div className="text-lg lg:text-xl text-slate-600 italic">inscritas</div>
+              {/* Estatísticas em cards modernos */}
+              <div className="grid grid-cols-1 gap-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-6 hover-scale group">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-4xl md:text-5xl font-black text-slate-900 mb-1">3.600</div>
+                      <div className="text-lg text-slate-600 font-medium">Mulheres Inscritas</div>
+                    </div>
+                    <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <Users className="w-8 h-8 text-accent" />
+                    </div>
+                  </div>
                 </div>
                 
-                <div className="text-center lg:text-left">
-                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">200</div>
-                  <div className="text-lg lg:text-xl text-slate-600 italic">Selecionadas</div>
+                <div className="backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-6 hover-scale group">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-4xl md:text-5xl font-black text-slate-900 mb-1">200</div>
+                      <div className="text-lg text-slate-600 font-medium">Selecionadas</div>
+                    </div>
+                    <div className="w-16 h-16 bg-primary/20 rounded-2xl flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <Target className="w-8 h-8 text-primary" />
+                    </div>
+                  </div>
                 </div>
                 
-                <div className="text-center lg:text-left">
-                  <div className="text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-2">180</div>
-                  <div className="text-lg lg:text-xl text-slate-600 italic">Formadas</div>
+                <div className="backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-6 hover-scale group">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-4xl md:text-5xl font-black text-slate-900 mb-1">180</div>
+                      <div className="text-lg text-slate-600 font-medium">Formadas com Sucesso</div>
+                    </div>
+                    <div className="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center group-hover:bg-accent/30 transition-colors duration-300">
+                      <GraduationCap className="w-8 h-8 text-accent" />
+                    </div>
+                  </div>
                 </div>
+              </div>
+              
+              {/* Call-to-action */}
+              <div className="backdrop-blur-sm bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+                  <span className="font-bold text-accent">Transformando vidas</span> através da tecnologia e 
+                  <span className="font-bold text-primary"> criando oportunidades</span> no mercado de trabalho.
+                </p>
               </div>
             </div>
             
-            {/* Coluna da Direita - Imagem e Ano */}
-            <div className="lg:order-2 relative">
-              {/* Ano em destaque */}
-              <div className="absolute -top-8 right-8 lg:right-16 z-0">
-                <span className="text-6xl md:text-8xl lg:text-9xl font-bold text-orange-400/30 italic">2023</span>
+            {/* Coluna da Direita - Imagem e Ano melhorados */}
+            <div className="lg:order-2 relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              {/* Ano em destaque com design mais moderno */}
+              <div className="absolute -top-12 right-8 lg:right-16 z-0">
+                <div className="relative">
+                  <span className="text-8xl md:text-9xl lg:text-[10rem] font-black text-accent/20 italic tracking-tighter">2023</span>
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-accent/5 rounded-3xl blur-3xl"></div>
+                </div>
               </div>
               
-              {/* Imagem principal */}
+              {/* Imagem principal com efeitos melhorados */}
               <div className="flex justify-center relative z-10">
-                <img 
-                  src="https://datarain.com.br/wp-content/uploads/2024/02/Copy-of-Home-2-1.png" 
-                  alt="Girls in Cloud" 
-                  className="w-full max-w-sm md:max-w-md h-auto"
-                />
+                <div className="relative group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-2xl transform -rotate-6 group-hover:rotate-0 transition-transform duration-500"></div>
+                  <div className="relative backdrop-blur-sm bg-white/20 border border-white/30 rounded-3xl p-6 hover-scale">
+                    <img 
+                      src="https://datarain.com.br/wp-content/uploads/2024/02/Copy-of-Home-2-1.png" 
+                      alt="Girls in Cloud - Projeto social de capacitação feminina em tecnologia" 
+                      className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-2xl"
+                    />
+                  </div>
+                </div>
               </div>
+              
+              {/* Elementos decorativos */}
+              <div className="absolute top-1/4 left-0 w-20 h-20 bg-accent/10 rounded-full blur-xl animate-pulse"></div>
+              <div className="absolute bottom-1/4 right-0 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
             </div>
           </div>
         </div>
