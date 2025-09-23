@@ -58,7 +58,7 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Modern Hero Section - It's About People */}
-      <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
+      <header className="relative pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-background">
         {/* Background with subtle gradient splashes like home */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
@@ -80,10 +80,10 @@ const QuemSomos = () => {
         </div>
 
         {/* Content with modern glass card */}
-        <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
-          <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 md:p-12 lg:p-16 shadow-primary">
-            <div className="space-y-8">
-              <h1 className="text-4xl md:text-6xl lg:text-8xl font-black tracking-tight">
+        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-6xl mx-auto w-full">
+          <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-6 sm:p-8 md:p-12 lg:p-16 shadow-primary">
+            <div className="space-y-6 md:space-y-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight">
                 <span className="bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
                   It's About
                 </span>
@@ -94,7 +94,7 @@ const QuemSomos = () => {
               </h1>
               
               <div className="max-w-4xl mx-auto">
-                <p className="text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed font-light">
+                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-foreground/80 leading-relaxed font-light">
                   A tecnologia por si só não move montanhas, mas as 
                   <span className="font-semibold text-accent"> pessoas corretas </span>
                   sim, e quando juntamos essas duas peças, essa união tem 
@@ -103,15 +103,15 @@ const QuemSomos = () => {
               </div>
 
               {/* Subtle call-to-action hint */}
-              <div className="flex justify-center pt-8">
-                <div className="w-1 h-16 bg-gradient-to-b from-primary/60 to-transparent rounded-full animate-pulse" />
+              <div className="flex justify-center pt-6 md:pt-8">
+                <div className="w-1 h-12 md:h-16 bg-gradient-to-b from-primary/60 to-transparent rounded-full animate-pulse" />
               </div>
             </div>
           </div>
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2">
           <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
             <div className="w-1 h-3 bg-primary/60 rounded-full mt-2 animate-bounce" />
           </div>
@@ -461,94 +461,82 @@ const QuemSomos = () => {
             </h3>
           </div>
           
-          {/* Grid melhorado com cards e maior destaque */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
+          {/* Grid melhorado sem fundos nos badges */}
+          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto">
             {/* Badge 1 */}
             <div className="group animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale transition-all duration-300 hover:bg-white/15">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
-                    alt="ISG Report Badge - Cloud Migration Services" 
-                    className="w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+              <div className="flex justify-center p-4">
+                <img 
+                  src="https://datarain.com.br/wp-content/uploads/2024/01/65.png" 
+                  alt="ISG Report Badge - Cloud Migration Services" 
+                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </div>
             
             {/* Badge 2 */}
             <div className="group animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale transition-all duration-300 hover:bg-white/15">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
-                    alt="ISG Report Badge - Cloud Management Services" 
-                    className="w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+              <div className="flex justify-center p-4">
+                <img 
+                  src="https://datarain.com.br/wp-content/uploads/2024/01/64.png" 
+                  alt="ISG Report Badge - Cloud Management Services" 
+                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </div>
             
             {/* Badge 3 */}
             <div className="group animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale transition-all duration-300 hover:bg-white/15">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
-                    alt="ISG Report Badge - Cloud Development Services" 
-                    className="w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+              <div className="flex justify-center p-4">
+                <img 
+                  src="https://datarain.com.br/wp-content/uploads/2024/01/62.png" 
+                  alt="ISG Report Badge - Cloud Development Services" 
+                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </div>
             
             {/* Badge 4 */}
             <div className="group animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale transition-all duration-300 hover:bg-white/15">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
-                    alt="ISG Report Badge - Data Analytics Services" 
-                    className="w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+              <div className="flex justify-center p-4">
+                <img 
+                  src="https://datarain.com.br/wp-content/uploads/2024/01/63.png" 
+                  alt="ISG Report Badge - Data Analytics Services" 
+                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </div>
             
             {/* Badge 5 */}
             <div className="group animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale transition-all duration-300 hover:bg-white/15">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
-                    alt="ISG Report Badge - AI Services" 
-                    className="w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+              <div className="flex justify-center p-4">
+                <img 
+                  src="https://datarain.com.br/wp-content/uploads/2024/01/699.png" 
+                  alt="ISG Report Badge - AI Services" 
+                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </div>
             
             {/* Badge 6 */}
             <div className="group animate-fade-in" style={{ animationDelay: '0.6s' }}>
-              <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale transition-all duration-300 hover:bg-white/15">
-                <div className="flex justify-center">
-                  <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
-                    alt="ISG Report Badge - Security Services" 
-                    className="w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
+              <div className="flex justify-center p-4">
+                <img 
+                  src="https://datarain.com.br/wp-content/uploads/2024/01/700.png" 
+                  alt="ISG Report Badge - Security Services" 
+                  className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
             </div>
             
             {/* Badge 7 - Destaque especial para o último */}
-            <div className="group sm:col-span-2 xl:col-span-2 flex justify-center animate-fade-in" style={{ animationDelay: '0.7s' }}>
-              <div className="backdrop-blur-sm bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 rounded-3xl p-8 hover-scale transition-all duration-300 hover:from-accent/30 hover:to-primary/30">
+            <div className="group w-full flex justify-center animate-fade-in" style={{ animationDelay: '0.7s' }}>
+              <div className="backdrop-blur-sm bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 rounded-3xl p-6 md:p-8 hover-scale transition-all duration-300 hover:from-accent/30 hover:to-primary/30">
                 <div className="flex justify-center">
                   <img 
                     src="https://datarain.com.br/wp-content/uploads/2024/01/777.png" 
                     alt="ISG Report Badge - Leader 2023" 
-                    className="w-36 md:w-40 lg:w-44 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="w-32 sm:w-36 md:w-40 lg:w-44 h-auto object-contain group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
               </div>
@@ -596,29 +584,29 @@ const QuemSomos = () => {
               
               {/* Technology badges com fundo sólido para máximo contraste */}
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Brain className="w-6 h-6 text-white" />
+                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Brain className="w-6 h-6 text-slate-900 group-hover:text-white" />
                   </div>
-                  <div className="text-slate-900 font-bold text-sm md:text-base">AWS GenAI</div>
+                  <div className="text-white font-bold text-sm md:text-base">AWS GenAI</div>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Target className="w-6 h-6 text-white" />
+                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Target className="w-6 h-6 text-slate-900 group-hover:text-white" />
                   </div>
-                  <div className="text-slate-900 font-bold text-sm md:text-base">Machine Learning</div>
+                  <div className="text-white font-bold text-sm md:text-base">Machine Learning</div>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Cloud className="w-6 h-6 text-white" />
+                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Cloud className="w-6 h-6 text-slate-900 group-hover:text-white" />
                   </div>
-                  <div className="text-slate-900 font-bold text-sm md:text-base">Cloud Native</div>
+                  <div className="text-white font-bold text-sm md:text-base">Cloud Native</div>
                 </div>
-                <div className="bg-white border border-slate-200 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Rocket className="w-6 h-6 text-white" />
+                <div className="bg-slate-900 border border-slate-700 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Rocket className="w-6 h-6 text-slate-900 group-hover:text-white" />
                   </div>
-                  <div className="text-slate-900 font-bold text-sm md:text-base">AI Solutions</div>
+                  <div className="text-white font-bold text-sm md:text-base">AI Solutions</div>
                 </div>
               </div>
               
