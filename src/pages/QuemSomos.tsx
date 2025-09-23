@@ -3,7 +3,6 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
-import ClientsSection from "@/components/sections/ClientsSection";
 import heroBackground from "@/assets/hero-background.jpg";
 import { 
   Cloud, 
@@ -335,7 +334,7 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Resultados - Social Proof */}
+      {/* Resultados Comprovados - Integrado com Projetos */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8 mb-16">
@@ -346,11 +345,92 @@ const QuemSomos = () => {
               E quem afirma isso não somos nós, mas todos que já passaram por esse processo:
             </p>
           </div>
+          
+          {/* Carrossel de projetos integrado */}
+          <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
+            <div className="overflow-hidden">
+              <div className="marquee items-center gap-6 md:gap-8 lg:gap-12">
+                {[
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz", 
+                    alt: "Client logo 1" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy", 
+                    alt: "Client logo 2" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p", 
+                    alt: "Client logo 3" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6", 
+                    alt: "Client logo 4" 
+                  }
+                ].concat([
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz", 
+                    alt: "Client logo 1" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy", 
+                    alt: "Client logo 2" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p", 
+                    alt: "Client logo 3" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6", 
+                    alt: "Client logo 4" 
+                  }
+                ]).concat([
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz", 
+                    alt: "Client logo 1" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy", 
+                    alt: "Client logo 2" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p", 
+                    alt: "Client logo 3" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6", 
+                    alt: "Client logo 4" 
+                  }
+                ]).concat([
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz", 
+                    alt: "Client logo 1" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$3xxdv2t83wy", 
+                    alt: "Client logo 2" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$ua279g4u52p", 
+                    alt: "Client logo 3" 
+                  },
+                  { 
+                    src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6", 
+                    alt: "Client logo 4" 
+                  }
+                ]).map((logo, index) => (
+                  <img 
+                    key={index}
+                    src={logo.src} 
+                    alt={`${logo.alt} ${Math.floor(index / 4) + 1}`} 
+                    className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" 
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-      {/* Clients Section */}
-      <ClientsSection />
 
 
       {/* Separador visual */}
