@@ -58,7 +58,7 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Humanizada */}
-      <header className="relative pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-background">
+      <header className="relative pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-40px)] flex items-center justify-center overflow-hidden bg-background">
         {/* Background more subtle */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
@@ -87,19 +87,17 @@ const QuemSomos = () => {
               </div>
             </div>
 
-            {/* Human touch elements */}
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center">
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Heart className="w-6 h-6 text-accent" />
-                <span className="text-base font-medium">Paixão por inovação</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="text-base font-medium">Trabalho em equipe</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <GraduationCap className="w-6 h-6 text-accent" />
-                <span className="text-base font-medium">Aprendizado contínuo</span>
+            {/* Human photo section */}
+            <div className="flex justify-center">
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl hover-scale">
+                  <img 
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
+                    alt="Pessoa da equipe dataRain" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
 
@@ -454,9 +452,7 @@ const QuemSomos = () => {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-              <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                Líder ISG
-              </span>
+              Líder ISG
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto mb-6"></div>
             <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white/90 leading-tight">
