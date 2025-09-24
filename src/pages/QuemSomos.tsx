@@ -16,7 +16,8 @@ import {
   Heart,
   GraduationCap,
   Brain,
-  Lock
+  Lock,
+  ArrowRight
 } from "lucide-react";
 
 const QuemSomos = () => {
@@ -57,63 +58,80 @@ const QuemSomos = () => {
     <div className="min-h-screen bg-background">
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
-      {/* Hero Section */}
-      <header className="relative pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-background">
-        {/* Background Effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      {/* Hero Section Moderna e Humanizada */}
+      <header className="relative pt-24 md:pt-28 lg:pt-32 pb-20 md:pb-24 lg:pb-28 bg-background overflow-hidden">
+        {/* Subtle background pattern */}
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
+            backgroundSize: '24px 24px'
+          }}></div>
         </div>
 
-        <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto w-full">
-          <div className="space-y-8 md:space-y-12">
-            <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground leading-none">
-                Quem
-                <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Somos
-                </span>
-              </h1>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            
+            {/* Main content */}
+            <div className="text-center space-y-8 md:space-y-12">
               
-              <div className="max-w-3xl mx-auto">
-                <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  Conheça a história, valores e pessoas por trás da 
-                  <span className="font-semibold text-primary"> dataRain</span>
+              {/* Heading section */}
+              <div className="space-y-6">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/10">
+                  <Users className="w-4 h-4 text-primary" />
+                  <span className="text-sm font-medium text-primary">Conheça nossa equipe</span>
+                </div>
+                
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                  Somos pessoas que transformam
+                  <br />
+                  <span className="text-primary font-black">ideias em realidade</span>
+                </h1>
+                
+                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                  Por trás da dataRain estão pessoas apaixonadas por tecnologia, 
+                  inovação e pela oportunidade de fazer a diferença no mundo dos negócios.
                 </p>
               </div>
-            </div>
 
-            {/* Human touch elements */}
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center">
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Heart className="w-6 h-6 text-accent" />
-                <span className="text-base font-medium">Paixão por inovação</span>
+              {/* Human elements */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
+                <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">Paixão</h3>
+                  <p className="text-sm text-muted-foreground">Pelo que fazemos e pelos resultados que entregamos</p>
+                </div>
+                
+                <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
+                    <Users className="w-6 h-6 text-accent" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">Colaboração</h3>
+                  <p className="text-sm text-muted-foreground">Trabalhamos juntos para superar desafios</p>
+                </div>
+                
+                <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Target className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-foreground">Foco</h3>
+                  <p className="text-sm text-muted-foreground">Em soluções que realmente fazem a diferença</p>
+                </div>
               </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <Users className="w-6 h-6 text-primary" />
-                <span className="text-base font-medium">Trabalho em equipe</span>
-              </div>
-              <div className="flex items-center gap-3 text-muted-foreground">
-                <GraduationCap className="w-6 h-6 text-accent" />
-                <span className="text-base font-medium">Aprendizado contínuo</span>
+
+              {/* CTA section */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
+                <Button variant="default" size="lg" className="px-8 py-4 hover-scale">
+                  Nossa História
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button variant="outline" size="lg" className="px-8 py-4 hover-scale">
+                  Conheça a Equipe
+                  <Users className="ml-2 w-5 h-5" />
+                </Button>
               </div>
             </div>
-
-            {/* Call to connection */}
-            <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 md:p-8 max-w-2xl mx-auto">
-              <p className="text-base md:text-lg text-foreground/80 leading-relaxed">
-                "Cada projeto é uma oportunidade de fazer a diferença. 
-                <span className="font-semibold text-primary"> Vamos construir algo incrível juntos?</span>"
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-primary/60 rounded-full mt-2 animate-bounce" />
           </div>
         </div>
       </header>
