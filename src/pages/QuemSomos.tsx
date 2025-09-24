@@ -57,47 +57,46 @@ const QuemSomos = () => {
     <div className="min-h-screen bg-background">
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
-      {/* Hero Section Humanizada */}
-      <header className="relative pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-40px)] flex items-center justify-center overflow-hidden bg-background">
-        {/* Background more subtle */}
+      {/* Hero Section */}
+      <header className="relative pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20 lg:pb-24 min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden bg-background">
+        {/* Background Effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-accent/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
-        {/* Content more human and relatable */}
         <div className="relative z-10 text-center px-4 sm:px-6 md:px-8 max-w-5xl mx-auto w-full">
           <div className="space-y-8 md:space-y-12">
-            {/* More human headline */}
             <div className="space-y-6">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-tight">
-                Construímos o futuro
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-foreground leading-none">
+                Quem
                 <br />
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-black">
-                  com pessoas reais
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                  Somos
                 </span>
               </h1>
               
               <div className="max-w-3xl mx-auto">
                 <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed">
-                  Somos uma equipe de pessoas apaixonadas por tecnologia que acredita que 
-                  <span className="font-semibold text-primary"> as melhores soluções nascem da colaboração humana</span>, 
-                  não apenas de códigos e algoritmos.
+                  Conheça a história, valores e pessoas por trás da 
+                  <span className="font-semibold text-primary"> dataRain</span>
                 </p>
               </div>
             </div>
 
-            {/* Human photo section */}
-            <div className="flex justify-center">
-              <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                <div className="relative w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 rounded-full overflow-hidden border-4 border-white shadow-xl hover-scale">
-                  <img 
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" 
-                    alt="Pessoa da equipe dataRain" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+            {/* Human touch elements */}
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center">
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Heart className="w-6 h-6 text-accent" />
+                <span className="text-base font-medium">Paixão por inovação</span>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <Users className="w-6 h-6 text-primary" />
+                <span className="text-base font-medium">Trabalho em equipe</span>
+              </div>
+              <div className="flex items-center gap-3 text-muted-foreground">
+                <GraduationCap className="w-6 h-6 text-accent" />
+                <span className="text-base font-medium">Aprendizado contínuo</span>
               </div>
             </div>
 
