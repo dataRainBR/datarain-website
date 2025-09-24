@@ -76,15 +76,8 @@ const QuemSomos = () => {
               
               {/* Heading section */}
               <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/10">
-                  <Users className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium text-primary">Conheça nossa equipe</span>
-                </div>
-                
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Somos pessoas que transformam
-                  <br />
-                  <span className="text-primary font-black">ideias em realidade</span>
+                  Quem Somos
                 </h1>
                 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
@@ -120,17 +113,6 @@ const QuemSomos = () => {
                 </div>
               </div>
 
-              {/* CTA section */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-                <Button variant="default" size="lg" className="px-8 py-4 hover-scale">
-                  Nossa História
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
-                <Button variant="outline" size="lg" className="px-8 py-4 hover-scale">
-                  Conheça a Equipe
-                  <Users className="ml-2 w-5 h-5" />
-                </Button>
-              </div>
             </div>
           </div>
         </div>
