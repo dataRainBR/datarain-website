@@ -88,7 +88,7 @@ const QuemSomos = () => {
               {/* Heading section */}
               <div className="space-y-6">
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                  Quem Somos
+                  Quem <span style={{ color: '#f78504' }}>Somos</span>
                 </h1>
                 
                 <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
