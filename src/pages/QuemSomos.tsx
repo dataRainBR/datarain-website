@@ -222,104 +222,25 @@ const QuemSomos = () => {
                   Nossa Holding: <span style={{ color: '#f78504' }}>VentureLabs</span>
                 </h2>
               </div>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary via-orange-400 to-accent rounded-full mx-auto mb-6"></div>
-              <p className="text-xl md:text-2xl text-foreground font-light max-w-4xl mx-auto leading-relaxed">
-                Tecnologia, Arte, Visão e Execução para Projetos Únicos
-              </p>
-              <p className="text-lg text-muted-foreground mt-4 max-w-3xl mx-auto">
-                Time de inovação que pesquisa o futuro e desenvolve projetos de transformação digital 
-                atuando na intersecção entre arte, tecnologia e business.
-              </p>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary via-orange-400 to-accent rounded-full mx-auto"></div>
             </div>
 
-            {/* We Are Makers Section */}
-            <div className="mb-16">
-              <div className="text-center mb-12">
-                <h3 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                  We Are Makers
-                </h3>
-                <p className="text-lg text-muted-foreground">
-                  A VentureLabs tem a cultura MAKER em seu DNA e atua sobre 3 pilares fundamentais
-                </p>
-              </div>
-
-              {/* 3 Pilares */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Tecnologia */}
-                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in">
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary to-blue-500 rounded-2xl flex items-center justify-center mx-auto">
-                      <Brain className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="text-xl font-bold text-primary">Tecnologia</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      <strong>VL Code</strong> conta com um time full stack de pesquisa e desenvolvimento, 
-                      com as mais avançadas certificações técnicas e expertise de anos de desenvolvimento.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Arte/Design */}
-                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-accent to-purple-500 rounded-2xl flex items-center justify-center mx-auto">
-                      <Lightbulb className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="text-xl font-bold text-primary">Arte/Design</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      <strong>AdVenture</strong> é a agência de criação e arte in house da VentureLabs 
-                      e conta com time de artistas multi disciplinar.
-                    </p>
-                  </div>
-                </div>
-
-                {/* Projetos */}
-                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg hover:scale-105 transition-transform duration-300 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                  <div className="text-center space-y-4">
-                    <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center mx-auto">
-                      <Rocket className="w-8 h-8 text-white" />
-                    </div>
-                    <h4 className="text-xl font-bold text-primary">Projetos</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Time de negócios visionário e experiente, fruto de um legado de 
-                      <strong> mais de 40 anos</strong> de atuação direta em projetos tecnológicos.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Venture Builder */}
+            {/* Main content grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
-              {/* Left side - Venture Builder */}
+              {/* Left side - Main content */}
               <div className="space-y-8 animate-fade-in">
                 <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg">
                   <div className="flex items-start gap-4 mb-6">
                     <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Building2 className="w-6 h-6 text-white" />
+                      <Rocket className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-primary mb-2">Venture Builder</h3>
+                      <h3 className="text-xl font-bold text-primary mb-2">Estúdio de Inovação</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        Transformamos ideias e sonhos em empresas com posicionamento, 
-                        identidade, produto, rentabilidade e valuation.
+                        Por trás da dataRain, pulsa a VentureLabs — um estúdio de inovação que atua na 
+                        interseção entre tecnologia, design e negócios.
                       </p>
-                    </div>
-                  </div>
-                  
-                  <div className="grid grid-cols-2 gap-3 mt-6">
-                    <div className="text-center p-3 bg-primary/10 rounded-lg">
-                      <div className="text-sm font-semibold text-primary">Concepção</div>
-                    </div>
-                    <div className="text-center p-3 bg-accent/10 rounded-lg">
-                      <div className="text-sm font-semibold text-primary">Branding</div>
-                    </div>
-                    <div className="text-center p-3 bg-orange-400/10 rounded-lg">
-                      <div className="text-sm font-semibold text-primary">Prototipação</div>
-                    </div>
-                    <div className="text-center p-3 bg-blue-500/10 rounded-lg">
-                      <div className="text-sm font-semibold text-primary">Desenvolvimento</div>
                     </div>
                   </div>
                 </div>
@@ -330,22 +251,25 @@ const QuemSomos = () => {
                       <Award className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-primary mb-2">Venture Capital</h3>
+                      <h3 className="text-xl font-bold text-primary mb-2">40+ Anos de Legado</h3>
                       <p className="text-muted-foreground leading-relaxed">
-                        Aceleramos negócios através de investimentos financeiros e advisoring, 
-                        aplicando metodologias de gestão e operação.
+                        Com mais de 40 anos de legado em projetos tecnológicos e espírito "maker" no DNA, 
+                        oferecemos suporte estratégico, operacional e criativo.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Right side - Para dataRain */}
+              {/* Right side - Benefits */}
               <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="text-center lg:text-left mb-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
-                    O que isso significa para a dataRain?
+                    Por que isso importa para você?
                   </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Cliente da dataRain
+                  </p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
@@ -354,10 +278,10 @@ const QuemSomos = () => {
                       <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                         <ArrowRight className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="font-bold text-primary">Multidisciplinaridade</h4>
+                      <h4 className="font-bold text-primary">Mais Velocidade</h4>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      Acesso a especialistas em tecnologia, arte e negócios em um só lugar
+                      Rede de talentos e metodologias que aceleram entregas
                     </p>
                   </div>
 
@@ -366,30 +290,30 @@ const QuemSomos = () => {
                       <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
                         <Brain className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="font-bold text-primary">Cultura Maker</h4>
+                      <h4 className="font-bold text-primary">Risco Calculado</h4>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      DNA de inovação e experimentação aplicado a todos os projetos
+                      Cultura de inovação com decisões estratégicas fundamentadas
                     </p>
                   </div>
 
                   <div className="backdrop-blur-sm bg-gradient-to-r from-orange-400/10 to-primary/10 border border-orange-400/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
                     <div className="flex items-center gap-3 mb-3">
                       <div className="w-8 h-8 bg-gradient-to-r from-primary to-orange-400 rounded-lg flex items-center justify-center">
-                        <Building2 className="w-4 h-4 text-white" />
+                        <Lightbulb className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="font-bold text-primary">Legado de 40+ Anos</h4>
+                      <h4 className="font-bold text-primary">Mais Ambição</h4>
                     </div>
                     <p className="text-sm text-muted-foreground">
-                      Experiência consolidada em projetos e empreendimentos tecnológicos
+                      Investimentos e ousadia para alcançar transformação digital completa
                     </p>
                   </div>
                 </div>
 
                 <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-2xl p-6 mt-6">
                   <p className="text-center text-muted-foreground italic">
-                    "A dataRain herda toda a visão estratégica e capacidade de execução 
-                    da VentureLabs para entregar projetos únicos"
+                    "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
+                    que fortalece nossas entregas"
                   </p>
                 </div>
               </div>
