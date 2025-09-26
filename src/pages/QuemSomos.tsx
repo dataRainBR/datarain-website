@@ -204,6 +204,124 @@ const QuemSomos = () => {
         </div>
       </section>
 
+      {/* VentureLabs Section */}
+      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary/10 via-primary/5 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent/8 via-accent/4 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 animate-fade-in">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <Building2 className="w-8 h-8 text-primary" />
+                <h2 className="text-4xl md:text-5xl font-black text-primary">
+                  Nossa Holding: <span style={{ color: '#f78504' }}>VentureLabs</span>
+                </h2>
+              </div>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary via-orange-400 to-accent rounded-full mx-auto"></div>
+            </div>
+
+            {/* Main content grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              
+              {/* Left side - Main content */}
+              <div className="space-y-8 animate-fade-in">
+                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg">
+                  <div className="flex items-start gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Rocket className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-2">Estúdio de Inovação</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Por trás da dataRain, pulsa a VentureLabs — um estúdio de inovação que atua na 
+                        interseção entre tecnologia, design e negócios.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Award className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-2">40+ Anos de Legado</h3>
+                      <p className="text-muted-foreground leading-relaxed">
+                        Com mais de 40 anos de legado em projetos tecnológicos e espírito "maker" no DNA, 
+                        oferecemos suporte estratégico, operacional e criativo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right side - Benefits */}
+              <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="text-center lg:text-left mb-8">
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+                    Por que isso importa para você?
+                  </h3>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Cliente da dataRain
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-orange-400/10 border border-primary/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                        <ArrowRight className="w-4 h-4 text-white" />
+                      </div>
+                      <h4 className="font-bold text-primary">Mais Velocidade</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Rede de talentos e metodologias que aceleram entregas
+                    </p>
+                  </div>
+
+                  <div className="backdrop-blur-sm bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                        <Brain className="w-4 h-4 text-white" />
+                      </div>
+                      <h4 className="font-bold text-primary">Risco Calculado</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Cultura de inovação com decisões estratégicas fundamentadas
+                    </p>
+                  </div>
+
+                  <div className="backdrop-blur-sm bg-gradient-to-r from-orange-400/10 to-primary/10 border border-orange-400/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-8 h-8 bg-gradient-to-r from-primary to-orange-400 rounded-lg flex items-center justify-center">
+                        <Lightbulb className="w-4 h-4 text-white" />
+                      </div>
+                      <h4 className="font-bold text-primary">Mais Ambição</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Investimentos e ousadia para alcançar transformação digital completa
+                    </p>
+                  </div>
+                </div>
+
+                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-2xl p-6 mt-6">
+                  <p className="text-center text-muted-foreground italic">
+                    "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
+                    que fortalece nossas entregas"
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Team Section - Reorganizada para vir antes */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
