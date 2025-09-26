@@ -204,12 +204,24 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* VentureLabs Section */}
-      <section className="py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
-        {/* Background effects */}
+      {/* VentureLabs Section - Futuristic Dark Theme */}
+      <section className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/50 to-slate-800 relative overflow-hidden">
+        {/* Space-like background effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-primary/10 via-primary/5 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-accent/8 via-accent/4 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-radial from-purple-500/20 via-purple-600/10 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-gradient-radial from-violet-500/15 via-violet-600/8 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-purple-600/10 via-transparent to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        {/* Starfield effect */}
+        <div className="absolute inset-0 opacity-40">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 20% 80%, white 1px, transparent 1px), 
+                            radial-gradient(circle at 80% 20%, white 1px, transparent 1px),
+                            radial-gradient(circle at 40% 40%, white 1px, transparent 1px),
+                            radial-gradient(circle at 90% 60%, white 1px, transparent 1px)`,
+            backgroundSize: '200px 200px, 150px 150px, 300px 300px, 250px 250px'
+          }}></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -217,12 +229,12 @@ const QuemSomos = () => {
             {/* Header */}
             <div className="text-center mb-16 animate-fade-in">
               <div className="inline-flex items-center gap-3 mb-6">
-                <Building2 className="w-8 h-8 text-primary" />
-                <h2 className="text-4xl md:text-5xl font-black text-primary">
-                  Nossa Holding: <span style={{ color: '#f78504' }}>VentureLabs</span>
+                <Building2 className="w-8 h-8 text-purple-400" />
+                <h2 className="text-4xl md:text-5xl font-black text-white">
+                  Nossa Holding: <span className="bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">VentureLabs</span>
                 </h2>
               </div>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary via-orange-400 to-accent rounded-full mx-auto"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-purple-400 via-violet-400 to-purple-600 rounded-full mx-auto"></div>
             </div>
 
             {/* Main content grid */}
@@ -230,14 +242,14 @@ const QuemSomos = () => {
               
               {/* Left side - Main content */}
               <div className="space-y-8 animate-fade-in">
-                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg">
+                <div className="backdrop-blur-sm bg-white/5 border border-purple-400/30 rounded-3xl p-8 shadow-2xl hover:bg-white/10 transition-all duration-300">
                   <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-orange-400 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-violet-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/25">
                       <Rocket className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-primary mb-2">Estúdio de Inovação</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h3 className="text-xl font-bold text-purple-300 mb-2">Estúdio de Inovação</h3>
+                      <p className="text-gray-300 leading-relaxed">
                         Por trás da dataRain, pulsa a VentureLabs — um estúdio de inovação que atua na 
                         interseção entre tecnologia, design e negócios.
                       </p>
@@ -245,14 +257,14 @@ const QuemSomos = () => {
                   </div>
                 </div>
 
-                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-3xl p-8 shadow-lg">
+                <div className="backdrop-blur-sm bg-white/5 border border-purple-400/30 rounded-3xl p-8 shadow-2xl hover:bg-white/10 transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-violet-500/25">
                       <Award className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-primary mb-2">40+ Anos de Legado</h3>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <h3 className="text-xl font-bold text-purple-300 mb-2">40+ Anos de Legado</h3>
+                      <p className="text-gray-300 leading-relaxed">
                         Com mais de 40 anos de legado em projetos tecnológicos e espírito "maker" no DNA, 
                         oferecemos suporte estratégico, operacional e criativo.
                       </p>
@@ -264,54 +276,54 @@ const QuemSomos = () => {
               {/* Right side - Benefits */}
               <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
                 <div className="text-center lg:text-left mb-8">
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                     Por que isso importa para você?
                   </h3>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+                  <p className="text-lg text-purple-200 leading-relaxed">
                     Cliente da dataRain
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-orange-400/10 border border-primary/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                  <div className="backdrop-blur-sm bg-gradient-to-r from-purple-500/20 to-violet-500/20 border border-purple-400/30 rounded-2xl p-6 hover:scale-105 hover:bg-purple-500/30 transition-all duration-300 shadow-lg shadow-purple-500/10">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-violet-500 rounded-lg flex items-center justify-center shadow-lg">
                         <ArrowRight className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="font-bold text-primary">Mais Velocidade</h4>
+                      <h4 className="font-bold text-purple-300">Mais Velocidade</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-gray-300">
                       Rede de talentos e metodologias que aceleram entregas
                     </p>
                   </div>
 
-                  <div className="backdrop-blur-sm bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                  <div className="backdrop-blur-sm bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-400/30 rounded-2xl p-6 hover:scale-105 hover:bg-violet-500/30 transition-all duration-300 shadow-lg shadow-violet-500/10">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center shadow-lg">
                         <Brain className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="font-bold text-primary">Risco Calculado</h4>
+                      <h4 className="font-bold text-purple-300">Risco Calculado</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-gray-300">
                       Cultura de inovação com decisões estratégicas fundamentadas
                     </p>
                   </div>
 
-                  <div className="backdrop-blur-sm bg-gradient-to-r from-orange-400/10 to-primary/10 border border-orange-400/20 rounded-2xl p-6 hover:scale-105 transition-transform duration-300">
+                  <div className="backdrop-blur-sm bg-gradient-to-r from-purple-600/20 to-violet-600/20 border border-purple-500/30 rounded-2xl p-6 hover:scale-105 hover:bg-purple-600/30 transition-all duration-300 shadow-lg shadow-purple-600/10">
                     <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-gradient-to-r from-primary to-orange-400 rounded-lg flex items-center justify-center">
+                      <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-violet-600 rounded-lg flex items-center justify-center shadow-lg">
                         <Lightbulb className="w-4 h-4 text-white" />
                       </div>
-                      <h4 className="font-bold text-primary">Mais Ambição</h4>
+                      <h4 className="font-bold text-purple-300">Mais Ambição</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-gray-300">
                       Investimentos e ousadia para alcançar transformação digital completa
                     </p>
                   </div>
                 </div>
 
-                <div className="backdrop-blur-sm bg-white/60 border border-border/30 rounded-2xl p-6 mt-6">
-                  <p className="text-center text-muted-foreground italic">
+                <div className="backdrop-blur-sm bg-white/5 border border-purple-400/30 rounded-2xl p-6 mt-6 shadow-2xl">
+                  <p className="text-center text-gray-300 italic font-light">
                     "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
                     que fortalece nossas entregas"
                   </p>
