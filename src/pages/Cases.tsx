@@ -10,7 +10,7 @@ const Cases = () => {
       <UniversalHeader />
       
       {/* Modern Hero Section */}
-      <section className="relative min-h-[70vh] flex flex-col overflow-hidden bg-white">
+      <section className="relative min-h-[70vh] flex flex-col overflow-hidden bg-gradient-to-b from-white via-white to-white">
         {/* Background Splashes - Similar to Home */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
@@ -22,6 +22,9 @@ const Cases = () => {
           {/* Medium accent splashes */}
           <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
           <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          
+          {/* Seamless gradient transition to white */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80"></div>
         </div>
 
         <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
@@ -51,9 +54,9 @@ const Cases = () => {
       </section>
 
       {/* Main Content */}
-      <main className="relative">
+      <main className="relative bg-white">
         {/* Content Background - Seamless transition */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-white/30 to-white"></div>
+        <div className="absolute inset-0 bg-white"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
           {/* Section Header */}
