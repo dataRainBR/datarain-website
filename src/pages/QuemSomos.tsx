@@ -208,15 +208,22 @@ const QuemSomos = () => {
           <div className="absolute bottom-20 left-20 w-[350px] h-[350px] bg-gradient-radial from-purple-600/15 via-purple-400/8 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-purple-300/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }}></div>
           
-          {/* Astronaut positioned on the right side */}
+          {/* Interactive hover rectangles */}
+          <div className="absolute top-[15%] left-[10%] w-32 h-32 border border-purple-300/30 rounded-lg hover-rect" style={{ animationDelay: '0s' }}></div>
+          <div className="absolute top-[45%] left-[5%] w-24 h-24 border border-purple-400/30 rounded-lg hover-rect" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-[70%] left-[15%] w-28 h-28 border border-purple-300/30 rounded-lg hover-rect" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-[25%] right-[35%] w-20 h-20 border border-purple-400/30 rounded-lg hover-rect" style={{ animationDelay: '1.5s' }}></div>
+          <div className="absolute top-[55%] right-[40%] w-24 h-24 border border-purple-300/30 rounded-lg hover-rect" style={{ animationDelay: '0.5s' }}></div>
+          
+          {/* Astronaut positioned on the right side - without border and animation */}
           <div className="absolute right-0 bottom-0 w-[400px] h-[600px] lg:w-[500px] lg:h-[700px] opacity-80 pointer-events-none hidden md:block">
             <img 
               src={astronautImage} 
               alt="VentureLabs Astronaut" 
-              className="w-full h-full object-contain object-bottom animate-float"
+              className="w-full h-full object-contain object-bottom"
               style={{
                 filter: 'drop-shadow(0 0 40px rgba(139, 92, 246, 0.3))',
-                animation: 'float 6s ease-in-out infinite'
+                mixBlendMode: 'normal'
               }}
             />
           </div>

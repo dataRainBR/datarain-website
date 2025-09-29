@@ -148,12 +148,23 @@ All colors MUST be HSL.
   /* .marquee2 no longer needed; keeping for compatibility but unused */
   .marquee2 { display: none; }
   
-  @keyframes float {
+  .hover-rect {
+    transition: all 0.3s ease;
+    animation: float-rect 6s ease-in-out infinite;
+  }
+  
+  .hover-rect:hover {
+    transform: scale(1.1) rotate(5deg);
+    border-color: rgba(168, 85, 247, 0.6);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+  }
+  
+  @keyframes float-rect {
     0%, 100% {
-      transform: translateY(0px);
+      transform: translateY(0px) rotate(0deg);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-15px) rotate(2deg);
     }
   }
 }
