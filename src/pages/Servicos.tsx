@@ -7,12 +7,18 @@ const Servicos = () => {
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        {/* Background splashes */}
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-white">
+        {/* Modern Background with Large Splashes */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-60 md:w-80 h-60 md:h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700"></div>
-          <div className="absolute top-1/2 right-1/4 w-48 md:w-64 h-48 md:h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          {/* Large Blue splash - top right */}
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          
+          {/* Large Orange splash - bottom left */}
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          {/* Medium accent splashes */}
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-32 md:pt-36">

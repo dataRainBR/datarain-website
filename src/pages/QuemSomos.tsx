@@ -59,25 +59,19 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Moderna e Humanizada */}
-      <header className="relative pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-24 lg:pb-28 overflow-hidden">
-        {/* Degradê não linear com laranja e azul */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-blue-500/10 to-orange-600/15"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/15 via-transparent to-orange-400/20"></div>
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-orange-300/30 via-orange-400/10 to-transparent rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-blue-400/25 via-blue-500/10 to-transparent rounded-full blur-3xl"></div>
-        
-        {/* Padrão de pontos sutil */}
-        <div className="absolute inset-0 opacity-[0.03]">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
-            backgroundSize: '32px 32px'
-          }}></div>
+      <header className="relative pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-24 lg:pb-28 overflow-hidden bg-white">
+        {/* Modern Background with Large Splashes */}
+        <div className="absolute inset-0">
+          {/* Large Blue splash - top right */}
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          
+          {/* Large Orange splash - bottom left */}
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          {/* Medium accent splashes */}
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
-        
-        {/* Elementos geométricos flutuantes */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-br from-orange-400/20 to-blue-500/20 rounded-full blur-xl animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-32 h-32 bg-gradient-to-bl from-blue-400/15 to-orange-400/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-32 left-1/4 w-16 h-16 bg-gradient-to-tr from-orange-300/25 to-blue-300/25 rounded-full blur-lg animate-pulse" style={{ animationDelay: '2s' }}></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
