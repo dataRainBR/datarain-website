@@ -1,6 +1,6 @@
 import React from 'react';
 import { WordPressPostsList } from '@/components/wordpress/WordPressPostsList';
-import { Briefcase, Sparkles, TrendingUp } from 'lucide-react';
+import { Briefcase, Sparkles } from 'lucide-react';
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 
@@ -10,70 +10,54 @@ const Cases = () => {
       <UniversalHeader />
       
       {/* Modern Hero Section */}
-      <section className="relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary/80 to-secondary"></div>
-        
-        {/* Animated Elements */}
+      <section className="relative min-h-[70vh] flex flex-col overflow-hidden bg-white">
+        {/* Background Splashes - Similar to Home */}
         <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-secondary/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+          {/* Large Blue splash - top right */}
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          
+          {/* Large Orange splash - bottom left */}
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          
+          {/* Medium accent splashes */}
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
 
-        {/* Grid Pattern Overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
-
-        <div className="relative z-10 container mx-auto px-4 py-24 md:py-32 text-center text-white">
-          <div className="max-w-5xl mx-auto">
-            {/* Icon and Badge */}
-            <div className="flex items-center justify-center gap-3 mb-8">
-              <div className="p-4 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                <Briefcase className="h-8 w-8 text-white" />
-              </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20">
-                <Sparkles className="h-4 w-4" />
-                <span className="text-sm font-medium">Casos de Sucesso</span>
-              </div>
-            </div>
-            
-            {/* Title */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-              <span className="bg-gradient-to-r from-white via-white to-white/80 bg-clip-text text-transparent">
-                Transformações
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-accent via-accent/90 to-white bg-clip-text text-transparent">
-                Digitais Reais
-              </span>
-            </h1>
-
-            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-12">
-              Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados mensuráveis
-            </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <TrendingUp className="h-6 w-6 text-accent" />
-                  <span className="text-3xl font-bold">50+</span>
+        <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto text-center">
+              {/* Icon and Badge */}
+              <div className="flex items-center justify-center gap-3 mb-8">
+                <div className="p-4 bg-[#3893af]/10 backdrop-blur-sm rounded-2xl border border-[#3893af]/20">
+                  <Briefcase className="h-8 w-8" style={{ color: '#3893af' }} />
                 </div>
-                <p className="text-white/70 text-sm">Projetos Entregues</p>
-              </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Sparkles className="h-6 w-6 text-accent" />
-                  <span className="text-3xl font-bold">98%</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-gray-900/5 backdrop-blur-sm rounded-full border border-gray-300/50">
+                  <Sparkles className="h-4 w-4 text-gray-700" />
+                  <span className="text-sm font-medium text-gray-700">Casos de Sucesso</span>
                 </div>
-                <p className="text-white/70 text-sm">Taxa de Sucesso</p>
               </div>
-              <div className="text-center">
-                <div className="flex items-center justify-center gap-2 mb-2">
-                  <Briefcase className="h-6 w-6 text-accent" />
-                  <span className="text-3xl font-bold">5+</span>
-                </div>
-                <p className="text-white/70 text-sm">Anos de Experiência</p>
+              
+              {/* Title with High Contrast */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
+                <span className="text-gray-900">Cases de</span>
+                <br />
+                <span style={{ color: '#3893af' }}>Transformação</span>
+                <br />
+                <span style={{ color: '#f78504' }}>Digital</span>
+              </h1>
+
+              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
+                Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados mensuráveis
+              </p>
+
+              {/* Subtle accent elements */}
+              <div className="flex items-center justify-center gap-8 opacity-60">
+                <div className="w-12 h-1 bg-gradient-to-r from-[#f78504] to-[#3893af] rounded-full"></div>
+                <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">
+                  Resultados Comprovados
+                </p>
+                <div className="w-12 h-1 bg-gradient-to-r from-[#3893af] to-[#f78504] rounded-full"></div>
               </div>
             </div>
           </div>
