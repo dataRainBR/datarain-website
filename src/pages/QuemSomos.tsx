@@ -59,7 +59,7 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Moderna e Humanizada */}
-      <header className="relative pt-24 md:pt-28 lg:pt-32 pb-20 md:pb-24 lg:pb-28 overflow-hidden">
+      <header className="relative pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-24 lg:pb-28 overflow-hidden">
         {/* Degradê não linear com laranja e azul */}
         <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 via-blue-500/10 to-orange-600/15"></div>
         <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/15 via-transparent to-orange-400/20"></div>
