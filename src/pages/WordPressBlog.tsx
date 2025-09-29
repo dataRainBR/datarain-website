@@ -49,12 +49,7 @@ const WordPressBlog: React.FC = () => {
           <div className="max-w-5xl mx-auto">
             {/* Title */}
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center gap-3 mb-4">
-                <div className="p-3 bg-primary/10 rounded-2xl">
-                  <BookOpen className="h-10 w-10 text-primary" />
-                </div>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
                 Blog DataRain
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
@@ -93,18 +88,6 @@ const WordPressBlog: React.FC = () => {
               </form>
             </div>
 
-            {/* Stats Cards */}
-            <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
-              {blogStats.map((stat, index) => (
-                <Card key={index} className="bg-card/60 backdrop-blur-sm border-border/50 hover:bg-card/80 transition-all duration-300">
-                  <div className="p-4 text-center">
-                    <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
-                    <div className="text-2xl font-bold text-foreground mb-1">{stat.value}</div>
-                    <div className="text-sm text-muted-foreground">{stat.label}</div>
-                  </div>
-                </Card>
-              ))}
-            </div>
           </div>
         </div>
       </section>
