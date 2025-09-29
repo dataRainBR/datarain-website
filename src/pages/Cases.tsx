@@ -29,8 +29,8 @@ const Cases = () => {
             <div className="max-w-5xl mx-auto text-center">
               {/* Title with High Contrast */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-                <span className="text-gray-900">Cases de </span>
-                <span style={{ color: '#3893af' }}>Transformação Digital</span>
+                <span className="text-gray-900">Cases de Transformação </span>
+                <span style={{ color: '#3893af' }}>Digital</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
