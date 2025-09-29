@@ -45,7 +45,7 @@ const WordPressBlog: React.FC = () => {
           <div className="absolute top-1/2 right-1/4 w-48 md:w-64 h-48 md:h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-32 md:pt-36">
+        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-40 md:pt-44 lg:pt-48">
           <div className="max-w-5xl mx-auto">
             {/* Title */}
             <div className="text-center mb-8">
