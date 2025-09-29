@@ -24,10 +24,10 @@ const Cases = () => {
           <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
           
           {/* Seamless gradient transition to white */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-white/40 to-white"></div>
         </div>
 
-        <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
+        <div className="flex-1 flex items-center relative z-10 pt-32 pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center">
               {/* Title with High Contrast */}
