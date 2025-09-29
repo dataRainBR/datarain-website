@@ -49,8 +49,8 @@ const WordPressBlog: React.FC = () => {
           <div className="max-w-5xl mx-auto">
             {/* Title */}
             <div className="text-center mb-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
-                Blog DataRain
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                Blog <span style={{ color: '#f78504' }}>dataRain</span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
                 Insights, tendências e conhecimento sobre tecnologia, cloud computing e transformação digital
