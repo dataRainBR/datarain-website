@@ -93,7 +93,7 @@ const WordPressBlog: React.FC = () => {
       </section>
 
       {/* Categories Section */}
-      <section className="bg-gradient-to-b from-background via-background/95 to-background py-12 border-b border-border/30">
+      <section className="bg-gradient-to-b from-background via-background/95 to-background py-6 border-b border-border/30">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center gap-3 mb-6">
