@@ -201,41 +201,46 @@ const QuemSomos = () => {
 
       {/* VentureLabs Section - 60% White, 30% Black, 10% Purple */}
       <section className="py-20 bg-white relative overflow-hidden">
+        {/* SVG Pattern Background - similar to VentureLabs */}
+        <svg 
+          aria-hidden="true" 
+          className="absolute inset-0 w-full h-full opacity-[0.03] pointer-events-none"
+          style={{ zIndex: 0 }}
+        >
+          <defs>
+            <pattern id="venturelabs-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+              <rect x="10" y="10" width="80" height="100" fill="none" stroke="rgba(139, 92, 246, 0.5)" strokeWidth="1" transform="skewY(-10)" />
+              <rect x="110" y="60" width="70" height="90" fill="none" stroke="rgba(139, 92, 246, 0.4)" strokeWidth="1" transform="skewY(8)" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#venturelabs-pattern)" />
+        </svg>
+
         {/* Interactive background effects */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0" style={{ zIndex: 1 }}>
           {/* Gradient orbs with animation */}
           <div className="absolute top-10 right-10 w-[400px] h-[400px] bg-gradient-radial from-purple-400/20 via-purple-500/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
           <div className="absolute bottom-20 left-20 w-[350px] h-[350px] bg-gradient-radial from-purple-600/15 via-purple-400/8 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-purple-300/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }}></div>
           
-          {/* Interactive hover rectangles */}
-          <div className="absolute top-[15%] left-[10%] w-32 h-32 border border-purple-300/30 rounded-lg hover-rect" style={{ animationDelay: '0s' }}></div>
-          <div className="absolute top-[45%] left-[5%] w-24 h-24 border border-purple-400/30 rounded-lg hover-rect" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-[70%] left-[15%] w-28 h-28 border border-purple-300/30 rounded-lg hover-rect" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-[25%] right-[35%] w-20 h-20 border border-purple-400/30 rounded-lg hover-rect" style={{ animationDelay: '1.5s' }}></div>
-          <div className="absolute top-[55%] right-[40%] w-24 h-24 border border-purple-300/30 rounded-lg hover-rect" style={{ animationDelay: '0.5s' }}></div>
+          {/* Interactive geometric shapes - VentureLabs style */}
+          <div className="geometric-shape absolute top-[20%] left-[8%] w-24 h-32 border-2 border-purple-400/40" style={{ transform: 'skewY(-8deg)', animationDelay: '0s' }}></div>
+          <div className="geometric-shape absolute top-[50%] left-[12%] w-20 h-28 border-2 border-purple-500/40" style={{ transform: 'skewY(6deg)', animationDelay: '1.2s' }}></div>
+          <div className="geometric-shape absolute top-[70%] left-[6%] w-28 h-36 border-2 border-purple-400/40" style={{ transform: 'skewY(-10deg)', animationDelay: '2.4s' }}></div>
+          <div className="geometric-shape absolute top-[15%] right-[38%] w-22 h-30 border-2 border-purple-500/40" style={{ transform: 'skewY(8deg)', animationDelay: '0.8s' }}></div>
+          <div className="geometric-shape absolute top-[45%] right-[42%] w-26 h-34 border-2 border-purple-400/40" style={{ transform: 'skewY(-6deg)', animationDelay: '1.6s' }}></div>
+          <div className="geometric-shape absolute top-[65%] left-[20%] w-24 h-30 border-2 border-purple-500/40" style={{ transform: 'skewY(10deg)', animationDelay: '0.4s' }}></div>
           
           {/* Astronaut positioned on the right side - without border and animation */}
-          <div className="absolute right-0 bottom-0 w-[400px] h-[600px] lg:w-[500px] lg:h-[700px] opacity-80 pointer-events-none hidden md:block">
+          <div className="absolute right-0 bottom-0 w-[400px] h-[600px] lg:w-[500px] lg:h-[700px] opacity-90 pointer-events-none hidden md:block" style={{ zIndex: 2 }}>
             <img 
               src={astronautImage} 
               alt="VentureLabs Astronaut" 
               className="w-full h-full object-contain object-bottom"
               style={{
-                filter: 'drop-shadow(0 0 40px rgba(139, 92, 246, 0.3))',
+                filter: 'drop-shadow(0 0 50px rgba(139, 92, 246, 0.4))',
                 mixBlendMode: 'normal'
               }}
             />
-          </div>
-          
-          {/* Floating particles effect */}
-          <div className="absolute inset-0 opacity-30">
-            <div className="absolute top-[20%] left-[15%] w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDuration: '3s' }}></div>
-            <div className="absolute top-[40%] left-[25%] w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
-            <div className="absolute top-[60%] left-[10%] w-2 h-2 bg-purple-600 rounded-full animate-pulse" style={{ animationDuration: '5s', animationDelay: '2s' }}></div>
-            <div className="absolute top-[30%] right-[40%] w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
-            <div className="absolute top-[70%] right-[45%] w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}></div>
-            <div className="absolute top-[50%] left-[30%] w-1 h-1 bg-purple-600 rounded-full animate-pulse" style={{ animationDuration: '6s' }}></div>
           </div>
         </div>
         

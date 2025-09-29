@@ -148,23 +148,31 @@ All colors MUST be HSL.
   /* .marquee2 no longer needed; keeping for compatibility but unused */
   .marquee2 { display: none; }
   
-  .hover-rect {
-    transition: all 0.3s ease;
-    animation: float-rect 6s ease-in-out infinite;
+  .geometric-shape {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: float-shape 8s ease-in-out infinite;
+    cursor: pointer;
   }
   
-  .hover-rect:hover {
-    transform: scale(1.1) rotate(5deg);
-    border-color: rgba(168, 85, 247, 0.6);
-    box-shadow: 0 0 30px rgba(168, 85, 247, 0.4);
+  .geometric-shape:hover {
+    transform: scale(1.15) rotate(8deg) !important;
+    border-color: rgba(168, 85, 247, 0.8);
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.5), inset 0 0 20px rgba(168, 85, 247, 0.2);
+    background: rgba(168, 85, 247, 0.05);
   }
   
-  @keyframes float-rect {
+  @keyframes float-shape {
     0%, 100% {
-      transform: translateY(0px) rotate(0deg);
+      transform: translateY(0px) translateX(0px);
+    }
+    25% {
+      transform: translateY(-12px) translateX(8px);
     }
     50% {
-      transform: translateY(-15px) rotate(2deg);
+      transform: translateY(-5px) translateX(-5px);
+    }
+    75% {
+      transform: translateY(8px) translateX(10px);
     }
   }
 }
