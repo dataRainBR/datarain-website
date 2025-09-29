@@ -58,7 +58,7 @@ const Cases = () => {
         {/* Content Background - Seamless transition */}
         <div className="absolute inset-0 bg-white"></div>
         
-        <div className="relative z-10 container mx-auto px-4 py-12">
+        <div className="relative z-10 container mx-auto px-4 pt-6 pb-12">
           {/* Section Header */}
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
