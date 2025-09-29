@@ -259,11 +259,11 @@ const QuemSomos = () => {
               <div className="w-32 h-1.5 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 rounded-full mx-auto shadow-lg shadow-purple-500/50"></div>
             </div>
 
-            {/* Main content grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            {/* Main content grid - Balanced layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               
               {/* Left side - Main content */}
-              <div className="space-y-8 animate-fade-in">
+              <div className="space-y-6 animate-fade-in">
                 <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2">
                   <div className="flex items-start gap-5 mb-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
@@ -295,11 +295,20 @@ const QuemSomos = () => {
                   </div>
                   <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transition-all duration-500"></div>
                 </div>
+
+                <div className="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200/50 rounded-3xl p-6 shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <p className="text-center text-gray-700 italic font-light text-base leading-relaxed relative z-10">
+                    "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
+                    que fortalece nossas entregas"
+                  </p>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-purple-600 to-transparent rounded-full"></div>
+                </div>
               </div>
 
               {/* Right side - Benefits */}
-              <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="text-center lg:text-left mb-10">
+              <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="text-center lg:text-left">
                   <h3 className="text-3xl md:text-4xl font-bold text-black mb-4 leading-tight">
                     Por que isso importa para você?
                   </h3>
@@ -308,51 +317,42 @@ const QuemSomos = () => {
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-5">
-                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-7 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
-                    <div className="flex items-center gap-4 mb-4">
+                <div className="grid grid-cols-1 gap-4">
+                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-6 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                    <div className="flex items-center gap-4 mb-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <ArrowRight className="w-5 h-5 text-white" />
                       </div>
                       <h4 className="font-bold text-black text-lg">Mais Velocidade</h4>
                     </div>
-                    <p className="text-gray-600 leading-relaxed pl-14">
+                    <p className="text-gray-600 leading-relaxed pl-14 text-sm">
                       Rede de talentos e metodologias que aceleram entregas
                     </p>
                   </div>
 
-                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-7 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
-                    <div className="flex items-center gap-4 mb-4">
+                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-6 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                    <div className="flex items-center gap-4 mb-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <Brain className="w-5 h-5 text-white" />
                       </div>
                       <h4 className="font-bold text-black text-lg">Risco Calculado</h4>
                     </div>
-                    <p className="text-gray-600 leading-relaxed pl-14">
+                    <p className="text-gray-600 leading-relaxed pl-14 text-sm">
                       Cultura de inovação com decisões estratégicas fundamentadas
                     </p>
                   </div>
 
-                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-7 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
-                    <div className="flex items-center gap-4 mb-4">
+                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-6 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                    <div className="flex items-center gap-4 mb-3">
                       <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <Lightbulb className="w-5 h-5 text-white" />
                       </div>
                       <h4 className="font-bold text-black text-lg">Mais Ambição</h4>
                     </div>
-                    <p className="text-gray-600 leading-relaxed pl-14">
+                    <p className="text-gray-600 leading-relaxed pl-14 text-sm">
                       Investimentos e ousadia para alcançar transformação digital completa
                     </p>
                   </div>
-                </div>
-
-                <div className="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200/50 rounded-3xl p-8 mt-8 shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                  <p className="text-center text-gray-700 italic font-light text-lg leading-relaxed relative z-10">
-                    "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
-                    que fortalece nossas entregas"
-                  </p>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-purple-600 to-transparent rounded-full"></div>
                 </div>
               </div>
             </div>
@@ -622,7 +622,7 @@ const QuemSomos = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto mb-6"></div>
             <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold text-white/90 leading-tight">
-              PROVIDER LENS REPORT 2022 & <span className="text-accent font-bold">2023</span>
+              Líder ISG por <span className="text-accent font-bold">4 anos consecutivos</span>
             </h3>
           </div>
           
@@ -908,13 +908,13 @@ const QuemSomos = () => {
             {/* Cloud Card */}
             <div className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
-              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale">
-                <div className="text-center space-y-6">
+              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
+                <div className="text-center space-y-6 flex flex-col flex-1">
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                     <Cloud className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800">Cloud</h4>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">Cloud</h4>
+                  <p className="text-slate-600 leading-relaxed flex-1">
                     Soluções completas em nuvem AWS para modernizar sua infraestrutura
                   </p>
                   <div className="pt-4">
@@ -927,15 +927,15 @@ const QuemSomos = () => {
             {/* Cybersecurity Card */}
             <div className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
-              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale">
-                <div className="text-center space-y-6">
+              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
+                <div className="text-center space-y-6 flex flex-col flex-1">
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800">
-                    Cyber<br />Security
+                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">
+                    Cybersecurity
                   </h4>
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-slate-600 leading-relaxed flex-1">
                     Proteção avançada e compliance para garantir a segurança dos seus dados
                   </p>
                   <div className="pt-4">
@@ -948,13 +948,13 @@ const QuemSomos = () => {
             {/* AI & ML Card */}
             <div className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
-              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale">
-                <div className="text-center space-y-6">
+              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
+                <div className="text-center space-y-6 flex flex-col flex-1">
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                     <Brain className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800">AI & ML</h4>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">AI & ML</h4>
+                  <p className="text-slate-600 leading-relaxed flex-1">
                     Inteligência artificial e machine learning para inovação empresarial
                   </p>
                   <div className="pt-4">
