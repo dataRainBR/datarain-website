@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <Logo className="mb-4" />
+            <Logo variant="white" className="mb-4" />
             <p className="text-sm text-primary-foreground/80">
               DataRain é a parceira estratégica para empresas em tecnologia, 
               entregando soluções em cloud, dados e inteligência artificial.

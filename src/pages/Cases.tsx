@@ -1,6 +1,6 @@
 import React from 'react';
 import { WordPressPostsList } from '@/components/wordpress/WordPressPostsList';
-import { Briefcase, Sparkles } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 
@@ -27,24 +27,10 @@ const Cases = () => {
         <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center">
-              {/* Icon and Badge */}
-              <div className="flex items-center justify-center gap-3 mb-8">
-                <div className="p-4 bg-[#3893af]/10 backdrop-blur-sm rounded-2xl border border-[#3893af]/20">
-                  <Briefcase className="h-8 w-8" style={{ color: '#3893af' }} />
-                </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-gray-900/5 backdrop-blur-sm rounded-full border border-gray-300/50">
-                  <Sparkles className="h-4 w-4 text-gray-700" />
-                  <span className="text-sm font-medium text-gray-700">Casos de Sucesso</span>
-                </div>
-              </div>
-              
               {/* Title with High Contrast */}
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
-                <span className="text-gray-900">Cases de</span>
-                <br />
-                <span style={{ color: '#3893af' }}>Transformação</span>
-                <br />
-                <span style={{ color: '#f78504' }}>Digital</span>
+                <span className="text-gray-900">Cases de </span>
+                <span className="text-gray-900">Transformação Digital</span>
               </h1>
 
               <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
@@ -66,8 +52,8 @@ const Cases = () => {
 
       {/* Main Content */}
       <main className="relative">
-        {/* Content Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/20 to-background"></div>
+        {/* Content Background - Seamless transition */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/0 via-white/30 to-white"></div>
         
         <div className="relative z-10 container mx-auto px-4 py-20">
           {/* Section Header */}
