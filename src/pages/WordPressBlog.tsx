@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { WordPressPostsList } from '@/components/wordpress/WordPressPostsList';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { BookOpen, Search } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { Badge } from '@/components/ui/badge';
+import { BookOpen, Search, TrendingUp, Clock, Users, ArrowRight } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
+import Footer from '@/components/Footer';
 
 const WordPressBlog: React.FC = () => {
-  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
 
@@ -17,12 +17,27 @@ const WordPressBlog: React.FC = () => {
     setActiveSearch(searchTerm);
   };
 
+  const blogStats = [
+    { icon: BookOpen, label: "Artigos", value: "100+" },
+    { icon: Users, label: "Leitores", value: "10K+" },
+    { icon: Clock, label: "Atualizado", value: "Diário" }
+  ];
+
+  const categories = [
+    "Cloud Computing",
+    "DevOps",
+    "Segurança",
+    "IA & Machine Learning",
+    "Desenvolvimento",
+    "Infraestrutura"
+  ];
+
   return (
-    <>
-      <UniversalHeader />
+    <div className="min-h-screen bg-background">
+      <UniversalHeader showHeroSection={false} />
       
-      {/* Hero Section with Search */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+      {/* Hero Section */}
+      <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         {/* Background splashes */}
         <div className="absolute inset-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
@@ -30,67 +45,119 @@ const WordPressBlog: React.FC = () => {
           <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-16 text-center">
-          <div className="max-w-4xl mx-auto">
+        <div className="relative z-10 container mx-auto px-4 py-16">
+          <div className="max-w-5xl mx-auto">
             {/* Title */}
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <BookOpen className="h-12 w-12 text-primary" />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
-                Blog
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center gap-3 mb-4">
+                <div className="p-3 bg-primary/10 rounded-2xl">
+                  <BookOpen className="h-10 w-10 text-primary" />
+                </div>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+                Blog DataRain
               </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+                Insights, tendências e conhecimento sobre tecnologia, cloud computing e transformação digital
+              </p>
             </div>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-              Descubra artigos, insights e novidades sobre tecnologia, inovação e desenvolvimento
-            </p>
-
-            {/* Search Bar with Glassmorphism */}
-            <div className="max-w-lg mx-auto">
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-10">
               <form onSubmit={handleSearch} className="relative">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
-                  <div className="relative bg-background/80 backdrop-blur-xl border border-white/20 rounded-xl p-1 shadow-xl">
+                  <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-lg group-hover:blur-xl transition-all duration-300"></div>
+                  <div className="relative bg-card/80 backdrop-blur-xl border border-border/50 rounded-2xl p-2 shadow-xl">
                     <div className="flex items-center gap-2">
                       <div className="flex-1 flex items-center gap-3 px-4 py-3">
-                        <Search className="h-5 w-5 text-muted-foreground" />
+                        <Search className="h-5 w-5 text-muted-foreground flex-shrink-0" />
                         <Input
                           type="text"
-                          placeholder="Pesquisar artigos..."
+                          placeholder="Pesquisar artigos, tecnologias, tutoriais..."
                           value={searchTerm}
                           onChange={(e) => setSearchTerm(e.target.value)}
-                          className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground/70"
+                          className="border-0 bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 placeholder:text-muted-foreground/70 text-base"
                         />
                       </div>
                       <Button
                         type="submit"
-                        size="sm"
-                        className="mr-1 bg-primary/90 hover:bg-primary"
+                        size="lg"
+                        className="mr-1 bg-primary hover:bg-primary/90 gap-2"
                       >
                         Buscar
+                        <ArrowRight className="h-4 w-4" />
                       </Button>
                     </div>
                   </div>
                 </div>
               </form>
             </div>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
+              {blogStats.map((stat, index) => (
+                <Card key={index} className="bg-card/60 backdrop-blur-sm border-border/50 hover:bg-card/80 transition-all duration-300">
+                  <div className="p-4 text-center">
+                    <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary" />
+                    <div className="text-2xl font-bold text-foreground mb-1">{stat.value}</div>
+                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main content */}
+      {/* Categories Section */}
+      <section className="bg-gradient-to-b from-background via-background/95 to-background py-12 border-b border-border/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex items-center gap-3 mb-6">
+              <TrendingUp className="h-5 w-5 text-primary" />
+              <h2 className="text-xl font-semibold text-foreground">Categorias Populares</h2>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {categories.map((category, index) => (
+                <Badge 
+                  key={index} 
+                  variant="outline" 
+                  className="px-4 py-2 text-sm hover:bg-primary/10 hover:border-primary/50 transition-all cursor-pointer"
+                >
+                  {category}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content - Posts Grid */}
       <main className="bg-gradient-to-b from-background via-background/95 to-background">
         <div className="container mx-auto px-4 py-16">
-          {/* Lista de Posts */}
-          <WordPressPostsList
-            postsPerPage={9}
-            showSearch={false}
-            showFilters={false}
-            tagSlug="blog"
-            searchTerm={activeSearch}
-          />
+          <div className="max-w-6xl mx-auto">
+            <div className="mb-8">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                Últimos Artigos
+              </h2>
+              <p className="text-muted-foreground">
+                Explore nosso conteúdo mais recente sobre tecnologia e inovação
+              </p>
+            </div>
+            
+            <WordPressPostsList
+              postsPerPage={9}
+              showSearch={false}
+              showFilters={false}
+              tagSlug="blog"
+              searchTerm={activeSearch}
+            />
+          </div>
         </div>
       </main>
-    </>
+
+      <Footer />
+    </div>
   );
 };
 
