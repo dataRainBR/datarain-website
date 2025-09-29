@@ -247,106 +247,112 @@ const QuemSomos = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16 animate-fade-in">
-              <div className="inline-flex items-center gap-3 mb-6">
-                <Building2 className="w-8 h-8 text-black" />
-                <h2 className="text-4xl md:text-5xl font-black text-black">
-                  Nossa Holding: <span className="text-purple-600">VentureLabs</span>
+            <div className="text-center mb-20 animate-fade-in">
+              <div className="inline-flex items-center gap-4 mb-6 group">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 shadow-lg">
+                  <Building2 className="w-6 h-6 text-white" />
+                </div>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black tracking-tight">
+                  Nossa Holding: <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">VentureLabs</span>
                 </h2>
               </div>
-              <div className="w-24 h-1 bg-purple-600 rounded-full mx-auto"></div>
+              <div className="w-32 h-1.5 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 rounded-full mx-auto shadow-lg shadow-purple-500/50"></div>
             </div>
 
             {/* Main content grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
               
               {/* Left side - Main content */}
               <div className="space-y-8 animate-fade-in">
-                <div className="bg-white border-2 border-black/10 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-start gap-4 mb-6">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Rocket className="w-6 h-6 text-white" />
+                <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2">
+                  <div className="flex items-start gap-5 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <Rocket className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-black mb-2">Estúdio de Inovação</h3>
-                      <p className="text-gray-700 leading-relaxed">
+                      <h3 className="text-2xl font-bold text-black mb-3 group-hover:text-purple-600 transition-colors duration-300">Estúdio de Inovação</h3>
+                      <p className="text-gray-700 leading-relaxed text-base">
                         Por trás da dataRain, pulsa a VentureLabs — um estúdio de inovação que atua na 
                         interseção entre tecnologia, design e negócios.
                       </p>
                     </div>
                   </div>
+                  <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transition-all duration-500"></div>
                 </div>
 
-                <div className="bg-white border-2 border-black/10 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-black rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Award className="w-6 h-6 text-white" />
+                <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-3xl p-8 shadow-xl hover:shadow-2xl hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2">
+                  <div className="flex items-start gap-5">
+                    <div className="w-14 h-14 bg-gradient-to-br from-black to-gray-800 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                      <Award className="w-7 h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-black mb-2">40+ Anos de Legado</h3>
-                      <p className="text-gray-700 leading-relaxed">
+                      <h3 className="text-2xl font-bold text-black mb-3 group-hover:text-purple-600 transition-colors duration-300">40+ Anos de Legado</h3>
+                      <p className="text-gray-700 leading-relaxed text-base">
                         Com mais de 40 anos de legado em projetos tecnológicos e espírito "maker" no DNA, 
                         oferecemos suporte estratégico, operacional e criativo.
                       </p>
                     </div>
                   </div>
+                  <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transition-all duration-500"></div>
                 </div>
               </div>
 
               {/* Right side - Benefits */}
-              <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="text-center lg:text-left mb-8">
-                  <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
+              <div className="space-y-8 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="text-center lg:text-left mb-10">
+                  <h3 className="text-3xl md:text-4xl font-bold text-black mb-4 leading-tight">
                     Por que isso importa para você?
                   </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">
+                  <p className="text-xl text-gray-600 leading-relaxed font-medium">
                     Cliente da dataRain
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-white border-2 border-black/10 rounded-2xl p-6 hover:scale-105 hover:border-purple-600/30 transition-all duration-300 shadow-md">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center shadow-md">
-                        <ArrowRight className="w-4 h-4 text-white" />
+                <div className="grid grid-cols-1 gap-5">
+                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-7 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                        <ArrowRight className="w-5 h-5 text-white" />
                       </div>
-                      <h4 className="font-bold text-black">Mais Velocidade</h4>
+                      <h4 className="font-bold text-black text-lg">Mais Velocidade</h4>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-gray-600 leading-relaxed pl-14">
                       Rede de talentos e metodologias que aceleram entregas
                     </p>
                   </div>
 
-                  <div className="bg-white border-2 border-black/10 rounded-2xl p-6 hover:scale-105 hover:border-purple-600/30 transition-all duration-300 shadow-md">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center shadow-md">
-                        <Brain className="w-4 h-4 text-white" />
+                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-7 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                        <Brain className="w-5 h-5 text-white" />
                       </div>
-                      <h4 className="font-bold text-black">Risco Calculado</h4>
+                      <h4 className="font-bold text-black text-lg">Risco Calculado</h4>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-gray-600 leading-relaxed pl-14">
                       Cultura de inovação com decisões estratégicas fundamentadas
                     </p>
                   </div>
 
-                  <div className="bg-white border-2 border-black/10 rounded-2xl p-6 hover:scale-105 hover:border-purple-600/30 transition-all duration-300 shadow-md">
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center shadow-md">
-                        <Lightbulb className="w-4 h-4 text-white" />
+                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-2xl p-7 hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                        <Lightbulb className="w-5 h-5 text-white" />
                       </div>
-                      <h4 className="font-bold text-black">Mais Ambição</h4>
+                      <h4 className="font-bold text-black text-lg">Mais Ambição</h4>
                     </div>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-gray-600 leading-relaxed pl-14">
                       Investimentos e ousadia para alcançar transformação digital completa
                     </p>
                   </div>
                 </div>
 
-                <div className="bg-gray-50 border-2 border-black/10 rounded-2xl p-6 mt-6 shadow-md">
-                  <p className="text-center text-gray-700 italic font-light">
+                <div className="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200/50 rounded-3xl p-8 mt-8 shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <p className="text-center text-gray-700 italic font-light text-lg leading-relaxed relative z-10">
                     "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
                     que fortalece nossas entregas"
                   </p>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-purple-600 to-transparent rounded-full"></div>
                 </div>
               </div>
             </div>
