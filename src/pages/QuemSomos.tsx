@@ -4,6 +4,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
+import astronautImage from "@/assets/astronaut-venturelabs.png";
 import { 
   Cloud, 
   Shield, 
@@ -200,19 +201,35 @@ const QuemSomos = () => {
 
       {/* VentureLabs Section - 60% White, 30% Black, 10% Purple */}
       <section className="py-20 bg-white relative overflow-hidden">
-        {/* Subtle background effects */}
+        {/* Interactive background effects */}
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-gradient-radial from-purple-500/10 via-purple-500/5 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-[200px] h-[200px] bg-gradient-radial from-purple-600/8 via-transparent to-transparent rounded-full blur-2xl"></div>
-        </div>
-        
-        {/* Minimal starfield effect */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 80% 20%, #8b5cf6 1px, transparent 1px),
-                            radial-gradient(circle at 40% 60%, #8b5cf6 1px, transparent 1px)`,
-            backgroundSize: '400px 400px, 300px 300px'
-          }}></div>
+          {/* Gradient orbs with animation */}
+          <div className="absolute top-10 right-10 w-[400px] h-[400px] bg-gradient-radial from-purple-400/20 via-purple-500/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-20 left-20 w-[350px] h-[350px] bg-gradient-radial from-purple-600/15 via-purple-400/8 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-purple-300/10 via-transparent to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }}></div>
+          
+          {/* Astronaut positioned on the right side */}
+          <div className="absolute right-0 bottom-0 w-[400px] h-[600px] lg:w-[500px] lg:h-[700px] opacity-80 pointer-events-none hidden md:block">
+            <img 
+              src={astronautImage} 
+              alt="VentureLabs Astronaut" 
+              className="w-full h-full object-contain object-bottom animate-float"
+              style={{
+                filter: 'drop-shadow(0 0 40px rgba(139, 92, 246, 0.3))',
+                animation: 'float 6s ease-in-out infinite'
+              }}
+            />
+          </div>
+          
+          {/* Floating particles effect */}
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-[20%] left-[15%] w-2 h-2 bg-purple-500 rounded-full animate-pulse" style={{ animationDuration: '3s' }}></div>
+            <div className="absolute top-[40%] left-[25%] w-1.5 h-1.5 bg-purple-400 rounded-full animate-pulse" style={{ animationDuration: '4s', animationDelay: '1s' }}></div>
+            <div className="absolute top-[60%] left-[10%] w-2 h-2 bg-purple-600 rounded-full animate-pulse" style={{ animationDuration: '5s', animationDelay: '2s' }}></div>
+            <div className="absolute top-[30%] right-[40%] w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '0.5s' }}></div>
+            <div className="absolute top-[70%] right-[45%] w-2 h-2 bg-purple-400 rounded-full animate-pulse" style={{ animationDuration: '4.5s', animationDelay: '1.5s' }}></div>
+            <div className="absolute top-[50%] left-[30%] w-1 h-1 bg-purple-600 rounded-full animate-pulse" style={{ animationDuration: '6s' }}></div>
+          </div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">

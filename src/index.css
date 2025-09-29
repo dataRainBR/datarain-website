@@ -147,4 +147,13 @@ All colors MUST be HSL.
   }
   /* .marquee2 no longer needed; keeping for compatibility but unused */
   .marquee2 { display: none; }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
 }
