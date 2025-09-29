@@ -14,39 +14,39 @@ const Cases = () => {
         {/* Background Splashes - Similar to Home */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-32 -right-32 w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
           
           {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute -bottom-32 -left-32 w-[450px] md:w-[700px] h-[450px] md:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           
           {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-[250px] md:w-[400px] h-[250px] md:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[300px] md:w-[450px] h-[300px] md:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
           
           {/* Seamless gradient transition to white */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-white/40 to-white"></div>
         </div>
 
-        <div className="flex-1 flex items-center relative z-10 pt-32 pb-24">
+        <div className="flex-1 flex items-center relative z-10 pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center">
               {/* Title with High Contrast */}
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
                 <span className="text-gray-900">Cases de Transformação </span>
                 <span style={{ color: '#3893af' }}>Digital</span>
               </h1>
 
-              <p className="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12">
+              <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8 md:mb-12 px-4">
                 Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados mensuráveis
               </p>
 
               {/* Subtle accent elements */}
-              <div className="flex items-center justify-center gap-8 opacity-60">
-                <div className="w-12 h-1 bg-gradient-to-r from-[#f78504] to-[#3893af] rounded-full"></div>
-                <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">
+              <div className="flex items-center justify-center gap-4 md:gap-8 opacity-60 flex-wrap px-4">
+                <div className="w-8 md:w-12 h-1 bg-gradient-to-r from-[#f78504] to-[#3893af] rounded-full"></div>
+                <p className="text-xs md:text-sm text-gray-500 uppercase tracking-wider font-medium">
                   Resultados Comprovados
                 </p>
-                <div className="w-12 h-1 bg-gradient-to-r from-[#3893af] to-[#f78504] rounded-full"></div>
+                <div className="w-8 md:w-12 h-1 bg-gradient-to-r from-[#3893af] to-[#f78504] rounded-full"></div>
               </div>
             </div>
           </div>
