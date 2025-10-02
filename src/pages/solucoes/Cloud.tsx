@@ -31,21 +31,65 @@ const Cloud = () => {
       {/* Portfólio Cloud */}
       <main className="bg-gradient-to-b from-background via-background/95 to-background py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card rounded-2xl p-12 shadow-lg border border-border/20">
-              <div className="w-20 h-20 mx-auto mb-8 bg-[#3893af]/10 rounded-lg flex items-center justify-center">
-                <div className="w-10 h-10 bg-[#3893af] rounded"></div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluções Cloud</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Infraestrutura escalável e otimizada para sua transformação digital
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            {/* Migração */}
+            <a href="/solucoes/cloud/migracao" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#3893af]">Migração</h3>
+                <p className="text-sm text-muted-foreground">
+                  Migração segura e eficiente para a nuvem
+                </p>
               </div>
-              <h2 className="text-2xl font-bold text-[#3893af] mb-4">
-                Soluções Cloud
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Portfólio inclui: Migração, FinOps, DevOps e Arquitetura Cloud
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Conteúdo detalhado em desenvolvimento
-              </p>
-            </div>
+            </a>
+
+            {/* FinOps */}
+            <a href="/solucoes/cloud/finops" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#3893af]">FinOps</h3>
+                <p className="text-sm text-muted-foreground">
+                  Otimização de custos em cloud
+                </p>
+              </div>
+            </a>
+
+            {/* DevOps */}
+            <a href="/solucoes/cloud/devops" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#3893af]">DevOps</h3>
+                <p className="text-sm text-muted-foreground">
+                  Automação e integração contínua
+                </p>
+              </div>
+            </a>
+
+            {/* Arquitetura */}
+            <a href="/solucoes/cloud/arquitetura" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#3893af]">Arquitetura</h3>
+                <p className="text-sm text-muted-foreground">
+                  Design de arquiteturas escaláveis
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </main>

@@ -17,6 +17,21 @@ import Dados from "./pages/solucoes/Dados";
 import Cybersecurity from "./pages/solucoes/Cybersecurity";
 import SquadAlocacao from "./pages/servicos/SquadAlocacao";
 import Suporte from "./pages/servicos/Suporte";
+// Cloud Solutions
+import Migracao from "./pages/solucoes/cloud/Migracao";
+import FinOps from "./pages/solucoes/cloud/FinOps";
+import DevOps from "./pages/solucoes/cloud/DevOps";
+import ArquiteturaCloud from "./pages/solucoes/cloud/ArquiteturaCloud";
+// Cybersecurity Solutions
+import LandingZone from "./pages/solucoes/cybersecurity/LandingZone";
+import GAAS from "./pages/solucoes/cybersecurity/GAAS";
+import Assessment from "./pages/solucoes/cybersecurity/Assessment";
+// Data & AI Solutions
+import ArquiteturaDados from "./pages/solucoes/dados/ArquiteturaDados";
+import PilotAI from "./pages/solucoes/dados/PilotAI";
+import LYA from "./pages/solucoes/dados/LYA";
+import MonaLisa from "./pages/solucoes/dados/MonaLisa";
+import CLARA from "./pages/solucoes/dados/CLARA";
 
 const queryClient = new QueryClient();
 
@@ -31,8 +46,20 @@ const App = () => (
           <Route path="/quem-somos" element={<QuemSomos />} />
           <Route path="/solucoes" element={<Solucoes />} />
           <Route path="/solucoes/cloud" element={<Cloud />} />
+          <Route path="/solucoes/cloud/migracao" element={<Migracao />} />
+          <Route path="/solucoes/cloud/finops" element={<FinOps />} />
+          <Route path="/solucoes/cloud/devops" element={<DevOps />} />
+          <Route path="/solucoes/cloud/arquitetura" element={<ArquiteturaCloud />} />
           <Route path="/solucoes/dados" element={<Dados />} />
+          <Route path="/solucoes/dados/arquitetura" element={<ArquiteturaDados />} />
+          <Route path="/solucoes/dados/pilot-ai" element={<PilotAI />} />
+          <Route path="/solucoes/dados/lya" element={<LYA />} />
+          <Route path="/solucoes/dados/monalisa" element={<MonaLisa />} />
+          <Route path="/solucoes/dados/clara" element={<CLARA />} />
           <Route path="/solucoes/cybersecurity" element={<Cybersecurity />} />
+          <Route path="/solucoes/cybersecurity/landing-zone" element={<LandingZone />} />
+          <Route path="/solucoes/cybersecurity/gaas" element={<GAAS />} />
+          <Route path="/solucoes/cybersecurity/assessment" element={<Assessment />} />
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/servicos/squad-alocacao" element={<SquadAlocacao />} />
           <Route path="/servicos/suporte" element={<Suporte />} />

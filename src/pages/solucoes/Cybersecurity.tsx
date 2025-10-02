@@ -31,21 +31,52 @@ const Cybersecurity = () => {
       {/* Portfólio Cybersecurity */}
       <main className="bg-gradient-to-b from-background via-background/95 to-background py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card rounded-2xl p-12 shadow-lg border border-border/20">
-              <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                <div className="w-10 h-10 bg-primary rounded"></div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluções de Cybersecurity</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Proteção avançada e governança de segurança
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Landing Zone */}
+            <a href="/solucoes/cybersecurity/landing-zone" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-primary rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-primary">Landing Zone</h3>
+                <p className="text-sm text-muted-foreground">
+                  Configuração segura de ambientes cloud
+                </p>
               </div>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Soluções de Cybersecurity
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Portfólio inclui: Landing Zone, GAAS e Assessment
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Conteúdo detalhado em desenvolvimento
-              </p>
-            </div>
+            </a>
+
+            {/* GAAS */}
+            <a href="/solucoes/cybersecurity/gaas" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-primary rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-primary">GAAS</h3>
+                <p className="text-sm text-muted-foreground">
+                  Governança como Serviço
+                </p>
+              </div>
+            </a>
+
+            {/* Assessment */}
+            <a href="/solucoes/cybersecurity/assessment" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-primary rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-primary">Assessment</h3>
+                <p className="text-sm text-muted-foreground">
+                  Avaliação de segurança completa
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </main>

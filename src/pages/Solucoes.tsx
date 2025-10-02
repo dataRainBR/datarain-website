@@ -90,23 +90,102 @@ const Solucoes = () => {
       <section className="bg-background py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfólio de Soluções</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Todas as Soluções</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore todas as nossas soluções especializadas
+              Conheça nosso portfólio completo de soluções tecnológicas
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card rounded-2xl p-12 shadow-lg border border-border/20">
-              <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                <div className="w-10 h-10 bg-primary rounded"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">
-                Portfólio em Desenvolvimento
-              </h3>
-              <p className="text-muted-foreground">
-                Em breve você encontrará aqui todo o nosso portfólio de soluções detalhado.
-              </p>
+          {/* Cloud Solutions */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-6 text-[#3893af] text-center">Cloud</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+              <a href="/solucoes/cloud/migracao" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">Migração</h4>
+                  <p className="text-sm text-muted-foreground">Migração segura para a nuvem</p>
+                </div>
+              </a>
+              <a href="/solucoes/cloud/finops" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">FinOps</h4>
+                  <p className="text-sm text-muted-foreground">Otimização de custos</p>
+                </div>
+              </a>
+              <a href="/solucoes/cloud/devops" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">DevOps</h4>
+                  <p className="text-sm text-muted-foreground">Automação e CI/CD</p>
+                </div>
+              </a>
+              <a href="/solucoes/cloud/arquitetura" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">Arquitetura</h4>
+                  <p className="text-sm text-muted-foreground">Design escalável</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Cybersecurity Solutions */}
+          <div className="mb-16">
+            <h3 className="text-2xl font-bold mb-6 text-primary text-center">Cybersecurity</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              <a href="/solucoes/cybersecurity/landing-zone" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-primary">Landing Zone</h4>
+                  <p className="text-sm text-muted-foreground">Ambientes seguros</p>
+                </div>
+              </a>
+              <a href="/solucoes/cybersecurity/gaas" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-primary">GAAS</h4>
+                  <p className="text-sm text-muted-foreground">Governança as a Service</p>
+                </div>
+              </a>
+              <a href="/solucoes/cybersecurity/assessment" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-primary">Assessment</h4>
+                  <p className="text-sm text-muted-foreground">Avaliação de segurança</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          {/* Data & AI Solutions */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 text-[#f78504] text-center">Dados e IA</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              <a href="/solucoes/dados/arquitetura" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">Arquitetura</h4>
+                  <p className="text-sm text-muted-foreground">Estruturas de dados</p>
+                </div>
+              </a>
+              <a href="/solucoes/dados/pilot-ai" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">Pilot AI</h4>
+                  <p className="text-sm text-muted-foreground">Projetos piloto de IA</p>
+                </div>
+              </a>
+              <a href="/solucoes/dados/lya" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">LYA</h4>
+                  <p className="text-sm text-muted-foreground">RH com AI</p>
+                </div>
+              </a>
+              <a href="/solucoes/dados/monalisa" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">MonaLisa</h4>
+                  <p className="text-sm text-muted-foreground">Prefeitura AI</p>
+                </div>
+              </a>
+              <a href="/solucoes/dados/clara" className="group">
+                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">CLARA</h4>
+                  <p className="text-sm text-muted-foreground">Clínica AI</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

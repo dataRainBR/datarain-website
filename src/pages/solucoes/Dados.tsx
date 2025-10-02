@@ -31,21 +31,78 @@ const Dados = () => {
       {/* Portfólio Dados e IA */}
       <main className="bg-gradient-to-b from-background via-background/95 to-background py-16">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card rounded-2xl p-12 shadow-lg border border-border/20">
-              <div className="w-20 h-20 mx-auto mb-8 bg-[#f78504]/10 rounded-lg flex items-center justify-center">
-                <div className="w-10 h-10 bg-[#f78504] rounded"></div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluções de Dados e IA</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Inteligência artificial e arquitetura de dados para decisões estratégicas
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+            {/* Arquitetura */}
+            <a href="/solucoes/dados/arquitetura" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#f78504]">Arquitetura</h3>
+                <p className="text-sm text-muted-foreground">
+                  Estruturas de dados robustas e escaláveis
+                </p>
               </div>
-              <h2 className="text-2xl font-bold text-[#f78504] mb-4">
-                Soluções de Dados e IA
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Portfólio inclui: Arquitetura, Pilot AI, LYA, MonaLisa e CLARA (RH com AI, Prefeitura AI, Clínica AI)
-              </p>
-              <p className="text-sm text-muted-foreground">
-                Conteúdo detalhado em desenvolvimento
-              </p>
-            </div>
+            </a>
+
+            {/* Pilot AI */}
+            <a href="/solucoes/dados/pilot-ai" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#f78504]">Pilot AI</h3>
+                <p className="text-sm text-muted-foreground">
+                  Projetos piloto de IA
+                </p>
+              </div>
+            </a>
+
+            {/* LYA */}
+            <a href="/solucoes/dados/lya" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#f78504]">LYA</h3>
+                <p className="text-sm text-muted-foreground">
+                  RH com AI
+                </p>
+              </div>
+            </a>
+
+            {/* MonaLisa */}
+            <a href="/solucoes/dados/monalisa" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#f78504]">MonaLisa</h3>
+                <p className="text-sm text-muted-foreground">
+                  Prefeitura AI
+                </p>
+              </div>
+            </a>
+
+            {/* CLARA */}
+            <a href="/solucoes/dados/clara" className="group">
+              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#f78504]">CLARA</h3>
+                <p className="text-sm text-muted-foreground">
+                  Clínica AI
+                </p>
+              </div>
+            </a>
           </div>
         </div>
       </main>
