@@ -1,5 +1,18 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import SolutionCard from "@/components/SolutionCard";
+import migracaoImage from "@/assets/solutions/cloud-migration.jpg";
+import finopsImage from "@/assets/solutions/finops.jpg";
+import devopsImage from "@/assets/solutions/devops.jpg";
+import arquiteturaCloudImage from "@/assets/solutions/cloud-architecture.jpg";
+import landingZoneImage from "@/assets/solutions/landing-zone.jpg";
+import gaasImage from "@/assets/solutions/gaas.jpg";
+import assessmentImage from "@/assets/solutions/assessment.jpg";
+import arquiteturaDadosImage from "@/assets/solutions/data-architecture.jpg";
+import pilotImage from "@/assets/solutions/pilot-ai.jpg";
+import lyaImage from "@/assets/solutions/lya.jpg";
+import monalisaImage from "@/assets/solutions/monalisa.jpg";
+import claraImage from "@/assets/solutions/clara.jpg";
 
 const Solucoes = () => {
   return (
@@ -97,95 +110,179 @@ const Solucoes = () => {
           </div>
 
           {/* Cloud Solutions */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-6 text-[#3893af] text-center">Cloud</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-              <a href="/solucoes/cloud/migracao" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">Migração</h4>
-                  <p className="text-sm text-muted-foreground">Migração segura para a nuvem</p>
-                </div>
-              </a>
-              <a href="/solucoes/cloud/finops" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">FinOps</h4>
-                  <p className="text-sm text-muted-foreground">Otimização de custos</p>
-                </div>
-              </a>
-              <a href="/solucoes/cloud/devops" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">DevOps</h4>
-                  <p className="text-sm text-muted-foreground">Automação e CI/CD</p>
-                </div>
-              </a>
-              <a href="/solucoes/cloud/arquitetura" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#3893af]">Arquitetura</h4>
-                  <p className="text-sm text-muted-foreground">Design escalável</p>
-                </div>
-              </a>
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-1 bg-[#3893af] rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">Cloud</h3>
+              <div className="flex-1 h-1 bg-[#3893af]/20 rounded-full"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              <SolutionCard
+                title="Migração Cloud"
+                description="Migre sua infraestrutura para a nuvem com segurança e zero downtime. Redução de até 40% nos custos operacionais com nossa metodologia comprovada."
+                image={migracaoImage}
+                link="/solucoes/cloud/migracao"
+                color="#3893af"
+                benefits={[
+                  "Zero downtime durante migração",
+                  "Redução de 40% nos custos",
+                  "Suporte 24/7 durante todo processo"
+                ]}
+              />
+              <SolutionCard
+                title="FinOps"
+                description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
+                image={finopsImage}
+                link="/solucoes/cloud/finops"
+                color="#3893af"
+                benefits={[
+                  "Redução média de 30% nos custos",
+                  "Dashboards em tempo real",
+                  "Alertas automáticos de gastos"
+                ]}
+              />
+              <SolutionCard
+                title="DevOps"
+                description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
+                image={devopsImage}
+                link="/solucoes/cloud/devops"
+                color="#3893af"
+                benefits={[
+                  "Deploy em minutos, não semanas",
+                  "Automação completa de pipelines",
+                  "Rollback instantâneo"
+                ]}
+              />
+              <SolutionCard
+                title="Arquitetura Cloud"
+                description="Design de arquiteturas escaláveis e resilientes. Soluções personalizadas com best practices de cloud-native e microservices."
+                image={arquiteturaCloudImage}
+                link="/solucoes/cloud/arquitetura"
+                color="#3893af"
+                benefits={[
+                  "Alta disponibilidade garantida",
+                  "Escalabilidade automática",
+                  "Design cloud-native"
+                ]}
+              />
             </div>
           </div>
 
           {/* Cybersecurity Solutions */}
-          <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-6 text-primary text-center">Cybersecurity</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-              <a href="/solucoes/cybersecurity/landing-zone" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-primary">Landing Zone</h4>
-                  <p className="text-sm text-muted-foreground">Ambientes seguros</p>
-                </div>
-              </a>
-              <a href="/solucoes/cybersecurity/gaas" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-primary">GAAS</h4>
-                  <p className="text-sm text-muted-foreground">Governança as a Service</p>
-                </div>
-              </a>
-              <a href="/solucoes/cybersecurity/assessment" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-primary">Assessment</h4>
-                  <p className="text-sm text-muted-foreground">Avaliação de segurança</p>
-                </div>
-              </a>
+          <div className="mb-20">
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-1 bg-primary rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-primary">Cybersecurity</h3>
+              <div className="flex-1 h-1 bg-primary/20 rounded-full"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              <SolutionCard
+                title="Landing Zone"
+                description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
+                image={landingZoneImage}
+                link="/solucoes/cybersecurity/landing-zone"
+                color="#8b5cf6"
+                benefits={[
+                  "Segurança desde o design",
+                  "Compliance automático",
+                  "Governança integrada"
+                ]}
+              />
+              <SolutionCard
+                title="GAAS"
+                description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
+                image={gaasImage}
+                link="/solucoes/cybersecurity/gaas"
+                color="#8b5cf6"
+                benefits={[
+                  "Compliance contínuo",
+                  "Políticas automatizadas",
+                  "Relatórios em tempo real"
+                ]}
+              />
+              <SolutionCard
+                title="Assessment"
+                description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
+                image={assessmentImage}
+                link="/solucoes/cybersecurity/assessment"
+                color="#8b5cf6"
+                benefits={[
+                  "Análise completa de riscos",
+                  "Recomendações priorizadas",
+                  "Roadmap de segurança"
+                ]}
+              />
             </div>
           </div>
 
           {/* Data & AI Solutions */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-[#f78504] text-center">Dados e IA</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              <a href="/solucoes/dados/arquitetura" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">Arquitetura</h4>
-                  <p className="text-sm text-muted-foreground">Estruturas de dados</p>
-                </div>
-              </a>
-              <a href="/solucoes/dados/pilot-ai" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">Pilot AI</h4>
-                  <p className="text-sm text-muted-foreground">Projetos piloto de IA</p>
-                </div>
-              </a>
-              <a href="/solucoes/dados/lya" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">LYA</h4>
-                  <p className="text-sm text-muted-foreground">RH com AI</p>
-                </div>
-              </a>
-              <a href="/solucoes/dados/monalisa" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">MonaLisa</h4>
-                  <p className="text-sm text-muted-foreground">Prefeitura AI</p>
-                </div>
-              </a>
-              <a href="/solucoes/dados/clara" className="group">
-                <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                  <h4 className="text-lg font-bold mb-2 text-[#f78504]">CLARA</h4>
-                  <p className="text-sm text-muted-foreground">Clínica AI</p>
-                </div>
-              </a>
+            <div className="flex items-center gap-4 mb-8">
+              <div className="w-12 h-1 bg-[#f78504] rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#f78504]">Dados e IA</h3>
+              <div className="flex-1 h-1 bg-[#f78504]/20 rounded-full"></div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              <SolutionCard
+                title="Arquitetura de Dados"
+                description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
+                image={arquiteturaDadosImage}
+                link="/solucoes/dados/arquitetura"
+                color="#f78504"
+                benefits={[
+                  "Data lakes otimizados",
+                  "ETL pipelines automatizados",
+                  "Governança de dados"
+                ]}
+              />
+              <SolutionCard
+                title="Pilot AI"
+                description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
+                image={pilotImage}
+                link="/solucoes/dados/pilot-ai"
+                color="#f78504"
+                benefits={[
+                  "MVP em 4-8 semanas",
+                  "ROI mensurável",
+                  "Prova de conceito validada"
+                ]}
+              />
+              <SolutionCard
+                title="LYA - RH com AI"
+                description="Automatize processos de RH com inteligência artificial. Recrutamento inteligente, análise de performance e gestão de talentos."
+                image={lyaImage}
+                link="/solucoes/dados/lya"
+                color="#f78504"
+                benefits={[
+                  "Recrutamento 70% mais rápido",
+                  "Análise preditiva de turnover",
+                  "Onboarding automatizado"
+                ]}
+              />
+              <SolutionCard
+                title="MonaLisa - Prefeitura AI"
+                description="IA para gestão pública municipal. Atendimento ao cidadão, gestão de processos e análise de dados urbanos."
+                image={monalisaImage}
+                link="/solucoes/dados/monalisa"
+                color="#f78504"
+                benefits={[
+                  "Atendimento 24/7 automatizado",
+                  "Análise de dados urbanos",
+                  "Redução de custos operacionais"
+                ]}
+              />
+              <SolutionCard
+                title="CLARA - Clínica AI"
+                description="Inteligência artificial para gestão clínica. Triagem inteligente, agendamento automatizado e análise de prontuários."
+                image={claraImage}
+                link="/solucoes/dados/clara"
+                color="#f78504"
+                benefits={[
+                  "Triagem inteligente de pacientes",
+                  "Agendamento otimizado",
+                  "Análise preditiva de saúde"
+                ]}
+              />
             </div>
           </div>
         </div>
