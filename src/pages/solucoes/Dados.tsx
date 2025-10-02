@@ -1,5 +1,11 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import SolutionCard from "@/components/SolutionCard";
+import arquiteturaImage from "@/assets/solutions/data-architecture.jpg";
+import pilotImage from "@/assets/solutions/pilot-ai.jpg";
+import lyaImage from "@/assets/solutions/lya.jpg";
+import monalisaImage from "@/assets/solutions/monalisa.jpg";
+import claraImage from "@/assets/solutions/clara.jpg";
 
 const Dados = () => {
   return (
@@ -38,71 +44,71 @@ const Dados = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {/* Arquitetura */}
-            <a href="/solucoes/dados/arquitetura" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#f78504]">Arquitetura</h3>
-                <p className="text-sm text-muted-foreground">
-                  Estruturas de dados robustas e escaláveis
-                </p>
-              </div>
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <SolutionCard
+              title="Arquitetura de Dados"
+              description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
+              image={arquiteturaImage}
+              link="/solucoes/dados/arquitetura"
+              color="#f78504"
+              benefits={[
+                "Data lakes otimizados",
+                "ETL pipelines automatizados",
+                "Governança de dados"
+              ]}
+            />
 
-            {/* Pilot AI */}
-            <a href="/solucoes/dados/pilot-ai" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#f78504]">Pilot AI</h3>
-                <p className="text-sm text-muted-foreground">
-                  Projetos piloto de IA
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="Pilot AI"
+              description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
+              image={pilotImage}
+              link="/solucoes/dados/pilot-ai"
+              color="#f78504"
+              benefits={[
+                "MVP em 4-8 semanas",
+                "ROI mensurável",
+                "Prova de conceito validada"
+              ]}
+            />
 
-            {/* LYA */}
-            <a href="/solucoes/dados/lya" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#f78504]">LYA</h3>
-                <p className="text-sm text-muted-foreground">
-                  RH com AI
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="LYA - RH com AI"
+              description="Automatize processos de RH com inteligência artificial. Recrutamento inteligente, análise de performance e gestão de talentos."
+              image={lyaImage}
+              link="/solucoes/dados/lya"
+              color="#f78504"
+              benefits={[
+                "Recrutamento 70% mais rápido",
+                "Análise preditiva de turnover",
+                "Onboarding automatizado"
+              ]}
+            />
 
-            {/* MonaLisa */}
-            <a href="/solucoes/dados/monalisa" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#f78504]">MonaLisa</h3>
-                <p className="text-sm text-muted-foreground">
-                  Prefeitura AI
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="MonaLisa - Prefeitura AI"
+              description="IA para gestão pública municipal. Atendimento ao cidadão, gestão de processos e análise de dados urbanos."
+              image={monalisaImage}
+              link="/solucoes/dados/monalisa"
+              color="#f78504"
+              benefits={[
+                "Atendimento 24/7 automatizado",
+                "Análise de dados urbanos",
+                "Redução de custos operacionais"
+              ]}
+            />
 
-            {/* CLARA */}
-            <a href="/solucoes/dados/clara" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#f78504] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#f78504]">CLARA</h3>
-                <p className="text-sm text-muted-foreground">
-                  Clínica AI
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="CLARA - Clínica AI"
+              description="Inteligência artificial para gestão clínica. Triagem inteligente, agendamento automatizado e análise de prontuários."
+              image={claraImage}
+              link="/solucoes/dados/clara"
+              color="#f78504"
+              benefits={[
+                "Triagem inteligente de pacientes",
+                "Agendamento otimizado",
+                "Análise preditiva de saúde"
+              ]}
+            />
           </div>
         </div>
       </main>

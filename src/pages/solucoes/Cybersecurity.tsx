@@ -1,5 +1,9 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import SolutionCard from "@/components/SolutionCard";
+import landingZoneImage from "@/assets/solutions/landing-zone.jpg";
+import gaasImage from "@/assets/solutions/gaas.jpg";
+import assessmentImage from "@/assets/solutions/assessment.jpg";
 
 const Cybersecurity = () => {
   return (
@@ -38,45 +42,45 @@ const Cybersecurity = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {/* Landing Zone */}
-            <a href="/solucoes/cybersecurity/landing-zone" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-primary rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-primary">Landing Zone</h3>
-                <p className="text-sm text-muted-foreground">
-                  Configuração segura de ambientes cloud
-                </p>
-              </div>
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <SolutionCard
+              title="Landing Zone"
+              description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
+              image={landingZoneImage}
+              link="/solucoes/cybersecurity/landing-zone"
+              color="#8b5cf6"
+              benefits={[
+                "Segurança desde o design",
+                "Compliance automático",
+                "Governança integrada"
+              ]}
+            />
 
-            {/* GAAS */}
-            <a href="/solucoes/cybersecurity/gaas" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-primary rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-primary">GAAS</h3>
-                <p className="text-sm text-muted-foreground">
-                  Governança como Serviço
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="GAAS - Governança as a Service"
+              description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
+              image={gaasImage}
+              link="/solucoes/cybersecurity/gaas"
+              color="#8b5cf6"
+              benefits={[
+                "Compliance contínuo",
+                "Políticas automatizadas",
+                "Relatórios em tempo real"
+              ]}
+            />
 
-            {/* Assessment */}
-            <a href="/solucoes/cybersecurity/assessment" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-primary rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-primary">Assessment</h3>
-                <p className="text-sm text-muted-foreground">
-                  Avaliação de segurança completa
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="Assessment"
+              description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
+              image={assessmentImage}
+              link="/solucoes/cybersecurity/assessment"
+              color="#8b5cf6"
+              benefits={[
+                "Análise completa de riscos",
+                "Recomendações priorizadas",
+                "Roadmap de segurança"
+              ]}
+            />
           </div>
         </div>
       </main>

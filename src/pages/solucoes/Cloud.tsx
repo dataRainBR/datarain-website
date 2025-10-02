@@ -1,5 +1,10 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import SolutionCard from "@/components/SolutionCard";
+import migracaoImage from "@/assets/solutions/cloud-migration.jpg";
+import finopsImage from "@/assets/solutions/finops.jpg";
+import devopsImage from "@/assets/solutions/devops.jpg";
+import arquiteturaImage from "@/assets/solutions/cloud-architecture.jpg";
 
 const Cloud = () => {
   return (
@@ -38,58 +43,58 @@ const Cloud = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Migração */}
-            <a href="/solucoes/cloud/migracao" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#3893af]">Migração</h3>
-                <p className="text-sm text-muted-foreground">
-                  Migração segura e eficiente para a nuvem
-                </p>
-              </div>
-            </a>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <SolutionCard
+              title="Migração Cloud"
+              description="Migre sua infraestrutura para a nuvem com segurança e zero downtime. Redução de até 40% nos custos operacionais com nossa metodologia comprovada."
+              image={migracaoImage}
+              link="/solucoes/cloud/migracao"
+              color="#3893af"
+              benefits={[
+                "Zero downtime durante migração",
+                "Redução de 40% nos custos",
+                "Suporte 24/7 durante todo processo"
+              ]}
+            />
 
-            {/* FinOps */}
-            <a href="/solucoes/cloud/finops" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#3893af]">FinOps</h3>
-                <p className="text-sm text-muted-foreground">
-                  Otimização de custos em cloud
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="FinOps"
+              description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
+              image={finopsImage}
+              link="/solucoes/cloud/finops"
+              color="#3893af"
+              benefits={[
+                "Redução média de 30% nos custos",
+                "Dashboards em tempo real",
+                "Alertas automáticos de gastos"
+              ]}
+            />
 
-            {/* DevOps */}
-            <a href="/solucoes/cloud/devops" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#3893af]">DevOps</h3>
-                <p className="text-sm text-muted-foreground">
-                  Automação e integração contínua
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="DevOps"
+              description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
+              image={devopsImage}
+              link="/solucoes/cloud/devops"
+              color="#3893af"
+              benefits={[
+                "Deploy em minutos, não semanas",
+                "Automação completa de pipelines",
+                "Rollback instantâneo"
+              ]}
+            />
 
-            {/* Arquitetura */}
-            <a href="/solucoes/cloud/arquitetura" className="group">
-              <div className="bg-card rounded-xl p-6 shadow-lg border border-border/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-12 h-12 mb-4 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-6 h-6 bg-[#3893af] rounded"></div>
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-[#3893af]">Arquitetura</h3>
-                <p className="text-sm text-muted-foreground">
-                  Design de arquiteturas escaláveis
-                </p>
-              </div>
-            </a>
+            <SolutionCard
+              title="Arquitetura Cloud"
+              description="Design de arquiteturas escaláveis e resilientes. Soluções personalizadas com best practices de cloud-native e microservices."
+              image={arquiteturaImage}
+              link="/solucoes/cloud/arquitetura"
+              color="#3893af"
+              benefits={[
+                "Alta disponibilidade garantida",
+                "Escalabilidade automática",
+                "Design cloud-native"
+              ]}
+            />
           </div>
         </div>
       </main>
