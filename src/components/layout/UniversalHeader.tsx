@@ -23,8 +23,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
 
   const solucoesItems = [
     { label: "Cloud", href: "/solucoes/cloud" },
-    { label: "Dados", href: "/solucoes/dados" },
-    { label: "IA & ML", href: "/solucoes/ia-ml" },
+    { label: "Dados e IA", href: "/solucoes/dados" },
     { label: "Cybersecurity", href: "/solucoes/cybersecurity" }
   ];
 

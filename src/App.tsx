@@ -15,7 +15,6 @@ import WordPressPostView from "./components/wordpress/WordPressPostView";
 import Cloud from "./pages/solucoes/Cloud";
 import Dados from "./pages/solucoes/Dados";
 import Cybersecurity from "./pages/solucoes/Cybersecurity";
-import IAML from "./pages/solucoes/IAML";
 import SquadAlocacao from "./pages/servicos/SquadAlocacao";
 import Suporte from "./pages/servicos/Suporte";
 
@@ -34,7 +33,6 @@ const App = () => (
           <Route path="/solucoes/cloud" element={<Cloud />} />
           <Route path="/solucoes/dados" element={<Dados />} />
           <Route path="/solucoes/cybersecurity" element={<Cybersecurity />} />
-          <Route path="/solucoes/ia-ml" element={<IAML />} />
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/servicos/squad-alocacao" element={<SquadAlocacao />} />
           <Route path="/servicos/suporte" element={<Suporte />} />
