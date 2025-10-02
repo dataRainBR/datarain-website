@@ -1,8 +1,16 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
 
 interface UniversalHeaderProps {
   backgroundImage?: string;
@@ -13,10 +21,20 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const solucoesItems = [
+    { label: "Cloud", href: "/solucoes/cloud" },
+    { label: "Dados", href: "/solucoes/dados" },
+    { label: "IA & ML", href: "/solucoes/ia-ml" },
+    { label: "Cybersecurity", href: "/solucoes/cybersecurity" }
+  ];
+
+  const servicosItems = [
+    { label: "Squad & Alocação", href: "/servicos/squad-alocacao" },
+    { label: "Suporte", href: "/servicos/suporte" }
+  ];
+
   const navItems = [
     { label: "Quem Somos", href: "/quem-somos", isRoute: true },
-    { label: "Soluções", href: "/solucoes", isRoute: true },
-    { label: "Serviços Gerenciados", href: "/servicos", isRoute: true },
     { label: "Cases", href: "/cases", isRoute: true },
     { label: "Blog", href: "/blog", isRoute: true },
     { label: "Academy", href: "/academy", isRoute: true }
@@ -52,44 +70,91 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
               
               <div className="flex items-center gap-8">
                 {/* Desktop Navigation */}
-                <div className="hidden lg:flex items-center gap-6">
+                <div className="hidden lg:flex items-center gap-2">
                   {navItems.map((item) => (
-                    item.isRoute ? (
-                      <Link 
-                        key={item.label}
-                        to={item.href} 
-                        className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
-                          isScrolled 
-                            ? 'text-gray-700 hover:text-primary' 
-                            : 'text-gray-700 hover:text-primary'
-                        }`}
-                      >
-                        <span className="relative z-10">{item.label}</span>
-                        <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
-                          isScrolled
-                            ? 'bg-primary/10 border border-primary/20'
-                            : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
-                        }`}></div>
-                      </Link>
-                    ) : (
-                      <a 
-                        key={item.label}
-                        href={item.href} 
-                        className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
-                          isScrolled 
-                            ? 'text-gray-700 hover:text-primary' 
-                            : 'text-gray-700 hover:text-primary'
-                        }`}
-                      >
-                        <span className="relative z-10">{item.label}</span>
-                        <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
-                          isScrolled
-                            ? 'bg-primary/10 border border-primary/20'
-                            : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
-                        }`}></div>
-                      </a>
-                    )
+                    <Link 
+                      key={item.label}
+                      to={item.href} 
+                      className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
+                        isScrolled 
+                          ? 'text-gray-700 hover:text-primary' 
+                          : 'text-gray-700 hover:text-primary'
+                      }`}
+                    >
+                      <span className="relative z-10">{item.label}</span>
+                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                        isScrolled
+                          ? 'bg-primary/10 border border-primary/20'
+                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                      }`}></div>
+                    </Link>
                   ))}
+
+                  {/* Soluções Dropdown */}
+                  <div className="relative group">
+                    <Link 
+                      to="/solucoes"
+                      className={`transition-all duration-300 relative px-4 py-2 rounded-lg flex items-center gap-1 ${
+                        isScrolled 
+                          ? 'text-gray-700 hover:text-primary' 
+                          : 'text-gray-700 hover:text-primary'
+                      }`}
+                    >
+                      <span className="relative z-10">Soluções</span>
+                      <ChevronDown className="h-4 w-4" />
+                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                        isScrolled
+                          ? 'bg-primary/10 border border-primary/20'
+                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                      }`}></div>
+                    </Link>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="py-2">
+                        {solucoesItems.map((item) => (
+                          <Link
+                            key={item.label}
+                            to={item.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Serviços Gerenciados Dropdown */}
+                  <div className="relative group">
+                    <Link 
+                      to="/servicos"
+                      className={`transition-all duration-300 relative px-4 py-2 rounded-lg flex items-center gap-1 ${
+                        isScrolled 
+                          ? 'text-gray-700 hover:text-primary' 
+                          : 'text-gray-700 hover:text-primary'
+                      }`}
+                    >
+                      <span className="relative z-10">Serviços Gerenciados</span>
+                      <ChevronDown className="h-4 w-4" />
+                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                        isScrolled
+                          ? 'bg-primary/10 border border-primary/20'
+                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                      }`}></div>
+                    </Link>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                      <div className="py-2">
+                        {servicosItems.map((item) => (
+                          <Link
+                            key={item.label}
+                            to={item.href}
+                            className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 {/* Desktop CTA */}
@@ -133,34 +198,61 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
               }`}>
                 <div className="flex flex-col gap-4">
                   {navItems.map((item) => (
-                    item.isRoute ? (
+                    <Link
+                      key={item.label}
+                      to={item.href} 
+                      className={`transition-colors py-2 ${
+                        isScrolled
+                          ? 'text-gray-700 hover:text-primary'
+                          : 'text-gray-700 hover:text-primary'
+                      }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                  
+                  {/* Soluções Mobile */}
+                  <div className="border-t border-gray-300 pt-4 mt-2">
+                    <Link
+                      to="/solucoes"
+                      className="font-semibold text-gray-900 block mb-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Soluções
+                    </Link>
+                    {solucoesItems.map((item) => (
                       <Link
                         key={item.label}
-                        to={item.href} 
-                        className={`transition-colors py-2 ${
-                          isScrolled
-                            ? 'text-gray-700 hover:text-primary'
-                            : 'text-gray-700 hover:text-primary'
-                        }`}
+                        to={item.href}
+                        className="block py-2 pl-4 text-gray-700 hover:text-primary"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.label}
                       </Link>
-                    ) : (
-                      <a 
+                    ))}
+                  </div>
+
+                  {/* Serviços Mobile */}
+                  <div className="border-t border-gray-300 pt-4 mt-2">
+                    <Link
+                      to="/servicos"
+                      className="font-semibold text-gray-900 block mb-2"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Serviços Gerenciados
+                    </Link>
+                    {servicosItems.map((item) => (
+                      <Link
                         key={item.label}
-                        href={item.href} 
-                        className={`transition-colors py-2 ${
-                          isScrolled
-                            ? 'text-gray-700 hover:text-primary'
-                            : 'text-gray-700 hover:text-primary'
-                        }`}
+                        to={item.href}
+                        className="block py-2 pl-4 text-gray-700 hover:text-primary"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {item.label}
-                      </a>
-                    )
-                  ))}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}

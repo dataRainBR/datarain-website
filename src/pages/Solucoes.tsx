@@ -33,24 +33,84 @@ const Solucoes = () => {
         </div>
       </section>
 
-      {/* Content Section */}
-      <main className="bg-gradient-to-b from-background via-background/95 to-background">
-        <div className="container mx-auto px-4 py-16">
+      {/* Pilares Section */}
+      <section className="bg-gradient-to-b from-background via-background/95 to-background py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Pilares</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Estruturamos nossas soluções em três pilares fundamentais para transformação digital
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Cloud Pillar */}
+            <a href="/solucoes/cloud" className="group">
+              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-16 h-16 mb-6 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 bg-[#3893af] rounded"></div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-[#3893af]">Cloud</h3>
+                <p className="text-muted-foreground">
+                  Soluções completas em nuvem para migração, otimização e gestão de infraestrutura cloud.
+                </p>
+              </div>
+            </a>
+
+            {/* Dados Pillar */}
+            <a href="/solucoes/dados" className="group">
+              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-16 h-16 mb-6 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 bg-[#f78504] rounded"></div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-[#f78504]">Dados e IA</h3>
+                <p className="text-muted-foreground">
+                  Arquitetura de dados, inteligência artificial e machine learning para insights estratégicos.
+                </p>
+              </div>
+            </a>
+
+            {/* Cybersecurity Pillar */}
+            <a href="/solucoes/cybersecurity" className="group">
+              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
+                <div className="w-16 h-16 mb-6 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 bg-primary rounded"></div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-primary">Cybersecurity</h3>
+                <p className="text-muted-foreground">
+                  Proteção completa com landing zones, GAAS e assessments de segurança avançados.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfólio Section */}
+      <section className="bg-background py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfólio de Soluções</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Explore todas as nossas soluções especializadas
+            </p>
+          </div>
+
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-card rounded-2xl p-12 shadow-lg border border-border/20">
               <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-lg flex items-center justify-center">
                 <div className="w-10 h-10 bg-primary rounded"></div>
               </div>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Página em Desenvolvimento
-              </h2>
+              <h3 className="text-2xl font-bold text-primary mb-4">
+                Portfólio em Desenvolvimento
+              </h3>
               <p className="text-muted-foreground">
-                Esta página está sendo desenvolvida. Em breve você encontrará aqui todas as informações sobre nossas soluções tecnológicas.
+                Em breve você encontrará aqui todo o nosso portfólio de soluções detalhado.
               </p>
             </div>
           </div>
         </div>
-      </main>
+      </section>
 
       <Footer />
     </div>

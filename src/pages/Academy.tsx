@@ -42,10 +42,10 @@ const Academy = () => {
                 <div className="w-10 h-10 bg-primary rounded"></div>
               </div>
               <h2 className="text-2xl font-bold text-primary mb-4">
-                Página em Desenvolvimento
+                DataRain Academy
               </h2>
               <p className="text-muted-foreground">
-                Esta página está sendo desenvolvida. Em breve você encontrará aqui todos os cursos e treinamentos da DataRain Academy.
+                Cursos e workshops especializados em Cloud, Dados e IA. Conteúdo detalhado em desenvolvimento.
               </p>
             </div>
           </div>
