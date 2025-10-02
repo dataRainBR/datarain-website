@@ -34,9 +34,15 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
 
   const navItems = [
     { label: "Quem Somos", href: "/quem-somos", isRoute: true },
-    { label: "Cases", href: "/cases", isRoute: true },
-    { label: "Blog", href: "/blog", isRoute: true },
-    { label: "Academy", href: "/academy", isRoute: true }
+  ];
+
+  const menuItemsOrder = [
+    { type: 'simple', label: "Quem Somos", href: "/quem-somos" },
+    { type: 'dropdown', label: "Soluções", href: "/solucoes", items: solucoesItems },
+    { type: 'simple', label: "Cases", href: "/cases" },
+    { type: 'simple', label: "Blog", href: "/blog" },
+    { type: 'dropdown', label: "Serviços Gerenciados", href: "/servicos", items: servicosItems },
+    { type: 'simple', label: "Academy", href: "/academy" }
   ];
 
   useEffect(() => {
@@ -70,90 +76,58 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
               <div className="flex items-center gap-8">
                 {/* Desktop Navigation */}
                 <div className="hidden lg:flex items-center gap-2">
-                  {navItems.map((item) => (
-                    <Link 
-                      key={item.label}
-                      to={item.href} 
-                      className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
-                        isScrolled 
-                          ? 'text-gray-700 hover:text-primary' 
-                          : 'text-gray-700 hover:text-primary'
-                      }`}
-                    >
-                      <span className="relative z-10">{item.label}</span>
-                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
-                        isScrolled
-                          ? 'bg-primary/10 border border-primary/20'
-                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
-                      }`}></div>
-                    </Link>
+                  {menuItemsOrder.map((menuItem) => (
+                    menuItem.type === 'simple' ? (
+                      <Link 
+                        key={menuItem.label}
+                        to={menuItem.href} 
+                        className={`transition-all duration-300 relative group px-4 py-2 rounded-lg ${
+                          isScrolled 
+                            ? 'text-gray-700 hover:text-primary' 
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
+                      >
+                        <span className="relative z-10">{menuItem.label}</span>
+                        <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                          isScrolled
+                            ? 'bg-primary/10 border border-primary/20'
+                            : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                        }`}></div>
+                      </Link>
+                    ) : (
+                      <div key={menuItem.label} className="relative group">
+                        <Link 
+                          to={menuItem.href}
+                          className={`transition-all duration-300 relative px-4 py-2 rounded-lg flex items-center gap-1 ${
+                            isScrolled 
+                              ? 'text-gray-700 hover:text-primary' 
+                              : 'text-gray-700 hover:text-primary'
+                          }`}
+                        >
+                          <span className="relative z-10">{menuItem.label}</span>
+                          <ChevronDown className="h-4 w-4" />
+                          <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                            isScrolled
+                              ? 'bg-primary/10 border border-primary/20'
+                              : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                          }`}></div>
+                        </Link>
+                        <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                          <div className="py-2">
+                            {menuItem.items?.map((item) => (
+                              <Link
+                                key={item.label}
+                                to={item.href}
+                                className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    )
                   ))}
-
-                  {/* Soluções Dropdown */}
-                  <div className="relative group">
-                    <Link 
-                      to="/solucoes"
-                      className={`transition-all duration-300 relative px-4 py-2 rounded-lg flex items-center gap-1 ${
-                        isScrolled 
-                          ? 'text-gray-700 hover:text-primary' 
-                          : 'text-gray-700 hover:text-primary'
-                      }`}
-                    >
-                      <span className="relative z-10">Soluções</span>
-                      <ChevronDown className="h-4 w-4" />
-                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
-                        isScrolled
-                          ? 'bg-primary/10 border border-primary/20'
-                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
-                      }`}></div>
-                    </Link>
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="py-2">
-                        {solucoesItems.map((item) => (
-                          <Link
-                            key={item.label}
-                            to={item.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Serviços Gerenciados Dropdown */}
-                  <div className="relative group">
-                    <Link 
-                      to="/servicos"
-                      className={`transition-all duration-300 relative px-4 py-2 rounded-lg flex items-center gap-1 ${
-                        isScrolled 
-                          ? 'text-gray-700 hover:text-primary' 
-                          : 'text-gray-700 hover:text-primary'
-                      }`}
-                    >
-                      <span className="relative z-10">Serviços Gerenciados</span>
-                      <ChevronDown className="h-4 w-4" />
-                      <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
-                        isScrolled
-                          ? 'bg-primary/10 border border-primary/20'
-                          : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
-                      }`}></div>
-                    </Link>
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                      <div className="py-2">
-                        {servicosItems.map((item) => (
-                          <Link
-                            key={item.label}
-                            to={item.href}
-                            className="block px-4 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors"
-                          >
-                            {item.label}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Desktop CTA */}
@@ -196,62 +170,42 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                 isScrolled ? 'border-gray-300' : 'border-gray-300'
               }`}>
                 <div className="flex flex-col gap-4">
-                  {navItems.map((item) => (
-                    <Link
-                      key={item.label}
-                      to={item.href} 
-                      className={`transition-colors py-2 ${
-                        isScrolled
-                          ? 'text-gray-700 hover:text-primary'
-                          : 'text-gray-700 hover:text-primary'
-                      }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      {item.label}
-                    </Link>
+                  {menuItemsOrder.map((menuItem) => (
+                    menuItem.type === 'simple' ? (
+                      <Link
+                        key={menuItem.label}
+                        to={menuItem.href} 
+                        className={`transition-colors py-2 ${
+                          isScrolled
+                            ? 'text-gray-700 hover:text-primary'
+                            : 'text-gray-700 hover:text-primary'
+                        }`}
+                        onClick={() => setMobileMenuOpen(false)}
+                      >
+                        {menuItem.label}
+                      </Link>
+                    ) : (
+                      <div key={menuItem.label} className="border-t border-gray-300 pt-4 mt-2">
+                        <Link
+                          to={menuItem.href}
+                          className="font-semibold text-gray-900 block mb-2"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {menuItem.label}
+                        </Link>
+                        {menuItem.items?.map((item) => (
+                          <Link
+                            key={item.label}
+                            to={item.href}
+                            className="block py-2 pl-4 text-gray-700 hover:text-primary"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )
                   ))}
-                  
-                  {/* Soluções Mobile */}
-                  <div className="border-t border-gray-300 pt-4 mt-2">
-                    <Link
-                      to="/solucoes"
-                      className="font-semibold text-gray-900 block mb-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Soluções
-                    </Link>
-                    {solucoesItems.map((item) => (
-                      <Link
-                        key={item.label}
-                        to={item.href}
-                        className="block py-2 pl-4 text-gray-700 hover:text-primary"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
-
-                  {/* Serviços Mobile */}
-                  <div className="border-t border-gray-300 pt-4 mt-2">
-                    <Link
-                      to="/servicos"
-                      className="font-semibold text-gray-900 block mb-2"
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Serviços Gerenciados
-                    </Link>
-                    {servicosItems.map((item) => (
-                      <Link
-                        key={item.label}
-                        to={item.href}
-                        className="block py-2 pl-4 text-gray-700 hover:text-primary"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </div>
                 </div>
               </div>
             )}
