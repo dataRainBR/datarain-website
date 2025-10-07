@@ -63,10 +63,10 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
           : 'bg-transparent py-4 md:py-6'
       }`}>
         <div className="container mx-auto px-4">
-          <div className={`transition-all duration-300 ${
+            <div className={`transition-all duration-300 ${
             isScrolled
               ? 'bg-white rounded-lg border border-border/20 py-3 px-4 md:px-6'
-              : 'backdrop-blur-md bg-white/10 rounded-2xl border border-white/20 py-4 px-4 md:px-6 shadow-lg'
+              : 'backdrop-blur-md bg-white/75 rounded-2xl border border-white/30 py-4 px-4 md:px-6 shadow-lg'
           }`}>
             <div className="flex justify-between items-center">
               <Link to="/">
