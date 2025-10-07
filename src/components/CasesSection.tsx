@@ -60,9 +60,9 @@ export default function CasesSection() {
                     className="absolute inset-0 bg-cover bg-center opacity-20" 
                     style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                   />
-                  <div className="flex items-center h-[480px] sm:h-[420px] md:h-[480px] relative z-10">
+                  <div className="flex items-center h-[520px] sm:h-[460px] md:h-[480px] relative z-10">
                     <div className="w-full">
-                      <div className="container mx-auto px-4 py-6 md:py-8 lg:py-12">
+                      <div className="container mx-auto px-4 py-6 sm:py-6 md:py-8 lg:py-12">
                       <div className="max-w-5xl text-left">
                         <div className="mb-6 md:mb-8">
                           <img

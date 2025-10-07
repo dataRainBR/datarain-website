@@ -215,27 +215,27 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
 
       {/* Hero Section - Only shown on home page */}
       {showHeroSection && (
-        <header className="relative min-h-[95vh] flex flex-col overflow-hidden bg-white">
+        <header className="relative min-h-[90vh] sm:min-h-[95vh] flex flex-col overflow-hidden bg-white">
           {/* Modern Background with Large Splashes */}
           <div className="absolute inset-0">
             {/* Large Blue splash - top right */}
-            <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
             
             {/* Large Orange splash - bottom left */}
-            <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
             
             {/* Medium accent splashes */}
-            <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+            <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+            <div className="absolute bottom-1/3 left-1/3 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
           </div>
           
           {/* Hero Content */}
-          <div className="flex-1 flex items-center relative z-10 pt-32 pb-16">
-            <div className="container mx-auto px-4">
+          <div className="flex-1 flex items-center relative z-10 pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16">
+            <div className="container mx-auto px-4 sm:px-6">
               <div className="max-w-4xl">
                 {/* Main Content */}
                 <div className="text-left">
-                  <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 md:mb-8 leading-tight">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 sm:mb-6 md:mb-8 leading-tight">
                     <span className="text-gray-900">Seus desafios de</span>
                     <br />
                     <span style={{ color: '#3893af' }}> tecnologia </span>
@@ -245,14 +245,14 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                     <span style={{ color: '#f78504' }}>crescimento?</span>
                   </h1>
                   
-                  <p className="text-xl sm:text-2xl md:text-3xl text-gray-600 mb-10 md:mb-12 leading-relaxed max-w-3xl">
+                  <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-3xl">
                     A dataRain ajuda empresas a vencer os gargalos que impedem escala, performance e inovação.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-4 md:gap-6 max-w-2xl">
+                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 max-w-2xl">
                     <Button 
                       size="xl" 
-                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base"
                     >
                       <span className="hidden sm:inline">Conheça Nossas Soluções</span>
                       <span className="sm:hidden">Nossas Soluções</span>
@@ -261,7 +261,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                     <Button 
                       variant="outline" 
                       size="xl" 
-                      className="flex-1 border-2 border-[#3893af] text-[#3893af] hover:bg-[#3893af] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                      className="flex-1 border-2 border-[#3893af] text-[#3893af] hover:bg-[#3893af] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base"
                     >
                       <span className="hidden sm:inline">Agende uma Demonstração</span>
                       <span className="sm:hidden">Demonstração</span>
@@ -269,12 +269,12 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                   </div>
 
                   {/* Subtle accent elements */}
-                  <div className="mt-16 flex items-center gap-8 opacity-60">
-                    <div className="w-12 h-1 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full"></div>
-                    <p className="text-sm text-gray-500 uppercase tracking-wider font-medium">
+                  <div className="mt-12 sm:mt-16 flex items-center gap-4 sm:gap-8 opacity-60">
+                    <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full"></div>
+                    <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider font-medium">
                       Transformação Digital Inteligente
                     </p>
-                    <div className="w-12 h-1 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full"></div>
+                    <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full"></div>
                   </div>
                 </div>
               </div>

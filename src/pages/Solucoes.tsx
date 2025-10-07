@@ -20,21 +20,21 @@ const Solucoes = () => {
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-white">
+      <section className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center overflow-hidden bg-white">
         {/* Modern Background with Large Splashes */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
           
           {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           
           {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-32 md:pt-36">
+        <div className="relative z-10 container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-28 pt-28 sm:pt-32 md:pt-36">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent text-center">
               Soluções
@@ -116,7 +116,7 @@ const Solucoes = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">Cloud</h3>
               <div className="flex-1 h-1 bg-[#3893af]/20 rounded-full"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Migração Cloud"
                 description="Migre sua infraestrutura para a nuvem com segurança e zero downtime. Redução de até 40% nos custos operacionais com nossa metodologia comprovada."
@@ -175,7 +175,7 @@ const Solucoes = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-primary">Cybersecurity</h3>
               <div className="flex-1 h-1 bg-primary/20 rounded-full"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Landing Zone"
                 description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
@@ -222,7 +222,7 @@ const Solucoes = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-[#f78504]">Dados e IA</h3>
               <div className="flex-1 h-1 bg-[#f78504]/20 rounded-full"></div>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
               <SolutionCard
                 title="Arquitetura de Dados"
                 description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."

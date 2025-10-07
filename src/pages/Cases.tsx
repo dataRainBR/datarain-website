@@ -10,30 +10,30 @@ const Cases = () => {
       <UniversalHeader />
       
       {/* Modern Hero Section */}
-      <section className="relative min-h-[70vh] flex flex-col overflow-hidden bg-white">
+      <section className="relative min-h-[60vh] sm:min-h-[70vh] flex flex-col overflow-hidden bg-white">
         {/* Modern Background with Large Splashes */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
           
           {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           
           {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="absolute bottom-1/3 left-1/3 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="flex-1 flex items-center relative z-10 pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-24">
+        <div className="flex-1 flex items-center relative z-10 pt-24 sm:pt-28 md:pt-32 lg:pt-36 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto text-center">
               {/* Title with High Contrast */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 md:mb-8">
                 <span className="text-gray-900">Cases de Transformação </span>
                 <span style={{ color: '#3893af' }}>Digital</span>
               </h1>
 
-              <p className="text-base md:text-lg lg:text-xl xl:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8 md:mb-12 px-4">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 md:mb-12 px-4">
                 Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados mensuráveis
               </p>
 
