@@ -139,6 +139,7 @@ const WordPressBlog: React.FC = () => {
               showSearch={false}
               showFilters={false}
               categoryFilter="blog"
+              tagSlug="blog"
               searchTerm={activeSearch}
             />
           </div>
