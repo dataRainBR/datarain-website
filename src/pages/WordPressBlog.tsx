@@ -138,7 +138,7 @@ const WordPressBlog: React.FC = () => {
               postsPerPage={9}
               showSearch={false}
               showFilters={false}
-              tagSlug="blog"
+              categoryFilter="blog"
               searchTerm={activeSearch}
             />
           </div>

@@ -72,7 +72,7 @@ const Cases = () => {
               postsPerPage={9}
               showSearch={false}
               showFilters={false}
-              tagSlug="cases"
+              categoryFilter="cases"
             />
           </div>
         </div>
