@@ -118,15 +118,15 @@ const Solucoes = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
-                title="Migração Cloud"
-                description="Migre sua infraestrutura para a nuvem com segurança e zero downtime. Redução de até 40% nos custos operacionais com nossa metodologia comprovada."
+                title="Migração para AWS"
+                description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
                 image={migracaoImage}
                 link="/solucoes/cloud/migracao"
                 color="#3893af"
                 benefits={[
-                  "Zero downtime durante migração",
-                  "Redução de 40% nos custos",
-                  "Suporte 24/7 durante todo processo"
+                  "Migration Evaluator e Hub",
+                  "Framework AWS MAP",
+                  "Alta disponibilidade garantida"
                 ]}
               />
               <SolutionCard
