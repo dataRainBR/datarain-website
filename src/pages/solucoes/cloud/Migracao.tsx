@@ -71,24 +71,6 @@ const Migracao = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-[#3893af] to-[#2d7a94]">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Gostou do Conteúdo?
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Você pode falar com um de nossos especialistas do setor
-          </p>
-          <a 
-            href="/contato" 
-            className="inline-block px-8 py-4 bg-white text-[#3893af] rounded-lg font-semibold hover:shadow-xl transition-all"
-          >
-            Clique aqui
-          </a>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
