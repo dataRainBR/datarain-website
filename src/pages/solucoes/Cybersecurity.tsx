@@ -1,9 +1,9 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
-import landingZoneImage from "@/assets/solutions/landing-zone.jpg";
+import landingZoneImage from "@/assets/solutions/landing-zone-hero.jpg";
 import gaasImage from "@/assets/solutions/gaas.jpg";
-import assessmentImage from "@/assets/solutions/assessment.jpg";
+import assessmentImage from "@/assets/solutions/assessment-hero.jpg";
 
 const Cybersecurity = () => {
   return (
@@ -70,15 +70,15 @@ const Cybersecurity = () => {
             />
 
             <SolutionCard
-              title="Assessment"
-              description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
+              title="Assessment de Segurança"
+              description="Antecipe riscos e desbloqueie governança. Diagnóstico completo com análise de conformidade, identificação de vulnerabilidades e roadmap priorizado."
               image={assessmentImage}
               link="/solucoes/cybersecurity/assessment"
               color="#8b5cf6"
               benefits={[
-                "Análise completa de riscos",
-                "Recomendações priorizadas",
-                "Roadmap de segurança"
+                "Conformidade LGPD, ISO 27001, PCI-DSS",
+                "Vulnerabilidades críticas mapeadas",
+                "Roadmap de segurança estratégico"
               ]}
             />
           </div>
