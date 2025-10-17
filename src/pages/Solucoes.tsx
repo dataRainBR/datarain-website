@@ -154,15 +154,15 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="Arquitetura Cloud"
-                description="Design de arquiteturas escaláveis e resilientes. Soluções personalizadas com best practices de cloud-native e microservices."
+                title="Assessment de Arquitetura"
+                description="A base para crescer com segurança e eficiência. Diagnóstico completo da arquitetura atual com roadmap técnico e quick wins para evolução sustentável."
                 image={arquiteturaCloudImage}
                 link="/solucoes/cloud/arquitetura"
                 color="#3893af"
                 benefits={[
-                  "Alta disponibilidade garantida",
-                  "Escalabilidade automática",
-                  "Design cloud-native"
+                  "Diagnóstico de performance e custos",
+                  "Roadmap técnico priorizado",
+                  "Melhores práticas AWS validadas"
                 ]}
               />
             </div>
