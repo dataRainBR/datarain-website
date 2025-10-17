@@ -7,20 +7,29 @@ const Migracao = () => {
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
-      {/* Hero Section with Title */}
-      <section className="relative pt-32 pb-16 bg-white">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-12 text-[#0a2463]">
-            Migração
-          </h1>
-          
-          {/* Hero Image */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <img 
-              src={migracaoHeroImage} 
-              alt="Migração para AWS - Cloud Computing" 
-              className="w-full rounded-2xl shadow-2xl"
-            />
+      {/* Hero Section with Image Background */}
+      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img src={migracaoHeroImage} alt="Migração para AWS" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+        </div>
+
+        <div className="relative z-10 container mx-auto px-4 py-32">
+          <div className="max-w-3xl">
+            <div className="inline-block px-4 py-2 bg-[#3893af]/20 rounded-full mb-6 backdrop-blur-sm">
+              <span className="text-[#3893af] font-semibold">Cloud Solutions</span>
+            </div>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Migração para AWS
+            </h1>
+            <p className="text-xl text-gray-200 mb-8">
+              Transforme seu negócio com a migração para a nuvem AWS. Nossa solução assessora e executa cada etapa necessária para migrar sua infraestrutura, aplicativos e dados com segurança, agilidade e eficiência.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a href="/contato" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
+                Falar com Especialista
+              </a>
+            </div>
           </div>
         </div>
       </section>
