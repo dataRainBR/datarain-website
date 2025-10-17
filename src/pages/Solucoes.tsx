@@ -20,79 +20,125 @@ const Solucoes = () => {
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center overflow-hidden bg-white">
-        {/* Modern Background with Large Splashes */}
-        <div className="absolute inset-0">
-          {/* Large Blue splash - top right */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3893af]/5 via-[#f78504]/5 to-background">
           <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
-          
-          {/* Large Orange splash - bottom left */}
           <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          
-          {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/15 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-28 pt-28 sm:pt-32 md:pt-36">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent text-center">
-              Soluções
+        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-32 md:pt-36">
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
+              Soluções que <br />
+              <span className="bg-gradient-to-r from-[#3893af] via-[#f78504] to-primary bg-clip-text text-transparent">
+                Transformam Negócios
+              </span>
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-center">
-              Conheça nossas soluções tecnológicas inovadoras para transformar seu negócio
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+              Cloud, Dados e Segurança integrados em um ecossistema completo para sua transformação digital
             </p>
+
+            {/* Global Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">300+</div>
+                <div className="text-sm text-muted-foreground">Projetos Entregues</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">15+</div>
+                <div className="text-sm text-muted-foreground">Anos de Experiência</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">50+</div>
+                <div className="text-sm text-muted-foreground">Especialistas</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">Satisfação</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Pilares Section */}
-      <section className="bg-gradient-to-b from-background via-background/95 to-background py-16">
+      <section className="bg-gradient-to-b from-background via-card/20 to-background py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossos Pilares</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Três Pilares, Uma Visão</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Estruturamos nossas soluções em três pilares fundamentais para transformação digital
+              Integramos Cloud, Dados e Segurança para entregar transformação digital de ponta a ponta
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Cloud Pillar */}
             <a href="/solucoes/cloud" className="group">
-              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 mb-6 bg-[#3893af]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-8 h-8 bg-[#3893af] rounded"></div>
+              <div className="relative bg-gradient-to-br from-[#3893af]/5 to-card rounded-2xl p-8 shadow-lg border border-[#3893af]/20 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#3893af]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 mb-6 bg-[#3893af]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg className="w-8 h-8 text-[#3893af]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#3893af]">Cloud</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Migração, otimização e gestão de infraestrutura cloud com AWS. Do assessment à operação contínua.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">Migração AWS</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">FinOps</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">DevOps</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-[#3893af]">Cloud</h3>
-                <p className="text-muted-foreground">
-                  Soluções completas em nuvem para migração, otimização e gestão de infraestrutura cloud.
-                </p>
               </div>
             </a>
 
             {/* Dados Pillar */}
             <a href="/solucoes/dados" className="group">
-              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 mb-6 bg-[#f78504]/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-8 h-8 bg-[#f78504] rounded"></div>
+              <div className="relative bg-gradient-to-br from-[#f78504]/5 to-card rounded-2xl p-8 shadow-lg border border-[#f78504]/20 hover:border-[#f78504]/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[#f78504]/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 mb-6 bg-[#f78504]/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg className="w-8 h-8 text-[#f78504]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#f78504]">Dados e IA</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Arquitetura de dados e IA aplicada. De data lakes a soluções verticais inteligentes.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 rounded-full bg-[#f78504]/10 text-[#f78504]">Data Architecture</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-[#f78504]/10 text-[#f78504]">Pilot AI</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-[#f78504]/10 text-[#f78504]">ML/AI</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-[#f78504]">Dados e IA</h3>
-                <p className="text-muted-foreground">
-                  Arquitetura de dados, inteligência artificial e machine learning para insights estratégicos.
-                </p>
               </div>
             </a>
 
             {/* Cybersecurity Pillar */}
             <a href="/solucoes/cybersecurity" className="group">
-              <div className="bg-card rounded-2xl p-8 shadow-lg border border-border/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 h-full">
-                <div className="w-16 h-16 mb-6 bg-primary/10 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <div className="w-8 h-8 bg-primary rounded"></div>
+              <div className="relative bg-gradient-to-br from-primary/5 to-card rounded-2xl p-8 shadow-lg border border-primary/20 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-full overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-500"></div>
+                <div className="relative">
+                  <div className="w-16 h-16 mb-6 bg-primary/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <svg className="w-8 h-8 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4 text-primary">Cybersecurity</h3>
+                  <p className="text-muted-foreground mb-6">
+                    Segurança cloud, governança e compliance. Proteja seus ativos desde o design.
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Landing Zone</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">GAAS</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Assessment</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold mb-4 text-primary">Cybersecurity</h3>
-                <p className="text-muted-foreground">
-                  Proteção completa com landing zones, GAAS e assessments de segurança avançados.
-                </p>
               </div>
             </a>
           </div>

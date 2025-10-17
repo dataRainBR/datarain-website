@@ -1,45 +1,147 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
+import TeamCarousel from "@/components/TeamCarousel";
+import CTA from "@/components/CTA";
 import migracaoImage from "@/assets/solutions/cloud-migration-hero.jpg";
 import finopsImage from "@/assets/solutions/finops-hero.jpg";
 import devopsImage from "@/assets/solutions/devops-hero.jpg";
 import arquiteturaImage from "@/assets/solutions/cloud-architecture.jpg";
+import { Cloud as CloudIcon, TrendingUp, Zap, Shield } from "lucide-react";
 
 const Cloud = () => {
+  const cloudTeam = [
+    {
+      name: "João Silva",
+      role: "Cloud Architect Lead",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      name: "Maria Santos",
+      role: "DevOps Engineer",
+      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      name: "Pedro Costa",
+      role: "Cloud Security Specialist",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+      linkedin: "https://linkedin.com"
+    },
+    {
+      name: "Ana Paula",
+      role: "FinOps Analyst",
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      linkedin: "https://linkedin.com"
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-white">
-        {/* Modern Background with Large Splashes */}
-        <div className="absolute inset-0">
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3893af]/10 via-background to-background">
           <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#3893af]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#3893af]/10 rounded-full blur-2xl"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-32 md:pt-36">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent text-center">
-              Soluções Cloud
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 bg-[#3893af]/10 rounded-full px-4 py-2 mb-6">
+              <CloudIcon className="w-5 h-5 text-[#3893af]" />
+              <span className="text-sm font-medium text-[#3893af]">Cloud Infrastructure</span>
+            </div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
+              Transforme sua Infraestrutura <br />
+              <span className="bg-gradient-to-r from-[#3893af] to-[#2d7591] bg-clip-text text-transparent">
+                na Nuvem
+              </span>
             </h1>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-center">
-              Transforme sua infraestrutura com nossas soluções especializadas em nuvem
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+              Migre, otimize e escale sua infraestrutura com segurança e eficiência. 
+              Especialistas AWS para acelerar sua transformação digital.
             </p>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">150+</div>
+                <div className="text-sm text-muted-foreground">Migrações Completas</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">30%</div>
+                <div className="text-sm text-muted-foreground">Redução de Custos</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">99.9%</div>
+                <div className="text-sm text-muted-foreground">Disponibilidade</div>
+              </div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">24/7</div>
+                <div className="text-sm text-muted-foreground">Suporte Dedicado</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Cloud Section */}
+      <section className="py-16 bg-gradient-to-b from-background to-card/20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por que Cloud?</h2>
+            <p className="text-lg text-muted-foreground">
+              A transformação digital começa com uma infraestrutura sólida e escalável
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2">
+              <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6">
+                <Zap className="w-7 h-7 text-[#3893af]" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Agilidade e Velocidade</h3>
+              <p className="text-muted-foreground">
+                Provisione recursos em minutos, não semanas. Acelere o time-to-market e responda rapidamente às demandas do negócio.
+              </p>
+            </div>
+
+            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2">
+              <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6">
+                <TrendingUp className="w-7 h-7 text-[#3893af]" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Escalabilidade Infinita</h3>
+              <p className="text-muted-foreground">
+                Cresça sem limites. Escale automaticamente recursos conforme a demanda, pagando apenas pelo que usar.
+              </p>
+            </div>
+
+            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2">
+              <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6">
+                <Shield className="w-7 h-7 text-[#3893af]" />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Segurança Empresarial</h3>
+              <p className="text-muted-foreground">
+                Proteção de nível corporativo com conformidade garantida. Certifications e compliance mantidos pela AWS.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Portfólio Cloud */}
-      <main className="bg-gradient-to-b from-background via-background/95 to-background py-16">
+      <main className="bg-gradient-to-b from-card/20 via-background to-background py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluções Cloud</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Nossas Soluções Cloud</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Infraestrutura escalável e otimizada para sua transformação digital
+              Do planejamento à execução, cobrimos todo o ciclo de vida da sua jornada cloud
             </p>
           </div>
 
@@ -99,6 +201,14 @@ const Cloud = () => {
         </div>
       </main>
 
+      {/* Team Carousel */}
+      <TeamCarousel 
+        members={cloudTeam}
+        title="Time de Cloud"
+        description="Especialistas certificados AWS para garantir o sucesso da sua transformação digital"
+      />
+
+      <CTA />
       <Footer />
     </div>
   );
