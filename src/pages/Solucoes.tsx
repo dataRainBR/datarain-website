@@ -2,7 +2,7 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import migracaoImage from "@/assets/solutions/cloud-migration-hero.jpg";
-import finopsImage from "@/assets/solutions/finops.jpg";
+import finopsImage from "@/assets/solutions/finops-hero.jpg";
 import devopsImage from "@/assets/solutions/devops.jpg";
 import arquiteturaCloudImage from "@/assets/solutions/cloud-architecture.jpg";
 import landingZoneImage from "@/assets/solutions/landing-zone.jpg";
