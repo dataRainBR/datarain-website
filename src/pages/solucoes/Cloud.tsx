@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import migracaoImage from "@/assets/solutions/cloud-migration-hero.jpg";
 import finopsImage from "@/assets/solutions/finops-hero.jpg";
-import devopsImage from "@/assets/solutions/devops.jpg";
+import devopsImage from "@/assets/solutions/devops-hero.jpg";
 import arquiteturaImage from "@/assets/solutions/cloud-architecture.jpg";
 
 const Cloud = () => {
