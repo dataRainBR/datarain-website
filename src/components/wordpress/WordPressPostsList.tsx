@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { WordPressPostCard } from "./WordPressPostCard";
-import { useWordPressPosts, useWordPressPostsByTagSlug, useWordPressPostsByCategorySlug } from "@/hooks/useWordPress";
+import { useWordPressPosts, useWordPressPostsByTagSlug, useWordPressPostsByCategorySlug, useWordPressCategories } from "@/hooks/useWordPress";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -60,6 +60,9 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     page: currentPage,
     search: activeSearchTerm || undefined,
   });
+
+  // Fetch categories for the filter dropdown
+  const { data: categories } = useWordPressCategories();
 
   // Use the appropriate query based on filters provided
   const {
@@ -138,7 +141,11 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="all">Todas as categorias</SelectItem>
-                      {(Blog, Cases)}
+                      {categories?.map((category) => (
+                        <SelectItem key={category.id} value={category.id.toString()}>
+                          {category.name}
+                        </SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                 </div>
