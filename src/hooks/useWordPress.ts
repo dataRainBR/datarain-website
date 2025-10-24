@@ -135,7 +135,7 @@ export const useWordPressPageBySlug = (slug: string) => {
 };
 
 
-// Hook para buscar posts por category slug com fallback
+// Hook para buscar posts por category slug
 export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
   per_page?: number;
   page?: number;
@@ -144,53 +144,38 @@ export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
   return useQuery({
     queryKey: ['wordpress-posts-category-slug', categorySlug, params],
     queryFn: async () => {
-      try {
-        // Primeiro buscar a categoria pelo slug
-        const categoriesResponse = await fetch(getWordPressUrl(`/categories?slug=${categorySlug}`));
-        
-        if (categoriesResponse.ok) {
-          const categories = await categoriesResponse.json() as WordPressCategory[];
-          
-          if (categories.length > 0) {
-            const categoryId = categories[0].id;
-            
-            // Buscar posts por category ID
-            const queryString = new URLSearchParams();
-            if (params.per_page) queryString.append('per_page', params.per_page.toString());
-            if (params.page) queryString.append('page', params.page.toString());
-            if (params.search) queryString.append('search', params.search);
-            queryString.append('categories', categoryId.toString());
-            
-            const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-            if (postsResponse.ok) {
-              return postsResponse.json() as Promise<WordPressPost[]>;
-            }
-          }
-        }
-        
-        // Fallback: buscar todos os posts se a busca por categoria falhar
-        console.warn(`Falha ao buscar posts por categoria "${categorySlug}", usando busca geral como fallback`);
-        const queryString = new URLSearchParams();
-        if (params.per_page) queryString.append('per_page', params.per_page.toString());
-        if (params.page) queryString.append('page', params.page.toString());
-        if (params.search) queryString.append('search', params.search);
-        
-        const fallbackResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-        if (!fallbackResponse.ok) throw new Error('Erro ao buscar posts');
-        return fallbackResponse.json() as Promise<WordPressPost[]>;
-        
-      } catch (error) {
-        // Último fallback: buscar todos os posts
-        console.error(`Erro ao buscar posts por categoria "${categorySlug}":`, error);
-        const queryString = new URLSearchParams();
-        if (params.per_page) queryString.append('per_page', params.per_page.toString());
-        if (params.page) queryString.append('page', params.page.toString());
-        if (params.search) queryString.append('search', params.search);
-        
-        const fallbackResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-        if (!fallbackResponse.ok) throw new Error('Erro ao buscar posts');
-        return fallbackResponse.json() as Promise<WordPressPost[]>;
+      // Primeiro buscar a categoria pelo slug
+      const categoriesResponse = await fetch(getWordPressUrl(`/categories?slug=${categorySlug}`));
+      
+      if (!categoriesResponse.ok) {
+        console.error(`Erro ao buscar categoria "${categorySlug}"`);
+        return []; // Retorna array vazio ao invés de buscar todos os posts
       }
+      
+      const categories = await categoriesResponse.json() as WordPressCategory[];
+      
+      if (categories.length === 0) {
+        console.warn(`Categoria "${categorySlug}" não encontrada`);
+        return []; // Retorna array vazio se categoria não existe
+      }
+      
+      const categoryId = categories[0].id;
+      
+      // Buscar posts por category ID
+      const queryString = new URLSearchParams();
+      if (params.per_page) queryString.append('per_page', params.per_page.toString());
+      if (params.page) queryString.append('page', params.page.toString());
+      if (params.search) queryString.append('search', params.search);
+      queryString.append('categories', categoryId.toString());
+      
+      const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
+      
+      if (!postsResponse.ok) {
+        console.error(`Erro ao buscar posts da categoria "${categorySlug}"`);
+        return []; // Retorna array vazio ao invés de buscar todos os posts
+      }
+      
+      return postsResponse.json() as Promise<WordPressPost[]>;
     },
     enabled: !!categorySlug,
     staleTime: 5 * 60 * 1000, // 5 minutos
