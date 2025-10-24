@@ -1,11 +1,25 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { WORDPRESS_CONFIG, getWordPressUrl, WordPressPost, WordPressPage, WordPressMedia, WordPressCategory, WordPressTag } from '@/lib/wordpress';
 
-// Hook para buscar posts do WordPress
+// Função utilitária para obter ID de categoria por slug
+export const getCategoryIdBySlug = async (slug: string): Promise<number | null> => {
+  try {
+    const response = await fetch(getWordPressUrl(`/categories?slug=${slug}`));
+    if (!response.ok) return null;
+    const categories = await response.json() as WordPressCategory[];
+    return categories.length > 0 ? categories[0].id : null;
+  } catch (error) {
+    console.error(`Erro ao buscar categoria "${slug}":`, error);
+    return null;
+  }
+};
+
+// Hook para buscar posts do WordPress com suporte a exclusão de categorias
 export const useWordPressPosts = (params: {
   per_page?: number;
   page?: number;
   category?: number;
+  categories_exclude?: number[];
   search?: string;
 } = {}) => {
   const queryString = new URLSearchParams();
@@ -13,6 +27,9 @@ export const useWordPressPosts = (params: {
   if (params.per_page) queryString.append('per_page', params.per_page.toString());
   if (params.page) queryString.append('page', params.page.toString());
   if (params.category) queryString.append('categories', params.category.toString());
+  if (params.categories_exclude && params.categories_exclude.length > 0) {
+    queryString.append('categories_exclude', params.categories_exclude.join(','));
+  }
   if (params.search) queryString.append('search', params.search);
 
   return useQuery({
@@ -135,7 +152,73 @@ export const useWordPressPageBySlug = (slug: string) => {
 };
 
 
-// Hook para buscar posts por category slug
+// Hook inteligente para buscar posts com filtros e exclusões automáticas
+export const useWordPressPostsSmart = (params: {
+  per_page?: number;
+  page?: number;
+  search?: string;
+  categorySlug?: string;
+  excludeCategorySlugs?: string[];
+} = {}) => {
+  return useQuery({
+    queryKey: ['wordpress-posts-smart', params],
+    queryFn: async () => {
+      let categoryId: number | null = null;
+      const excludeCategoryIds: number[] = [];
+
+      // Resolver ID da categoria principal
+      if (params.categorySlug) {
+        categoryId = await getCategoryIdBySlug(params.categorySlug);
+      }
+
+      // Resolver IDs das categorias a excluir
+      if (params.excludeCategorySlugs && params.excludeCategorySlugs.length > 0) {
+        for (const slug of params.excludeCategorySlugs) {
+          const id = await getCategoryIdBySlug(slug);
+          if (id) excludeCategoryIds.push(id);
+        }
+      }
+
+      // Construir query string
+      const queryString = new URLSearchParams();
+      if (params.per_page) queryString.append('per_page', params.per_page.toString());
+      if (params.page) queryString.append('page', params.page.toString());
+      if (params.search) queryString.append('search', params.search);
+      
+      // Se encontrou a categoria principal, filtrar por ela
+      if (categoryId) {
+        queryString.append('categories', categoryId.toString());
+      }
+      
+      // Sempre adicionar categorias excluídas se existirem
+      if (excludeCategoryIds.length > 0) {
+        queryString.append('categories_exclude', excludeCategoryIds.join(','));
+      }
+
+      // Buscar posts
+      const response = await fetch(getWordPressUrl(`/posts?${queryString}`));
+      if (!response.ok) {
+        console.error('Erro ao buscar posts');
+        return [];
+      }
+
+      const posts = await response.json() as WordPressPost[];
+
+      // Filtro adicional no client para garantir que nenhum post com categoria excluída apareça
+      if (excludeCategoryIds.length > 0) {
+        return posts.filter(post => 
+          !post.categories.some(catId => excludeCategoryIds.includes(catId))
+        );
+      }
+
+      return posts;
+    },
+    enabled: true,
+    staleTime: 5 * 60 * 1000, // 5 minutos
+  });
+};
+
+// Hook para buscar posts por category slug (mantido para compatibilidade)
 export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
   per_page?: number;
   page?: number;
@@ -144,24 +227,22 @@ export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
   return useQuery({
     queryKey: ['wordpress-posts-category-slug', categorySlug, params],
     queryFn: async () => {
-      // Primeiro buscar a categoria pelo slug
       const categoriesResponse = await fetch(getWordPressUrl(`/categories?slug=${categorySlug}`));
       
       if (!categoriesResponse.ok) {
         console.error(`Erro ao buscar categoria "${categorySlug}"`);
-        return []; // Retorna array vazio ao invés de buscar todos os posts
+        return [];
       }
       
       const categories = await categoriesResponse.json() as WordPressCategory[];
       
       if (categories.length === 0) {
         console.warn(`Categoria "${categorySlug}" não encontrada`);
-        return []; // Retorna array vazio se categoria não existe
+        return [];
       }
       
       const categoryId = categories[0].id;
       
-      // Buscar posts por category ID
       const queryString = new URLSearchParams();
       if (params.per_page) queryString.append('per_page', params.per_page.toString());
       if (params.page) queryString.append('page', params.page.toString());
@@ -172,7 +253,7 @@ export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
       
       if (!postsResponse.ok) {
         console.error(`Erro ao buscar posts da categoria "${categorySlug}"`);
-        return []; // Retorna array vazio ao invés de buscar todos os posts
+        return [];
       }
       
       return postsResponse.json() as Promise<WordPressPost[]>;

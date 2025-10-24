@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { WordPressPostCard } from "./WordPressPostCard";
-import { useWordPressPosts, useWordPressPostsByCategorySlug, useWordPressCategories } from "@/hooks/useWordPress";
+import { useWordPressPostsSmart, useWordPressCategories } from "@/hooks/useWordPress";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -35,33 +35,33 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   // Use external search term if provided, otherwise use internal state
   const activeSearchTerm = externalSearchTerm || searchTerm;
 
-  // Determine which hook to use based on filters
+  // Determine category slug and exclusions
   const categorySlug = typeof categoryFilter === "string" ? categoryFilter : undefined;
+  
+  // Define exclusões automáticas baseadas na categoria
+  let excludeCategorySlugs: string[] = [];
+  if (categorySlug === 'blog') {
+    excludeCategorySlugs = ['cases'];
+  } else if (categorySlug === 'cases') {
+    excludeCategorySlugs = ['blog'];
+  }
 
-  // Use different hooks based on whether we have a category slug
-  const regularPostsQuery = useWordPressPosts({
-    per_page: postsPerPage,
-    page: currentPage,
-    category: selectedCategory,
-    search: activeSearchTerm || undefined,
-  });
-
-  const categorySlugPostsQuery = useWordPressPostsByCategorySlug(categorySlug || "", {
-    per_page: postsPerPage,
-    page: currentPage,
-    search: activeSearchTerm || undefined,
-  });
-
-  // Fetch categories for the filter dropdown
-  const { data: categories } = useWordPressCategories();
-
-  // Use the appropriate query based on filters provided
+  // Use the smart hook with automatic exclusions
   const {
     data: posts,
     isLoading,
     error,
     isFetching,
-  } = categorySlug ? categorySlugPostsQuery : regularPostsQuery;
+  } = useWordPressPostsSmart({
+    per_page: postsPerPage,
+    page: currentPage,
+    search: activeSearchTerm || undefined,
+    categorySlug,
+    excludeCategorySlugs,
+  });
+
+  // Fetch categories for the filter dropdown
+  const { data: categories } = useWordPressCategories();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
