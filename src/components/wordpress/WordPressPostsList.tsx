@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { WordPressPostCard } from "./WordPressPostCard";
-import { useWordPressPosts, useWordPressPostsByTagSlug, useWordPressPostsByCategorySlug, useWordPressCategories } from "@/hooks/useWordPress";
+import { useWordPressPosts, useWordPressPostsByCategorySlug, useWordPressCategories } from "@/hooks/useWordPress";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -13,8 +13,6 @@ interface WordPressPostsListProps {
   showSearch?: boolean;
   showFilters?: boolean;
   categoryFilter?: number | string;
-  tagFilter?: number;
-  tagSlug?: string;
   searchTerm?: string;
 }
 
@@ -23,8 +21,6 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   showSearch = true,
   showFilters = true,
   categoryFilter,
-  tagFilter,
-  tagSlug,
   searchTerm: externalSearchTerm,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,7 +28,6 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<number | undefined>(
     typeof categoryFilter === "number" ? categoryFilter : undefined,
   );
-  const [selectedTag, setSelectedTag] = useState<number | undefined>(tagFilter);
 
   // Use external search term if provided, otherwise use internal state
   const activeSearchTerm = externalSearchTerm || searchTerm;
@@ -40,18 +35,11 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   // Determine which hook to use based on filters
   const categorySlug = typeof categoryFilter === "string" ? categoryFilter : undefined;
 
-  // Use different hooks based on whether we have a tag slug or category slug
+  // Use different hooks based on whether we have a category slug
   const regularPostsQuery = useWordPressPosts({
     per_page: postsPerPage,
     page: currentPage,
     category: selectedCategory,
-    tag: selectedTag,
-    search: activeSearchTerm || undefined,
-  });
-
-  const tagSlugPostsQuery = useWordPressPostsByTagSlug(tagSlug || "", {
-    per_page: postsPerPage,
-    page: currentPage,
     search: activeSearchTerm || undefined,
   });
 
@@ -70,7 +58,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     isLoading,
     error,
     isFetching,
-  } = tagSlug ? tagSlugPostsQuery : categorySlug ? categorySlugPostsQuery : regularPostsQuery;
+  } = categorySlug ? categorySlugPostsQuery : regularPostsQuery;
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -82,14 +70,8 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     setCurrentPage(1);
   };
 
-  const handleTagChange = (value: string) => {
-    setSelectedTag(value === "all" ? undefined : parseInt(value));
-    setCurrentPage(1);
-  };
-
   const handleClearFilters = () => {
     setSelectedCategory(undefined);
-    setSelectedTag(undefined);
     setSearchTerm("");
     setCurrentPage(1);
   };
@@ -146,18 +128,6 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
                           {category.name}
                         </SelectItem>
                       ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="flex-1 min-w-[200px]">
-                  <Select value={selectedTag?.toString() || "all"} onValueChange={handleTagChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Filtrar por tag" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">Todas as tags</SelectItem>
-                      {/* Aqui você pode adicionar as tags disponíveis */}
                     </SelectContent>
                   </Select>
                 </div>

@@ -6,7 +6,6 @@ export const useWordPressPosts = (params: {
   per_page?: number;
   page?: number;
   category?: number;
-  tag?: number;
   search?: string;
 } = {}) => {
   const queryString = new URLSearchParams();
@@ -14,7 +13,6 @@ export const useWordPressPosts = (params: {
   if (params.per_page) queryString.append('per_page', params.per_page.toString());
   if (params.page) queryString.append('page', params.page.toString());
   if (params.category) queryString.append('categories', params.category.toString());
-  if (params.tag) queryString.append('tags', params.tag.toString());
   if (params.search) queryString.append('search', params.search);
 
   return useQuery({
@@ -106,19 +104,6 @@ export const useWordPressCategories = () => {
   });
 };
 
-// Hook para buscar tags
-export const useWordPressTags = () => {
-  return useQuery({
-    queryKey: ['wordpress-tags'],
-    queryFn: async () => {
-      const response = await fetch(getWordPressUrl('/tags'));
-      if (!response.ok) throw new Error('Erro ao buscar tags');
-      return response.json() as Promise<WordPressTag[]>;
-    },
-    staleTime: 60 * 60 * 1000, // 1 hora
-  });
-};
-
 // Hook para buscar posts por slug
 export const useWordPressPostBySlug = (slug: string) => {
   return useQuery({
@@ -149,67 +134,6 @@ export const useWordPressPageBySlug = (slug: string) => {
   });
 };
 
-// Hook para buscar posts por tag slug com fallback
-export const useWordPressPostsByTagSlug = (tagSlug: string, params: {
-  per_page?: number;
-  page?: number;
-  search?: string;
-} = {}) => {
-  return useQuery({
-    queryKey: ['wordpress-posts-tag-slug', tagSlug, params],
-    queryFn: async () => {
-      try {
-        // Primeiro buscar a tag pelo slug
-        const tagsResponse = await fetch(getWordPressUrl(`/tags?slug=${tagSlug}`));
-        
-        if (tagsResponse.ok) {
-          const tags = await tagsResponse.json() as WordPressTag[];
-          
-          if (tags.length > 0) {
-            const tagId = tags[0].id;
-            
-            // Buscar posts por tag ID
-            const queryString = new URLSearchParams();
-            if (params.per_page) queryString.append('per_page', params.per_page.toString());
-            if (params.page) queryString.append('page', params.page.toString());
-            if (params.search) queryString.append('search', params.search);
-            queryString.append('tags', tagId.toString());
-            
-            const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-            if (postsResponse.ok) {
-              return postsResponse.json() as Promise<WordPressPost[]>;
-            }
-          }
-        }
-        
-        // Fallback: buscar todos os posts se a busca por tag falhar
-        console.warn(`Falha ao buscar posts por tag "${tagSlug}", usando busca geral como fallback`);
-        const queryString = new URLSearchParams();
-        if (params.per_page) queryString.append('per_page', params.per_page.toString());
-        if (params.page) queryString.append('page', params.page.toString());
-        if (params.search) queryString.append('search', params.search);
-        
-        const fallbackResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-        if (!fallbackResponse.ok) throw new Error('Erro ao buscar posts');
-        return fallbackResponse.json() as Promise<WordPressPost[]>;
-        
-      } catch (error) {
-        // Último fallback: buscar todos os posts
-        console.error(`Erro ao buscar posts por tag "${tagSlug}":`, error);
-        const queryString = new URLSearchParams();
-        if (params.per_page) queryString.append('per_page', params.per_page.toString());
-        if (params.page) queryString.append('page', params.page.toString());
-        if (params.search) queryString.append('search', params.search);
-        
-        const fallbackResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
-        if (!fallbackResponse.ok) throw new Error('Erro ao buscar posts');
-        return fallbackResponse.json() as Promise<WordPressPost[]>;
-      }
-    },
-    enabled: !!tagSlug,
-    staleTime: 5 * 60 * 1000, // 5 minutos
-  });
-};
 
 // Hook para buscar posts por category slug com fallback
 export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
