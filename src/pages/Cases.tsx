@@ -73,7 +73,6 @@ const Cases = () => {
               showSearch={false}
               showFilters={false}
               categoryFilter="cases"
-              tagSlug="cases"
             />
           </div>
         </div>
