@@ -25,6 +25,9 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  
+  // Se categoryFilter for fornecido, não permitir alteração via filtro interno
+  const isExternalCategoryFilter = !!categoryFilter;
   const [selectedCategory, setSelectedCategory] = useState<number | undefined>(
     typeof categoryFilter === "number" ? categoryFilter : undefined,
   );
@@ -114,7 +117,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
             )}
 
             {/* Filtros */}
-            {showFilters && (
+            {showFilters && !isExternalCategoryFilter && (
               <div className="flex gap-4 flex-wrap">
                 <div className="flex-1 min-w-[200px]">
                   <Select value={selectedCategory?.toString() || "all"} onValueChange={handleCategoryChange}>
