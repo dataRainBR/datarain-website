@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { WordPressPostCard } from './WordPressPostCard';
-import { useWordPressPosts, useWordPressPostsByTagSlug, useWordPressPostsByCategorySlug } from '@/hooks/useWordPress';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Loader2, Search, Filter } from 'lucide-react';
-import { WordPressPost } from '@/lib/wordpress';
+import React, { useState } from "react";
+import { WordPressPostCard } from "./WordPressPostCard";
+import { useWordPressPosts, useWordPressPostsByTagSlug, useWordPressPostsByCategorySlug } from "@/hooks/useWordPress";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Loader2, Search, Filter } from "lucide-react";
+import { WordPressPost } from "@/lib/wordpress";
 
 interface WordPressPostsListProps {
   postsPerPage?: number;
@@ -28,9 +28,9 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   searchTerm: externalSearchTerm,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<number | undefined>(
-    typeof categoryFilter === 'number' ? categoryFilter : undefined
+    typeof categoryFilter === "number" ? categoryFilter : undefined,
   );
   const [selectedTag, setSelectedTag] = useState<number | undefined>(tagFilter);
 
@@ -38,7 +38,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const activeSearchTerm = externalSearchTerm || searchTerm;
 
   // Determine which hook to use based on filters
-  const categorySlug = typeof categoryFilter === 'string' ? categoryFilter : undefined;
+  const categorySlug = typeof categoryFilter === "string" ? categoryFilter : undefined;
 
   // Use different hooks based on whether we have a tag slug or category slug
   const regularPostsQuery = useWordPressPosts({
@@ -49,23 +49,25 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     search: activeSearchTerm || undefined,
   });
 
-  const tagSlugPostsQuery = useWordPressPostsByTagSlug(tagSlug || '', {
+  const tagSlugPostsQuery = useWordPressPostsByTagSlug(tagSlug || "", {
     per_page: postsPerPage,
     page: currentPage,
     search: activeSearchTerm || undefined,
   });
 
-  const categorySlugPostsQuery = useWordPressPostsByCategorySlug(categorySlug || '', {
+  const categorySlugPostsQuery = useWordPressPostsByCategorySlug(categorySlug || "", {
     per_page: postsPerPage,
     page: currentPage,
     search: activeSearchTerm || undefined,
   });
 
   // Use the appropriate query based on filters provided
-  const { data: posts, isLoading, error, isFetching } = 
-    tagSlug ? tagSlugPostsQuery : 
-    categorySlug ? categorySlugPostsQuery : 
-    regularPostsQuery;
+  const {
+    data: posts,
+    isLoading,
+    error,
+    isFetching,
+  } = tagSlug ? tagSlugPostsQuery : categorySlug ? categorySlugPostsQuery : regularPostsQuery;
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,7 +87,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const handleClearFilters = () => {
     setSelectedCategory(undefined);
     setSelectedTag(undefined);
-    setSearchTerm('');
+    setSearchTerm("");
     setCurrentPage(1);
   };
 
@@ -136,7 +138,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="all">Todas as categorias</SelectItem>
-                      {/* Aqui você pode adicionar as categorias disponíveis */}
+                      {(Blog, Cases)}
                     </SelectContent>
                   </Select>
                 </div>
@@ -153,11 +155,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
                   </Select>
                 </div>
 
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleClearFilters}
-                >
+                <Button variant="outline" size="sm" onClick={handleClearFilters}>
                   Limpar filtros
                 </Button>
               </div>
@@ -178,13 +176,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {posts.map((post) => (
-              <WordPressPostCard
-                key={post.id}
-                post={post}
-                showExcerpt={true}
-                showCategories={false}
-                showTags={false}
-              />
+              <WordPressPostCard key={post.id} post={post} showExcerpt={true} showCategories={false} showTags={false} />
             ))}
           </div>
 
@@ -192,19 +184,17 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
           <div className="flex justify-center gap-2">
             <Button
               variant="outline"
-              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+              onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
               disabled={currentPage === 1}
             >
               Anterior
             </Button>
-            
-            <span className="flex items-center px-4 py-2 text-sm">
-              Página {currentPage}
-            </span>
-            
+
+            <span className="flex items-center px-4 py-2 text-sm">Página {currentPage}</span>
+
             <Button
               variant="outline"
-              onClick={() => setCurrentPage(prev => prev + 1)}
+              onClick={() => setCurrentPage((prev) => prev + 1)}
               disabled={posts.length < postsPerPage}
             >
               Próxima
@@ -217,9 +207,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
       {posts && posts.length === 0 && !isLoading && (
         <Card>
           <CardContent className="p-8 text-center">
-            <p className="text-muted-foreground">
-              Nenhum post encontrado com os filtros atuais.
-            </p>
+            <p className="text-muted-foreground">Nenhum post encontrado com os filtros atuais.</p>
           </CardContent>
         </Card>
       )}
