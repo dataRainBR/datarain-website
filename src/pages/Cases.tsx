@@ -1,6 +1,6 @@
-import React from 'react';
-import { WordPressPostsList } from '@/components/wordpress/WordPressPostsList';
-import { Briefcase } from 'lucide-react';
+import React from "react";
+import { WordPressPostsList } from "@/components/wordpress/WordPressPostsList";
+import { Briefcase } from "lucide-react";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 
@@ -8,17 +8,20 @@ const Cases = () => {
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader />
-      
+
       {/* Modern Hero Section */}
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex flex-col overflow-hidden bg-white">
         {/* Modern Background with Large Splashes */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
           <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
-          
+
           {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          
+          <div
+            className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse"
+            style={{ animationDelay: "1s" }}
+          ></div>
+
           {/* Medium accent splashes */}
           <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
           <div className="absolute bottom-1/3 left-1/3 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
@@ -30,11 +33,12 @@ const Cases = () => {
               {/* Title with High Contrast */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-5 sm:mb-6 md:mb-8">
                 <span className="text-gray-900">Cases de Transformação </span>
-                <span style={{ color: '#3893af' }}>Digital</span>
+                <span style={{ color: "#3893af" }}>Digital</span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 md:mb-12 px-4">
-                Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados mensuráveis
+                Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados
+                mensuráveis
               </p>
 
               {/* Subtle accent elements */}
@@ -54,13 +58,11 @@ const Cases = () => {
       <main className="relative bg-white">
         {/* Content Background - Seamless transition */}
         <div className="absolute inset-0 bg-white"></div>
-        
+
         <div className="relative z-10 container mx-auto px-4 pt-6 pb-12">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Explore Nossos Cases
-            </h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Explore Nossos Cases</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Cada projeto conta uma história única de transformação e inovação
             </p>
@@ -68,12 +70,7 @@ const Cases = () => {
 
           {/* WordPress Posts List */}
           <div className="bg-background/80 backdrop-blur-sm rounded-3xl border border-border/50 shadow-lg p-8">
-            <WordPressPostsList
-              postsPerPage={9}
-              showSearch={false}
-              showFilters={false}
-              categoryFilter="cases"
-            />
+            <WordPressPostsList postsPerPage={9} showSearch={false} showFilters={true} categoryFilter="cases" />
           </div>
         </div>
       </main>
