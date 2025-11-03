@@ -312,27 +312,48 @@ const Academy = () => {
       </section>
 
       {/* Formato Section */}
-      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card rounded-2xl p-8 md:p-12 shadow-xl border border-border/20">
-              <div className="w-20 h-20 mx-auto mb-6 bg-primary/10 rounded-xl flex items-center justify-center">
-                <BookOpen className="w-10 h-10 text-primary" />
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-accent/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
+              <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 md:p-10 text-white shadow-2xl">
+                <div className="w-16 h-16 mb-6 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
+                  <BookOpen className="w-8 h-8 text-white" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                  Formato: Presencial
+                </h2>
+                <p className="text-xl text-white/90 leading-relaxed">
+                  Em sua empresa ou em nossos espaços parceiros
+                </p>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
-                Formato: Presencial
-              </h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Em sua empresa ou em nossos espaços parceiros
-              </p>
-              <div className="bg-primary/5 rounded-xl p-6 mb-6">
-                <h3 className="text-2xl font-bold text-foreground mb-4">
+
+              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-xl border border-border/20">
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
                   Na prática, é onde a inovação acontece.
                 </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Com os Immersion Days, sua equipe sai do modo "teoria" para o modo "execução". 
-                  Mais do que aprender, é sobre experimentar soluções, prototipar ideias e sair com um plano claro de ação.
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                  Com os Immersion Days, sua equipe sai do modo "teoria" para o modo "execução".
                 </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                    <p className="text-muted-foreground">Experimentar soluções reais</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                    <p className="text-muted-foreground">Prototipar ideias rapidamente</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
+                    <p className="text-muted-foreground">Sair com um plano claro de ação</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
