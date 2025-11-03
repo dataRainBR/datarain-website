@@ -24,7 +24,7 @@ const Academy = () => {
 
         <div className="relative z-10 container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-28 pt-28 sm:pt-32 md:pt-36">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8 bg-gradient-to-r from-primary via-primary to-accent bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 md:mb-8 text-primary">
               DataRain Academy
             </h1>
             <p className="text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-6 md:mb-8">
@@ -312,47 +312,59 @@ const Academy = () => {
       </section>
 
       {/* Formato Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-1/4 left-0 w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-accent/10 rounded-full blur-3xl"></div>
-        </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-16">
-              <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 md:p-10 text-white shadow-2xl">
-                <div className="w-16 h-16 mb-6 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
-                  <BookOpen className="w-8 h-8 text-white" />
-                </div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                  Formato: Presencial
-                </h2>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  Em sua empresa ou em nossos espaços parceiros
-                </p>
-              </div>
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-background to-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-6">
+                Na prática, é onde a inovação acontece.
+              </h2>
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                Com os Immersion Days, sua equipe sai do modo "teoria" para o modo "execução".
+              </p>
+            </div>
 
-              <div className="bg-card rounded-2xl p-8 md:p-10 shadow-xl border border-border/20">
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                  Na prática, é onde a inovação acontece.
-                </h3>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                  Com os Immersion Days, sua equipe sai do modo "teoria" para o modo "execução".
-                </p>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                    <p className="text-muted-foreground">Experimentar soluções reais</p>
+            <div className="bg-card rounded-3xl p-8 md:p-12 shadow-2xl border border-border/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
+              
+              <div className="relative z-10">
+                <div className="flex items-start gap-4 mb-8">
+                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-7 h-7 text-primary" />
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                    <p className="text-muted-foreground">Prototipar ideias rapidamente</p>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
+                      Formato Presencial
+                    </h3>
+                    <p className="text-lg text-muted-foreground">
+                      Em sua empresa ou em nossos espaços parceiros
+                    </p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-primary mt-2"></div>
-                    <p className="text-muted-foreground">Sair com um plano claro de ação</p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8">
+                  <div className="bg-background/50 rounded-xl p-6 border border-border/10">
+                    <div className="text-4xl font-bold text-primary mb-2">01</div>
+                    <h4 className="font-semibold text-foreground mb-2">Experimentar soluções</h4>
+                    <p className="text-sm text-muted-foreground">Mais do que aprender, coloque a mão na massa com casos reais</p>
                   </div>
+                  <div className="bg-background/50 rounded-xl p-6 border border-border/10">
+                    <div className="text-4xl font-bold text-primary mb-2">02</div>
+                    <h4 className="font-semibold text-foreground mb-2">Prototipar ideias</h4>
+                    <p className="text-sm text-muted-foreground">Transforme conceitos em protótipos funcionais rapidamente</p>
+                  </div>
+                  <div className="bg-background/50 rounded-xl p-6 border border-border/10">
+                    <div className="text-4xl font-bold text-primary mb-2">03</div>
+                    <h4 className="font-semibold text-foreground mb-2">Plano de ação claro</h4>
+                    <p className="text-sm text-muted-foreground">Saia com um roadmap prático para implementar na sua empresa</p>
+                  </div>
+                </div>
+
+                <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
+                  <p className="text-lg text-center text-muted-foreground">
+                    <span className="font-semibold text-foreground">Aprendizado aplicado.</span> Cada sessão é customizada para os desafios específicos da sua equipe e do seu negócio.
+                  </p>
                 </div>
               </div>
             </div>
