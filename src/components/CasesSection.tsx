@@ -44,71 +44,77 @@ const cases: CaseStudy[] = [
 
 export default function CasesSection() {
   return (
-    <section className="pt-8 pb-6 md:pt-12 md:pb-8 lg:pt-16 lg:pb-10 text-white relative overflow-hidden px-4 md:px-0">
-      <Carousel
-        opts={{
-          align: "center",
-          loop: true,
-        }}
-        className="w-full relative"
-      >
-        <CarouselContent className="-ml-0">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 text-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent"></div>
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-white rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent rounded-full blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12 md:mb-16">
+          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-white/10 rounded-full text-white text-xs sm:text-sm font-semibold mb-4 backdrop-blur-sm">
+            Cases de Sucesso
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            Transformações que Inspiram
+          </h2>
+          <p className="text-base md:text-lg lg:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+            Conheça como ajudamos empresas a alcançarem resultados extraordinários
+          </p>
+        </div>
+        
+        <Carousel
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          className="w-full"
+        >
+          <CarouselContent className="-ml-4">
             {cases.map((caseStudy) => (
-              <CarouselItem key={caseStudy.id} className="pl-0">
-                <div className="relative bg-gradient-to-r from-primary/95 to-primary w-full">
+              <CarouselItem key={caseStudy.id} className="pl-4">
+                <div className="relative bg-white/10 backdrop-blur-md rounded-3xl overflow-hidden shadow-2xl border border-white/20">
                   <div 
-                    className="absolute inset-0 bg-cover bg-center opacity-20" 
+                    className="absolute inset-0 bg-cover bg-center opacity-10" 
                     style={{ backgroundImage: `url(${caseStudy.backgroundImage})` }} 
                   />
-                  <div className="flex items-center h-[520px] sm:h-[460px] md:h-[480px] relative z-10">
-                    <div className="w-full">
-                      <div className="container mx-auto px-4 py-6 sm:py-6 md:py-8 lg:py-12">
-                      <div className="max-w-5xl text-left">
-                        <div className="mb-6 md:mb-8">
-                          <img
-                            src={caseStudy.clientLogo}
-                            alt={caseStudy.clientName}
-                            className="h-10 md:h-16 w-auto bg-white/10 backdrop-blur-sm rounded-lg px-3 md:px-4 py-2"
-                          />
-                        </div>
-                        
-                        <h3 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 lg:mb-8 leading-tight">
-                          {caseStudy.title}
-                        </h3>
-                        
-                        <p className="text-white/90 text-base sm:text-lg md:text-lg lg:text-xl leading-relaxed mb-6 md:mb-8 lg:mb-10 max-w-3xl">
-                          {caseStudy.description}
-                        </p>
-                        
-                        <button className="text-accent hover:text-accent/80 font-semibold text-base md:text-lg inline-flex items-center gap-2 transition-colors">
-                          <span className="hidden sm:inline">Leia o case completo</span>
-                          <span className="sm:hidden">Ver case</span>
-                          <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </button>
+                  <div className="relative z-10 p-8 md:p-10 lg:p-12 min-h-[400px] md:min-h-[450px] flex flex-col justify-between">
+                    <div>
+                      <div className="mb-6 md:mb-8">
+                        <img
+                          src={caseStudy.clientLogo}
+                          alt={caseStudy.clientName}
+                          className="h-10 md:h-14 w-auto bg-white/20 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg"
+                        />
                       </div>
+                      
+                      <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight">
+                        {caseStudy.title}
+                      </h3>
+                      
+                      <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-3xl">
+                        {caseStudy.description}
+                      </p>
                     </div>
-                    </div>
+                    
+                    <button className="text-accent hover:text-white font-semibold text-base md:text-lg inline-flex items-center gap-2 transition-colors self-start bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl backdrop-blur-sm">
+                      <span className="hidden sm:inline">Leia o case completo</span>
+                      <span className="sm:hidden">Ver case</span>
+                      <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
           
-          <CarouselPrevious className="left-2 md:left-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
-          <CarouselNext className="right-2 md:right-6 z-20 bg-white/10 border-white/20 text-white hover:bg-white/20 h-10 w-10 md:h-12 md:w-12" />
-          
-          {/* Indicadores de paginação */}
-          <div className="flex justify-center gap-2 md:gap-3 mt-3 md:mt-4">
-            {cases.map((_, index) => (
-              <div
-                key={index}
-                className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-white/40"
-              />
-            ))}
-          </div>
+          <CarouselPrevious className="left-2 md:left-4 bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm h-10 w-10 md:h-12 md:w-12" />
+          <CarouselNext className="right-2 md:right-4 bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm h-10 w-10 md:h-12 md:w-12" />
         </Carousel>
+      </div>
     </section>
   );
 }
