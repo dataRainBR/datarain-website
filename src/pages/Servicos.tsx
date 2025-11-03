@@ -113,10 +113,12 @@ const Servicos = () => {
 
       {/* O que entregamos Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-primary/5"></div>
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                 Nossa Oferta
@@ -129,27 +131,36 @@ const Servicos = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
+            <div className="space-y-4 md:space-y-6">
               {servicos.map((servico, index) => {
                 const Icon = servico.icon;
                 return (
                   <div 
                     key={index}
-                    className="bg-card rounded-2xl p-6 md:p-8 border border-border/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/30"
+                    className="bg-card rounded-2xl border border-border/20 shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
                   >
-                    <div className="flex items-start gap-4 mb-4">
-                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
+                    <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 p-6 md:p-8">
+                      <div className="flex items-center gap-4 md:gap-6 flex-1">
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                          <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                        </div>
+                        
+                        <div className="flex-1">
+                          <h3 className="text-xl md:text-2xl font-bold text-primary mb-2 md:mb-3">
+                            {servico.title}
+                          </h3>
+                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                            {servico.description}
+                          </p>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg md:text-xl font-bold text-primary mb-2">
-                          {servico.title}
-                        </h3>
+
+                      <div className="ml-20 md:ml-0">
+                        <div className="text-6xl md:text-7xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors">
+                          0{index + 1}
+                        </div>
                       </div>
                     </div>
-                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                      {servico.description}
-                    </p>
                   </div>
                 );
               })}
