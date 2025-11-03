@@ -259,16 +259,6 @@ const Servicos = () => {
                         {step.description}
                       </p>
                     </div>
-
-                    {/* Barra de progresso decorativa */}
-                    <div className="mt-6 pt-6 border-t border-border/10">
-                      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
-                        <div 
-                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-500 group-hover:w-full"
-                          style={{ width: `${(index + 1) * 25}%` }}
-                        ></div>
-                      </div>
-                    </div>
                   </div>
 
                   {/* Seta conectora (mobile/tablet) */}
@@ -291,16 +281,16 @@ const Servicos = () => {
                 <div className="text-2xl md:text-3xl font-bold text-primary mb-1">Rápido</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Onboarding ágil</div>
               </div>
-              <div className="bg-card rounded-2xl p-4 md:p-6 border border-accent/20 text-center">
-                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">Simples</div>
+              <div className="bg-card rounded-2xl p-4 md:p-6 border border-primary/20 text-center">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">Simples</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Processo claro</div>
               </div>
               <div className="bg-card rounded-2xl p-4 md:p-6 border border-primary/20 text-center">
                 <div className="text-2xl md:text-3xl font-bold text-primary mb-1">Eficiente</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Resultados rápidos</div>
               </div>
-              <div className="bg-card rounded-2xl p-4 md:p-6 border border-accent/20 text-center">
-                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">Contínuo</div>
+              <div className="bg-card rounded-2xl p-4 md:p-6 border border-primary/20 text-center">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">Contínuo</div>
                 <div className="text-xs md:text-sm text-muted-foreground">Evolução constante</div>
               </div>
             </div>
