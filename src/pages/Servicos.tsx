@@ -9,32 +9,27 @@ const Servicos = () => {
     {
       icon: Shield,
       title: "Monitoramento e Suporte 24x5",
-      description: "Detectamos e resolvemos incidentes antes que eles impactem o negócio.",
-      color: "primary"
+      description: "Detectamos e resolvemos incidentes antes que eles impactem o negócio."
     },
     {
       icon: TrendingDown,
       title: "FinOps e Otimização Contínua",
-      description: "Reduzimos custos sem perder performance, com relatórios de economia real e previsibilidade financeira.",
-      color: "accent"
+      description: "Reduzimos custos sem perder performance, com relatórios de economia real e previsibilidade financeira."
     },
     {
       icon: Lock,
       title: "Gestão de Segurança (SecOps)",
-      description: "Aplicamos controles de identidade, compliance e automações para manter seus dados sempre protegidos.",
-      color: "primary"
+      description: "Aplicamos controles de identidade, compliance e automações para manter seus dados sempre protegidos."
     },
     {
       icon: Cloud,
       title: "Gestão de Ambientes Multicloud e Híbridos",
-      description: "Seja AWS, on-premise ou híbrido, cuidamos da operação ponta a ponta.",
-      color: "accent"
+      description: "Seja AWS, on-premise ou híbrido, cuidamos da operação ponta a ponta."
     },
     {
       icon: FileText,
       title: "Relatórios e Governança",
-      description: "Entregamos insights claros sobre disponibilidade, custos, uso e riscos, facilitando decisões estratégicas.",
-      color: "primary"
+      description: "Entregamos insights claros sobre disponibilidade, custos, uso e riscos, facilitando decisões estratégicas."
     }
   ];
 
@@ -143,16 +138,16 @@ const Servicos = () => {
                     key={index}
                     className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm group"
                   >
-                    <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 ${servico.color === 'primary' ? 'bg-primary/10' : 'bg-accent/10'} group-hover:scale-110 transition-transform duration-300`}>
-                      <Icon className={`w-7 h-7 sm:w-8 sm:h-8 ${servico.color === 'primary' ? 'text-primary' : 'text-accent'}`} />
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 bg-accent/10 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-accent" />
                     </div>
-                    <h3 className={`text-lg sm:text-xl font-bold mb-3 sm:mb-4 ${servico.color === 'primary' ? 'text-primary' : 'text-accent'}`}>
+                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">
                       {servico.title}
                     </h3>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
                       {servico.description}
                     </p>
-                    <button className={`flex items-center gap-2 text-sm sm:text-base font-semibold ${servico.color === 'primary' ? 'text-primary' : 'text-accent'} group-hover:gap-3 transition-all`}>
+                    <button className="flex items-center gap-2 text-sm sm:text-base font-semibold text-primary group-hover:gap-3 transition-all">
                       Saiba mais
                       <ArrowRight className="w-4 h-4" />
                     </button>
@@ -245,7 +240,7 @@ const Servicos = () => {
                     </div>
 
                     <div className="relative z-10">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-2xl">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-2xl">
                         {step.number}
                       </div>
                     </div>
