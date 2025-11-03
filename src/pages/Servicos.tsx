@@ -1,56 +1,284 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import CTA from "@/components/CTA";
+import { Shield, TrendingDown, Lock, Cloud, FileText, CheckCircle2, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Servicos = () => {
+  const servicos = [
+    {
+      icon: Shield,
+      title: "Monitoramento e Suporte 24x5",
+      description: "Detectamos e resolvemos incidentes antes que eles impactem o negócio.",
+      color: "primary"
+    },
+    {
+      icon: TrendingDown,
+      title: "FinOps e Otimização Contínua",
+      description: "Reduzimos custos sem perder performance, com relatórios de economia real e previsibilidade financeira.",
+      color: "accent"
+    },
+    {
+      icon: Lock,
+      title: "Gestão de Segurança (SecOps)",
+      description: "Aplicamos controles de identidade, compliance e automações para manter seus dados sempre protegidos.",
+      color: "primary"
+    },
+    {
+      icon: Cloud,
+      title: "Gestão de Ambientes Multicloud e Híbridos",
+      description: "Seja AWS, on-premise ou híbrido, cuidamos da operação ponta a ponta.",
+      color: "accent"
+    },
+    {
+      icon: FileText,
+      title: "Relatórios e Governança",
+      description: "Entregamos insights claros sobre disponibilidade, custos, uso e riscos, facilitando decisões estratégicas.",
+      color: "primary"
+    }
+  ];
+
+  const diferenciais = [
+    {
+      title: "Especialistas AWS no Brasil",
+      description: "Premier Consulting Partner, com mais de 200 certificações."
+    },
+    {
+      title: "Modelo flexível",
+      description: "Do monitoramento básico até operações críticas."
+    },
+    {
+      title: "SLAs claros e mensuráveis",
+      description: "Você sabe exatamente o que esperar — e o que vamos entregar."
+    },
+    {
+      title: "Time dedicado",
+      description: "Engenheiros, arquitetos e analistas que atuam como extensão da sua equipe."
+    }
+  ];
+
+  const processoSteps = [
+    {
+      number: "01",
+      title: "Avaliação inicial",
+      description: "Diagnóstico gratuito da maturidade do seu ambiente."
+    },
+    {
+      number: "02",
+      title: "Onboarding rápido",
+      description: "Integração do seu ambiente às nossas plataformas de monitoramento."
+    },
+    {
+      number: "03",
+      title: "Gestão contínua",
+      description: "Operação diária, relatórios e recomendações de melhoria."
+    },
+    {
+      number: "04",
+      title: "Evolução constante",
+      description: "Revisões periódicas para alinhar tecnologia e estratégia de negócio."
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}
-      <section className="relative min-h-[50vh] sm:min-h-[60vh] flex items-center justify-center overflow-hidden bg-white">
-        {/* Modern Background with Large Splashes */}
+      <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>
         <div className="absolute inset-0">
-          {/* Large Blue splash - top right */}
-          <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
-          
-          {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          
-          {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[350px] sm:w-[450px] h-[350px] sm:h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          <div className="absolute -top-20 -right-20 sm:-top-32 sm:-right-32 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-20 -left-20 sm:-bottom-32 sm:-left-32 w-[350px] sm:w-[500px] md:w-[700px] h-[350px] sm:h-[500px] md:h-[700px] bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] sm:w-[300px] md:w-[500px] h-[200px] sm:h-[300px] md:h-[500px] bg-primary/5 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-28 pt-28 sm:pt-32 md:pt-36">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 md:mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent text-center">
-              Serviços Gerenciados
-            </h1>
-            <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed text-center">
-              Gestão completa de infraestrutura e tecnologia para seu negócio
-            </p>
+        <div className="relative z-10 container mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-24 pt-24 sm:pt-28 md:pt-32 lg:pt-36">
+          <div className="max-w-5xl mx-auto text-center">
+            <div className="backdrop-blur-sm bg-card/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-border/20 shadow-2xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 text-primary">
+                Tecnologia que não para.
+              </h1>
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6 sm:mb-8">
+                Sua empresa também não pode parar.
+              </p>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
+                Na DataRain, entendemos que o verdadeiro valor da tecnologia não está apenas em implementá-la, mas em mantê-la segura, eficiente e em constante evolução. Por isso, oferecemos Serviços Gerenciados que cuidam do seu ambiente em nuvem de ponta a ponta.
+              </p>
+              <p className="text-lg sm:text-xl text-muted-foreground/90 max-w-3xl mx-auto mb-8">
+                Trabalhando junto com seu time e deixando espaço para ele focar em novos desafios.
+              </p>
+              <Button variant="hero" size="lg" className="sm:text-lg">
+                Falar com um Especialista
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Content Section */}
-      <main className="bg-gradient-to-b from-background via-background/95 to-background">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-card rounded-2xl p-12 shadow-lg border border-border/20">
-              <div className="w-20 h-20 mx-auto mb-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                <div className="w-10 h-10 bg-primary rounded"></div>
+      {/* O que entregamos Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
+        <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                Nossa Oferta
               </div>
-              <h2 className="text-2xl font-bold text-primary mb-4">
-                Serviços Gerenciados
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+                O que entregamos?
               </h2>
-              <p className="text-muted-foreground">
-                Squad & Alocação e Suporte especializado. Conteúdo detalhado em desenvolvimento.
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+                Combinamos nossa experiência em +200 projetos na AWS com uma gestão contínua que se adapta ao momento da sua empresa
               </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {servicos.map((servico, index) => {
+                const Icon = servico.icon;
+                return (
+                  <div 
+                    key={index}
+                    className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm group"
+                  >
+                    <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 ${servico.color === 'primary' ? 'bg-primary/10' : 'bg-accent/10'} group-hover:scale-110 transition-transform duration-300`}>
+                      <Icon className={`w-7 h-7 sm:w-8 sm:h-8 ${servico.color === 'primary' ? 'text-primary' : 'text-accent'}`} />
+                    </div>
+                    <h3 className={`text-lg sm:text-xl font-bold mb-3 sm:mb-4 ${servico.color === 'primary' ? 'text-primary' : 'text-accent'}`}>
+                      {servico.title}
+                    </h3>
+                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
+                      {servico.description}
+                    </p>
+                    <button className={`flex items-center gap-2 text-sm sm:text-base font-semibold ${servico.color === 'primary' ? 'text-primary' : 'text-accent'} group-hover:gap-3 transition-all`}>
+                      Saiba mais
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
-      </main>
+      </section>
+
+      {/* Por que escolher Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background"></div>
+        <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-accent/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                Diferenciais
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+                Por que escolher a DataRain?
+              </h2>
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
+              {diferenciais.map((item, index) => (
+                <div 
+                  key={index}
+                  className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl backdrop-blur-sm hover:border-primary/30 transition-all duration-300"
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <CheckCircle2 className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-xl font-bold text-foreground mb-2">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Como funciona Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>
+        <div className="absolute top-1/4 right-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 left-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-accent/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12 sm:mb-16">
+              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+                Processo
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+                Como funciona?
+              </h2>
+            </div>
+
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary"></div>
+
+              <div className="space-y-8 md:space-y-12">
+                {processoSteps.map((step, index) => (
+                  <div 
+                    key={index}
+                    className={`flex flex-col md:flex-row gap-6 md:gap-8 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                  >
+                    <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                      <div className="bg-gradient-to-br from-card to-card/50 rounded-2xl p-6 sm:p-8 border border-border/20 shadow-xl backdrop-blur-sm hover:shadow-2xl transition-all duration-300">
+                        <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3">
+                          {step.title}
+                        </h3>
+                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                          {step.description}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="relative z-10">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-2xl">
+                        {step.number}
+                      </div>
+                    </div>
+
+                    <div className="flex-1 hidden md:block"></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-primary/5"></div>
+        
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl border border-border/20 backdrop-blur-sm">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+                Transforme sua TI de um centro de custo em um motor de crescimento.
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
+                Fale com a DataRain e descubra como os Serviços Gerenciados podem trazer mais segurança, eficiência e inovação para o seu negócio.
+              </p>
+              <Button variant="hero" size="lg" className="sm:text-lg">
+                Quero falar com um especialista →
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <Footer />
     </div>
