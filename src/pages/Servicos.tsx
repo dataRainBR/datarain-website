@@ -213,70 +213,95 @@ const Servicos = () => {
 
       {/* Como funciona Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-background to-accent/5"></div>
-        <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
-                Processo
+                Jornada
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Como funciona?
               </h2>
+              <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
+                Um processo simples e eficiente para transformar sua operação
+              </p>
             </div>
 
-            <div className="relative">
-              {/* Timeline decorativa */}
-              <div className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary/30 to-transparent"></div>
+            {/* Timeline Grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
+              {/* Linha conectora horizontal (desktop) */}
+              <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-20"></div>
               
-              <div className="space-y-8 lg:space-y-12">
-                {processoSteps.map((step, index) => (
-                  <div 
-                    key={index}
-                    className="relative"
-                  >
-                    {/* Linha conectora no mobile */}
-                    {index < processoSteps.length - 1 && (
-                      <div className="lg:hidden absolute left-8 top-20 bottom-0 w-0.5 bg-primary/20"></div>
-                    )}
-
-                    <div className={`flex flex-col lg:flex-row gap-6 lg:gap-8 items-start lg:items-center ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
-                      {/* Conteúdo */}
-                      <div className={`flex-1 ${index % 2 === 0 ? 'lg:text-right lg:pr-8' : 'lg:text-left lg:pl-8'}`}>
-                        <div className="bg-gradient-to-br from-card via-card to-card/80 rounded-2xl p-6 md:p-8 border border-border/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:border-primary/30 backdrop-blur-sm">
-                          <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'lg:justify-end' : 'lg:justify-start'}`}>
-                            <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center">
-                              <span className="text-accent font-bold text-lg">{step.number}</span>
-                            </div>
-                            <h3 className="text-xl md:text-2xl font-bold text-primary">
-                              {step.title}
-                            </h3>
-                          </div>
-                          <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                            {step.description}
-                          </p>
+              {processoSteps.map((step, index) => (
+                <div key={index} className="relative">
+                  {/* Card */}
+                  <div className="bg-gradient-to-br from-card to-card/50 rounded-3xl p-6 md:p-8 border border-border/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm group h-full flex flex-col">
+                    {/* Número grande no topo */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="relative">
+                        <div className="text-7xl md:text-8xl font-bold text-primary/10 leading-none">
+                          {step.number}
+                        </div>
+                        <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-accent to-accent/70 shadow-xl flex items-center justify-center">
+                          <span className="text-white font-bold text-xl md:text-2xl">{step.number}</span>
                         </div>
                       </div>
+                    </div>
 
-                      {/* Círculo central na timeline */}
-                      <div className="absolute lg:relative left-0 lg:left-auto top-0 lg:top-auto z-10 lg:z-20 flex-shrink-0">
-                        <div className="relative">
-                          <div className="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-primary via-primary to-accent shadow-2xl flex items-center justify-center ring-4 ring-background">
-                            <span className="text-white font-bold text-xl md:text-2xl">{step.number}</span>
-                          </div>
-                          {/* Glow effect */}
-                          <div className="absolute inset-0 rounded-full bg-primary/30 blur-xl"></div>
-                        </div>
+                    {/* Conteúdo */}
+                    <div className="flex-1">
+                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                        {step.title}
+                      </h3>
+                      <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                        {step.description}
+                      </p>
+                    </div>
+
+                    {/* Barra de progresso decorativa */}
+                    <div className="mt-6 pt-6 border-t border-border/10">
+                      <div className="h-1.5 bg-muted rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-500 group-hover:w-full"
+                          style={{ width: `${(index + 1) * 25}%` }}
+                        ></div>
                       </div>
-
-                      {/* Espaço vazio no lado oposto (apenas desktop) */}
-                      <div className="flex-1 hidden lg:block"></div>
                     </div>
                   </div>
-                ))}
+
+                  {/* Seta conectora (mobile/tablet) */}
+                  {index < processoSteps.length - 1 && (
+                    <div className="lg:hidden flex justify-center my-4">
+                      <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                        <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Stats decorativo */}
+            <div className="mt-12 md:mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+              <div className="bg-card rounded-2xl p-4 md:p-6 border border-primary/20 text-center">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">Rápido</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Onboarding ágil</div>
+              </div>
+              <div className="bg-card rounded-2xl p-4 md:p-6 border border-accent/20 text-center">
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">Simples</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Processo claro</div>
+              </div>
+              <div className="bg-card rounded-2xl p-4 md:p-6 border border-primary/20 text-center">
+                <div className="text-2xl md:text-3xl font-bold text-primary mb-1">Eficiente</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Resultados rápidos</div>
+              </div>
+              <div className="bg-card rounded-2xl p-4 md:p-6 border border-accent/20 text-center">
+                <div className="text-2xl md:text-3xl font-bold text-accent mb-1">Contínuo</div>
+                <div className="text-xs md:text-sm text-muted-foreground">Evolução constante</div>
               </div>
             </div>
           </div>
