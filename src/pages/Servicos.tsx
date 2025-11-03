@@ -112,9 +112,8 @@ const Servicos = () => {
       </section>
 
       {/* O que entregamos Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
-        <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -130,27 +129,27 @@ const Servicos = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
               {servicos.map((servico, index) => {
                 const Icon = servico.icon;
                 return (
                   <div 
                     key={index}
-                    className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 backdrop-blur-sm group"
+                    className="bg-card rounded-2xl p-6 md:p-8 border border-border/20 shadow-lg hover:shadow-xl transition-all duration-300 hover:border-primary/30"
                   >
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center mb-4 sm:mb-6 bg-accent/10 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-7 h-7 sm:w-8 sm:h-8 text-accent" />
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-6 h-6 md:w-7 md:h-7 text-accent" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-lg md:text-xl font-bold text-primary mb-2">
+                          {servico.title}
+                        </h3>
+                      </div>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-primary">
-                      {servico.title}
-                    </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
+                    <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                       {servico.description}
                     </p>
-                    <button className="flex items-center gap-2 text-sm sm:text-base font-semibold text-primary group-hover:gap-3 transition-all">
-                      Saiba mais
-                      <ArrowRight className="w-4 h-4" />
-                    </button>
                   </div>
                 );
               })}
@@ -202,14 +201,12 @@ const Servicos = () => {
       </section>
 
       {/* Como funciona Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>
-        <div className="absolute top-1/4 right-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/4 left-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-accent/10 rounded-full blur-3xl"></div>
+      <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10 sm:mb-12">
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
                 Processo
               </div>
@@ -219,28 +216,28 @@ const Servicos = () => {
             </div>
 
             <div className="relative">
-              {/* Timeline line */}
-              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary"></div>
+              {/* Timeline line - solid color */}
+              <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-primary/20"></div>
 
-              <div className="space-y-8 md:space-y-12">
+              <div className="space-y-6 md:space-y-8">
                 {processoSteps.map((step, index) => (
                   <div 
                     key={index}
-                    className={`flex flex-col md:flex-row gap-6 md:gap-8 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                    className={`flex flex-col md:flex-row gap-4 md:gap-6 items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                   >
                     <div className={`flex-1 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                      <div className="bg-gradient-to-br from-card to-card/50 rounded-2xl p-6 sm:p-8 border border-border/20 shadow-xl backdrop-blur-sm hover:shadow-2xl transition-all duration-300">
-                        <h3 className="text-xl sm:text-2xl font-bold text-primary mb-3">
+                      <div className="bg-card rounded-xl p-5 md:p-6 border border-border/20 shadow-lg">
+                        <h3 className="text-lg md:text-xl font-bold text-primary mb-2">
                           {step.title}
                         </h3>
-                        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                           {step.description}
                         </p>
                       </div>
                     </div>
 
                     <div className="relative z-10">
-                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xl sm:text-2xl shadow-2xl">
+                      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full bg-primary flex items-center justify-center text-white font-bold text-lg md:text-xl shadow-lg">
                         {step.number}
                       </div>
                     </div>
