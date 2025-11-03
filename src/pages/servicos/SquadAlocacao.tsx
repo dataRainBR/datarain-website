@@ -116,8 +116,8 @@ const SquadAlocacao = () => {
                     className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl backdrop-blur-sm hover:border-primary/30 transition-all duration-300"
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-7 h-7 text-accent" />
+                      <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-7 h-7 text-primary" />
                       </div>
                       <div>
                         <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
@@ -154,7 +154,7 @@ const SquadAlocacao = () => {
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {/* Alocação de Profissionais */}
-              <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 md:p-10 border border-border/20 shadow-2xl backdrop-blur-sm">
+              <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
                 <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
                   <Users className="w-8 h-8 text-primary" />
                 </div>
@@ -167,11 +167,11 @@ const SquadAlocacao = () => {
               </div>
 
               {/* Squads Multidisciplinares */}
-              <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 md:p-10 border border-border/20 shadow-2xl backdrop-blur-sm">
-                <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-accent" />
+              <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+                  <Target className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-accent mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                   Squads Multidisciplinares
                 </h3>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed mb-4">
@@ -209,8 +209,8 @@ const SquadAlocacao = () => {
                     key={index}
                     className="bg-gradient-to-br from-card to-card/50 rounded-2xl p-6 md:p-8 border border-border/20 shadow-xl hover:shadow-2xl hover:border-primary/30 transition-all duration-300 flex flex-col items-center justify-center text-center group backdrop-blur-sm"
                   >
-                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-8 h-8 md:w-10 md:h-10 text-accent" />
+                    <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <Icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                     </div>
                     <h3 className="text-base md:text-lg font-bold text-primary">
                       {area.name}
@@ -259,7 +259,7 @@ const SquadAlocacao = () => {
                         <div className="text-7xl md:text-8xl font-bold text-primary/10 leading-none">
                           {step.number}
                         </div>
-                        <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-accent to-accent/70 shadow-xl flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary shadow-xl flex items-center justify-center">
                           <span className="text-white font-bold text-xl md:text-2xl">{step.number}</span>
                         </div>
                       </div>
@@ -267,7 +267,7 @@ const SquadAlocacao = () => {
 
                     {/* Conteúdo */}
                     <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">
                         {step.title}
                       </h3>
                       <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
