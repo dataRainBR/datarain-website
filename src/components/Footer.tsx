@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Footer = () => {
   return (
-    <footer className="bg-muted/30 text-foreground py-20 border-t border-border">
+    <footer className="bg-muted/50 text-foreground py-20 border-t border-border">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
           <div className="md:col-span-4 space-y-6">
