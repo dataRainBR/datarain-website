@@ -168,7 +168,6 @@ const Solucoes = () => {
                 description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
                 image={migracaoImage}
                 link="/solucoes/cloud/migracao"
-                color="#3893af"
                 benefits={[
                   "Migration Evaluator e Hub",
                   "Framework AWS MAP",
@@ -180,7 +179,6 @@ const Solucoes = () => {
                 description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
                 image={finopsImage}
                 link="/solucoes/cloud/finops"
-                color="#3893af"
                 benefits={[
                   "Redução média de 30% nos custos",
                   "Dashboards em tempo real",
@@ -192,7 +190,6 @@ const Solucoes = () => {
                 description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
                 image={devopsImage}
                 link="/solucoes/cloud/devops"
-                color="#3893af"
                 benefits={[
                   "Deploy em minutos, não semanas",
                   "Automação completa de pipelines",
@@ -204,7 +201,6 @@ const Solucoes = () => {
                 description="A base para crescer com segurança e eficiência. Diagnóstico completo da arquitetura atual com roadmap técnico e quick wins para evolução sustentável."
                 image={arquiteturaCloudImage}
                 link="/solucoes/cloud/arquitetura"
-                color="#3893af"
                 benefits={[
                   "Diagnóstico de performance e custos",
                   "Roadmap técnico priorizado",
@@ -227,7 +223,6 @@ const Solucoes = () => {
                 description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
                 image={landingZoneImage}
                 link="/solucoes/cybersecurity/landing-zone"
-                color="#8b5cf6"
                 benefits={[
                   "Segurança desde o design",
                   "Compliance automático",
@@ -239,7 +234,6 @@ const Solucoes = () => {
                 description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
                 image={gaasImage}
                 link="/solucoes/cybersecurity/gaas"
-                color="#8b5cf6"
                 benefits={[
                   "Compliance contínuo",
                   "Políticas automatizadas",
@@ -251,7 +245,6 @@ const Solucoes = () => {
                 description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
                 image={assessmentImage}
                 link="/solucoes/cybersecurity/assessment"
-                color="#8b5cf6"
                 benefits={[
                   "Análise completa de riscos",
                   "Recomendações priorizadas",
@@ -274,7 +267,6 @@ const Solucoes = () => {
                 description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
                 image={arquiteturaDadosImage}
                 link="/solucoes/dados/arquitetura"
-                color="#f78504"
                 benefits={[
                   "Data lakes otimizados",
                   "ETL pipelines automatizados",
@@ -286,7 +278,6 @@ const Solucoes = () => {
                 description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
                 image={pilotImage}
                 link="/solucoes/dados/pilot-ai"
-                color="#f78504"
                 benefits={[
                   "MVP em 4-8 semanas",
                   "ROI mensurável",
@@ -298,7 +289,6 @@ const Solucoes = () => {
                 description="Automatize processos de RH com inteligência artificial. Recrutamento inteligente, análise de performance e gestão de talentos."
                 image={lyaImage}
                 link="/solucoes/dados/lya"
-                color="#f78504"
                 benefits={[
                   "Recrutamento 70% mais rápido",
                   "Análise preditiva de turnover",
@@ -310,7 +300,6 @@ const Solucoes = () => {
                 description="IA para gestão pública municipal. Atendimento ao cidadão, gestão de processos e análise de dados urbanos."
                 image={monalisaImage}
                 link="/solucoes/dados/monalisa"
-                color="#f78504"
                 benefits={[
                   "Atendimento 24/7 automatizado",
                   "Análise de dados urbanos",
@@ -322,7 +311,6 @@ const Solucoes = () => {
                 description="Inteligência artificial para gestão clínica. Triagem inteligente, agendamento automatizado e análise de prontuários."
                 image={claraImage}
                 link="/solucoes/dados/clara"
-                color="#f78504"
                 benefits={[
                   "Triagem inteligente de pacientes",
                   "Agendamento otimizado",

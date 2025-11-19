@@ -151,7 +151,6 @@ const Cloud = () => {
               description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
               image={migracaoImage}
               link="/solucoes/cloud/migracao"
-              color="#3893af"
               benefits={[
                 "Migration Evaluator e Hub",
                 "Framework AWS MAP",
@@ -164,7 +163,6 @@ const Cloud = () => {
               description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
               image={finopsImage}
               link="/solucoes/cloud/finops"
-              color="#3893af"
               benefits={[
                 "Redução média de 30% nos custos",
                 "Dashboards em tempo real",
@@ -177,7 +175,6 @@ const Cloud = () => {
               description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
               image={devopsImage}
               link="/solucoes/cloud/devops"
-              color="#3893af"
               benefits={[
                 "Deploy em minutos, não semanas",
                 "Automação completa de pipelines",
@@ -190,7 +187,6 @@ const Cloud = () => {
               description="A base para crescer com segurança e eficiência. Diagnóstico completo da arquitetura atual com roadmap técnico e quick wins para evolução sustentável."
               image={arquiteturaImage}
               link="/solucoes/cloud/arquitetura"
-              color="#3893af"
               benefits={[
                 "Diagnóstico de performance e custos",
                 "Roadmap técnico priorizado",

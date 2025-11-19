@@ -152,7 +152,6 @@ const Dados = () => {
               description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
               image={arquiteturaImage}
               link="/solucoes/dados/arquitetura"
-              color="#f78504"
               benefits={[
                 "Data lakes otimizados",
                 "ETL pipelines automatizados",
@@ -165,7 +164,6 @@ const Dados = () => {
               description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
               image={pilotImage}
               link="/solucoes/dados/pilot-ai"
-              color="#f78504"
               benefits={[
                 "MVP em 4-8 semanas",
                 "ROI mensurável",
@@ -178,7 +176,6 @@ const Dados = () => {
               description="Automatize processos de RH com inteligência artificial. Recrutamento inteligente, análise de performance e gestão de talentos."
               image={lyaImage}
               link="/solucoes/dados/lya"
-              color="#f78504"
               benefits={[
                 "Recrutamento 70% mais rápido",
                 "Análise preditiva de turnover",
@@ -191,7 +188,6 @@ const Dados = () => {
               description="IA para gestão pública municipal. Atendimento ao cidadão, gestão de processos e análise de dados urbanos."
               image={monalisaImage}
               link="/solucoes/dados/monalisa"
-              color="#f78504"
               benefits={[
                 "Atendimento 24/7 automatizado",
                 "Análise de dados urbanos",
@@ -204,7 +200,6 @@ const Dados = () => {
               description="Inteligência artificial para gestão clínica. Triagem inteligente, agendamento automatizado e análise de prontuários."
               image={claraImage}
               link="/solucoes/dados/clara"
-              color="#f78504"
               benefits={[
                 "Triagem inteligente de pacientes",
                 "Agendamento otimizado",
