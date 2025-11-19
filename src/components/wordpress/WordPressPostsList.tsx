@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { WordPressPostCard } from "./WordPressPostCard";
 import { useWordPressPostsSmart, useWordPressCategories } from "@/hooks/useWordPress";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, Search, Filter } from "lucide-react";
+import { Loader2, Search, Filter, ChevronDown } from "lucide-react";
 import { WordPressPost } from "@/lib/wordpress";
 
 interface WordPressPostsListProps {
@@ -25,6 +25,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
+  const [allPosts, setAllPosts] = useState<WordPressPost[]>([]);
   
   // Se categoryFilter for fornecido, não permitir alteração via filtro interno
   const isExternalCategoryFilter = !!categoryFilter;
@@ -63,21 +64,52 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   // Fetch categories for the filter dropdown
   const { data: categories } = useWordPressCategories();
 
+  // Accumulate posts when new data arrives
+  useEffect(() => {
+    if (posts && posts.length > 0) {
+      if (currentPage === 1) {
+        // Reset accumulated posts when filters change or on first load
+        setAllPosts(posts);
+      } else {
+        // Append new posts to existing ones
+        setAllPosts(prev => {
+          // Prevent duplicates by checking post IDs
+          const existingIds = new Set(prev.map(p => p.id));
+          const newPosts = posts.filter(p => !existingIds.has(p.id));
+          return [...prev, ...newPosts];
+        });
+      }
+    } else if (posts && currentPage === 1) {
+      // If no posts and it's page 1, reset
+      setAllPosts([]);
+    }
+  }, [posts, currentPage]);
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setCurrentPage(1);
+    setAllPosts([]); // Clear accumulated posts
   };
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value === "all" ? undefined : parseInt(value));
     setCurrentPage(1);
+    setAllPosts([]); // Clear accumulated posts
   };
 
   const handleClearFilters = () => {
     setSelectedCategory(undefined);
     setSearchTerm("");
     setCurrentPage(1);
+    setAllPosts([]); // Clear accumulated posts
   };
+
+  const handleLoadMore = () => {
+    setCurrentPage(prev => prev + 1);
+  };
+
+  // Check if there are more posts to load
+  const hasMorePosts = posts && posts.length === postsPerPage;
 
   if (error) {
     return (
@@ -144,59 +176,63 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
         </Card>
       )}
 
-      {/* Loading */}
-      {isLoading && (
+      {/* Loading inicial */}
+      {isLoading && currentPage === 1 && (
         <div className="flex justify-center p-8">
           <Loader2 className="h-8 w-8 animate-spin" />
         </div>
       )}
 
-      {/* Posts */}
-      {posts && posts.length > 0 && (
+      {/* Posts Grid */}
+      {allPosts && allPosts.length > 0 && (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {posts.map((post) => (
+            {allPosts.map((post) => (
               <WordPressPostCard key={post.id} post={post} showExcerpt={true} showCategories={false} showTags={false} />
             ))}
           </div>
 
-          {/* Paginação */}
-          <div className="flex justify-center gap-2">
-            <Button
-              variant="outline"
-              onClick={() => setCurrentPage((prev) => Math.max(1, prev - 1))}
-              disabled={currentPage === 1}
-            >
-              Anterior
-            </Button>
+          {/* Botão Carregar Mais */}
+          {hasMorePosts && (
+            <div className="flex justify-center mt-8">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={handleLoadMore}
+                disabled={isFetching}
+                className="gap-2 min-w-[200px]"
+              >
+                {isFetching ? (
+                  <>
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                    Carregando...
+                  </>
+                ) : (
+                  <>
+                    Carregar Mais
+                    <ChevronDown className="h-4 w-4" />
+                  </>
+                )}
+              </Button>
+            </div>
+          )}
 
-            <span className="flex items-center px-4 py-2 text-sm">Página {currentPage}</span>
-
-            <Button
-              variant="outline"
-              onClick={() => setCurrentPage((prev) => prev + 1)}
-              disabled={posts.length < postsPerPage}
-            >
-              Próxima
-            </Button>
+          {/* Contador de posts carregados */}
+          <div className="text-center mt-4">
+            <p className="text-sm text-muted-foreground">
+              Mostrando {allPosts.length} {allPosts.length === 1 ? 'post' : 'posts'}
+            </p>
           </div>
         </>
       )}
 
       {/* Sem posts */}
-      {posts && posts.length === 0 && !isLoading && (
+      {allPosts && allPosts.length === 0 && !isLoading && (
         <Card>
           <CardContent className="p-8 text-center">
             <p className="text-muted-foreground">Nenhum post encontrado com os filtros atuais.</p>
           </CardContent>
         </Card>
-      )}
-
-      {/* Indicador de carregamento para paginação */}
-      {isFetching && !isLoading && (
-        <div className="flex justify-center p-4">
-          <Loader2 className="h-6 w-6 animate-spin" />
-        </div>
       )}
     </div>
   );
