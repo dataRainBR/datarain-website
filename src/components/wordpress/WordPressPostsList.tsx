@@ -26,7 +26,8 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [allPosts, setAllPosts] = useState<WordPressPost[]>([]);
-  
+  const [isAutoLoading, setIsAutoLoading] = useState(true);
+
   // Se categoryFilter for fornecido, não permitir alteração via filtro interno
   const isExternalCategoryFilter = !!categoryFilter;
   const [selectedCategory, setSelectedCategory] = useState<number | undefined>(
@@ -38,13 +39,13 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
 
   // Determine category slug and exclusions
   const categorySlug = typeof categoryFilter === "string" ? categoryFilter : undefined;
-  
+
   // Define exclusões automáticas baseadas na categoria
   let excludeCategorySlugs: string[] = [];
-  if (categorySlug === 'blog') {
-    excludeCategorySlugs = ['cases'];
-  } else if (categorySlug === 'cases') {
-    excludeCategorySlugs = ['blog'];
+  if (categorySlug === "blog") {
+    excludeCategorySlugs = ["cases"];
+  } else if (categorySlug === "cases") {
+    excludeCategorySlugs = ["blog"];
   }
 
   // Use the smart hook with automatic exclusions
@@ -72,10 +73,10 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
         setAllPosts(posts);
       } else {
         // Append new posts to existing ones
-        setAllPosts(prev => {
+        setAllPosts((prev) => {
           // Prevent duplicates by checking post IDs
-          const existingIds = new Set(prev.map(p => p.id));
-          const newPosts = posts.filter(p => !existingIds.has(p.id));
+          const existingIds = new Set(prev.map((p) => p.id));
+          const newPosts = posts.filter((p) => !existingIds.has(p.id));
           return [...prev, ...newPosts];
         });
       }
@@ -85,16 +86,29 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     }
   }, [posts, currentPage]);
 
+  // Auto-carregar páginas adicionais até atingir postsPerPage
+  useEffect(() => {
+    if (!isLoading && !isFetching && isAutoLoading) {
+      if (allPosts.length < postsPerPage && posts && posts.length > 0) {
+        setCurrentPage((prev) => prev + 1);
+      } else {
+        setIsAutoLoading(false);
+      }
+    }
+  }, [isLoading, isFetching, isAutoLoading, allPosts.length, posts, postsPerPage]);
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setCurrentPage(1);
     setAllPosts([]); // Clear accumulated posts
+    setIsAutoLoading(true);
   };
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value === "all" ? undefined : parseInt(value));
     setCurrentPage(1);
     setAllPosts([]); // Clear accumulated posts
+    setIsAutoLoading(true);
   };
 
   const handleClearFilters = () => {
@@ -102,10 +116,11 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     setSearchTerm("");
     setCurrentPage(1);
     setAllPosts([]); // Clear accumulated posts
+    setIsAutoLoading(true);
   };
 
   const handleLoadMore = () => {
-    setCurrentPage(prev => prev + 1);
+    setCurrentPage((prev) => prev + 1);
   };
 
   // Check if there are more posts to load
@@ -188,7 +203,13 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allPosts.map((post) => (
-              <WordPressPostCard key={post.id} post={post} showExcerpt={true} showCategories={false} showTags={false} />
+              <WordPressPostCard
+                key={post.id}
+                post={post}
+                showExcerpt={true}
+                showCategories={false}
+                showTags={false}
+              />
             ))}
           </div>
 
@@ -220,7 +241,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
           {/* Contador de posts carregados */}
           <div className="text-center mt-4">
             <p className="text-sm text-muted-foreground">
-              Mostrando {allPosts.length} {allPosts.length === 1 ? 'post' : 'posts'}
+              Mostrando {allPosts.length} {allPosts.length === 1 ? "post" : "posts"}
             </p>
           </div>
         </>
