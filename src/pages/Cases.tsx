@@ -64,7 +64,7 @@ const Cases = () => {
 
           {/* WordPress Posts List */}
           <div className="bg-card/50 backdrop-blur-sm rounded-3xl border border-border/20 shadow-xl p-6 sm:p-8 md:p-10">
-            <WordPressPostsList postsPerPage={20} showSearch={false} showFilters={true} categoryFilter="cases" />
+            <WordPressPostsList postsPerPage={20} showSearch={false} showFilters={true} />
           </div>
         </div>
       </main>
