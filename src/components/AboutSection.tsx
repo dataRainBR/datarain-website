@@ -3,38 +3,37 @@ import aboutImage from "@/assets/about-datarain.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-background relative overflow-hidden">
+    <section className="py-24 md:py-32 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background"></div>
-      <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-          <div className="space-y-6 md:space-y-8">
-            <div className="space-y-4">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-2">
+      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold">
                 Quem Somos
               </div>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                 Sobre a DataRain
               </h2>
-              <div className="w-16 h-1 bg-accent rounded-full"></div>
             </div>
             
-            <div className="space-y-4 md:space-y-5 text-foreground">
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed">
+            <div className="space-y-6 text-foreground">
+              <p className="text-lg md:text-xl leading-relaxed">
                 A DataRain é a parceira estratégica para empresas em tecnologia, 
                 entregando soluções em cloud, dados e inteligência artificial 
                 com segurança, agilidade e foco em resultados.
               </p>
-              <p className="text-base md:text-lg lg:text-xl leading-relaxed">
+              <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
                 Trabalhamos lado a lado com nossos clientes para impulsionar 
                 inovação, acelerar a tomada de decisões e apoiar o crescimento 
                 dos negócios.
               </p>
             </div>
             
-            <Button variant="hero" size="lg" className="mt-4 md:mt-6 sm:text-lg">
-              Conheça Nossa História
+            <Button variant="default" size="lg" asChild>
+              <a href="/quem-somos">Conheça Nossa História</a>
             </Button>
           </div>
           

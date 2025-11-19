@@ -150,7 +150,6 @@ const Cybersecurity = () => {
               description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
               image={landingZoneImage}
               link="/solucoes/cybersecurity/landing-zone"
-              color="#8b5cf6"
               benefits={[
                 "Segurança desde o design",
                 "Compliance automático",
@@ -163,7 +162,6 @@ const Cybersecurity = () => {
               description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
               image={gaasImage}
               link="/solucoes/cybersecurity/gaas"
-              color="#8b5cf6"
               benefits={[
                 "Compliance contínuo",
                 "Políticas automatizadas",
@@ -176,7 +174,6 @@ const Cybersecurity = () => {
               description="Antecipe riscos e desbloqueie governança. Diagnóstico completo com análise de conformidade, identificação de vulnerabilidades e roadmap priorizado."
               image={assessmentImage}
               link="/solucoes/cybersecurity/assessment"
-              color="#8b5cf6"
               benefits={[
                 "Conformidade LGPD, ISO 27001, PCI-DSS",
                 "Vulnerabilidades críticas mapeadas",
