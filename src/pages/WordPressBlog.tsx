@@ -135,7 +135,7 @@ const WordPressBlog: React.FC = () => {
             </div>
             
             <WordPressPostsList
-              postsPerPage={9}
+              postsPerPage={20}
               showSearch={false}
               showFilters={false}
               categoryFilter="blog"
