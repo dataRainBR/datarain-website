@@ -29,11 +29,9 @@ const Solucoes = () => {
 
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-32 md:pt-36">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
               Soluções que <br />
-              <span className="bg-gradient-to-r from-[#3893af] via-[#f78504] to-primary bg-clip-text text-transparent">
-                Transformam Negócios
-              </span>
+              Transformam Negócios
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
               Cloud, Dados e Segurança integrados em um ecossistema completo para sua transformação digital
@@ -42,19 +40,19 @@ const Solucoes = () => {
             {/* Global Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
               <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">300+</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">300+</div>
                 <div className="text-sm text-muted-foreground">Projetos Entregues</div>
               </div>
               <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">15+</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">15+</div>
                 <div className="text-sm text-muted-foreground">Anos de Experiência</div>
               </div>
               <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">50+</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
                 <div className="text-sm text-muted-foreground">Especialistas</div>
               </div>
               <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-[#3893af] to-[#f78504] bg-clip-text text-transparent mb-2">98%</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">98%</div>
                 <div className="text-sm text-muted-foreground">Satisfação</div>
               </div>
             </div>
