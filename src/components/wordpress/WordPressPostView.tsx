@@ -10,6 +10,7 @@ import { ptBR } from 'date-fns/locale';
 import { Loader2 } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import WordPressRelatedPosts from '@/components/wordpress/WordPressRelatedPosts';
+import { sanitizeHTML } from '@/lib/sanitize';
 
 const WordPressPostView: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -134,14 +135,14 @@ const WordPressPostView: React.FC = () => {
             {/* Post title */}
             <h1 
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.title.rendered) }}
             />
 
             {/* Post excerpt if available */}
             {post.excerpt.rendered && (
               <div 
                 className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.excerpt.rendered) }}
               />
             )}
           </div>
@@ -168,7 +169,7 @@ const WordPressPostView: React.FC = () => {
                     <CardContent className="p-4 bg-muted/50">
                       <p 
                         className="text-sm text-muted-foreground text-center italic"
-                        dangerouslySetInnerHTML={{ __html: media.caption.rendered }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeHTML(media.caption.rendered) }}
                       />
                     </CardContent>
                   )}
@@ -189,7 +190,7 @@ const WordPressPostView: React.FC = () => {
                            prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm
                            prose-pre:bg-muted prose-pre:border
                            prose-img:rounded-lg prose-img:shadow-lg"
-                  dangerouslySetInnerHTML={{ __html: post.content.rendered }}
+                  dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.content.rendered) }}
                 />
               </CardContent>
             </Card>

@@ -8,6 +8,7 @@ import { WordPressPost } from '@/lib/wordpress';
 import { useWordPressMedia } from '@/hooks/useWordPress';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
+import { sanitizeHTML, stripHTML } from '@/lib/sanitize';
 
 interface WordPressPostCardProps {
   post: WordPressPost;
@@ -35,9 +36,6 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
     }
   };
 
-  const stripHtml = (html: string) => {
-    return html.replace(/<[^>]*>/g, '');
-  };
 
   return (
     <Card className="h-full flex flex-col">
@@ -59,14 +57,13 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
         
         <CardTitle 
           className="line-clamp-2 text-lg"
-          dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+          dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.title.rendered) }}
         />
         
         {showExcerpt && post.excerpt.rendered && (
-          <CardDescription 
-            className="line-clamp-3 mt-2"
-            dangerouslySetInnerHTML={{ __html: stripHtml(post.excerpt.rendered) }}
-          />
+          <CardDescription className="line-clamp-3 mt-2">
+            {stripHTML(post.excerpt.rendered)}
+          </CardDescription>
         )}
       </CardHeader>
 
