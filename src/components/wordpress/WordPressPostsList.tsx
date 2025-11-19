@@ -109,7 +109,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   };
 
   // Check if there are more posts to load
-  const hasMorePosts = posts && posts.length === postsPerPage;
+  const hasMorePosts = posts && posts.length > 0;
 
   if (error) {
     return (
