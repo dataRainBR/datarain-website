@@ -64,11 +64,17 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   // Fetch categories for the filter dropdown
   const { data: categories } = useWordPressCategories();
 
+  // Debug: Log posts received from API
+  console.log('[WordPressPosts] API returned:', posts?.length, 'posts, currentPage:', currentPage);
+
   // Accumulate posts when new data arrives
   useEffect(() => {
+    console.log('[WordPressPosts] useEffect triggered - posts:', posts?.length, 'currentPage:', currentPage, 'allPosts:', allPosts.length);
+    
     if (posts && posts.length > 0) {
       if (currentPage === 1) {
         // Reset accumulated posts when filters change or on first load
+        console.log('[WordPressPosts] Setting allPosts to', posts.length, 'posts (page 1)');
         setAllPosts(posts);
       } else {
         // Append new posts to existing ones
@@ -76,6 +82,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
           // Prevent duplicates by checking post IDs
           const existingIds = new Set(prev.map((p) => p.id));
           const newPosts = posts.filter((p) => !existingIds.has(p.id));
+          console.log('[WordPressPosts] Appending', newPosts.length, 'new posts to', prev.length, 'existing');
           return [...prev, ...newPosts];
         });
       }
