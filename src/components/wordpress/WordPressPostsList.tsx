@@ -26,6 +26,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [allPosts, setAllPosts] = useState<WordPressPost[]>([]);
+  const [isAutoLoading, setIsAutoLoading] = useState(true);
 
   // Se categoryFilter for fornecido, não permitir alteração via filtro interno
   const isExternalCategoryFilter = !!categoryFilter;
@@ -47,14 +48,14 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     excludeCategorySlugs = ["blog"];
   }
 
-  // Use the smart hook - request postsPerPage posts directly from WordPress API
+  // WordPress API returns max 10 posts per page, so request 10 at a time
   const {
     data: posts,
     isLoading,
     error,
     isFetching,
   } = useWordPressPostsSmart({
-    per_page: postsPerPage, // Request this many posts directly from WordPress
+    per_page: 10, // WordPress default limit
     page: currentPage,
     search: activeSearchTerm || undefined,
     categorySlug,
@@ -64,51 +65,55 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   // Fetch categories for the filter dropdown
   const { data: categories } = useWordPressCategories();
 
-  // Debug: Log posts received from API
-  console.log('[WordPressPosts] API returned:', posts?.length, 'posts, currentPage:', currentPage);
-
   // Accumulate posts when new data arrives
   useEffect(() => {
-    console.log('[WordPressPosts] useEffect triggered - posts:', posts?.length, 'currentPage:', currentPage, 'allPosts:', allPosts.length);
-    
     if (posts && posts.length > 0) {
       if (currentPage === 1) {
-        // Reset accumulated posts when filters change or on first load
-        console.log('[WordPressPosts] Setting allPosts to', posts.length, 'posts (page 1)');
         setAllPosts(posts);
       } else {
-        // Append new posts to existing ones
         setAllPosts((prev) => {
-          // Prevent duplicates by checking post IDs
           const existingIds = new Set(prev.map((p) => p.id));
           const newPosts = posts.filter((p) => !existingIds.has(p.id));
-          console.log('[WordPressPosts] Appending', newPosts.length, 'new posts to', prev.length, 'existing');
           return [...prev, ...newPosts];
         });
       }
     } else if (posts && currentPage === 1) {
-      // If no posts and it's page 1, reset
       setAllPosts([]);
     }
   }, [posts, currentPage]);
 
+  // Auto-load more pages until we reach postsPerPage
+  useEffect(() => {
+    if (!isLoading && !isFetching && isAutoLoading && posts) {
+      // If we haven't reached the desired count and there are more posts available
+      if (allPosts.length < postsPerPage && posts.length > 0) {
+        setCurrentPage((prev) => prev + 1);
+      } else {
+        setIsAutoLoading(false);
+      }
+    }
+  }, [isLoading, isFetching, isAutoLoading, allPosts.length, posts, postsPerPage]);
+
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setCurrentPage(1);
-    setAllPosts([]); // Clear accumulated posts
+    setAllPosts([]);
+    setIsAutoLoading(true);
   };
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value === "all" ? undefined : parseInt(value));
     setCurrentPage(1);
-    setAllPosts([]); // Clear accumulated posts
+    setAllPosts([]);
+    setIsAutoLoading(true);
   };
 
   const handleClearFilters = () => {
     setSelectedCategory(undefined);
     setSearchTerm("");
     setCurrentPage(1);
-    setAllPosts([]); // Clear accumulated posts
+    setAllPosts([]);
+    setIsAutoLoading(true);
   };
 
   const handleLoadMore = () => {
