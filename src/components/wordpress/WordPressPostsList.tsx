@@ -26,7 +26,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [allPosts, setAllPosts] = useState<WordPressPost[]>([]);
-  const [isAutoLoading, setIsAutoLoading] = useState(true);
+  const [loadedPostsCount, setLoadedPostsCount] = useState(0);
 
   // Se categoryFilter for fornecido, não permitir alteração via filtro interno
   const isExternalCategoryFilter = !!categoryFilter;
@@ -48,6 +48,9 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     excludeCategorySlugs = ["blog"];
   }
 
+  // Calculate how many pages we need to load (WordPress returns max 10 per page)
+  const pagesNeeded = Math.ceil(postsPerPage / 10);
+
   // WordPress API returns max 10 posts per page, so request 10 at a time
   const {
     data: posts,
@@ -65,47 +68,47 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   // Fetch categories for the filter dropdown
   const { data: categories } = useWordPressCategories();
 
-  // Accumulate posts when new data arrives
+  // Accumulate posts when new data arrives and auto-load next page if needed
   useEffect(() => {
     if (posts && posts.length > 0) {
       if (currentPage === 1) {
         setAllPosts(posts);
+        setLoadedPostsCount(posts.length);
+        // Auto-load next page if we need more posts
+        if (posts.length < postsPerPage && currentPage < pagesNeeded) {
+          setCurrentPage(2);
+        }
       } else {
         setAllPosts((prev) => {
           const existingIds = new Set(prev.map((p) => p.id));
           const newPosts = posts.filter((p) => !existingIds.has(p.id));
-          return [...prev, ...newPosts];
+          const combined = [...prev, ...newPosts];
+          setLoadedPostsCount(combined.length);
+          // Auto-load next page if we still need more posts
+          if (combined.length < postsPerPage && currentPage < pagesNeeded && posts.length > 0) {
+            setCurrentPage((prev) => prev + 1);
+          }
+          return combined;
         });
       }
     } else if (posts && currentPage === 1) {
       setAllPosts([]);
+      setLoadedPostsCount(0);
     }
-  }, [posts, currentPage]);
-
-  // Auto-load more pages until we reach postsPerPage
-  useEffect(() => {
-    if (!isLoading && !isFetching && isAutoLoading && posts) {
-      // If we haven't reached the desired count and there are more posts available
-      if (allPosts.length < postsPerPage && posts.length > 0) {
-        setCurrentPage((prev) => prev + 1);
-      } else {
-        setIsAutoLoading(false);
-      }
-    }
-  }, [isLoading, isFetching, isAutoLoading, allPosts.length, posts, postsPerPage]);
+  }, [posts, currentPage, postsPerPage, pagesNeeded]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setCurrentPage(1);
     setAllPosts([]);
-    setIsAutoLoading(true);
+    setLoadedPostsCount(0);
   };
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value === "all" ? undefined : parseInt(value));
     setCurrentPage(1);
     setAllPosts([]);
-    setIsAutoLoading(true);
+    setLoadedPostsCount(0);
   };
 
   const handleClearFilters = () => {
@@ -113,7 +116,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     setSearchTerm("");
     setCurrentPage(1);
     setAllPosts([]);
-    setIsAutoLoading(true);
+    setLoadedPostsCount(0);
   };
 
   const handleLoadMore = () => {
