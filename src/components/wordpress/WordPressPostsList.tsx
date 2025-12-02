@@ -26,7 +26,6 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
   const [allPosts, setAllPosts] = useState<WordPressPost[]>([]);
-  const [isAutoLoading, setIsAutoLoading] = useState(true);
 
   // Se categoryFilter for fornecido, não permitir alteração via filtro interno
   const isExternalCategoryFilter = !!categoryFilter;
@@ -48,14 +47,14 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     excludeCategorySlugs = ["blog"];
   }
 
-  // Use the smart hook with automatic exclusions
+  // Use the smart hook - request postsPerPage posts directly from WordPress API
   const {
     data: posts,
     isLoading,
     error,
     isFetching,
   } = useWordPressPostsSmart({
-    per_page: postsPerPage,
+    per_page: postsPerPage, // Request this many posts directly from WordPress
     page: currentPage,
     search: activeSearchTerm || undefined,
     categorySlug,
@@ -86,29 +85,16 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     }
   }, [posts, currentPage]);
 
-  // Auto-carregar páginas adicionais até atingir postsPerPage
-  useEffect(() => {
-    if (!isLoading && !isFetching && isAutoLoading) {
-      if (allPosts.length < postsPerPage && posts && posts.length > 0) {
-        setCurrentPage((prev) => prev + 1);
-      } else {
-        setIsAutoLoading(false);
-      }
-    }
-  }, [isLoading, isFetching, isAutoLoading, allPosts.length, posts, postsPerPage]);
-
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     setCurrentPage(1);
     setAllPosts([]); // Clear accumulated posts
-    setIsAutoLoading(true);
   };
 
   const handleCategoryChange = (value: string) => {
     setSelectedCategory(value === "all" ? undefined : parseInt(value));
     setCurrentPage(1);
     setAllPosts([]); // Clear accumulated posts
-    setIsAutoLoading(true);
   };
 
   const handleClearFilters = () => {
@@ -116,7 +102,6 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     setSearchTerm("");
     setCurrentPage(1);
     setAllPosts([]); // Clear accumulated posts
-    setIsAutoLoading(true);
   };
 
   const handleLoadMore = () => {
