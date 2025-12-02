@@ -1,130 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { WordPressPostCard } from "./WordPressPostCard";
-import { useWordPressPostsSmart, useWordPressCategories } from "@/hooks/useWordPress";
+import { useWordPressPosts } from "@/hooks/useWordPressPosts";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Loader2, Search, Filter, ChevronDown } from "lucide-react";
-import { WordPressPost } from "@/lib/wordpress";
+import { Loader2, Search, Filter } from "lucide-react";
 
 interface WordPressPostsListProps {
   postsPerPage?: number;
   showSearch?: boolean;
   showFilters?: boolean;
-  categoryFilter?: number | string;
   searchTerm?: string;
 }
 
 export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
-  postsPerPage = 6,
+  postsPerPage = 20,
   showSearch = true,
-  showFilters = true,
-  categoryFilter,
+  showFilters = false,
   searchTerm: externalSearchTerm,
 }) => {
-  const [currentPage, setCurrentPage] = useState(1);
   const [searchTerm, setSearchTerm] = useState("");
-  const [allPosts, setAllPosts] = useState<WordPressPost[]>([]);
-  const [loadedPostsCount, setLoadedPostsCount] = useState(0);
-
-  // Se categoryFilter for fornecido, não permitir alteração via filtro interno
-  const isExternalCategoryFilter = !!categoryFilter;
-  const [selectedCategory, setSelectedCategory] = useState<number | undefined>(
-    typeof categoryFilter === "number" ? categoryFilter : undefined,
-  );
-
-  // Use external search term if provided, otherwise use internal state
   const activeSearchTerm = externalSearchTerm || searchTerm;
 
-  // Determine category slug and exclusions
-  const categorySlug = typeof categoryFilter === "string" ? categoryFilter : undefined;
-
-  // Define exclusões automáticas baseadas na categoria
-  let excludeCategorySlugs: string[] = [];
-  if (categorySlug === "blog") {
-    excludeCategorySlugs = ["cases"];
-  } else if (categorySlug === "cases") {
-    excludeCategorySlugs = ["blog"];
-  }
-
-  // Calculate how many pages we need to load (WordPress returns max 10 per page)
-  const pagesNeeded = Math.ceil(postsPerPage / 10);
-
-  // WordPress API returns max 10 posts per page, so request 10 at a time
-  const {
-    data: posts,
-    isLoading,
-    error,
-    isFetching,
-  } = useWordPressPostsSmart({
-    per_page: 10, // WordPress default limit
-    page: currentPage,
+  // Simple hook that fetches all posts at once
+  const { data: posts, isLoading, error } = useWordPressPosts({
+    totalPosts: postsPerPage,
     search: activeSearchTerm || undefined,
-    categorySlug,
-    excludeCategorySlugs,
   });
-
-  // Fetch categories for the filter dropdown
-  const { data: categories } = useWordPressCategories();
-
-  // Accumulate posts when new data arrives and auto-load next page if needed
-  useEffect(() => {
-    if (posts && posts.length > 0) {
-      if (currentPage === 1) {
-        setAllPosts(posts);
-        setLoadedPostsCount(posts.length);
-        // Auto-load next page if we need more posts
-        if (posts.length < postsPerPage && currentPage < pagesNeeded) {
-          setCurrentPage(2);
-        }
-      } else {
-        setAllPosts((prev) => {
-          const existingIds = new Set(prev.map((p) => p.id));
-          const newPosts = posts.filter((p) => !existingIds.has(p.id));
-          const combined = [...prev, ...newPosts];
-          setLoadedPostsCount(combined.length);
-          // Auto-load next page if we still need more posts
-          if (combined.length < postsPerPage && currentPage < pagesNeeded && posts.length > 0) {
-            setCurrentPage((prev) => prev + 1);
-          }
-          return combined;
-        });
-      }
-    } else if (posts && currentPage === 1) {
-      setAllPosts([]);
-      setLoadedPostsCount(0);
-    }
-  }, [posts, currentPage, postsPerPage, pagesNeeded]);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    setCurrentPage(1);
-    setAllPosts([]);
-    setLoadedPostsCount(0);
+    // Search is reactive, just updating state triggers refetch
   };
-
-  const handleCategoryChange = (value: string) => {
-    setSelectedCategory(value === "all" ? undefined : parseInt(value));
-    setCurrentPage(1);
-    setAllPosts([]);
-    setLoadedPostsCount(0);
-  };
-
-  const handleClearFilters = () => {
-    setSelectedCategory(undefined);
-    setSearchTerm("");
-    setCurrentPage(1);
-    setAllPosts([]);
-    setLoadedPostsCount(0);
-  };
-
-  const handleLoadMore = () => {
-    setCurrentPage((prev) => prev + 1);
-  };
-
-  // Check if there are more posts to load
-  const hasMorePosts = posts && posts.length > 0;
 
   if (error) {
     return (
@@ -138,71 +45,43 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
 
   return (
     <div className="space-y-6">
-      {/* Filtros e Busca */}
-      {(showSearch || showFilters) && (
+      {/* Search */}
+      {showSearch && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Filter className="h-5 w-5" />
-              Filtros e Busca
+              Busca
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
-            {/* Busca */}
-            {showSearch && (
-              <form onSubmit={handleSearch} className="flex gap-2">
-                <Input
-                  placeholder="Buscar posts..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="flex-1"
-                />
-                <Button type="submit" size="sm">
-                  <Search className="h-4 w-4" />
-                </Button>
-              </form>
-            )}
-
-            {/* Filtros */}
-            {showFilters && !isExternalCategoryFilter && (
-              <div className="flex gap-4 flex-wrap">
-                <div className="flex-1 min-w-[200px]">
-                  <Select value={selectedCategory?.toString() || "all"} onValueChange={handleCategoryChange}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Filtrar por categoria" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="all">Todas as categorias</SelectItem>
-                      {categories?.map((category) => (
-                        <SelectItem key={category.id} value={category.id.toString()}>
-                          {category.name}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <Button variant="outline" size="sm" onClick={handleClearFilters}>
-                  Limpar filtros
-                </Button>
-              </div>
-            )}
+          <CardContent>
+            <form onSubmit={handleSearch} className="flex gap-2">
+              <Input
+                placeholder="Buscar posts..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="flex-1"
+              />
+              <Button type="submit" size="sm">
+                <Search className="h-4 w-4" />
+              </Button>
+            </form>
           </CardContent>
         </Card>
       )}
 
-      {/* Loading inicial */}
-      {isLoading && currentPage === 1 && (
+      {/* Loading */}
+      {isLoading && (
         <div className="flex justify-center p-8">
           <Loader2 className="h-8 w-8 animate-spin" />
         </div>
       )}
 
       {/* Posts Grid */}
-      {allPosts && allPosts.length > 0 && (
+      {posts && posts.length > 0 && (
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allPosts.map((post) => (
+            {posts.map((post) => (
               <WordPressPostCard
                 key={post.id}
                 post={post}
@@ -213,45 +92,20 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
             ))}
           </div>
 
-          {/* Botão Carregar Mais */}
-          {hasMorePosts && (
-            <div className="flex justify-center mt-8">
-              <Button
-                variant="outline"
-                size="lg"
-                onClick={handleLoadMore}
-                disabled={isFetching}
-                className="gap-2 min-w-[200px]"
-              >
-                {isFetching ? (
-                  <>
-                    <Loader2 className="h-4 w-4 animate-spin" />
-                    Carregando...
-                  </>
-                ) : (
-                  <>
-                    Carregar Mais
-                    <ChevronDown className="h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </div>
-          )}
-
-          {/* Contador de posts carregados */}
+          {/* Post counter */}
           <div className="text-center mt-4">
             <p className="text-sm text-muted-foreground">
-              Mostrando {allPosts.length} {allPosts.length === 1 ? "post" : "posts"}
+              Mostrando {posts.length} {posts.length === 1 ? "post" : "posts"}
             </p>
           </div>
         </>
       )}
 
-      {/* Sem posts */}
-      {allPosts && allPosts.length === 0 && !isLoading && (
+      {/* No posts */}
+      {posts && posts.length === 0 && !isLoading && (
         <Card>
           <CardContent className="p-8 text-center">
-            <p className="text-muted-foreground">Nenhum post encontrado com os filtros atuais.</p>
+            <p className="text-muted-foreground">Nenhum post encontrado.</p>
           </CardContent>
         </Card>
       )}
