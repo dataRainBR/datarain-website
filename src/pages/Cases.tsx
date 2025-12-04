@@ -66,9 +66,10 @@ const Cases = () => {
           {/* WordPress Posts List - apenas categoria de Cases */}
           <div className="bg-card/50 backdrop-blur-sm rounded-3xl border border-border/20 shadow-xl p-6 sm:p-8 md:p-10">
             <WordPressPostsList
-              postsPerPage={20}
+              postsPerPage={100}
               showSearch={false}
               showFilters={true}
+              fetchAll
               categoryIds={WORDPRESS_CONFIG.CASES_CATEGORY_ID ? [WORDPRESS_CONFIG.CASES_CATEGORY_ID] : undefined}
             />
           </div>

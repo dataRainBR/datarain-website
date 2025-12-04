@@ -136,10 +136,11 @@ const WordPressBlog: React.FC = () => {
             </div>
             
             <WordPressPostsList
-              postsPerPage={20}
+              postsPerPage={100}
               showSearch={false}
               showFilters={false}
               searchTerm={activeSearch}
+              fetchAll
               // Se configurado, filtra apenas a categoria de Blog no WordPress
               categoryIds={WORDPRESS_CONFIG.BLOG_CATEGORY_ID ? [WORDPRESS_CONFIG.BLOG_CATEGORY_ID] : undefined}
             />

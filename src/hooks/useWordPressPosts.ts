@@ -14,6 +14,12 @@ interface UseWordPressPostsParams {
    * Ex.: categoria "blog" e categoria "case" possuem IDs diferentes.
    */
   categories?: number[];
+  /**
+   * Quando true, ignora o totalPosts e busca **todos** os posts
+   * disponíveis na API (usando o header X-WP-Total para descobrir
+   * quantos posts existem).
+   */
+  fetchAll?: boolean;
 }
 
 /**
@@ -27,6 +33,7 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
     totalPosts = 20,
     search,
     categories,
+    fetchAll = false,
   } = options;
 
   // WordPress retorna no máximo 10 posts por página por padrão.
@@ -35,9 +42,75 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
   const pagesNeeded = Math.ceil(totalPosts / perPage);
 
   return useQuery({
-    queryKey: ['wordpress-posts-multi', totalPosts, search, categories],
+    queryKey: ['wordpress-posts-multi', totalPosts, search, categories, fetchAll],
     queryFn: async () => {
-      // Array com os números das páginas que vamos buscar
+      // Se o modo for "buscar todos", usamos o header X-WP-Total
+      // para descobrir quantos posts existem no WordPress.
+      if (fetchAll) {
+        const baseParams = new URLSearchParams();
+        baseParams.append('per_page', '1');
+        baseParams.append('page', '1');
+
+        if (search) {
+          baseParams.append('search', search);
+        }
+
+        if (categories && categories.length > 0) {
+          baseParams.append('categories', categories.join(','));
+        }
+
+        const firstResponse = await fetch(getWordPressUrl(`/posts?${baseParams.toString()}`));
+        if (!firstResponse.ok) {
+          console.error('Error fetching first page to determine total posts');
+          return [];
+        }
+
+        const totalHeader = firstResponse.headers.get('X-WP-Total');
+        const totalAvailable = totalHeader ? parseInt(totalHeader, 10) : 0;
+
+        // Se não houver posts, retorna vazio.
+        if (!totalAvailable || Number.isNaN(totalAvailable)) {
+          return [];
+        }
+
+        // Calcula quantas páginas precisamos buscar com per_page fixo.
+        const totalPages = Math.ceil(totalAvailable / perPage);
+
+        const pageNumbersAll = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+        const fetchAllPromises = pageNumbersAll.map(async (page) => {
+          const params = new URLSearchParams();
+          params.append('per_page', perPage.toString());
+          params.append('page', page.toString());
+
+          if (search) {
+            params.append('search', search);
+          }
+
+          if (categories && categories.length > 0) {
+            params.append('categories', categories.join(','));
+          }
+
+          const response = await fetch(getWordPressUrl(`/posts?${params.toString()}`));
+          if (!response.ok) {
+            console.error(`Error fetching page ${page}`);
+            return [];
+          }
+
+          return response.json() as Promise<WordPressPost[]>;
+        });
+
+        const allResults = await Promise.all(fetchAllPromises);
+        const allPosts = allResults.flat();
+
+        const uniquePosts = allPosts.filter(
+          (post, index, self) => index === self.findIndex((p) => p.id === post.id),
+        );
+
+        return uniquePosts;
+      }
+
+      // Modo "limitado": busca apenas o total solicitado.
       const pageNumbers = Array.from({ length: pagesNeeded }, (_, i) => i + 1);
 
       // Buscar todas as páginas em paralelo

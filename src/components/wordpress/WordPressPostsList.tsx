@@ -16,6 +16,11 @@ interface WordPressPostsListProps {
    * Ex.: [ID_BLOG] para a página de blog, [ID_CASES] para a página de cases.
    */
   categoryIds?: number[];
+  /**
+   * Quando true, ignora `postsPerPage` e busca todos os posts
+   * disponíveis (usando o header X-WP-Total do WordPress).
+   */
+  fetchAll?: boolean;
 }
 
 export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
@@ -24,6 +29,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   showFilters = false,
   searchTerm: externalSearchTerm,
   categoryIds,
+  fetchAll = false,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const activeSearchTerm = externalSearchTerm || searchTerm;
@@ -33,6 +39,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     totalPosts: postsPerPage,
     search: activeSearchTerm || undefined,
     categories: categoryIds,
+    fetchAll,
   });
 
   const handleSearch = (e: React.FormEvent) => {
