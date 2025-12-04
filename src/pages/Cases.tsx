@@ -70,7 +70,11 @@ const Cases = () => {
               showSearch={false}
               showFilters={true}
               fetchAll
-              categoryIds={WORDPRESS_CONFIG.CASES_CATEGORY_ID ? [WORDPRESS_CONFIG.CASES_CATEGORY_ID] : undefined}
+              // Busca automaticamente a categoria "cases" pelo slug
+              // Tenta "cases" primeiro, depois "case" se não encontrar
+              // Se não encontrar nenhum, tenta usar o ID configurado no .env como fallback
+              categorySlug="cases"
+              categoryIds={WORDPRESS_CONFIG.CASES_CATEGORY_ID && WORDPRESS_CONFIG.CASES_CATEGORY_ID > 0 ? [WORDPRESS_CONFIG.CASES_CATEGORY_ID] : undefined}
             />
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { getWordPressUrl, WordPressPost } from '@/lib/wordpress';
+import { getCategoryIdBySlug } from '@/hooks/useWordPress';
 
 interface UseWordPressPostsParams {
   /**
@@ -12,8 +13,18 @@ interface UseWordPressPostsParams {
   /**
    * IDs das categorias que devem ser filtradas na API.
    * Ex.: categoria "blog" e categoria "case" possuem IDs diferentes.
+   * 
+   * NOTA: Se `categorySlug` for fornecido, ele terá prioridade sobre `categories`.
    */
   categories?: number[];
+  /**
+   * Slug da categoria (ex.: "blog", "cases", "case").
+   * O hook buscará automaticamente o ID da categoria pelo slug.
+   * 
+   * Útil quando você não sabe o ID da categoria, mas sabe o slug.
+   * Tem prioridade sobre `categories` se ambos forem fornecidos.
+   */
+  categorySlug?: string;
   /**
    * Quando true, ignora o totalPosts e busca **todos** os posts
    * disponíveis na API (usando o header X-WP-Total para descobrir
@@ -33,6 +44,7 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
     totalPosts = 20,
     search,
     categories,
+    categorySlug,
     fetchAll = false,
   } = options;
 
@@ -42,8 +54,20 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
   const pagesNeeded = Math.ceil(totalPosts / perPage);
 
   return useQuery({
-    queryKey: ['wordpress-posts-multi', totalPosts, search, categories, fetchAll],
+    queryKey: ['wordpress-posts-multi', totalPosts, search, categories, categorySlug, fetchAll],
     queryFn: async () => {
+      // Se categorySlug foi fornecido, buscar o ID automaticamente
+      let resolvedCategoryIds: number[] | undefined = categories;
+      
+      if (categorySlug) {
+        const categoryId = await getCategoryIdBySlug(categorySlug);
+        if (categoryId) {
+          resolvedCategoryIds = [categoryId];
+        } else {
+          console.warn(`Categoria com slug "${categorySlug}" não encontrada no WordPress`);
+          resolvedCategoryIds = undefined;
+        }
+      }
       // Se o modo for "buscar todos", usamos o header X-WP-Total
       // para descobrir quantos posts existem no WordPress.
       if (fetchAll) {
@@ -55,8 +79,8 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
           baseParams.append('search', search);
         }
 
-        if (categories && categories.length > 0) {
-          baseParams.append('categories', categories.join(','));
+        if (resolvedCategoryIds && resolvedCategoryIds.length > 0) {
+          baseParams.append('categories', resolvedCategoryIds.join(','));
         }
 
         const firstResponse = await fetch(getWordPressUrl(`/posts?${baseParams.toString()}`));
@@ -87,8 +111,8 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
             params.append('search', search);
           }
 
-          if (categories && categories.length > 0) {
-            params.append('categories', categories.join(','));
+          if (resolvedCategoryIds && resolvedCategoryIds.length > 0) {
+            params.append('categories', resolvedCategoryIds.join(','));
           }
 
           const response = await fetch(getWordPressUrl(`/posts?${params.toString()}`));
@@ -124,8 +148,8 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
         }
 
         // Filtro por categorias (ex.: apenas "blog" ou apenas "cases")
-        if (categories && categories.length > 0) {
-          params.append('categories', categories.join(','));
+        if (resolvedCategoryIds && resolvedCategoryIds.length > 0) {
+          params.append('categories', resolvedCategoryIds.join(','));
         }
 
         const response = await fetch(getWordPressUrl(`/posts?${params.toString()}`));

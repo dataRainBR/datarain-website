@@ -141,8 +141,10 @@ const WordPressBlog: React.FC = () => {
               showFilters={false}
               searchTerm={activeSearch}
               fetchAll
-              // Se configurado, filtra apenas a categoria de Blog no WordPress
-              categoryIds={WORDPRESS_CONFIG.BLOG_CATEGORY_ID ? [WORDPRESS_CONFIG.BLOG_CATEGORY_ID] : undefined}
+              // Busca automaticamente a categoria "blog" pelo slug
+              // Se não encontrar "blog", tenta usar o ID configurado no .env como fallback
+              categorySlug="blog"
+              categoryIds={WORDPRESS_CONFIG.BLOG_CATEGORY_ID && WORDPRESS_CONFIG.BLOG_CATEGORY_ID > 0 ? [WORDPRESS_CONFIG.BLOG_CATEGORY_ID] : undefined}
             />
           </div>
         </div>

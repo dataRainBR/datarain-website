@@ -14,8 +14,18 @@ interface WordPressPostsListProps {
   /**
    * IDs de categoria do WordPress a serem filtrados.
    * Ex.: [ID_BLOG] para a página de blog, [ID_CASES] para a página de cases.
+   * 
+   * NOTA: Se `categorySlug` for fornecido, ele terá prioridade sobre `categoryIds`.
    */
   categoryIds?: number[];
+  /**
+   * Slug da categoria (ex.: "blog", "cases", "case").
+   * O componente buscará automaticamente o ID da categoria pelo slug.
+   * 
+   * Útil quando você não sabe o ID da categoria, mas sabe o slug.
+   * Tem prioridade sobre `categoryIds` se ambos forem fornecidos.
+   */
+  categorySlug?: string;
   /**
    * Quando true, ignora `postsPerPage` e busca todos os posts
    * disponíveis (usando o header X-WP-Total do WordPress).
@@ -29,6 +39,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   showFilters = false,
   searchTerm: externalSearchTerm,
   categoryIds,
+  categorySlug,
   fetchAll = false,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -39,6 +50,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
     totalPosts: postsPerPage,
     search: activeSearchTerm || undefined,
     categories: categoryIds,
+    categorySlug,
     fetchAll,
   });
 
