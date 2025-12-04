@@ -3,6 +3,7 @@ import { WordPressPostsList } from "@/components/wordpress/WordPressPostsList";
 import { Briefcase } from "lucide-react";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
+import { WORDPRESS_CONFIG } from "@/config/wordpress.config";
 
 const Cases = () => {
   return (
@@ -62,9 +63,14 @@ const Cases = () => {
             </p>
           </div>
 
-          {/* WordPress Posts List */}
+          {/* WordPress Posts List - apenas categoria de Cases */}
           <div className="bg-card/50 backdrop-blur-sm rounded-3xl border border-border/20 shadow-xl p-6 sm:p-8 md:p-10">
-            <WordPressPostsList postsPerPage={20} showSearch={false} showFilters={true} />
+            <WordPressPostsList
+              postsPerPage={20}
+              showSearch={false}
+              showFilters={true}
+              categoryIds={WORDPRESS_CONFIG.CASES_CATEGORY_ID ? [WORDPRESS_CONFIG.CASES_CATEGORY_ID] : undefined}
+            />
           </div>
         </div>
       </main>

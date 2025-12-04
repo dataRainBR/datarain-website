@@ -8,6 +8,11 @@ export const WORDPRESS_CONFIG = {
   
   // Configurações de posts
   POSTS_PER_PAGE: parseInt(import.meta.env.VITE_WORDPRESS_POSTS_PER_PAGE || '6'),
+
+  // IDs de categorias principais (configuráveis via .env)
+  // Use isso para separar conteúdos por página (ex.: Blog x Cases)
+  BLOG_CATEGORY_ID: parseInt(import.meta.env.VITE_WORDPRESS_BLOG_CATEGORY_ID || '0'),
+  CASES_CATEGORY_ID: parseInt(import.meta.env.VITE_WORDPRESS_CASES_CATEGORY_ID || '0'),
   
   // Configurações de cache
   ENABLE_CACHE: import.meta.env.VITE_WORDPRESS_ENABLE_CACHE !== 'false',

@@ -2,29 +2,60 @@ import { useQuery } from '@tanstack/react-query';
 import { getWordPressUrl, WordPressPost } from '@/lib/wordpress';
 
 interface UseWordPressPostsParams {
-  totalPosts?: number; // How many posts to fetch total
+  /**
+   * Quantidade total de posts que queremos trazer da API,
+   * independente da quantidade por página que o WordPress retorna.
+   */
+  totalPosts?: number;
+  /** Termo de busca a ser aplicado na API do WordPress */
   search?: string;
+  /**
+   * IDs das categorias que devem ser filtradas na API.
+   * Ex.: categoria "blog" e categoria "case" possuem IDs diferentes.
+   */
+  categories?: number[];
 }
 
-// Simple hook that fetches multiple pages to get the desired number of posts
-export const useWordPressPosts = ({ totalPosts = 20, search }: UseWordPressPostsParams = {}) => {
-  // WordPress returns max 10 posts per page, calculate pages needed
-  const pagesNeeded = Math.ceil(totalPosts / 10);
+/**
+ * Hook responsável por buscar posts do WordPress, respeitando:
+ * - Paginação da API (por padrão o WP retorna 10 por página)
+ * - Filtro por categorias (para separar Blog x Cases)
+ * - Filtro por termo de busca
+ */
+export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
+  const {
+    totalPosts = 20,
+    search,
+    categories,
+  } = options;
+
+  // WordPress retorna no máximo 10 posts por página por padrão.
+  // Aqui calculamos quantas páginas precisamos buscar para atingir o total desejado.
+  const perPage = 10;
+  const pagesNeeded = Math.ceil(totalPosts / perPage);
 
   return useQuery({
-    queryKey: ['wordpress-posts-multi', totalPosts, search],
+    queryKey: ['wordpress-posts-multi', totalPosts, search, categories],
     queryFn: async () => {
-      // Create array of page numbers to fetch
+      // Array com os números das páginas que vamos buscar
       const pageNumbers = Array.from({ length: pagesNeeded }, (_, i) => i + 1);
-      
-      // Fetch all pages in parallel
+
+      // Buscar todas as páginas em paralelo
       const fetchPromises = pageNumbers.map(async (page) => {
         const params = new URLSearchParams();
-        params.append('per_page', '10');
+        params.append('per_page', perPage.toString());
         params.append('page', page.toString());
-        if (search) params.append('search', search);
-        
-        const response = await fetch(getWordPressUrl(`/posts?${params}`));
+
+        if (search) {
+          params.append('search', search);
+        }
+
+        // Filtro por categorias (ex.: apenas "blog" ou apenas "cases")
+        if (categories && categories.length > 0) {
+          params.append('categories', categories.join(','));
+        }
+
+        const response = await fetch(getWordPressUrl(`/posts?${params.toString()}`));
         if (!response.ok) {
           console.error(`Error fetching page ${page}`);
           return [];
@@ -32,20 +63,20 @@ export const useWordPressPosts = ({ totalPosts = 20, search }: UseWordPressPosts
         return response.json() as Promise<WordPressPost[]>;
       });
 
-      // Wait for all pages to load
+      // Espera todas as páginas carregarem
       const results = await Promise.all(fetchPromises);
-      
-      // Combine all posts into a single array
+
+      // Junta todos os posts em um único array
       const allPosts = results.flat();
-      
-      // Remove duplicates by ID (just in case)
+
+      // Remove duplicados por ID (por segurança)
       const uniquePosts = allPosts.filter(
-        (post, index, self) => index === self.findIndex(p => p.id === post.id)
+        (post, index, self) => index === self.findIndex((p) => p.id === post.id),
       );
 
-      // Return only the requested number of posts
+      // Retorna apenas a quantidade desejada
       return uniquePosts.slice(0, totalPosts);
     },
-    staleTime: 5 * 60 * 1000, // 5 minutes
+    staleTime: 5 * 60 * 1000, // 5 minutos
   });
 };

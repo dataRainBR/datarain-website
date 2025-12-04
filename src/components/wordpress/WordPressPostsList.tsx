@@ -11,6 +11,11 @@ interface WordPressPostsListProps {
   showSearch?: boolean;
   showFilters?: boolean;
   searchTerm?: string;
+  /**
+   * IDs de categoria do WordPress a serem filtrados.
+   * Ex.: [ID_BLOG] para a página de blog, [ID_CASES] para a página de cases.
+   */
+  categoryIds?: number[];
 }
 
 export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
@@ -18,14 +23,16 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   showSearch = true,
   showFilters = false,
   searchTerm: externalSearchTerm,
+  categoryIds,
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const activeSearchTerm = externalSearchTerm || searchTerm;
 
-  // Simple hook that fetches all posts at once
+  // Hook que busca todos os posts necessários de acordo com filtros
   const { data: posts, isLoading, error } = useWordPressPosts({
     totalPosts: postsPerPage,
     search: activeSearchTerm || undefined,
+    categories: categoryIds,
   });
 
   const handleSearch = (e: React.FormEvent) => {

@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { BookOpen, Search, TrendingUp, Clock, Users, ArrowRight } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import Footer from '@/components/Footer';
+import { WORDPRESS_CONFIG } from '@/config/wordpress.config';
 
 const WordPressBlog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -139,6 +140,8 @@ const WordPressBlog: React.FC = () => {
               showSearch={false}
               showFilters={false}
               searchTerm={activeSearch}
+              // Se configurado, filtra apenas a categoria de Blog no WordPress
+              categoryIds={WORDPRESS_CONFIG.BLOG_CATEGORY_ID ? [WORDPRESS_CONFIG.BLOG_CATEGORY_ID] : undefined}
             />
           </div>
         </div>
