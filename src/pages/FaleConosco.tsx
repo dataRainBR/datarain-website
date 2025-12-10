@@ -1,8 +1,37 @@
+import { useEffect } from "react";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
-import { Mail, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+
+declare global {
+  interface Window {
+    RDStationForms: new (formId: string, token: string) => { createForm: () => void };
+  }
+}
 
 const FaleConosco = () => {
+  useEffect(() => {
+    // Load RD Station script
+    const script = document.createElement('script');
+    script.src = 'https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js';
+    script.async = true;
+    script.onload = () => {
+      // Initialize form after script loads
+      if (window.RDStationForms) {
+        new window.RDStationForms('site-datarain-73a5ac52fca43b4abd57', 'null').createForm();
+      }
+    };
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      const existingScript = document.querySelector(`script[src="${script.src}"]`);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
@@ -49,23 +78,12 @@ const FaleConosco = () => {
                 Preencha o formulário abaixo e nossa equipe entrará em contato em breve.
               </p>
               
-              {/* RD Station Form Placeholder */}
+              {/* RD Station Form Container */}
               <div 
-                id="rd-station-form" 
-                className="min-h-[400px] bg-muted/30 rounded-xl border-2 border-dashed border-border flex items-center justify-center"
-              >
-                <div className="text-center p-8">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <Mail className="w-8 h-8 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground text-lg font-medium mb-2">
-                    Formulário RD Station
-                  </p>
-                  <p className="text-sm text-muted-foreground/70">
-                    Cole aqui o código embed do RD Station
-                  </p>
-                </div>
-              </div>
+                role="main"
+                id="site-datarain-73a5ac52fca43b4abd57" 
+                className="min-h-[300px]"
+              />
             </div>
           </div>
         </div>
