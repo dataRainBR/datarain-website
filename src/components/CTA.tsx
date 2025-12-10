@@ -15,12 +15,9 @@ const CTA = () => {
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
           Descubra como a DataRain pode ajudar sua empresa a alcançar novos patamares em tecnologia e inovação.
         </p>
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+        <div className="flex justify-center">
           <Button variant="accent" size="xl" asChild>
             <a href="/fale-conosco">Agendar Demonstração</a>
-          </Button>
-          <Button variant="outline" size="xl" className="border-2" asChild>
-            <a href="/fale-conosco">Fale com Especialista</a>
           </Button>
         </div>
       </div>
