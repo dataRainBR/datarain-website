@@ -698,7 +698,7 @@ const QuemSomos = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
       {/* Section com certificações AWS */}
-      <section className="py-20 relative overflow-hidden">
+      <section className="pt-20 pb-0 relative overflow-hidden">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -706,7 +706,7 @@ const QuemSomos = () => {
         />
         <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex justify-center">
+          <div className="flex justify-center items-end">
             <img 
               src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
               alt="Homem certificado AWS" 
