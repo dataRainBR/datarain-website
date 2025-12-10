@@ -27,7 +27,7 @@ const Solucoes = () => {
           <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/15 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-52 md:pt-60">
+        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-64 md:pt-72">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
               Soluções que <br />
