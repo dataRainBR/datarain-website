@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
@@ -816,7 +817,7 @@ const QuemSomos = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-16">
             {/* Cloud Card */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <Link to="/solucoes/cloud" className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
                 <div className="text-center space-y-6 flex flex-col flex-1">
@@ -832,10 +833,10 @@ const QuemSomos = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
             
             {/* Cybersecurity Card */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <Link to="/solucoes/cybersecurity" className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
                 <div className="text-center space-y-6 flex flex-col flex-1">
@@ -853,17 +854,17 @@ const QuemSomos = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
             
-            {/* AI & ML Card */}
-            <div className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            {/* Data & AI Card */}
+            <Link to="/solucoes/dados" className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
                 <div className="text-center space-y-6 flex flex-col flex-1">
                   <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                     <Brain className="w-8 h-8 text-white" />
                   </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">AI & ML</h4>
+                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">Data & AI</h4>
                   <p className="text-slate-600 leading-relaxed flex-1">
                     Inteligência artificial e machine learning para inovação empresarial
                   </p>
@@ -872,7 +873,7 @@ const QuemSomos = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
           
           {/* Quote destaque */}
