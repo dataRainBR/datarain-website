@@ -1,9 +1,8 @@
 import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ArrowLeft, Calendar, User, Tag, ExternalLink, Clock } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import { useWordPressPost, useWordPressMedia } from '@/hooks/useWordPress';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -32,11 +31,6 @@ const WordPressPostView: React.FC = () => {
     navigate('/blog');
   };
 
-  const handleGoToWordPress = () => {
-    if (post?.link) {
-      window.open(post.link, '_blank');
-    }
-  };
 
   if (isLoading) {
     return (
