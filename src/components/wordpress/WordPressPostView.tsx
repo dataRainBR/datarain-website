@@ -10,6 +10,7 @@ import { ptBR } from 'date-fns/locale';
 import { Loader2 } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import WordPressRelatedPosts from '@/components/wordpress/WordPressRelatedPosts';
+import Footer from '@/components/Footer';
 import { sanitizeHTML } from '@/lib/sanitize';
 
 const WordPressPostView: React.FC = () => {
@@ -192,39 +193,11 @@ const WordPressPostView: React.FC = () => {
             {/* Related Posts Carousel */}
             <WordPressRelatedPosts currentPostId={Number(id)} />
 
-            {/* Actions */}
-            <Card className="bg-muted/30">
-              <CardContent className="p-6">
-                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="text-center sm:text-left">
-                    <h3 className="font-semibold mb-1">Gostou do conteúdo?</h3>
-                    <p className="text-sm text-muted-foreground">Compartilhe ou acesse o post original no WordPress</p>
-                  </div>
-                  
-                  <div className="flex gap-3">
-                    <Button
-                      variant="outline"
-                      onClick={handleGoToWordPress}
-                      className="flex items-center gap-2"
-                    >
-                      <ExternalLink className="h-4 w-4" />
-                      Ver no WordPress
-                    </Button>
-                    
-                    <Button
-                      onClick={handleGoBack}
-                      className="flex items-center gap-2"
-                    >
-                      <ArrowLeft className="h-4 w-4" />
-                      Voltar ao blog
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 };
