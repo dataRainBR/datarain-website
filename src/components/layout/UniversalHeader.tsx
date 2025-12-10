@@ -131,24 +131,28 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                 </div>
 
                 {/* Desktop CTA */}
-                <Button 
-                  variant="default"
-                  size="sm" 
-                  className="shadow-xl backdrop-blur-sm hidden lg:flex"
-                >
-                  Fale Conosco
-                </Button>
-
-                {/* Mobile menu button & Mobile CTA */}
-                <div className="flex items-center gap-4 lg:hidden">
+                <Link to="/fale-conosco">
                   <Button 
                     variant="default"
                     size="sm" 
-                    className="shadow-xl backdrop-blur-sm"
+                    className="shadow-xl backdrop-blur-sm hidden lg:flex"
                   >
-                    <span className="hidden sm:inline">Fale Conosco</span>
-                    <span className="sm:hidden">Contato</span>
+                    Fale Conosco
                   </Button>
+                </Link>
+
+                {/* Mobile menu button & Mobile CTA */}
+                <div className="flex items-center gap-4 lg:hidden">
+                  <Link to="/fale-conosco">
+                    <Button 
+                      variant="default"
+                      size="sm" 
+                      className="shadow-xl backdrop-blur-sm"
+                    >
+                      <span className="hidden sm:inline">Fale Conosco</span>
+                      <span className="sm:hidden">Contato</span>
+                    </Button>
+                  </Link>
                   
                   <button
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
