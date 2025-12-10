@@ -5,6 +5,12 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
 import astronautImage from "@/assets/astronaut-venturelabs.png";
+import wagnerPhoto from "@/assets/team/wagner-andrade.jpg";
+import guilhermePhoto from "@/assets/team/guilherme-belinelo.jpg";
+import leandroPhoto from "@/assets/team/leandro-gotz.jpg";
+import pedroPhoto from "@/assets/team/pedro-guth.jpg";
+import thaisPhoto from "@/assets/team/thais-lino.jpg";
+import caioPhoto from "@/assets/team/caio-marini.jpg";
 import { 
   Cloud, 
   Shield, 
@@ -26,31 +32,31 @@ const QuemSomos = () => {
     {
       name: "Wagner Andrade",
       role: "CEO",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      image: wagnerPhoto,
       linkedin: "https://www.linkedin.com/in/wagnerandrades/"
     },
     {
       name: "Guilherme Belinelo",
       role: "CTO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      image: guilhermePhoto,
       linkedin: "https://www.linkedin.com/in/guilherme-belinelo-645330/"
     },
     {
       name: "Leandro Götz",
       role: "CPO",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
+      image: leandroPhoto,
       linkedin: "https://www.linkedin.com/in/leandrogotz/"
     },
     {
       name: "Pedro Guth",
       role: "Tech Lead",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      image: pedroPhoto,
       linkedin: "https://www.linkedin.com/in/pedroguth/"
     },
     {
       name: "Thais Lino",
       role: "Data Lead",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b29c?w=150&h=150&fit=crop&crop=face",
+      image: thaisPhoto,
       linkedin: "https://www.linkedin.com/in/thaislino/"
     },
     {
@@ -62,7 +68,7 @@ const QuemSomos = () => {
     {
       name: "Caio Marini",
       role: "Architecture Lead",
-      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+      image: caioPhoto,
       linkedin: "https://www.linkedin.com/in/caio-marini/"
     }
   ];
