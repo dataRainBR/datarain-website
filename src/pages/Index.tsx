@@ -1,5 +1,4 @@
 import heroBackground from "@/assets/hero-background.jpg";
-import awsCertifications from "@/assets/aws-certifications.png";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import AboutSection from "@/components/AboutSection";
 import CasesSection from "@/components/CasesSection";
