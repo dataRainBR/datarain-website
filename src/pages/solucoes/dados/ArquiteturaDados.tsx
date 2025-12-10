@@ -26,7 +26,7 @@ const ArquiteturaDados = () => {
               A chave para o sucesso em uma economia baseada em dados é ter as informações certas, no momento certo, nas mãos das pessoas certas.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contato" className="px-8 py-4 bg-[#f78504] text-white rounded-lg font-semibold hover:bg-[#d97004] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#f78504] text-white rounded-lg font-semibold hover:bg-[#d97004] transition-all hover:shadow-xl">
                 Falar com Especialista
               </a>
             </div>

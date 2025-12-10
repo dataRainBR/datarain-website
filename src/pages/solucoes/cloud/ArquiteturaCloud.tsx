@@ -26,7 +26,7 @@ const ArquiteturaCloud = () => {
               A base para crescer com segurança e eficiência. Antes de escalar, inovar ou migrar workloads para a nuvem, é preciso garantir que sua arquitetura está preparada para sustentar o que vem pela frente.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contato" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
                 Falar com Especialista
               </a>
             </div>
