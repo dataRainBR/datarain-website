@@ -80,7 +80,7 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Moderna e Humanizada */}
-      <header className="relative pt-32 md:pt-40 lg:pt-44 pb-20 md:pb-24 lg:pb-28 overflow-hidden bg-white">
+      <header className="relative pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-20 md:pb-24 lg:pb-28 overflow-hidden bg-white">
         {/* Modern Background with Large Splashes */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
@@ -102,7 +102,7 @@ const QuemSomos = () => {
               
               {/* Heading section */}
               <div className="space-y-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
                   Quem <span style={{ color: '#f78504' }}>Somos</span>
                 </h1>
                 
