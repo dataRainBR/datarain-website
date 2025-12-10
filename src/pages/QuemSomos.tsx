@@ -701,10 +701,10 @@ const QuemSomos = () => {
       <section className="pt-20 pb-0 relative overflow-hidden">
         {/* Background Image */}
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${awsCertificationsBg})` }}
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${awsCertificationsBg})`, backgroundColor: '#1e293b' }}
         />
-        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-black/10" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-center items-end">
             <img 
