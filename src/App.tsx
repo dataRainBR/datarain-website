@@ -34,6 +34,7 @@ import LYA from "./pages/solucoes/dados/LYA";
 import MonaLisa from "./pages/solucoes/dados/MonaLisa";
 import CLARA from "./pages/solucoes/dados/CLARA";
 import FaleConosco from "./pages/FaleConosco";
+import Privacidade from "./pages/Privacidade";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -70,6 +71,7 @@ const App = () => (
           <Route path="/fale-conosco" element={<FaleConosco />} />
           <Route path="/blog" element={<WordPressBlog />} />
           <Route path="/blog/:id" element={<WordPressPostView />} />
+          <Route path="/privacidade" element={<Privacidade />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

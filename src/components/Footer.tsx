@@ -9,8 +9,7 @@ const Footer = () => {
           <div className="md:col-span-4 space-y-6">
             <Logo variant="original" className="mb-6" />
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Parceira estratégica para empresas em tecnologia, 
-              entregando soluções em cloud, dados e inteligência artificial.
+              Parceira estratégica para empresas em tecnologia, entregando soluções em cloud, dados, cyber segurança e inteligência artificial.
             </p>
           </div>
           
@@ -18,7 +17,7 @@ const Footer = () => {
             <h3 className="text-base font-semibold mb-6 text-foreground">Soluções</h3>
             <ul className="space-y-4">
               <li><a href="/solucoes/cloud" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cloud</a></li>
-              <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors">Dados</a></li>
+              <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors">Dados & AI</a></li>
               <li><a href="/solucoes/cybersecurity" className="text-sm text-muted-foreground hover:text-primary transition-colors">Segurança</a></li>
             </ul>
           </div>
@@ -53,9 +52,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} DataRain. Todos os direitos reservados.
           </p>
           <div className="flex gap-8">
-            <a href="/termos" className="text-xs text-muted-foreground hover:text-primary transition-colors">Termos de Uso</a>
             <a href="/privacidade" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacidade</a>
-            <a href="/cookies" className="text-xs text-muted-foreground hover:text-primary transition-colors">Cookies</a>
           </div>
         </div>
       </div>
