@@ -1,35 +1,8 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
-import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
+import { Mail, MessageCircle } from "lucide-react";
 
 const FaleConosco = () => {
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "E-mail",
-      value: "contato@datarain.com.br",
-      description: "Respondemos em até 24h úteis"
-    },
-    {
-      icon: Phone,
-      title: "Telefone",
-      value: "+55 (11) 3456-7890",
-      description: "Seg a Sex, 9h às 18h"
-    },
-    {
-      icon: MapPin,
-      title: "Endereço",
-      value: "São Paulo, SP",
-      description: "Brasil"
-    },
-    {
-      icon: Clock,
-      title: "Horário",
-      value: "Segunda a Sexta",
-      description: "9h às 18h (Horário de Brasília)"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
@@ -61,109 +34,36 @@ const FaleConosco = () => {
         </div>
       </section>
 
-      {/* Main Content Section */}
+      {/* Form Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background via-primary/5 to-background"></div>
         <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+          <div className="max-w-3xl mx-auto">
+            <div className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-border/20 shadow-xl">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
+                Envie sua mensagem
+              </h2>
+              <p className="text-muted-foreground mb-8 text-center">
+                Preencha o formulário abaixo e nossa equipe entrará em contato em breve.
+              </p>
               
-              {/* Form Section */}
-              <div className="order-2 lg:order-1">
-                <div className="bg-card rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-border/20 shadow-xl">
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-                    Envie sua mensagem
-                  </h2>
-                  <p className="text-muted-foreground mb-8">
-                    Preencha o formulário abaixo e nossa equipe entrará em contato em breve.
+              {/* RD Station Form Placeholder */}
+              <div 
+                id="rd-station-form" 
+                className="min-h-[400px] bg-muted/30 rounded-xl border-2 border-dashed border-border flex items-center justify-center"
+              >
+                <div className="text-center p-8">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Mail className="w-8 h-8 text-primary" />
+                  </div>
+                  <p className="text-muted-foreground text-lg font-medium mb-2">
+                    Formulário RD Station
                   </p>
-                  
-                  {/* RD Station Form Placeholder */}
-                  <div 
-                    id="rd-station-form" 
-                    className="min-h-[400px] bg-muted/30 rounded-xl border-2 border-dashed border-border flex items-center justify-center"
-                  >
-                    <div className="text-center p-8">
-                      <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Mail className="w-8 h-8 text-primary" />
-                      </div>
-                      <p className="text-muted-foreground text-lg font-medium mb-2">
-                        Formulário RD Station
-                      </p>
-                      <p className="text-sm text-muted-foreground/70">
-                        Cole aqui o código embed do RD Station
-                      </p>
-                    </div>
-                  </div>
-                  
-                  {/* Uncomment and add your RD Station script below */}
-                  {/* 
-                  <script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-                  <script type="text/javascript">
-                    new RDStationForms('YOUR-FORM-ID', 'YOUR-PUBLIC-TOKEN').createForm();
-                  </script>
-                  */}
-                </div>
-              </div>
-
-              {/* Contact Info Section */}
-              <div className="order-1 lg:order-2">
-                <div className="space-y-6">
-                  <div>
-                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4">
-                      Informações de Contato
-                    </h2>
-                    <p className="text-muted-foreground text-lg">
-                      Escolha o canal mais conveniente para você ou preencha o formulário ao lado.
-                    </p>
-                  </div>
-
-                  <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-4 md:gap-6">
-                    {contactInfo.map((info, index) => {
-                      const Icon = info.icon;
-                      return (
-                        <div 
-                          key={index}
-                          className="bg-card rounded-2xl p-6 border border-border/20 shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300 group"
-                        >
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                              <Icon className="w-6 h-6 text-primary" />
-                            </div>
-                            <div>
-                              <h3 className="text-lg font-bold text-foreground mb-1">
-                                {info.title}
-                              </h3>
-                              <p className="text-primary font-medium">
-                                {info.value}
-                              </p>
-                              <p className="text-sm text-muted-foreground mt-1">
-                                {info.description}
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-
-                  {/* Additional CTA */}
-                  <div className="bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl p-6 md:p-8 border border-primary/20">
-                    <h3 className="text-xl font-bold text-foreground mb-3">
-                      Precisa de atendimento urgente?
-                    </h3>
-                    <p className="text-muted-foreground mb-4">
-                      Para clientes com contrato ativo, acesse nosso portal de suporte dedicado.
-                    </p>
-                    <a 
-                      href="/servicos/suporte" 
-                      className="inline-flex items-center text-primary font-semibold hover:underline"
-                    >
-                      Acessar Suporte →
-                    </a>
-                  </div>
+                  <p className="text-sm text-muted-foreground/70">
+                    Cole aqui o código embed do RD Station
+                  </p>
                 </div>
               </div>
             </div>
