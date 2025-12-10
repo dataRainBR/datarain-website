@@ -15,11 +15,23 @@ const ClientsSection = () => {
     { 
       src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qlh5euyua6", 
       alt: "Client logo 4" 
+    },
+    { 
+      src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1765374457/$wmkhjkw0nw", 
+      alt: "Client logo 5" 
+    },
+    { 
+      src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1765374457/$qrzdi5ftox", 
+      alt: "Client logo 6" 
+    },
+    { 
+      src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1765374457/$y257uj4zmvh", 
+      alt: "Client logo 7" 
     }
   ];
 
-  // Create 4 sets of logos for seamless animation
-  const logoSets = Array(4).fill(clientLogos).flat();
+  // Create 3 sets of logos for seamless animation
+  const logoSets = Array(3).fill(clientLogos).flat();
 
   return (
     <section className="py-16 md:py-20 bg-background">
