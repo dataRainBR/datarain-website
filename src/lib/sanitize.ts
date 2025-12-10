@@ -11,13 +11,21 @@ export const sanitizeHTML = (html: string): string => {
       'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 
       'img', 'blockquote', 'code', 'pre', 'span', 'div',
       'table', 'thead', 'tbody', 'tr', 'th', 'td',
-      'figure', 'figcaption', 'b', 'i', 'u', 's', 'sup', 'sub'
+      'figure', 'figcaption', 'b', 'i', 'u', 's', 'sup', 'sub',
+      // Video support
+      'iframe', 'video', 'source', 'embed', 'object', 'param'
     ],
     ALLOWED_ATTR: [
       'href', 'src', 'alt', 'title', 'class', 'id',
-      'target', 'rel', 'width', 'height'
+      'target', 'rel', 'width', 'height',
+      // Video/iframe attributes
+      'frameborder', 'allow', 'allowfullscreen', 'autoplay', 
+      'controls', 'loop', 'muted', 'playsinline', 'poster',
+      'preload', 'type', 'name', 'value', 'data'
     ],
     ALLOWED_URI_REGEXP: /^(?:(?:(?:f|ht)tps?|mailto|tel|callto|sms|cid|xmpp):|[^a-z]|[a-z+.\-]+(?:[^a-z+.\-:]|$))/i,
+    ADD_TAGS: ['iframe'],
+    ADD_ATTR: ['allow', 'allowfullscreen', 'frameborder', 'scrolling'],
   });
 };
 
