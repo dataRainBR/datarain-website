@@ -43,12 +43,16 @@ const ClientsSection = () => {
           <div className="overflow-hidden">
             <div className="marquee items-center gap-6 md:gap-8 lg:gap-12">
               {logoSets.map((logo, index) => (
-                <img 
+                <div 
                   key={index}
-                  src={logo.src} 
-                  alt={`${logo.alt} ${Math.floor(index / clientLogos.length) + 1}`} 
-                  className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" 
-                />
+                  className="h-12 sm:h-14 md:h-16 lg:h-20 w-24 sm:w-28 md:w-32 lg:w-40 flex-shrink-0 flex items-center justify-center"
+                >
+                  <img 
+                    src={logo.src} 
+                    alt={`${logo.alt} ${Math.floor(index / clientLogos.length) + 1}`} 
+                    className="max-h-full max-w-full object-contain opacity-80" 
+                  />
+                </div>
               ))}
             </div>
           </div>
