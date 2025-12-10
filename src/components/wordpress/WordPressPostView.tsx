@@ -154,28 +154,6 @@ const WordPressPostView: React.FC = () => {
         <div className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
             
-            {/* Featured image full width */}
-            {media && (
-              <div className="mb-12">
-                <Card className="overflow-hidden">
-                  <div className="aspect-video overflow-hidden">
-                    <img
-                      src={media.source_url}
-                      alt={media.alt_text || post.title.rendered}
-                      className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                  {media.caption.rendered && (
-                    <CardContent className="p-4 bg-muted/50">
-                      <p 
-                        className="text-sm text-muted-foreground text-center italic"
-                        dangerouslySetInnerHTML={{ __html: sanitizeHTML(media.caption.rendered) }}
-                      />
-                    </CardContent>
-                  )}
-                </Card>
-              </div>
-            )}
 
             {/* Post content */}
             <Card className="mb-12">
