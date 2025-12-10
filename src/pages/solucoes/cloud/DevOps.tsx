@@ -26,7 +26,7 @@ const DevOps = () => {
               A dataRain orgulha-se de ajudar empresas a alcançarem todo o potencial de seus negócios através de soluções tecnológicas inovadoras. Nossa nova oferta de DevOps irá revolucionar a forma como você desenvolve, implanta e opera softwares.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contato" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
                 Falar com Especialista
               </a>
             </div>

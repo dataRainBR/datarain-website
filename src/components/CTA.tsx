@@ -17,10 +17,10 @@ const CTA = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
           <Button variant="accent" size="xl" asChild>
-            <a href="/contato">Agendar Demonstração</a>
+            <a href="/fale-conosco">Agendar Demonstração</a>
           </Button>
           <Button variant="outline" size="xl" className="border-2" asChild>
-            <a href="/contato">Fale com Especialista</a>
+            <a href="/fale-conosco">Fale com Especialista</a>
           </Button>
         </div>
       </div>

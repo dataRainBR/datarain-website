@@ -103,8 +103,8 @@ const Servicos = () => {
               <p className="text-lg sm:text-xl text-muted-foreground/90 max-w-3xl mx-auto mb-8">
                 Trabalhando junto com seu time e deixando espaço para ele focar em novos desafios.
               </p>
-              <Button variant="hero" size="lg" className="sm:text-lg">
-                Falar com um Especialista
+              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+                <a href="/fale-conosco">Falar com um Especialista</a>
               </Button>
             </div>
           </div>
@@ -311,8 +311,8 @@ const Servicos = () => {
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
                 Fale com a DataRain e descubra como os Serviços Gerenciados podem trazer mais segurança, eficiência e inovação para o seu negócio.
               </p>
-              <Button variant="hero" size="lg" className="sm:text-lg">
-                Quero falar com um especialista →
+              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+                <a href="/fale-conosco">Quero falar com um especialista →</a>
               </Button>
             </div>
           </div>

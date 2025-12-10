@@ -26,7 +26,7 @@ const FinOps = () => {
               Otimizar custos na nuvem nunca foi tão fácil. Com a Gestão de FinOps da dataRain, você obtém visibilidade completa dos seus gastos na nuvem e implementa estratégias eficientes para reduzir custos sem comprometer o desempenho.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contato" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
                 Falar com Especialista
               </a>
             </div>
