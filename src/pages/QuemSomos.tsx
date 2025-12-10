@@ -698,7 +698,7 @@ const QuemSomos = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
       {/* Section com certificações AWS */}
-      <section className="pt-20 pb-0 relative overflow-hidden">
+      <section className="pt-32 pb-0 relative overflow-hidden min-h-[400px]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-top bg-no-repeat"
