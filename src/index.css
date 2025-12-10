@@ -354,3 +354,30 @@ All colors MUST be HSL.
   padding: 0.2em 0.4em;
   border-radius: 0.25em;
 }
+
+/* Video and iframe responsive styling */
+.wordpress-content iframe,
+.wordpress-content video,
+.wordpress-content embed,
+.wordpress-content object {
+  max-width: 100%;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 0.5rem;
+  margin: 1.5em 0;
+}
+
+.wordpress-content .wp-block-embed,
+.wordpress-content .wp-block-video {
+  margin: 1.5em 0;
+}
+
+.wordpress-content .wp-block-embed__wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.wordpress-content .wp-block-embed__wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
