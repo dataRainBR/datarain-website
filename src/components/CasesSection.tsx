@@ -120,11 +120,6 @@ export default function CasesSection() {
                     
                     {/* Container glassmorphism */}
                     <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-white/10">
-                      {/* Padrões decorativos */}
-                      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-bl-full"></div>
-                      <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-accent/20 to-transparent rounded-tr-full"></div>
-                      <div className="absolute top-1/2 right-1/4 w-32 h-32 bg-white/5 rounded-full blur-2xl"></div>
-                      
                       <div className="relative z-10 p-8 md:p-10 lg:p-12 min-h-[400px] md:min-h-[450px] flex flex-col justify-between">
                         <div>
                           {/* Número do case */}
@@ -145,12 +140,11 @@ export default function CasesSection() {
                         
                         <button 
                           onClick={() => handleReadMore(caseStudy.slug, caseStudy.id)}
-                          className="text-accent hover:text-white font-semibold text-base md:text-lg inline-flex items-center gap-2 transition-all duration-300 bg-white/10 hover:bg-white/20 px-6 py-3 rounded-xl backdrop-blur-sm border border-white/10 hover:border-white/30 self-start"
+                          className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start"
                         >
-                          <span className="hidden sm:inline">Leia o case completo</span>
-                          <span className="sm:hidden">Ver case</span>
-                          <svg className="w-4 h-4 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                          <span>Leia o case completo</span>
+                          <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                           </svg>
                         </button>
                       </div>
