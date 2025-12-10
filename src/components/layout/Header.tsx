@@ -96,8 +96,9 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                   variant="default"
                   size="sm" 
                   className="shadow-xl backdrop-blur-sm hidden lg:flex"
+                  asChild
                 >
-                  Fale Conosco
+                  <a href="/fale-conosco">Fale Conosco</a>
                 </Button>
 
                 {/* Mobile menu button & Mobile CTA */}
@@ -106,9 +107,12 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                     variant="default"
                     size="sm" 
                     className="shadow-xl backdrop-blur-sm"
+                    asChild
                   >
-                    <span className="hidden sm:inline">Fale Conosco</span>
-                    <span className="sm:hidden">Contato</span>
+                    <a href="/fale-conosco">
+                      <span className="hidden sm:inline">Fale Conosco</span>
+                      <span className="sm:hidden">Contato</span>
+                    </a>
                   </Button>
                   
                   <button
@@ -191,18 +195,24 @@ const Header = ({ backgroundImage }: HeaderProps) => {
                   <Button 
                     size="xl" 
                     className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+                    asChild
                   >
-                    <span className="hidden sm:inline">Conheça Nossas Soluções</span>
-                    <span className="sm:hidden">Nossas Soluções</span>
+                    <a href="/solucoes">
+                      <span className="hidden sm:inline">Conheça Nossas Soluções</span>
+                      <span className="sm:hidden">Nossas Soluções</span>
+                    </a>
                   </Button>
                   
                   <Button 
                     variant="outline" 
                     size="xl" 
                     className="flex-1 border-2 border-[#3893af] text-[#3893af] hover:bg-[#3893af] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+                    asChild
                   >
-                    <span className="hidden sm:inline">Agende uma Demonstração</span>
-                    <span className="sm:hidden">Demonstração</span>
+                    <a href="/fale-conosco">
+                      <span className="hidden sm:inline">Agende uma Demonstração</span>
+                      <span className="sm:hidden">Demonstração</span>
+                    </a>
                   </Button>
                 </div>
 

@@ -513,8 +513,8 @@ const QuemSomos = () => {
                 Entre em contato agora e ganhe uma <span className="font-bold text-accent">consultoria de 5h</span> para 
                 receber o seu diagnóstico gratuito e descubra onde a sua empresa está nessa jornada!
               </p>
-              <Button variant="hero" size="xl" className="hover-scale">
-                Fazer Avaliação Gratuita
+              <Button variant="hero" size="xl" className="hover-scale" asChild>
+                <a href="/fale-conosco">Fazer Avaliação Gratuita</a>
               </Button>
             </div>
           </div>
