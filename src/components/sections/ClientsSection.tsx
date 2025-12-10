@@ -47,7 +47,7 @@ const ClientsSection = () => {
                   key={index}
                   src={logo.src} 
                   alt={`${logo.alt} ${Math.floor(index / clientLogos.length) + 1}`} 
-                  className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto opacity-80 flex-shrink-0" 
+                  className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-80 flex-shrink-0" 
                 />
               ))}
             </div>
