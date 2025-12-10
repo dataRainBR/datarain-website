@@ -188,40 +188,6 @@ const WordPressPostView: React.FC = () => {
               </CardContent>
             </Card>
 
-            {/* Tags and categories */}
-            {(post.categories.length > 0 || post.tags.length > 0) && (
-              <Card className="mb-8">
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    {post.categories.length > 0 && (
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span className="text-sm font-semibold text-muted-foreground">Categorias:</span>
-                        <div className="flex flex-wrap gap-2">
-                          {post.categories.slice(0, 5).map((categoryId) => (
-                            <Badge key={categoryId} variant="secondary" className="text-xs">
-                              Categoria {categoryId}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {post.tags.length > 0 && (
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span className="text-sm font-semibold text-muted-foreground">Tags:</span>
-                        <div className="flex flex-wrap gap-2">
-                          {post.tags.slice(0, 8).map((tagId) => (
-                            <Badge key={tagId} variant="outline" className="text-xs">
-                              #{tagId}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            )}
 
             {/* Related Posts Carousel */}
             <WordPressRelatedPosts currentPostId={Number(id)} />
