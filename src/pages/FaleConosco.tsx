@@ -82,7 +82,7 @@ const FaleConosco = () => {
               <div 
                 role="main"
                 id="site-datarain-73a5ac52fca43b4abd57" 
-                className="min-h-[300px] bg-primary rounded-xl p-6"
+                className="min-h-[300px]"
               />
             </div>
           </div>
