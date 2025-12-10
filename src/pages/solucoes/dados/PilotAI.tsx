@@ -29,7 +29,7 @@ const PilotAI = () => {
               Transforme um desafio real do seu negócio em um projeto prático de IA Generativa, desenvolvido sob medida e 100% financiado pela AWS. Em até 30 dias, você vê a tecnologia funcionando com dados reais.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/contato" className="px-8 py-4 bg-[#f78504] text-white rounded-lg font-semibold hover:bg-[#d97004] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#f78504] text-white rounded-lg font-semibold hover:bg-[#d97004] transition-all hover:shadow-xl">
                 Agendar Reunião
               </a>
             </div>

@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Contato</h3>
             <Button variant="default" size="default" className="w-full" asChild>
-              <a href="/contato">Fale Conosco</a>
+              <a href="/fale-conosco">Fale Conosco</a>
             </Button>
           </div>
         </div>
