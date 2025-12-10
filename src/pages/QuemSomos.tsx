@@ -24,34 +24,46 @@ import {
 const QuemSomos = () => {
   const teamMembers = [
     {
-      name: "João Silva",
-      role: "CEO & Founder",
+      name: "Wagner Andrade",
+      role: "CEO",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/joaosilva"
+      linkedin: "https://www.linkedin.com/in/wagnerandrades/"
     },
     {
-      name: "Maria Santos",
+      name: "Guilherme Belinelo",
       role: "CTO",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b29c?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/mariasantos"
-    },
-    {
-      name: "Pedro Costa",
-      role: "Head of Cloud",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/pedrocosta"
+      linkedin: "https://www.linkedin.com/in/guilherme-belinelo-645330/"
     },
     {
-      name: "Ana Oliveira",
-      role: "Head of AI",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/anaoliveira"
+      name: "Leandro Götz",
+      role: "CPO",
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/leandrogotz/"
     },
     {
-      name: "Carlos Lima",
-      role: "Head of Security",
+      name: "Pedro Guth",
+      role: "Tech Lead",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://linkedin.com/in/carloslima"
+      linkedin: "https://www.linkedin.com/in/pedroguth/"
+    },
+    {
+      name: "Thais Lino",
+      role: "Data Lead",
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b29c?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/thaislino/"
+    },
+    {
+      name: "Victor Matioli",
+      role: "Cybersecurity Lead",
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/victormatioli/"
+    },
+    {
+      name: "Caio Marini",
+      role: "Architecture Lead",
+      image: "https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/caio-marini/"
     }
   ];
 
