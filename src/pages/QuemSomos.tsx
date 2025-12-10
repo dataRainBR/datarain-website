@@ -710,7 +710,7 @@ const QuemSomos = () => {
             <img 
               src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
               alt="Homem certificado AWS" 
-              className="max-w-md lg:max-w-lg h-auto"
+              className="max-w-xs lg:max-w-sm h-auto"
             />
           </div>
         </div>
