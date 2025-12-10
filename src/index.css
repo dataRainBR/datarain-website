@@ -191,20 +191,70 @@ All colors MUST be HSL.
   margin-top: 0;
 }
 
-.wordpress-content h1,
-.wordpress-content h2,
-.wordpress-content h3,
-.wordpress-content h4,
-.wordpress-content h5,
-.wordpress-content h6 {
-  line-height: 1.3;
+.wordpress-content h1 {
+  font-size: 2.25em;
+  font-weight: 700;
+  color: hsl(var(--foreground));
   margin-top: 2em;
   margin-bottom: 0.75em;
+  line-height: 1.2;
+  border-bottom: 2px solid hsl(var(--primary));
+  padding-bottom: 0.5em;
+}
+
+.wordpress-content h2 {
+  font-size: 1.75em;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-top: 1.75em;
+  margin-bottom: 0.75em;
+  line-height: 1.25;
+  border-bottom: 1px solid hsl(var(--border));
+  padding-bottom: 0.4em;
+}
+
+.wordpress-content h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-top: 1.5em;
+  margin-bottom: 0.6em;
+  line-height: 1.3;
+}
+
+.wordpress-content h4 {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+  margin-top: 1.25em;
+  margin-bottom: 0.5em;
+  line-height: 1.35;
+}
+
+.wordpress-content h5 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+.wordpress-content h6 {
+  font-size: 1em;
+  font-weight: 600;
+  color: hsl(var(--muted-foreground));
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .wordpress-content h1:first-child,
 .wordpress-content h2:first-child,
-.wordpress-content h3:first-child {
+.wordpress-content h3:first-child,
+.wordpress-content h4:first-child {
   margin-top: 0;
 }
 
