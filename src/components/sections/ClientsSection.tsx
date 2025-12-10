@@ -17,7 +17,7 @@ const ClientsSection = () => {
       alt: "Client logo 4" 
     },
     { 
-      src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1765374457/$wmkhjkw0nw", 
+      src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1765374457/$qu8c3afd6d", 
       alt: "Client logo 5" 
     },
     { 
