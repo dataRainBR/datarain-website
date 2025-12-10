@@ -11,6 +11,7 @@ import leandroPhoto from "@/assets/team/leandro-gotz.jpg";
 import pedroPhoto from "@/assets/team/pedro-guth.jpg";
 import thaisPhoto from "@/assets/team/thais-lino.jpg";
 import caioPhoto from "@/assets/team/caio-marini.jpg";
+import awsCertificationsBg from "@/assets/aws-certifications-bg.png";
 import { 
   Cloud, 
   Shield, 
@@ -696,20 +697,21 @@ const QuemSomos = () => {
       {/* Separador visual */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
-      {/* Section com homem certificado - Estilo uniforme */}
-      <section className="py-20 bg-gradient-to-b from-slate-800 to-slate-700 relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl"></div>
-        </div>
+      {/* Section com certificações AWS */}
+      <section className="py-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${awsCertificationsBg})` }}
+        />
+        <div className="absolute inset-0 bg-black/20" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-center">
-            <div className="backdrop-blur-sm bg-white/5 border border-white/10 rounded-3xl p-8 hover-scale">
-              <img 
-                src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
-                alt="Homem certificado AWS" 
-                className="max-w-md lg:max-w-lg h-auto opacity-90 rounded-2xl"
-              />
-            </div>
+            <img 
+              src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
+              alt="Homem certificado AWS" 
+              className="max-w-md lg:max-w-lg h-auto"
+            />
           </div>
         </div>
       </section>
