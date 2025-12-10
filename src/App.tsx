@@ -33,7 +33,7 @@ import PilotAI from "./pages/solucoes/dados/PilotAI";
 import LYA from "./pages/solucoes/dados/LYA";
 import MonaLisa from "./pages/solucoes/dados/MonaLisa";
 import CLARA from "./pages/solucoes/dados/CLARA";
-
+import FaleConosco from "./pages/FaleConosco";
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -67,6 +67,7 @@ const App = () => (
           <Route path="/servicos/suporte" element={<Suporte />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/academy" element={<Academy />} />
+          <Route path="/fale-conosco" element={<FaleConosco />} />
           <Route path="/blog" element={<WordPressBlog />} />
           <Route path="/blog/:id" element={<WordPressPostView />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
