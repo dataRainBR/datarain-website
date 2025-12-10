@@ -6,7 +6,6 @@ import CasesSection from "@/components/CasesSection";
 import ServicesSection from "@/components/ServicesSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import ClientsSection from "@/components/sections/ClientsSection";
-import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -29,9 +28,6 @@ const Index = () => {
 
       {/* Clients Section */}
       <ClientsSection />
-      
-      {/* CTA Section */}
-      <CTA />
 
       {/* Footer */}
       <Footer />
