@@ -850,7 +850,7 @@ const QuemSomos = () => {
                     Proteção avançada e compliance para garantir a segurança dos seus dados
                   </p>
                   <div className="pt-4">
-                    <span className="text-sm text-accent font-medium">Security Specialists</span>
+                    <span className="text-sm text-primary font-medium">Security Specialists</span>
                   </div>
                 </div>
               </div>
