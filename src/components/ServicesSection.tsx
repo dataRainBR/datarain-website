@@ -23,9 +23,9 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <ServiceCard 
-            title="Cloud" 
-            description="Soluções em nuvem escaláveis e seguras para otimizar recursos e acelerar a inovação."
-            icon={<CloudIcon className="h-6 w-6 md:h-7 md:w-7" />}
+            title="Inteligência Artificial" 
+            description="Soluções de IA que automatizam processos e potencializam a tomada de decisões."
+            icon={<BrainCircuitIcon className="h-6 w-6 md:h-7 md:w-7" />}
           />
           
           <ServiceCard 
@@ -35,15 +35,15 @@ const ServicesSection = () => {
           />
           
           <ServiceCard 
-            title="Inteligência Artificial" 
-            description="Soluções de IA que automatizam processos e potencializam a tomada de decisões."
-            icon={<BrainCircuitIcon className="h-6 w-6 md:h-7 md:w-7" />}
-          />
-          
-          <ServiceCard 
             title="Segurança" 
             description="Proteção abrangente para garantir a integridade dos seus dados e aplicações."
             icon={<ShieldCheckIcon className="h-6 w-6 md:h-7 md:w-7" />}
+          />
+          
+          <ServiceCard 
+            title="Cloud" 
+            description="Soluções em nuvem escaláveis e seguras para otimizar recursos e acelerar a inovação."
+            icon={<CloudIcon className="h-6 w-6 md:h-7 md:w-7" />}
           />
         </div>
         

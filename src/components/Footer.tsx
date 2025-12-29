@@ -16,9 +16,9 @@ const Footer = () => {
           <div className="md:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Soluções</h3>
             <ul className="space-y-4">
+              <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors">IA e Dados</a></li>
+              <li><a href="/solucoes/cybersecurity" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cybersecurity</a></li>
               <li><a href="/solucoes/cloud" className="text-sm text-muted-foreground hover:text-primary transition-colors">Cloud</a></li>
-              <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors">Dados & AI</a></li>
-              <li><a href="/solucoes/cybersecurity" className="text-sm text-muted-foreground hover:text-primary transition-colors">Segurança</a></li>
             </ul>
           </div>
           
