@@ -64,7 +64,7 @@ const QuemSomos = () => {
     {
       name: "Victor Matioli",
       role: "Cybersecurity Lead",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face",
+      image: "https://media.licdn.com/dms/image/v2/D4D03AQHXeDgm3qD3EA/profile-displayphoto-crop_800_800/B4DZibSSnLG8AI-/0/1754951921399?e=1768435200&v=beta&t=cVIvnLikOIGfOfQX9pa3Jiq-WDYxOvVvEhM5imCpnTg",
       linkedin: "https://www.linkedin.com/in/victormatioli/"
     },
     {
