@@ -420,7 +420,16 @@ const QuemSomos = () => {
                     <div className="p-4 h-full">
                       <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 shadow-primary hover:shadow-accent transition-all duration-300 text-center group h-full flex flex-col justify-between">
                         <Avatar className="w-24 h-24 mx-auto mb-4 ring-2 ring-primary/20 group-hover:ring-accent/40 transition-all duration-300">
-                          <AvatarImage src={member.image} alt={member.name} className="object-cover object-top" />
+                          <AvatarImage 
+                            src={member.image} 
+                            alt={member.name} 
+                            className="object-cover"
+                            style={{ 
+                              objectPosition: (member.name === "Gilson Sanches" || member.name === "José Sawada") 
+                                ? "center 15%" 
+                                : "center top" 
+                            }}
+                          />
                           <AvatarFallback className="bg-primary/10 text-primary text-lg font-semibold">
                             {member.name.split(' ').map(n => n[0]).join('')}
                           </AvatarFallback>
