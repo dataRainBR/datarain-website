@@ -759,75 +759,51 @@ const QuemSomos = () => {
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
             
-            {/* Coluna da Esquerda - Texto simplificado */}
-            <div className="lg:order-1 space-y-8">
-              <div className="space-y-6 animate-fade-in">
-                <div className="inline-block">
-                  <span className="bg-accent text-white px-6 py-3 rounded-full text-sm font-bold tracking-wide uppercase shadow-lg">
-                    PROJETO SOCIAL
-                  </span>
-                </div>
-                <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
-                  <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
-                    Girls in Cloud
-                  </span>
-                </h3>
-                <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full"></div>
-                <p className="text-lg md:text-xl text-slate-700 leading-relaxed">
-                  Nosso projeto que <span className="font-bold text-accent">impulsiona mulheres</span> a entrarem na área da tecnologia e 
-                  <span className="font-bold text-primary"> capacita-las para o mercado de trabalho</span>.
-                </p>
+            {/* Conteúdo centralizado */}
+            <div className="space-y-6 animate-fade-in">
+              <div className="inline-block">
+                <span className="bg-accent text-white px-6 py-3 rounded-full text-sm font-bold tracking-wide uppercase shadow-lg">
+                  PROJETO SOCIAL
+                </span>
+              </div>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                  Girls in Cloud
+                </span>
+              </h3>
+              <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto"></div>
+              <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-2xl mx-auto">
+                Nosso projeto que <span className="font-bold text-accent">impulsiona mulheres</span> a entrarem na área da tecnologia e 
+                <span className="font-bold text-primary"> capacita-las para o mercado de trabalho</span>.
+              </p>
+            </div>
+            
+            {/* Estatísticas em grid horizontal mais limpo */}
+            <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
+                <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">3.600</div>
+                <div className="text-sm text-slate-600 font-medium">Inscritas</div>
               </div>
               
-              {/* Estatísticas em grid horizontal mais limpo */}
-              <div className="grid grid-cols-3 gap-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
-                  <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">3.600</div>
-                  <div className="text-sm text-slate-600 font-medium">Inscritas</div>
-                </div>
-                
-                <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
-                  <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">200</div>
-                  <div className="text-sm text-slate-600 font-medium">Selecionadas</div>
-                </div>
-                
-                <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
-                  <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">180</div>
-                  <div className="text-sm text-slate-600 font-medium">Formadas</div>
-                </div>
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
+                <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">200</div>
+                <div className="text-sm text-slate-600 font-medium">Selecionadas</div>
               </div>
               
-              {/* Call-to-action simplificado */}
-              <div className="bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 animate-fade-in shadow-lg" style={{ animationDelay: '0.4s' }}>
-                <p className="text-slate-700 text-base md:text-lg leading-relaxed text-center">
-                  <span className="font-bold text-accent">Transformando vidas</span> através da tecnologia e 
-                  <span className="font-bold text-primary"> criando oportunidades</span> no mercado de trabalho.
-                </p>
+              <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
+                <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">180</div>
+                <div className="text-sm text-slate-600 font-medium">Formadas</div>
               </div>
             </div>
             
-            {/* Coluna da Direita - Imagem e Ano limpos */}
-            <div className="lg:order-2 relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              {/* Ano em destaque mais discreto */}
-              <div className="absolute -top-8 right-8 lg:right-16 z-0">
-                <span className="text-6xl md:text-7xl lg:text-8xl font-black text-accent/15 italic tracking-tighter">2023</span>
-              </div>
-              
-              {/* Imagem principal limpa */}
-              <div className="flex justify-center relative z-10">
-                <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-xl transform rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
-                  <div className="relative bg-white border border-slate-200 rounded-3xl p-6 hover-scale shadow-xl">
-                    <img 
-                      src="https://datarain.com.br/wp-content/uploads/2024/02/Copy-of-Home-2-1.png" 
-                      alt="Girls in Cloud - Projeto social de capacitação feminina em tecnologia" 
-                      className="w-full max-w-sm md:max-w-md lg:max-w-lg h-auto rounded-2xl"
-                    />
-                  </div>
-                </div>
-              </div>
+            {/* Call-to-action simplificado */}
+            <div className="bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 max-w-2xl mx-auto animate-fade-in shadow-lg" style={{ animationDelay: '0.4s' }}>
+              <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+                <span className="font-bold text-accent">Transformando vidas</span> através da tecnologia e 
+                <span className="font-bold text-primary"> criando oportunidades</span> no mercado de trabalho.
+              </p>
             </div>
           </div>
         </div>
