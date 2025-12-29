@@ -426,7 +426,7 @@ const QuemSomos = () => {
                             className="object-cover"
                             style={{ 
                               objectPosition: (member.name === "Gilson Sanches" || member.name === "José Sawada") 
-                                ? "center 15%" 
+                                ? "center 5%"
                                 : "center top" 
                             }}
                           />
