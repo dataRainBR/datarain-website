@@ -110,7 +110,7 @@ const Solucoes = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Landing Zone</span>
-                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">GAAS</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">GaaS</span>
                     <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Assessment</span>
                   </div>
                 </div>
@@ -239,7 +239,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="GAAS"
+                title="GaaS"
                 description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
                 image={gaasImage}
                 link="/solucoes/cybersecurity/gaas"
