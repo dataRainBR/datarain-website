@@ -667,7 +667,7 @@ const QuemSomos = () => {
                   </span>
                 </div>
                 <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
-                  Uma das primeiras empresas do mundo habilitadas a desenvolver com:
+                  Líder no desenvolvimento de soluções com:
                 </h3>
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
