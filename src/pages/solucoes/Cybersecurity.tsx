@@ -1,7 +1,6 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
-import TeamCarousel from "@/components/TeamCarousel";
 import CTA from "@/components/CTA";
 import landingZoneImage from "@/assets/solutions/landing-zone-hero.jpg";
 import gaasImage from "@/assets/solutions/gaas.jpg";
@@ -9,32 +8,6 @@ import assessmentImage from "@/assets/solutions/assessment-hero.jpg";
 import { Shield, Lock, Eye, CheckCircle2 } from "lucide-react";
 
 const Cybersecurity = () => {
-  const securityTeam = [
-    {
-      name: "Bruno Almeida",
-      role: "Security Architect Lead",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Patricia Rocha",
-      role: "Compliance Specialist",
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Rafael Santos",
-      role: "Cloud Security Engineer",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Camila Dias",
-      role: "Governance Analyst",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -181,14 +154,6 @@ const Cybersecurity = () => {
           </div>
         </div>
       </main>
-
-      {/* Team Carousel */}
-      <TeamCarousel 
-        members={securityTeam}
-        title="Time de Cybersecurity"
-        description="Especialistas em segurança cloud e compliance para proteger seu negócio"
-      />
-
       <CTA />
       <Footer />
     </div>

@@ -1,7 +1,6 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
-import TeamCarousel from "@/components/TeamCarousel";
 import CTA from "@/components/CTA";
 import migracaoImage from "@/assets/solutions/cloud-migration-hero.jpg";
 import finopsImage from "@/assets/solutions/finops-hero.jpg";
@@ -10,32 +9,6 @@ import arquiteturaImage from "@/assets/solutions/cloud-architecture.jpg";
 import { Cloud as CloudIcon, TrendingUp, Zap, Shield } from "lucide-react";
 
 const Cloud = () => {
-  const cloudTeam = [
-    {
-      name: "João Silva",
-      role: "Cloud Architect Lead",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Maria Santos",
-      role: "DevOps Engineer",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Pedro Costa",
-      role: "Cloud Security Specialist",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Ana Paula",
-      role: "FinOps Analyst",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -194,14 +167,6 @@ const Cloud = () => {
           </div>
         </div>
       </main>
-
-      {/* Team Carousel */}
-      <TeamCarousel 
-        members={cloudTeam}
-        title="Time de Cloud"
-        description="Especialistas certificados AWS para garantir o sucesso da sua transformação digital"
-      />
-
       <CTA />
       <Footer />
     </div>
