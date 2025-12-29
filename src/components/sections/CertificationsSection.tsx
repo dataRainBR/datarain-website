@@ -9,8 +9,8 @@ const achievements = [
   },
   {
     icon: <Trophy className="h-6 w-6" />,
-    title: "5 de 6 Quadrantes",
-    description: "Líder reconhecido no ecossistema AWS"
+    title: "4 de 5 Quadrantes",
+    description: "Líder reconhecido pelo ISG Provider Lens no ecossistema AWS"
   },
   {
     icon: <Star className="h-6 w-6" />,
