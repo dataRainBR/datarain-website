@@ -29,7 +29,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
 
   const servicosItems = [
     { label: "Squad & Alocação", href: "/servicos/squad-alocacao" },
-    { label: "Suporte", href: "/servicos/suporte" }
+    { label: "Suporte e Sustentação", href: "/servicos/suporte" }
   ];
 
   const navItems = [
