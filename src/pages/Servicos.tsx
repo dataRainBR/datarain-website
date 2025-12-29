@@ -8,7 +8,7 @@ const Servicos = () => {
   const servicos = [
     {
       icon: Shield,
-      title: "Monitoramento e Suporte 24x5",
+      title: "Monitoramento e Suporte 24x7",
       description: "Detectamos e resolvemos incidentes antes que eles impactem o negócio."
     },
     {

@@ -199,7 +199,7 @@ const Suporte = () => {
                 Resposta rápida, solução definitiva.
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-6 sm:mb-8">
-                24x5, com engenharia AWS por trás.
+                24x7, com engenharia AWS por trás.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
                 A tecnologia só cria valor quando funciona. Com o Suporte DataRain, você tem atendimento proativo e especializado para manter seus ambientes críticos seguros, estáveis e performáticos, sem fricção. A gente resolve o incidente, ataca a causa raiz e deixa documentado para não acontecer de novo.
