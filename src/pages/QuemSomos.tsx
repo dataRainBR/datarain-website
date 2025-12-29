@@ -57,7 +57,7 @@ const QuemSomos = () => {
     },
     {
       name: "Thais Lino",
-      role: "Data Lead",
+      role: "AI & Data Lead",
       image: thaisPhoto,
       linkedin: "https://www.linkedin.com/in/thaislino/"
     },
