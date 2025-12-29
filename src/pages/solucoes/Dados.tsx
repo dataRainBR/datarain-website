@@ -1,7 +1,6 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
-import TeamCarousel from "@/components/TeamCarousel";
 import CTA from "@/components/CTA";
 import arquiteturaImage from "@/assets/solutions/data-architecture.jpg";
 import pilotImage from "@/assets/solutions/pilot-ai.jpg";
@@ -11,32 +10,6 @@ import claraImage from "@/assets/solutions/clara.jpg";
 import { Brain, BarChart3, Sparkles, Database } from "lucide-react";
 
 const Dados = () => {
-  const dataTeam = [
-    {
-      name: "Carlos Mendes",
-      role: "Data Architect Lead",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Julia Oliveira",
-      role: "AI/ML Engineer",
-      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Ricardo Ferreira",
-      role: "Data Science Lead",
-      image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    },
-    {
-      name: "Fernanda Lima",
-      role: "MLOps Specialist",
-      image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop",
-      linkedin: "https://linkedin.com"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -207,14 +180,6 @@ const Dados = () => {
           </div>
         </div>
       </main>
-
-      {/* Team Carousel */}
-      <TeamCarousel 
-        members={dataTeam}
-        title="Time de Dados e IA"
-        description="Cientistas de dados e engenheiros especializados em transformar dados em valor estratégico"
-      />
-
       <CTA />
       <Footer />
     </div>
