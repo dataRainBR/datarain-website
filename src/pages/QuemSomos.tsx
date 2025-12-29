@@ -47,7 +47,7 @@ const QuemSomos = () => {
       name: "Gilson Sanches",
       role: "COO",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://www.linkedin.com/in/gilsonsanches/"
+      linkedin: "https://www.linkedin.com/feed/"
     },
     {
       name: "Leandro Götz",
@@ -59,7 +59,7 @@ const QuemSomos = () => {
       name: "José Sawada",
       role: "Business Development Lead",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://www.linkedin.com/in/josesawada/"
+      linkedin: "https://www.linkedin.com/in/jos%C3%A9-guilherme-sawada-662220/"
     },
     {
       name: "Marcelo Tavares",
