@@ -44,10 +44,28 @@ const QuemSomos = () => {
       linkedin: "https://www.linkedin.com/in/guilherme-belinelo-645330/"
     },
     {
+      name: "Gilson Sanches",
+      role: "COO",
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/gilsonsanches/"
+    },
+    {
       name: "Leandro Götz",
       role: "CPO",
       image: leandroPhoto,
       linkedin: "https://www.linkedin.com/in/leandrogotz/"
+    },
+    {
+      name: "José Sawada",
+      role: "Business Development Lead",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/josesawada/"
+    },
+    {
+      name: "Marcelo Tavares",
+      role: "Engineering Lead",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
+      linkedin: "https://www.linkedin.com/in/marcelotavares/"
     },
     {
       name: "Pedro Guth",
@@ -69,27 +87,9 @@ const QuemSomos = () => {
     },
     {
       name: "Caio Marini",
-      role: "Architecture Lead",
+      role: "Cloud Lead",
       image: caioPhoto,
       linkedin: "https://www.linkedin.com/in/caio-marini/"
-    },
-    {
-      name: "Gilson Sanches",
-      role: "COO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://www.linkedin.com/in/gilsonsanches/"
-    },
-    {
-      name: "José Sawada",
-      role: "Business Development Lead",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://www.linkedin.com/in/josesawada/"
-    },
-    {
-      name: "Marcelo Tavares",
-      role: "Engineering Lead",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://www.linkedin.com/in/marcelotavares/"
     }
   ];
 
@@ -415,8 +415,8 @@ const QuemSomos = () => {
               <CarouselContent>
                 {teamMembers.map((member, index) => (
                   <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                    <div className="p-4">
-                      <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 shadow-primary hover:shadow-accent transition-all duration-300 text-center group">
+                    <div className="p-4 h-full">
+                      <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 shadow-primary hover:shadow-accent transition-all duration-300 text-center group h-full flex flex-col justify-between">
                         <Avatar className="w-24 h-24 mx-auto mb-4 ring-2 ring-primary/20 group-hover:ring-accent/40 transition-all duration-300">
                           <AvatarImage src={member.image} alt={member.name} />
                           <AvatarFallback className="bg-primary/10 text-primary text-lg font-semibold">
