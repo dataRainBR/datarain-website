@@ -64,8 +64,8 @@ const QuemSomos = () => {
     {
       name: "Marcelo Tavares",
       role: "Engineering Lead",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
-      linkedin: "https://www.linkedin.com/in/marcelotavares/"
+      image: "https://media.licdn.com/dms/image/v2/D4E03AQEl5H6WmHBoQQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687987359501?e=1768435200&v=beta&t=yUaU2n5_V9VEuhKBbDfIBywLwxL9xTvU9goqRfHEoeM",
+      linkedin: "https://www.linkedin.com/in/marcelo-m-b794b968/"
     },
     {
       name: "Pedro Guth",
