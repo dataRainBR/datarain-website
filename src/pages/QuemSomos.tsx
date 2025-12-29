@@ -12,6 +12,8 @@ import leandroPhoto from "@/assets/team/leandro-gotz.jpg";
 import pedroPhoto from "@/assets/team/pedro-guth.jpg";
 import thaisPhoto from "@/assets/team/thais-lino.jpg";
 import caioPhoto from "@/assets/team/caio-marini.jpg";
+import joseSawadaPhoto from "@/assets/team/jose-sawada.jpg";
+import gilsonSanchesPhoto from "@/assets/team/gilson-sanches.jpg";
 import awsCertificationsBg from "@/assets/aws-certifications-bg.png";
 import { 
   Cloud, 
@@ -46,7 +48,7 @@ const QuemSomos = () => {
     {
       name: "Gilson Sanches",
       role: "COO",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
+      image: gilsonSanchesPhoto,
       linkedin: "https://www.linkedin.com/feed/"
     },
     {
@@ -58,7 +60,7 @@ const QuemSomos = () => {
     {
       name: "José Sawada",
       role: "Business Development Lead",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      image: joseSawadaPhoto,
       linkedin: "https://www.linkedin.com/in/jos%C3%A9-guilherme-sawada-662220/"
     },
     {
