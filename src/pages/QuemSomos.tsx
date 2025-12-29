@@ -51,7 +51,7 @@ const QuemSomos = () => {
     },
     {
       name: "Pedro Guth",
-      role: "Tech Lead",
+      role: "Solutions Lead",
       image: pedroPhoto,
       linkedin: "https://www.linkedin.com/in/pedroguth/"
     },
