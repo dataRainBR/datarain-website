@@ -45,7 +45,10 @@ const TeamCarousel = ({ members, title = "Nosso Time", description }: TeamCarous
           >
             <CarouselContent className="-ml-4">
               {members.map((member, index) => (
-                <CarouselItem key={index} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4">
+                <CarouselItem
+                  key={index}
+                  className="pl-4 basis-full sm:basis-1/2 lg:basis-[calc(25%-12px)]"
+                >
                   <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50 overflow-hidden">
                     <CardContent className="p-0">
                       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10">

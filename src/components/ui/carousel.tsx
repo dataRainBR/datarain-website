@@ -91,7 +91,7 @@ const Carousel = React.forwardRef<
         ? ((rawTarget % snapCount) + snapCount) % snapCount
         : Math.max(0, rawTarget)
 
-      api.scrollTo(targetIndex, true)
+      api.scrollTo(targetIndex)
     }, [api, opts?.loop, slidesToScroll])
 
     const scrollNext = React.useCallback(() => {
@@ -106,7 +106,7 @@ const Carousel = React.forwardRef<
         ? rawTarget % snapCount
         : Math.min(snapCount - 1, rawTarget)
 
-      api.scrollTo(targetIndex, true)
+      api.scrollTo(targetIndex)
     }, [api, opts?.loop, slidesToScroll])
 
     const handleKeyDown = React.useCallback(
