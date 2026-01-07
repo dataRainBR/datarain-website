@@ -67,7 +67,8 @@ const Carousel = React.forwardRef<
     const [canScrollPrev, setCanScrollPrev] = React.useState(false)
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     
-    const slidesToScroll = (opts?.slidesToScroll as number) || 1
+    const slidesToScroll =
+      typeof opts?.slidesToScroll === "number" ? opts.slidesToScroll : 1
 
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
@@ -80,18 +81,33 @@ const Carousel = React.forwardRef<
 
     const scrollPrev = React.useCallback(() => {
       if (!api) return
+      const snapCount = api.scrollSnapList().length
+      if (!snapCount) return
+
       const currentIndex = api.selectedScrollSnap()
-      const targetIndex = Math.max(0, currentIndex - slidesToScroll)
-      api.scrollTo(targetIndex)
-    }, [api, slidesToScroll])
+      const rawTarget = currentIndex - slidesToScroll
+
+      const targetIndex = opts?.loop
+        ? ((rawTarget % snapCount) + snapCount) % snapCount
+        : Math.max(0, rawTarget)
+
+      api.scrollTo(targetIndex, true)
+    }, [api, opts?.loop, slidesToScroll])
 
     const scrollNext = React.useCallback(() => {
       if (!api) return
+      const snapCount = api.scrollSnapList().length
+      if (!snapCount) return
+
       const currentIndex = api.selectedScrollSnap()
-      const scrollSnapList = api.scrollSnapList()
-      const targetIndex = Math.min(scrollSnapList.length - 1, currentIndex + slidesToScroll)
-      api.scrollTo(targetIndex)
-    }, [api, slidesToScroll])
+      const rawTarget = currentIndex + slidesToScroll
+
+      const targetIndex = opts?.loop
+        ? rawTarget % snapCount
+        : Math.min(snapCount - 1, rawTarget)
+
+      api.scrollTo(targetIndex, true)
+    }, [api, opts?.loop, slidesToScroll])
 
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
