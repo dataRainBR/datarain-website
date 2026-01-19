@@ -120,7 +120,7 @@ const Academy = () => {
                     Cloud Migration
                   </div>
                   <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 sm:mb-4">
-                    Migração (Migration)
+                    Migração
                   </h3>
                   <p className="text-base sm:text-lg text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                     Desmistifique a jornada para a nuvem com frameworks consolidados e casos práticos. 
