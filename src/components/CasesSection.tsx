@@ -129,9 +129,9 @@ export default function CasesSection() {
             }}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 sm:-ml-4">
+            <CarouselContent className="-ml-2 sm:-ml-4 pb-6">
               {cases.map((caseStudy, index) => (
-                <CarouselItem key={caseStudy.id} className="pl-2 sm:pl-4 basis-full md:basis-4/5 lg:basis-3/4">
+                <CarouselItem key={caseStudy.id} className="pl-2 sm:pl-4 pb-2 basis-full md:basis-4/5 lg:basis-3/4">
                   {/* Card com glassmorphism - formato largo */}
                   <div className="group relative">
                     {/* Fundo com gradiente único */}
