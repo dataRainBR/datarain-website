@@ -77,7 +77,7 @@ export default function CasesSection() {
     ? wordpressCases.map((post, index) => ({
         id: post.id,
         title: post.title.rendered.replace(/&#8211;/g, "–").replace(/&amp;/g, "&"),
-        description: extractTextFromContent(post.content.rendered, 250),
+        description: extractTextFromContent(post.content.rendered, 180),
         clientName: "",
         slug: post.slug,
         gradientIndex: index % cardGradients.length,
@@ -142,7 +142,7 @@ export default function CasesSection() {
                     
                     {/* Container glassmorphism */}
                     <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-white/10 group-hover:-translate-y-1">
-                      <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 min-h-[350px] sm:min-h-[400px] md:min-h-[450px] flex flex-col justify-between">
+                      <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[350px] sm:h-[400px] md:h-[450px] flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
                             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/20">
@@ -150,11 +150,11 @@ export default function CasesSection() {
                             </span>
                           </div>
                           
-                          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight text-white group-hover:text-accent transition-colors duration-300">
+                          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight text-white group-hover:text-accent transition-colors duration-300 line-clamp-2">
                             {caseStudy.title}
                           </h3>
                           
-                          <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-3xl">
+                          <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-3xl line-clamp-3">
                             {caseStudy.description}
                           </p>
                         </div>
