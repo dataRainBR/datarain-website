@@ -58,9 +58,9 @@ const ClientsSection = () => {
           </p>
         </div>
         
-        <div className="backdrop-blur-md bg-card/50 p-6 md:p-10 rounded-3xl border border-border/50 shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-500">
-          <div className="overflow-hidden">
-            <div className="marquee items-center gap-16 md:gap-20 lg:gap-24">
+          <div className="backdrop-blur-md bg-card/50 p-4 sm:p-6 md:p-10 rounded-2xl sm:rounded-3xl border border-border/50 shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-500">
+            <div className="overflow-hidden">
+              <div className="marquee items-center gap-8 sm:gap-12 md:gap-16 lg:gap-20 xl:gap-24">
               {logoSets.map((logo, index) => (
                 <div 
                   key={index}
@@ -69,7 +69,7 @@ const ClientsSection = () => {
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" 
+                    className="h-10 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" 
                   />
                   {logo.name && (
                     <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -34,14 +34,13 @@ const TeamCarousel = ({ members, title = "Nosso Time", description }: TeamCarous
           )}
         </div>
 
-        <div className="max-w-7xl mx-auto px-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12">
           <Carousel
             opts={{
               align: "start",
               loop: true,
               skipSnaps: false,
               dragFree: false,
-              slidesToScroll: 4,
             }}
             className="w-full"
           >

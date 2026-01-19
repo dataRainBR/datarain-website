@@ -30,8 +30,8 @@ const Footer = () => {
       </div>
 
       <div className="container mx-auto px-4 max-w-7xl relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
-          <div className="md:col-span-4 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-16">
+          <div className="sm:col-span-2 lg:col-span-4 space-y-6">
             <Logo variant="original" className="mb-6" />
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
               Parceira estratégica para empresas em tecnologia, entregando soluções em IA e Dados, Cybersecurity e Cloud.
@@ -67,7 +67,7 @@ const Footer = () => {
             </div>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Soluções</h3>
             <ul className="space-y-4">
               <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">IA e Dados</span></a></li>
@@ -76,7 +76,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Serviços</h3>
             <ul className="space-y-4">
               <li><a href="/servicos/squad-alocacao" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Squad Alocação</span></a></li>
@@ -84,7 +84,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Empresa</h3>
             <ul className="space-y-4">
               <li><a href="/quem-somos" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Sobre nós</span></a></li>
@@ -93,7 +93,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="md:col-span-2">
+          <div className="sm:col-span-2 lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Contato</h3>
             <Button variant="default" size="default" className="w-full group" asChild>
               <a href="/fale-conosco" className="flex items-center justify-center gap-2">
