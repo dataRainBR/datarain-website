@@ -39,6 +39,8 @@ const TeamCarousel = ({ members, title = "Nosso Time", description }: TeamCarous
             opts={{
               align: "start",
               loop: true,
+              skipSnaps: false,
+              dragFree: false,
               slidesToScroll: 4,
             }}
             className="w-full"
@@ -47,7 +49,7 @@ const TeamCarousel = ({ members, title = "Nosso Time", description }: TeamCarous
               {members.map((member, index) => (
                 <CarouselItem
                   key={index}
-                  className="pl-4 basis-full sm:basis-1/2 lg:basis-[calc(25%-12px)]"
+                  className="pl-4 basis-full sm:basis-1/2 lg:basis-1/4"
                 >
                   <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-border/50 hover:border-primary/50 overflow-hidden">
                     <CardContent className="p-0">
