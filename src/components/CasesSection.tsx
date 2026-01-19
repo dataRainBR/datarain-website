@@ -142,7 +142,7 @@ export default function CasesSection() {
                     
                     {/* Container glassmorphism */}
                     <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-white/10 group-hover:-translate-y-1">
-                      <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[350px] sm:h-[400px] md:h-[450px] flex flex-col justify-between">
+                      <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[380px] sm:h-[420px] md:h-[480px] flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
                             <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/20">
