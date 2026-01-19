@@ -15,22 +15,22 @@ const Cybersecurity = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-background">
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-primary/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-primary/15 rounded-full blur-2xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/10 via-background to-background">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#e63946]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#e63946]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#e63946]/15 rounded-full blur-2xl"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-40 sm:pt-44 md:pt-48 lg:pt-52">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
-              <Shield className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-primary">Cybersecurity</span>
+            <div className="inline-flex items-center gap-2 bg-[#e63946]/10 rounded-full px-4 py-2 mb-6">
+              <Shield className="w-5 h-5 text-[#e63946]" />
+              <span className="text-sm font-medium text-[#e63946]">Cybersecurity</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
               Segurança que <br />
-              <span className="text-primary">Protege e Habilita</span>
+              <span className="text-[#e63946]">Protege e Habilita</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
@@ -40,20 +40,20 @@ const Cybersecurity = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100+</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">100+</div>
                 <div className="text-sm text-muted-foreground">Assessments Realizados</div>
               </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">Zero</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">Zero</div>
                 <div className="text-sm text-muted-foreground">Incidentes Críticos</div>
               </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">24/7</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">24/7</div>
                 <div className="text-sm text-muted-foreground">Monitoramento</div>
               </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">100%</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">100%</div>
                 <div className="text-sm text-muted-foreground">Compliance</div>
               </div>
             </div>
