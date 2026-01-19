@@ -63,44 +63,94 @@ const Cloud = () => {
       </section>
 
       {/* Why Cloud Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-card/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por que Cloud?</h2>
-            <p className="text-lg text-muted-foreground">
+      <section className="py-20 md:py-24 bg-gradient-to-b from-background to-card/20 relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-[#f78504]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#f78504]/5 rounded-full blur-3xl" />
+        </div>
+        
+        {/* Subtle grid pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-[#f78504]/10 rounded-full text-[#f78504] text-sm font-semibold mb-6">
+              Benefícios
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Por que Cloud?</h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
               A transformação digital começa com uma infraestrutura sólida e escalável
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6">
-                <Zap className="w-7 h-7 text-[#3893af]" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {/* Card 1 */}
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Agilidade e Velocidade</h3>
-              <p className="text-muted-foreground">
-                Provisione recursos em minutos, não semanas. Acelere o time-to-market e responda rapidamente às demandas do negócio.
-              </p>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative z-10 p-8 md:p-10">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Zap className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Agilidade e Velocidade</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Provisione recursos em minutos, não semanas. Acelere o time-to-market e responda rapidamente às demandas do negócio.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6">
-                <TrendingUp className="w-7 h-7 text-[#3893af]" />
+            {/* Card 2 */}
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Escalabilidade Infinita</h3>
-              <p className="text-muted-foreground">
-                Cresça sem limites. Escale automaticamente recursos conforme a demanda, pagando apenas pelo que usar.
-              </p>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative z-10 p-8 md:p-10">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <TrendingUp className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Escalabilidade Infinita</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Cresça sem limites. Escale automaticamente recursos conforme a demanda, pagando apenas pelo que usar.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6">
-                <Shield className="w-7 h-7 text-[#3893af]" />
+            {/* Card 3 */}
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Segurança Empresarial</h3>
-              <p className="text-muted-foreground">
-                Proteção de nível corporativo com conformidade garantida. Certifications e compliance mantidos pela AWS.
-              </p>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative z-10 p-8 md:p-10">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Shield className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Segurança Empresarial</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Proteção de nível corporativo com conformidade garantida. Certifications e compliance mantidos pela AWS.
+                </p>
+              </div>
             </div>
           </div>
         </div>
