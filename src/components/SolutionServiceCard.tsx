@@ -33,14 +33,14 @@ const variantStyles = {
     ),
   },
   security: {
-    gradient: "from-emerald-500/20 via-teal-500/10 to-cyan-500/20",
-    iconBg: "bg-gradient-to-br from-emerald-500 to-teal-600",
-    accentLine: "bg-gradient-to-r from-emerald-500 to-teal-500",
-    hoverBorder: "hover:border-emerald-400/60",
-    decorativeOrb: "bg-emerald-500/30",
-    textColor: "text-emerald-600",
+    gradient: "from-[#e63946]/20 via-rose-500/10 to-red-500/20",
+    iconBg: "bg-gradient-to-br from-[#e63946] to-rose-600",
+    accentLine: "bg-gradient-to-r from-[#e63946] to-rose-500",
+    hoverBorder: "hover:border-[#e63946]/60",
+    decorativeOrb: "bg-[#e63946]/30",
+    textColor: "text-[#e63946]",
     pattern: (
-      <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+      <svg className="absolute right-0 top-0 w-32 h-32 text-[#e63946]/10" viewBox="0 0 100 100" fill="currentColor">
         <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
         <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
         <circle cx="50" cy="38" r="5" fill="none" stroke="currentColor" strokeWidth="2" />

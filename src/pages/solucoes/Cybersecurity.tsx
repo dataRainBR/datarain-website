@@ -65,8 +65,8 @@ const Cybersecurity = () => {
       <section className="py-20 md:py-24 bg-gradient-to-b from-background to-card/20 relative overflow-hidden">
         {/* Decorative background */}
         <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl" />
+          <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-[#e63946]/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#e63946]/5 rounded-full blur-3xl" />
         </div>
         
         {/* Subtle grid pattern */}
@@ -79,7 +79,7 @@ const Cybersecurity = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-emerald-500/10 rounded-full text-emerald-600 text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-2 bg-[#e63946]/10 rounded-full text-[#e63946] text-sm font-semibold mb-6">
               Benefícios
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Por que Cybersecurity?</h2>
@@ -90,21 +90,21 @@ const Cybersecurity = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Card 1 */}
-            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-emerald-400/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#e63946]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/20 via-rose-500/10 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#e63946]/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
                   <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-emerald-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#e63946]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#e63946] to-rose-500 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#e63946] to-rose-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Lock className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-600 transition-colors duration-300">Proteção Proativa</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#e63946] transition-colors duration-300">Proteção Proativa</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   Identifique e corrija vulnerabilidades antes que se tornem problemas. Prevenção é mais barata que remediação.
                 </p>
@@ -112,21 +112,21 @@ const Cybersecurity = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-emerald-400/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#e63946]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/20 via-rose-500/10 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#e63946]/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
                   <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-emerald-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#e63946]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#e63946] to-rose-500 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#e63946] to-rose-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Eye className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-600 transition-colors duration-300">Visibilidade Total</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#e63946] transition-colors duration-300">Visibilidade Total</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   Monitoramento contínuo e dashboards em tempo real. Saiba exatamente o que está acontecendo na sua infraestrutura.
                 </p>
@@ -134,21 +134,21 @@ const Cybersecurity = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-emerald-400/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#e63946]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/20 via-rose-500/10 to-red-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#e63946]/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
                   <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-emerald-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#e63946]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#e63946] to-rose-500 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-[#e63946] to-rose-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <CheckCircle2 className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-600 transition-colors duration-300">Compliance Garantido</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#e63946] transition-colors duration-300">Compliance Garantido</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   Atenda LGPD, ISO 27001, PCI-DSS e outras normas automaticamente. Auditorias sem estresse.
                 </p>
