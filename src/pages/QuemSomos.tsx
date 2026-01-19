@@ -14,6 +14,7 @@ import thaisPhoto from "@/assets/team/thais-lino.jpg";
 import caioPhoto from "@/assets/team/caio-marini.jpg";
 import joseSawadaPhoto from "@/assets/team/jose-sawada.jpg";
 import gilsonSanchesPhoto from "@/assets/team/gilson-sanches.jpg";
+import marceloTavaresPhoto from "@/assets/team/marcelo-tavares.jpg";
 import awsCertificationsBg from "@/assets/aws-certifications-bg.png";
 import { 
   Cloud, 
@@ -66,7 +67,7 @@ const QuemSomos = () => {
     {
       name: "Marcelo Tavares",
       role: "Engineering Lead",
-      image: "https://media.licdn.com/dms/image/v2/D4E03AQEl5H6WmHBoQQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1687987359501?e=1768435200&v=beta&t=yUaU2n5_V9VEuhKBbDfIBywLwxL9xTvU9goqRfHEoeM",
+      image: marceloTavaresPhoto,
       linkedin: "https://www.linkedin.com/in/marcelo-m-b794b968/"
     },
     {
