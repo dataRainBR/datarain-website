@@ -62,44 +62,97 @@ const Cybersecurity = () => {
       </section>
 
       {/* Why Security Section */}
-      <section className="py-16 bg-gradient-to-b from-background to-card/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por que Cybersecurity?</h2>
-            <p className="text-lg text-muted-foreground">
+      <section className="py-20 md:py-24 bg-gradient-to-b from-background to-card/20 relative overflow-hidden">
+        {/* Decorative background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-emerald-500/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-3xl" />
+        </div>
+        
+        {/* Subtle grid pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+        />
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <div className="inline-block px-4 py-2 bg-emerald-500/10 rounded-full text-emerald-600 text-sm font-semibold mb-6">
+              Benefícios
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Por que Cybersecurity?</h2>
+            <p className="text-lg md:text-xl text-muted-foreground">
               Segurança não é custo, é investimento em continuidade e confiança
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <Lock className="w-7 h-7 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+            {/* Card 1 */}
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-emerald-400/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
+                  <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Proteção Proativa</h3>
-              <p className="text-muted-foreground">
-                Identifique e corrija vulnerabilidades antes que se tornem problemas. Prevenção é mais barata que remediação.
-              </p>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-emerald-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative z-10 p-8 md:p-10">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Lock className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-600 transition-colors duration-300">Proteção Proativa</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Identifique e corrija vulnerabilidades antes que se tornem problemas. Prevenção é mais barata que remediação.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <Eye className="w-7 h-7 text-primary" />
+            {/* Card 2 */}
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-emerald-400/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
+                  <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Visibilidade Total</h3>
-              <p className="text-muted-foreground">
-                Monitoramento contínuo e dashboards em tempo real. Saiba exatamente o que está acontecendo na sua infraestrutura.
-              </p>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-emerald-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative z-10 p-8 md:p-10">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <Eye className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-600 transition-colors duration-300">Visibilidade Total</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Monitoramento contínuo e dashboards em tempo real. Saiba exatamente o que está acontecendo na sua infraestrutura.
+                </p>
+              </div>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <CheckCircle2 className="w-7 h-7 text-primary" />
+            {/* Card 3 */}
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-emerald-400/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 via-teal-500/10 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
+                  <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
+                  <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
+                </svg>
               </div>
-              <h3 className="text-xl font-bold mb-3">Compliance Garantido</h3>
-              <p className="text-muted-foreground">
-                Atenda LGPD, ISO 27001, PCI-DSS e outras normas automaticamente. Auditorias sem estresse.
-              </p>
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-emerald-500/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="relative z-10 p-8 md:p-10">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-500 to-teal-500 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                  <CheckCircle2 className="w-7 h-7" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-emerald-600 transition-colors duration-300">Compliance Garantido</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Atenda LGPD, ISO 27001, PCI-DSS e outras normas automaticamente. Auditorias sem estresse.
+                </p>
+              </div>
             </div>
           </div>
         </div>
