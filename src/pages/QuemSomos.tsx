@@ -846,10 +846,10 @@ const QuemSomos = () => {
             
             {/* Cybersecurity Card */}
             <Link to="/solucoes/cybersecurity" className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
                 <div className="text-center space-y-6 flex flex-col flex-1">
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">
@@ -859,7 +859,7 @@ const QuemSomos = () => {
                     Proteção avançada e compliance para garantir a segurança dos seus dados
                   </p>
                   <div className="pt-4">
-                    <span className="text-sm text-primary font-medium">Security Specialists</span>
+                    <span className="text-sm text-accent font-medium">Security Specialists</span>
                   </div>
                 </div>
               </div>
@@ -867,10 +867,10 @@ const QuemSomos = () => {
             
             {/* Cloud Card */}
             <Link to="/solucoes/cloud" className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
               <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
                 <div className="text-center space-y-6 flex flex-col flex-1">
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto shadow-lg">
+                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto shadow-lg">
                     <Cloud className="w-8 h-8 text-white" />
                   </div>
                   <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">Cloud</h4>
@@ -878,7 +878,7 @@ const QuemSomos = () => {
                     Soluções completas em nuvem AWS para modernizar sua infraestrutura
                   </p>
                   <div className="pt-4">
-                    <span className="text-sm text-primary font-medium">AWS Certified Team</span>
+                    <span className="text-sm text-accent font-medium">AWS Certified Team</span>
                   </div>
                 </div>
               </div>
