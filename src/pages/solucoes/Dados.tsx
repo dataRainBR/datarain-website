@@ -14,22 +14,22 @@ const Dados = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/10 via-background to-background">
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3893af]/10 via-background to-background">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#3893af]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-40 sm:pt-44 md:pt-48 lg:pt-52">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-[#f78504]/10 rounded-full px-4 py-2 mb-6">
-              <Brain className="w-5 h-5 text-[#f78504]" />
-              <span className="text-sm font-medium text-[#f78504]">IA e Dados</span>
+            <div className="inline-flex items-center gap-2 bg-[#3893af]/10 rounded-full px-4 py-2 mb-6">
+              <Brain className="w-5 h-5 text-[#3893af]" />
+              <span className="text-sm font-medium text-[#3893af]">IA e Dados</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
               Dados e IA que <br />
-              <span style={{ color: '#f78504' }}>Transformam Negócios</span>
+              <span style={{ color: '#3893af' }}>Transformam Negócios</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
@@ -39,20 +39,20 @@ const Dados = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">50+</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">50+</div>
                 <div className="text-sm text-muted-foreground">Projetos de IA</div>
               </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">10PB+</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">10PB+</div>
                 <div className="text-sm text-muted-foreground">Dados Processados</div>
               </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">70%</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">70%</div>
                 <div className="text-sm text-muted-foreground">Redução de Tempo</div>
               </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">95%</div>
+              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
+                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">95%</div>
                 <div className="text-sm text-muted-foreground">Precisão dos Modelos</div>
               </div>
             </div>
