@@ -1,14 +1,23 @@
-import { CloudIcon, DatabaseIcon, BrainCircuitIcon, ShieldCheckIcon } from "lucide-react";
-import ServiceCard from "./ServiceCard";
-import { Button } from "./ui/button";
+import { CloudIcon, BrainCircuitIcon, ShieldCheckIcon } from "lucide-react";
+import SolutionServiceCard from "./SolutionServiceCard";
 
 const ServicesSection = () => {
   return (
     <section className="py-24 md:py-32 bg-muted/20 relative overflow-hidden">
-      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/10 rounded-full blur-3xl"></div>
+      {/* Background decorative elements */}
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
+      
+      {/* Subtle grid pattern */}
+      <div 
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      />
       
       <div className="container mx-auto px-4 relative z-10 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
             Expertise
           </div>
@@ -21,30 +30,33 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
-          <ServiceCard 
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          <SolutionServiceCard 
             title="IA e Dados" 
             description="Soluções de inteligência artificial e estratégias de dados que automatizam processos e transformam informações em insights valiosos."
-            icon={<BrainCircuitIcon className="h-6 w-6 md:h-7 md:w-7" />}
+            icon={<BrainCircuitIcon className="h-7 w-7" />}
+            href="/solucoes/dados"
+            variant="ia"
+            features={["Machine Learning", "Analytics Avançado", "Automação Inteligente"]}
           />
           
-          <ServiceCard 
-            title="Segurança" 
-            description="Proteção abrangente para garantir a integridade dos seus dados e aplicações."
-            icon={<ShieldCheckIcon className="h-6 w-6 md:h-7 md:w-7" />}
+          <SolutionServiceCard 
+            title="Cybersecurity" 
+            description="Proteção abrangente para garantir a integridade dos seus dados e aplicações contra ameaças modernas."
+            icon={<ShieldCheckIcon className="h-7 w-7" />}
+            href="/solucoes/cybersecurity"
+            variant="security"
+            features={["Assessment de Segurança", "Landing Zone", "Governança"]}
           />
           
-          <ServiceCard 
+          <SolutionServiceCard 
             title="Cloud" 
             description="Soluções em nuvem escaláveis e seguras para otimizar recursos e acelerar a inovação."
-            icon={<CloudIcon className="h-6 w-6 md:h-7 md:w-7" />}
+            icon={<CloudIcon className="h-7 w-7" />}
+            href="/solucoes/cloud"
+            variant="cloud"
+            features={["Migração", "Arquitetura", "FinOps"]}
           />
-        </div>
-        
-        <div className="text-center">
-          <Button variant="default" size="lg" asChild>
-            <a href="/solucoes">Ver Todas as Soluções</a>
-          </Button>
         </div>
       </div>
     </section>
