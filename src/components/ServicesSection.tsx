@@ -21,17 +21,11 @@ const ServicesSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-16">
           <ServiceCard 
-            title="Inteligência Artificial" 
-            description="Soluções de IA que automatizam processos e potencializam a tomada de decisões."
+            title="IA e Dados" 
+            description="Soluções de inteligência artificial e estratégias de dados que automatizam processos e transformam informações em insights valiosos."
             icon={<BrainCircuitIcon className="h-6 w-6 md:h-7 md:w-7" />}
-          />
-          
-          <ServiceCard 
-            title="Dados" 
-            description="Estratégias de dados que transformam informações em insights valiosos para seu negócio."
-            icon={<DatabaseIcon className="h-6 w-6 md:h-7 md:w-7" />}
           />
           
           <ServiceCard 
