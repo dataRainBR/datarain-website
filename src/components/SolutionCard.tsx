@@ -11,8 +11,8 @@ interface SolutionCardProps {
 const SolutionCard = ({ title, description, image, link, benefits }: SolutionCardProps) => {
   return (
     <a href={link} className="group block h-full">
-      <div className="bg-card rounded-3xl overflow-hidden shadow-sm border border-border/50 hover:border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
-        <div className="relative h-48 md:h-56 overflow-hidden flex-shrink-0">
+      <div className="bg-card rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm border border-border/50 hover:border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
+        <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden flex-shrink-0">
           <img 
             src={image} 
             alt={title}
@@ -21,19 +21,19 @@ const SolutionCard = ({ title, description, image, link, benefits }: SolutionCar
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
         </div>
         
-        <div className="p-6 md:p-8 flex-1 flex flex-col">
-          <h3 className="text-xl md:text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
+        <div className="p-4 sm:p-6 md:p-8 flex-1 flex flex-col">
+          <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-foreground group-hover:text-primary transition-colors">
             {title}
           </h3>
-          <p className="text-base text-muted-foreground mb-6 leading-relaxed flex-1">
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed flex-1">
             {description}
           </p>
           
           {benefits && benefits.length > 0 && (
-            <ul className="space-y-3 mb-6">
+            <ul className="space-y-2 sm:space-y-3 mb-4 sm:mb-6">
               {benefits.slice(0, 3).map((benefit, idx) => (
-                <li key={idx} className="text-sm text-muted-foreground flex items-start gap-3">
-                  <span className="text-primary mt-0.5 text-lg">•</span>
+                <li key={idx} className="text-xs sm:text-sm text-muted-foreground flex items-start gap-2 sm:gap-3">
+                  <span className="text-primary mt-0.5 text-base sm:text-lg">•</span>
                   <span>{benefit}</span>
                 </li>
               ))}

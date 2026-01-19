@@ -78,7 +78,7 @@ const SolutionServiceCard = ({
   return (
     <Link
       to={href}
-      className={`group relative bg-card rounded-3xl overflow-hidden border border-border/50 ${styles.hoverBorder} transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block`}
+      className={`group relative bg-card rounded-2xl sm:rounded-3xl overflow-hidden border border-border/50 ${styles.hoverBorder} transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block`}
     >
       {/* Background gradient */}
       <div
@@ -92,11 +92,11 @@ const SolutionServiceCard = ({
 
       {/* Decorative orb */}
       <div
-        className={`absolute -bottom-20 -right-20 w-40 h-40 ${styles.decorativeOrb} rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500`}
+        className={`absolute -bottom-20 -right-20 w-32 sm:w-40 h-32 sm:h-40 ${styles.decorativeOrb} rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500`}
       />
 
       {/* Content */}
-      <div className="relative z-10 p-8 md:p-10">
+      <div className="relative z-10 p-6 sm:p-8 md:p-10">
         {/* Accent line */}
         <div
           className={`absolute top-0 left-0 w-0 h-1 ${styles.accentLine} group-hover:w-full transition-all duration-500 ease-out`}
@@ -104,31 +104,31 @@ const SolutionServiceCard = ({
 
         {/* Icon */}
         <div
-          className={`w-16 h-16 ${styles.iconBg} rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
+          className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 ${styles.iconBg} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-4 sm:mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
         >
           {icon}
         </div>
 
         {/* Title */}
-        <h3 className={`text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:${styles.textColor} transition-colors duration-300`}>
+        <h3 className={`text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-4 group-hover:${styles.textColor} transition-colors duration-300`}>
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-base text-muted-foreground leading-relaxed mb-6">
+        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed mb-4 sm:mb-6">
           {description}
         </p>
 
         {/* Features list */}
         {features.length > 0 && (
-          <ul className="space-y-2 mb-6">
+          <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
             {features.map((feature, index) => (
               <li
                 key={index}
-                className="flex items-center gap-2 text-sm text-muted-foreground"
+                className="flex items-center gap-2 text-xs sm:text-sm text-muted-foreground"
               >
                 <div
-                  className={`w-1.5 h-1.5 rounded-full ${styles.iconBg}`}
+                  className={`w-1 h-1 sm:w-1.5 sm:h-1.5 rounded-full ${styles.iconBg}`}
                 />
                 {feature}
               </li>
