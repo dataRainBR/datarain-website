@@ -30,6 +30,7 @@ import Assessment from "./pages/solucoes/cybersecurity/Assessment";
 // Data & AI Solutions
 import ArquiteturaDados from "./pages/solucoes/dados/ArquiteturaDados";
 import PilotAI from "./pages/solucoes/dados/PilotAI";
+import IAML from "./pages/solucoes/dados/IAML";
 import FaleConosco from "./pages/FaleConosco";
 import Privacidade from "./pages/Privacidade";
 const queryClient = new QueryClient();
@@ -53,6 +54,7 @@ const App = () => (
           <Route path="/solucoes/dados" element={<Dados />} />
           <Route path="/solucoes/dados/arquitetura" element={<ArquiteturaDados />} />
           <Route path="/solucoes/dados/pilot-ai" element={<PilotAI />} />
+          <Route path="/solucoes/dados/ia-ml" element={<IAML />} />
           <Route path="/solucoes/cybersecurity" element={<Cybersecurity />} />
           <Route path="/solucoes/cybersecurity/landing-zone" element={<LandingZone />} />
           <Route path="/solucoes/cybersecurity/gaas" element={<GAAS />} />
