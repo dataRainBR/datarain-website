@@ -83,8 +83,8 @@ const SquadAlocacao = () => {
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
                 Na DataRain, você encontra a flexibilidade que o seu negócio precisa: desde a alocação de especialistas até a formação de squads multidisciplinares, prontos para entregar valor desde o primeiro dia.
               </p>
-              <Button variant="hero" size="lg" className="sm:text-lg">
-                Marcar uma Conversa
+              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+                <a href="/fale-conosco">Marcar uma Conversa</a>
               </Button>
             </div>
           </div>
@@ -221,8 +221,8 @@ const SquadAlocacao = () => {
             </div>
 
             <div className="text-center mt-10 sm:mt-12">
-              <Button variant="hero" size="lg" className="sm:text-lg">
-                Quero Contratar Especialistas!
+              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+                <a href="/fale-conosco">Quero Contratar Especialistas!</a>
               </Button>
             </div>
           </div>
