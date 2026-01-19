@@ -141,7 +141,7 @@ export default function CasesSection() {
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/10 via-transparent to-white/5 rounded-3xl"></div>
                     
                     {/* Container glassmorphism */}
-                    <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-white/10 group-hover:-translate-y-1">
+                    <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-xl group-hover:-translate-y-1">
                       <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[380px] sm:h-[420px] md:h-[480px] flex flex-col justify-between">
                         <div>
                           <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
