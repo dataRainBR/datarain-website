@@ -62,12 +62,8 @@ export default function CasesSection() {
         gradientIndex: index % cardGradients.length,
       }));
 
-  const handleReadMore = (slug: string, id: number) => {
-    if (slug) {
-      navigate(`/blog/${slug}`);
-    } else {
-      navigate(`/cases`);
-    }
+  const handleReadMore = (id: number) => {
+    navigate(`/blog/${id}`);
   };
 
   return (
@@ -139,7 +135,7 @@ export default function CasesSection() {
                         </div>
                         
                         <button 
-                          onClick={() => handleReadMore(caseStudy.slug, caseStudy.id)}
+                          onClick={() => handleReadMore(caseStudy.id)}
                           className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start"
                         >
                           <span>Leia o case completo</span>
