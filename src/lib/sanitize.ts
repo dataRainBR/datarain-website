@@ -42,3 +42,19 @@ export const stripHTML = (html: string): string => {
   temp.innerHTML = sanitized;
   return temp.textContent || temp.innerText || '';
 };
+
+/**
+ * Sanitizes search terms for API queries
+ * - Limits length to prevent DoS attacks
+ * - Removes potentially dangerous characters
+ * - Trims whitespace
+ */
+export const sanitizeSearchTerm = (term: string): string => {
+  if (!term || typeof term !== 'string') return '';
+  
+  return term
+    .trim()
+    .slice(0, 100) // Limit to 100 characters max
+    .replace(/[<>'"`;\\]/g, '') // Remove potentially dangerous characters
+    .replace(/\s+/g, ' '); // Normalize whitespace
+};

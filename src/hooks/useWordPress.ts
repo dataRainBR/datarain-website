@@ -1,5 +1,6 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { WORDPRESS_CONFIG, getWordPressUrl, WordPressPost, WordPressPage, WordPressMedia, WordPressCategory, WordPressTag } from '@/lib/wordpress';
+import { sanitizeSearchTerm } from '@/lib/sanitize';
 
 // Função utilitária para obter ID de categoria por slug
 export const getCategoryIdBySlug = async (slug: string): Promise<number | null> => {
@@ -30,7 +31,12 @@ export const useWordPressPosts = (params: {
   if (params.categories_exclude && params.categories_exclude.length > 0) {
     queryString.append('categories_exclude', params.categories_exclude.join(','));
   }
-  if (params.search) queryString.append('search', params.search);
+  if (params.search) {
+    const sanitizedSearch = sanitizeSearchTerm(params.search);
+    if (sanitizedSearch) {
+      queryString.append('search', sanitizedSearch);
+    }
+  }
 
   return useQuery({
     queryKey: ['wordpress-posts', params],
@@ -67,7 +73,12 @@ export const useWordPressPages = (params: {
   
   if (params.per_page) queryString.append('per_page', params.per_page.toString());
   if (params.page) queryString.append('page', params.page.toString());
-  if (params.search) queryString.append('search', params.search);
+  if (params.search) {
+    const sanitizedSearch = sanitizeSearchTerm(params.search);
+    if (sanitizedSearch) {
+      queryString.append('search', sanitizedSearch);
+    }
+  }
 
   return useQuery({
     queryKey: ['wordpress-pages', params],
@@ -183,7 +194,12 @@ export const useWordPressPostsSmart = (params: {
       const queryString = new URLSearchParams();
       if (params.per_page) queryString.append('per_page', params.per_page.toString());
       if (params.page) queryString.append('page', params.page.toString());
-      if (params.search) queryString.append('search', params.search);
+      if (params.search) {
+        const sanitizedSearch = sanitizeSearchTerm(params.search);
+        if (sanitizedSearch) {
+          queryString.append('search', sanitizedSearch);
+        }
+      }
       
       // Se encontrou a categoria principal, filtrar por ela
       if (categoryId) {
@@ -246,7 +262,12 @@ export const useWordPressPostsByCategorySlug = (categorySlug: string, params: {
       const queryString = new URLSearchParams();
       if (params.per_page) queryString.append('per_page', params.per_page.toString());
       if (params.page) queryString.append('page', params.page.toString());
-      if (params.search) queryString.append('search', params.search);
+      if (params.search) {
+        const sanitizedSearch = sanitizeSearchTerm(params.search);
+        if (sanitizedSearch) {
+          queryString.append('search', sanitizedSearch);
+        }
+      }
       queryString.append('categories', categoryId.toString());
       
       const postsResponse = await fetch(getWordPressUrl(`/posts?${queryString}`));
