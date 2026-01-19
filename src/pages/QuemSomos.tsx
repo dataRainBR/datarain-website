@@ -275,11 +275,10 @@ const QuemSomos = () => {
           {/* Astronaut positioned on the right side */}
           <img 
             src={astronautImage} 
-            alt="VentureLabs Astronaut" 
+            alt="VentureLabs Rocket" 
             className="absolute right-0 bottom-0 w-[300px] h-[450px] md:w-[400px] md:h-[600px] lg:w-[500px] lg:h-[700px] object-contain object-bottom opacity-90 pointer-events-none hidden md:block"
             style={{
-              zIndex: 2,
-              filter: 'drop-shadow(0 0 50px rgba(139, 92, 246, 0.4))'
+              zIndex: 2
             }}
           />
         </div>
