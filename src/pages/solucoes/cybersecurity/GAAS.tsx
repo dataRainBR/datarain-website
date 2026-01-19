@@ -32,7 +32,7 @@ const GAAS = () => {
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
-              Governance as a Service
+              GaaS (Governança como Serviço)
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
@@ -188,7 +188,7 @@ const GAAS = () => {
       <section className="py-20 bg-gradient-to-b from-card/20 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">A Solução GaaS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">A Solução GaaS (Governança como Serviço)</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Governança completa em três pilares fundamentais
             </p>

@@ -107,7 +107,7 @@ const Solucoes = () => {
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Landing Zone</span>
-                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">GaaS</span>
+                    <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">GaaS (Governança como Serviço)</span>
                     <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">Assessment</span>
                   </div>
                 </div>
@@ -214,7 +214,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="GaaS"
+                title="GaaS (Governança como Serviço)"
                 description="Governança como Serviço completa. Monitore compliance, gerencie políticas e automatize controles de segurança."
                 image={gaasImage}
                 link="/solucoes/cybersecurity/gaas"

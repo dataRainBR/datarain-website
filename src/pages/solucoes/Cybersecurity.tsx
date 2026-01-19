@@ -129,7 +129,7 @@ const Cybersecurity = () => {
             />
 
             <SolutionCard
-              title="GaaS"
+              title="GaaS (Governança como Serviço)"
               description="Governança como Serviço completa. Monitore compliance, gerencie políticas e automatize controles de segurança."
               image={gaasImage}
               link="/solucoes/cybersecurity/gaas"
