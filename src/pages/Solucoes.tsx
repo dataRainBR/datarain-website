@@ -159,7 +159,7 @@ const Solucoes = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
-                title="Arquitetura de Dados"
+                title="Arquitetura e Engenharia de Dados"
                 description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
                 image={arquiteturaDadosImage}
                 link="/solucoes/dados/arquitetura"
@@ -225,7 +225,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="Assessment"
+                title="Assessment de Segurança"
                 description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
                 image={assessmentImage}
                 link="/solucoes/cybersecurity/assessment"
@@ -247,7 +247,7 @@ const Solucoes = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
-                title="Migração para AWS"
+                title="Migração e Disaster Recovery"
                 description="Assessoria e execução completa de migração para AWS com framework estruturado."
                 image={migracaoImage}
                 link="/solucoes/cloud/migracao"
@@ -258,7 +258,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="FinOps"
+                title="Gestão de FinOps"
                 description="Otimização de custos em cloud com visibilidade completa e controle de gastos."
                 image={finopsImage}
                 link="/solucoes/cloud/finops"
@@ -269,7 +269,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="DevOps"
+                title="DevOps e Modernization"
                 description="Acelere entregas com automação e integração contínua. Pipelines CI/CD robustos."
                 image={devopsImage}
                 link="/solucoes/cloud/devops"
