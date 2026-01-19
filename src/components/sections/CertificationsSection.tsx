@@ -26,26 +26,9 @@ const achievements = [
 const CertificationsSection = () => {
   return (
     <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 relative overflow-hidden">
-      {/* Animated background pattern */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full opacity-[0.02]">
-          <div className="grid grid-cols-8 md:grid-cols-12 lg:grid-cols-16 gap-4 h-full">
-            {Array.from({ length: 64 }).map((_, i) => (
-              <div 
-                key={i}
-                className="bg-primary rounded-full animate-pulse"
-                style={{
-                  animationDelay: `${i * 0.2}s`,
-                  animationDuration: '4s'
-                }}
-              />
-            ))}
-          </div>
-        </div>
-        {/* Decorative orbs */}
-        <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-primary/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl" />
-      </div>
+      {/* Decorative orbs */}
+      <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl" />
 
       {/* Subtle grid pattern */}
       <div 
