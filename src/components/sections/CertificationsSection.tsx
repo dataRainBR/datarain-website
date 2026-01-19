@@ -25,7 +25,7 @@ const achievements = [
 
 const CertificationsSection = () => {
   return (
-    <section className="py-20 md:py-24 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-r from-primary/5 via-accent/5 to-primary/5 relative overflow-hidden">
       {/* Animated background pattern */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-full h-full opacity-[0.02]">
@@ -55,9 +55,9 @@ const CertificationsSection = () => {
         }}
       />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header with distinctive styling */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 sm:mb-12 md:mb-16">
           <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
             Reconhecimento
           </div>
@@ -70,7 +70,7 @@ const CertificationsSection = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {achievements.map((achievement, index) => (
             <div 
               key={index}

@@ -117,7 +117,7 @@ const Servicos = () => {
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-primary/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
@@ -174,7 +174,7 @@ const Servicos = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background via-accent/5 to-background"></div>
         <div className="absolute bottom-0 left-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-accent/10 rounded-full blur-3xl"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
@@ -215,7 +215,7 @@ const Servicos = () => {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
               <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
@@ -302,7 +302,7 @@ const Servicos = () => {
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-primary/5"></div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl border border-border/20 backdrop-blur-sm">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
