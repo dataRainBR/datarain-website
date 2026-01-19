@@ -203,7 +203,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="GaaS"
+                title="Governance as a Service"
                 description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
                 image={gaasImage}
                 link="/solucoes/cybersecurity/gaas"
