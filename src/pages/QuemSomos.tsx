@@ -116,7 +116,7 @@ const QuemSomos = () => {
           <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
             
             {/* Main content */}
@@ -167,14 +167,14 @@ const QuemSomos = () => {
       </header>
 
       {/* Nossa Historia - Cards com estatísticas */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-primary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
             
             {/* Lado esquerdo - Texto principal */}
             <div className="space-y-8 animate-fade-in">
@@ -242,7 +242,7 @@ const QuemSomos = () => {
       </section>
 
       {/* VentureLabs Section - 60% White, 30% Black, 10% Purple */}
-      <section className="py-20 bg-white relative overflow-hidden">
+      <section className="py-16 sm:py-20 bg-white relative overflow-hidden">
         {/* SVG Pattern Background - similar to VentureLabs */}
         <svg 
           aria-hidden="true" 
@@ -286,7 +286,7 @@ const QuemSomos = () => {
           </div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             {/* Header */}
             <div className="text-center mb-10 sm:mb-16 md:mb-20 animate-fade-in">

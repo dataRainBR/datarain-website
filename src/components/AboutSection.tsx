@@ -3,12 +3,12 @@ import aboutImage from "@/assets/about-datarain.jpg";
 
 const AboutSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-background relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-background"></div>
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[500px] h-[300px] sm:h-[400px] md:h-[500px] bg-primary/10 rounded-full blur-3xl"></div>
       
-      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           <div className="space-y-8">
             <div className="space-y-6">
               <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold">

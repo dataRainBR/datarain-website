@@ -3,7 +3,7 @@ import SolutionServiceCard from "./SolutionServiceCard";
 
 const ServicesSection = () => {
   return (
-    <section className="py-24 md:py-32 bg-muted/20 relative overflow-hidden">
+    <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-muted/20 relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-3xl" />
       <div className="absolute top-20 right-0 w-[400px] h-[400px] bg-primary/5 rounded-full blur-3xl" />
@@ -16,8 +16,8 @@ const ServicesSection = () => {
         }}
       />
       
-      <div className="container mx-auto px-4 relative z-10 max-w-7xl">
-        <div className="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16 lg:mb-20">
           <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
             Expertise
           </div>
