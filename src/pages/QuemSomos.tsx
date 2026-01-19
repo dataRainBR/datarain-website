@@ -272,18 +272,16 @@ const QuemSomos = () => {
           <div className="geometric-shape absolute top-[45%] right-[42%] w-26 h-34 border-2 border-purple-400/40 hidden lg:block" style={{ transform: 'skewY(-6deg)', animationDelay: '1.6s' }}></div>
           <div className="geometric-shape absolute top-[65%] left-[20%] w-24 h-30 border-2 border-purple-500/40 hidden md:block" style={{ transform: 'skewY(10deg)', animationDelay: '0.4s' }}></div>
           
-          {/* Astronaut positioned on the right side - without border and animation */}
-          <div className="absolute right-0 bottom-0 w-[300px] h-[450px] md:w-[400px] md:h-[600px] lg:w-[500px] lg:h-[700px] opacity-90 pointer-events-none hidden md:block" style={{ zIndex: 2 }}>
-            <img 
-              src={astronautImage} 
-              alt="VentureLabs Astronaut" 
-              className="w-full h-full object-contain object-bottom"
-              style={{
-                filter: 'drop-shadow(0 0 50px rgba(139, 92, 246, 0.4))',
-                mixBlendMode: 'normal'
-              }}
-            />
-          </div>
+          {/* Astronaut positioned on the right side */}
+          <img 
+            src={astronautImage} 
+            alt="VentureLabs Astronaut" 
+            className="absolute right-0 bottom-0 w-[300px] h-[450px] md:w-[400px] md:h-[600px] lg:w-[500px] lg:h-[700px] object-contain object-bottom opacity-90 pointer-events-none hidden md:block"
+            style={{
+              zIndex: 2,
+              filter: 'drop-shadow(0 0 50px rgba(139, 92, 246, 0.4))'
+            }}
+          />
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
