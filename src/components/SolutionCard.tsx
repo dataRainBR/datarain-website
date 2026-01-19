@@ -11,8 +11,8 @@ interface SolutionCardProps {
 const SolutionCard = ({ title, description, image, link, benefits }: SolutionCardProps) => {
   return (
     <a href={link} className="group block h-full">
-      <div className="bg-card rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm border border-border/50 hover:border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
-        <div className="relative h-40 sm:h-48 md:h-56 overflow-hidden flex-shrink-0">
+      <div className="bg-card rounded-2xl sm:rounded-3xl overflow-hidden shadow-sm border border-border/50 hover:border-primary/50 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full min-h-[480px] flex flex-col">
+        <div className="relative h-40 sm:h-44 overflow-hidden flex-shrink-0">
           <img 
             src={image} 
             alt={title}
