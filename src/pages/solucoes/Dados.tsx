@@ -4,9 +4,6 @@ import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
 import arquiteturaImage from "@/assets/solutions/data-architecture.jpg";
 import pilotImage from "@/assets/solutions/pilot-ai.jpg";
-import lyaImage from "@/assets/solutions/lya.jpg";
-import monalisaImage from "@/assets/solutions/monalisa.jpg";
-import claraImage from "@/assets/solutions/clara.jpg";
 import { Brain, BarChart3, Sparkles, Database } from "lucide-react";
 
 const Dados = () => {
@@ -117,7 +114,7 @@ const Dados = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <SolutionCard
               title="Arquitetura de Dados"
               description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
@@ -139,42 +136,6 @@ const Dados = () => {
                 "MVP em 4-8 semanas",
                 "ROI mensurável",
                 "Prova de conceito validada"
-              ]}
-            />
-
-            <SolutionCard
-              title="LYA - RH com AI"
-              description="Automatize processos de RH com inteligência artificial. Recrutamento inteligente, análise de performance e gestão de talentos."
-              image={lyaImage}
-              link="/solucoes/dados/lya"
-              benefits={[
-                "Recrutamento 70% mais rápido",
-                "Análise preditiva de turnover",
-                "Onboarding automatizado"
-              ]}
-            />
-
-            <SolutionCard
-              title="MonaLisa - Prefeitura AI"
-              description="IA para gestão pública municipal. Atendimento ao cidadão, gestão de processos e análise de dados urbanos."
-              image={monalisaImage}
-              link="/solucoes/dados/monalisa"
-              benefits={[
-                "Atendimento 24/7 automatizado",
-                "Análise de dados urbanos",
-                "Redução de custos operacionais"
-              ]}
-            />
-
-            <SolutionCard
-              title="CLARA - Clínica AI"
-              description="Inteligência artificial para gestão clínica. Triagem inteligente, agendamento automatizado e análise de prontuários."
-              image={claraImage}
-              link="/solucoes/dados/clara"
-              benefits={[
-                "Triagem inteligente de pacientes",
-                "Agendamento otimizado",
-                "Análise preditiva de saúde"
               ]}
             />
           </div>
