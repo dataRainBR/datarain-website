@@ -235,7 +235,7 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="IA e ML"
+                title="GenAI e ML"
                 description="Soluções de inteligência artificial e machine learning para automatizar processos e potencializar decisões."
                 image={pilotImage}
                 link="/solucoes/dados/ia-ml"
