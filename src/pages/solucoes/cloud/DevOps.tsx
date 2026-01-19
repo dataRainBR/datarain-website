@@ -10,7 +10,7 @@ const DevOps = () => {
       {/* Hero Section with Image Background */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={devopsHeroImage} alt="DevOps" className="w-full h-full object-cover" />
+          <img src={devopsHeroImage} alt="DevOps e Modernization" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
         </div>
 
@@ -20,7 +20,7 @@ const DevOps = () => {
               <span className="text-[#3893af] font-semibold">Cloud Solutions</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              DevOps
+              DevOps e Modernization
             </h1>
             <p className="text-xl text-gray-200 mb-8">
               A dataRain orgulha-se de ajudar empresas a alcançarem todo o potencial de seus negócios através de soluções tecnológicas inovadoras. Nossa nova oferta de DevOps irá revolucionar a forma como você desenvolve, implanta e opera softwares.

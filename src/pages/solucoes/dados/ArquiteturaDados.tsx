@@ -10,7 +10,7 @@ const ArquiteturaDados = () => {
       {/* Hero Section with Image Background */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
-          <img src={arquiteturaHeroImage} alt="Arquitetura e Governança de Dados" className="w-full h-full object-cover" />
+          <img src={arquiteturaHeroImage} alt="Arquitetura e Engenharia de Dados" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
         </div>
 
@@ -20,7 +20,7 @@ const ArquiteturaDados = () => {
               <span className="text-[#f78504] font-semibold">Dados e IA</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-              Arquitetura e Governança de Dados
+              Arquitetura e Engenharia de Dados
             </h1>
             <p className="text-xl text-gray-200 mb-8">
               A chave para o sucesso em uma economia baseada em dados é ter as informações certas, no momento certo, nas mãos das pessoas certas.

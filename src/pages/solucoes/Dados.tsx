@@ -116,7 +116,7 @@ const Dados = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <SolutionCard
-              title="Arquitetura de Dados"
+              title="Arquitetura e Engenharia de Dados"
               description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
               image={arquiteturaImage}
               link="/solucoes/dados/arquitetura"

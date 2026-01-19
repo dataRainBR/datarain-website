@@ -118,7 +118,7 @@ const Cloud = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <SolutionCard
-              title="Migração para AWS"
+              title="Migração e Disaster Recovery"
               description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
               image={migracaoImage}
               link="/solucoes/cloud/migracao"
@@ -130,7 +130,7 @@ const Cloud = () => {
             />
 
             <SolutionCard
-              title="FinOps"
+              title="Gestão de FinOps"
               description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
               image={finopsImage}
               link="/solucoes/cloud/finops"
@@ -142,7 +142,7 @@ const Cloud = () => {
             />
 
             <SolutionCard
-              title="DevOps"
+              title="DevOps e Modernization"
               description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
               image={devopsImage}
               link="/solucoes/cloud/devops"
