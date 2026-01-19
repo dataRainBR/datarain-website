@@ -357,7 +357,7 @@ const QuemSomos = () => {
                 </div>
 
                 <div className="grid grid-cols-1 gap-3 sm:gap-4">
-                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-[1.02] sm:hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                  <div className="group bg-gradient-to-br from-white/95 to-purple-50/90 border-2 border-black/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-[1.02] sm:hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
                     <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
                       <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
@@ -369,7 +369,7 @@ const QuemSomos = () => {
                     </p>
                   </div>
 
-                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-[1.02] sm:hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                  <div className="group bg-gradient-to-br from-white/95 to-purple-50/90 border-2 border-black/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-[1.02] sm:hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
                     <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
                       <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <Brain className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
@@ -381,7 +381,7 @@ const QuemSomos = () => {
                     </p>
                   </div>
 
-                  <div className="group bg-gradient-to-br from-white to-purple-50/30 border-2 border-black/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-[1.02] sm:hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
+                  <div className="group bg-gradient-to-br from-white/95 to-purple-50/90 border-2 border-black/10 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:scale-[1.02] sm:hover:scale-[1.03] hover:border-purple-500/50 transition-all duration-400 shadow-lg hover:shadow-2xl hover:shadow-purple-500/20 cursor-pointer">
                     <div className="flex items-center gap-3 sm:gap-4 mb-2 sm:mb-3">
                       <div className="w-9 h-9 sm:w-10 sm:h-10 bg-gradient-to-br from-purple-600 to-purple-700 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                         <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
