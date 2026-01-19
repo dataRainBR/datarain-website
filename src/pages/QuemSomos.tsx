@@ -15,6 +15,7 @@ import caioPhoto from "@/assets/team/caio-marini.jpg";
 import joseSawadaPhoto from "@/assets/team/jose-sawada.jpg";
 import gilsonSanchesPhoto from "@/assets/team/gilson-sanches.jpg";
 import marceloTavaresPhoto from "@/assets/team/marcelo-tavares.jpg";
+import victorMatioliPhoto from "@/assets/team/victor-matioli.jpg";
 import awsCertificationsBg from "@/assets/aws-certifications-bg.png";
 import { 
   Cloud, 
@@ -85,7 +86,7 @@ const QuemSomos = () => {
     {
       name: "Victor Matioli",
       role: "Cybersecurity Lead",
-      image: "https://media.licdn.com/dms/image/v2/D4D03AQHXeDgm3qD3EA/profile-displayphoto-crop_800_800/B4DZibSSnLG8AI-/0/1754951921399?e=1768435200&v=beta&t=cVIvnLikOIGfOfQX9pa3Jiq-WDYxOvVvEhM5imCpnTg",
+      image: victorMatioliPhoto,
       linkedin: "https://www.linkedin.com/in/victormatioli/"
     },
     {
