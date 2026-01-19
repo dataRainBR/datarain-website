@@ -44,7 +44,7 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
           <img
             src={media.source_url}
             alt={media.alt_text || post.title.rendered}
-            className="w-full h-full object-contain"
+            className="max-w-full max-h-full min-w-[60%] min-h-[60%] object-contain"
           />
         </div>
       )}
