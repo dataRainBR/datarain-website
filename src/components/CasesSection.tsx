@@ -141,12 +141,12 @@ export default function CasesSection() {
                     <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/10 via-transparent to-white/5 rounded-3xl"></div>
                     
                     {/* Container glassmorphism */}
-                    <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-white/10">
+                    <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-2xl border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-white/10 group-hover:-translate-y-1">
                       <div className="relative z-10 p-8 md:p-10 lg:p-12 min-h-[400px] md:min-h-[450px] flex flex-col justify-between">
                         <div>
-                          {/* Número do case */}
+                          {/* Número do case - opacidade aumentada */}
                           <div className="flex items-center justify-between mb-6 md:mb-8">
-                            <span className="text-7xl md:text-8xl font-bold text-white/10">
+                            <span className="text-7xl md:text-8xl font-bold text-white/20">
                               {String(index + 1).padStart(2, "0")}
                             </span>
                           </div>
@@ -162,10 +162,10 @@ export default function CasesSection() {
                         
                         <button 
                           onClick={() => handleReadMore(caseStudy.id)}
-                          className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start"
+                          className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start group/btn hover:scale-105"
                         >
                           <span>Leia o case completo</span>
-                          <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                           </svg>
                         </button>
@@ -176,8 +176,9 @@ export default function CasesSection() {
               ))}
             </CarouselContent>
             
-            <CarouselPrevious className="left-2 md:left-4 bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm h-10 w-10 md:h-12 md:w-12" />
-            <CarouselNext className="right-2 md:right-4 bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm h-10 w-10 md:h-12 md:w-12" />
+            {/* Setas melhoradas */}
+            <CarouselPrevious className="left-2 md:left-4 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110" />
+            <CarouselNext className="right-2 md:right-4 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110" />
           </Carousel>
         )}
 

@@ -9,15 +9,20 @@ interface SolutionServiceCardProps {
   features?: string[];
 }
 
+// Cores atualizadas conforme requisição:
+// IA e Dados: Azul #3893af (primary)
+// Cybersecurity: Verde (emerald)
+// Cloud: Laranja #f78504 (accent)
 const variantStyles = {
   ia: {
-    gradient: "from-violet-500/20 via-purple-500/10 to-fuchsia-500/20",
-    iconBg: "bg-gradient-to-br from-violet-500 to-purple-600",
-    accentLine: "bg-gradient-to-r from-violet-500 to-purple-500",
-    hoverBorder: "hover:border-violet-400/60",
-    decorativeOrb: "bg-violet-500/30",
+    gradient: "from-[#3893af]/20 via-[#3893af]/10 to-sky-500/20",
+    iconBg: "bg-gradient-to-br from-[#3893af] to-sky-600",
+    accentLine: "bg-gradient-to-r from-[#3893af] to-sky-500",
+    hoverBorder: "hover:border-[#3893af]/60",
+    decorativeOrb: "bg-[#3893af]/30",
+    textColor: "text-[#3893af]",
     pattern: (
-      <svg className="absolute right-0 top-0 w-32 h-32 text-violet-500/10" viewBox="0 0 100 100" fill="currentColor">
+      <svg className="absolute right-0 top-0 w-32 h-32 text-[#3893af]/10" viewBox="0 0 100 100" fill="currentColor">
         <circle cx="80" cy="20" r="8" />
         <circle cx="60" cy="35" r="5" />
         <circle cx="85" cy="45" r="4" />
@@ -33,6 +38,7 @@ const variantStyles = {
     accentLine: "bg-gradient-to-r from-emerald-500 to-teal-500",
     hoverBorder: "hover:border-emerald-400/60",
     decorativeOrb: "bg-emerald-500/30",
+    textColor: "text-emerald-600",
     pattern: (
       <svg className="absolute right-0 top-0 w-32 h-32 text-emerald-500/10" viewBox="0 0 100 100" fill="currentColor">
         <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
@@ -42,13 +48,14 @@ const variantStyles = {
     ),
   },
   cloud: {
-    gradient: "from-primary/20 via-sky-500/10 to-blue-500/20",
-    iconBg: "bg-gradient-to-br from-primary to-sky-600",
-    accentLine: "bg-gradient-to-r from-primary to-sky-500",
-    hoverBorder: "hover:border-primary/60",
-    decorativeOrb: "bg-primary/30",
+    gradient: "from-[#f78504]/20 via-orange-400/10 to-amber-500/20",
+    iconBg: "bg-gradient-to-br from-[#f78504] to-orange-500",
+    accentLine: "bg-gradient-to-r from-[#f78504] to-orange-400",
+    hoverBorder: "hover:border-[#f78504]/60",
+    decorativeOrb: "bg-[#f78504]/30",
+    textColor: "text-[#f78504]",
     pattern: (
-      <svg className="absolute right-0 top-0 w-32 h-32 text-primary/10" viewBox="0 0 100 100" fill="currentColor">
+      <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
         <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
         <circle cx="45" cy="50" r="3" opacity="0.5" />
         <circle cx="60" cy="48" r="2" opacity="0.5" />
@@ -103,7 +110,7 @@ const SolutionServiceCard = ({
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:translate-x-1 transition-transform duration-300">
+        <h3 className={`text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:${styles.textColor} transition-colors duration-300`}>
           {title}
         </h3>
 
@@ -130,7 +137,7 @@ const SolutionServiceCard = ({
         )}
 
         {/* CTA */}
-        <div className="flex items-center gap-2 text-foreground font-semibold group-hover:gap-4 transition-all duration-300">
+        <div className={`flex items-center gap-2 ${styles.textColor} font-semibold group-hover:gap-4 transition-all duration-300`}>
           <span>Explorar soluções</span>
           <svg
             className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
