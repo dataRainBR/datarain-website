@@ -35,7 +35,7 @@ const IAML = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-primary/10 rounded-full px-4 py-2 mb-6">
               <Brain className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium text-primary">IA e ML</span>
+              <span className="text-sm font-medium text-primary">GenAI e ML</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
@@ -86,9 +86,9 @@ const IAML = () => {
       <section className="py-16 bg-card/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluções de IA e ML na AWS</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Soluções de GenAI e ML na AWS</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              As soluções de IA e ML na AWS ajudam empresas de todos os tamanhos e setores a transformar dados em insights acionáveis
+              As soluções de GenAI e ML na AWS ajudam empresas de todos os tamanhos e setores a transformar dados em insights acionáveis
             </p>
           </div>
 
@@ -99,7 +99,7 @@ const IAML = () => {
               </div>
               <h3 className="text-xl font-bold mb-3">Decisões Mais Informadas</h3>
               <p className="text-muted-foreground">
-                As soluções de IA e ML podem ajudar as empresas a tomar decisões mais informadas, baseadas em dados.
+                As soluções de GenAI e ML podem ajudar as empresas a tomar decisões mais informadas, baseadas em dados.
               </p>
             </div>
 
@@ -158,11 +158,11 @@ const IAML = () => {
         </div>
       </section>
 
-      {/* Descomplicando IA e ML */}
+      {/* Descomplicando GenAI e ML */}
       <section className="py-16 bg-gradient-to-b from-card/20 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Descomplicando IA e ML</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Descomplicando GenAI e ML</h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -306,7 +306,7 @@ const IAML = () => {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Módulos e Componentes</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              IA e ML são baseadas na plataforma AWS e incluem
+              GenAI e ML são baseadas na plataforma AWS e incluem
             </p>
           </div>
 
