@@ -207,8 +207,8 @@ const Suporte = () => {
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground/90 max-w-3xl mx-auto mb-8">
                 Para quem é: empresas em AWS (ou híbridas) que precisam de agilidade, rastreabilidade e confiança na operação, com visão de negócio.
               </p>
-              <Button variant="hero" size="lg" className="sm:text-lg">
-                Conhecer Planos de Suporte
+              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+                <a href="/fale-conosco">Conhecer Planos de Suporte</a>
               </Button>
             </div>
           </div>
