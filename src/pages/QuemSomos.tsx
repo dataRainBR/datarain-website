@@ -5,7 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
-import astronautImage from "@/assets/venturelabs-rocket.jpg";
+import astronautImage from "@/assets/astronauta-venturelabs.png";
 import wagnerPhoto from "@/assets/team/wagner-andrade.jpg";
 import guilhermePhoto from "@/assets/team/guilherme-belinelo.jpg";
 import leandroPhoto from "@/assets/team/leandro-gotz.jpg";
