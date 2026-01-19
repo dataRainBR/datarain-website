@@ -153,11 +153,11 @@ const Solucoes = () => {
           {/* IA e Dados Solutions */}
           <div className="mb-20">
             <div className="flex items-center gap-4 mb-8">
-              <div className="w-12 h-1 bg-[#f78504] rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#f78504]">IA e Dados</h3>
-              <div className="flex-1 h-1 bg-[#f78504]/20 rounded-full"></div>
+              <div className="w-12 h-1 bg-primary rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-primary">IA e Dados</h3>
+              <div className="flex-1 h-1 bg-primary/20 rounded-full"></div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Arquitetura de Dados"
                 description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
@@ -178,6 +178,17 @@ const Solucoes = () => {
                   "MVP em 4-8 semanas",
                   "ROI mensurável",
                   "Prova de conceito validada"
+                ]}
+              />
+              <SolutionCard
+                title="IA e ML"
+                description="Soluções de inteligência artificial e machine learning para automatizar processos e potencializar decisões."
+                image={pilotImage}
+                link="/solucoes/dados/ia-ml"
+                benefits={[
+                  "Modelos personalizados",
+                  "Automação inteligente",
+                  "Insights preditivos"
                 ]}
               />
             </div>
@@ -234,49 +245,49 @@ const Solucoes = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">Cloud</h3>
               <div className="flex-1 h-1 bg-[#3893af]/20 rounded-full"></div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Migração para AWS"
-                description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
+                description="Assessoria e execução completa de migração para AWS com framework estruturado."
                 image={migracaoImage}
                 link="/solucoes/cloud/migracao"
                 benefits={[
                   "Migration Evaluator e Hub",
                   "Framework AWS MAP",
-                  "Alta disponibilidade garantida"
+                  "Alta disponibilidade"
                 ]}
               />
               <SolutionCard
                 title="FinOps"
-                description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
+                description="Otimização de custos em cloud com visibilidade completa e controle de gastos."
                 image={finopsImage}
                 link="/solucoes/cloud/finops"
                 benefits={[
-                  "Redução média de 30% nos custos",
+                  "Redução média de 30%",
                   "Dashboards em tempo real",
-                  "Alertas automáticos de gastos"
+                  "Alertas automáticos"
                 ]}
               />
               <SolutionCard
                 title="DevOps"
-                description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
+                description="Acelere entregas com automação e integração contínua. Pipelines CI/CD robustos."
                 image={devopsImage}
                 link="/solucoes/cloud/devops"
                 benefits={[
-                  "Deploy em minutos, não semanas",
-                  "Automação completa de pipelines",
+                  "Deploy em minutos",
+                  "Automação completa",
                   "Rollback instantâneo"
                 ]}
               />
               <SolutionCard
                 title="Assessment de Arquitetura"
-                description="A base para crescer com segurança e eficiência. Diagnóstico completo da arquitetura atual com roadmap técnico e quick wins para evolução sustentável."
+                description="Diagnóstico completo da arquitetura atual com roadmap técnico priorizado."
                 image={arquiteturaCloudImage}
                 link="/solucoes/cloud/arquitetura"
                 benefits={[
-                  "Diagnóstico de performance e custos",
-                  "Roadmap técnico priorizado",
-                  "Melhores práticas AWS validadas"
+                  "Diagnóstico de performance",
+                  "Roadmap técnico",
+                  "Melhores práticas AWS"
                 ]}
               />
             </div>
