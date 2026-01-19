@@ -40,7 +40,7 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
   return (
     <Card className="h-full flex flex-col">
       {media && (
-        <div className="aspect-video overflow-hidden rounded-t-lg bg-muted flex items-center justify-center">
+        <div className="aspect-video overflow-hidden rounded-t-lg bg-white flex items-center justify-center">
           <img
             src={media.source_url}
             alt={media.alt_text || post.title.rendered}
