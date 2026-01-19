@@ -230,7 +230,7 @@ const QuemSomos = () => {
               
               <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
                 <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">5+</div>
+                  <div className="text-3xl md:text-4xl font-bold text-primary">10</div>
                   <div className="text-sm md:text-base text-muted-foreground font-medium">
                     Anos de<br />Experiência
                   </div>
@@ -961,7 +961,7 @@ const QuemSomos = () => {
                     <div className="text-white/80 text-sm">Certificados AWS</div>
                   </div>
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
-                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">5+</div>
+                    <div className="text-2xl md:text-3xl font-bold text-primary mb-1">10</div>
                     <div className="text-white/80 text-sm">Anos de Mercado</div>
                   </div>
                   <div className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-2xl p-4 text-center hover-scale">
