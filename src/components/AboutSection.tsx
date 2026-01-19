@@ -22,8 +22,8 @@ const AboutSection = () => {
             <div className="space-y-6 text-foreground">
               <p className="text-lg md:text-xl leading-relaxed">
                 A DataRain é a parceira estratégica para empresas em tecnologia, 
-                entregando soluções em cloud, dados e inteligência artificial 
-                com segurança, agilidade e foco em resultados.
+                entregando soluções em IA e Dados, Cybersecurity e Cloud
+                com agilidade e foco em resultados.
               </p>
               <p className="text-lg md:text-xl leading-relaxed text-muted-foreground">
                 Trabalhamos lado a lado com nossos clientes para impulsionar 

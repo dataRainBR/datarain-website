@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="md:col-span-4 space-y-6">
             <Logo variant="original" className="mb-6" />
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Parceira estratégica para empresas em tecnologia, entregando soluções em cloud, dados, cyber segurança e inteligência artificial.
+              Parceira estratégica para empresas em tecnologia, entregando soluções em IA e Dados, Cybersecurity e Cloud.
             </p>
           </div>
           

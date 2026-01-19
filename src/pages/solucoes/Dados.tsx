@@ -24,7 +24,7 @@ const Dados = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-[#f78504]/10 rounded-full px-4 py-2 mb-6">
               <Brain className="w-5 h-5 text-[#f78504]" />
-              <span className="text-sm font-medium text-[#f78504]">Data & AI</span>
+              <span className="text-sm font-medium text-[#f78504]">IA e Dados</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
