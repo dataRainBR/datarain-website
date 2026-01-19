@@ -46,12 +46,38 @@ export default function CasesSection() {
     per_page: 6,
   });
 
+  // Função para extrair texto limpo do conteúdo HTML
+  const extractTextFromContent = (html: string, maxLength: number = 200): string => {
+    // Remove tags HTML
+    const text = html.replace(/<[^>]*>/g, " ")
+      // Remove entidades HTML comuns
+      .replace(/&nbsp;/g, " ")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&#8211;/g, "–")
+      .replace(/&#8217;/g, "'")
+      .replace(/&#8220;/g, '"')
+      .replace(/&#8221;/g, '"')
+      // Remove espaços múltiplos
+      .replace(/\s+/g, " ")
+      .trim();
+    
+    // Retorna os primeiros caracteres
+    if (text.length <= maxLength) return text;
+    
+    // Corta no último espaço para não quebrar palavras
+    const truncated = text.slice(0, maxLength);
+    const lastSpace = truncated.lastIndexOf(" ");
+    return (lastSpace > 0 ? truncated.slice(0, lastSpace) : truncated) + "...";
+  };
+
   // Usa dados do WordPress se disponíveis, senão usa estáticos
   const cases = wordpressCases && wordpressCases.length > 0
     ? wordpressCases.map((post, index) => ({
         id: post.id,
         title: post.title.rendered.replace(/&#8211;/g, "–").replace(/&amp;/g, "&"),
-        description: post.excerpt.rendered.replace(/<[^>]*>/g, "").slice(0, 200) + "...",
+        description: extractTextFromContent(post.content.rendered, 250),
         clientName: "",
         slug: post.slug,
         gradientIndex: index % cardGradients.length,
