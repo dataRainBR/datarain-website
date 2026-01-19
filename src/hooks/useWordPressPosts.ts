@@ -1,6 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { getWordPressUrl, WordPressPost } from '@/lib/wordpress';
 import { getCategoryIdBySlug } from '@/hooks/useWordPress';
+import { sanitizeSearchTerm } from '@/lib/sanitize';
 
 interface UseWordPressPostsParams {
   /**
@@ -76,7 +77,10 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
         baseParams.append('page', '1');
 
         if (search) {
-          baseParams.append('search', search);
+          const sanitizedSearch = sanitizeSearchTerm(search);
+          if (sanitizedSearch) {
+            baseParams.append('search', sanitizedSearch);
+          }
         }
 
         if (resolvedCategoryIds && resolvedCategoryIds.length > 0) {
@@ -108,7 +112,10 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
           params.append('page', page.toString());
 
           if (search) {
-            params.append('search', search);
+            const sanitizedSearch = sanitizeSearchTerm(search);
+            if (sanitizedSearch) {
+              params.append('search', sanitizedSearch);
+            }
           }
 
           if (resolvedCategoryIds && resolvedCategoryIds.length > 0) {
@@ -144,7 +151,10 @@ export const useWordPressPosts = (options: UseWordPressPostsParams = {}) => {
         params.append('page', page.toString());
 
         if (search) {
-          params.append('search', search);
+          const sanitizedSearch = sanitizeSearchTerm(search);
+          if (sanitizedSearch) {
+            params.append('search', sanitizedSearch);
+          }
         }
 
         // Filtro por categorias (ex.: apenas "blog" ou apenas "cases")
