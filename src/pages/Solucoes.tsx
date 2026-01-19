@@ -31,7 +31,7 @@ const Solucoes = () => {
               Transformam Negócios
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-              Cloud, Dados e Segurança integrados em um ecossistema completo para sua transformação digital
+              IA e Dados, Cybersecurity e Cloud integrados em um ecossistema completo para sua transformação digital
             </p>
 
             {/* Global Stats */}
@@ -61,9 +61,9 @@ const Solucoes = () => {
       <section className="bg-gradient-to-b from-background via-card/20 to-background py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Quatro Pilares, Uma Visão</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Três Pilares, Uma Visão</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Integramos IA, Dados, Segurança e Cloud para entregar transformação digital de ponta a ponta
+              Integramos IA e Dados, Cybersecurity e Cloud para entregar transformação digital de ponta a ponta
             </p>
           </div>
 
@@ -203,8 +203,8 @@ const Solucoes = () => {
                 ]}
               />
               <SolutionCard
-                title="Governance as a Service"
-                description="Governança completa de segurança como serviço. Monitore compliance, gerencie políticas e automatize controles de segurança."
+                title="GaaS"
+                description="Governança como Serviço completa. Monitore compliance, gerencie políticas e automatize controles de segurança."
                 image={gaasImage}
                 link="/solucoes/cybersecurity/gaas"
                 benefits={[
