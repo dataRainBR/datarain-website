@@ -16,8 +16,8 @@ const PilotAI = () => {
 
         <div className="relative z-10 container mx-auto px-4 py-32">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-2 bg-[#f78504]/20 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-[#f78504] font-semibold">GenAI e Dados</span>
+            <div className="inline-block px-4 py-2 bg-[#3893af]/20 rounded-full mb-6 backdrop-blur-sm">
+              <span className="text-[#3893af] font-semibold">GenAI e Dados</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               Pilot.AI dataRain
@@ -29,7 +29,7 @@ const PilotAI = () => {
               Transforme um desafio real do seu negócio em um projeto prático de IA Generativa, desenvolvido sob medida e 100% financiado pela AWS. Em até 30 dias, você vê a tecnologia funcionando com dados reais.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/fale-conosco" className="px-8 py-4 bg-[#f78504] text-white rounded-lg font-semibold hover:bg-[#d97004] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
                 Agendar Reunião
               </a>
             </div>
