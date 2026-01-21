@@ -67,11 +67,11 @@ const SolutionCard = ({ title, description, link, pillar }: SolutionCardProps) =
           }}
         />
         
-        {/* Decorative pillar icon - positioned in corner */}
-        <div className="absolute right-0 bottom-0 overflow-hidden pointer-events-none">
+        {/* Decorative pillar icon - large, abstract, corner positioned */}
+        <div className="absolute -right-8 -bottom-8 overflow-hidden pointer-events-none">
           <PillarIcon 
             pillar={pillar}
-            className="w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] text-white/20 group-hover:text-white/30 group-hover:scale-105 transition-all duration-500 translate-x-4 translate-y-4 stroke-[0.8]"
+            className="w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] text-white/10 group-hover:text-white/15 group-hover:scale-105 transition-all duration-500 rotate-[-15deg] stroke-[0.5]"
           />
         </div>
         
