@@ -16,8 +16,8 @@ const ArquiteturaDados = () => {
 
         <div className="relative z-10 container mx-auto px-4 py-32">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-2 bg-[#f78504]/20 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-[#f78504] font-semibold">GenAI e Dados</span>
+            <div className="inline-block px-4 py-2 bg-[#3893af]/20 rounded-full mb-6 backdrop-blur-sm">
+              <span className="text-[#3893af] font-semibold">GenAI e Dados</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               Arquitetura e Engenharia de Dados
@@ -26,7 +26,7 @@ const ArquiteturaDados = () => {
               A chave para o sucesso em uma economia baseada em dados é ter as informações certas, no momento certo, nas mãos das pessoas certas.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a href="/fale-conosco" className="px-8 py-4 bg-[#f78504] text-white rounded-lg font-semibold hover:bg-[#d97004] transition-all hover:shadow-xl">
+              <a href="/fale-conosco" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
                 Falar com Especialista
               </a>
             </div>
