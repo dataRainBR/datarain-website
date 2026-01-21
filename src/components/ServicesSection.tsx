@@ -1,4 +1,4 @@
-import { CloudIcon, BrainCircuitIcon, ShieldCheckIcon } from "lucide-react";
+import { CloudIcon, LightbulbIcon, ShieldCheckIcon } from "lucide-react";
 import SolutionServiceCard from "./SolutionServiceCard";
 
 const ServicesSection = () => {
@@ -34,7 +34,7 @@ const ServicesSection = () => {
           <SolutionServiceCard 
             title="IA e Dados" 
             description="Soluções de inteligência artificial e estratégias de dados que automatizam processos e transformam informações em insights valiosos."
-            icon={<BrainCircuitIcon className="h-7 w-7" />}
+            icon={<LightbulbIcon className="h-7 w-7" />}
             href="/solucoes/dados"
             variant="ia"
             features={["Machine Learning", "Analytics Avançado", "Automação Inteligente"]}
