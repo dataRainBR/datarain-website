@@ -9,9 +9,9 @@ const Solucoes = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#3893af]/5 via-[#f78504]/5 to-background">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background">
           <div className="absolute -top-32 -right-32 w-[400px] sm:w-[600px] h-[400px] sm:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute -bottom-32 -left-32 w-[500px] sm:w-[700px] h-[500px] sm:h-[700px] bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute top-1/3 right-1/4 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] bg-primary/15 rounded-full blur-2xl"></div>
         </div>
 
@@ -129,31 +129,31 @@ const Solucoes = () => {
             </a>
 
             {/* Cloud Pillar - Laranja #f78504 */}
-            <a href="/solucoes/cloud" className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <a href="/solucoes/cloud" className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-accent/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-accent/10 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-accent/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-accent to-accent/70 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Cloud</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">Cloud</h3>
                 <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   Migração, otimização e gestão de infraestrutura cloud com AWS. Do assessment à operação contínua.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="text-xs px-3 py-1 rounded-full bg-[#f78504]/10 text-[#f78504]">Migração AWS</span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-[#f78504]/10 text-[#f78504]">FinOps</span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-[#f78504]/10 text-[#f78504]">DevOps</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">Migração AWS</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">FinOps</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">DevOps</span>
                 </div>
-                <div className="flex items-center gap-2 text-[#f78504] font-semibold group-hover:gap-4 transition-all duration-300">
+                <div className="flex items-center gap-2 text-accent font-semibold group-hover:gap-4 transition-all duration-300">
                   <span>Explorar soluções</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -236,9 +236,9 @@ const Solucoes = () => {
           {/* Cloud Solutions */}
           <div>
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-1 bg-[#f78504] rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#f78504]">Cloud</h3>
-              <div className="flex-1 h-1 bg-[#f78504]/20 rounded-full"></div>
+              <div className="w-12 h-1 bg-accent rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-accent">Cloud</h3>
+              <div className="flex-1 h-1 bg-accent/20 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard

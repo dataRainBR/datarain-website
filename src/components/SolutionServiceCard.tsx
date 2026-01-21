@@ -48,14 +48,14 @@ const variantStyles = {
     ),
   },
   cloud: {
-    gradient: "from-[#f78504]/20 via-orange-400/10 to-amber-500/20",
-    iconBg: "bg-gradient-to-br from-[#f78504] to-orange-500",
-    accentLine: "bg-gradient-to-r from-[#f78504] to-orange-400",
-    hoverBorder: "hover:border-[#f78504]/60",
-    decorativeOrb: "bg-[#f78504]/30",
-    textColor: "text-[#f78504]",
+    gradient: "from-accent/20 via-accent/10 to-accent/20",
+    iconBg: "bg-accent",
+    accentLine: "bg-gradient-to-r from-accent to-accent/70",
+    hoverBorder: "hover:border-accent/60",
+    decorativeOrb: "bg-accent/30",
+    textColor: "text-accent",
     pattern: (
-      <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+      <svg className="absolute right-0 top-0 w-32 h-32 text-accent/10" viewBox="0 0 100 100" fill="currentColor">
         <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
         <circle cx="45" cy="50" r="3" opacity="0.5" />
         <circle cx="60" cy="48" r="2" opacity="0.5" />
@@ -104,7 +104,9 @@ const SolutionServiceCard = ({
 
         {/* Icon */}
         <div
-          className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 ${styles.iconBg} rounded-xl sm:rounded-2xl flex items-center justify-center text-white mb-4 sm:mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
+          className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 ${styles.iconBg} rounded-xl sm:rounded-2xl flex items-center justify-center ${
+            variant === "cloud" ? "text-accent-foreground" : "text-white"
+          } mb-4 sm:mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
         >
           {icon}
         </div>
@@ -137,7 +139,13 @@ const SolutionServiceCard = ({
         )}
 
         {/* CTA */}
-        <div className={`inline-flex items-center gap-3 ${styles.iconBg} text-white font-semibold px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl shadow-lg group-hover:gap-4 group-hover:scale-105 transition-all duration-300`}>
+        <div
+          className={`inline-flex items-center gap-3 ${styles.iconBg} ${{
+            cloud: "text-accent-foreground",
+            ia: "text-white",
+            security: "text-white",
+          }[variant]} font-semibold px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl shadow-lg group-hover:gap-4 group-hover:scale-105 transition-all duration-300`}
+        >
           <span className="text-sm sm:text-base">Explorar soluções</span>
           <svg
             className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"

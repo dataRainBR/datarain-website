@@ -15,16 +15,16 @@ const Migracao = () => {
         title="Migração e"
         highlightedText="Disaster Recovery"
         description="Transforme seu negócio com a migração para a nuvem AWS. Nossa solução assessora e executa cada etapa necessária para migrar sua infraestrutura, aplicativos e dados com segurança, agilidade e eficiência."
-        pillarColor="#f78504"
+        pillarColor="hsl(var(--pillar-cloud))"
       />
 
       {/* Benefits Section */}
       <section className="py-20 md:py-28 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#f78504]/10 rounded-full px-4 py-2 mb-4">
-              <Rocket className="w-4 h-4 text-[#f78504]" />
-              <span className="text-sm font-medium text-[#f78504]">Vantagens</span>
+            <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-4">
+              <Rocket className="w-4 h-4 text-accent" />
+              <span className="text-sm font-medium text-accent">Vantagens</span>
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Benefícios da Migração</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -38,13 +38,13 @@ const Migracao = () => {
               { icon: Shield, title: "Segurança", desc: "Segurança reforçada por meio das melhores práticas do provedor, com alta disponibilidade garantida." },
               { icon: TrendingUp, title: "Economia", desc: "Economia de custos com infraestrutura e eficiência no uso de recursos financeiros e humanos." }
             ].map((item, index) => (
-              <div key={index} className="group relative bg-card rounded-2xl overflow-hidden border border-border/50 hover:border-[#f78504]/40 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div key={index} className="group relative bg-card rounded-2xl overflow-hidden border border-border/50 hover:border-accent/40 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <div className="relative z-10 p-8">
-                  <div className="w-14 h-14 bg-gradient-to-br from-[#f78504] to-[#d97203] rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-14 h-14 bg-accent rounded-xl flex items-center justify-center text-accent-foreground mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
                     <item.icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-[#f78504] transition-colors">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
                 </div>
               </div>
@@ -60,9 +60,9 @@ const Migracao = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left: Content */}
               <div>
-                <div className="inline-flex items-center gap-2 bg-[#f78504]/10 rounded-full px-4 py-2 mb-6">
-                  <Settings className="w-4 h-4 text-[#f78504]" />
-                  <span className="text-sm font-medium text-[#f78504]">Metodologia</span>
+                <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-6">
+                  <Settings className="w-4 h-4 text-accent" />
+                  <span className="text-sm font-medium text-accent">Metodologia</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
                   Framework Estruturado
@@ -81,8 +81,8 @@ const Migracao = () => {
                     "Validação e otimização pós-migração"
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-4 group">
-                      <div className="w-8 h-8 rounded-full bg-[#f78504]/10 flex items-center justify-center group-hover:bg-[#f78504]/20 transition-colors">
-                        <CheckCircle2 className="w-4 h-4 text-[#f78504]" />
+                      <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                        <CheckCircle2 className="w-4 h-4 text-accent" />
                       </div>
                       <span className="text-foreground font-medium">{item}</span>
                     </div>
@@ -91,7 +91,7 @@ const Migracao = () => {
               </div>
 
               {/* Right: Tools */}
-              <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-3xl p-8 border border-[#f78504]/20">
+              <div className="bg-gradient-to-br from-accent/5 to-accent/10 rounded-3xl p-8 border border-accent/20">
                 <h3 className="text-xl font-bold mb-6 text-foreground">Ferramentas AWS</h3>
                 <div className="grid grid-cols-1 gap-4">
                   {[
@@ -116,9 +116,9 @@ const Migracao = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-[#f78504]/10 rounded-full px-4 py-2 mb-4">
-                <BarChart3 className="w-4 h-4 text-[#f78504]" />
-                <span className="text-sm font-medium text-[#f78504]">Setores</span>
+              <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-4">
+                <BarChart3 className="w-4 h-4 text-accent" />
+                <span className="text-sm font-medium text-accent">Setores</span>
               </div>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Aplicações por Setor</h2>
             </div>
@@ -130,9 +130,9 @@ const Migracao = () => {
                 { title: "Financeiro", desc: "Detecção de fraudes e análise de riscos." },
                 { title: "Varejo", desc: "Experiência do cliente aprimorada." }
               ].map((sector, index) => (
-                <div key={index} className="group bg-card rounded-2xl p-6 border border-border/50 hover:border-[#f78504]/40 transition-all duration-300 hover:shadow-lg">
-                  <div className="w-10 h-10 rounded-xl bg-[#f78504]/10 flex items-center justify-center mb-4 group-hover:bg-[#f78504]/20 transition-colors">
-                    <div className="w-2 h-2 rounded-full bg-[#f78504]"></div>
+                <div key={index} className="group bg-card rounded-2xl p-6 border border-border/50 hover:border-accent/40 transition-all duration-300 hover:shadow-lg">
+                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4 group-hover:bg-accent/20 transition-colors">
+                    <div className="w-2 h-2 rounded-full bg-accent"></div>
                   </div>
                   <h3 className="font-bold text-foreground mb-2">{sector.title}</h3>
                   <p className="text-sm text-muted-foreground">{sector.desc}</p>
