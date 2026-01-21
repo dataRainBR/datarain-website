@@ -21,14 +21,22 @@ const SolutionHero = ({
   ctaText = "Falar com Especialista",
   ctaHref = "/fale-conosco",
 }: SolutionHeroProps) => {
-  // Determine text color based on pillar color brightness
-  const isLightColor = pillarColor === "#f78504"; // Orange needs dark text
-  const textColor = isLightColor ? "text-gray-900" : "text-white";
-  const mutedTextColor = isLightColor ? "text-gray-700" : "text-white/80";
-  const badgeBg = isLightColor ? "bg-black/10" : "bg-white/10";
-  const badgeBorder = isLightColor ? "border-black/20" : "border-white/20";
-  const buttonBg = isLightColor ? "bg-gray-900 hover:bg-gray-800" : "bg-white hover:bg-white/90";
-  const buttonText = isLightColor ? "text-white" : `text-[${pillarColor}]`;
+  const normalizedColor = pillarColor.replace(/\s/g, "").toLowerCase();
+  // Orange needs dark text; support legacy hex + new HSL token usage
+  const isLightColor =
+    normalizedColor === "#f78504" ||
+    normalizedColor === "hsl(var(--accent))" ||
+    normalizedColor === "hsl(var(--pillar-cloud))";
+
+  const textColor = isLightColor ? "text-foreground" : "text-primary-foreground";
+  const mutedTextColor = isLightColor ? "text-foreground/80" : "text-primary-foreground/80";
+  const badgeBg = isLightColor ? "bg-foreground/10" : "bg-primary-foreground/10";
+  const badgeBorder = isLightColor ? "border-foreground/20" : "border-primary-foreground/20";
+  const buttonBg = isLightColor
+    ? "bg-foreground text-background hover:bg-foreground/90"
+    : "bg-primary-foreground hover:bg-primary-foreground/90";
+
+  const patternId = `stars-${pillarLabel}-${pillarColor}`.replace(/[^a-z0-9_-]/gi, "-");
 
   return (
     <section 
@@ -43,7 +51,7 @@ const SolutionHero = ({
         >
           <defs>
             <pattern 
-              id={`stars-${pillarColor.replace('#', '')}`}
+              id={patternId}
               x="0" 
               y="0" 
               width="60" 
@@ -71,7 +79,7 @@ const SolutionHero = ({
               />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill={`url(#stars-${pillarColor.replace('#', '')})`} />
+          <rect width="100%" height="100%" fill={`url(#${patternId})`} />
         </svg>
 
         {/* Large decorative icon */}
@@ -111,7 +119,7 @@ const SolutionHero = ({
           <a 
             href={ctaHref}
             className={`group inline-flex items-center gap-3 ${buttonBg} px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl`}
-            style={{ color: isLightColor ? 'white' : pillarColor }}
+            style={{ color: isLightColor ? undefined : pillarColor }}
           >
             {ctaText}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
