@@ -178,7 +178,7 @@ const CaseStudyView: React.FC = () => {
             </nav>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
             {/* Left side - Logo and label */}
             <div className="flex items-center gap-6">
               {media ? (
@@ -204,6 +204,26 @@ const CaseStudyView: React.FC = () => {
                 </p>
               </div>
             </div>
+
+            {/* Right side - Categories */}
+            {categories && categories.length > 0 && (
+              <div className="lg:text-right">
+                <p className="text-xs uppercase tracking-widest text-primary-foreground/60 font-medium mb-3">
+                  Categorias
+                </p>
+                <div className="flex flex-wrap lg:justify-end gap-2">
+                  {categories.map((cat) => (
+                    <Badge 
+                      key={cat.id} 
+                      variant="secondary"
+                      className="bg-white/10 text-primary-foreground border-primary-foreground/20 hover:bg-white/20"
+                    >
+                      {cat.name}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Title */}
@@ -294,42 +314,6 @@ const CaseStudyView: React.FC = () => {
             {/* Sidebar */}
             <aside className="lg:col-span-4">
               <div className="sticky top-32 space-y-8">
-                {/* Details Card */}
-                <div className="bg-card rounded-2xl border border-border p-6">
-                  <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-4">
-                    Detalhes
-                  </h4>
-                  <div className="space-y-4">
-                    {clientName && (
-                      <div>
-                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                          Cliente
-                        </p>
-                        <p className="text-foreground font-medium">
-                          {clientName}
-                        </p>
-                      </div>
-                    )}
-                    {categories && categories.length > 0 && (
-                      <div>
-                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
-                          Categorias
-                        </p>
-                        <div className="flex flex-wrap gap-2">
-                          {categories.map((cat) => (
-                            <Badge 
-                              key={cat.id} 
-                              variant="secondary"
-                              className="text-xs"
-                            >
-                              {cat.name}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
 
                 {/* Related Cases */}
                 {filteredRelatedPosts.length > 0 && (
