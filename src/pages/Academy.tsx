@@ -405,8 +405,8 @@ const Academy = () => {
                 </div>
 
                 <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
-                  <div className="bg-gradient-to-br from-background/80 to-background/40 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg">
-                    <div className="text-4xl sm:text-5xl font-bold text-primary mb-2 sm:mb-3">01</div>
+                  <div className="bg-gradient-to-br from-background/80 to-background/40 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-lg">
+                    <div className="text-4xl sm:text-5xl font-bold text-accent mb-2 sm:mb-3">01</div>
                     <h4 className="font-semibold text-foreground mb-1.5 sm:mb-2 text-base sm:text-lg">Experimentar soluções</h4>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Mais do que aprender, coloque a mão na massa com casos reais</p>
                   </div>
@@ -415,8 +415,8 @@ const Academy = () => {
                     <h4 className="font-semibold text-foreground mb-1.5 sm:mb-2 text-base sm:text-lg">Prototipar ideias</h4>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Transforme conceitos em protótipos funcionais rapidamente</p>
                   </div>
-                  <div className="bg-gradient-to-br from-background/80 to-background/40 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg sm:col-span-2 lg:col-span-1">
-                    <div className="text-4xl sm:text-5xl font-bold text-primary mb-2 sm:mb-3">03</div>
+                  <div className="bg-gradient-to-br from-background/80 to-background/40 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:shadow-lg sm:col-span-2 lg:col-span-1">
+                    <div className="text-4xl sm:text-5xl font-bold text-accent mb-2 sm:mb-3">03</div>
                     <h4 className="font-semibold text-foreground mb-1.5 sm:mb-2 text-base sm:text-lg">Plano de ação claro</h4>
                     <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">Saia com um roadmap prático para implementar na sua empresa</p>
                   </div>
