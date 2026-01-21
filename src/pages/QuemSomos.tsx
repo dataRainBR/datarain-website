@@ -239,17 +239,13 @@ const QuemSomos = () => {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* AWS Partner Badge Section */}
-      <section className="py-10 sm:py-14 bg-white">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex justify-center">
+          
+          {/* AWS Partner Badge - Integrado na seção */}
+          <div className="mt-12 sm:mt-16 flex justify-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <img 
               src={awsPartnerBadge} 
               alt="AWS Partner Advanced Tier Services Badge" 
-              className="max-w-full h-auto max-h-24 sm:max-h-28 md:max-h-32 object-contain"
+              className="max-w-full h-auto max-h-32 sm:max-h-40 md:max-h-48 lg:max-h-56 object-contain hover:scale-105 transition-transform duration-300"
             />
           </div>
         </div>
