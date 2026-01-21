@@ -106,19 +106,17 @@ const Footer = () => {
           </div>
         </div>
         
-        {/* AWS Partner Badge */}
-        <div className="flex justify-center mb-8">
-          <img 
-            src={awsPartnerBadge} 
-            alt="AWS Partner - Advanced Tier Services" 
-            className="h-16 sm:h-20 md:h-24 w-auto object-contain"
-          />
-        </div>
-
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} dataRain. Todos os direitos reservados.
-          </p>
+        <div className="pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center gap-4">
+            <p className="text-xs text-muted-foreground">
+              &copy; {new Date().getFullYear()} dataRain. Todos os direitos reservados.
+            </p>
+            <img 
+              src={awsPartnerBadge} 
+              alt="AWS Partner - Advanced Tier Services" 
+              className="h-8 sm:h-10 w-auto object-contain"
+            />
+          </div>
           <div className="flex gap-8">
             <a href="/privacidade" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacidade</a>
           </div>
