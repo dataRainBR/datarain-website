@@ -137,8 +137,8 @@ const SolutionServiceCard = ({
         )}
 
         {/* CTA */}
-        <div className={`flex items-center gap-2 ${styles.textColor} font-semibold group-hover:gap-4 transition-all duration-300`}>
-          <span>Explorar soluções</span>
+        <div className={`inline-flex items-center gap-3 ${styles.iconBg} text-white font-semibold px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl shadow-lg group-hover:gap-4 group-hover:scale-105 transition-all duration-300`}>
+          <span className="text-sm sm:text-base">Explorar soluções</span>
           <svg
             className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
             fill="none"
