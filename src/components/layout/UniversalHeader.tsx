@@ -253,10 +253,10 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                     A dataRain ajuda empresas a vencer os gargalos que impedem escala, performance e inovação.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 max-w-2xl">
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 md:gap-6 max-w-2xl">
                     <Button 
                       size="xl" 
-                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base"
+                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-semibold"
                       asChild
                     >
                       <a href="/solucoes">
@@ -268,7 +268,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                     <Button 
                       variant="outline" 
                       size="xl" 
-                      className="flex-1 border-2 border-[#3893af] text-[#3893af] hover:bg-[#3893af] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 text-sm sm:text-base"
+                      className="flex-1 border-2 border-[#3893af] text-[#3893af] hover:bg-[#3893af] hover:text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 font-semibold"
                       asChild
                     >
                       <a href="/fale-conosco">
