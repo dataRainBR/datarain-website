@@ -812,7 +812,7 @@ const QuemSomos = () => {
               <SolutionServiceCard
                 title="GenAI e Dados"
                 description="Inteligência artificial e arquitetura de dados para inovação empresarial"
-                icon={<Brain className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />}
+                icon={<Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />}
                 href="/solucoes/dados"
                 variant="ia"
                 features={["Machine Learning", "Data Architecture", "GenAI Solutions"]}
