@@ -680,7 +680,7 @@ const QuemSomos = () => {
                   <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
                     <Rocket className="w-6 h-6 text-white" />
                   </div>
-                  <div className="text-foreground font-bold text-sm md:text-base">AI Solutions</div>
+                  <div className="text-foreground font-bold text-sm md:text-base">Data Management Solutions</div>
                 </div>
               </div>
               
