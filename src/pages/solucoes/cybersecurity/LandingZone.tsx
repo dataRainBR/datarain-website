@@ -1,61 +1,22 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
-import { ShieldCheck, ArrowRight, CheckCircle2, Lock, Settings, Eye, Target, Layers, Server } from "lucide-react";
+import SolutionHero from "@/components/solutions/SolutionHero";
+import { ShieldCheck, CheckCircle2, Lock, Settings, Eye, Target, Layers, Server } from "lucide-react";
 
 const LandingZone = () => {
-  const pillarColor = "#e63946";
-  
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
-      {/* Modern Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/5 via-background to-background">
-          <div className="absolute top-20 right-[10%] w-72 h-72 bg-[#e63946]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 left-[5%] w-96 h-96 bg-[#e63946]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#e63946]/5 rounded-full blur-2xl"></div>
-          
-          <div className="absolute inset-0 opacity-[0.02]" style={{
-            backgroundImage: `linear-gradient(${pillarColor} 1px, transparent 1px), linear-gradient(90deg, ${pillarColor} 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}></div>
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-16 md:pb-20">
-          <div className="max-w-5xl mx-auto">
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-[#e63946]/10 backdrop-blur-sm border border-[#e63946]/20 rounded-full px-5 py-2.5">
-                <ShieldCheck className="w-5 h-5 text-[#e63946]" />
-                <span className="text-sm font-semibold text-[#e63946]">Cybersecurity</span>
-              </div>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-center text-foreground">
-              Landing{" "}
-              <span className="text-[#e63946]">Zone</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10 text-center">
-              Configuração segura e escalável de ambientes cloud desde o início. 
-              A Landing Zone estabelece uma base segura e bem arquitetada na AWS, garantindo conformidade com as melhores práticas.
-            </p>
-
-            <div className="flex justify-center">
-              <a 
-                href="/fale-conosco" 
-                className="group inline-flex items-center gap-3 bg-[#e63946] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#c5303c] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#e63946]/25"
-              >
-                Falar com Especialista
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-      </section>
+      <SolutionHero
+        pillarLabel="Cybersecurity"
+        pillarIcon={ShieldCheck}
+        title="Landing"
+        highlightedText="Zone"
+        description="Configuração segura e escalável de ambientes cloud desde o início. A Landing Zone estabelece uma base segura e bem arquitetada na AWS, garantindo conformidade com as melhores práticas."
+        pillarColor="#e63946"
+      />
 
       {/* Features Section */}
       <section className="py-20 md:py-28 relative">
