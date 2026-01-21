@@ -62,11 +62,20 @@ const SolutionCard = ({ title, description, link, pillar }: SolutionCardProps) =
       <div 
         className={`relative bg-gradient-to-br ${styles.bgGradient} ${styles.hoverBg} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 h-full min-h-[220px] sm:min-h-[240px] flex flex-col`}
       >
-        {/* Background decorative pattern */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Stars/plus pattern background */}
+        <div 
+          className="absolute inset-0 opacity-[0.15]"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M12 10v4M10 12h4' stroke='%23ffffff' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E")`,
+            backgroundSize: '20px 20px',
+          }}
+        />
+        
+        {/* Decorative pillar icon - positioned in corner */}
+        <div className="absolute right-0 bottom-0 overflow-hidden pointer-events-none">
           <DecorativePattern 
             pillar={pillar}
-            className="absolute -right-4 -bottom-4 w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] text-white/20 group-hover:text-white/30 group-hover:scale-110 transition-all duration-500"
+            className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] text-white/25 group-hover:text-white/35 group-hover:scale-105 transition-all duration-500 translate-x-6 translate-y-6"
           />
         </div>
         
