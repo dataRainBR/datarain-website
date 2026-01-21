@@ -124,10 +124,25 @@ export const useWordPressCategories = () => {
   return useQuery({
     queryKey: ['wordpress-categories'],
     queryFn: async () => {
-      const response = await fetch(getWordPressUrl('/categories'));
+      const response = await fetch(getWordPressUrl('/categories?per_page=100'));
       if (!response.ok) throw new Error('Erro ao buscar categorias');
       return response.json() as Promise<WordPressCategory[]>;
     },
+    staleTime: 60 * 60 * 1000, // 1 hora
+  });
+};
+
+// Hook para buscar categorias por IDs
+export const useWordPressCategoriesByIds = (ids: number[]) => {
+  return useQuery({
+    queryKey: ['wordpress-categories-by-ids', ids],
+    queryFn: async () => {
+      if (ids.length === 0) return [];
+      const response = await fetch(getWordPressUrl(`/categories?include=${ids.join(',')}`));
+      if (!response.ok) throw new Error('Erro ao buscar categorias');
+      return response.json() as Promise<WordPressCategory[]>;
+    },
+    enabled: ids.length > 0,
     staleTime: 60 * 60 * 1000, // 1 hora
   });
 };
