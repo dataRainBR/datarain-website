@@ -136,32 +136,6 @@ const QuemSomos = () => {
                 </p>
               </div>
 
-              {/* Human elements */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-3xl mx-auto">
-                <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground">Paixão</h3>
-                  <p className="text-sm text-muted-foreground">Pelo que fazemos e pelos resultados que entregamos</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center">
-                    <Users className="w-6 h-6 text-accent" />
-                  </div>
-                  <h3 className="font-semibold text-foreground">Colaboração</h3>
-                  <p className="text-sm text-muted-foreground">Trabalhamos juntos para superar desafios</p>
-                </div>
-                
-                <div className="flex flex-col items-center text-center space-y-3 p-6 rounded-2xl bg-card/50 border border-border/50 hover:bg-card transition-colors">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Target className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground">Foco</h3>
-                  <p className="text-sm text-muted-foreground">Em soluções que realmente fazem a diferença</p>
-                </div>
-              </div>
 
             </div>
           </div>
