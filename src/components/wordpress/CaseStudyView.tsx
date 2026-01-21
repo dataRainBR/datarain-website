@@ -178,9 +178,9 @@ const CaseStudyView: React.FC = () => {
             </nav>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8">
+          <div className="flex flex-col lg:flex-row lg:items-stretch gap-8">
             {/* Left side - Logo and label */}
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 flex-1">
               {media ? (
                 <div className="bg-white rounded-xl p-4 shadow-lg">
                   <img
@@ -205,24 +205,27 @@ const CaseStudyView: React.FC = () => {
               </div>
             </div>
 
-            {/* Right side - Details */}
+            {/* Right side - Details - Anchored to right edge */}
             {categories && categories.length > 0 && (
-              <div className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-5 lg:p-6 shadow-xl">
-                <div className="flex items-center gap-2 mb-4">
-                  <div className="w-1.5 h-6 bg-accent rounded-full" />
-                  <p className="text-sm uppercase tracking-widest text-primary-foreground font-semibold">
-                    Detalhes
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {categories.map((cat) => (
-                    <span 
-                      key={cat.id} 
-                      className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-white/15 to-white/5 text-primary-foreground border border-white/20 hover:from-white/25 hover:to-white/10 transition-all duration-300"
-                    >
-                      {cat.name}
+              <div className="lg:self-start lg:ml-auto">
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-5 py-4 inline-flex items-center gap-4">
+                  <div className="flex items-center gap-2">
+                    <div className="w-1 h-8 bg-accent rounded-full" />
+                    <span className="text-xs uppercase tracking-widest text-primary-foreground/70 font-semibold whitespace-nowrap">
+                      Detalhes
                     </span>
-                  ))}
+                  </div>
+                  <div className="h-6 w-px bg-white/20" />
+                  <div className="flex flex-wrap gap-2">
+                    {categories.map((cat) => (
+                      <span 
+                        key={cat.id} 
+                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/10 text-primary-foreground border border-white/15 hover:bg-white/20 transition-all duration-300"
+                      >
+                        {cat.name.replace(/&amp;/g, '&')}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             )}
