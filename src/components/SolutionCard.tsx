@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Network, Shield, Cloud } from "lucide-react";
 
 interface SolutionCardProps {
   title: string;
@@ -12,37 +12,34 @@ const pillarStyles = {
   ia: {
     bgGradient: "from-[#3893af] to-[#2a7a94]",
     hoverBg: "group-hover:from-[#2a7a94] group-hover:to-[#1f6a82]",
-    overlayColor: "bg-[#2a7a94]",
+    Icon: Network,
   },
   cybersecurity: {
     bgGradient: "from-[#e63946] to-[#c5303c]",
     hoverBg: "group-hover:from-[#c5303c] group-hover:to-[#a82833]",
-    overlayColor: "bg-[#c5303c]",
+    Icon: Shield,
   },
   cloud: {
     bgGradient: "from-[#f78504] to-[#d97203]",
     hoverBg: "group-hover:from-[#d97203] group-hover:to-[#b86002]",
-    overlayColor: "bg-[#d97203]",
+    Icon: Cloud,
   },
 };
 
 const SolutionCard = ({ title, description, link, pillar }: SolutionCardProps) => {
   const styles = pillarStyles[pillar];
+  const IconComponent = styles.Icon;
 
   return (
     <a href={link} className="group block h-full">
       <div 
         className={`relative bg-gradient-to-br ${styles.bgGradient} ${styles.hoverBg} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 h-full min-h-[220px] sm:min-h-[240px] flex flex-col`}
       >
-        {/* Geometric diagonal overlay - inspired by reference image */}
+        {/* Background icon decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {/* Main diagonal shape */}
-          <div 
-            className={`absolute -right-12 -bottom-12 w-[180px] sm:w-[220px] h-[180px] sm:h-[220px] ${styles.overlayColor} rounded-3xl transform rotate-12 opacity-70 group-hover:opacity-90 group-hover:scale-110 transition-all duration-500`}
-          />
-          {/* Secondary diagonal shape */}
-          <div 
-            className={`absolute -right-6 -bottom-6 w-[120px] sm:w-[160px] h-[120px] sm:h-[160px] ${styles.overlayColor} rounded-2xl transform rotate-6 opacity-50 group-hover:opacity-70 group-hover:scale-105 transition-all duration-500`}
+          <IconComponent 
+            className="absolute -right-8 -bottom-8 w-[180px] h-[180px] sm:w-[220px] sm:h-[220px] text-white/15 group-hover:text-white/25 group-hover:scale-110 transition-all duration-500 rotate-12"
+            strokeWidth={0.8}
           />
         </div>
         
