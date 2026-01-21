@@ -36,26 +36,6 @@ const Dados = () => {
               Transforme dados em insights estratégicos com arquitetura moderna e inteligência artificial. 
               Do data lake à IA generativa, construímos soluções que geram valor real.
             </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Projetos de IA</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">10PB+</div>
-                <div className="text-sm text-muted-foreground">Dados Processados</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">70%</div>
-                <div className="text-sm text-muted-foreground">Redução de Tempo</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#3893af]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#3893af] mb-2">95%</div>
-                <div className="text-sm text-muted-foreground">Precisão dos Modelos</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
