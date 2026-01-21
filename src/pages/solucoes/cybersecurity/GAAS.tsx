@@ -1,54 +1,72 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
-import gaasImage from "@/assets/solutions/gaas.jpg";
-import { Shield, Eye, FileCheck, Settings, Users, Clock, CheckCircle, TrendingUp, AlertTriangle, FileText, Headphones, Calendar } from "lucide-react";
+import { ShieldCheck, Eye, FileCheck, Settings, Users, Clock, CheckCircle, TrendingUp, AlertTriangle, FileText, Headphones, Calendar, ArrowRight, Target, Shield } from "lucide-react";
 
 const GAAS = () => {
+  const pillarColor = "#e63946";
+  
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
-      {/* Hero Section */}
+      {/* Modern Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/10 via-background to-background">
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#e63946]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#e63946]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#e63946]/15 rounded-full blur-2xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#e63946]/5 via-background to-background">
+          <div className="absolute top-20 right-[10%] w-72 h-72 bg-[#e63946]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-[5%] w-96 h-96 bg-[#e63946]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#e63946]/5 rounded-full blur-2xl"></div>
+          
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: `linear-gradient(${pillarColor} 1px, transparent 1px), linear-gradient(90deg, ${pillarColor} 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-40 sm:pt-44 md:pt-48 lg:pt-52">
-          <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-[#e63946]/10 rounded-full px-4 py-2 mb-6">
-              <Shield className="w-5 h-5 text-[#e63946]" />
-              <span className="text-sm font-medium text-[#e63946]">Cybersecurity</span>
+        <div className="relative z-10 container mx-auto px-4 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-16 md:pb-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-[#e63946]/10 backdrop-blur-sm border border-[#e63946]/20 rounded-full px-5 py-2.5">
+                <ShieldCheck className="w-5 h-5 text-[#e63946]" />
+                <span className="text-sm font-semibold text-[#e63946]">Cybersecurity</span>
+              </div>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
-              GaaS (Governança como Serviço)
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-center text-foreground">
+              GaaS{" "}
+              <span className="text-[#e63946]">(Governança como Serviço)</span>
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10 text-center">
               Governança completa do seu ambiente AWS com visibilidade, controle e conformidade. 
               Proteja seus ativos com monitoramento contínuo e equipe especializada.
             </p>
 
-            <a 
-              href="/fale-conosco" 
-              className="inline-flex items-center gap-2 bg-[#e63946] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#c5303c] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            >
-              Falar com Especialista
-            </a>
+            <div className="flex justify-center">
+              <a 
+                href="/fale-conosco" 
+                className="group inline-flex items-center gap-3 bg-[#e63946] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#c5303c] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#e63946]/25"
+              >
+                Falar com Especialista
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      {/* O que é Governança */}
-      <section className="py-20 bg-gradient-to-b from-background to-card/20">
+      {/* What is Governance */}
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">O que é Governança?</h2>
+              <div className="inline-flex items-center gap-2 bg-[#e63946]/10 rounded-full px-4 py-2 mb-4">
+                <Target className="w-4 h-4 text-[#e63946]" />
+                <span className="text-sm font-medium text-[#e63946]">Conceito</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">O que é Governança?</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 Para garantir que seu ambiente seja bem administrado e se desenvolva de forma saudável, 
                 é fundamental ter visibilidade, controle e conformidade.
@@ -56,331 +74,174 @@ const GAAS = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-6 text-primary">Princípios Fundamentais</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Manter um registro de todos os ativos do ambiente</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Capacidade de identificar as alterações que cada ativo sofre</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Acesso detalhado aos custos associados a cada um dos ativos</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Definição de responsáveis pelas principais necessidades</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Implementação de controles preventivos e detectivos</span>
-                  </li>
-                </ul>
+              <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#e63946]/30 transition-all duration-300">
+                <h3 className="text-xl font-bold mb-6 text-[#e63946]">Princípios Fundamentais</h3>
+                <div className="space-y-4">
+                  {[
+                    "Manter um registro de todos os ativos do ambiente",
+                    "Capacidade de identificar as alterações que cada ativo sofre",
+                    "Acesso detalhado aos custos associados a cada um dos ativos",
+                    "Definição de responsáveis pelas principais necessidades",
+                    "Implementação de controles preventivos e detectivos"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-[#e63946] mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-6 text-primary">Em um Ambiente AWS</h3>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Inventário completo de todos os ativos da nuvem</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Registro de todas as alterações de configuração</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Segmentação adequada com contas AWS dedicadas</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Políticas de segurança centralizadas (SCPs)</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
-                    <span className="text-muted-foreground">Monitoramento contínuo com AWS Security Hub</span>
-                  </li>
-                </ul>
+              <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#e63946]/30 transition-all duration-300">
+                <h3 className="text-xl font-bold mb-6 text-[#e63946]">Em um Ambiente AWS</h3>
+                <div className="space-y-4">
+                  {[
+                    "Inventário completo de todos os ativos da nuvem",
+                    "Registro de todas as alterações de configuração",
+                    "Segmentação adequada com contas AWS dedicadas",
+                    "Políticas de segurança centralizadas (SCPs)",
+                    "Monitoramento contínuo com AWS Security Hub"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <CheckCircle className="w-5 h-5 text-[#e63946] mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
 
-            {/* Big Numbers */}
-            <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-8 border border-primary/20">
-              <div className="flex items-center gap-3 mb-6">
-                <AlertTriangle className="w-8 h-8 text-primary" />
-                <h3 className="text-xl font-bold">Por que investir em prevenção?</h3>
+            {/* Prevention callout */}
+            <div className="bg-gradient-to-br from-[#e63946]/10 to-[#e63946]/5 rounded-2xl p-8 border border-[#e63946]/20">
+              <div className="flex items-start gap-4">
+                <AlertTriangle className="w-10 h-10 text-[#e63946] flex-shrink-0" />
+                <div>
+                  <h3 className="text-xl font-bold mb-2 text-foreground">Por que investir em prevenção?</h3>
+                  <p className="text-lg text-muted-foreground">
+                    <span className="text-[#e63946] font-bold">Empresas que investem em prevenção economizam até R$ 4 milhões por incidente.</span>{" "}
+                    50% delas evitam mais de 70% dos custos enfrentados por quem age apenas após o ataque.
+                  </p>
+                </div>
               </div>
-              <p className="text-lg text-muted-foreground">
-                <span className="text-primary font-bold">Empresas que investem em prevenção economizam até R$ 4 milhões por incidente.</span> 50% delas evitam mais de 70% dos custos enfrentados por quem age apenas após o ataque.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Por que a dataRain */}
-      <section className="py-20 bg-card/20">
+      {/* Why dataRain */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-card/30 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Por que a dataRain?</h2>
+            <div className="inline-flex items-center gap-2 bg-[#e63946]/10 rounded-full px-4 py-2 mb-4">
+              <Users className="w-4 h-4 text-[#e63946]" />
+              <span className="text-sm font-medium text-[#e63946]">Diferenciais</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Por que a dataRain?</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Vantagens de ter a dataRain como parceira em governança cloud
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <Users className="w-6 h-6 text-primary" />
+            {[
+              { icon: Users, title: "Expertise", desc: "Equipe multidisciplinar e especializada, com vasta experiência prática na governança de ambientes AWS." },
+              { icon: Clock, title: "Disponibilidade", desc: "Equipe redundante e sempre disponível, sem impacto de férias, licenças ou afastamentos." },
+              { icon: TrendingUp, title: "Atualização Constante", desc: "Equipe em constante evolução e treinamento, sempre alinhada às melhores práticas de segurança." },
+              { icon: Settings, title: "Flexibilidade", desc: "Serviço ajustável de acordo com a demanda, maturidade ou evolução da empresa." }
+            ].map((item, index) => (
+              <div key={index} className="bg-card rounded-2xl p-6 border border-border/50 hover:border-[#e63946]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                <div className="w-12 h-12 bg-[#e63946]/10 rounded-xl flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-[#e63946]" />
+                </div>
+                <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
-              <h3 className="text-lg font-bold mb-2">Expertise</h3>
-              <p className="text-sm text-muted-foreground">
-                Equipe multidisciplinar e especializada, com vasta experiência prática na governança de ambientes AWS.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <Clock className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Disponibilidade</h3>
-              <p className="text-sm text-muted-foreground">
-                Equipe redundante e sempre disponível, sem impacto de férias, licenças ou afastamentos.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <TrendingUp className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Atualização Constante</h3>
-              <p className="text-sm text-muted-foreground">
-                Equipe em constante evolução e treinamento, sempre alinhada às melhores práticas de segurança.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/50 transition-all duration-300 hover:-translate-y-2">
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                <Settings className="w-6 h-6 text-primary" />
-              </div>
-              <h3 className="text-lg font-bold mb-2">Flexibilidade</h3>
-              <p className="text-sm text-muted-foreground">
-                Serviço ajustável de acordo com a demanda, maturidade ou evolução da empresa.
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* A Solução */}
-      <section className="py-20 bg-gradient-to-b from-card/20 to-background">
+      {/* Solution Pillars */}
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">A Solução GaaS (Governança como Serviço)</h2>
+            <div className="inline-flex items-center gap-2 bg-[#e63946]/10 rounded-full px-4 py-2 mb-4">
+              <Shield className="w-4 h-4 text-[#e63946]" />
+              <span className="text-sm font-medium text-[#e63946]">Solução</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">A Solução GaaS</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Governança completa em três pilares fundamentais
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Settings className="w-8 h-8 text-primary" />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+            {[
+              { icon: Settings, title: "Provisionamento Inicial", desc: "Configuração da infraestrutura de governança e políticas de segurança desde o início." },
+              { icon: ShieldCheck, title: "Manutenção Contínua", desc: "Atualizações e ajustes em contas, políticas e segurança de forma contínua." },
+              { icon: Eye, title: "Monitoramento", desc: "Verificação da conformidade com normas e frameworks via AWS Security Hub." }
+            ].map((item, index) => (
+              <div key={index} className="bg-card rounded-2xl p-8 border border-border/50 text-center hover:border-[#e63946]/40 transition-all duration-300 hover:shadow-lg">
+                <div className="w-16 h-16 bg-[#e63946]/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                  <item.icon className="w-8 h-8 text-[#e63946]" />
+                </div>
+                <h3 className="text-xl font-bold mb-4 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
               </div>
-              <h3 className="text-xl font-bold mb-4">Provisionamento Inicial</h3>
-              <p className="text-muted-foreground">
-                Configuração da infraestrutura de governança e políticas de segurança desde o início.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Shield className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Manutenção Contínua</h3>
-              <p className="text-muted-foreground">
-                Atualizações e ajustes em contas, políticas e segurança de forma contínua.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center mx-auto mb-6">
-                <Eye className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Monitoramento</h3>
-              <p className="text-muted-foreground">
-                Verificação da conformidade com normas e frameworks via AWS Security Hub.
-              </p>
-            </div>
+            ))}
           </div>
 
-          {/* Entregáveis */}
-          <div className="max-w-6xl mx-auto">
-            <h3 className="text-2xl font-bold text-center mb-8">Entregáveis</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-primary/5 to-card rounded-2xl p-6 border border-primary/20">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <FileText className="w-6 h-6 text-primary" />
+          {/* Deliverables */}
+          <div className="max-w-5xl mx-auto">
+            <h3 className="text-2xl font-bold text-center mb-8 text-foreground">Entregáveis</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: FileText, title: "Relatórios Quinzenais", desc: "Avaliação de conformidade e principais desvios identificados no período." },
+                { icon: Headphones, title: "Suporte Técnico", desc: "Representante técnico disponível para dúvidas e solicitações do dia a dia." },
+                { icon: Calendar, title: "Reuniões Mensais", desc: "Apresentação de relatórios, definição de prioridades e esclarecimento de dúvidas." }
+              ].map((item, index) => (
+                <div key={index} className="bg-gradient-to-br from-[#e63946]/5 to-card rounded-2xl p-6 border border-[#e63946]/20">
+                  <div className="w-12 h-12 bg-[#e63946]/10 rounded-xl flex items-center justify-center mb-4">
+                    <item.icon className="w-6 h-6 text-[#e63946]" />
+                  </div>
+                  <h4 className="text-lg font-bold mb-2 text-foreground">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
-                <h4 className="text-lg font-bold mb-2">Relatórios Quinzenais</h4>
-                <p className="text-sm text-muted-foreground">
-                  Avaliação de conformidade e principais desvios identificados no período.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-primary/5 to-card rounded-2xl p-6 border border-primary/20">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <Headphones className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="text-lg font-bold mb-2">Suporte Técnico</h4>
-                <p className="text-sm text-muted-foreground">
-                  Representante técnico disponível para dúvidas e solicitações do dia a dia.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-primary/5 to-card rounded-2xl p-6 border border-primary/20">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <Calendar className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="text-lg font-bold mb-2">Reuniões Mensais</h4>
-                <p className="text-sm text-muted-foreground">
-                  Apresentação de relatórios, definição de prioridades e esclarecimento de dúvidas.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Benefícios */}
-      <section className="py-20 bg-card/20">
+      {/* Benefits */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-card/30 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Benefícios</h2>
+            <div className="inline-flex items-center gap-2 bg-[#e63946]/10 rounded-full px-4 py-2 mb-4">
+              <TrendingUp className="w-4 h-4 text-[#e63946]" />
+              <span className="text-sm font-medium text-[#e63946]">Resultados</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Benefícios</h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Resultados tangíveis para seu ambiente cloud
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-              <Eye className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Visibilidade</h3>
-              <p className="text-muted-foreground">
-                Acompanhamento longitudinal do Score de Segurança do ambiente com dashboards em tempo real.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-              <FileCheck className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Conformidade</h3>
-              <p className="text-muted-foreground">
-                Conformidade com exigências regulatórias e frameworks de segurança reconhecidos.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-              <Shield className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Controle</h3>
-              <p className="text-muted-foreground">
-                Elevação sensível da maturidade de segurança do ambiente de nuvem.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-              <TrendingUp className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Redução de Overhead</h3>
-              <p className="text-muted-foreground">
-                Redução do overhead operacional com monitoramento, correções e tratamento de alertas.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-              <Users className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Suporte Especializado</h3>
-              <p className="text-muted-foreground">
-                Suporte opcional com time de especialistas certificados AWS sempre disponível.
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/50 transition-all duration-300">
-              <Settings className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-bold mb-3">Automação</h3>
-              <p className="text-muted-foreground">
-                Políticas automatizadas e controles preventivos integrados ao seu ambiente.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* História de Sucesso */}
-      <section className="py-20 bg-gradient-to-b from-background to-card/20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">História de Sucesso</h2>
-              <p className="text-lg text-muted-foreground">
-                Veja como transformamos a governança cloud de nossos clientes
-              </p>
-            </div>
-
-            <div className="bg-card rounded-2xl p-8 md:p-12 border border-border/50">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-primary" />
-                </div>
-                <div>
-                  <h3 className="font-bold">Setor Automotivo</h3>
-                  <p className="text-sm text-muted-foreground">Uma das maiores empresas brasileiras de peças automotivas</p>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: Eye, title: "Visibilidade", desc: "Acompanhamento longitudinal do Score de Segurança do ambiente com dashboards em tempo real." },
+              { icon: FileCheck, title: "Conformidade", desc: "Conformidade com exigências regulatórias e frameworks de segurança reconhecidos." },
+              { icon: ShieldCheck, title: "Controle", desc: "Elevação sensível da maturidade de segurança do ambiente de nuvem." },
+              { icon: TrendingUp, title: "Redução de Overhead", desc: "Redução do overhead operacional com monitoramento, correções e tratamento de alertas." },
+              { icon: Users, title: "Suporte Especializado", desc: "Suporte opcional com time de especialistas certificados AWS sempre disponível." },
+              { icon: Settings, title: "Automação", desc: "Políticas automatizadas e controles preventivos integrados ao seu ambiente." }
+            ].map((item, index) => (
+              <div key={index} className="bg-card rounded-2xl p-8 border border-border/50 hover:border-[#e63946]/40 transition-all duration-300 hover:shadow-lg">
+                <item.icon className="w-10 h-10 text-[#e63946] mb-4" />
+                <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground">{item.desc}</p>
               </div>
-
-              <div className="space-y-6">
-                <div>
-                  <h4 className="font-semibold text-primary mb-2">O Desafio</h4>
-                  <p className="text-muted-foreground">
-                    Falta de isolamento entre unidades de negócio, baixa visibilidade de custos e controles de segurança insuficientes.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-primary mb-2">A Solução</h4>
-                  <p className="text-muted-foreground">
-                    Implementação de Landing Zone personalizada na AWS com segmentação em contas exclusivas por unidade de negócio, 
-                    aplicação de políticas de segurança com SCPs, e configuração de serviços centralizados como AWS Control Tower, 
-                    GuardDuty, CloudTrail e Security Hub.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="font-semibold text-primary mb-2">Resultados</h4>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Cada unidade de negócio ganhou liberdade e autonomia</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Rastreabilidade total dos gastos por unidade via tagging estratégico</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Modelo de governança robusto e rastreável</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-muted-foreground">Capacitação do time interno com treinamentos práticos e documentação</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
