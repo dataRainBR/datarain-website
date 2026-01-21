@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import { Button } from "./ui/button";
+import awsPartnerBadge from "@/assets/aws-partner-badge.png";
 
 const Footer = () => {
   const socialLinks = [
@@ -105,6 +106,15 @@ const Footer = () => {
           </div>
         </div>
         
+        {/* AWS Partner Badge */}
+        <div className="flex justify-center mb-8">
+          <img 
+            src={awsPartnerBadge} 
+            alt="AWS Partner - Advanced Tier Services" 
+            className="h-16 sm:h-20 md:h-24 w-auto object-contain"
+          />
+        </div>
+
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} dataRain. Todos os direitos reservados.
