@@ -194,16 +194,16 @@ const CaseStudyView: React.FC = () => {
               </div>
             ) : null}
             
-            {/* Info bar with Case de Sucesso + Categories */}
-            <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-5 py-3">
+            {/* Info bar with Case de Sucesso + Categories - no box */}
+            <div className="flex items-center gap-4">
               {/* Case de Sucesso label */}
-              <p className="text-xs uppercase tracking-[0.15em] text-white font-semibold whitespace-nowrap">
+              <p className="text-xs uppercase tracking-[0.15em] text-white/80 font-semibold whitespace-nowrap">
                 Case de Sucesso
               </p>
               
               {/* Divider */}
               {categories && categories.length > 0 && (
-                <div className="w-px h-5 bg-white/30" />
+                <div className="w-px h-4 bg-white/40" />
               )}
               
               {/* Categories */}
@@ -222,9 +222,9 @@ const CaseStudyView: React.FC = () => {
             </div>
           </div>
 
-          {/* Title */}
+          {/* Title - extended width */}
           <h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mt-10 max-w-4xl"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mt-10 max-w-5xl"
             dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.title.rendered) }}
           />
 
