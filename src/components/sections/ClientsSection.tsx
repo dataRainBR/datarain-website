@@ -64,18 +64,13 @@ const ClientsSection = () => {
               {logoSets.map((logo, index) => (
                 <div 
                   key={index}
-                  className="group relative flex-shrink-0"
+                  className="relative flex-shrink-0"
                 >
                   <img 
                     src={logo.src} 
                     alt={logo.alt} 
-                    className="h-10 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto opacity-70 group-hover:opacity-100 transition-all duration-300 group-hover:scale-110" 
+                    className="h-10 sm:h-14 md:h-16 lg:h-20 xl:h-24 w-auto opacity-80" 
                   />
-                  {logo.name && (
-                    <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <span className="text-xs font-medium text-primary whitespace-nowrap">{logo.name}</span>
-                    </div>
-                  )}
                 </div>
               ))}
             </div>
