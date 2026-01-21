@@ -210,12 +210,12 @@ const CaseStudyView: React.FC = () => {
               <div className="lg:self-start lg:ml-auto">
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-5 py-4 inline-flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-1 h-8 bg-accent rounded-full" />
-                    <span className="text-xs uppercase tracking-widest text-primary-foreground/70 font-semibold whitespace-nowrap">
+                    <div className="w-1 h-8 bg-white/60 rounded-full" />
+                    <span className="text-xs uppercase tracking-widest text-white font-semibold whitespace-nowrap">
                       Detalhes
                     </span>
                   </div>
-                  <div className="h-6 w-px bg-white/20" />
+                  <div className="h-6 w-px bg-white/30" />
                   <div className="flex flex-wrap gap-2">
                     {categories.map((cat) => (
                       <span 
