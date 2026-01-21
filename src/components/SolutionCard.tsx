@@ -7,32 +7,28 @@ interface SolutionCardProps {
   pillar: "ia" | "cybersecurity" | "cloud";
 }
 
-// Padrões decorativos SVG por pilar (mesmos usados na seção "Três Pilares")
-const DecorativePattern = ({ pillar, className }: { pillar: "ia" | "cybersecurity" | "cloud"; className?: string }) => {
+// Ícones SVG por pilar
+const PillarIcon = ({ pillar, className }: { pillar: "ia" | "cybersecurity" | "cloud"; className?: string }) => {
   switch (pillar) {
     case "ia":
-      // Círculos conectados (network pattern)
+      // Lightbulb
       return (
-        <svg className={className} viewBox="0 0 100 100" fill="currentColor">
-          <circle cx="80" cy="20" r="8" />
-          <circle cx="60" cy="35" r="5" />
-          <circle cx="85" cy="45" r="4" />
-          <path d="M80 20 L60 35 L85 45" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
         </svg>
       );
     case "cybersecurity":
-      // Hexágono/escudo
+      // Shield with check
       return (
-        <svg className={className} viewBox="0 0 100 100" fill="currentColor">
-          <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
-          <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       );
     case "cloud":
-      // Nuvem sólida
+      // Cloud
       return (
-        <svg className={className} viewBox="0 0 100 100" fill="currentColor">
-          <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
+        <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
         </svg>
       );
   }
@@ -62,20 +58,20 @@ const SolutionCard = ({ title, description, link, pillar }: SolutionCardProps) =
       <div 
         className={`relative bg-gradient-to-br ${styles.bgGradient} ${styles.hoverBg} rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 h-full min-h-[220px] sm:min-h-[240px] flex flex-col`}
       >
-        {/* Stars/plus pattern background */}
+        {/* Stars/plus pattern background - more subtle */}
         <div 
-          className="absolute inset-0 opacity-[0.15]"
+          className="absolute inset-0 opacity-[0.08]"
           style={{
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M12 10v4M10 12h4' stroke='%23ffffff' stroke-width='1' fill='none'/%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundSize: '20px 20px',
+            backgroundSize: '24px 24px',
           }}
         />
         
         {/* Decorative pillar icon - positioned in corner */}
         <div className="absolute right-0 bottom-0 overflow-hidden pointer-events-none">
-          <DecorativePattern 
+          <PillarIcon 
             pillar={pillar}
-            className="w-[120px] h-[120px] sm:w-[150px] sm:h-[150px] text-white/25 group-hover:text-white/35 group-hover:scale-105 transition-all duration-500 translate-x-6 translate-y-6"
+            className="w-[100px] h-[100px] sm:w-[130px] sm:h-[130px] text-white/20 group-hover:text-white/30 group-hover:scale-105 transition-all duration-500 translate-x-4 translate-y-4 stroke-[0.8]"
           />
         </div>
         
