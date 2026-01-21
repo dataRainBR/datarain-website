@@ -188,33 +188,18 @@ const Solucoes = () => {
                 description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
                 link="/solucoes/dados/arquitetura"
                 pillar="ia"
-                benefits={[
-                  "Data lakes otimizados",
-                  "ETL pipelines automatizados",
-                  "Governança de dados"
-                ]}
               />
               <SolutionCard
                 title="Pilot AI"
                 description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
                 link="/solucoes/dados/pilot-ai"
                 pillar="ia"
-                benefits={[
-                  "MVP em 4-8 semanas",
-                  "ROI mensurável",
-                  "Prova de conceito validada"
-                ]}
               />
               <SolutionCard
                 title="GenAI e ML"
                 description="Soluções de inteligência artificial e machine learning para automatizar processos e potencializar decisões."
                 link="/solucoes/dados/ia-ml"
                 pillar="ia"
-                benefits={[
-                  "Modelos personalizados",
-                  "Automação inteligente",
-                  "Insights preditivos"
-                ]}
               />
             </div>
           </div>
@@ -232,33 +217,18 @@ const Solucoes = () => {
                 description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
                 link="/solucoes/cybersecurity/landing-zone"
                 pillar="cybersecurity"
-                benefits={[
-                  "Segurança desde o design",
-                  "Compliance automático",
-                  "Governança integrada"
-                ]}
               />
               <SolutionCard
                 title="GaaS (Governança como Serviço)"
                 description="Governança como Serviço completa. Monitore compliance, gerencie políticas e automatize controles de segurança."
                 link="/solucoes/cybersecurity/gaas"
                 pillar="cybersecurity"
-                benefits={[
-                  "Compliance contínuo",
-                  "Políticas automatizadas",
-                  "Relatórios em tempo real"
-                ]}
               />
               <SolutionCard
                 title="Assessment de Segurança"
                 description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
                 link="/solucoes/cybersecurity/assessment"
                 pillar="cybersecurity"
-                benefits={[
-                  "Análise completa de riscos",
-                  "Recomendações priorizadas",
-                  "Roadmap de segurança"
-                ]}
               />
             </div>
           </div>
@@ -276,44 +246,24 @@ const Solucoes = () => {
                 description="Assessoria e execução completa de migração para AWS com framework estruturado."
                 link="/solucoes/cloud/migracao"
                 pillar="cloud"
-                benefits={[
-                  "Migration Evaluator e Hub",
-                  "Framework AWS MAP",
-                  "Alta disponibilidade"
-                ]}
               />
               <SolutionCard
                 title="Gestão de FinOps"
                 description="Otimização de custos em cloud com visibilidade completa e controle de gastos."
                 link="/solucoes/cloud/finops"
                 pillar="cloud"
-                benefits={[
-                  "Redução média de 30%",
-                  "Dashboards em tempo real",
-                  "Alertas automáticos"
-                ]}
               />
               <SolutionCard
                 title="DevOps e Modernization"
                 description="Acelere entregas com automação e integração contínua. Pipelines CI/CD robustos."
                 link="/solucoes/cloud/devops"
                 pillar="cloud"
-                benefits={[
-                  "Deploy em minutos",
-                  "Automação completa",
-                  "Rollback instantâneo"
-                ]}
               />
               <SolutionCard
                 title="Assessment de Arquitetura"
                 description="Diagnóstico completo da arquitetura atual com roadmap técnico priorizado."
                 link="/solucoes/cloud/arquitetura"
                 pillar="cloud"
-                benefits={[
-                  "Diagnóstico de performance",
-                  "Roadmap técnico",
-                  "Melhores práticas AWS"
-                ]}
               />
             </div>
           </div>

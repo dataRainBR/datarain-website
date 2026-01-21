@@ -148,11 +148,6 @@ const Cloud = () => {
               description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
               link="/solucoes/cloud/migracao"
               pillar="cloud"
-              benefits={[
-                "Migration Evaluator e Hub",
-                "Framework AWS MAP",
-                "Alta disponibilidade garantida"
-              ]}
             />
 
             <SolutionCard
@@ -160,11 +155,6 @@ const Cloud = () => {
               description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
               link="/solucoes/cloud/finops"
               pillar="cloud"
-              benefits={[
-                "Redução média de 30% nos custos",
-                "Dashboards em tempo real",
-                "Alertas automáticos de gastos"
-              ]}
             />
 
             <SolutionCard
@@ -172,11 +162,6 @@ const Cloud = () => {
               description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
               link="/solucoes/cloud/devops"
               pillar="cloud"
-              benefits={[
-                "Deploy em minutos, não semanas",
-                "Automação completa de pipelines",
-                "Rollback instantâneo"
-              ]}
             />
 
             <SolutionCard
@@ -184,11 +169,6 @@ const Cloud = () => {
               description="A base para crescer com segurança e eficiência. Diagnóstico completo da arquitetura atual com roadmap técnico e quick wins para evolução sustentável."
               link="/solucoes/cloud/arquitetura"
               pillar="cloud"
-              benefits={[
-                "Diagnóstico de performance e custos",
-                "Roadmap técnico priorizado",
-                "Melhores práticas AWS validadas"
-              ]}
             />
           </div>
         </div>
