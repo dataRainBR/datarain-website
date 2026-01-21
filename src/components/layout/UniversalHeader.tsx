@@ -135,7 +135,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                   <Button 
                     variant="default"
                     size="sm" 
-                    className="shadow-xl backdrop-blur-sm hidden lg:flex"
+                    className="shadow-xl backdrop-blur-sm hidden lg:flex text-primary-foreground hover:text-primary-foreground"
                   >
                     Fale Conosco
                   </Button>
@@ -147,7 +147,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                     <Button 
                       variant="default"
                       size="sm" 
-                      className="shadow-xl backdrop-blur-sm"
+                      className="shadow-xl backdrop-blur-sm text-primary-foreground hover:text-primary-foreground"
                     >
                       <span className="hidden sm:inline">Fale Conosco</span>
                       <span className="sm:hidden">Contato</span>
