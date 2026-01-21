@@ -45,7 +45,7 @@ const Footer = () => {
           <div className="sm:col-span-2 lg:col-span-4 space-y-6">
             <Logo variant="original" className="mb-6" />
             <p className="text-sm text-muted-foreground leading-relaxed max-w-sm">
-              Parceira estratégica para empresas em tecnologia, entregando soluções em IA e Dados, Cybersecurity e Cloud.
+              Parceira estratégica para empresas em tecnologia, entregando soluções em GenAI e Dados, Cybersecurity e Cloud.
             </p>
             
             {/* Social Icons */}
@@ -69,7 +69,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Soluções</h3>
             <ul className="space-y-4">
-              <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">IA e Dados</span></a></li>
+              <li><a href="/solucoes/dados" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">GenAI e Dados</span></a></li>
               <li><a href="/solucoes/cybersecurity" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Cybersecurity</span></a></li>
               <li><a href="/solucoes/cloud" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Cloud</span></a></li>
             </ul>

@@ -32,7 +32,7 @@ const ServicesSection = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           <SolutionServiceCard 
-            title="IA e Dados" 
+            title="GenAI e Dados" 
             description="Soluções de inteligência artificial e estratégias de dados que automatizam processos e transformam informações em insights valiosos."
             icon={<LightbulbIcon className="h-7 w-7" />}
             href="/solucoes/dados"

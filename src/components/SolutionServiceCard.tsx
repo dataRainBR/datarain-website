@@ -10,8 +10,8 @@ interface SolutionServiceCardProps {
 }
 
 // Cores atualizadas conforme requisição:
-// IA e Dados: Azul #3893af (primary)
-// Cybersecurity: Verde (emerald)
+// GenAI e Dados: Azul #3893af (primary)
+// Cybersecurity: Vermelho #e63946
 // Cloud: Laranja #f78504 (accent)
 const variantStyles = {
   ia: {

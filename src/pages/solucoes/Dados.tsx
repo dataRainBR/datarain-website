@@ -22,7 +22,7 @@ const Dados = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 bg-[#3893af]/10 rounded-full px-4 py-2 mb-6">
               <Brain className="w-5 h-5 text-[#3893af]" />
-              <span className="text-sm font-medium text-[#3893af]">IA e Dados</span>
+              <span className="text-sm font-medium text-[#3893af]">GenAI e Dados</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
