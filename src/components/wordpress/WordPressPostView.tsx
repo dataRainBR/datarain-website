@@ -1,16 +1,30 @@
 import React from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Card, CardContent } from '@/components/ui/card';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Calendar, Clock } from 'lucide-react';
-import { useWordPressPost, useWordPressMedia } from '@/hooks/useWordPress';
+import { Badge } from '@/components/ui/badge';
+import { ArrowLeft, Calendar, Clock, Linkedin, Twitter, Facebook, ArrowRight, Share2 } from 'lucide-react';
+import { useWordPressPost, useWordPressMedia, useWordPressCategoriesByIds, useWordPressPosts } from '@/hooks/useWordPress';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { Loader2 } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
-import WordPressRelatedPosts from '@/components/wordpress/WordPressRelatedPosts';
 import Footer from '@/components/Footer';
-import { sanitizeHTML } from '@/lib/sanitize';
+import { sanitizeHTML, stripHTML } from '@/lib/sanitize';
+
+// Extrai texto limpo do HTML
+const extractTextFromContent = (html: string): string => {
+  const div = document.createElement('div');
+  div.innerHTML = html;
+  return div.textContent || div.innerText || '';
+};
+
+// Estima tempo de leitura
+const estimateReadTime = (content: string): number => {
+  const text = extractTextFromContent(content);
+  const wordsPerMinute = 200;
+  const words = text.split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / wordsPerMinute));
+};
 
 const WordPressPostView: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -18,10 +32,12 @@ const WordPressPostView: React.FC = () => {
   
   const { data: post, isLoading, error } = useWordPressPost(id || '');
   const { data: media } = useWordPressMedia(post?.featured_media || 0);
+  const { data: categories } = useWordPressCategoriesByIds(post?.categories || []);
+  const { data: relatedPosts } = useWordPressPosts({ per_page: 4 });
 
   const formatDate = (dateString: string) => {
     try {
-      return format(new Date(dateString), 'dd MMM yyyy', { locale: ptBR });
+      return format(new Date(dateString), "dd 'de' MMMM, yyyy", { locale: ptBR });
     } catch {
       return dateString;
     }
@@ -31,17 +47,23 @@ const WordPressPostView: React.FC = () => {
     navigate('/blog');
   };
 
+  const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
+  const shareTitle = post?.title?.rendered ? extractTextFromContent(post.title.rendered) : '';
+  const readTime = post?.content?.rendered ? estimateReadTime(post.content.rendered) : 5;
+
+  // Filtra posts relacionados excluindo o atual
+  const filteredRelatedPosts = relatedPosts?.filter(p => p.id !== Number(id)).slice(0, 3) || [];
 
   if (isLoading) {
     return (
       <>
         <UniversalHeader />
-        <div className="min-h-screen bg-gradient-to-b from-background via-background/50 to-background">
-          <div className="container mx-auto px-4 py-16">
+        <div className="min-h-screen bg-background">
+          <div className="container mx-auto px-4 py-32">
             <div className="flex justify-center items-center min-h-[400px]">
               <div className="text-center">
                 <Loader2 className="h-12 w-12 animate-spin mx-auto mb-4 text-primary" />
-                <p className="text-lg text-muted-foreground">Carregando post...</p>
+                <p className="text-lg text-muted-foreground">Carregando artigo...</p>
               </div>
             </div>
           </div>
@@ -54,22 +76,20 @@ const WordPressPostView: React.FC = () => {
     return (
       <>
         <UniversalHeader />
-        <div className="min-h-screen bg-gradient-to-b from-background via-background/50 to-background">
-          <div className="container mx-auto px-4 py-16">
-            <Card className="max-w-2xl mx-auto">
-              <CardContent className="p-8 text-center">
-                <h2 className="text-2xl font-bold text-destructive mb-4">
-                  Erro ao carregar post
-                </h2>
-                <p className="text-muted-foreground mb-6">
-                  {error?.message || 'Post não encontrado'}
-                </p>
-                <Button onClick={handleGoBack} variant="outline">
-                  <ArrowLeft className="h-4 w-4 mr-2" />
-                  Voltar ao blog
-                </Button>
-              </CardContent>
-            </Card>
+        <div className="min-h-screen bg-background">
+          <div className="container mx-auto px-4 py-32">
+            <div className="max-w-2xl mx-auto text-center">
+              <h2 className="text-2xl font-bold text-destructive mb-4">
+                Artigo não encontrado
+              </h2>
+              <p className="text-muted-foreground mb-6">
+                {error?.message || 'Este artigo não está disponível'}
+              </p>
+              <Button onClick={handleGoBack} variant="outline" size="lg">
+                <ArrowLeft className="h-4 w-4 mr-2" />
+                Voltar ao blog
+              </Button>
+            </div>
           </div>
         </div>
       </>
@@ -80,116 +100,244 @@ const WordPressPostView: React.FC = () => {
     <>
       <UniversalHeader />
       
-      {/* Hero Section com título do post */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        {/* Background splashes */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700"></div>
-          <div className="absolute top-1/2 right-1/4 w-64 h-64 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Hero Section - Clean & Modern */}
+      <section className="relative bg-gradient-to-b from-muted/50 to-background overflow-hidden">
+        {/* Subtle decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
         </div>
 
-        {/* Background image overlay se tiver imagem destacada */}
-        {media && (
-          <div className="absolute inset-0">
-            <img
-              src={media.source_url}
-              alt={media.alt_text || post.title.rendered}
-              className="w-full h-full object-cover opacity-20"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background/80" />
-          </div>
-        )}
+        <div className="relative z-10 container mx-auto px-4 pt-32 sm:pt-36 md:pt-40 pb-12 md:pb-16">
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-8">
+            <Link to="/blog" className="hover:text-primary transition-colors">
+              Blog
+            </Link>
+            <span>/</span>
+            {categories && categories.length > 0 && (
+              <>
+                <span className="text-foreground/70">{categories[0].name}</span>
+                <span>/</span>
+              </>
+            )}
+            <span className="text-foreground/50 truncate max-w-[200px]">
+              {extractTextFromContent(post.title.rendered)}
+            </span>
+          </nav>
 
-        <div className="relative z-10 container mx-auto px-4 py-16 text-center">
-          <div className="max-w-4xl mx-auto">
-            {/* Breadcrumb/Navigation */}
-            <div className="mb-8">
-              <Button
-                variant="outline"
-                onClick={handleGoBack}
-                className="mb-6 bg-background/80 backdrop-blur-sm hover:bg-background/90"
-              >
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Voltar ao blog
-              </Button>
-            </div>
+          <div className="max-w-4xl">
+            {/* Categories */}
+            {categories && categories.length > 0 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {categories.map((cat) => (
+                  <Badge 
+                    key={cat.id} 
+                    className="bg-primary/10 text-primary border-0 hover:bg-primary/20"
+                  >
+                    {cat.name}
+                  </Badge>
+                ))}
+              </div>
+            )}
 
-            {/* Post meta */}
-            <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground mb-6">
-              <div className="flex items-center gap-2 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
-                <Calendar className="h-4 w-4" />
-                <span>{formatDate(post.date)}</span>
-              </div>
-              <div className="flex items-center gap-2 bg-background/80 backdrop-blur-sm px-3 py-1 rounded-full">
-                <Clock className="h-4 w-4" />
-                <span>5 min de leitura</span>
-              </div>
-            </div>
-            
-            {/* Post title */}
+            {/* Title */}
             <h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6"
               dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.title.rendered) }}
             />
 
-            {/* Post excerpt if available */}
+            {/* Excerpt */}
             {post.excerpt.rendered && (
-              <div 
-                className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.excerpt.rendered) }}
-              />
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl">
+                {stripHTML(post.excerpt.rendered)}
+              </p>
             )}
+
+            {/* Meta info */}
+            <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <div className="flex items-center gap-2">
+                <Calendar className="h-4 w-4" />
+                <span>{formatDate(post.date)}</span>
+              </div>
+              <div className="w-1 h-1 bg-muted-foreground/50 rounded-full" />
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                <span>{readTime} min de leitura</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Main content */}
-      <main className="bg-gradient-to-b from-background via-background/95 to-background">
-        <div className="container mx-auto px-4 py-16">
-          <div className="max-w-4xl mx-auto">
-            
-
-            {/* Post content */}
-            <Card className="mb-12">
-              <CardContent className="p-8 md:p-12">
-                <div 
-                  className="wordpress-content prose prose-lg prose-slate dark:prose-invert max-w-none
-                           prose-headings:text-foreground prose-headings:font-bold prose-headings:mt-8 prose-headings:mb-4
-                           prose-h1:text-3xl prose-h1:mt-10 prose-h1:mb-6
-                           prose-h2:text-2xl prose-h2:mt-8 prose-h2:mb-4 prose-h2:border-b prose-h2:border-border prose-h2:pb-2
-                           prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
-                           prose-h4:text-lg prose-h4:mt-5 prose-h4:mb-2
-                           prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-4 prose-p:mt-0
-                           prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-a:font-medium
-                           prose-strong:text-foreground prose-strong:font-semibold
-                           prose-em:text-muted-foreground prose-em:italic
-                           prose-ul:my-4 prose-ul:pl-6 prose-ul:list-disc prose-ul:space-y-2
-                           prose-ol:my-4 prose-ol:pl-6 prose-ol:list-decimal prose-ol:space-y-2
-                           prose-li:text-muted-foreground prose-li:leading-relaxed prose-li:mb-1
-                           prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-muted/50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg prose-blockquote:my-6 prose-blockquote:italic
-                           prose-code:bg-muted prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono
-                           prose-pre:bg-muted prose-pre:border prose-pre:rounded-lg prose-pre:p-4 prose-pre:my-6 prose-pre:overflow-x-auto
-                           prose-img:rounded-lg prose-img:shadow-lg prose-img:my-6
-                           prose-hr:my-8 prose-hr:border-border
-                           prose-table:w-full prose-table:my-6 prose-table:border-collapse
-                           prose-thead:bg-muted prose-thead:border-b prose-thead:border-border
-                           prose-th:px-4 prose-th:py-3 prose-th:text-left prose-th:font-semibold prose-th:text-foreground prose-th:border prose-th:border-border
-                           prose-td:px-4 prose-td:py-3 prose-td:border prose-td:border-border prose-td:text-muted-foreground
-                           prose-tr:border-b prose-tr:border-border prose-tr:even:bg-muted/30
-                           prose-figure:my-6 prose-figcaption:text-center prose-figcaption:text-sm prose-figcaption:text-muted-foreground prose-figcaption:mt-2"
-                  dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.content.rendered) }}
+      {/* Featured Image */}
+      {media && (
+        <section className="bg-background">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto -mt-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={media.source_url}
+                  alt={media.alt_text || extractTextFromContent(post.title.rendered)}
+                  className="w-full h-auto object-cover aspect-video"
                 />
-              </CardContent>
-            </Card>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
+      {/* Main Content */}
+      <main className="bg-background py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 max-w-6xl mx-auto">
+            {/* Content Column */}
+            <article className="lg:col-span-8">
+              <div 
+                className="wordpress-content prose prose-lg prose-slate dark:prose-invert max-w-none
+                         prose-headings:text-foreground prose-headings:font-bold prose-headings:mt-10 prose-headings:mb-4
+                         prose-h2:text-2xl md:prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:pb-3 prose-h2:border-b prose-h2:border-border
+                         prose-h3:text-xl md:prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4
+                         prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:mb-6
+                         prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-a:font-medium
+                         prose-strong:text-foreground
+                         prose-ul:my-6 prose-ul:space-y-3
+                         prose-ol:my-6 prose-ol:space-y-3
+                         prose-li:text-muted-foreground
+                         prose-blockquote:border-l-4 prose-blockquote:border-accent prose-blockquote:bg-muted/50 prose-blockquote:p-6 prose-blockquote:rounded-r-xl prose-blockquote:my-8 prose-blockquote:not-italic prose-blockquote:text-foreground
+                         prose-img:rounded-xl prose-img:shadow-lg prose-img:my-8"
+                dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.content.rendered) }}
+              />
 
-            {/* Related Posts Carousel */}
-            <WordPressRelatedPosts currentPostId={Number(id)} />
+              {/* Author/Share Section */}
+              <div className="mt-16 pt-8 border-t border-border">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+                  <div>
+                    <p className="text-sm text-muted-foreground mb-2">Gostou do artigo?</p>
+                    <p className="text-foreground font-medium">Compartilhe com sua rede</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <a 
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareTitle)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-11 h-11 rounded-full bg-[#0077B5] text-white hover:opacity-90 transition-opacity"
+                    >
+                      <Linkedin className="h-5 w-5" />
+                    </a>
+                    <a 
+                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-11 h-11 rounded-full bg-[#1DA1F2] text-white hover:opacity-90 transition-opacity"
+                    >
+                      <Twitter className="h-5 w-5" />
+                    </a>
+                    <a 
+                      href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-11 h-11 rounded-full bg-[#1877F2] text-white hover:opacity-90 transition-opacity"
+                    >
+                      <Facebook className="h-5 w-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
 
+            {/* Sidebar */}
+            <aside className="lg:col-span-4">
+              <div className="sticky top-32 space-y-8">
+                {/* Share Card */}
+                <div className="bg-gradient-to-br from-muted/50 to-muted/30 rounded-2xl p-6 border border-border/50">
+                  <div className="flex items-center gap-2 mb-4">
+                    <Share2 className="h-5 w-5 text-primary" />
+                    <h4 className="font-semibold text-foreground">Compartilhar</h4>
+                  </div>
+                  <div className="flex gap-2">
+                    <a 
+                      href={`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(shareTitle)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-background hover:bg-muted transition-colors text-sm font-medium"
+                    >
+                      <Linkedin className="h-4 w-4" />
+                      LinkedIn
+                    </a>
+                    <a 
+                      href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-background hover:bg-muted transition-colors text-sm font-medium"
+                    >
+                      <Twitter className="h-4 w-4" />
+                      Twitter
+                    </a>
+                  </div>
+                </div>
+
+                {/* Related Posts */}
+                {filteredRelatedPosts.length > 0 && (
+                  <div className="bg-card rounded-2xl border border-border p-6">
+                    <h4 className="font-semibold text-foreground mb-4">Leia também</h4>
+                    <div className="space-y-4">
+                      {filteredRelatedPosts.map((relatedPost) => (
+                        <Link
+                          key={relatedPost.id}
+                          to={`/blog/${relatedPost.id}`}
+                          className="block group"
+                        >
+                          <h5 
+                            className="text-sm text-foreground font-medium group-hover:text-primary transition-colors line-clamp-2 mb-1"
+                            dangerouslySetInnerHTML={{ __html: sanitizeHTML(relatedPost.title.rendered) }}
+                          />
+                          <p className="text-xs text-muted-foreground">
+                            {formatDate(relatedPost.date)}
+                          </p>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* CTA Card */}
+                <div className="bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-6 text-primary-foreground">
+                  <h4 className="text-lg font-bold mb-2">
+                    Quer saber mais?
+                  </h4>
+                  <p className="text-primary-foreground/80 text-sm mb-4">
+                    Converse com nossos especialistas e tire suas dúvidas.
+                  </p>
+                  <Button 
+                    onClick={() => navigate('/fale-conosco')}
+                    variant="secondary"
+                    className="w-full"
+                    size="lg"
+                  >
+                    Fale Conosco
+                  </Button>
+                </div>
+              </div>
+            </aside>
           </div>
         </div>
       </main>
+
+      {/* Back to Blog */}
+      <section className="bg-muted/30 py-12 border-t border-border">
+        <div className="container mx-auto px-4 text-center">
+          <Button 
+            onClick={handleGoBack}
+            variant="outline"
+            size="lg"
+          >
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Ver mais artigos
+          </Button>
+        </div>
+      </section>
 
       <Footer />
     </>
