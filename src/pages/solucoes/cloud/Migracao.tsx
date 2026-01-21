@@ -1,69 +1,22 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
-import { Cloud, ArrowRight, CheckCircle2, Zap, Shield, TrendingUp, Rocket, Settings, BarChart3 } from "lucide-react";
+import SolutionHero from "@/components/solutions/SolutionHero";
+import { Cloud, CheckCircle2, Zap, Shield, TrendingUp, Rocket, Settings, BarChart3 } from "lucide-react";
 
 const Migracao = () => {
-  const pillarColor = "#f78504";
-  
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
-      {/* Modern Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        {/* Background with animated elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/5 via-background to-background">
-          {/* Floating orbs */}
-          <div className="absolute top-20 right-[10%] w-72 h-72 bg-[#f78504]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-20 left-[5%] w-96 h-96 bg-[#f78504]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#f78504]/5 rounded-full blur-2xl"></div>
-          
-          {/* Grid pattern overlay */}
-          <div className="absolute inset-0 opacity-[0.02]" style={{
-            backgroundImage: `linear-gradient(${pillarColor} 1px, transparent 1px), linear-gradient(90deg, ${pillarColor} 1px, transparent 1px)`,
-            backgroundSize: '60px 60px'
-          }}></div>
-        </div>
-
-        <div className="relative z-10 container mx-auto px-4 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-16 md:pb-20">
-          <div className="max-w-5xl mx-auto">
-            {/* Badge */}
-            <div className="flex justify-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-[#f78504]/10 backdrop-blur-sm border border-[#f78504]/20 rounded-full px-5 py-2.5">
-                <Cloud className="w-5 h-5 text-[#f78504]" />
-                <span className="text-sm font-semibold text-[#f78504]">Cloud</span>
-              </div>
-            </div>
-            
-            {/* Title */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-center text-foreground">
-              Migração e{" "}
-              <span className="text-[#f78504]">Disaster Recovery</span>
-            </h1>
-            
-            {/* Description */}
-            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10 text-center">
-              Transforme seu negócio com a migração para a nuvem AWS. Nossa solução assessora e executa cada etapa 
-              necessária para migrar sua infraestrutura, aplicativos e dados com segurança, agilidade e eficiência.
-            </p>
-
-            {/* CTA Button */}
-            <div className="flex justify-center">
-              <a 
-                href="/fale-conosco" 
-                className="group inline-flex items-center gap-3 bg-[#f78504] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#d97203] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#f78504]/25"
-              >
-                Falar com Especialista
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
-      </section>
+      <SolutionHero
+        pillarLabel="Cloud"
+        pillarIcon={Cloud}
+        title="Migração e"
+        highlightedText="Disaster Recovery"
+        description="Transforme seu negócio com a migração para a nuvem AWS. Nossa solução assessora e executa cada etapa necessária para migrar sua infraestrutura, aplicativos e dados com segurança, agilidade e eficiência."
+        pillarColor="#f78504"
+      />
 
       {/* Benefits Section */}
       <section className="py-20 md:py-28 relative">
