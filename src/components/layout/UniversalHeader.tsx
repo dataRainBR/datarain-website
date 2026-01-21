@@ -256,7 +256,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 md:gap-6 max-w-2xl">
                     <Button 
                       size="xl" 
-                      className="flex-1 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-semibold"
+                      className="flex-1 bg-accent text-accent-foreground hover:bg-accent/90 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 font-semibold"
                       asChild
                     >
                       <a href="/solucoes">
@@ -280,11 +280,11 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
 
                   {/* Subtle accent elements */}
                   <div className="mt-12 sm:mt-16 flex items-center gap-4 sm:gap-8 opacity-60">
-                    <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-orange-500 to-blue-600 rounded-full"></div>
+                    <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-accent to-primary rounded-full"></div>
                     <p className="text-xs sm:text-sm text-gray-500 uppercase tracking-wider font-medium">
                       Transformação Digital Inteligente
                     </p>
-                    <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-blue-600 to-orange-500 rounded-full"></div>
+                    <div className="w-8 sm:w-12 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
                   </div>
                 </div>
               </div>

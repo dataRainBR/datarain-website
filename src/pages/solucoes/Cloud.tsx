@@ -12,22 +12,22 @@ const Cloud = () => {
       
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/10 via-background to-background">
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-background to-background">
+          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-accent/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-accent/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-accent/15 rounded-full blur-2xl"></div>
         </div>
 
         <div className="relative z-10 container mx-auto px-4 py-20 md:py-24 lg:py-28 pt-40 sm:pt-44 md:pt-48 lg:pt-52">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-[#f78504]/10 rounded-full px-4 py-2 mb-6">
-              <CloudIcon className="w-5 h-5 text-[#f78504]" />
-              <span className="text-sm font-medium text-[#f78504]">Cloud Infrastructure</span>
+            <div className="inline-flex items-center gap-2 bg-accent/10 rounded-full px-4 py-2 mb-6">
+              <CloudIcon className="w-5 h-5 text-accent" />
+              <span className="text-sm font-medium text-accent">Cloud Infrastructure</span>
             </div>
             
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-6 text-foreground">
               Transforme sua Infraestrutura <br />
-              <span style={{ color: '#f78504' }}>na Nuvem</span>
+              <span className="text-accent">na Nuvem</span>
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
@@ -56,7 +56,7 @@ const Cloud = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-[#f78504]/10 rounded-full text-[#f78504] text-sm font-semibold mb-6">
+            <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
               Benefícios
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Por que Cloud?</h2>
@@ -67,20 +67,20 @@ const Cloud = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
             {/* Card 1 */}
-            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-accent/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-accent/10 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-accent/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-accent to-accent/70 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Zap className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Agilidade e Velocidade</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">Agilidade e Velocidade</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   Provisione recursos em minutos, não semanas. Acelere o time-to-market e responda rapidamente às demandas do negócio.
                 </p>
@@ -88,20 +88,20 @@ const Cloud = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-accent/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-accent/10 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-accent/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-accent to-accent/70 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <TrendingUp className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Escalabilidade Infinita</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">Escalabilidade Infinita</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   Cresça sem limites. Escale automaticamente recursos conforme a demanda, pagando apenas pelo que usar.
                 </p>
@@ -109,20 +109,20 @@ const Cloud = () => {
             </div>
 
             {/* Card 3 */}
-            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#f78504]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#f78504]/20 via-orange-400/10 to-amber-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-accent/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-accent/10 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-[#f78504]/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-accent/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M25 55 Q25 40 40 40 Q45 25 60 30 Q80 30 80 50 Q90 50 90 60 Q90 70 80 70 L25 70 Q15 70 15 60 Q15 55 25 55" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#f78504]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-[#f78504] to-orange-400 group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-gradient-to-br from-[#f78504] to-orange-500 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-gradient-to-r from-accent to-accent/70 group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-accent-foreground mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <Shield className="w-7 h-7" />
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-[#f78504] transition-colors duration-300">Segurança Empresarial</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">Segurança Empresarial</h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
                   Proteção de nível corporativo com conformidade garantida. Certifications e compliance mantidos pela AWS.
                 </p>
