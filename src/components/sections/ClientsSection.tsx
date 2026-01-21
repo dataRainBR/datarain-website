@@ -54,7 +54,7 @@ const ClientsSection = () => {
             Alguns de Nossos Projetos
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Empresas que confiam na DataRain para sua transformação digital
+            Empresas que confiam na dataRain para sua transformação digital
           </p>
         </div>
         

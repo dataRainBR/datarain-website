@@ -202,7 +202,7 @@ const Suporte = () => {
                 24x7, com engenharia AWS por trás.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
-                A tecnologia só cria valor quando funciona. Com o Suporte DataRain, você tem atendimento proativo e especializado para manter seus ambientes críticos seguros, estáveis e performáticos, sem fricção. A gente resolve o incidente, ataca a causa raiz e deixa documentado para não acontecer de novo.
+                A tecnologia só cria valor quando funciona. Com o Suporte dataRain, você tem atendimento proativo e especializado para manter seus ambientes críticos seguros, estáveis e performáticos, sem fricção. A gente resolve o incidente, ataca a causa raiz e deixa documentado para não acontecer de novo.
               </p>
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground/90 max-w-3xl mx-auto mb-8">
                 Para quem é: empresas em AWS (ou híbridas) que precisam de agilidade, rastreabilidade e confiança na operação, com visão de negócio.
@@ -458,7 +458,7 @@ const Suporte = () => {
                 Diferenciais
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
-                Por que DataRain?
+                Por que dataRain?
               </h2>
             </div>
 
@@ -581,7 +581,7 @@ const Suporte = () => {
                 Pronto para ter suporte de excelência?
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
-                Fale com a DataRain e descubra como nosso Suporte pode garantir a estabilidade e performance dos seus ambientes críticos.
+                Fale com a dataRain e descubra como nosso Suporte pode garantir a estabilidade e performance dos seus ambientes críticos.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="/fale-conosco">Fale com um especialista →</a>

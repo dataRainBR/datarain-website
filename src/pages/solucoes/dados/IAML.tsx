@@ -453,7 +453,7 @@ const IAML = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               A Inteligência Artificial e o Machine Learning são tecnologias poderosas que podem ajudar a transformar dados em informação valiosa. 
-              A DataRain oferece soluções abrangentes e personalizadas que permitem às empresas e setores aproveitarem o poder dos dados para impulsionar o crescimento e a inovação.
+              A dataRain oferece soluções abrangentes e personalizadas que permitem às empresas e setores aproveitarem o poder dos dados para impulsionar o crescimento e a inovação.
             </p>
             <Button size="lg" asChild>
               <a href="/fale-conosco">Fale com Especialista</a>
