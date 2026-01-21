@@ -74,17 +74,9 @@ const SolutionHero = ({
           <rect width="100%" height="100%" fill={`url(#stars-${pillarColor.replace('#', '')})`} />
         </svg>
 
-        {/* Gradient overlay for depth */}
-        <div 
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(135deg, transparent 0%, ${pillarColor}40 50%, transparent 100%)`
-          }}
-        />
-
         {/* Large decorative icon */}
         <div 
-          className="absolute -bottom-20 -right-20 opacity-[0.08]"
+          className="absolute -bottom-20 -right-20 opacity-[0.1]"
           style={{ transform: 'rotate(15deg)' }}
         >
           <PillarIcon 
@@ -94,7 +86,7 @@ const SolutionHero = ({
         </div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-16 md:pb-20">
+      <div className="relative z-10 container mx-auto px-4 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-16 md:pb-24">
         <div className="max-w-4xl">
           {/* Pillar Badge */}
           <div className="flex mb-8">
@@ -126,9 +118,6 @@ const SolutionHero = ({
           </a>
         </div>
       </div>
-
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
     </section>
   );
 };
