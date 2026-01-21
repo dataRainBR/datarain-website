@@ -157,11 +157,6 @@ const Dados = () => {
               description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
               link="/solucoes/dados/arquitetura"
               pillar="ia"
-              benefits={[
-                "Data lakes otimizados",
-                "ETL pipelines automatizados",
-                "Governança de dados"
-              ]}
             />
 
             <SolutionCard
@@ -169,11 +164,6 @@ const Dados = () => {
               description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
               link="/solucoes/dados/pilot-ai"
               pillar="ia"
-              benefits={[
-                "MVP em 4-8 semanas",
-                "ROI mensurável",
-                "Prova de conceito validada"
-              ]}
             />
 
             <SolutionCard
@@ -181,11 +171,6 @@ const Dados = () => {
               description="Soluções de inteligência artificial e machine learning para automatizar processos e potencializar decisões."
               link="/solucoes/dados/ia-ml"
               pillar="ia"
-              benefits={[
-                "Modelos personalizados",
-                "Automação inteligente",
-                "Insights preditivos"
-              ]}
             />
           </div>
         </div>
