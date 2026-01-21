@@ -1,148 +1,208 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
-import pilotHeroImage from "@/assets/solutions/pilot-ai-hero.jpg";
+import CTA from "@/components/CTA";
+import { Lightbulb, ArrowRight, Sparkles, Target, Clock, TrendingUp, CheckCircle2, Stethoscope, Landmark, Factory } from "lucide-react";
 
 const PilotAI = () => {
+  const pillarColor = "#3893af";
+  
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader showHeroSection={false} />
       
-      {/* Hero Section with Image Background */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0">
-          <img src={pilotHeroImage} alt="Pilot AI" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
+      {/* Modern Hero Section */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#3893af]/5 via-background to-background">
+          <div className="absolute top-20 right-[10%] w-72 h-72 bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 left-[5%] w-96 h-96 bg-[#3893af]/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#3893af]/5 rounded-full blur-2xl"></div>
+          
+          <div className="absolute inset-0 opacity-[0.02]" style={{
+            backgroundImage: `linear-gradient(${pillarColor} 1px, transparent 1px), linear-gradient(90deg, ${pillarColor} 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}></div>
         </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-32">
-          <div className="max-w-3xl">
-            <div className="inline-block px-4 py-2 bg-[#3893af]/20 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-[#3893af] font-semibold">GenAI e Dados</span>
+        <div className="relative z-10 container mx-auto px-4 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-16 md:pb-20">
+          <div className="max-w-5xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-[#3893af]/10 backdrop-blur-sm border border-[#3893af]/20 rounded-full px-5 py-2.5">
+                <Lightbulb className="w-5 h-5 text-[#3893af]" />
+                <span className="text-sm font-semibold text-[#3893af]">GenAI e Dados</span>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-              Pilot.AI dataRain
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-4 text-center text-foreground">
+              Pilot.AI{" "}
+              <span className="text-[#3893af]">dataRain</span>
             </h1>
-            <p className="text-2xl font-semibold text-[#f78504] mb-4">
+            
+            <p className="text-xl md:text-2xl font-semibold text-[#3893af] text-center mb-6">
               IA Generativa em ação, aplicada ao seu desafio.
             </p>
-            <p className="text-xl text-gray-200 mb-8">
-              Transforme um desafio real do seu negócio em um projeto prático de IA Generativa, desenvolvido sob medida e 100% financiado pela AWS. Em até 30 dias, você vê a tecnologia funcionando com dados reais.
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-10 text-center">
+              Transforme um desafio real do seu negócio em um projeto prático de IA Generativa, 
+              desenvolvido sob medida e 100% financiado pela AWS. Em até 30 dias, você vê a tecnologia funcionando com dados reais.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <a href="/fale-conosco" className="px-8 py-4 bg-[#3893af] text-white rounded-lg font-semibold hover:bg-[#2d7a94] transition-all hover:shadow-xl">
+
+            <div className="flex justify-center">
+              <a 
+                href="/fale-conosco" 
+                className="group inline-flex items-center gap-3 bg-[#3893af] text-white px-8 py-4 rounded-xl font-semibold hover:bg-[#2d7a94] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-[#3893af]/25"
+              >
                 Agendar Reunião
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"></div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-16 bg-white">
+      {/* What is Pilot.AI */}
+      <section className="py-20 md:py-28">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#0a2463]">
-              O que é o Pilot.AI?
-            </h2>
-            
-            <div className="prose prose-lg max-w-none space-y-6 text-gray-700">
-              <p>
-                Uma prova de conceito de IA Generativa, criada pela dataRain, para empresas que querem testar o valor real da GenAI antes de investir.
-              </p>
-
-              <p>
-                Você traz o desafio. A gente entrega uma solução funcional, personalizada para o seu contexto e com tecnologia AWS de ponta.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-xl p-6 border-l-4 border-[#f78504]">
-                  <h3 className="text-xl font-bold mb-2 text-[#0a2463]">Baixo custo de investimento</h3>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Content */}
+              <div>
+                <div className="inline-flex items-center gap-2 bg-[#3893af]/10 rounded-full px-4 py-2 mb-6">
+                  <Sparkles className="w-4 h-4 text-[#3893af]" />
+                  <span className="text-sm font-medium text-[#3893af]">Sobre</span>
                 </div>
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-xl p-6 border-l-4 border-[#f78504]">
-                  <h3 className="text-xl font-bold mb-2 text-[#0a2463]">Resultados em até 4 semanas</h3>
-                </div>
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-xl p-6 border-l-4 border-[#f78504]">
-                  <h3 className="text-xl font-bold mb-2 text-[#0a2463]">Aplicação prática e personalizada</h3>
-                </div>
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-xl p-6 border-l-4 border-[#f78504]">
-                  <h3 className="text-xl font-bold mb-2 text-[#0a2463]">ROI estimado e plano de evolução</h3>
-                </div>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                  O que é o Pilot.AI?
+                </h2>
+                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                  Uma prova de conceito de IA Generativa, criada pela dataRain, para empresas que querem testar o valor real da GenAI antes de investir.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Você traz o desafio. A gente entrega uma solução funcional, personalizada para o seu contexto e com tecnologia AWS de ponta.
+                </p>
               </div>
 
-              <h2 className="text-3xl font-bold mb-6 text-[#0a2463]">Como funciona o Pilot.AI</h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 my-8">
-                <div className="bg-card rounded-xl p-6 border border-border/20 shadow-sm">
-                  <div className="w-12 h-12 bg-[#f78504] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                    1
+              {/* Benefits Cards */}
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: Target, title: "Baixo custo de investimento" },
+                  { icon: Clock, title: "Resultados em até 4 semanas" },
+                  { icon: Sparkles, title: "Aplicação prática e personalizada" },
+                  { icon: TrendingUp, title: "ROI estimado e plano de evolução" }
+                ].map((item, index) => (
+                  <div key={index} className="bg-gradient-to-br from-[#3893af]/5 to-[#3893af]/10 rounded-2xl p-6 border border-[#3893af]/20">
+                    <item.icon className="w-8 h-8 text-[#3893af] mb-3" />
+                    <h3 className="font-bold text-foreground">{item.title}</h3>
                   </div>
-                  <h4 className="text-lg font-bold mb-2 text-[#0a2463]">Diagnóstico</h4>
-                  <p className="text-sm text-gray-600">Identificamos, junto com você, um processo de alto impacto para aplicar IA Generativa.</p>
-                </div>
-                <div className="bg-card rounded-xl p-6 border border-border/20 shadow-sm">
-                  <div className="w-12 h-12 bg-[#f78504] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                    2
-                  </div>
-                  <h4 className="text-lg font-bold mb-2 text-[#0a2463]">Desenho da Solução</h4>
-                  <p className="text-sm text-gray-600">Desenvolvemos a POC usando serviços como AWS Bedrock, SageMaker, Textract e mais.</p>
-                </div>
-                <div className="bg-card rounded-xl p-6 border border-border/20 shadow-sm">
-                  <div className="w-12 h-12 bg-[#f78504] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                    3
-                  </div>
-                  <h4 className="text-lg font-bold mb-2 text-[#0a2463]">Implementação Real</h4>
-                  <p className="text-sm text-gray-600">Entregamos uma solução funcional, testada com seus dados e dentro da sua estrutura.</p>
-                </div>
-                <div className="bg-card rounded-xl p-6 border border-border/20 shadow-sm">
-                  <div className="w-12 h-12 bg-[#f78504] rounded-full flex items-center justify-center text-white font-bold text-xl mb-4">
-                    4
-                  </div>
-                  <h4 className="text-lg font-bold mb-2 text-[#0a2463]">Avaliação Estratégica</h4>
-                  <p className="text-sm text-gray-600">Você recebe um relatório com métricas de impacto, ROI e caminhos de escalabilidade.</p>
-                </div>
-              </div>
-
-              <h2 className="text-3xl font-bold mb-6 text-[#0a2463]">Histórias de Sucesso</h2>
-
-              <div className="space-y-6">
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-[#f78504]">Saúde</h3>
-                  <p className="mb-3"><strong>Desafios:</strong> tempo excessivo com prontuários, autorizações e tarefas administrativas.</p>
-                  <p className="mb-3"><strong>Soluções:</strong></p>
-                  <ul className="list-disc ml-6 mb-3">
-                    <li>Assistente GenAI para dúvidas clínicas</li>
-                    <li>Extração automatizada de dados médicos</li>
-                  </ul>
-                  <p><strong>Impacto:</strong> +60% produtividade | menos erros manuais</p>
-                </div>
-
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-[#f78504]">Financeiro</h3>
-                  <p className="mb-3"><strong>Desafios:</strong> dados regulatórios, conformidade e suporte em larga escala.</p>
-                  <p className="mb-3"><strong>Soluções:</strong></p>
-                  <ul className="list-disc ml-6 mb-3">
-                    <li>GenAI com NLP para consultas normativas</li>
-                    <li>Chatbot integrado para atendimento ágil</li>
-                  </ul>
-                  <p><strong>Impacto:</strong> 95% precisão | -70% esforço manual</p>
-                </div>
-
-                <div className="bg-gradient-to-br from-[#f78504]/5 to-[#f78504]/10 rounded-2xl p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-[#f78504]">Indústria</h3>
-                  <p className="mb-3"><strong>Desafios:</strong> processos manuais, manutenção reativa, baixa análise de dados.</p>
-                  <p className="mb-3"><strong>Soluções:</strong></p>
-                  <ul className="list-disc ml-6 mb-3">
-                    <li>Análise de sensores com GenAI para prever falhas</li>
-                    <li>Relatórios operacionais automatizados</li>
-                  </ul>
-                  <p><strong>Impacto:</strong> -35% paradas não planejadas | +22% eficiência</p>
-                </div>
+                ))}
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* How it works */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-card/30 to-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#3893af]/10 rounded-full px-4 py-2 mb-4">
+                <Target className="w-4 h-4 text-[#3893af]" />
+                <span className="text-sm font-medium text-[#3893af]">Processo</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Como funciona o Pilot.AI</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { num: 1, title: "Diagnóstico", desc: "Identificamos, junto com você, um processo de alto impacto para aplicar IA Generativa." },
+                { num: 2, title: "Desenho da Solução", desc: "Desenvolvemos a POC usando serviços como AWS Bedrock, SageMaker, Textract e mais." },
+                { num: 3, title: "Implementação Real", desc: "Entregamos uma solução funcional, testada com seus dados e dentro da sua estrutura." },
+                { num: 4, title: "Avaliação Estratégica", desc: "Você recebe um relatório com métricas de impacto, ROI e caminhos de escalabilidade." }
+              ].map((step, index) => (
+                <div key={index} className="bg-card rounded-2xl p-6 border border-border/50 hover:border-[#3893af]/40 transition-all duration-300 hover:shadow-lg">
+                  <div className="w-12 h-12 bg-[#3893af] rounded-xl flex items-center justify-center text-white font-bold text-xl mb-4">
+                    {step.num}
+                  </div>
+                  <h3 className="font-bold text-foreground mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="py-20 md:py-28">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 bg-[#3893af]/10 rounded-full px-4 py-2 mb-4">
+                <TrendingUp className="w-4 h-4 text-[#3893af]" />
+                <span className="text-sm font-medium text-[#3893af]">Resultados</span>
+              </div>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Histórias de Sucesso</h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: Stethoscope,
+                  sector: "Saúde",
+                  challenges: "Tempo excessivo com prontuários, autorizações e tarefas administrativas.",
+                  solutions: ["Assistente GenAI para dúvidas clínicas", "Extração automatizada de dados médicos"],
+                  impact: "+60% produtividade | menos erros manuais"
+                },
+                {
+                  icon: Landmark,
+                  sector: "Financeiro",
+                  challenges: "Dados regulatórios, conformidade e suporte em larga escala.",
+                  solutions: ["GenAI com NLP para consultas normativas", "Chatbot integrado para atendimento ágil"],
+                  impact: "95% precisão | -70% esforço manual"
+                },
+                {
+                  icon: Factory,
+                  sector: "Indústria",
+                  challenges: "Processos manuais, manutenção reativa, baixa análise de dados.",
+                  solutions: ["Análise de sensores com GenAI para prever falhas", "Relatórios operacionais automatizados"],
+                  impact: "-35% paradas não planejadas | +22% eficiência"
+                }
+              ].map((story, index) => (
+                <div key={index} className="bg-gradient-to-br from-[#3893af]/5 to-[#3893af]/10 rounded-2xl p-8 border border-[#3893af]/20">
+                  <story.icon className="w-10 h-10 text-[#3893af] mb-4" />
+                  <h3 className="text-2xl font-bold text-[#3893af] mb-4">{story.sector}</h3>
+                  
+                  <div className="mb-4">
+                    <p className="text-sm font-semibold text-foreground mb-1">Desafios:</p>
+                    <p className="text-sm text-muted-foreground">{story.challenges}</p>
+                  </div>
+                  
+                  <div className="mb-4">
+                    <p className="text-sm font-semibold text-foreground mb-2">Soluções:</p>
+                    <div className="space-y-2">
+                      {story.solutions.map((solution, i) => (
+                        <div key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-4 h-4 text-[#3893af] flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-muted-foreground">{solution}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="pt-4 border-t border-[#3893af]/20">
+                    <p className="text-sm font-semibold text-foreground mb-1">Impacto:</p>
+                    <p className="text-sm font-bold text-[#3893af]">{story.impact}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTA />
       <Footer />
     </div>
   );
