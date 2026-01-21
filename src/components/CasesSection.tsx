@@ -1,3 +1,4 @@
+import { useState, useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Carousel,
@@ -5,7 +6,9 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { useWordPressPostsByCategorySlug } from "@/hooks/useWordPress";
 import { Loader2 } from "lucide-react";
 
@@ -42,15 +45,17 @@ const staticCases = [
 
 export default function CasesSection() {
   const navigate = useNavigate();
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
   const { data: wordpressCases, isLoading } = useWordPressPostsByCategorySlug("cases", {
     per_page: 6,
   });
 
   // Função para extrair texto limpo do conteúdo HTML
   const extractTextFromContent = (html: string, maxLength: number = 200): string => {
-    // Remove tags HTML
     const text = html.replace(/<[^>]*>/g, " ")
-      // Remove entidades HTML comuns
       .replace(/&nbsp;/g, " ")
       .replace(/&amp;/g, "&")
       .replace(/&lt;/g, "<")
@@ -59,14 +64,11 @@ export default function CasesSection() {
       .replace(/&#8217;/g, "'")
       .replace(/&#8220;/g, '"')
       .replace(/&#8221;/g, '"')
-      // Remove espaços múltiplos
       .replace(/\s+/g, " ")
       .trim();
     
-    // Retorna os primeiros caracteres
     if (text.length <= maxLength) return text;
     
-    // Corta no último espaço para não quebrar palavras
     const truncated = text.slice(0, maxLength);
     const lastSpace = truncated.lastIndexOf(" ");
     return (lastSpace > 0 ? truncated.slice(0, lastSpace) : truncated) + "...";
@@ -91,6 +93,26 @@ export default function CasesSection() {
   const handleReadMore = (id: number) => {
     navigate(`/blog/${id}`);
   };
+
+  // Setup carousel API
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  useEffect(() => {
+    if (!api) return;
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+    api.on("select", onSelect);
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
+
+  const scrollTo = useCallback((index: number) => {
+    api?.scrollTo(index);
+  }, [api]);
 
   return (
     <section id="cases" className="py-12 sm:py-16 md:py-20 lg:py-24 text-white relative overflow-hidden">
@@ -122,63 +144,114 @@ export default function CasesSection() {
             <Loader2 className="w-10 h-10 animate-spin text-white/70" />
           </div>
         ) : (
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent className="ml-0 pb-6">
-              {cases.map((caseStudy, index) => (
-                <CarouselItem key={caseStudy.id} className="pl-0 pb-2 basis-full">
-                  {/* Card com glassmorphism - formato largo */}
-                  <div className="group relative">
-                    {/* Fundo com gradiente único */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${cardGradients[index % cardGradients.length]} rounded-3xl`}></div>
-                    
-                    {/* Efeito de brilho no hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/10 via-transparent to-white/5 rounded-3xl"></div>
-                    
-                    {/* Container glassmorphism */}
-                    <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-xl group-hover:-translate-y-1">
-                      <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[380px] sm:h-[420px] md:h-[480px] flex flex-col justify-between">
-                        <div>
-                          <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
-                            <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/20">
-                              {String(index + 1).padStart(2, "0")}
-                            </span>
+          <div className="relative">
+            {/* Setas nas laterais - fora do container do carousel */}
+            <CarouselPrevious 
+              onClick={() => api?.scrollPrev()}
+              className="absolute -left-4 md:-left-8 lg:-left-16 top-1/2 -translate-y-1/2 z-20 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110 hidden md:flex" 
+            />
+            <CarouselNext 
+              onClick={() => api?.scrollNext()}
+              className="absolute -right-4 md:-right-8 lg:-right-16 top-1/2 -translate-y-1/2 z-20 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110 hidden md:flex" 
+            />
+            
+            <Carousel
+              setApi={setApi}
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              plugins={[
+                Autoplay({
+                  delay: 5000,
+                  stopOnInteraction: true,
+                }),
+              ]}
+              className="w-full"
+            >
+              <CarouselContent className="ml-0">
+                {cases.map((caseStudy, index) => (
+                  <CarouselItem key={caseStudy.id} className="pl-0 basis-full">
+                    {/* Card com glassmorphism - formato largo */}
+                    <div className="group relative mx-2 md:mx-4">
+                      {/* Fundo com gradiente único */}
+                      <div className={`absolute inset-0 bg-gradient-to-br ${cardGradients[index % cardGradients.length]} rounded-3xl`}></div>
+                      
+                      {/* Efeito de brilho no hover */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/10 via-transparent to-white/5 rounded-3xl"></div>
+                      
+                      {/* Container glassmorphism */}
+                      <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-xl group-hover:-translate-y-1">
+                        <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[380px] sm:h-[400px] md:h-[420px] flex flex-col justify-between">
+                          <div>
+                            <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
+                              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/20">
+                                {String(index + 1).padStart(2, "0")}
+                              </span>
+                            </div>
+                            
+                            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight text-white group-hover:text-accent transition-colors duration-300 line-clamp-2">
+                              {caseStudy.title}
+                            </h3>
+                            
+                            <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-3xl line-clamp-3">
+                              {caseStudy.description}
+                            </p>
                           </div>
                           
-                          <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6 leading-tight text-white group-hover:text-accent transition-colors duration-300 line-clamp-2">
-                            {caseStudy.title}
-                          </h3>
-                          
-                          <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-3xl line-clamp-3">
-                            {caseStudy.description}
-                          </p>
+                          <button 
+                            onClick={() => handleReadMore(caseStudy.id)}
+                            className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start group/btn hover:scale-105"
+                          >
+                            <span>Leia o case completo</span>
+                            <svg className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                          </button>
                         </div>
-                        
-                        <button 
-                          onClick={() => handleReadMore(caseStudy.id)}
-                          className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start group/btn hover:scale-105"
-                        >
-                          <span>Leia o case completo</span>
-                          <svg className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                          </svg>
-                        </button>
                       </div>
                     </div>
-                  </div>
-                </CarouselItem>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+
+            {/* Indicadores de página (dots) */}
+            <div className="flex justify-center gap-2 mt-8">
+              {Array.from({ length: count }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollTo(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === current 
+                      ? "bg-white w-8" 
+                      : "bg-white/40 hover:bg-white/60"
+                  }`}
+                  aria-label={`Ir para slide ${index + 1}`}
+                />
               ))}
-            </CarouselContent>
-            
-            {/* Setas melhoradas */}
-            <CarouselPrevious className="left-2 md:left-4 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110" />
-            <CarouselNext className="right-2 md:right-4 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110" />
-          </Carousel>
+            </div>
+
+            {/* Setas mobile - abaixo dos dots */}
+            <div className="flex justify-center gap-4 mt-4 md:hidden">
+              <button
+                onClick={() => api?.scrollPrev()}
+                className="bg-white/20 border border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-10 w-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                onClick={() => api?.scrollNext()}
+                className="bg-white/20 border border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-10 w-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+          </div>
         )}
 
         {/* Link para ver todos os cases */}
