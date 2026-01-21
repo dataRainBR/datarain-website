@@ -14,7 +14,7 @@ const Logo = ({ className = "", variant = 'original' }: LogoProps) => {
     <div className={`flex items-center ${className}`}>
       <img 
         src={logoSrc} 
-        alt="DataRain Logo" 
+        alt="dataRain Logo"
         className="h-10 md:h-12"
       />
     </div>

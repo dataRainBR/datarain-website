@@ -13,7 +13,7 @@ const CTA = () => {
           Pronto para transformar<br />seu negócio?
         </h2>
         <p className="text-lg md:text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-          Descubra como a DataRain pode ajudar sua empresa a alcançar novos patamares em tecnologia e inovação.
+          Descubra como a dataRain pode ajudar sua empresa a alcançar novos patamares em tecnologia e inovação.
         </p>
         <div className="flex justify-center">
           <Button variant="accent" size="xl" asChild>

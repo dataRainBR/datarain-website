@@ -107,7 +107,7 @@ const Footer = () => {
         
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} DataRain. Todos os direitos reservados.
+            &copy; {new Date().getFullYear()} dataRain. Todos os direitos reservados.
           </p>
           <div className="flex gap-8">
             <a href="/privacidade" className="text-xs text-muted-foreground hover:text-primary transition-colors">Privacidade</a>

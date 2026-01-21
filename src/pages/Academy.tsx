@@ -28,13 +28,13 @@ const Academy = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="backdrop-blur-sm bg-card/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-border/20 shadow-2xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 md:mb-8 text-foreground">
-                DataRain Academy
+                dataRain Academy
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground mb-4 sm:mb-6 md:mb-8">
                 Aprenda. Aplique. Transforme.
               </p>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-                Na DataRain, o conhecimento é combustível para inovação. Criamos experiências de aprendizado sob medida para empresas que desejam acelerar sua transformação digital — com foco em prática, estratégia e as tecnologias mais avançadas do mercado.
+                Na dataRain, o conhecimento é combustível para inovação. Criamos experiências de aprendizado sob medida para empresas que desejam acelerar sua transformação digital — com foco em prática, estratégia e as tecnologias mais avançadas do mercado.
               </p>
             </div>
           </div>
@@ -53,12 +53,12 @@ const Academy = () => {
               <div className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[500px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
                 <img 
                   src={immersionImage} 
-                  alt="Immersion Days DataRain"
+                  alt="Immersion Days dataRain"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/40 to-transparent"></div>
                 <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-4 sm:left-6 md:left-8 text-white">
-                  <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Immersion Days DataRain</p>
+                  <p className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">Immersion Days dataRain</p>
                   <div className="w-16 sm:w-20 h-1 bg-accent"></div>
                 </div>
               </div>

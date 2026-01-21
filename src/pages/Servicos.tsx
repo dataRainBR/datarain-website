@@ -98,7 +98,7 @@ const Servicos = () => {
                 Sua empresa também não pode parar.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
-                Na DataRain, entendemos que o verdadeiro valor da tecnologia não está apenas em implementá-la, mas em mantê-la segura, eficiente e em constante evolução. Por isso, oferecemos Serviços Gerenciados que cuidam do seu ambiente em nuvem de ponta a ponta.
+                Na dataRain, entendemos que o verdadeiro valor da tecnologia não está apenas em implementá-la, mas em mantê-la segura, eficiente e em constante evolução. Por isso, oferecemos Serviços Gerenciados que cuidam do seu ambiente em nuvem de ponta a ponta.
               </p>
               <p className="text-lg sm:text-xl text-muted-foreground/90 max-w-3xl mx-auto mb-8">
                 Trabalhando junto com seu time e deixando espaço para ele focar em novos desafios.
@@ -181,7 +181,7 @@ const Servicos = () => {
                 Diferenciais
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
-                Por que escolher a DataRain?
+                Por que escolher a dataRain?
               </h2>
             </div>
 
@@ -309,7 +309,7 @@ const Servicos = () => {
                 Transforme sua TI de um centro de custo em um motor de crescimento.
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
-                Fale com a DataRain e descubra como os Serviços Gerenciados podem trazer mais segurança, eficiência e inovação para o seu negócio.
+                Fale com a dataRain e descubra como os Serviços Gerenciados podem trazer mais segurança, eficiência e inovação para o seu negócio.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="/fale-conosco">Quero falar com um especialista →</a>

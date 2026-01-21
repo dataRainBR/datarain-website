@@ -75,13 +75,13 @@ const SquadAlocacao = () => {
           <div className="max-w-5xl mx-auto text-center">
             <div className="backdrop-blur-sm bg-card/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 border border-border/20 shadow-2xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 text-foreground">
-                Squad & Alocação DataRain
+                Squad & Alocação dataRain
               </h1>
               <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-foreground mb-6 sm:mb-8">
                 Times sob medida para acelerar sua transformação digital.
               </p>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8">
-                Na DataRain, você encontra a flexibilidade que o seu negócio precisa: desde a alocação de especialistas até a formação de squads multidisciplinares, prontos para entregar valor desde o primeiro dia.
+                Na dataRain, você encontra a flexibilidade que o seu negócio precisa: desde a alocação de especialistas até a formação de squads multidisciplinares, prontos para entregar valor desde o primeiro dia.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="/fale-conosco">Marcar uma Conversa</a>
@@ -103,7 +103,7 @@ const SquadAlocacao = () => {
                 Diferenciais
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
-                Por que escolher a DataRain?
+                Por que escolher a dataRain?
               </h2>
             </div>
 
@@ -304,7 +304,7 @@ const SquadAlocacao = () => {
                 Precisa acelerar resultados com tecnologia?
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
-                Conte com a DataRain para montar o time certo, no momento certo.
+                Conte com a dataRain para montar o time certo, no momento certo.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="/fale-conosco">Fale com um especialista →</a>

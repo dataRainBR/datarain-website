@@ -15,13 +15,13 @@ const AboutSection = () => {
                 Quem Somos
               </div>
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Sobre a DataRain
+                Sobre a dataRain
               </h2>
             </div>
             
             <div className="space-y-6 text-foreground">
               <p className="text-lg md:text-xl leading-relaxed">
-                A DataRain é a parceira estratégica para empresas em tecnologia, 
+                A dataRain é a parceira estratégica para empresas em tecnologia,
                 entregando soluções em GenAI e Dados, Cybersecurity e Cloud
                 com agilidade e foco em resultados.
               </p>
@@ -41,7 +41,7 @@ const AboutSection = () => {
             <div className="rounded-3xl overflow-hidden shadow-2xl border border-border/20">
               <img 
                 src={aboutImage} 
-                alt="Equipe DataRain - Especialistas em Cloud, GenAI e Tecnologia"
+                alt="Equipe dataRain - Especialistas em Cloud, GenAI e Tecnologia"
                 className="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-500"
               />
             </div>
