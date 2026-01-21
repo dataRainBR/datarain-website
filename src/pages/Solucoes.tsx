@@ -33,26 +33,6 @@ const Solucoes = () => {
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
               IA e Dados, Cybersecurity e Cloud integrados em um ecossistema completo para sua transformação digital
             </p>
-
-            {/* Global Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">300+</div>
-                <div className="text-sm text-muted-foreground">Projetos Entregues</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">15+</div>
-                <div className="text-sm text-muted-foreground">Anos de Experiência</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>
-                <div className="text-sm text-muted-foreground">Especialistas</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-border/50">
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">98%</div>
-                <div className="text-sm text-muted-foreground">Satisfação</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
