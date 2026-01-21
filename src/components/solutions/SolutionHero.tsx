@@ -9,6 +9,8 @@ interface SolutionHeroProps {
   pillarColor: string;
   ctaText?: string;
   ctaHref?: string;
+  /** Forçar texto escuro em backgrounds claros (padrão: false). */
+  darkText?: boolean;
 }
 
 const SolutionHero = ({
@@ -20,13 +22,11 @@ const SolutionHero = ({
   pillarColor,
   ctaText = "Falar com Especialista",
   ctaHref = "/fale-conosco",
+  darkText = false,
 }: SolutionHeroProps) => {
-  const normalizedColor = pillarColor.replace(/\s/g, "").toLowerCase();
-  // Orange needs dark text; support legacy hex + new HSL token usage
-  const isLightColor =
-    normalizedColor === "#f78504" ||
-    normalizedColor === "hsl(var(--accent))" ||
-    normalizedColor === "hsl(var(--pillar-cloud))";
+  // Requisito: nas hero sections de Cloud (fundo laranja) o texto deve ser branco.
+  // Portanto, o default é sempre texto claro; use `darkText` apenas quando realmente necessário.
+  const isLightColor = darkText;
 
   const textColor = isLightColor ? "text-foreground" : "text-primary-foreground";
   const mutedTextColor = isLightColor ? "text-foreground/80" : "text-primary-foreground/80";
