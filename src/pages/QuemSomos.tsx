@@ -104,7 +104,7 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Moderna e Humanizada */}
-      <header className="relative pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-20 md:pb-24 lg:pb-28 overflow-hidden bg-white">
+      <header className="relative pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-20 md:pb-24 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-muted/30">
         {/* Modern Background with Large Splashes */}
         <div className="absolute inset-0">
           {/* Large Blue splash - top right */}
@@ -143,7 +143,7 @@ const QuemSomos = () => {
       </header>
 
       {/* Nossa Historia - Cards com estatísticas */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-muted/30 to-muted/10 relative overflow-hidden">
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-muted/30 via-muted/20 to-white relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-primary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
