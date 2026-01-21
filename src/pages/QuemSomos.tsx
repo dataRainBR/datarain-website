@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
 import UniversalHeader from "@/components/layout/UniversalHeader";
+import SolutionServiceCard from "@/components/SolutionServiceCard";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
 import astronautImage from "@/assets/astronauta-venturelabs.png";
@@ -818,84 +819,61 @@ const QuemSomos = () => {
         </div>
       </section>
 
-      {/* Áreas de Atuação - Design moderno com ícones e animações */}
-      <section className="py-20 bg-gradient-to-br from-white to-muted/20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-800 mb-6">
+      {/* Áreas de Atuação - Design moderno com SolutionServiceCard */}
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-muted/20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 sm:mb-6">
               Muito além da nuvem
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-6"></div>
-            <h3 className="text-xl md:text-2xl text-slate-600 font-light">
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-4 sm:mb-6"></div>
+            <h3 className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light">
               Explore nossas áreas de atuação
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
             {/* IA e Dados Card */}
-            <Link to="/solucoes/dados" className="group relative animate-fade-in" style={{ animationDelay: '0.1s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
-              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
-                <div className="text-center space-y-6 flex flex-col flex-1">
-                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                    <Brain className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">IA e Dados</h4>
-                  <p className="text-slate-600 leading-relaxed flex-1">
-                    Inteligência artificial e arquitetura de dados para inovação empresarial
-                  </p>
-                  <div className="pt-4">
-                    <span className="text-sm text-accent font-medium">AI & Data Pioneers</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
+              <SolutionServiceCard
+                title="GenAI e Dados"
+                description="Inteligência artificial e arquitetura de dados para inovação empresarial"
+                icon={<Brain className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />}
+                href="/solucoes/dados"
+                variant="ia"
+                features={["Machine Learning", "Data Architecture", "GenAI Solutions"]}
+              />
+            </div>
             
             {/* Cybersecurity Card */}
-            <Link to="/solucoes/cybersecurity" className="group relative animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
-              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
-                <div className="text-center space-y-6 flex flex-col flex-1">
-                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">
-                    Cybersecurity
-                  </h4>
-                  <p className="text-slate-600 leading-relaxed flex-1">
-                    Proteção avançada e compliance para garantir a segurança dos seus dados
-                  </p>
-                  <div className="pt-4">
-                    <span className="text-sm text-accent font-medium">Security Specialists</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
+              <SolutionServiceCard
+                title="Cybersecurity"
+                description="Proteção avançada e compliance para garantir a segurança dos seus dados"
+                icon={<Shield className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />}
+                href="/solucoes/cybersecurity"
+                variant="security"
+                features={["Threat Detection", "Compliance", "Security Assessment"]}
+              />
+            </div>
             
             {/* Cloud Card */}
-            <Link to="/solucoes/cloud" className="group relative animate-fade-in" style={{ animationDelay: '0.3s' }}>
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/10 rounded-3xl blur-xl transform group-hover:scale-110 transition-transform duration-300"></div>
-              <div className="relative backdrop-blur-sm bg-white/80 border border-slate-200/50 rounded-3xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover-scale h-full flex flex-col">
-                <div className="text-center space-y-6 flex flex-col flex-1">
-                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto shadow-lg">
-                    <Cloud className="w-8 h-8 text-white" />
-                  </div>
-                  <h4 className="text-2xl md:text-3xl font-bold text-slate-800 min-h-[80px] flex items-center justify-center">Cloud</h4>
-                  <p className="text-slate-600 leading-relaxed flex-1">
-                    Soluções completas em nuvem AWS para modernizar sua infraestrutura
-                  </p>
-                  <div className="pt-4">
-                    <span className="text-sm text-accent font-medium">AWS Certified Team</span>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            <div className="animate-fade-in" style={{ animationDelay: '0.3s' }}>
+              <SolutionServiceCard
+                title="Cloud"
+                description="Soluções completas em nuvem AWS para modernizar sua infraestrutura"
+                icon={<Cloud className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />}
+                href="/solucoes/cloud"
+                variant="cloud"
+                features={["AWS Migration", "DevOps", "FinOps"]}
+              />
+            </div>
           </div>
           
           {/* Quote destaque */}
           <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-6 md:p-8 max-w-3xl mx-auto">
-              <blockquote className="text-lg md:text-xl text-slate-600 italic font-light leading-relaxed">
+              <blockquote className="text-lg md:text-xl text-muted-foreground italic font-light leading-relaxed">
                 "Aqui todos somos certificados AWS, desde o estagiário até o CEO!"
               </blockquote>
               <div className="mt-4">
