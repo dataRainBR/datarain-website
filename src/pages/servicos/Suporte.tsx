@@ -207,7 +207,7 @@ const Suporte = () => {
               <p className="text-sm sm:text-base md:text-lg text-muted-foreground/90 max-w-3xl mx-auto mb-8">
                 Para quem é: empresas em AWS (ou híbridas) que precisam de agilidade, rastreabilidade e confiança na operação, com visão de negócio.
               </p>
-              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+              <Button variant="hero" size="xl" asChild>
                 <a href="/fale-conosco">Conhecer Planos de Suporte</a>
               </Button>
             </div>
@@ -583,7 +583,7 @@ const Suporte = () => {
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed">
                 Fale com a DataRain e descubra como nosso Suporte pode garantir a estabilidade e performance dos seus ambientes críticos.
               </p>
-              <Button variant="hero" size="lg" className="sm:text-lg" asChild>
+              <Button variant="hero" size="xl" asChild>
                 <a href="/fale-conosco">Fale com um especialista →</a>
               </Button>
             </div>
