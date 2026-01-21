@@ -31,6 +31,10 @@ interface WordPressPostsListProps {
    * disponíveis (usando o header X-WP-Total do WordPress).
    */
   fetchAll?: boolean;
+  /**
+   * Route prefix for post links (e.g., '/blog' or '/cases')
+   */
+  routePrefix?: string;
 }
 
 export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
@@ -41,6 +45,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
   categoryIds,
   categorySlug,
   fetchAll = false,
+  routePrefix = '/blog',
 }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const activeSearchTerm = externalSearchTerm || searchTerm;
@@ -114,6 +119,7 @@ export const WordPressPostsList: React.FC<WordPressPostsListProps> = ({
                 showExcerpt={true}
                 showCategories={false}
                 showTags={false}
+                routePrefix={routePrefix}
               />
             ))}
           </div>

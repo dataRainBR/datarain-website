@@ -88,7 +88,7 @@ export default function CasesSection() {
       }));
 
   const handleReadMore = (id: number) => {
-    navigate(`/blog/${id}`);
+    navigate(`/cases/${id}`);
   };
 
   // Setup carousel API

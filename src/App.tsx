@@ -13,6 +13,7 @@ import Cases from "./pages/Cases";
 import Academy from "./pages/Academy";
 import WordPressBlog from "./pages/WordPressBlog";
 import WordPressPostView from "./components/wordpress/WordPressPostView";
+import CaseStudyView from "./components/wordpress/CaseStudyView";
 import Cloud from "./pages/solucoes/Cloud";
 import Dados from "./pages/solucoes/Dados";
 import Cybersecurity from "./pages/solucoes/Cybersecurity";
@@ -63,6 +64,7 @@ const App = () => (
           <Route path="/servicos/squad-alocacao" element={<SquadAlocacao />} />
           <Route path="/servicos/suporte" element={<Suporte />} />
           <Route path="/cases" element={<Cases />} />
+          <Route path="/cases/:id" element={<CaseStudyView />} />
           <Route path="/academy" element={<Academy />} />
           <Route path="/fale-conosco" element={<FaleConosco />} />
           <Route path="/blog" element={<WordPressBlog />} />
