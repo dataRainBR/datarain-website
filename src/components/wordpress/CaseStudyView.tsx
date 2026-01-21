@@ -194,22 +194,25 @@ const CaseStudyView: React.FC = () => {
               </div>
             ) : null}
             
-            {/* Divider + Label + Categories unified */}
-            <div className="flex flex-col gap-3">
-              <div className="flex items-center gap-4">
-                <div className="w-px h-10 bg-white/30 hidden sm:block" />
-                <p className="text-xs uppercase tracking-[0.2em] text-white font-semibold">
-                  Case de Sucesso
-                </p>
-              </div>
+            {/* Info bar with Case de Sucesso + Categories */}
+            <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-5 py-3">
+              {/* Case de Sucesso label */}
+              <p className="text-xs uppercase tracking-[0.15em] text-white font-semibold whitespace-nowrap">
+                Case de Sucesso
+              </p>
               
-              {/* Categories as tags */}
+              {/* Divider */}
               {categories && categories.length > 0 && (
-                <div className="flex flex-wrap gap-2 sm:pl-5">
+                <div className="w-px h-5 bg-white/30" />
+              )}
+              
+              {/* Categories */}
+              {categories && categories.length > 0 && (
+                <div className="flex flex-wrap gap-2">
                   {categories.map((cat) => (
                     <span 
                       key={cat.id} 
-                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/15 text-white/90 border border-white/20 backdrop-blur-sm"
+                      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/15 text-white/90 border border-white/20"
                     >
                       {cat.name.replace(/&amp;/g, '&')}
                     </span>
