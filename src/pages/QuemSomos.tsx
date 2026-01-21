@@ -17,6 +17,7 @@ import gilsonSanchesPhoto from "@/assets/team/gilson-sanches.jpg";
 import marceloTavaresPhoto from "@/assets/team/marcelo-tavares.jpg";
 import victorMatioliPhoto from "@/assets/team/victor-matioli.jpg";
 import awsCertificationsBg from "@/assets/aws-certifications-bg.png";
+import awsPartnerBadge from "@/assets/aws-partner-badge.png";
 import { 
   Cloud, 
   Shield, 
@@ -237,6 +238,19 @@ const QuemSomos = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* AWS Partner Badge Section */}
+      <section className="py-10 sm:py-14 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex justify-center">
+            <img 
+              src={awsPartnerBadge} 
+              alt="AWS Partner Advanced Tier Services Badge" 
+              className="max-w-full h-auto max-h-24 sm:max-h-28 md:max-h-32 object-contain"
+            />
           </div>
         </div>
       </section>
