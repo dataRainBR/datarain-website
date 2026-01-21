@@ -183,9 +183,9 @@ export default function CasesSection() {
                       
                       {/* Container glassmorphism */}
                       <div className="relative bg-white/10 backdrop-blur-xl rounded-3xl overflow-hidden shadow-lg border border-white/20 transition-all duration-300 group-hover:border-white/40 group-hover:shadow-xl group-hover:-translate-y-1">
-                        <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[420px] sm:h-[440px] md:h-[460px] flex flex-col justify-between">
-                          <div>
-                            <div className="flex items-center justify-between mb-4 sm:mb-6 md:mb-8">
+                        <div className="relative z-10 p-6 sm:p-8 md:p-10 lg:p-12 h-[420px] sm:h-[440px] md:h-[460px] flex flex-col">
+                          <div className="flex-1">
+                            <div className="flex items-center justify-between mb-4 sm:mb-6">
                               <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white/20">
                                 {String(index + 1).padStart(2, "0")}
                               </span>
@@ -195,20 +195,22 @@ export default function CasesSection() {
                               {caseStudy.title}
                             </h3>
                             
-                            <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed mb-6 md:mb-8 max-w-3xl line-clamp-3">
+                            <p className="text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-3xl line-clamp-3">
                               {caseStudy.description}
                             </p>
                           </div>
                           
-                          <button 
-                            onClick={() => handleReadMore(caseStudy.id)}
-                            className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 self-start group/btn hover:scale-105"
-                          >
-                            <span>Leia o case completo</span>
-                            <svg className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                          </button>
+                          <div className="mt-auto pt-6">
+                            <button 
+                              onClick={() => handleReadMore(caseStudy.id)}
+                              className="inline-flex items-center gap-3 bg-white text-primary font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg hover:bg-accent hover:text-white transition-all duration-300 group/btn hover:scale-105"
+                            >
+                              <span>Leia o case completo</span>
+                              <svg className="w-5 h-5 transition-transform duration-300 group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                              </svg>
+                            </button>
+                          </div>
                         </div>
                       </div>
                     </div>
