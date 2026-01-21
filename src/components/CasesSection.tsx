@@ -4,14 +4,11 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useWordPressPostsByCategorySlug } from "@/hooks/useWordPress";
-import { Loader2 } from "lucide-react";
-
+import { Loader2, ChevronLeft, ChevronRight } from "lucide-react";
 // Gradientes únicos para cada card
 const cardGradients = [
   "from-primary/20 via-accent/10 to-primary/5",
@@ -146,14 +143,18 @@ export default function CasesSection() {
         ) : (
           <div className="relative">
             {/* Setas nas laterais - fora do container do carousel */}
-            <CarouselPrevious 
+            <button 
               onClick={() => api?.scrollPrev()}
-              className="absolute -left-4 md:-left-8 lg:-left-16 top-1/2 -translate-y-1/2 z-20 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110 hidden md:flex" 
-            />
-            <CarouselNext 
+              className="absolute -left-4 md:-left-8 lg:-left-16 top-1/2 -translate-y-1/2 z-20 bg-white/20 border border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hidden md:flex items-center justify-center" 
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button 
               onClick={() => api?.scrollNext()}
-              className="absolute -right-4 md:-right-8 lg:-right-16 top-1/2 -translate-y-1/2 z-20 bg-white/20 border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 shadow-lg transition-all duration-300 hover:scale-110 hidden md:flex" 
-            />
+              className="absolute -right-4 md:-right-8 lg:-right-16 top-1/2 -translate-y-1/2 z-20 bg-white/20 border border-white/30 text-white hover:bg-white/40 hover:border-white/50 backdrop-blur-sm h-12 w-12 md:h-14 md:w-14 rounded-full shadow-lg transition-all duration-300 hover:scale-110 hidden md:flex items-center justify-center" 
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
             
             <Carousel
               setApi={setApi}
