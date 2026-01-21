@@ -120,7 +120,9 @@ function TrackCard({
   href: string;
 }) {
   const { color, Icon } = PILLAR[pillar];
-  const isLight = color.replace(/\s/g, "").toLowerCase() === "hsl(var(--pillar-cloud))";
+  // No Academy, os cards de Cloud (laranja) devem manter texto branco para contraste.
+  // Então tratamos TODOS os pilares aqui como "dark background" (texto branco).
+  const isLight = false;
 
   return (
     <article
