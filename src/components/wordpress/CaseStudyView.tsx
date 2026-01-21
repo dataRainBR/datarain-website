@@ -178,57 +178,45 @@ const CaseStudyView: React.FC = () => {
             </nav>
           </div>
 
-          <div className="flex flex-col lg:flex-row lg:items-stretch gap-8">
-            {/* Left side - Logo and label */}
-            <div className="flex items-center gap-6 flex-1">
-              {media ? (
-                <div className="bg-white rounded-xl p-4 shadow-lg">
-                  <img
-                    src={media.source_url}
-                    alt={media.alt_text || clientName}
-                    className="h-16 md:h-20 w-auto object-contain"
-                  />
-                </div>
-              ) : clientName ? (
-                <div className="bg-white rounded-xl px-6 py-4 shadow-lg">
-                  <span className="text-2xl font-bold text-primary">{clientName}</span>
-                </div>
-              ) : null}
+          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
+            {/* Logo */}
+            {media ? (
+              <div className="bg-white rounded-xl p-4 shadow-lg shrink-0">
+                <img
+                  src={media.source_url}
+                  alt={media.alt_text || clientName}
+                  className="h-14 md:h-16 w-auto object-contain"
+                />
+              </div>
+            ) : clientName ? (
+              <div className="bg-white rounded-xl px-5 py-3 shadow-lg shrink-0">
+                <span className="text-xl font-bold text-primary">{clientName}</span>
+              </div>
+            ) : null}
+            
+            {/* Divider + Label + Categories unified */}
+            <div className="flex flex-col gap-3">
+              <div className="flex items-center gap-4">
+                <div className="w-px h-10 bg-white/30 hidden sm:block" />
+                <p className="text-xs uppercase tracking-[0.2em] text-white font-semibold">
+                  Case de Sucesso
+                </p>
+              </div>
               
-              <div className="border-l-2 border-primary-foreground/30 pl-6">
-                <p className="text-xs uppercase tracking-widest text-primary-foreground/60 font-medium">
-                  Case de
-                </p>
-                <p className="text-sm uppercase tracking-widest text-primary-foreground/80 font-semibold">
-                  Sucesso
-                </p>
-              </div>
-            </div>
-
-            {/* Right side - Details - Anchored to right edge */}
-            {categories && categories.length > 0 && (
-              <div className="lg:self-start lg:ml-auto">
-                <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 px-5 py-4 inline-flex items-center gap-4">
-                  <div className="flex items-center gap-2">
-                    <div className="w-1 h-8 bg-white/60 rounded-full" />
-                    <span className="text-xs uppercase tracking-widest text-white font-semibold whitespace-nowrap">
-                      Detalhes
+              {/* Categories as tags */}
+              {categories && categories.length > 0 && (
+                <div className="flex flex-wrap gap-2 sm:pl-5">
+                  {categories.map((cat) => (
+                    <span 
+                      key={cat.id} 
+                      className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/15 text-white/90 border border-white/20 backdrop-blur-sm"
+                    >
+                      {cat.name.replace(/&amp;/g, '&')}
                     </span>
-                  </div>
-                  <div className="h-6 w-px bg-white/30" />
-                  <div className="flex flex-wrap gap-2">
-                    {categories.map((cat) => (
-                      <span 
-                        key={cat.id} 
-                        className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-white/10 text-primary-foreground border border-white/15 hover:bg-white/20 transition-all duration-300"
-                      >
-                        {cat.name.replace(/&amp;/g, '&')}
-                      </span>
-                    ))}
-                  </div>
+                  ))}
                 </div>
-              </div>
-            )}
+              )}
+            </div>
           </div>
 
           {/* Title */}
