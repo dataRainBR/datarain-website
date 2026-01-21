@@ -163,7 +163,7 @@ const QuemSomos = () => {
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
                 É nisso que a dataRain acredita. É por isso que somos a referência N°1 em nuvem AWS no Brasil. 
-                Com os melhores profissionais em IA e Dados, Cybersecurity e Cloud.
+                Com os melhores profissionais em GenAI e Dados, Cybersecurity e Cloud.
               </p>
               
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
@@ -807,7 +807,7 @@ const QuemSomos = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
-            {/* IA e Dados Card */}
+            {/* GenAI e Dados Card */}
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <SolutionServiceCard
                 title="GenAI e Dados"

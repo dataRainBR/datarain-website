@@ -22,7 +22,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
   const [isScrolled, setIsScrolled] = useState(false);
 
   const solucoesItems = [
-    { label: "IA e Dados", href: "/solucoes/dados" },
+    { label: "GenAI e Dados", href: "/solucoes/dados" },
     { label: "Cybersecurity", href: "/solucoes/cybersecurity" },
     { label: "Cloud", href: "/solucoes/cloud" }
   ];

@@ -17,7 +17,7 @@ const PilotAI = () => {
         <div className="relative z-10 container mx-auto px-4 py-32">
           <div className="max-w-3xl">
             <div className="inline-block px-4 py-2 bg-[#f78504]/20 rounded-full mb-6 backdrop-blur-sm">
-              <span className="text-[#f78504] font-semibold">Dados e IA</span>
+              <span className="text-[#f78504] font-semibold">GenAI e Dados</span>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
               Pilot.AI dataRain

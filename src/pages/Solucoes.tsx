@@ -22,7 +22,7 @@ const Solucoes = () => {
               Transformam Negócios
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">
-              IA e Dados, Cybersecurity e Cloud integrados em um ecossistema completo para sua transformação digital
+              GenAI e Dados, Cybersecurity e Cloud integrados em um ecossistema completo para sua transformação digital
             </p>
           </div>
         </div>
@@ -51,12 +51,12 @@ const Solucoes = () => {
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Três Pilares, Uma Visão</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-              Integramos IA e Dados, Cybersecurity e Cloud para entregar transformação digital de ponta a ponta
+              Integramos GenAI e Dados, Cybersecurity e Cloud para entregar transformação digital de ponta a ponta
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-            {/* IA e Dados Pillar - Azul #3893af */}
+            {/* GenAI e Dados Pillar - Azul #3893af */}
             <a href="/solucoes/dados" className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#3893af]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block">
               <div className="absolute inset-0 bg-gradient-to-br from-[#3893af]/20 via-[#3893af]/10 to-sky-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
@@ -75,7 +75,7 @@ const Solucoes = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-[#3893af] transition-colors duration-300">IA e Dados</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-[#3893af] transition-colors duration-300">GenAI e Dados</h3>
                 <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   Arquitetura de dados e IA aplicada. De data lakes a soluções verticais inteligentes.
                 </p>
@@ -175,11 +175,11 @@ const Solucoes = () => {
             </p>
           </div>
 
-          {/* IA e Dados Solutions */}
+          {/* GenAI e Dados Solutions */}
           <div className="mb-14 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <div className="w-12 h-1 bg-[#3893af] rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">IA e Dados</h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">GenAI e Dados</h3>
               <div className="flex-1 h-1 bg-[#3893af]/20 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
