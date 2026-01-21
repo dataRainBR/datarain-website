@@ -205,10 +205,10 @@ const CaseStudyView: React.FC = () => {
               
               <div className="border-l-2 border-primary-foreground/30 pl-6">
                 <p className="text-xs uppercase tracking-widest text-primary-foreground/60 font-medium">
-                  Customer
+                  Case de
                 </p>
                 <p className="text-sm uppercase tracking-widest text-primary-foreground/80 font-semibold">
-                  Story
+                  Sucesso
                 </p>
               </div>
             </div>
