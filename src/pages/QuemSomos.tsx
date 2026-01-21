@@ -815,7 +815,7 @@ const QuemSomos = () => {
                 icon={<Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />}
                 href="/solucoes/dados"
                 variant="ia"
-                features={["Machine Learning", "Data Architecture", "GenAI Solutions"]}
+                features={["Agentic AI", "Data Architecture", "GenAI Solutions"]}
               />
             </div>
             

@@ -80,9 +80,9 @@ const Solucoes = () => {
                   Arquitetura de dados e IA aplicada. De data lakes a soluções verticais inteligentes.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
+                  <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">Agentic AI</span>
                   <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">Data Architecture</span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">Pilot AI</span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">ML/AI</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-[#3893af]/10 text-[#3893af]">GenAI</span>
                 </div>
                 <div className="flex items-center gap-2 text-[#3893af] font-semibold group-hover:gap-4 transition-all duration-300">
                   <span>Explorar soluções</span>

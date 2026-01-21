@@ -37,7 +37,7 @@ const ServicesSection = () => {
             icon={<LightbulbIcon className="h-7 w-7" />}
             href="/solucoes/dados"
             variant="ia"
-            features={["Machine Learning", "Analytics Avançado", "Automação Inteligente"]}
+            features={["Agentic AI", "Analytics Avançado", "Automação Inteligente"]}
           />
           
           <SolutionServiceCard 
