@@ -205,21 +205,23 @@ const CaseStudyView: React.FC = () => {
               </div>
             </div>
 
-            {/* Right side - Categories */}
+            {/* Right side - Details */}
             {categories && categories.length > 0 && (
-              <div className="lg:text-right">
-                <p className="text-xs uppercase tracking-widest text-primary-foreground/60 font-medium mb-3">
-                  Categorias
-                </p>
-                <div className="flex flex-wrap lg:justify-end gap-2">
+              <div className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-5 lg:p-6 shadow-xl">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-1.5 h-6 bg-accent rounded-full" />
+                  <p className="text-sm uppercase tracking-widest text-primary-foreground font-semibold">
+                    Detalhes
+                  </p>
+                </div>
+                <div className="flex flex-wrap gap-2">
                   {categories.map((cat) => (
-                    <Badge 
+                    <span 
                       key={cat.id} 
-                      variant="secondary"
-                      className="bg-white/10 text-primary-foreground border-primary-foreground/20 hover:bg-white/20"
+                      className="inline-flex items-center px-3 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r from-white/15 to-white/5 text-primary-foreground border border-white/20 hover:from-white/25 hover:to-white/10 transition-all duration-300"
                     >
                       {cat.name}
-                    </Badge>
+                    </span>
                   ))}
                 </div>
               </div>
