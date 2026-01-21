@@ -2,8 +2,6 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
-import arquiteturaImage from "@/assets/solutions/data-architecture.jpg";
-import pilotImage from "@/assets/solutions/pilot-ai.jpg";
 import { Brain, BarChart3, Sparkles, Database } from "lucide-react";
 
 const Dados = () => {
@@ -157,8 +155,8 @@ const Dados = () => {
             <SolutionCard
               title="Arquitetura e Engenharia de Dados"
               description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
-              image={arquiteturaImage}
               link="/solucoes/dados/arquitetura"
+              pillar="ia"
               benefits={[
                 "Data lakes otimizados",
                 "ETL pipelines automatizados",
@@ -169,8 +167,8 @@ const Dados = () => {
             <SolutionCard
               title="Pilot AI"
               description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
-              image={pilotImage}
               link="/solucoes/dados/pilot-ai"
+              pillar="ia"
               benefits={[
                 "MVP em 4-8 semanas",
                 "ROI mensurável",
@@ -181,8 +179,8 @@ const Dados = () => {
             <SolutionCard
               title="GenAI e ML"
               description="Soluções de inteligência artificial e machine learning para automatizar processos e potencializar decisões."
-              image={pilotImage}
               link="/solucoes/dados/ia-ml"
+              pillar="ia"
               benefits={[
                 "Modelos personalizados",
                 "Automação inteligente",

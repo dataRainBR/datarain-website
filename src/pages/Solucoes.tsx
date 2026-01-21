@@ -1,15 +1,6 @@
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
-import migracaoImage from "@/assets/solutions/cloud-migration-hero.jpg";
-import finopsImage from "@/assets/solutions/finops-hero.jpg";
-import devopsImage from "@/assets/solutions/devops-hero.jpg";
-import arquiteturaCloudImage from "@/assets/solutions/cloud-architecture.jpg";
-import landingZoneImage from "@/assets/solutions/landing-zone.jpg";
-import gaasImage from "@/assets/solutions/gaas.jpg";
-import assessmentImage from "@/assets/solutions/assessment.jpg";
-import arquiteturaDadosImage from "@/assets/solutions/data-architecture-hero.jpg";
-import pilotImage from "@/assets/solutions/pilot-ai-hero.jpg";
 
 const Solucoes = () => {
   return (
@@ -187,16 +178,16 @@ const Solucoes = () => {
           {/* IA e Dados Solutions */}
           <div className="mb-14 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-1 bg-primary rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary">IA e Dados</h3>
-              <div className="flex-1 h-1 bg-primary/20 rounded-full"></div>
+              <div className="w-12 h-1 bg-[#3893af] rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">IA e Dados</h3>
+              <div className="flex-1 h-1 bg-[#3893af]/20 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Arquitetura e Engenharia de Dados"
                 description="Construa data lakes e warehouses escaláveis. Estruture seus dados para análises avançadas e decisões baseadas em dados."
-                image={arquiteturaDadosImage}
                 link="/solucoes/dados/arquitetura"
+                pillar="ia"
                 benefits={[
                   "Data lakes otimizados",
                   "ETL pipelines automatizados",
@@ -206,8 +197,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="Pilot AI"
                 description="Projetos piloto de IA personalizados para validar casos de uso. Teste hipóteses antes de investimentos maiores."
-                image={pilotImage}
                 link="/solucoes/dados/pilot-ai"
+                pillar="ia"
                 benefits={[
                   "MVP em 4-8 semanas",
                   "ROI mensurável",
@@ -217,8 +208,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="GenAI e ML"
                 description="Soluções de inteligência artificial e machine learning para automatizar processos e potencializar decisões."
-                image={pilotImage}
                 link="/solucoes/dados/ia-ml"
+                pillar="ia"
                 benefits={[
                   "Modelos personalizados",
                   "Automação inteligente",
@@ -231,16 +222,16 @@ const Solucoes = () => {
           {/* Cybersecurity Solutions */}
           <div className="mb-14 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-1 bg-primary rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary">Cybersecurity</h3>
-              <div className="flex-1 h-1 bg-primary/20 rounded-full"></div>
+              <div className="w-12 h-1 bg-[#e63946] rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#e63946]">Cybersecurity</h3>
+              <div className="flex-1 h-1 bg-[#e63946]/20 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Landing Zone"
                 description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
-                image={landingZoneImage}
                 link="/solucoes/cybersecurity/landing-zone"
+                pillar="cybersecurity"
                 benefits={[
                   "Segurança desde o design",
                   "Compliance automático",
@@ -250,8 +241,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="GaaS (Governança como Serviço)"
                 description="Governança como Serviço completa. Monitore compliance, gerencie políticas e automatize controles de segurança."
-                image={gaasImage}
                 link="/solucoes/cybersecurity/gaas"
+                pillar="cybersecurity"
                 benefits={[
                   "Compliance contínuo",
                   "Políticas automatizadas",
@@ -261,8 +252,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="Assessment de Segurança"
                 description="Avaliação completa de segurança e vulnerabilidades. Identifique riscos, receba recomendações e implemente correções."
-                image={assessmentImage}
                 link="/solucoes/cybersecurity/assessment"
+                pillar="cybersecurity"
                 benefits={[
                   "Análise completa de riscos",
                   "Recomendações priorizadas",
@@ -275,16 +266,16 @@ const Solucoes = () => {
           {/* Cloud Solutions */}
           <div>
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-1 bg-[#3893af] rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-[#3893af]">Cloud</h3>
-              <div className="flex-1 h-1 bg-[#3893af]/20 rounded-full"></div>
+              <div className="w-12 h-1 bg-[#f78504] rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#f78504]">Cloud</h3>
+              <div className="flex-1 h-1 bg-[#f78504]/20 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard
                 title="Migração e Disaster Recovery"
                 description="Assessoria e execução completa de migração para AWS com framework estruturado."
-                image={migracaoImage}
                 link="/solucoes/cloud/migracao"
+                pillar="cloud"
                 benefits={[
                   "Migration Evaluator e Hub",
                   "Framework AWS MAP",
@@ -294,8 +285,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="Gestão de FinOps"
                 description="Otimização de custos em cloud com visibilidade completa e controle de gastos."
-                image={finopsImage}
                 link="/solucoes/cloud/finops"
+                pillar="cloud"
                 benefits={[
                   "Redução média de 30%",
                   "Dashboards em tempo real",
@@ -305,8 +296,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="DevOps e Modernization"
                 description="Acelere entregas com automação e integração contínua. Pipelines CI/CD robustos."
-                image={devopsImage}
                 link="/solucoes/cloud/devops"
+                pillar="cloud"
                 benefits={[
                   "Deploy em minutos",
                   "Automação completa",
@@ -316,8 +307,8 @@ const Solucoes = () => {
               <SolutionCard
                 title="Assessment de Arquitetura"
                 description="Diagnóstico completo da arquitetura atual com roadmap técnico priorizado."
-                image={arquiteturaCloudImage}
                 link="/solucoes/cloud/arquitetura"
+                pillar="cloud"
                 benefits={[
                   "Diagnóstico de performance",
                   "Roadmap técnico",

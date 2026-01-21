@@ -2,10 +2,6 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
-import migracaoImage from "@/assets/solutions/cloud-migration-hero.jpg";
-import finopsImage from "@/assets/solutions/finops-hero.jpg";
-import devopsImage from "@/assets/solutions/devops-hero.jpg";
-import arquiteturaImage from "@/assets/solutions/cloud-architecture.jpg";
 import { Cloud as CloudIcon, TrendingUp, Zap, Shield } from "lucide-react";
 
 const Cloud = () => {
@@ -150,8 +146,8 @@ const Cloud = () => {
             <SolutionCard
               title="Migração e Disaster Recovery"
               description="Assessoria e execução completa de migração de infraestrutura, aplicativos e dados para AWS. Framework estruturado com ferramentas especializadas para transformação ágil e segura."
-              image={migracaoImage}
               link="/solucoes/cloud/migracao"
+              pillar="cloud"
               benefits={[
                 "Migration Evaluator e Hub",
                 "Framework AWS MAP",
@@ -162,8 +158,8 @@ const Cloud = () => {
             <SolutionCard
               title="Gestão de FinOps"
               description="Otimização de custos em cloud com visibilidade completa. Controle gastos, preveja despesas e maximize ROI da sua infraestrutura cloud."
-              image={finopsImage}
               link="/solucoes/cloud/finops"
+              pillar="cloud"
               benefits={[
                 "Redução média de 30% nos custos",
                 "Dashboards em tempo real",
@@ -174,8 +170,8 @@ const Cloud = () => {
             <SolutionCard
               title="DevOps e Modernization"
               description="Acelere entregas com automação e integração contínua. Implemente CI/CD pipelines robustos e aumente a velocidade de desenvolvimento."
-              image={devopsImage}
               link="/solucoes/cloud/devops"
+              pillar="cloud"
               benefits={[
                 "Deploy em minutos, não semanas",
                 "Automação completa de pipelines",
@@ -186,8 +182,8 @@ const Cloud = () => {
             <SolutionCard
               title="Assessment de Arquitetura"
               description="A base para crescer com segurança e eficiência. Diagnóstico completo da arquitetura atual com roadmap técnico e quick wins para evolução sustentável."
-              image={arquiteturaImage}
               link="/solucoes/cloud/arquitetura"
+              pillar="cloud"
               benefits={[
                 "Diagnóstico de performance e custos",
                 "Roadmap técnico priorizado",

@@ -2,9 +2,6 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
-import landingZoneImage from "@/assets/solutions/landing-zone-hero.jpg";
-import gaasImage from "@/assets/solutions/gaas.jpg";
-import assessmentImage from "@/assets/solutions/assessment-hero.jpg";
 import { Shield, Lock, Eye, CheckCircle2 } from "lucide-react";
 
 const Cybersecurity = () => {
@@ -152,8 +149,8 @@ const Cybersecurity = () => {
             <SolutionCard
               title="Landing Zone"
               description="Configure ambientes cloud seguros e escaláveis desde o início. Implementação de melhores práticas de segurança e governança."
-              image={landingZoneImage}
               link="/solucoes/cybersecurity/landing-zone"
+              pillar="cybersecurity"
               benefits={[
                 "Segurança desde o design",
                 "Compliance automático",
@@ -164,8 +161,8 @@ const Cybersecurity = () => {
             <SolutionCard
               title="GaaS (Governança como Serviço)"
               description="Governança como Serviço completa. Monitore compliance, gerencie políticas e automatize controles de segurança."
-              image={gaasImage}
               link="/solucoes/cybersecurity/gaas"
+              pillar="cybersecurity"
               benefits={[
                 "Compliance contínuo",
                 "Políticas automatizadas",
@@ -176,8 +173,8 @@ const Cybersecurity = () => {
             <SolutionCard
               title="Assessment de Segurança"
               description="Antecipe riscos e desbloqueie governança. Diagnóstico completo com análise de conformidade, identificação de vulnerabilidades e roadmap priorizado."
-              image={assessmentImage}
               link="/solucoes/cybersecurity/assessment"
+              pillar="cybersecurity"
               benefits={[
                 "Conformidade LGPD, ISO 27001, PCI-DSS",
                 "Vulnerabilidades críticas mapeadas",
