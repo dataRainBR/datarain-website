@@ -38,26 +38,6 @@ const Cloud = () => {
               Migre, otimize e escale sua infraestrutura com segurança e eficiência. 
               Especialistas AWS para acelerar sua transformação digital.
             </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#f78504]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">150+</div>
-                <div className="text-sm text-muted-foreground">Migrações Completas</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#f78504]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">30%</div>
-                <div className="text-sm text-muted-foreground">Redução de Custos</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#f78504]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">99.9%</div>
-                <div className="text-sm text-muted-foreground">Disponibilidade</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#f78504]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#f78504] mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Suporte Dedicado</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

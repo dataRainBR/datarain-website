@@ -37,26 +37,6 @@ const Cybersecurity = () => {
               Governança, compliance e proteção avançada para sua infraestrutura cloud. 
               Segurança desde o design até a operação contínua.
             </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mt-12">
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">100+</div>
-                <div className="text-sm text-muted-foreground">Assessments Realizados</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">Zero</div>
-                <div className="text-sm text-muted-foreground">Incidentes Críticos</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">24/7</div>
-                <div className="text-sm text-muted-foreground">Monitoramento</div>
-              </div>
-              <div className="bg-card/50 backdrop-blur rounded-xl p-6 border border-[#e63946]/20">
-                <div className="text-3xl md:text-4xl font-bold text-[#e63946] mb-2">100%</div>
-                <div className="text-sm text-muted-foreground">Compliance</div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
