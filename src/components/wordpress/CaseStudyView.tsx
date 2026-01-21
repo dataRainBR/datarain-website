@@ -1,14 +1,13 @@
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft, Linkedin, Twitter, Facebook, ArrowRight } from 'lucide-react';
-import { useWordPressPost, useWordPressMedia, useWordPressPostsByCategorySlug } from '@/hooks/useWordPress';
-import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
+import { ArrowLeft, Linkedin, Twitter, Facebook, ArrowRight, Tag } from 'lucide-react';
+import { useWordPressPost, useWordPressMedia, useWordPressPostsByCategorySlug, useWordPressCategoriesByIds } from '@/hooks/useWordPress';
 import { Loader2 } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import Footer from '@/components/Footer';
 import { sanitizeHTML } from '@/lib/sanitize';
+import { Badge } from '@/components/ui/badge';
 
 // Extrai texto limpo do HTML
 const extractTextFromContent = (html: string): string => {
@@ -92,14 +91,7 @@ const CaseStudyView: React.FC = () => {
   const { data: post, isLoading, error } = useWordPressPost(id || '');
   const { data: media } = useWordPressMedia(post?.featured_media || 0);
   const { data: relatedPosts } = useWordPressPostsByCategorySlug('cases', { per_page: 3 });
-
-  const formatDate = (dateString: string) => {
-    try {
-      return format(new Date(dateString), 'dd MMM yyyy', { locale: ptBR });
-    } catch {
-      return dateString;
-    }
-  };
+  const { data: categories } = useWordPressCategoriesByIds(post?.categories || []);
 
   const handleGoBack = () => {
     navigate('/cases');
@@ -308,14 +300,6 @@ const CaseStudyView: React.FC = () => {
                     Detalhes
                   </h4>
                   <div className="space-y-4">
-                    <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
-                        Publicado em
-                      </p>
-                      <p className="text-foreground font-medium">
-                        {formatDate(post.date)}
-                      </p>
-                    </div>
                     {clientName && (
                       <div>
                         <p className="text-xs text-muted-foreground uppercase tracking-wider mb-1">
@@ -324,6 +308,24 @@ const CaseStudyView: React.FC = () => {
                         <p className="text-foreground font-medium">
                           {clientName}
                         </p>
+                      </div>
+                    )}
+                    {categories && categories.length > 0 && (
+                      <div>
+                        <p className="text-xs text-muted-foreground uppercase tracking-wider mb-2">
+                          Categorias
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                          {categories.map((cat) => (
+                            <Badge 
+                              key={cat.id} 
+                              variant="secondary"
+                              className="text-xs"
+                            >
+                              {cat.name}
+                            </Badge>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
