@@ -220,21 +220,6 @@ const CaseStudyView: React.FC = () => {
             dangerouslySetInnerHTML={{ __html: sanitizeHTML(post.title.rendered) }}
           />
 
-          {/* Stats Grid */}
-          {stats.length > 0 && (
-            <div className="flex flex-wrap gap-8 md:gap-12 mt-12 pt-8 border-t border-primary-foreground/20">
-              {stats.map((stat, index) => (
-                <div key={index} className="min-w-[150px]">
-                  <p className="text-3xl md:text-4xl font-bold text-accent mb-2">
-                    {stat.value}
-                  </p>
-                  <p className="text-sm text-primary-foreground/70 max-w-[180px]">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
