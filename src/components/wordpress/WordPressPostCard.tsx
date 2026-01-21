@@ -16,6 +16,8 @@ interface WordPressPostCardProps {
   showExcerpt?: boolean;
   showCategories?: boolean;
   showTags?: boolean;
+  /** Route prefix for the post link (e.g., '/blog' or '/cases') */
+  routePrefix?: string;
 }
 
 export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
@@ -24,6 +26,7 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
   showExcerpt = true,
   showCategories = true,
   showTags = false,
+  routePrefix = '/blog',
 }) => {
   const navigate = useNavigate();
   const { data: media } = useWordPressMedia(post.featured_media);
@@ -80,7 +83,7 @@ export const WordPressPostCard: React.FC<WordPressPostCardProps> = ({
         )}
 
         <Button 
-          onClick={() => navigate(`/blog/${post.id}`)}
+          onClick={() => navigate(`${routePrefix}/${post.id}`)}
           className="w-full"
           variant="outline"
         >

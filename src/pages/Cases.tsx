@@ -75,6 +75,7 @@ const Cases = () => {
               // Se não encontrar nenhum, tenta usar o ID configurado no .env como fallback
               categorySlug="cases"
               categoryIds={WORDPRESS_CONFIG.CASES_CATEGORY_ID && WORDPRESS_CONFIG.CASES_CATEGORY_ID > 0 ? [WORDPRESS_CONFIG.CASES_CATEGORY_ID] : undefined}
+              routePrefix="/cases"
             />
           </div>
         </div>
