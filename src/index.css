@@ -34,12 +34,9 @@ All colors MUST be HSL.
     --muted: 194 20% 95%;
     --muted-foreground: 0 0% 30%;
 
-    /* Laranja DataRain como accent (#f78504)
-       Nota de acessibilidade: texto branco sobre este laranja tem baixo contraste.
-       Usamos foreground escuro para melhor legibilidade.
-    */
+    /* Laranja DataRain como accent (#f78504) */
     --accent: 25 95% 49%;
-    --accent-foreground: 0 0% 12%;
+    --accent-foreground: 0 0% 100%;
 
     /* Core pillars (HSL tokens) */
     --pillar-data: var(--primary); /* GenAI e Dados */
@@ -108,7 +105,7 @@ All colors MUST be HSL.
 
     /* Laranja mais vibrante no dark mode */
     --accent: 25 95% 55%;
-    --accent-foreground: 0 0% 10%;
+    --accent-foreground: 0 0% 100%;
 
     /* Core pillars (HSL tokens) */
     --pillar-data: var(--primary);
