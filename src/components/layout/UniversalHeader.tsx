@@ -250,7 +250,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                   </h1>
                   
                   <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-600 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-3xl">
-                    A dataRain ajuda empresas a vencer os gargalos que impedem escala, performance e inovação.
+                    A dataRain ajuda empresas a vencer os desafios que impedem escala, performance e inovação.
                   </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 md:gap-6 max-w-2xl">
