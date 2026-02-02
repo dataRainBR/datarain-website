@@ -33,11 +33,11 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
   ];
 
   const navItems = [
-    { label: "Quem Somos", href: "/quem-somos", isRoute: true },
+    { label: "Sobre Nós", href: "/quem-somos", isRoute: true },
   ];
 
   const menuItemsOrder = [
-    { type: 'simple', label: "Quem Somos", href: "/quem-somos" },
+    { type: 'simple', label: "Sobre Nós", href: "/quem-somos" },
     { type: 'dropdown', label: "Soluções", href: "/solucoes", items: solucoesItems },
     { type: 'simple', label: "Cases", href: "/cases" },
     { type: 'simple', label: "Blog", href: "/blog" },
