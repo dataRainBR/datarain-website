@@ -1,3 +1,4 @@
+import React from 'react';
 interface LogoProps {
   className?: string;
   variant?: 'original' | 'black' | 'white';

@@ -1,3 +1,4 @@
+import React from 'react';
 import heroBackground from "@/assets/hero-background.jpg";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import AboutSection from "@/components/AboutSection";

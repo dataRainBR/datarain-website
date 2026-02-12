@@ -1,3 +1,4 @@
+import React from "react";
 import { Award, Star, Trophy, Target } from "lucide-react";
 
 const achievements = [

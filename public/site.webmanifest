@@ -1,0 +1,16 @@
+{
+  "name": "dataRain Consulting",
+  "short_name": "dataRain",
+  "description": "Arquitetamos e desenvolvemos soluções de nuvem, IA, dados e segurança",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#3893af",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "./ui/button";
 import aboutImage from "@/assets/about-datarain.jpg";
 

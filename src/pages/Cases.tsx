@@ -1,11 +1,14 @@
 import React from "react";
-import { WordPressPostsList } from "@/components/wordpress/WordPressPostsList";
+import { MarkdownPostsList } from "@/components/markdown/MarkdownPostsList";
+import { getAllCases } from "@/lib/markdown";
 import { Briefcase } from "lucide-react";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
-import { WORDPRESS_CONFIG } from "@/config/wordpress.config";
 
 const Cases = () => {
+  // Carregar todos os cases
+  const cases = getAllCases();
+  
   return (
     <div className="min-h-screen bg-background">
       <UniversalHeader />
@@ -63,18 +66,11 @@ const Cases = () => {
             </p>
           </div>
 
-          {/* WordPress Posts List - apenas categoria de Cases */}
+          {/* Markdown Posts List - apenas cases */}
           <div className="bg-card/50 backdrop-blur-sm rounded-3xl border border-border/20 shadow-xl p-6 sm:p-8 md:p-10">
-            <WordPressPostsList
-              postsPerPage={100}
+            <MarkdownPostsList
+              posts={cases}
               showSearch={false}
-              showFilters={true}
-              fetchAll
-              // Busca automaticamente a categoria "cases" pelo slug
-              // Tenta "cases" primeiro, depois "case" se não encontrar
-              // Se não encontrar nenhum, tenta usar o ID configurado no .env como fallback
-              categorySlug="cases"
-              categoryIds={WORDPRESS_CONFIG.CASES_CATEGORY_ID && WORDPRESS_CONFIG.CASES_CATEGORY_ID > 0 ? [WORDPRESS_CONFIG.CASES_CATEGORY_ID] : undefined}
               routePrefix="/cases"
             />
           </div>

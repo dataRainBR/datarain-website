@@ -1,3 +1,4 @@
+import React from 'react';
 import { CloudIcon, LightbulbIcon, ShieldCheckIcon } from "lucide-react";
 import SolutionServiceCard from "./SolutionServiceCard";
 

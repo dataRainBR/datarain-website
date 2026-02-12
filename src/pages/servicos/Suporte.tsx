@@ -1,3 +1,4 @@
+import React from 'react';
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";

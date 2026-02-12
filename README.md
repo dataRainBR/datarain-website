@@ -1,73 +1,174 @@
-# Welcome to your Lovable project
+# dataRain Website
 
-## Project info
+Site institucional da dataRain desenvolvido com React, TypeScript e Vite.
 
-**URL**: https://lovable.dev/projects/ab0e10f1-c78a-4cab-bb9f-0094beb3485e
+## 🎉 Migração WordPress → Markdown Concluída!
 
-## How can I edit this code?
+O site agora usa arquivos Markdown locais ao invés de integração WordPress.
 
-There are several ways of editing your application.
+- ✅ 41 posts de blog migrados
+- ✅ 24 cases migrados  
+- ✅ ~150+ imagens baixadas
+- ✅ Performance melhorada
+- ✅ Sem dependências externas
 
-**Use Lovable**
+## 🚀 Início Rápido
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ab0e10f1-c78a-4cab-bb9f-0094beb3485e) and start prompting.
+### Pré-requisitos
+- Bun instalado (ou Node.js)
 
-Changes made via Lovable will be committed automatically to this repo.
+### Instalação
 
-**Use your preferred IDE**
+```bash
+# Instalar dependências
+bun install
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Iniciar servidor de desenvolvimento
+bun run dev
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+# Build de produção
+bun run build
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Preview da build
+bun run preview
 ```
 
-**Edit a file directly in GitHub**
+## 📁 Estrutura do Projeto
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+datarain-rebrand-hero/
+├── content/              # Conteúdo em Markdown
+│   ├── blog/            # Posts do blog
+│   └── cases/           # Cases de sucesso
+├── public/
+│   └── content-images/  # Imagens dos posts
+│       ├── blog/
+│       └── cases/
+├── src/
+│   ├── components/
+│   │   ├── markdown/    # Componentes Markdown
+│   │   ├── layout/
+│   │   └── ui/
+│   ├── lib/
+│   │   └── markdown.ts  # Biblioteca de posts
+│   ├── pages/
+│   └── hooks/
+└── scripts/
+    └── fetch-wordpress-content.ts  # Script de migração
+```
 
-**Use GitHub Codespaces**
+## 📝 Adicionar Novo Conteúdo
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Novo Post de Blog
 
-## What technologies are used for this project?
+1. Criar arquivo em `content/blog/meu-post.md`
+2. Adicionar frontmatter:
 
-This project is built with:
+```markdown
+---
+title: "Título do Post"
+date: "2024-02-12T10:00:00"
+slug: "meu-post"
+excerpt: "Resumo do post"
+featuredImage: "/content-images/blog/meu-post/capa.jpg"
+categories: []
+tags: []
+author: 1
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+# Conteúdo
 
-## How can I deploy this project?
+Seu conteúdo aqui...
+```
 
-Simply open [Lovable](https://lovable.dev/projects/ab0e10f1-c78a-4cab-bb9f-0094beb3485e) and click on Share -> Publish.
+3. Adicionar imagens em `public/content-images/blog/meu-post/`
 
-## Can I connect a custom domain to my Lovable project?
+### Novo Case
 
-Yes, you can!
+Mesmo processo, mas em `content/cases/` e `public/content-images/cases/`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📚 Documentação
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- [MIGRATION_SUMMARY.md](MIGRATION_SUMMARY.md) - Resumo da migração
+- [MIGRATION_GUIDE.md](MIGRATION_GUIDE.md) - Guia completo da migração
+- [QUICK_REFERENCE.md](QUICK_REFERENCE.md) - Referência rápida
+- [DEPLOYMENT.md](DEPLOYMENT.md) - Guia de deploy
+- [CLEANUP_WORDPRESS.md](CLEANUP_WORDPRESS.md) - Remover arquivos WordPress
+
+## 🛠️ Tecnologias
+
+- **Framework**: React 19 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS + shadcn/ui
+- **Markdown**: react-markdown + gray-matter
+- **Routing**: React Router
+- **State**: TanStack Query (React Query)
+
+## 🌐 Páginas Principais
+
+- `/` - Home
+- `/quem-somos` - Sobre a empresa
+- `/solucoes` - Soluções
+- `/servicos` - Serviços
+- `/cases` - Cases de sucesso
+- `/blog` - Blog
+- `/academy` - Academy
+- `/fale-conosco` - Contato
+
+## 📊 Estatísticas
+
+- 41 posts de blog
+- 24 cases de sucesso
+- ~150+ imagens otimizadas
+- 100% TypeScript
+- 0 dependências WordPress
+
+## 🚀 Deploy
+
+### Vercel (Recomendado)
+```bash
+vercel
+```
+
+### Netlify
+```bash
+netlify deploy --prod
+```
+
+Veja [DEPLOYMENT.md](DEPLOYMENT.md) para mais opções.
+
+## 🧹 Limpeza (Opcional)
+
+Para remover arquivos WordPress antigos:
+```bash
+rm -rf src/components/wordpress/
+rm src/hooks/useWordPress.ts
+rm src/hooks/useWordPressPosts.ts
+rm src/lib/wordpress.ts
+rm src/config/wordpress.config.ts
+```
+
+Veja [CLEANUP_WORDPRESS.md](CLEANUP_WORDPRESS.md) para detalhes.
+
+## 📄 Licença
+
+Propriedade da dataRain.
+
+## 🤝 Contribuindo
+
+1. Clone o repositório
+2. Crie uma branch: `git checkout -b feature/nova-feature`
+3. Commit suas mudanças: `git commit -m 'Adiciona nova feature'`
+4. Push para a branch: `git push origin feature/nova-feature`
+5. Abra um Pull Request
+
+## 📞 Suporte
+
+Para dúvidas ou problemas:
+- Consulte a documentação em `/docs`
+- Abra uma issue no repositório
+- Entre em contato com a equipe de desenvolvimento
+
+---
+
+**Desenvolvido com ❤️ pela equipe dataRain**

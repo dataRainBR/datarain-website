@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowRight, LucideIcon } from "lucide-react";
 
 interface SolutionHeroProps {

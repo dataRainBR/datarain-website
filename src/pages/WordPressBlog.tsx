@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { WordPressPostsList } from '@/components/wordpress/WordPressPostsList';
+import { MarkdownPostsList } from '@/components/markdown/MarkdownPostsList';
+import { getAllBlogPosts } from '@/lib/markdown';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,11 +8,13 @@ import { Badge } from '@/components/ui/badge';
 import { BookOpen, Search, TrendingUp, Clock, Users, ArrowRight } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import Footer from '@/components/Footer';
-import { WORDPRESS_CONFIG } from '@/config/wordpress.config';
 
 const WordPressBlog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [activeSearch, setActiveSearch] = useState('');
+  
+  // Carregar todos os posts do blog
+  const blogPosts = getAllBlogPosts();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -135,16 +138,11 @@ const WordPressBlog: React.FC = () => {
               </p>
             </div>
             
-            <WordPressPostsList
-              postsPerPage={100}
+            <MarkdownPostsList
+              posts={blogPosts}
               showSearch={false}
-              showFilters={false}
               searchTerm={activeSearch}
-              fetchAll
-              // Busca automaticamente a categoria "blog" pelo slug
-              // Se não encontrar "blog", tenta usar o ID configurado no .env como fallback
-              categorySlug="blog"
-              categoryIds={WORDPRESS_CONFIG.BLOG_CATEGORY_ID && WORDPRESS_CONFIG.BLOG_CATEGORY_ID > 0 ? [WORDPRESS_CONFIG.BLOG_CATEGORY_ID] : undefined}
+              routePrefix="/blog"
             />
           </div>
         </div>
