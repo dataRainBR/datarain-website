@@ -2,8 +2,8 @@
 title: "Transformação Digital no InRad: Automação de Pré-Laudos Radiológicos com IA Generativa e AWS"
 date: "2025-03-11T10:51:38"
 slug: "transformacao-digital-no-inrad-automacao-de-pre-laudos-radiologicos-com-ia-generativa-e-aws"
-excerpt: "O Instituto de Radiologia do Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo (InRad) é um centro de referência em diagnóstico por imagem e oncologia terapêutica, com atuação voltada a ensino, pesquisa e assistência. Para sustentar a qualidade do atendimento, o InRad investe continuamente em infraestrutura, tecnologia e capacitação de equipes, [&#8230;]"
-featuredImage: ""
+excerpt: "Como o InRad automatizou a geração de pré-laudos radiológicos com IA Generativa na AWS, alcançando 83,3% de notas máximas e 93,3% de sumários livres de alucinações."
+featuredImage: "/content-images/cases/transformacao-digital-no-inrad-automacao-de-pre-laudos-radiologicos-com-ia-generativa-e-aws/logo-inrad.png"
 categories: [18,17,1]
 tags: []
 author: 10

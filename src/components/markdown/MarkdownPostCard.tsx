@@ -22,11 +22,13 @@ export const MarkdownPostCard: React.FC<MarkdownPostCardProps> = ({
     <Link to={`${routePrefix}/${post.slug}`}>
       <Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 group">
         {post.featuredImage && (
-          <div className="relative h-48 overflow-hidden">
+          <div className={`relative h-48 overflow-hidden ${routePrefix === '/cases' ? 'bg-white flex items-center justify-center p-6' : ''}`}>
             <img
               src={post.featuredImage}
               alt={post.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              className={routePrefix === '/cases' 
+                ? "max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-300" 
+                : "w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"}
               loading="lazy"
             />
           </div>

@@ -2,8 +2,8 @@
 title: "Genômica em escala: a transformação digital no Hospital das Clínicas"
 date: "2026-01-20T14:31:51"
 slug: "genomica-em-escala-a-transformacao-digital-no-hospital-das-clinicas"
-excerpt: "A dataRain, membro premiado da AWS Partner Network (APN), é uma empresa 100% orientada à computação em nuvem com experiência real, está certificada e preparada para disponibilizar para as empresas treinamento, ferramentas, segurança e especialização em todas as etapas de implantações de todos os portes."
-featuredImage: "/content-images/cases/genomica-em-escala-a-transformacao-digital-no-hospital-das-clinicas/channels4_profile-1.jpg"
+excerpt: "Como o HCFMUSP migrou 367 TB de dados genômicos para a AWS com apoio da dataRain, criando uma base moderna e escalável para pesquisa genômica e medicina personalizada."
+featuredImage: "/content-images/cases/genomica-em-escala-a-transformacao-digital-no-hospital-das-clinicas/logo-hc.png"
 categories: [18,17,19]
 tags: []
 author: 9
@@ -31,27 +31,20 @@ O projeto incluiu a transferência segura de **367 TB** de dados via **AWS DataS
 
 A arquitetura foi desenhada para suportar ingestão contínua e pesquisa em escala, combinando:
 
-- **Amazon S3** como repositório central organizado por tipo de dado;
-
-- **AWS DataSync** para migração inicial e ingestão contínua;
-
-- **Amazon EC2** para executar pipelines genômicos diretamente na nuvem;
-
-- **Monitoramento e alertas de custos** para controle e visibilidade financeira. 
+- **Amazon S3** como repositório central organizado por tipo de dado
+- **AWS DataSync** para migração inicial e ingestão contínua
+- **Amazon EC2** para executar pipelines genômicos diretamente na nuvem
+- **Monitoramento e alertas de custos** para controle e visibilidade financeira
 
 ## Resultados e benefícios
 
 A iniciativa consolidou uma base moderna para pesquisa genômica, com impactos diretos em eficiência e governança:
 
-- **Migração precisa e sem perdas de 367 TB**, com estabilidade e desempenho do novo ambiente em nuvem; 
-
-- **Dados organizados e prontos para pesquisa em escala**, com ingestão contínua;
-
-- **Redução de custos operacionais** ao otimizar processamento e armazenamento; 
-
-- **Escalabilidade e agilidade** para expandir pipelines e acelerar análises, com EC2 e HealthOmics avaliados como alternativas de alta performance; 
-
-- **Governança estruturada e conformidade assegurada**, com auditoria contínua em um ambiente mais integrado. 
+- **Migração precisa e sem perdas de 367 TB**, com estabilidade e desempenho do novo ambiente em nuvem
+- **Dados organizados e prontos para pesquisa em escala**, com ingestão contínua
+- **Redução de custos operacionais** ao otimizar processamento e armazenamento
+- **Escalabilidade e agilidade** para expandir pipelines e acelerar análises, com **EC2** e **HealthOmics** avaliados como alternativas de alta performance
+- **Governança estruturada e conformidade assegurada**, com auditoria contínua em um ambiente mais integrado
 
 ## Próximos passos
 
