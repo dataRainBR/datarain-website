@@ -1,0 +1,270 @@
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import {
+  ScanLine, FileText, Workflow, BrainCircuit, ClipboardCheck, Gauge,
+  ChevronLeft, ChevronRight,
+} from 'lucide-react';
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   DATA
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+interface JourneyStep {
+  id: string;
+  icon: React.FC<{ className?: string; color?: string }>;
+  title: string;
+  narrative: string;
+  before: string;
+  after: string;
+  highlight?: string;
+  color: string;
+}
+
+const steps: JourneyStep[] = [
+  {
+    id: 'volume',
+    icon: ScanLine,
+    title: '330 mil exames por ano',
+    narrative: 'O InRad, centro de referência do Hospital das Clínicas da USP, realiza cerca de 330 mil exames de alta complexidade por ano. Cada exame precisa de um laudo detalhado — e o volume só cresce.',
+    before: 'Radiologistas sobrecarregados com volume crescente de exames para laudar',
+    after: 'IA generativa auxilia na elaboração de pré-laudos, liberando tempo clínico',
+    color: '#d97706',
+  },
+  {
+    id: 'manual',
+    icon: FileText,
+    title: 'Laudos feitos à mão',
+    narrative: 'Para cada exame, o radiologista precisa consultar formulários médicos, pedidos de exame e histórico clínico do paciente. Tudo manualmente, em múltiplas telas e sistemas diferentes.',
+    before: 'Processo manual com muitas etapas — lento, difícil de escalar, sujeito a variações',
+    after: 'Dados do paciente reunidos automaticamente a partir do prontuário eletrônico',
+    color: '#dc2626',
+  },
+  {
+    id: 'integration',
+    icon: Workflow,
+    title: 'Conectando os sistemas',
+    narrative: 'A dataRain integrou o prontuário eletrônico (MV) ao sistema de imagens (PACS). Os dados são ingeridos, processados e anonimizados automaticamente, organizados por paciente.',
+    before: 'Prontuário e sistema de imagens desconectados — informação fragmentada',
+    after: 'Pipeline automatizado conecta prontuário, imagens e histórico em um fluxo único',
+    color: '#2563eb',
+  },
+  {
+    id: 'genai',
+    icon: BrainCircuit,
+    title: 'IA gera o pré-laudo',
+    narrative: 'Um modelo de IA generativa recebe os dados consolidados do paciente e gera um sumário clínico estruturado — o pré-laudo. O radiologista recebe a informação organizada, pronta para revisão.',
+    before: 'Radiologista monta o laudo do zero, consultando múltiplas fontes manualmente',
+    after: 'Pré-laudo gerado por IA com dados organizados — radiologista foca na análise clínica',
+    highlight: '83,3% dos sumários com nota máxima',
+    color: '#7c3aed',
+  },
+  {
+    id: 'validation',
+    icon: ClipboardCheck,
+    title: 'Validação médica garantida',
+    narrative: 'O pré-laudo nunca substitui o médico. Cada sumário é revisado e validado pelo radiologista antes de entrar no fluxo clínico. Após validação, os dados são removidos da nuvem por conformidade.',
+    before: 'Sem padronização — cada radiologista estruturava o laudo de forma diferente',
+    after: 'Pré-laudos padronizados com validação médica obrigatória e conformidade total',
+    highlight: '93,3% livres de alucinações',
+    color: '#0d9488',
+  },
+  {
+    id: 'outcome',
+    icon: Gauge,
+    title: 'Mais tempo para o que importa',
+    narrative: 'Radiologistas economizam tempo na busca e organização de informações. O foco volta para a análise clínica e o cuidado com o paciente. A solução está pronta para escalar para todo o hospital.',
+    before: 'Tempo gasto em burocracia — menos tempo para análise clínica de qualidade',
+    after: 'Informação estruturada em segundos — radiologista dedica mais tempo ao diagnóstico',
+    highlight: 'Produtividade e padronização elevadas',
+    color: '#059669',
+  },
+];
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   COMPONENT
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+export const InRadDemo: React.FC = () => {
+  const [activeStep, setActiveStep] = useState(0);
+
+  const step = steps[activeStep];
+  const Icon = step.icon;
+  const progressPct = ((activeStep + 1) / steps.length) * 100;
+  const isLast = activeStep === steps.length - 1;
+
+  return (
+    <div className="w-full max-w-4xl mx-auto my-8">
+      <div className="relative rounded-2xl border border-slate-200 bg-white overflow-hidden shadow-lg">
+        <motion.div
+          className="absolute inset-0 pointer-events-none"
+          animate={{ background: `radial-gradient(ellipse 60% 40% at 50% 20%, ${step.color}08 0%, transparent 70%)` }}
+          transition={{ duration: 0.8 }}
+        />
+
+        <div className="relative p-5 md:p-8 space-y-6">
+          {/* Header */}
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-semibold text-slate-700">Jornada do Pré-Laudo — InRad × dataRain</span>
+            <span className="text-[10px] text-slate-400">{activeStep + 1} / {steps.length}</span>
+          </div>
+
+          {/* Timeline */}
+          <div className="flex items-center gap-1">
+            {steps.map((s, i) => {
+              const StepIcon = s.icon;
+              const done = i < activeStep;
+              const active = i === activeStep;
+              return (
+                <React.Fragment key={s.id}>
+                  <motion.button
+                    onClick={() => setActiveStep(i)}
+                    className="relative shrink-0"
+                    whileHover={{ scale: 1.15 }}
+                    whileTap={{ scale: 0.9 }}
+                    aria-label={s.title}
+                  >
+                    <motion.div
+                      className="w-9 h-9 md:w-10 md:h-10 rounded-full flex items-center justify-center border-2 transition-all duration-300"
+                      animate={{
+                        borderColor: active ? s.color : done ? '#10b981' : '#e2e8f0',
+                        backgroundColor: active ? `${s.color}12` : done ? 'rgba(16,185,129,0.08)' : 'white',
+                      }}
+                    >
+                      {done ? (
+                        <motion.span initial={{ scale: 0 }} animate={{ scale: 1 }} className="text-emerald-500 text-xs font-bold">✓</motion.span>
+                      ) : (
+                        <StepIcon className="w-4 h-4" color={active ? s.color : '#94a3b8'} />
+                      )}
+                    </motion.div>
+                    {active && (
+                      <motion.div
+                        className="absolute inset-0 rounded-full border-2"
+                        style={{ borderColor: `${s.color}25` }}
+                        animate={{ scale: [1, 1.5, 1], opacity: [0.5, 0, 0.5] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                      />
+                    )}
+                  </motion.button>
+                  {i < steps.length - 1 && (
+                    <div className="flex-1 h-0.5 rounded-full overflow-hidden bg-slate-200">
+                      <motion.div className="h-full bg-emerald-500" animate={{ width: done ? '100%' : '0%' }} transition={{ duration: 0.4 }} />
+                    </div>
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </div>
+
+          {/* Step content */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={step.id}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+              className="space-y-5"
+            >
+              <div className="flex items-start gap-4">
+                <motion.div
+                  className="w-12 h-12 md:w-14 md:h-14 rounded-2xl flex items-center justify-center shrink-0 border"
+                  style={{ borderColor: `${step.color}25`, backgroundColor: `${step.color}10` }}
+                  animate={{ boxShadow: [`0 0 10px ${step.color}10`, `0 0 20px ${step.color}18`, `0 0 10px ${step.color}10`] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  <Icon className="w-6 h-6" color={step.color} />
+                </motion.div>
+                <div className="min-w-0">
+                  <div className="text-[10px] uppercase tracking-wider font-medium mb-1" style={{ color: step.color }}>
+                    Etapa {activeStep + 1} de {steps.length}
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-slate-800 mb-2">{step.title}</h3>
+                  <p className="text-sm text-slate-500 leading-relaxed">{step.narrative}</p>
+                </div>
+              </div>
+
+              {step.highlight && (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-center py-3 rounded-xl border"
+                  style={{ borderColor: `${step.color}20`, background: `linear-gradient(135deg, ${step.color}06 0%, transparent 100%)` }}
+                >
+                  <span className="text-base md:text-lg font-bold" style={{ color: step.color }}>
+                    {step.highlight}
+                  </span>
+                </motion.div>
+              )}
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <motion.div
+                  initial={{ opacity: 0, x: -15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="p-4 rounded-xl border border-red-200 bg-red-50"
+                >
+                  <div className="text-[10px] uppercase tracking-wider font-bold text-red-500 mb-2">Sem a transformação</div>
+                  <p className="text-sm text-red-700/70 leading-relaxed">{step.before}</p>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 15 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="p-4 rounded-xl border border-emerald-200 bg-emerald-50"
+                >
+                  <div className="text-[10px] uppercase tracking-wider font-bold text-emerald-600 mb-2">Com a dataRain</div>
+                  <p className="text-sm text-emerald-700/70 leading-relaxed">{step.after}</p>
+                </motion.div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation */}
+          <div className="flex items-center justify-between">
+            <motion.button
+              onClick={() => setActiveStep(prev => Math.max(0, prev - 1))}
+              disabled={activeStep === 0}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-slate-200 text-slate-500 hover:text-slate-700 hover:border-slate-300 hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <ChevronLeft className="w-3.5 h-3.5" /> Anterior
+            </motion.button>
+            <motion.button
+              onClick={() => setActiveStep(prev => Math.min(steps.length - 1, prev + 1))}
+              disabled={isLast}
+              className="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs border border-slate-200 text-slate-500 hover:text-slate-700 hover:border-slate-300 hover:bg-slate-50 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Próxima <ChevronRight className="w-3.5 h-3.5" />
+            </motion.button>
+          </div>
+
+          <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
+            <motion.div
+              className="h-full rounded-full"
+              style={{ backgroundColor: step.color }}
+              animate={{ width: `${progressPct}%` }}
+              transition={{ type: 'spring', stiffness: 200, damping: 25 }}
+            />
+          </div>
+
+          {isLast && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="text-center py-4 rounded-xl bg-emerald-50 border border-emerald-200"
+            >
+              <p className="text-sm text-emerald-700 font-medium">
+                A dataRain trouxe IA generativa para a radiologia do maior hospital da América Latina.
+              </p>
+              <p className="text-xs text-slate-500 mt-1">De laudos manuais a pré-laudos inteligentes em segundos.</p>
+            </motion.div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};

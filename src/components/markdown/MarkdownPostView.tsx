@@ -9,6 +9,7 @@ import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import Footer from '@/components/Footer';
+import { CaseDemo } from '@/components/cases-demos/CaseDemo';
 
 interface MarkdownPostViewProps {
   type: 'blog' | 'cases';
@@ -77,9 +78,20 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
                 {post.title}
               </h1>
               {post.excerpt && (
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  {post.excerpt}
-                </p>
+                <div className={type === 'cases' && post.featuredImage ? 'flex items-start gap-6' : ''}>
+                  {type === 'cases' && post.featuredImage && (
+                    <div className="shrink-0 rounded-2xl border border-border/50 shadow-lg bg-white p-4 flex items-center justify-center">
+                      <img
+                        src={post.featuredImage}
+                        alt={post.title}
+                        className="h-auto object-contain max-h-16 md:max-h-20 max-w-[120px] md:max-w-[160px]"
+                      />
+                    </div>
+                  )}
+                  <p className="text-xl text-muted-foreground leading-relaxed text-justify">
+                    {post.excerpt}
+                  </p>
+                </div>
               )}
             </div>
 
@@ -114,8 +126,8 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
         </div>
       </div>
 
-      {/* Featured Image */}
-      {post.featuredImage && (
+      {/* Featured Image (blog only — cases show logo next to title) */}
+      {post.featuredImage && type !== 'cases' && (
         <div className="container mx-auto px-4 -mt-8 mb-12">
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-border/50">
@@ -131,12 +143,19 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
         </div>
       )}
 
+      {/* Interactive Demo (cases only) */}
+      {type === 'cases' && slug && (
+        <div className="container mx-auto px-4">
+          <CaseDemo slug={slug} />
+        </div>
+      )}
+
       {/* Content */}
       <article className="container mx-auto px-4 pb-20">
         <div className="max-w-4xl mx-auto">
           {/* Content Card */}
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 shadow-xl p-8 md:p-12">
-            <div className="prose prose-lg prose-slate dark:prose-invert max-w-none
+            <div className="prose prose-lg prose-slate dark:prose-invert max-w-none text-justify
               prose-headings:font-bold prose-headings:tracking-tight
               prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-8
               prose-h2:text-3xl prose-h2:mb-4 prose-h2:mt-8 prose-h2:text-primary
