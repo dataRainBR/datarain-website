@@ -1,12 +1,15 @@
 ---
 title: "Intelbras: DevOps transforma infraestrutura e impulsiona eficiência operacional"
-date: "2024-02-06T17:03:21"
+date: "2022-08-01T00:00:00"
 slug: "intelbras-devops-transforma-infraestrutura-e-impulsiona-eficiencia-operacional"
 excerpt: "Como a Intelbras modernizou sua infraestrutura de energia com DevOps e arquitetura serverless na AWS, garantindo escalabilidade, segurança e automação de ponta a ponta."
 featuredImage: "/content-images/cases/intelbras-devops-transforma-infraestrutura-e-impulsiona-eficiencia-operacional/intelbras-logo.png"
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Tecnologia"
 ---
 
 A **Intelbras** fornece soluções em segurança, controle de acesso, redes, comunicação, além de produtos e serviços relacionados à geração de energia e ao aproveitamento da energia solar.
@@ -44,3 +47,11 @@ Após a implantação de uma solução de DevOps, a Intelbras obteve os seguinte
 - **Alta disponibilidade e escalabilidade:** Ao distribuir sua arquitetura em três zonas de disponibilidade na região de São Paulo, a Intelbras alcançou maior disponibilidade e escalabilidade dos serviços. A solução de DevOps permitiu o gerenciamento eficaz dessas zonas, garantindo que os serviços estejam sempre disponíveis e escaláveis, mesmo diante do crescimento da demanda.
 
 - **Gerenciamento de configuração e monitoramento aprimorados:** Através da adoção de práticas de gerenciamento de configuração e monitoramento, a Intelbras conseguiu garantir uma infraestrutura corretamente configurada e consistente. Isso resultou em maior segurança e estabilidade dos serviços, bem como na identificação proativa de problemas, permitindo uma resposta mais rápida a eventuais incidentes.
+
+## Evolução: Migração de Banco de Dados para Amazon Aurora
+
+Com o sucesso do projeto de DevOps, a parceria entre Intelbras e dataRain evoluiu para um novo desafio: a **migração do banco de dados** de outro provedor de nuvem para a AWS. O banco de dados existente apresentava gargalos de performance e a arquitetura não atendia aos requisitos de elasticidade, resiliência e alta disponibilidade exigidos pelo crescimento do negócio.
+
+Após uma **Prova de Conceito (PoC)** que validou a viabilidade técnica, a dataRain projetou e implementou uma nova arquitetura baseada no **Amazon Aurora**, que se mostrou significativamente mais performático para o cenário da Intelbras. A solução incluiu a adoção de **Amazon EKS** com instâncias **Spot** (para otimização de custos) e **On-Demand** (para garantia de disponibilidade), combinando performance e eficiência financeira.
+
+A nova arquitetura foi projetada para suportar o crescimento da plataforma, que já atendia centenas de milhares de clientes com potencial de escalar para milhões, consolidando a Intelbras como referência em infraestrutura moderna e escalável.

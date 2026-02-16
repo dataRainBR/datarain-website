@@ -101,10 +101,6 @@ export const ObservabilidadeBitzDemo: React.FC = () => {
         />
 
         <div className="relative p-5 md:p-8 space-y-6">
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-slate-700">Jornada da Observabilidade — Bitz × dataRain</span>
-            <span className="text-[10px] text-slate-400">{activeStep + 1} / {steps.length}</span>
-          </div>
 
           <div className="flex items-center gap-1">
             {steps.map((s, i) => {

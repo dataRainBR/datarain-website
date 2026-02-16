@@ -1,0 +1,1082 @@
+[Feb 15 23:21]  .
+├── [Feb 15 23:01]  ABIT
+├── [Feb 15 23:00]  Aarin
+│   ├── [Jun  9  2025]  Documentação recebida
+│   ├── [Jun  9  2025]  Gravações
+│   └── [Jun  9  2025]  Notas
+├── [Jun  9  2025]  Agrorobótica
+│   └── [Jun  9  2025]  Chaves
+├── [Aug  5  2025]  Ailos
+├── [Feb 15 23:00]  Amazon - Synchro
+│   ├── [Feb 15 23:00]  Amazon Fintech
+│   │   ├── [Jun  9  2025]  Gamma Documentation
+│   │   └── [Jun  9  2025]  Prod Documentation
+│   └── [Jun  9  2025]  Documentações de chamados solucionados e implementações realizadas
+├── [Jun  9  2025]  Avantix
+│   └── [Jun  9  2025]  Chaves
+├── [Feb 15 23:00]  BMG
+│   └── [Feb 15 23:00]  PPT
+│       ├── [Jun  9  2025]  Assessment Tool
+│       ├── [Jun  9  2025]  Documentation
+│       ├── [Jun  9  2025]  Kick Off
+│       ├── [Jun  9  2025]  Presentations
+│       └── [Jun  9  2025]  Prowler
+├── [Feb 15 22:57]  Banco ASA
+│   └── [Feb 15 22:57]  Projeto Backup - Veeam
+├── [Feb 15 23:00]  BippCare
+│   ├── [Jun  9  2025]  Chaves
+│   └── [Jun  9  2025]  Docs
+├── [Feb 15 23:00]  Bitz
+│   ├── [Jun  9  2025]  Atividades
+│   │   └── [Jun  9  2025]  Old
+│   ├── [Jun  9  2025]  Atividades Segurança
+│   ├── [Feb 15 23:01]  Backup_Pós_Bitz
+│   │   └── [Feb 15 23:01]  Bitz
+│   │       ├── [Jun  9  2025]  Bitz
+│   │       │   ├── [Jun  9  2025]  GMUD
+│   │       │   ├── [Jun  9  2025]  Git
+│   │       │   │   └── [Jun  9  2025]  Export-f5c80575-eabf-4ee2-a869-6a618c467e2c
+│   │       │   │       └── [Jun  9  2025]  Terraform documentation 73b895f8cf274836a860df385b4f8a4e
+│   │       │   ├── [Jun  9  2025]  KeePass-Bitz
+│   │       │   │   ├── [Jun  9  2025]  Languages
+│   │       │   │   ├── [Jun  9  2025]  Plugins
+│   │       │   │   └── [Jun  9  2025]  XSL
+│   │       │   ├── [Jun  9  2025]  documentação
+│   │       │   └── [Jun  9  2025]  key
+│   │       ├── [Jun  9  2025]  Git
+│   │       │   └── [Jun  9  2025]  iaac
+│   │       │       ├── [Jun  9  2025]  brb
+│   │       │       │   ├── [Jun  9  2025]  dsv
+│   │       │       │   │   ├── [Jun  9  2025]  CI-CD
+│   │       │       │   │   ├── [Jun  9  2025]  RED-Originais
+│   │       │       │   │   ├── [Jun  9  2025]  json
+│   │       │       │   │   │   ├── [Jun  9  2025]  policy
+│   │       │       │   │   │   └── [Jun  9  2025]  task_definition
+│   │       │       │   │   ├── [Jun  9  2025]  lambda
+│   │       │       │   │   │   └── [Jun  9  2025]  code
+│   │       │       │   │   │       ├── [Jun  9  2025]  deletar-todos-itens-tabela-dynamodb
+│   │       │       │   │   │       ├── [Jun  9  2025]  dividir-dados-arquivo-clientes-pre-aprovados-cartao-de-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  gateway_file_sisbajud
+│   │       │       │   │   │       ├── [Jun  9  2025]  import-oba-edi-file
+│   │       │       │   │   │       ├── [Jun  9  2025]  ingest-oba-edi-file
+│   │       │       │   │   │       ├── [Jun  9  2025]  inicializador-processamento-clientes-preaprovados-cartao-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  processamento-manutencao-cadastral-cartao-de-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  salvar-clientes-pre-aprovados-cartao-de-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  salvar-clientes-pre-aprovados-cartao-de-credito copy 3
+│   │       │       │   │   │       ├── [Jun  9  2025]  test
+│   │       │       │   │   │       └── [Jun  9  2025]  wallet-migration-producer
+│   │       │       │   │   ├── [Jun  9  2025]  terraform-modules
+│   │       │       │   │   │   ├── [Jun  9  2025]  iam
+│   │       │       │   │   │   └── [Jun  9  2025]  lambda
+│   │       │       │   │   └── [Jun  9  2025]  zip
+│   │       │       │   ├── [Jun  9  2025]  dsv-new
+│   │       │       │   │   ├── [Jun  9  2025]  backend
+│   │       │       │   │   │   └── [Jun  9  2025]  service
+│   │       │       │   │   │       ├── [Jun  9  2025]  bank-pix-communications
+│   │       │       │   │   │       ├── [Jun  9  2025]  bank-pix-keys
+│   │       │       │   │   │       ├── [Jun  9  2025]  bank-pix-limits
+│   │       │       │   │   │       ├── [Jun  9  2025]  bank-pix-qrcode
+│   │       │       │   │   │       ├── [Jun  9  2025]  bank-pix-receipts
+│   │       │       │   │   │       ├── [Jun  9  2025]  bitz-pix-transfers
+│   │       │       │   │   │       ├── [Jun  9  2025]  buster-ms-audit
+│   │       │       │   │   │       ├── [Jun  9  2025]  calendar
+│   │       │       │   │   │       ├── [Jun  9  2025]  cashback-accounts
+│   │       │       │   │   │       ├── [Jun  9  2025]  channels-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  consents-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  consents-tpp-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  customers-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  devices
+│   │       │       │   │   │       ├── [Jun  9  2025]  gf-monitoring-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  loki
+│   │       │       │   │   │       ├── [Jun  9  2025]  marketplace-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  merchants
+│   │       │       │   │   │       ├── [Jun  9  2025]  notifications
+│   │       │       │   │   │       ├── [Jun  9  2025]  offers
+│   │       │       │   │   │       ├── [Jun  9  2025]  open-banking-receiver
+│   │       │       │   │   │       ├── [Jun  9  2025]  products-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  pt-monitoring-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  qrcode
+│   │       │       │   │   │       ├── [Jun  9  2025]  special-condition-people
+│   │       │       │   │   │       ├── [Jun  9  2025]  store
+│   │       │       │   │   │       ├── [Jun  9  2025]  thor-toggle-service
+│   │       │       │   │   │       ├── [Jun  9  2025]  transfers
+│   │       │       │   │   │       ├── [Jun  9  2025]  users
+│   │       │       │   │   │       ├── [Jun  9  2025]  wallet-migration-consumer
+│   │       │       │   │   │       └── [Jun  9  2025]  wallets
+│   │       │       │   │   ├── [Jun  9  2025]  buckets
+│   │       │       │   │   │   ├── [Jun  9  2025]  bank-slip-reports-bitz-dev
+│   │       │       │   │   │   ├── [Jun  9  2025]  bitz-loan-losango-adapter-certificado-hml
+│   │       │       │   │   │   ├── [Jun  9  2025]  incoming-file-sisbajud-dev
+│   │       │       │   │   │   ├── [Jun  9  2025]  oba-edi-pipeline-function
+│   │       │       │   │   │   └── [Jun  9  2025]  outbound-file-sisbajud-dev
+│   │       │       │   │   ├── [Jun  9  2025]  database
+│   │       │       │   │   │   └── [Jun  9  2025]  dynamoDB
+│   │       │       │   │   │       ├── [Jun  9  2025]  OpenFinanceConsent
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinanceAutorizacao
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinanceCompartilhamento
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinanceSolicitacao
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinancetest03
+│   │       │       │   │   │       └── [Jun  9  2025]  rel_desbloqueio_transferencia
+│   │       │       │   │   └── [Jun  9  2025]  queues
+│   │       │       │   │       ├── [Jun  9  2025]  bank-slip-credit-card_revoke
+│   │       │       │   │       ├── [Jun  9  2025]  delete_kyc_customer
+│   │       │       │   │       ├── [Jun  9  2025]  events
+│   │       │       │   │       │   ├── [Jun  9  2025]  bank-slip-fcc-payment-daily-report
+│   │       │       │   │       │   ├── [Jun  9  2025]  bank-slip-fcc-payment-monthly-report
+│   │       │       │   │       │   └── [Jun  9  2025]  bank-slip-fcc-payment-weekly-report
+│   │       │       │   │       └── [Jun  9  2025]  onboarding_init_process
+│   │       │       │   ├── [Jun  9  2025]  hml
+│   │       │       │   │   ├── [Jun  9  2025]  CI-CD
+│   │       │       │   │   ├── [Jun  9  2025]  RED-Originais
+│   │       │       │   │   ├── [Jun  9  2025]  json
+│   │       │       │   │   │   ├── [Jun  9  2025]  policy
+│   │       │       │   │   │   └── [Jun  9  2025]  task_definition
+│   │       │       │   │   ├── [Jun  9  2025]  lambda
+│   │       │       │   │   │   └── [Jun  9  2025]  code
+│   │       │       │   │   │       ├── [Jun  9  2025]  deletar-todos-itens-tabela-dynamodb
+│   │       │       │   │   │       ├── [Jun  9  2025]  dividir-dados-arquivo-clientes-pre-aprovados-cartao-de-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  inicializador-processamento-clientes-preaprovados-cartao-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  processamento-manutencao-cadastral-cartao-de-credito
+│   │       │       │   │   │       └── [Jun  9  2025]  salvar-clientes-pre-aprovados-cartao-de-credito
+│   │       │       │   │   ├── [Jun  9  2025]  terraform-modules
+│   │       │       │   │   │   └── [Jun  9  2025]  iam
+│   │       │       │   │   └── [Jun  9  2025]  zip
+│   │       │       │   ├── [Jun  9  2025]  hml-new
+│   │       │       │   │   ├── [Jun  9  2025]  backend
+│   │       │       │   │   │   └── [Jun  9  2025]  service
+│   │       │       │   │   │       ├── [Jun  9  2025]  buster-ms-audit
+│   │       │       │   │   │       ├── [Jun  9  2025]  cashback-accounts
+│   │       │       │   │   │       ├── [Jun  9  2025]  channels-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  consents-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  consents-tpp-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  customers-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  gf-monitoring-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  loki
+│   │       │       │   │   │       ├── [Jun  9  2025]  marketplace-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  products-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  pt-monitoring-services
+│   │       │       │   │   │       ├── [Jun  9  2025]  special-condition-people
+│   │       │       │   │   │       ├── [Jun  9  2025]  thor-feature-buffer
+│   │       │       │   │   │       ├── [Jun  9  2025]  thor-toggle-service
+│   │       │       │   │   │       └── [Jun  9  2025]  wallet-migration-consumer
+│   │       │       │   │   ├── [Jun  9  2025]  buckets
+│   │       │       │   │   │   ├── [Jun  9  2025]  bank-slip-reports-redbitz-hml
+│   │       │       │   │   │   ├── [Jun  9  2025]  bitz-loan-losango-adapter-certificado-hml
+│   │       │       │   │   │   ├── [Jun  9  2025]  incoming-file-sisbajud-hml
+│   │       │       │   │   │   ├── [Jun  9  2025]  lambda-account-register-errors-hml
+│   │       │       │   │   │   ├── [Jun  9  2025]  lambda-account-register-success-hml
+│   │       │       │   │   │   ├── [Jun  9  2025]  oba-edi-pipeline-function
+│   │       │       │   │   │   ├── [Jun  9  2025]  oba-report-files
+│   │       │       │   │   │   └── [Jun  9  2025]  outbound-file-sisbajud-hml
+│   │       │       │   │   ├── [Jun  9  2025]  database
+│   │       │       │   │   │   └── [Jun  9  2025]  dynamoDB
+│   │       │       │   │   │       ├── [Jun  9  2025]  OpenFinanceConsent
+│   │       │       │   │   │       ├── [Jun  9  2025]  historicoAtualizacaoCadastralCount
+│   │       │       │   │   │       ├── [Jun  9  2025]  historicoAtualizacaoCadastralErrors
+│   │       │       │   │   │       ├── [Jun  9  2025]  historicoAtualizacaoCadastralID
+│   │       │       │   │   │       ├── [Jun  9  2025]  historicoExclusaoUsuariosErros
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinanceAutorizacao
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinanceCompartilhamento
+│   │       │       │   │   │       ├── [Jun  9  2025]  openFinanceSolicitacao
+│   │       │       │   │   │       ├── [Jun  9  2025]  profissao
+│   │       │       │   │   │       └── [Jun  9  2025]  rel_desbloqueio_transferencia
+│   │       │       │   │   ├── [Jun  9  2025]  frontend
+│   │       │       │   │   │   └── [Jun  9  2025]  jarvis
+│   │       │       │   │   └── [Jun  9  2025]  queues
+│   │       │       │   │       ├── [Jun  9  2025]  bank-slip-credit-card_revoke
+│   │       │       │   │       ├── [Jun  9  2025]  bank-slip-report-schedule
+│   │       │       │   │       ├── [Jun  9  2025]  bank-slip-report-schedule_dead_letter
+│   │       │       │   │       ├── [Jun  9  2025]  delete_kyc_customer
+│   │       │       │   │       ├── [Jun  9  2025]  events
+│   │       │       │   │       │   ├── [Jun  9  2025]  bank-slip-fcc-payment-daily-report
+│   │       │       │   │       │   ├── [Jun  9  2025]  bank-slip-fcc-payment-monthly-report
+│   │       │       │   │       │   ├── [Jun  9  2025]  bank-slip-fcc-payment-weekly-report
+│   │       │       │   │       │   └── [Jun  9  2025]  fix_under_age_event
+│   │       │       │   │       │       └── [Jun  9  2025]  event-bridge-template
+│   │       │       │   │       ├── [Jun  9  2025]  incoming_sisbajud_file
+│   │       │       │   │       ├── [Jun  9  2025]  onboarding_init_process
+│   │       │       │   │       ├── [Jun  9  2025]  processing_sisbajud_ajud301a
+│   │       │       │   │       ├── [Jun  9  2025]  processing_sisbajud_ajud308
+│   │       │       │   │       └── [Jun  9  2025]  wallet_was_created
+│   │       │       │   ├── [Jun  9  2025]  prd
+│   │       │       │   │   ├── [Jun  9  2025]  CI-CD
+│   │       │       │   │   ├── [Jun  9  2025]  RED-Originais
+│   │       │       │   │   ├── [Jun  9  2025]  json
+│   │       │       │   │   │   ├── [Jun  9  2025]  policy
+│   │       │       │   │   │   └── [Jun  9  2025]  task_definition
+│   │       │       │   │   ├── [Jun  9  2025]  lambda
+│   │       │       │   │   │   └── [Jun  9  2025]  code
+│   │       │       │   │   │       ├── [Jun  9  2025]  deletar-todos-itens-tabela-dynamodb
+│   │       │       │   │   │       ├── [Jun  9  2025]  dividir-dados-arquivo-clientes-pre-aprovados-cartao-de-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  inicializador-processamento-clientes-preaprovados-cartao-credito
+│   │       │       │   │   │       ├── [Jun  9  2025]  processamento-manutencao-cadastral-cartao-de-credito
+│   │       │       │   │   │       └── [Jun  9  2025]  salvar-clientes-pre-aprovados-cartao-de-credito
+│   │       │       │   │   ├── [Jun  9  2025]  terraform-modules
+│   │       │       │   │   │   └── [Jun  9  2025]  iam
+│   │       │       │   │   └── [Jun  9  2025]  zip
+│   │       │       │   └── [Jun  9  2025]  prd-new
+│   │       │       │       ├── [Jun  9  2025]  backend
+│   │       │       │       │   └── [Jun  9  2025]  service
+│   │       │       │       │       ├── [Jun  9  2025]  buster-ms-audit
+│   │       │       │       │       ├── [Jun  9  2025]  consents-services
+│   │       │       │       │       ├── [Jun  9  2025]  customers-services
+│   │       │       │       │       ├── [Jun  9  2025]  loki
+│   │       │       │       │       ├── [Jun  9  2025]  marketplace-services
+│   │       │       │       │       └── [Jun  9  2025]  wallet-migration-consumer
+│   │       │       │       ├── [Jun  9  2025]  buckets
+│   │       │       │       │   ├── [Jun  9  2025]  bank-slip-reports-redbitz-prd
+│   │       │       │       │   ├── [Jun  9  2025]  bitz-archive-oba-redbitz-prd
+│   │       │       │       │   ├── [Jun  9  2025]  bitz-loan-losango-adapter-certificado-prd
+│   │       │       │       │   ├── [Jun  9  2025]  incoming-file-sisbajud-prd
+│   │       │       │       │   ├── [Jun  9  2025]  outbound-file-sisbajud-prd
+│   │       │       │       │   └── [Jun  9  2025]  rv-recharge-frontend
+│   │       │       │       ├── [Jun  9  2025]  database
+│   │       │       │       │   └── [Jun  9  2025]  dynamoDB
+│   │       │       │       │       ├── [Jun  9  2025]  OpenFinanceConsent
+│   │       │       │       │       ├── [Jun  9  2025]  openFinanceAutorizacao
+│   │       │       │       │       ├── [Jun  9  2025]  openFinanceCompartilhamento
+│   │       │       │       │       ├── [Jun  9  2025]  openFinanceSolicitacao
+│   │       │       │       │       ├── [Jun  9  2025]  registrosAuditoria
+│   │       │       │       │       ├── [Jun  9  2025]  usuarioRestricaoNomes
+│   │       │       │       │       └── [Jun  9  2025]  usuarioSistemaJarvis
+│   │       │       │       └── [Jun  9  2025]  queues
+│   │       │       │           ├── [Jun  9  2025]  bank-slip-report-schedule
+│   │       │       │           ├── [Jun  9  2025]  cloudwatch
+│   │       │       │           │   ├── [Jun  9  2025]  bank-slip-fcc-payment-daily-report
+│   │       │       │           │   ├── [Jun  9  2025]  bank-slip-fcc-payment-monthly-report
+│   │       │       │           │   └── [Jun  9  2025]  bank-slip-fcc-payment-weekly-report
+│   │       │       │           ├── [Jun  9  2025]  delete_kyc_customer
+│   │       │       │           └── [Jun  9  2025]  onboarding_init_process
+│   │       │       └── [Jun  9  2025]  sub
+│   │       │           ├── [Jun  9  2025]  dsv
+│   │       │           │   └── [Jun  9  2025]  json
+│   │       │           │       ├── [Jun  9  2025]  policy
+│   │       │           │       └── [Jun  9  2025]  task_definition
+│   │       │           ├── [Jun  9  2025]  dsv-new
+│   │       │           │   ├── [Jun  9  2025]  backend
+│   │       │           │   │   └── [Jun  9  2025]  service
+│   │       │           │   │       ├── [Jun  9  2025]  sub-acquirer-antifraud
+│   │       │           │   │       └── [Jun  9  2025]  sub-acquirer-merchants
+│   │       │           │   └── [Jun  9  2025]  queues
+│   │       │           │       ├── [Jun  9  2025]  delete_kyc_customer
+│   │       │           │       └── [Jun  9  2025]  onboarding_init_process
+│   │       │           ├── [Jun  9  2025]  hml
+│   │       │           │   ├── [Jun  9  2025]  backend
+│   │       │           │   │   ├── [Jun  9  2025]  cluster
+│   │       │           │   │   │   └── [Jun  9  2025]  main
+│   │       │           │   │   └── [Jun  9  2025]  services
+│   │       │           │   │       ├── [Jun  9  2025]  sub-acquirer-antifraud
+│   │       │           │   │       ├── [Jun  9  2025]  sub-acquirer-cards
+│   │       │           │   │       ├── [Jun  9  2025]  sub-acquirer-merchants
+│   │       │           │   │       └── [Jun  9  2025]  sub-acquirer-payments
+│   │       │           │   ├── [Jun  9  2025]  database
+│   │       │           │   │   └── [Jun  9  2025]  main
+│   │       │           │   ├── [Jun  9  2025]  domain
+│   │       │           │   │   └── [Jun  9  2025]  default
+│   │       │           │   └── [Jun  9  2025]  network
+│   │       │           │       └── [Jun  9  2025]  main
+│   │       │           └── [Jun  9  2025]  hml-new
+│   │       │               └── [Jun  9  2025]  backend
+│   │       │                   └── [Jun  9  2025]  service
+│   │       │                       └── [Jun  9  2025]  sub-acquirer-merchants
+│   │       └── [Jun  9  2025]  backup-terraform
+│   ├── [Feb 15 23:00]  Documentacao
+│   │   ├── [Jun  9  2025]  EnvironmentBitzNotion
+│   │   │   ├── [Jun  9  2025]  Export-12dda946-2673-498a-aa49-646c4d6f116a
+│   │   │   └── [Jun  9  2025]  Export-7724b497-323f-4ff7-a7f2-a2381f3db67b
+│   │   │       └── [Jun  9  2025]  Terraform Documentation 73b895f8cf274836a860df385b4f8a4e
+│   │   └── [Jun  9  2025]  Network
+│   │       └── [Jun  9  2025]  Checkpoint_Firewall
+│   │           ├── [Jun  9  2025]  ClientVpn
+│   │           └── [Jun  9  2025]  SmartConsole
+│   ├── [Jun  9  2025]  DynamoReplication
+│   │   └── [Jun  9  2025]  cross-account-amazon-dynamodb-replication-main
+│   │       ├── [Jun  9  2025]  ChangeDataCapture
+│   │       │   └── [Jun  9  2025]  functions
+│   │       ├── [Jun  9  2025]  InitialLoad
+│   │       │   └── [Jun  9  2025]  Glue_Jobs
+│   │       └── [Jun  9  2025]  InitialMigrationWithNativeExport
+│   ├── [Feb 15 23:00]  Evidencias-Documentacao-Chamados
+│   │   ├── [Jun  9  2025]  Incidentes
+│   │   ├── [Jun  9  2025]  RDM
+│   │   └── [Jun  9  2025]  Solicitação
+│   ├── [Jun  9  2025]  FinOps
+│   ├── [Jun  9  2025]  GMUDs
+│   ├── [Jun  9  2025]  Governança
+│   │   └── [Jun  9  2025]  01 Users Groups Permissions
+│   │       └── [Jun  9  2025]  Temp
+│   ├── [Feb 15 23:00]  KeePass-Bitz
+│   │   ├── [Jun  9  2025]  Languages
+│   │   ├── [Jun  9  2025]  Plugins
+│   │   └── [Jun  9  2025]  XSL
+│   ├── [Jun  9  2025]  Key
+│   ├── [Jun  9  2025]  MRA
+│   ├── [Feb 15 23:00]  Material Recebido
+│   │   ├── [Jun  9  2025]  Bitz - Fernando
+│   │   └── [Jun  9  2025]  Cielo - Documentação de Ambiente
+│   ├── [Jun  9  2025]  Material para Documentação - DataRain
+│   │   └── [Jun  9  2025]  Modelo GMUD
+│   ├── [Jun  9  2025]  OpenVPN AWS
+│   ├── [Jun  9  2025]  PC_VINI
+│   ├── [Jun  9  2025]  Plano Técnico Projetos
+│   ├── [Jun  9  2025]  Procedimentos
+│   ├── [Jun  9  2025]  Projetos
+│   ├── [Feb 15 23:00]  RH
+│   │   ├── [Jun  9  2025]  Horas Extras
+│   │   │   ├── [Jun  9  2025]  Controle de Horas Anteriores
+│   │   │   └── [Jun  9  2025]  Horas Extras
+│   │   └── [Jun  9  2025]  Sobreaviso
+│   └── [Jun  9  2025]  SysSec
+├── [Jun  9  2025]  Borilli Pneus
+├── [Feb 15 23:00]  CEMIG
+│   ├── [Jun  9  2025]  CEMIG API
+│   ├── [Feb 15 23:00]  Gestao de Projetos
+│   │   ├── [Jun  9  2025]  Archive
+│   │   │   ├── [Jun  9  2025]  Acompanhamentos
+│   │   │   └── [Jun  9  2025]  CEMIG Teams Clone
+│   │   │       ├── [Jun  9  2025]  General Cemig
+│   │   │       │   ├── [Jun  9  2025]  Atas de Reuniões
+│   │   │       │   ├── [Jun  9  2025]  CDC
+│   │   │       │   │   └── [Jun  9  2025]  Exemplos arquivos delta
+│   │   │       │   ├── [Jun  9  2025]  Cemig Arquitetura de Dados
+│   │   │       │   │   ├── [Jun  9  2025]  Arquitetura de Dados
+│   │   │       │   │   │   ├── [Jun  9  2025]  CEMIG
+│   │   │       │   │   │   └── [Jun  9  2025]  IBM
+│   │   │       │   │   ├── [Jun  9  2025]  Arquitetura de Integração
+│   │   │       │   │   ├── [Jun  9  2025]  CRM
+│   │   │       │   │   │   ├── [Jun  9  2025]  02_Versão Final
+│   │   │       │   │   │   ├── [Jun  9  2025]  CEMIG
+│   │   │       │   │   │   └── [Jun  9  2025]  IBM
+│   │   │       │   │   ├── [Jun  9  2025]  MatrizRequisito_Integracao
+│   │   │       │   │   ├── [Jun  9  2025]  MatrizRequisitos_Dados
+│   │   │       │   │   └── [Jun  9  2025]  Relatório Final
+│   │   │       │   │       └── [Jun  9  2025]  OldVersions
+│   │   │       │   ├── [Jun  9  2025]  Cronogramas
+│   │   │       │   ├── [Jun  9  2025]  Diagramas
+│   │   │       │   ├── [Jun  9  2025]  Documentos
+│   │   │       │   │   ├── [Jun  9  2025]  Contrato
+│   │   │       │   │   ├── [Jun  9  2025]  Padrões
+│   │   │       │   │   └── [Jun  9  2025]  Templates
+│   │   │       │   ├── [Jun  9  2025]  Entregáveis
+│   │   │       │   │   ├── [Jun  9  2025]  Discover
+│   │   │       │   │   └── [Jun  9  2025]  Piloto
+│   │   │       │   ├── [Jun  9  2025]  Especificações
+│   │   │       │   │   └── [Jun  9  2025]  Barramento
+│   │   │       │   │       ├── [Jun  9  2025]  Dúvidas
+│   │   │       │   │       └── [Jun  9  2025]  _old
+│   │   │       │   ├── [Jun  9  2025]  Monitoramento
+│   │   │       │   │   └── [Jun  9  2025]  20220801
+│   │   │       │   ├── [Jun  9  2025]  Recordings
+│   │   │       │   ├── [Jun  9  2025]  SOW
+│   │   │       │   └── [Jun  9  2025]  StatusReport
+│   │   │       └── [Jun  9  2025]  old files
+│   │   │           ├── [Jun  9  2025]  Cemig Arquitetura de Dados
+│   │   │           │   ├── [Jun  9  2025]  01_Em Andamento
+│   │   │           │   ├── [Jun  9  2025]  Arquitetura de Dados
+│   │   │           │   │   ├── [Jun  9  2025]  CEMIG
+│   │   │           │   │   └── [Jun  9  2025]  IBM
+│   │   │           │   ├── [Jun  9  2025]  Arquitetura de Integração
+│   │   │           │   ├── [Jun  9  2025]  CRM
+│   │   │           │   │   ├── [Jun  9  2025]  02_Versão Final
+│   │   │           │   │   ├── [Jun  9  2025]  CEMIG
+│   │   │           │   │   └── [Jun  9  2025]  IBM
+│   │   │           │   ├── [Jun  9  2025]  MatrizRequisito_Integracao
+│   │   │           │   ├── [Jun  9  2025]  MatrizRequisitos_Dados
+│   │   │           │   └── [Jun  9  2025]  Relatório Final
+│   │   │           │       └── [Jun  9  2025]  OldVersions
+│   │   │           ├── [Jun  9  2025]  Das580
+│   │   │           ├── [Jun  9  2025]  Especificações
+│   │   │           ├── [Jun  9  2025]  General
+│   │   │           │   ├── [Jun  9  2025]  Atas de Reuniões
+│   │   │           │   ├── [Jun  9  2025]  CDC
+│   │   │           │   ├── [Jun  9  2025]  Cemig Arquitetura de Dados
+│   │   │           │   │   ├── [Jun  9  2025]  Arquitetura de Dados
+│   │   │           │   │   │   ├── [Jun  9  2025]  CEMIG
+│   │   │           │   │   │   └── [Jun  9  2025]  IBM
+│   │   │           │   │   ├── [Jun  9  2025]  Arquitetura de Integração
+│   │   │           │   │   ├── [Jun  9  2025]  CRM
+│   │   │           │   │   │   ├── [Jun  9  2025]  02_Versão Final
+│   │   │           │   │   │   ├── [Jun  9  2025]  CEMIG
+│   │   │           │   │   │   └── [Jun  9  2025]  IBM
+│   │   │           │   │   ├── [Jun  9  2025]  MatrizRequisito_Integracao
+│   │   │           │   │   ├── [Jun  9  2025]  MatrizRequisitos_Dados
+│   │   │           │   │   └── [Jun  9  2025]  Relatório Final
+│   │   │           │   │       └── [Jun  9  2025]  OldVersions
+│   │   │           │   ├── [Jun  9  2025]  Cronogramas
+│   │   │           │   ├── [Jun  9  2025]  Diagramas
+│   │   │           │   ├── [Jun  9  2025]  Documentos
+│   │   │           │   │   ├── [Jun  9  2025]  Contrato
+│   │   │           │   │   ├── [Jun  9  2025]  Padrões
+│   │   │           │   │   └── [Jun  9  2025]  Templates
+│   │   │           │   ├── [Jun  9  2025]  Entregáveis
+│   │   │           │   │   ├── [Jun  9  2025]  Discover
+│   │   │           │   │   └── [Jun  9  2025]  Piloto
+│   │   │           │   ├── [Jun  9  2025]  Especificações
+│   │   │           │   │   └── [Jun  9  2025]  Barramento
+│   │   │           │   │       ├── [Jun  9  2025]  Dúvidas
+│   │   │           │   │       └── [Jun  9  2025]  _old
+│   │   │           │   ├── [Jun  9  2025]  Monitoramento
+│   │   │           │   │   └── [Jun  9  2025]  20220801
+│   │   │           │   ├── [Jun  9  2025]  Recordings
+│   │   │           │   ├── [Jun  9  2025]  SOW
+│   │   │           │   └── [Jun  9  2025]  StatusReport
+│   │   │           └── [Jun  9  2025]  Monitoramento
+│   │   │               └── [Jun  9  2025]  20220801
+│   │   ├── [Jun  9  2025]  Doc. para acesso ambiente CEMIG
+│   │   │   ├── [Jun  9  2025]  Lucas Coutinho
+│   │   │   ├── [Jun  9  2025]  Marcos Vieira
+│   │   │   └── [Jun  9  2025]  Thalles Aguiar
+│   │   ├── [Jun  9  2025]  Documentos Contratuais
+│   │   │   ├── [Jun  9  2025]  Contrato
+│   │   │   ├── [Jun  9  2025]  Edital
+│   │   │   └── [Jun  9  2025]  SOW
+│   │   ├── [Jun  9  2025]  Evidencias
+│   │   │   ├── [Jun  9  2025]  Atas de Reunioes
+│   │   │   ├── [Jun  9  2025]  Evidências Diversas
+│   │   │   ├── [Jun  9  2025]  Formalização de Sprints
+│   │   │   │   ├── [Jun  9  2025]  Sprint 01
+│   │   │   │   └── [Jun  9  2025]  Sprint 02
+│   │   │   ├── [Jun  9  2025]  Liberação de Faturamento
+│   │   │   │   ├── [Jun  9  2025]  Discovery
+│   │   │   │   └── [Jun  9  2025]  Projeto Piloto
+│   │   │   └── [Jun  9  2025]  Recordings
+│   │   │       ├── [Jun  9  2025]  Apresentação do processo de Qualidade de Dados utilizando GreatExpectations-20220930_150401-Gravação de Reunião.mp4_files
+│   │   │       ├── [Jun  9  2025]  Daily Meeting - Evolução do projeto-20220922_095837-Gravação de Reunião.mp4_files
+│   │   │       ├── [Jun  9  2025]  Demonstração da evolução do Piloto em S3-20220921_140719-Gravação de Reunião.mp4_files
+│   │   │       ├── [Jun  9  2025]  Esclarecer Dúvidas Dynamo-20220914_160129-Gravação de Reunião.mp4_files
+│   │   │       ├── [Jun  9  2025]  Esteira Desenv-20220915_151306-Gravação de Reunião_files
+│   │   │       └── [Jun  9  2025]  Videos Gravados
+│   │   ├── [Jun  9  2025]  Org. Projeto
+│   │   │   ├── [Jun  9  2025]  Cronograma de Projeto
+│   │   │   │   ├── [Jun  9  2025]  Modelo com Faturamento
+│   │   │   │   ├── [Jun  9  2025]  Versão Revisada
+│   │   │   │   └── [Jun  9  2025]  Versões Antigas
+│   │   │   ├── [Jun  9  2025]  Gestão Macro
+│   │   │   ├── [Jun  9  2025]  Gestão de Mudanças
+│   │   │   ├── [Jun  9  2025]  Lista de Inicial de Entregáveis
+│   │   │   └── [Jun  9  2025]  Plano de Comunicação
+│   │   └── [Jun  9  2025]  Status Reports
+│   │       ├── [Jun  9  2025]  Daily Huddle Interna
+│   │       └── [Jun  9  2025]  Status Report
+│   └── [Feb 15 23:00]  Materiais Tecnicos
+│       ├── [Jun  9  2025]  Doc para implantacao
+│       │   ├── [Jun  9  2025]  Manutenção 01
+│       │   │   └── [Jun  9  2025]  Já preenchidos
+│       │   ├── [Jun  9  2025]  Sprint 3
+│       │   │   ├── [Jun  9  2025]  Levados para CEMIG
+│       │   │   └── [Jun  9  2025]  já preenchido
+│       │   ├── [Jun  9  2025]  Sprint 4
+│       │   │   ├── [Jun  9  2025]  Levados para CEMIG
+│       │   │   └── [Jun  9  2025]  já preenchido
+│       │   ├── [Jun  9  2025]  Sprint 5
+│       │   │   ├── [Jun  9  2025]  Levados para CEMIG
+│       │   │   └── [Jun  9  2025]  já preenchido
+│       │   ├── [Jun  9  2025]  sprint 1
+│       │   │   ├── [Jun  9  2025]  Levados para CEMIG
+│       │   │   │   ├── [Jun  9  2025]  Entregues  28-09-2023
+│       │   │   │   ├── [Jun  9  2025]  entregues cemig 26-09-2023
+│       │   │   │   └── [Jun  9  2025]  entregues cemig 27-09-2023
+│       │   │   └── [Jun  9  2025]  ja preenchido
+│       │   └── [Jun  9  2025]  sprint 2
+│       │       ├── [Jun  9  2025]  Levados para CEMIG
+│       │       └── [Jun  9  2025]  já preenchido
+│       ├── [Jun  9  2025]  apostilas
+│       │   └── [Jun  9  2025]  Guia_do_desenvolvedor
+│       ├── [Jun  9  2025]  especificacoes tecnicas
+│       │   ├── [Jun  9  2025]  Disponibilizado pela Cemig
+│       │   │   ├── [Jun  9  2025]  Cemig Sprint 1
+│       │   │   │   └── [Jun  9  2025]  Anexos
+│       │   │   ├── [Jun  9  2025]  Cemig Sprint 2
+│       │   │   │   ├── [Jun  9  2025]  DebitoSOAP
+│       │   │   │   │   └── [Jun  9  2025]  xmls
+│       │   │   │   └── [Jun  9  2025]  xmls
+│       │   │   ├── [Jun  9  2025]  Cemig Sprint 3
+│       │   │   ├── [Jun  9  2025]  Cemig Sprint 4
+│       │   │   ├── [Jun  9  2025]  Cemig Sprint 5
+│       │   │   ├── [Jun  9  2025]  Cemig Sprint 6
+│       │   │   ├── [Jun  9  2025]  atualizações especs
+│       │   │   └── [Jun  9  2025]  old
+│       │   ├── [Jun  9  2025]  Documentação recursos do CDK
+│       │   ├── [Jun  9  2025]  Entregaveis para Cemig
+│       │   │   ├── [Jun  9  2025]  Sprint 01
+│       │   │   │   ├── [Jun  9  2025]  Documentação Técnica
+│       │   │   │   └── [Jun  9  2025]  Escopo da Sprint
+│       │   │   ├── [Jun  9  2025]  Sprint 02
+│       │   │   ├── [Jun  9  2025]  Sprint 03
+│       │   │   │   └── [Jun  9  2025]  Escopo da Sprint 03
+│       │   │   ├── [Jun  9  2025]  Sprint 04
+│       │   │   ├── [Jun  9  2025]  Sprint 04.1
+│       │   │   ├── [Jun  9  2025]  Sprint 05
+│       │   │   └── [Jun  9  2025]  Sprint Piloto
+│       │   │       ├── [Jun  9  2025]  Documentação Técnica
+│       │   │       └── [Jun  9  2025]  Escopo da Sprint
+│       │   └── [Jun  9  2025]  wip - work in progress
+│       │       ├── [Jun  9  2025]  Testes
+│       │       ├── [Jun  9  2025]  atlas
+│       │       ├── [Jun  9  2025]  consumo
+│       │       │   ├── [Jun  9  2025]  Arquivos xmls exemplos
+│       │       │   └── [Jun  9  2025]  Especificacao_de_Processamento
+│       │       │       ├── [Jun  9  2025]  API_Consultas_modelo_Carballo
+│       │       │       ├── [Jun  9  2025]  API_Consultas_modelo_antigo
+│       │       │       ├── [Jun  9  2025]  Sprint 3
+│       │       │       ├── [Jun  9  2025]  Sprint 4
+│       │       │       ├── [Jun  9  2025]  Sprint 5
+│       │       │       │   └── [Jun  9  2025]  Atualizacao sprint anterior
+│       │       │       └── [Jun  9  2025]  Sprint 6
+│       │       ├── [Jun  9  2025]  entidades
+│       │       │   ├── [Jun  9  2025]  Debito
+│       │       │   ├── [Jun  9  2025]  Instalacao
+│       │       │   ├── [Jun  9  2025]  Parceiro de Negocio
+│       │       │   └── [Jun  9  2025]  Tabelas Suporte
+│       │       └── [Jun  9  2025]  ingestao
+│       ├── [Jun  9  2025]  old files
+│       │   ├── [Jun  9  2025]  Diagramas
+│       │   ├── [Jun  9  2025]  Especificações das Pesquisas
+│       │   ├── [Jun  9  2025]  Especificações dataRain das Pesquisas
+│       │   │   ├── [Jun  9  2025]  Nossos dados
+│       │   │   ├── [Jun  9  2025]  Templates Cemig
+│       │   │   └── [Jun  9  2025]  endpoint identificacao de parceiro de negocio
+│       │   └── [Jun  9  2025]  draft
+│       └── [Jun  9  2025]  testes-massa
+│           ├── [Jun  9  2025]  beneficio-tarifario.0913
+│           │   └── [Jun  9  2025]  consultar-natureza-juridica
+│           ├── [Jun  9  2025]  classe-subclasse.0913
+│           │   └── [Jun  9  2025]  listar-classe-subclasse
+│           ├── [Jun  9  2025]  contrato.0913
+│           ├── [Jun  9  2025]  debito.0913
+│           │   ├── [Jun  9  2025]  instalacao.0913
+│           │   │   └── [Jun  9  2025]  listar-equipamentos-relacao-carga
+│           │   └── [Jun  9  2025]  listar-bancos-conveniados
+│           ├── [Jun  9  2025]  endereco.0913
+│           ├── [Jun  9  2025]  leitura.0913
+│           ├── [Jun  9  2025]  nota-servico.0913
+│           ├── [Jun  9  2025]  parceiro-negocio.0913
+│           └── [Jun  9  2025]  testes de codigo
+├── [Jun  9  2025]  COFFITO
+├── [Jun  9  2025]  Cemig Newave
+│   └── [Jun  9  2025]  Chaves
+├── [Jun  9  2025]  Cemig Portal-GD
+│   └── [Jun  9  2025]  Chaves
+├── [Feb 15 23:00]  CordVida
+│   ├── [Feb 15 23:00]  Chaves
+│   │   ├── [Jun  9  2025]  LP CordVida
+│   │   ├── [Jun  9  2025]  Site & Blog CordVida
+│   │   └── [Jun  9  2025]  Site CordCell
+│   ├── [Jun  9  2025]  Documentação
+│   │   └── [Jun  9  2025]  Arquitetura do ambiente
+│   └── [Jun  9  2025]  Migração Totvz
+├── [Feb 15 23:00]  Cotrijal
+│   ├── [Jun  9  2025]  Cronograma e Matriz
+│   ├── [Jun  9  2025]  Documentação Projeto
+│   ├── [Jun  9  2025]  Kick-Off
+│   ├── [Jun  9  2025]  SOW
+│   └── [Jun  9  2025]  Usage
+├── [Jun  9  2025]  Database Assessment
+│   └── [Jun  9  2025]  DBCSI
+├── [Jun  9  2025]  Defensoria SP
+│   └── [Jun  9  2025]  Notificação
+├── [Feb 15 23:00]  Desenvolve SP
+│   ├── [Jun  9  2025]  Assessment de Segurança
+│   │   └── [Jun  9  2025]  Material Recebido
+│   ├── [Jun  9  2025]  MPER-002_Inventário
+│   ├── [Jun  9  2025]  MPER-003
+│   ├── [Feb 15 23:00]  MRA-001
+│   │   ├── [Jun  9  2025]  Cronograma
+│   │   ├── [Jun  9  2025]  Plano de Projeto
+│   │   └── [Jun  9  2025]  Status
+│   └── [Jun  9  2025]  MRP-006
+├── [Feb 15 22:57]  DoutorIE
+│   └── [Feb 15 22:57]  DR
+├── [Feb 15 23:01]  Dynatrace
+├── [Jun  9  2025]  ENCIBRA
+├── [Feb 15 23:00]  ENE Medical - Veeam
+│   ├── [Feb 15 22:57]  Ene Medical
+│   └── [Jun  9  2025]  Planejamento
+├── [Feb 15 23:00]  Estre Ambiental
+│   ├── [Jun  9  2025]  Checklists
+│   └── [Jun  9  2025]  Documentação do ambiente
+├── [Feb 15 23:01]  FIEMG
+│   ├── [Feb 15 23:00]  Capacitacao
+│   │   ├── [Jun  9  2025]  Arquitetura
+│   │   │   └── [Jun  9  2025]  Certificados
+│   │   ├── [Jun  9  2025]  Ciencia de dados
+│   │   ├── [Jun  9  2025]  Clusterização de dados
+│   │   │   └── [Jun  9  2025]  Clusterização de dados
+│   │   ├── [Jun  9  2025]  Engenharia de dados
+│   │   └── [Jun  9  2025]  Mineração de Dados
+│   │       └── [Jun  9  2025]  Mineração de Dados
+│   ├── [Jun 10  2025]  Chaves
+│   ├── [Jun 10  2025]  Documentação
+│   │   └── [Jun  9  2025]  Propostas Tec. e Arquiteturas
+│   │       └── [Jun  9  2025]  _old
+│   └── [Jun  9  2025]  Recordings
+├── [Jun  9  2025]  Foco Radical
+│   └── [Jun  9  2025]  equalization_results
+├── [Jun  9  2025]  GitHub
+├── [Jun  9  2025]  Greca Asfaltos
+│   └── [Jun  9  2025]  Arquitetura
+├── [Jun  9  2025]  Hospital Sabara
+│   └── [Jun  9  2025]  Planejamento
+│       └── [Jun  9  2025]  SOW
+├── [Jun  9  2025]  Hospital Santa Marcelina
+│   └── [Jun  9  2025]  Chaves
+├── [Feb 15 23:00]  Hospital das Clinicas
+│   ├── [Jun  9  2025]  Nova infra 2024
+│   └── [Jun  9  2025]  Projeto LucyIO
+├── [Jun  9  2025]  Hotel Amarante
+├── [Feb 15 23:00]  IHSL - Instituto de Hemoterapia Sirio Libanes
+│   ├── [Jun  9  2025]  Chaves
+│   ├── [Jun  9  2025]  Documentação Sistemas
+│   ├── [Feb 15 22:57]  Relatorio de servicos - mensal
+│   ├── [Jun  9  2025]  Veeam IHSL
+│   └── [Jun  9  2025]  _ Kick-off
+├── [Feb 15 23:00]  INTELBRAS
+│   ├── [Jun  9  2025]  Kick-Off
+│   ├── [Jun  9  2025]  Material Recebido
+│   │   └── [Jun  9  2025]  Jairo
+│   ├── [Jun  9  2025]  Projeto Banco de Dados
+│   ├── [Jun  9  2025]  Projeto Satélites
+│   │   └── [Jun  9  2025]  GKO
+│   │       └── [Jun  9  2025]  AppStream
+│   │           └── [Jun  9  2025]  GKO
+│   │               ├── [Jun  9  2025]  ComSEFAZ
+│   │               │   └── [Jun  9  2025]  GKOComSEFAZ
+│   │               │       └── [Jun  9  2025]  GKOComSEFAZ
+│   │               │           ├── [Jun  9  2025]  bin
+│   │               │           │   └── [Jun  9  2025]  bkp
+│   │               │           ├── [Jun  9  2025]  bkp
+│   │               │           └── [Jun  9  2025]  conf
+│   │               │               └── [Jun  9  2025]  bkp
+│   │               ├── [Jun  9  2025]  Conversão
+│   │               │   ├── [Jun  9  2025]  Dic
+│   │               │   └── [Jun  9  2025]  DicSQL_DBEX
+│   │               ├── [Jun  9  2025]  DLL
+│   │               └── [Jun  9  2025]  Dic
+│   ├── [Jun  9  2025]  Projeto Wiki
+│   │   └── [Jun  9  2025]  Planejamento
+│   │       └── [Jun  9  2025]  Status Report
+│   └── [Jun  9  2025]  key files
+├── [Feb 15 23:00]  IPDA
+│   ├── [Jun  9  2025]  API-Banco Safra
+│   │   └── [Jun  9  2025]  Chaves
+│   ├── [Feb 15 23:00]  Chaves
+│   │   ├── [Jun  9  2025]  Site fundacaoreviver
+│   │   └── [Jun  9  2025]  Site ministerioregenere
+│   ├── [Jun  9  2025]  FinOps - Custos
+│   ├── [Jun  9  2025]  Fundação Reviver
+│   ├── [Jun  9  2025]  Infraestrutura
+│   ├── [Feb 15 23:00]  SiteIPDA-EKS
+│   │   └── [Jun  9  2025]  site
+│   │       ├── [Jun  9  2025]  MP3
+│   │       ├── [Jun  9  2025]  css
+│   │       │   └── [Jun  9  2025]  bootstrap
+│   │       ├── [Jun  9  2025]  fonts
+│   │       │   ├── [Jun  9  2025]  flaticon
+│   │       │   │   ├── [Jun  9  2025]  license
+│   │       │   │   └── [Jun  9  2025]  svg
+│   │       │   ├── [Jun  9  2025]  flaticon-1
+│   │       │   │   ├── [Jun  9  2025]  font
+│   │       │   │   └── [Jun  9  2025]  license
+│   │       │   └── [Jun  9  2025]  icomoon
+│   │       │       ├── [Jun  9  2025]  demo-files
+│   │       │       └── [Jun  9  2025]  fonts
+│   │       ├── [Jun  9  2025]  images
+│   │       ├── [Jun  9  2025]  js
+│   │       └── [Jun  9  2025]  scss
+│   │           └── [Jun  9  2025]  bootstrap
+│   │               ├── [Jun  9  2025]  mixins
+│   │               ├── [Jun  9  2025]  utilities
+│   │               └── [Jun  9  2025]  vendor
+│   └── [Jun  9  2025]  kubernetes
+├── [Feb 15 23:00]  IPP - Instituto Municipal de Urbanismo Pereira Passos
+│   ├── [Feb 15 23:00]  Client-VPN
+│   │   ├── [Jun  9  2025]  pki
+│   │   │   ├── [Jun  9  2025]  certs_by_serial
+│   │   │   ├── [Jun  9  2025]  inline
+│   │   │   │   └── [Jun  9  2025]  private
+│   │   │   ├── [Jun  9  2025]  issued
+│   │   │   ├── [Jun  9  2025]  private
+│   │   │   ├── [Jun  9  2025]  reqs
+│   │   │   └── [Jun  9  2025]  revoked
+│   │   │       ├── [Jun  9  2025]  certs_by_serial
+│   │   │       └── [Jun  9  2025]  private_by_serial
+│   │   └── [Feb 15 22:57]  usuários-vpn
+│   ├── [Jun  9  2025]  Documentos da migração
+│   ├── [Feb 15 22:57]  Keybastion
+│   └── [Feb 15 22:57]  Relatorio de servicos mensal
+├── [Feb 15 23:00]  IplanRio
+│   ├── [Jun  9  2025]  IPP
+│   │   └── [Jun  9  2025]  Chaves
+│   └── [Feb 15 22:57]  Report Mensal Tickets
+├── [Feb 15 22:57]  IplanRio - Instituto Joao Goulart
+│   └── [Feb 15 22:57]  Projeto Moodle
+├── [Feb 15 23:00]  L2D
+│   ├── [Jun  9  2025]  Documetação
+│   └── [Jun  9  2025]  Keys
+├── [Jun  9  2025]  Lochpe
+├── [Feb 15 23:01]  MEC - Acesso Único PROUNI
+│   ├── [Jun  9  2025]  Atas de Reuniões
+│   ├── [Jun  9  2025]  Evidencias
+│   ├── [Feb 15 23:00]  Material Técnico
+│   │   ├── [Jun  9  2025]  Acompanhamento
+│   │   ├── [Jun  9  2025]  Arquivos do projeto
+│   │   │   ├── [Jun  9  2025]  08_set_22_[Arquivos_Fornecidos_pelo_MEC]
+│   │   │   │   ├── [Jun  9  2025]  ADESAO_PROGRAMAS
+│   │   │   │   ├── [Jun  9  2025]  DIAGRAMA_CONTEXTO_PROUNI
+│   │   │   │   ├── [Jun  9  2025]  LINK_MIRO
+│   │   │   │   └── [Jun  9  2025]  MM_PROUNI
+│   │   │   ├── [Jun  9  2025]  12_set_22_[Arquivos_Fornecidos_pelo_MEC]
+│   │   │   │   ├── [Jun  9  2025]  HUA_Preparacao_para_Adesao
+│   │   │   │   └── [Jun  9  2025]  HUF_Adesao_ Fies
+│   │   │   ├── [Jun  9  2025]  30_09_22_[Arquivos_Fornecidos_pelo_MEC]
+│   │   │   ├── [Jun  9  2025]  ACESSO_e-MEC_[DataRain]
+│   │   │   ├── [Jun  9  2025]  ARQUITETURA_[Arquivo_Fornecido_pelo_MEC]
+│   │   │   ├── [Jun  9  2025]  DUVIDAS_[DataRain]
+│   │   │   ├── [Jun  9  2025]  FLUXOS_MIRO_[DataRain]
+│   │   │   │   ├── [Jun  9  2025]  FLUXOS_ACESSO_UNICO
+│   │   │   │   └── [Jun  9  2025]  VISAO_MACRO
+│   │   │   ├── [Jun  9  2025]  HUP_[Historias_com_Ressalvas_Revisadas_pelo_MEC]
+│   │   │   ├── [Jun  9  2025]  LEGISLACAO_[Links_Fornecidos_pelo_MEC]
+│   │   │   │   ├── [Jun  9  2025]  FIES
+│   │   │   │   ├── [Jun  9  2025]  PROUNI
+│   │   │   │   │   └── [Jun  9  2025]  PAULO
+│   │   │   │   └── [Jun  9  2025]  SISU
+│   │   │   ├── [Jun  9  2025]  TEMPLATE_[Arquivo_Fornecido_pelo_MEC]
+│   │   │   ├── [Jun  9  2025]  TEMPLATE_[Data_Rain]
+│   │   │   └── [Jun  9  2025]  VIDEOS_REUNIOES___INSUMOS
+│   │   └── [Jun  9  2025]  Especificações Historia Usuário
+│   │       ├── [Jun  9  2025]  HUS-Antigas
+│   │       │   ├── [Jun  9  2025]  1. Epico_Visualizar_dados_Mantenedora_IES
+│   │       │   │   └── [Jun  9  2025]  old_versions
+│   │       │   │       └── [Jun  9  2025]  20221013
+│   │       │   ├── [Jun  9  2025]  10. Epico_Termo_de_Adesao
+│   │       │   ├── [Jun  9  2025]  2. Epico_Gerenciar_Locais_de_Oferta
+│   │       │   │   └── [Jun  9  2025]  olds
+│   │       │   │       └── [Jun  9  2025]  20221003
+│   │       │   ├── [Jun  9  2025]  3. Epico_Manter_Coordenador_PROUNI
+│   │       │   │   └── [Jun  9  2025]  old_20221008
+│   │       │   ├── [Jun  9  2025]  4. Epico_Manter_Representante_Coordenador_PROUNI
+│   │       │   │   └── [Jun  9  2025]  old_20221008
+│   │       │   ├── [Jun  9  2025]  5. Epico_Manter_Bolsas_Ativas
+│   │       │   ├── [Jun  9  2025]  6. Epico_Manter_Bolsistas_Ativos
+│   │       │   ├── [Jun  9  2025]  7. Epico_Manter_Bolsas_por_Cotas
+│   │       │   ├── [Jun  9  2025]  8. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │       │   │   └── [Jun  9  2025]  old_versions
+│   │       │   └── [Jun  9  2025]  9. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │       │       └── [Jun  9  2025]  old_version
+│   │       ├── [Jun  9  2025]  Versão2022-12-02
+│   │       │   ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │       │   ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │       │   ├── [Jun  9  2025]  11. Manter Bolsistas IES
+│   │       │   ├── [Jun  9  2025]  2. Visualizar Dados da Mantenedora e IES
+│   │       │   ├── [Jun  9  2025]  3. Gerenciar  Locais de Oferta
+│   │       │   ├── [Jun  9  2025]  4. Dados complementares e Composição de Bolsa
+│   │       │   ├── [Jun  9  2025]  5. Calcular nº  Bolsas Instituições Não Beneficentes
+│   │       │   ├── [Jun  9  2025]  6. Calcular nº  Bolsas Instituições  Beneficentes
+│   │       │   ├── [Jun  9  2025]  7. Manutenção de Bolsa
+│   │       │   ├── [Jun  9  2025]  8. Termo de Adesão
+│   │       │   ├── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   │       │   ├── [Jun  9  2025]  Anexos
+│   │       │   └── [Jun  9  2025]  HUs revisadas MEC
+│   │       ├── [Jun  9  2025]  Versão2023-01-26
+│   │       │   ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │       │   ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │       │   ├── [Jun  9  2025]  11. Manter Bolsistas
+│   │       │   ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │       │   ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│   │       │   ├── [Jun  9  2025]  4. Dados complementares e Composição de Bolsa
+│   │       │   ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │       │   ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │       │   ├── [Jun  9  2025]  7. Manutenção de Bolsas
+│   │       │   ├── [Jun  9  2025]  8.Termo de Adesão
+│   │       │   └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   │       └── [Jun  9  2025]  Versão2023-03-30 (running)
+│   │           ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │           ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │           ├── [Jun  9  2025]  11. Manter Bolsistas
+│   │           ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │           ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│   │           ├── [Jun  9  2025]  4. Dados complementares e Composição de Bolsa
+│   │           ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │           ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │           ├── [Jun  9  2025]  7. Manutenção de Bolsas
+│   │           ├── [Jun  9  2025]  8.Termo de Adesão
+│   │           └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   ├── [Jun  9  2025]  Material do MEC
+│   │   └── [Jun  9  2025]  HU-Prouni-Antigas
+│   ├── [Jun  9  2025]  Planejamento
+│   ├── [Jun  9  2025]  Prevent
+│   ├── [Jun  9  2025]  Status Report
+│   ├── [Feb 15 23:00]  Timeline Prouni
+│   │   ├── [Jun  9  2025]  Evidências
+│   │   ├── [Jun  9  2025]  Exemplos HU enviados pelo MEC
+│   │   │   └── [Jun  9  2025]  HUA - Preparação para Adesão
+│   │   ├── [Jun  9  2025]  HU - Versão 2022-11-29
+│   │   │   ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │   │   ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │   │   ├── [Jun  9  2025]  11. Manter Bolsistas
+│   │   │   ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │   │   ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│   │   │   ├── [Jun  9  2025]  4. Dados complementares e Composição de Bolsa
+│   │   │   ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │   │   ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │   │   ├── [Jun  9  2025]  7. Manutenção de Bolsas
+│   │   │   ├── [Jun  9  2025]  8.Termo de Adesão
+│   │   │   └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   │   ├── [Jun  9  2025]  HU - Versão 2023-01-26
+│   │   │   ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │   │   ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │   │   ├── [Jun  9  2025]  11. Manter Bolsistas
+│   │   │   ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │   │   ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│   │   │   ├── [Jun  9  2025]  4. Dados complementares e Composição de Bolsa
+│   │   │   ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │   │   ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │   │   ├── [Jun  9  2025]  7. Manutenção de Bolsas
+│   │   │   ├── [Jun  9  2025]  8.Termo de Adesão
+│   │   │   └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   │   └── [Jun  9  2025]  HU - Versão 2023-03-30 (running)
+│   │       ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │       ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │       ├── [Jun  9  2025]  11. Manter Bolsistas
+│   │       ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │       ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│   │       ├── [Jun  9  2025]  4. Dados complementares e Composição de Bolsa
+│   │       ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │       ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │       ├── [Jun  9  2025]  7. Manutenção de Bolsas
+│   │       ├── [Jun  9  2025]  8.Termo de Adesão
+│   │       └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   └── [Jun  9  2025]  Videos
+├── [Feb 15 23:00]  MEC - PROUNI
+│   ├── [Jun  9  2025]  Material Enviado para Clotilde
+│   │   └── [Jun  9  2025]  MEC - Versão2023-01-26(2)
+│   │       ├── [Jun  9  2025]  VersĈo2023-01-26
+│   │       │   ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │       │   ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │       │   └── [Jun  9  2025]  8.Termo de AdesĈo
+│   │       ├── [Jun  9  2025]  Versão2023-01-26
+│   │       │   └── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │       └── [Jun  9  2025]  Versֶo2023-01-26
+│   │           ├── [Jun  9  2025]  1. Manifestar Interesse
+│   │           ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│   │           ├── [Jun  9  2025]  11. Manter Bolsistas
+│   │           ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│   │           ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│   │           ├── [Jun  9  2025]  4. Dados complementares e Composi‡ֶo de Bolsa
+│   │           ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│   │           ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│   │           ├── [Jun  9  2025]  7. Manuten‡ֶo de Bolsas
+│   │           ├── [Jun  9  2025]  8.Termo de Adesֶo
+│   │           └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+│   └── [Jun  9  2025]  ProUni-AdesaoOferta
+│       └── [Jun  9  2025]  HUs
+│           ├── [Jun  9  2025]  1. Manifestar Interesse
+│           ├── [Jun  9  2025]  10. Manter Representantes Coordenador PROUNI
+│           ├── [Jun  9  2025]  11. Manter Bolsistas
+│           ├── [Jun  9  2025]  2. Visualizar dados mantenedora e IES
+│           ├── [Jun  9  2025]  3. Gerenciais Locais de Oferta
+│           ├── [Jun  9  2025]  4. Dados complementares e Composi‡ֶo de Bolsa
+│           ├── [Jun  9  2025]  5. Epico_Calcular_Bolsas_IES_Nao_Beneficentes
+│           ├── [Jun  9  2025]  6. Epico_Calcular_Bolsas_IES_Beneficentes
+│           ├── [Jun  9  2025]  7. Manuten‡ֶo de Bolsas
+│           ├── [Jun  9  2025]  8.Termo de AdesĈo
+│           ├── [Jun  9  2025]  8.Termo de Adesֶo
+│           └── [Jun  9  2025]  9. Manter Coordenador PROUNI
+├── [Feb 15 23:00]  MPRN
+│   └── [Feb 15 23:00]  POC - MPRN
+│       ├── [Jun  9  2025]  Billing - PoC MPRN
+│       ├── [Jun  9  2025]  Cluster Kubernetes
+│       └── [Jun  9  2025]  POA
+├── [Feb 15 23:00]  MWM
+│   ├── [Jun  9  2025]  Chaves
+│   └── [Jun  9  2025]  Documentação
+├── [Feb 15 23:01]  Maxion
+│   ├── [Feb 15 23:00]  Documentação Arquiteturas
+│   │   ├── [Jun  9  2025]  Arquiteturas
+│   │   ├── [Jun  9  2025]  Arquiteturas oficiais (por conta)
+│   │   ├── [Jun  9  2025]  Maxion_Networking_files
+│   │   └── [Jun  9  2025]  Reports
+│   ├── [Jun  9  2025]  Keys
+│   │   └── [Jun  9  2025]  MGN
+│   ├── [Jun  9  2025]  Licensing Assurance
+│   │   └── [Jun  9  2025]  Iochpe Maxion Wheels SA - Partner
+│   ├── [Feb 15 23:00]  Planejamento
+│   │   ├── [Jun  9  2025]  Documents Review
+│   │   ├── [Jun  9  2025]  MRA
+│   │   ├── [Jun  9  2025]  Old Timeline
+│   │   ├── [Jun  9  2025]  Old Version Presentations
+│   │   └── [Jun  9  2025]  Status Report
+│   │       └── [Jun  9  2025]  Enviar
+│   ├── [Jun 10  2025]  Projeto Migração Dados S3
+│   ├── [Jun  9  2025]  Ramp de Billing
+│   ├── [Jun  9  2025]  Recordings
+│   └── [Feb 15 23:00]  _Outras Pastas
+│       ├── [Jun  9  2025]  FinOps
+│       ├── [Jun  9  2025]  MAP
+│       │   ├── [Jun  9  2025]  Call sobre MAP com CSM e AM AWS
+│       │   └── [Jun  9  2025]  Mobilize
+│       ├── [Jun  9  2025]  MAP Spend & Credits Report
+│       ├── [Jun  9  2025]  Material Recebido
+│       │   └── [Jun  9  2025]  Pricing em CSV e PDF
+│       ├── [Jun  9  2025]  _  Networking - Everton
+│       ├── [Jun  9  2025]  _ IoT Data Collector - Data Bartender
+│       ├── [Jun  9  2025]  _ IoT Data Collector - Maxion IoT
+│       ├── [Jun  9  2025]  _ Scheduling - Cronograma
+│       ├── [Jun  9  2025]  _Assessment - Business case
+│       ├── [Jun  9  2025]  _PoC Cash para Migração TVARIT
+│       └── [Jun  9  2025]  _Proposals
+├── [Jun  9  2025]  Meuchope
+│   └── [Jun  9  2025]  Chaves
+├── [Jun  9  2025]  NOC
+│   └── [Jun  9  2025]  Zabbix
+├── [Feb 15 23:00]  Natuzzi
+│   ├── [Jun  9  2025]  Antiga VPN Site-to-site
+│   └── [Jun  9  2025]  Chaves
+├── [Jun  9  2025]  PUC-Campinas
+├── [Jun  9  2025]  Petrec
+├── [Feb 15 23:00]  Prodesp
+│   ├── [Feb 15 23:00]  Desenvolve SP
+│   │   ├── [Jun  9  2025]  01 TR
+│   │   ├── [Jun  9  2025]  02 Right Sizing
+│   │   ├── [Jun  9  2025]  03 Termos de Responsabilidade Prodesp - Desenvolve SP
+│   │   └── [Jun  9  2025]  04 Implementação
+│   │       ├── [Jun  9  2025]  Domínios
+│   │       └── [Jun  9  2025]  Encerramento de Projeto
+│   ├── [Jun  9  2025]  Diagrama- Estrutura AWS x Prodesp
+│   ├── [Jun  9  2025]  Equinix - Direct Connect (AWS DX)
+│   ├── [Jun  9  2025]  PMESP
+│   ├── [Jun  9  2025]  Prefeitura de Americana
+│   │   └── [Jun  9  2025]  KEY
+│   ├── [Jun  9  2025]  SECOM
+│   │   └── [Jun  9  2025]  Evidencia - Config e Upload via Snowball
+│   ├── [Jun  9  2025]  SEDUC
+│   ├── [Jun  9  2025]  SME
+│   ├── [Jun  9  2025]  Secretaria da Saúde
+│   │   └── [Jun  9  2025]  Telemedicina
+│   │       ├── [Jun  9  2025]  Homologação
+│   │       └── [Jun  9  2025]  Produção
+│   │           └── [Jun  9  2025]  Diagramas
+│   ├── [Jun  9  2025]  TV Cultura
+│   ├── [Jun  9  2025]  _Organizations
+│   └── [Feb 15 23:00]  _Treinamentos
+│       ├── [Jun  9  2025]  01 Office Hours
+│       │   ├── [Jun  9  2025]  01 Monitoramento - CloudWatch - 2020-12-09
+│       │   ├── [Jun  9  2025]  02 Migration - 2020-12-22
+│       │   ├── [Jun  9  2025]  03 Governança e SLA - 2021-01-07
+│       │   ├── [Jun  9  2025]  04 Networking - 2021-01-14
+│       │   ├── [Jun  9  2025]  05 Segurança - 2021-01-21
+│       │   ├── [Jun  9  2025]  06 Big Data - Data Lake - Analytics- 2021-01-28
+│       │   ├── [Jun  9  2025]  07 DevOps - 2021-02-04
+│       │   ├── [Jun  9  2025]  08 Serverless - 2021-02-18
+│       │   └── [Jun  9  2025]  09 Backup - 2021-02-25
+│       └── [Jun  9  2025]  02 Immersion Days
+│           ├── [Jun  9  2025]  01 Foundation
+│           │   └── [Jun  9  2025]  _Apresentações
+│           ├── [Jun  9  2025]  02 Migration
+│           │   └── [Jun  9  2025]  Apresentações
+│           ├── [Jun  9  2025]  03 Governança
+│           ├── [Jun  9  2025]  04 Segurança
+│           │   └── [Jun  9  2025]  Workshops
+│           ├── [Jun  9  2025]  05 Backup
+│           └── [Jun  9  2025]  99 Landing Zone
+├── [Feb 15 23:00]  Proof Of Concept - POC
+│   ├── [Jun  9  2025]  ALFA
+│   ├── [Feb 15 22:57]  Ailos
+│   ├── [Jun  9  2025]  Ansible - Exemplo
+│   ├── [Feb 15 23:00]  INC - Instituto Nacional de Cardiologia RJ
+│   │   ├── [Jun  9  2025]  Fase 1
+│   │   ├── [Jun  9  2025]  Fase 2
+│   │   ├── [Jun  9  2025]  Histórico
+│   │   ├── [Jun  9  2025]  Materiais recebidos - AWS
+│   │   ├── [Jun  9  2025]  Materiais recebidos - INC
+│   │   └── [Jun  9  2025]  Status do Projeto para Jacson - 2024-11-19
+│   ├── [Feb 15 23:00]  InRAD - Novo Laudo
+│   │   ├── [Jun  9  2025]  Fase 1 (Deloitte)
+│   │   │   ├── [Jun  9  2025]  AWS - HC
+│   │   │   │   ├── [Jun  9  2025]  apc
+│   │   │   │   ├── [Jun  9  2025]  fas
+│   │   │   │   ├── [Jun  9  2025]  ijp
+│   │   │   │   └── [Jun  9  2025]  smf
+│   │   │   └── [Jun  9  2025]  Delloite
+│   │   └── [Feb 15 23:00]  Fase 2 (dataRain)
+│   │       ├── [Jun  9  2025]  Acessos
+│   │       ├── [Feb 15 23:00]  Arquivos
+│   │       │   └── [Feb 15 23:00]  INLAB_POC_Sumarização_Dados_de_Prontuário
+│   │       │       ├── [Jun  9  2025]  01-Primeira_Extracao
+│   │       │       │   ├── [Jun  9  2025]  CPF_00186991207_20250408_091834_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_00354693824_20250404_201422_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_00684190826_20250405_044657_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_00723034842_20250405_144231_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_00746257805_20250405_123531_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_01132726859_20250405_021702_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_01399947850_20250408_094758_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_02950733816_20250405_111317_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_03231989884_20250408_100046_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_03563554897_20250408_084234_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_05121848870_20250405_163338_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_05404032880_20250405_004111_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_06364802249_20250405_175001_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_06527005865_20250405_170335_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_06596790860_20250405_051501_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_06782489155_20250404_214318_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_08502111825_20250405_043512_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_09963752870_20250408_151456_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_10110975839_20250405_001811_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_11126314889_20250405_074426_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_11656597861_20250407_233441_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_11866568833_20250405_073731_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_11900144832_20250407_204313_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_12157815473_20250408_043418_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_12849728870_20250408_105233_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_13368692836_20250405_083550_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_13642178804_20250408_022948_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_15232333895_20250406_021819_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_17157394855_20250405_105647_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_17402220320_20250407_210257_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_17708159881_20250405_181720_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_18273026825_20250405_001204_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_19333757449_20250407_160154_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_21803096861_20250405_050018_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_21946413860_20250407_143614_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_22878729811_20250405_190338_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_22895408890_20250405_094725_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_23103696833_20250408_145421_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_24806711861_20250408_114624_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_25067275820_20250408_150343_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_25470652823_20250405_122329_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_26212832846_20250408_064808_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_26517670858_20250406_001858_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_26628085864_20250406_022109_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_26628085864_20250407_085422_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_26724568870_20250408_153231_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_26747591860_20250404_185211_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_27335197864_20250408_052116_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_29824820884_20250408_091419_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_30670549894_20250405_022047_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_31569876894_20250408_052633_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_31980173869_20250405_034852_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_32361294842_20250404_164255_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_32462089802_20250405_220540_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_33293646883_20250405_035925_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_33992290387_20250407_183522_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_34345325870_20250406_012054_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_35291712805_20250407_205156_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_35928345844_20250407_144610_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_36648772840_20250408_095401_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_39241740833_20250408_031255_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_39855732049_20250405_160619_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_41115206850_20250408_061115_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_42735437884_20250408_042018_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_43323736850_20250405_011844_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_45672415849_20250407_170357_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_47008846819_20250408_021344_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_48464927886_20250407_195257_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_48553514820_20250408_061823_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_49545282835_20250408_071935_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_52221219848_20250408_060150_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_52709774860_20250408_034812_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_53560302587_20250407_115351_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_53859681885_20250407_164828_TEMP
+│   │       │       │   ├── [Jun  9  2025]  CPF_54403120997_20250408_053845_TEMP
+│   │  

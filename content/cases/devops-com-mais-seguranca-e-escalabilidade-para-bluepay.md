@@ -7,6 +7,9 @@ featuredImage: "/content-images/cases/devops-com-mais-seguranca-e-escalabilidade
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Financeiro"
 ---
 
 A **BluePay Fintech** é uma plataforma de pagamentos especializada em **PIX**, focada em escala, alta disponibilidade, segurança e custos adequados ao cliente.

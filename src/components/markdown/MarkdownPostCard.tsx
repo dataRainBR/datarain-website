@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock } from 'lucide-react';
+import { Calendar, Sparkles } from 'lucide-react';
 import { MarkdownPostMetadata } from '@/lib/markdown';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -16,11 +15,22 @@ export const MarkdownPostCard: React.FC<MarkdownPostCardProps> = ({
   post, 
   routePrefix = '/blog' 
 }) => {
-  const formattedDate = format(new Date(post.date), 'dd MMM yyyy', { locale: ptBR });
+  const formattedDate = format(new Date(post.date), "MMM yyyy", { locale: ptBR });
+  const isSuperCase = post.tags?.includes("Super Case");
 
   return (
     <Link to={`${routePrefix}/${post.slug}`}>
-      <Card className="h-full overflow-hidden hover:shadow-lg transition-all duration-300 group">
+      <Card className={`h-full overflow-hidden hover:shadow-lg transition-all duration-300 group relative ${
+        isSuperCase ? 'ring-1 ring-accent/40' : ''
+      }`}>
+        {/* Badge Super Case — canto superior direito, discreto */}
+        {isSuperCase && (
+          <div className="absolute top-3 right-3 z-20 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent/10 backdrop-blur-sm border border-accent/20 text-accent text-[11px] font-semibold">
+            <Sparkles className="w-3 h-3" />
+            Super Case
+          </div>
+        )}
+
         {post.featuredImage && (
           <div className={`relative h-48 overflow-hidden ${routePrefix === '/cases' ? 'bg-white flex items-center justify-center p-6' : ''}`}>
             <img

@@ -80,6 +80,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Serviços</h3>
             <ul className="space-y-4">
+              <li><a href="/servicos/desenvolvimento-360" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Desenvolvimento 360</span></a></li>
               <li><a href="/servicos/squad-alocacao" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Squad Alocação</span></a></li>
               <li><a href="/servicos/suporte" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">Suporte</span></a></li>
             </ul>

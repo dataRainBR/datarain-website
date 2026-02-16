@@ -1,12 +1,15 @@
 ---
 title: "Bitz acelera sua transformação digital com migração para nuvem AWS em apenas 60 dias"
-date: "2024-02-06T17:27:47"
+date: "2021-11-01T00:00:00"
 slug: "bitz-acelera-sua-transformacao-digital-com-migracao-para-nuvem-aws-em-apenas-60-dias"
 excerpt: "Como o Bitz migrou para a AWS em tempo recorde, conquistando elasticidade e segurança para suportar o crescimento de 150% na base de clientes."
 featuredImage: "/content-images/cases/bitz-acelera-sua-transformacao-digital-com-migracao-para-nuvem-aws-em-apenas-60-dias/5.png.webp"
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "Migração e Disaster Recovery"
+setor: "Financeiro"
 ---
 
 O **Bitz**, carteira digital do **Banco Bradesco**, chegou para facilitar e organizar a vida financeira de seus clientes. Por meio de um aplicativo, é possível guardar dinheiro e cartões, da mesma forma que em uma carteira física. Mas, além de reunir estas vantagens, com o Bitz é possível realizar transações, como por exemplo receber pagamentos, transferir dinheiro e outros benefícios, como descontos exclusivos.
@@ -133,3 +136,15 @@ Armazenamento, disponibilidade, segurança, elasticidade, flexibilidade e alta p
 ## Próximos passos
 
 Como um dos principais players do setor, o Bitz já almeja o título de Unicórnio. Para isso, trabalha ativamente com a finalidade de acompanhar o crescimento acelerado da categoria de contas de pagamento. Por isso, tem trabalhado cada vez mais para elevar seu patamar de segurança e crescer ainda mais, trazendo facilidade em um aplicativo grátis e completo para quem deseja resolver o dia a dia financeiro digitalmente e direto do celular.
+
+## Evolução contínua da plataforma
+
+Após a migração, a infraestrutura do Bitz continuou evoluindo com a dataRain. Entre as evoluções implementadas:
+
+- **Infraestrutura como Código com Terraform:** Toda a infraestrutura passou a ser gerenciada via Terraform, garantindo reprodutibilidade, versionamento e auditoria de mudanças.
+
+- **Replicação cross-account de DynamoDB:** Para garantir resiliência e segregação de dados, foi implementada replicação de tabelas DynamoDB entre contas AWS, assegurando continuidade de negócio mesmo em cenários de falha.
+
+- **Transit Gateway para conectividade multi-ambiente:** A adoção de AWS Transit Gateway permitiu a comunicação segura e centralizada entre os ambientes de desenvolvimento, homologação e produção, simplificando a topologia de rede.
+
+- **FinOps e otimização contínua:** Análises periódicas de Saving Plans e otimização de recursos garantem que a infraestrutura acompanhe o crescimento sem desperdício, mantendo o equilíbrio entre performance e custo.

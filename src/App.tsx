@@ -21,6 +21,7 @@ import Dados from "./pages/solucoes/Dados";
 import Cybersecurity from "./pages/solucoes/Cybersecurity";
 import SquadAlocacao from "./pages/servicos/SquadAlocacao";
 import Suporte from "./pages/servicos/Suporte";
+import Desenvolvimento360 from "./pages/servicos/Desenvolvimento360";
 // Cloud Solutions
 import Migracao from "./pages/solucoes/cloud/Migracao";
 import FinOps from "./pages/solucoes/cloud/FinOps";
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/servicos/squad-alocacao" element={<SquadAlocacao />} />
           <Route path="/servicos/suporte" element={<Suporte />} />
+          <Route path="/servicos/desenvolvimento-360" element={<Desenvolvimento360 />} />
           <Route path="/cases" element={<Cases />} />
           <Route path="/cases/:slug" element={<MarkdownPostView type="cases" backRoute="/cases" />} />
           <Route path="/academy" element={<Academy />} />

@@ -1,12 +1,15 @@
 ---
 title: "AWS: Serviços digitais diminuem em 50% espera no atendimento público"
-date: "2024-08-28T13:59:49"
+date: "2021-06-01T00:00:00"
 slug: "cases-prefeitura-americana"
 excerpt: "Como a plataforma 1Doc, hospedada na AWS, digitalizou os serviços da prefeitura de Americana, reduzindo em 50% o tempo de aprovação de projetos e economizando mais de R$1 milhão em impressões."
 featuredImage: "/content-images/cases/cases-prefeitura-americana/logo-pma-eleicao-2.png"
 categories: [17,19,25]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Governo"
 ---
 
 Quando falamos em novas tecnologias para o setor público, imaginamos uma implementação de sistema complicada, com longas agendas de treinamentos que, depois de meses, são concluídas e então uma nova plataforma deve começar a operacionalizar o trabalho.

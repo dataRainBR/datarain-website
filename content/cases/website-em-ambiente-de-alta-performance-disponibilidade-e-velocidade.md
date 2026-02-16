@@ -1,12 +1,15 @@
 ---
 title: "Website em ambiente de alta performance, disponibilidade e velocidade"
-date: "2024-02-06T17:25:42"
+date: "2019-12-01T00:00:00"
 slug: "website-em-ambiente-de-alta-performance-disponibilidade-e-velocidade"
 excerpt: "Como a IPDA manteve seu website disponível durante a pandemia com infraestrutura AWS, alcançando 99,99% de disponibilidade e aumento de 500% na velocidade de carregamento."
 featuredImage: "/content-images/cases/website-em-ambiente-de-alta-performance-disponibilidade-e-velocidade/ipda-logo.png"
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "Migração e Disaster Recovery"
+setor: "Tecnologia"
 ---
 
 A **Igreja Pentecostal Deus É Amor (IPDA)** é uma instituição pentecostal brasileira de ideologia e fundamentalismo cristão. Tem sua sede na cidade de São Paulo, sendo fundada em 1962 pelo Missionário David Martins Miranda (1936 – 2015) e hoje presidida por sua esposa, Ereni de Oliveira Miranda.
@@ -108,6 +111,14 @@ Além disso, implementou a verdadeira **escalabilidade automática**, com um tem
 Como uma organização sem fins lucrativos possui recursos financeiros limitados, o modelo comercial de **pagamento sob demanda** foi um ótimo benefício à organização. Além, claro, de fornecer e democratizar o acesso às mais novas tecnologias de forma economicamente viável.
 
 A tomada de decisões perante períodos sazonais de alta demanda estão mais fáceis de serem tomadas. Dessa maneira, há uma otimização na disponibilidade de serviços e custos e um ambiente que responde automaticamente a alterações na demanda. Comparado com o antigo provedor, hoje tem um ambiente de desempenho estável e preparado para altas demandas.
+
+## Resiliência comprovada na prática
+
+A infraestrutura AWS da IPDA já foi posta à prova em um cenário real de incidente. Quando o website sofreu um pico anômalo de tráfego que levou o banco de dados ao limite de conexões simultâneas, a equipe da dataRain atuou rapidamente: realizou o upgrade da instância RDS para suportar maior carga, restaurou o banco de dados a partir do backup automatizado e implementou o **AWS WAF (Web Application Firewall)** para filtrar tráfego malicioso.
+
+A resposta rápida — combinada com a estratégia de backups automatizados e a capacidade de escalar recursos sob demanda — garantiu que o site voltasse ao ar em poucas horas, reforçando a importância de uma infraestrutura resiliente e preparada para o inesperado.
+
+Esse episódio também motivou a evolução contínua da arquitetura, com a adoção de **Amazon EKS (Kubernetes)** para orquestração de containers, trazendo ainda mais flexibilidade e resiliência ao ambiente.
 
 ## Próximos passos
 

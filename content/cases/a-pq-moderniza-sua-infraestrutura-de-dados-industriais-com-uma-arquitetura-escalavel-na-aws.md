@@ -1,25 +1,24 @@
 ---
-title: "A PQ moderniza sua infraestrutura de dados industriais com uma arquitetura escalável na AWS."
+title: "A PQ Corp moderniza sua infraestrutura de dados industriais com uma arquitetura escalável na AWS."
 date: "2025-09-17T14:18:18"
 slug: "a-pq-moderniza-sua-infraestrutura-de-dados-industriais-com-uma-arquitetura-escalavel-na-aws"
-excerpt: "Como a PQ modernizou a coleta de dados industriais com uma arquitetura serverless na AWS, reduzindo latência e ganhando autonomia operacional no chão de fábrica."
+excerpt: "Como a PQ Corp modernizou a coleta de dados industriais com uma arquitetura serverless na AWS, reduzindo latência e ganhando autonomia operacional no chão de fábrica."
 featuredImage: "/content-images/cases/a-pq-moderniza-sua-infraestrutura-de-dados-industriais-com-uma-arquitetura-escalavel-na-aws/pq-logo.jpg"
 categories: [17,21]
 tags: []
 author: 4
+pilar: "GenAI e Dados"
+oferta: "Arquitetura e Engenharia de Dados"
+setor: "Indústria"
 ---
 
-| Cliente | Setor | Resultado |
-|---------|-------|-----------|
-| PQ | Indústria Química | Redução de latência e autonomia operacional com arquitetura serverless na AWS |
+## Como a PQ Corp modernizou a coleta de dados industriais
 
-## Como a PQ modernizou a coleta de dados industriais
-
-No setor químico, onde a precisão e a eficiência são decisivas para a competitividade, a **PQ** sempre buscou inovar. Com mais de quatro décadas de atuação e presença em segmentos que vão do tratamento de água à indústria automotiva, a empresa já nasceu com DNA inquieto. Mas, como toda organização em crescimento acelerado, chegou o momento em que a infraestrutura digital precisava dar um salto.
+No setor químico, onde a precisão e a eficiência são decisivas para a competitividade, a **PQ Corp** sempre buscou inovar. Com mais de quatro décadas de atuação e presença em segmentos que vão do tratamento de água à indústria automotiva, a empresa já nasceu com DNA inquieto. Mas, como toda organização em crescimento acelerado, chegou o momento em que a infraestrutura digital precisava dar um salto.
 
 ## Quando a eficiência esbarra nos sistemas legados
 
-A PQ gerenciava seus dados industriais com um historiador tradicional, complementado pelo **Kepware** e pelo **TimescaleDB** na AWS. Por anos, essa combinação manteve estabilidade e confiabilidade.
+A PQ Corp gerenciava seus dados industriais com um historiador tradicional, complementado pelo **Kepware** e pelo **TimescaleDB** na AWS. Por anos, essa combinação manteve estabilidade e confiabilidade.
 
 Com o crescimento da empresa, porém, surgiram limitações: a administração desse sistema histórico era complexa, exigindo especialistas e concentrando boa parte da lógica de negócios no próprio ambiente, o que dificultava evoluções. Além disso, o modelo de licenciamento não acompanhava a dinâmica do negócio, que pedia flexibilidade e custos sob demanda — pontos fortes da nuvem AWS.
 
@@ -45,7 +44,7 @@ Os dados mestres ficam centralizados em um ambiente **Microsoft SQL Server**, ac
 
 ## Resultados na prática: da complexidade à fluidez operacional
 
-Com a nova arquitetura, a PQ ganhou uma visão clara e acionável da operação. Dados que antes demoravam a chegar agora fluem quase em tempo real, com dashboards acessíveis e confiáveis.
+Com a nova arquitetura, a PQ Corp ganhou uma visão clara e acionável da operação. Dados que antes demoravam a chegar agora fluem quase em tempo real, com dashboards acessíveis e confiáveis.
 
 O primeiro impacto foi a **redução da latência**: informações chegam prontas para análise, sem ruídos ou sobrecarga. Isso acelerou a manutenção preditiva e o acompanhamento de performance, sem depender de intermediários.
 
@@ -55,8 +54,8 @@ Menos latência, mais decisões em tempo real.
 
 ## Parceria que faz a diferença
 
-> "*A dataRain tem sido nossa parceira estratégica há alguns anos e esteve ao nosso lado em todos os projetos de sucesso da jornada de transformação de dados da PQ, contribuindo com excelência, inovação e dedicação para que cada etapa se tornasse realidade.*"
-> — Adriana Adrioli, IT Manager at PQ
+> "*A dataRain tem sido nossa parceira estratégica há alguns anos e esteve ao nosso lado em todos os projetos de sucesso da jornada de transformação de dados da PQ Corp, contribuindo com excelência, inovação e dedicação para que cada etapa se tornasse realidade.*"
+> — Adriana Adrioli, IT Manager at PQ Corp
 
 ## Autonomia e escalabilidade
 

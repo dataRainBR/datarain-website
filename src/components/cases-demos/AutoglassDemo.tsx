@@ -105,10 +105,6 @@ export const AutoglassDemo: React.FC = () => {
 
         <div className="relative p-5 md:p-8 space-y-6">
           {/* Header */}
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-slate-700">Jornada do Grupo Autoglass — Governança na Nuvem</span>
-            <span className="text-[10px] text-slate-400">{activeStep + 1} / {steps.length}</span>
-          </div>
 
           {/* Timeline */}
           <div className="flex items-center gap-1">

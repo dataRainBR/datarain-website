@@ -7,6 +7,9 @@ featuredImage: "/content-images/cases/implementacao-de-devops-garante-economia-p
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Saúde"
 ---
 
 Especializada em serviços de saúde, a **Prevent Senior** é dedicada a oferecer soluções inovadoras e de alta qualidade para seus clientes, com abordagem focada na prevenção e em busca de uma experiência diferenciada e abrangente no setor de saúde. Conta com uma gama de serviços e uma rede integrada de atendimento que oferece **planos de saúde, cuidados médicos, hospitais próprios e centros de diagnóstico**.
@@ -37,16 +40,14 @@ A arquitetura da solução executada segue um fluxo de trabalho de **DevOps** ef
 
 ## Resultados
 
-- A execução das soluções de DevOps pela dataRain para a Prevent Senior resultou em uma infraestrutura de TI mais eficiente, ágil e segura. Os processos de desenvolvimento e implantação foram otimizados, permitindo uma entrega mais rápida de novas funcionalidades e atualizações.
+- **Redução de 18,18% nos custos mensais da AWS**, com impacto financeiro significativo
 
-- Houve **redução de custos mensais da AWS em 18,18%**, resultando em um impacto financeiro significativo.
+- Processos de desenvolvimento e implantação otimizados com serviços essenciais da AWS: **CodePipeline**, **CodeBuild**, **CodeDeploy**, **ECS**, **Lambda**, **CloudFormation**, **Elastic Beanstalk** e **X-Ray**
 
-- Com os serviços essenciais da AWS, incluindo **AWS CodePipeline**, **AWS CodeBuild**, **AWS CodeDeploy**, **AWS CodeStar**, **AWS CodeCommit**, **Amazon Elastic Container Service**, **AWS Lambda**, **AWS CloudFormation**, **AWS OpsWorks**, **AWS Config**, **Amazon EC2 Systems Manager**, **AWS Elastic Beanstalk** e **AWS X-Ray**, foi possível simplificar os processos de desenvolvimento e implantação.
+- Segurança reforçada com **AWS IAM**, integração **Azure AD** e **princípio do menor privilégio**
 
-- As medidas de segurança incorporaram o **AWS IAM**, integração do **Azure AD** e o **princípio do menor privilégio**, garantindo um gerenciamento seguro de identidade e acesso.
+- Monitoramento eficaz com **Prometheus**, **Grafana** e **New Relic**, mantendo alta confiabilidade
 
-- A implementação de mecanismos eficazes de monitoramento e alerta usando ferramentas como **Prometheus**, **Grafana** e **New Relic**, permitiram manter alta confiabilidade do aplicativo.
+- Arquitetura de rede segura com **segmentação de VPC**, sub-redes públicas e privadas, **NAT Gateways** e controle de acesso **EKS**
 
-- A arquitetura de rede utilizou **segmentação de VPC**, sub-redes públicas e privadas, **NAT Gateways** e listas de controle de acesso de entrada **EKS**, garantindo um ambiente seguro e controlado.
-
-- Houve aproveitamento dos serviços da AWS, como **RDS Multi-AZ**, **DynamoDB**, **Kinesis Streams** e **ElastiCache**, para gerenciamento confiável de dados e alto desempenho do aplicativo.
+- Gerenciamento confiável de dados com **RDS Multi-AZ**, **DynamoDB**, **Kinesis Streams** e **ElastiCache**

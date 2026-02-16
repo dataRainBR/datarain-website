@@ -4,7 +4,7 @@ import { MarkdownRenderer } from './MarkdownRenderer';
 import { getPostBySlug, MarkdownPost } from '@/lib/markdown';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, ArrowLeft, Clock, Share2, Bookmark, User } from 'lucide-react';
+import { Calendar, ArrowLeft, Clock, Share2, User } from 'lucide-react';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import UniversalHeader from '@/components/layout/UniversalHeader';
@@ -22,6 +22,19 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
 }) => {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();
+
+  const handleShare = async () => {
+    const url = window.location.href;
+    const title = post?.title || '';
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch { /* user cancelled */ }
+    } else {
+      await navigator.clipboard.writeText(url);
+      alert('Link copiado!');
+    }
+  };
   
   const post = slug ? getPostBySlug(slug, type) : null;
 
@@ -46,7 +59,7 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
     );
   }
 
-  const formattedDate = format(new Date(post.date), "dd 'de' MMMM 'de' yyyy", { locale: ptBR });
+  const formattedDate = format(new Date(post.date), "MMMM 'de' yyyy", { locale: ptBR });
   const readingTime = Math.ceil(post.content.split(' ').length / 200); // ~200 palavras por minuto
 
   return (
@@ -57,16 +70,18 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
       <div className="relative w-full bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0 bg-grid-white/5 [mask-image:radial-gradient(white,transparent_85%)]"></div>
         
-        <div className="relative container mx-auto px-4 pt-24 pb-12">
+        <div className="relative container mx-auto px-4 pt-32 pb-12">
           {/* Back Button */}
-          <Button
-            variant="ghost"
-            onClick={() => navigate(backRoute || `/${type}`)}
-            className="mb-8 hover:bg-primary/10"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Voltar para {type === 'blog' ? 'Blog' : 'Cases'}
-          </Button>
+          <div className="max-w-4xl mx-auto">
+            <Button
+              variant="ghost"
+              onClick={() => navigate(backRoute || `/${type}`)}
+              className="mb-8 hover:bg-primary/10"
+            >
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              Voltar para {type === 'blog' ? 'Blog' : 'Cases'}
+            </Button>
+          </div>
 
           {/* Title Section */}
           <div className="max-w-4xl mx-auto">
@@ -109,18 +124,9 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
                 <User className="h-4 w-4 text-primary" />
                 <span>dataRain Team</span>
               </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex gap-3 mb-8">
-              <Button variant="outline" size="sm" className="gap-2">
+              <button onClick={handleShare} className="ml-auto flex items-center gap-1 text-muted-foreground hover:text-primary transition-colors" aria-label="Compartilhar">
                 <Share2 className="h-4 w-4" />
-                Compartilhar
-              </Button>
-              <Button variant="outline" size="sm" className="gap-2">
-                <Bookmark className="h-4 w-4" />
-                Salvar
-              </Button>
+              </button>
             </div>
           </div>
         </div>
@@ -143,13 +149,6 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
         </div>
       )}
 
-      {/* Interactive Demo (cases only) */}
-      {type === 'cases' && slug && (
-        <div className="container mx-auto px-4">
-          <CaseDemo slug={slug} />
-        </div>
-      )}
-
       {/* Content */}
       <article className="container mx-auto px-4 pb-20">
         <div className="max-w-4xl mx-auto">
@@ -162,15 +161,62 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
               prose-h3:text-2xl prose-h3:mb-3 prose-h3:mt-6
               prose-p:text-foreground/90 prose-p:leading-relaxed prose-p:mb-6
               prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-              prose-strong:text-foreground prose-strong:font-semibold
+              prose-strong:font-semibold
               prose-code:text-primary prose-code:bg-primary/10 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
               prose-pre:bg-muted prose-pre:border prose-pre:border-border
               prose-blockquote:border-l-4 prose-blockquote:border-primary prose-blockquote:bg-primary/5 prose-blockquote:py-2 prose-blockquote:px-6
               prose-img:rounded-xl prose-img:shadow-lg prose-img:border prose-img:border-border
               prose-hr:border-border prose-hr:my-8
               prose-ul:my-6 prose-ol:my-6
-              prose-li:my-2">
-              <MarkdownRenderer content={post.content} />
+              prose-li:my-2
+              [&_h2_strong]:text-inherit">
+              {(() => {
+                if (type === 'cases' && slug) {
+                  // Split content: intro (before first ##) and rest (from first ## onwards)
+                  const firstH2 = post.content.indexOf('\n## ');
+                  if (firstH2 > 0) {
+                    const intro = post.content.slice(0, firstH2);
+                    const rest = post.content.slice(firstH2);
+                    return (
+                      <>
+                        <MarkdownRenderer content={intro} />
+                        <div className="not-prose my-10">
+                          <div className="mb-6">
+                            <h2 className="text-3xl font-bold mt-10 mb-2 text-primary tracking-tight flex items-center gap-3">
+                              <span className="w-1 h-8 bg-primary rounded-full inline-block shrink-0" />
+                              Acompanhe a jornada
+                            </h2>
+                            <p className="text-sm text-muted-foreground ml-[1.15rem]">Navegue pelas etapas da transformação deste projeto</p>
+                          </div>
+                          <CaseDemo slug={slug} />
+                        </div>
+                        <MarkdownRenderer content={rest} />
+                        {post.youtubeVideoId && (
+                          <div className="not-prose my-10">
+                            <div className="mb-6">
+                              <h2 className="text-3xl font-bold mt-10 mb-2 text-primary tracking-tight flex items-center gap-3">
+                                <span className="w-1 h-8 bg-primary rounded-full inline-block shrink-0" />
+                                Veja o case em vídeo
+                              </h2>
+                              <p className="text-sm text-muted-foreground ml-[1.15rem]">Assista ao depoimento completo sobre este projeto</p>
+                            </div>
+                            <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-border/50" style={{ paddingBottom: '56.25%' }}>
+                              <iframe
+                                className="absolute inset-0 w-full h-full"
+                                src={`https://www.youtube.com/embed/${post.youtubeVideoId}`}
+                                title={`Vídeo do case: ${post.title}`}
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                              />
+                            </div>
+                          </div>
+                        )}
+                      </>
+                    );
+                  }
+                }
+                return <MarkdownRenderer content={post.content} />;
+              })()}
             </div>
           </div>
 
@@ -196,11 +242,11 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
                 Compartilhe com sua rede e ajude mais pessoas a descobrirem!
               </p>
               <div className="flex justify-center gap-3">
-                <Button className="gap-2">
+                <Button className="gap-2" onClick={handleShare}>
                   <Share2 className="h-4 w-4" />
                   Compartilhar
                 </Button>
-                <Button variant="outline" className="gap-2">
+                <Button variant="outline" className="gap-2" onClick={() => navigate(backRoute || `/${type}`)}>
                   Ver mais {type === 'blog' ? 'artigos' : 'cases'}
                 </Button>
               </div>

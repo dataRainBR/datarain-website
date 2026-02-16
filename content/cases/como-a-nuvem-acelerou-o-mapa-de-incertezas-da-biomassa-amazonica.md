@@ -1,12 +1,15 @@
 ---
 title: "Como a nuvem acelerou o mapa de incertezas da biomassa amazônica"
-date: "2025-09-17T14:00:54"
+date: "2019-01-01T00:00:00"
 slug: "como-a-nuvem-acelerou-o-mapa-de-incertezas-da-biomassa-amazonica"
 excerpt: "Como o INPE reduziu de 3.000 para 40 horas o processamento do mapa de incertezas da biomassa amazônica usando infraestrutura HPC na AWS, com apoio da dataRain."
 featuredImage: "/content-images/cases/como-a-nuvem-acelerou-o-mapa-de-incertezas-da-biomassa-amazonica/unnamed.png"
 categories: [17,19,21,25]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "Migração e Disaster Recovery"
+setor: "Educação"
 ---
 
 O **Instituto Nacional de Pesquisas Espaciais (INPE)** é um dos principais centros de pesquisa do Brasil, reconhecido mundialmente por sua atuação no monitoramento ambiental e climático. Entre 2016 e 2019, o instituto conduziu o projeto **EBA (Estimativa de Biomassa da Amazônia)**, com o objetivo de mapear a biomassa do Bioma Amazônico de maneira mais precisa que as iniciativas anteriores.

@@ -7,6 +7,10 @@ featuredImage: "/content-images/cases/nuvem-aws-impulsiona-eficiencia-da-unicamp
 categories: [17,19,26]
 tags: []
 author: 4
+youtubeVideoId: "Y7-GcDu9LyI"
+pilar: "Cloud"
+oferta: "Migração e Disaster Recovery"
+setor: "Saúde"
 ---
 
 A **Universidade Estadual de Campinas**, comumente conhecida como **Unicamp**, é uma instituição de ensino superior pública localizada na cidade de Campinas, estado de São Paulo, Brasil. Fundada em 1966, a Unicamp é reconhecida nacional e internacionalmente por sua excelência acadêmica, compromisso com a pesquisa de ponta e contribuições significativas para o desenvolvimento científico, tecnológico e cultural do país.

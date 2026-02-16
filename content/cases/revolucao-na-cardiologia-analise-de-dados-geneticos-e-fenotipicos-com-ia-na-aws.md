@@ -1,12 +1,15 @@
 ---
 title: "Revolução na Cardiologia: Análise de Dados Genéticos e Fenotípicos com IA na AWS"
-date: "2025-03-11T11:03:16"
+date: "2025-07-01T00:00:00"
 slug: "revolucao-na-cardiologia-analise-de-dados-geneticos-e-fenotipicos-com-ia-na-aws"
 excerpt: "Como o Instituto Nacional de Cardiologia utilizou AWS SageMaker, HealthOmics e Bedrock para analisar dados genéticos e fenotípicos de mais de 700 pacientes, identificando biomarcadores digitais para previsão de riscos cardiovasculares."
 featuredImage: "/content-images/cases/revolucao-na-cardiologia-analise-de-dados-geneticos-e-fenotipicos-com-ia-na-aws/logoINC.jpg"
 categories: [18,17,1]
 tags: []
 author: 10
+pilar: "GenAI e Dados"
+oferta: "GenAI e ML"
+setor: "Saúde"
 ---
 
 O **Instituto Nacional de Cardiologia (INC)**, localizado no Rio de Janeiro, é uma das instituições mais respeitadas no campo da saúde cardiovascular no Brasil. O INC desempenha um papel crucial no avanço da pesquisa e inovação clínica, promovendo estudos de ponta para a prevenção e tratamento de doenças cardiovasculares. Como parte do projeto **IPOLE** (Project Oriented Learning Environment), o INC colabora com especialistas internacionais e instituições acadêmicas para enfrentar desafios críticos da área da saúde.

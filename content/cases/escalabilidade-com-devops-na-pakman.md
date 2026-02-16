@@ -7,15 +7,22 @@ featuredImage: "/content-images/cases/escalabilidade-com-devops-na-pakman/pakman
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Serviços"
 ---
 
 A **Pakman** é uma Logtech especializada em serviços de **Last Mile**. Desde desenvolvimento à execução de soluções para empresas que possuem necessidade de entrega com excelência, pontualidade e rastreamento para otimizar a experiência do cliente.
 
 ## Desafio
 
-O maior desafio da Pakman é intrinsecamente ligado à necessidade de uma **entrega eficiente e pontual**. Antes de migrarmos para a infraestrutura da AWS, a Pakman confrontava desafios consideráveis, tais como a gestão inadequada do tempo de entrega, falta de visibilidade em tempo real e limitações na otimização dinâmica das rotas.
+O maior desafio da Pakman estava ligado à necessidade de **entrega eficiente e pontual**. Antes da infraestrutura AWS, a empresa enfrentava:
 
-A incapacidade de oferecer entregas rápidas e precisas resultava em insatisfação dos clientes, que buscam cada vez mais a conveniência e a agilidade nas últimas etapas do processo logístico. A ausência de visibilidade em tempo real dificultava a resposta eficaz a eventos imprevistos, comprometendo a capacidade de adaptação a mudanças nas condições de tráfego ou variações na demanda.
+- **Gestão inadequada do tempo de entrega** — resultando em insatisfação dos clientes
+- **Falta de visibilidade em tempo real** — dificultando a resposta a eventos imprevistos
+- **Limitações na otimização dinâmica de rotas** — comprometendo a adaptação a mudanças no tráfego e na demanda
+
+Os clientes buscam cada vez mais **conveniência e agilidade** nas últimas etapas do processo logístico, e a Pakman precisava de uma infraestrutura que acompanhasse esse ritmo.
 
 ## Início da solução
 

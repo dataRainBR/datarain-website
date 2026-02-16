@@ -29,6 +29,7 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
   ];
 
   const servicosItems = [
+    { label: "Desenvolvimento 360", href: "/servicos/desenvolvimento-360" },
     { label: "Squad & Alocação", href: "/servicos/squad-alocacao" },
     { label: "Suporte e Sustentação", href: "/servicos/suporte" }
   ];

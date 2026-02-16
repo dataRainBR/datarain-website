@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import rehypeSanitize from 'rehype-sanitize';
-import { Quote, TrendingUp, Building2, Layers, Cloud, Trophy } from 'lucide-react';
+import { Quote, TrendingUp } from 'lucide-react';
 
 interface MarkdownRendererProps {
   content: string;
@@ -46,70 +46,6 @@ function isMetricItem(children: ReactNode): boolean {
   return findMetricInChildren(children);
 }
 
-// Executive summary table detection — checks if table headers match the expected pattern
-const EXECUTIVE_SUMMARY_HEADERS = ['cliente', 'setor', 'resultado'];
-
-function isExecutiveSummaryTable(children: ReactNode): boolean {
-  const childArray = React.Children.toArray(children);
-  // First child should be <thead>
-  const thead = childArray.find(
-    (c) => React.isValidElement(c) && (c.type === 'thead' || (c.props as any)?.node?.tagName === 'thead')
-  );
-  if (!thead || !React.isValidElement(thead)) return false;
-  const headerText = extractTextFromChildren(thead.props.children).toLowerCase();
-  return EXECUTIVE_SUMMARY_HEADERS.every((h) => headerText.includes(h));
-}
-
-// Extract rows from a table body as key-value pairs
-function extractTableData(children: ReactNode): Record<string, string>[] {
-  const childArray = React.Children.toArray(children);
-  const tbody = childArray.find(
-    (c) => React.isValidElement(c) && (c.type === 'tbody' || (c.props as any)?.node?.tagName === 'tbody')
-  );
-  if (!tbody || !React.isValidElement(tbody)) return [];
-
-  const thead = childArray.find(
-    (c) => React.isValidElement(c) && (c.type === 'thead' || (c.props as any)?.node?.tagName === 'thead')
-  );
-  
-  // Get header names
-  const headers: string[] = [];
-  if (thead && React.isValidElement(thead)) {
-    const headerRow = React.Children.toArray((thead.props as any).children)[0];
-    if (React.isValidElement(headerRow)) {
-      React.Children.forEach((headerRow.props as any).children, (th: any) => {
-        if (React.isValidElement(th)) {
-          headers.push(extractTextFromChildren((th.props as any).children).trim());
-        }
-      });
-    }
-  }
-
-  const rows: Record<string, string>[] = [];
-  React.Children.forEach((tbody.props as any).children, (tr: any) => {
-    if (React.isValidElement(tr)) {
-      const row: Record<string, string> = {};
-      let colIdx = 0;
-      React.Children.forEach((tr.props as any).children, (td: any) => {
-        if (React.isValidElement(td)) {
-          const key = headers[colIdx] || `col${colIdx}`;
-          row[key] = extractTextFromChildren((td.props as any).children).trim();
-          colIdx++;
-        }
-      });
-      rows.push(row);
-    }
-  });
-  return rows;
-}
-
-const summaryIcons: Record<string, React.FC<{ className?: string }>> = {
-  'Cliente': Building2,
-  'Setor': Layers,
-  'Serviços AWS': Cloud,
-  'Resultado': Trophy,
-};
-
 export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, className = '' }) => {
   return (
     <div className={`prose prose-lg max-w-none dark:prose-invert ${className}`}>
@@ -139,10 +75,10 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, cla
               </div>
             </blockquote>
           ),
-          h2: ({ node, ...props }) => (
-            <h2 {...props} className="text-3xl font-bold mt-10 mb-4 text-primary tracking-tight flex items-center gap-3">
+          h2: ({ node, children }) => (
+            <h2 className="text-3xl font-bold mt-10 mb-4 text-primary tracking-tight flex items-center gap-3">
               <span className="w-1 h-8 bg-primary rounded-full inline-block shrink-0" />
-              {props.children}
+              {children}
             </h2>
           ),
           hr: ({ node, ...props }) => (
@@ -173,44 +109,8 @@ export const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ content, cla
             return <li {...props}>{children}</li>;
           },
           strong: ({ node, ...props }) => (
-            <strong {...props} className="text-foreground font-semibold" />
+            <strong {...props} className="font-semibold" />
           ),
-          table: ({ node, children, ...props }) => {
-            if (isExecutiveSummaryTable(children)) {
-              const rows = extractTableData(children);
-              if (rows.length > 0) {
-                const data = rows[0];
-                const headers = Object.keys(data);
-                return (
-                  <div className="not-prose my-8 rounded-2xl border border-primary/20 bg-gradient-to-br from-primary/5 via-background to-primary/5 p-6 shadow-lg">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      {headers.map((header) => {
-                        const Icon = summaryIcons[header] || Layers;
-                        return (
-                          <div key={header} className="flex items-start gap-3 rounded-xl bg-card/80 border border-border/30 p-4">
-                            <div className="shrink-0 flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
-                              <Icon className="w-5 h-5" />
-                            </div>
-                            <div className="min-w-0">
-                              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1">{header}</p>
-                              <p className="text-sm font-medium text-foreground leading-snug">{data[header]}</p>
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              }
-            }
-            return (
-              <div className="overflow-x-auto my-6">
-                <table {...props} className="min-w-full border-collapse border border-border/30 rounded-lg overflow-hidden">
-                  {children}
-                </table>
-              </div>
-            );
-          },
         }}
       >
         {content}

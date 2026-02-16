@@ -103,10 +103,6 @@ export const SirioLibanesDemo: React.FC = () => {
 
         <div className="relative p-5 md:p-8 space-y-6">
           {/* Header */}
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold text-slate-700">Jornada de Integração — Sírio-Libanês × dataRain</span>
-            <span className="text-[10px] text-slate-400">{activeStep + 1} / {steps.length}</span>
-          </div>
 
           {/* Timeline */}
           <div className="flex items-center gap-1">
@@ -196,11 +192,11 @@ export const SirioLibanesDemo: React.FC = () => {
               )}
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <motion.div initial={{ opacity: 0, x: -15 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="p-4 rounded-xl border border-red-200 bg-red-50">
+                <motion.div initial={{ opacity: 0, x: -15, y: 80 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.1, duration: 0.6 }} className="p-4 rounded-xl border border-red-200 bg-red-50">
                   <div className="text-[10px] uppercase tracking-wider font-bold text-red-500 mb-2">Sem a transformação</div>
                   <p className="text-sm text-red-700/70 leading-relaxed">{step.before}</p>
                 </motion.div>
-                <motion.div initial={{ opacity: 0, x: 15 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }} className="p-4 rounded-xl border border-emerald-200 bg-emerald-50">
+                <motion.div initial={{ opacity: 0, x: 15, y: 120 }} animate={{ opacity: 1, x: 0, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }} className="p-4 rounded-xl border border-emerald-200 bg-emerald-50">
                   <div className="text-[10px] uppercase tracking-wider font-bold text-emerald-600 mb-2">Com a dataRain</div>
                   <p className="text-sm text-emerald-700/70 leading-relaxed">{step.after}</p>
                 </motion.div>

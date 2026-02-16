@@ -7,6 +7,9 @@ featuredImage: "/content-images/cases/devops-traz-mais-seguranca-e-escalabilidad
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Financeiro"
 ---
 
 O **Banco Ótimo**, Ótimo Sociedade de Crédito Direto (Ótimo SCD S/A), é uma plataforma financeira **100% online** que oferece serviços simplificados e acessíveis. A instituição é autorizada pelo Banco Central e conta com a custódia e a experiência da **CODEPE CVC S/A**, empresa com 34 anos de atuação no mercado financeiro e de capitais.
@@ -43,14 +46,14 @@ Para solucionar esse desafio, o Banco Ótimo optou por adotar uma **arquitetura 
 
 ## Resultados
 
-A adoção de práticas DevOps e arquitetura serverless na AWS permitiu ao Banco Ótimo criar um ambiente bancário escalável, seguro e confiável. O foco em automação, monitoramento e fluxos de trabalho eficientes garante a entrega de serviços de alta qualidade aos seus clientes.
+A adoção de práticas DevOps e arquitetura serverless na AWS permitiu ao Banco Ótimo criar um ambiente bancário **escalável, seguro e confiável**. O foco em automação, monitoramento e fluxos de trabalho eficientes garante a entrega de serviços de alta qualidade.
 
-- **Agilidade e Velocidade:** O DevOps permitiu ao Banco Ótimo acelerar o desenvolvimento e a entrega de serviços financeiros, garantindo uma resposta mais rápida às demandas do mercado. A integração contínua e a entrega contínua (CI/CD) possibilitaram o lançamento frequente de novas funcionalidades e atualizações, mantendo a empresa na vanguarda da inovação.
+- **Agilidade e Velocidade:** O DevOps acelerou o desenvolvimento e a entrega de serviços financeiros. A integração contínua e entrega contínua (**CI/CD**) possibilitaram o lançamento frequente de novas funcionalidades, mantendo a empresa na vanguarda da inovação.
 
-- **Confiabilidade e Estabilidade:** Através da automação de processos e testes automatizados, o DevOps ajudou o Banco Ótimo a melhorar a qualidade e a estabilidade de seus sistemas. A detecção precoce de erros e a resolução rápida de problemas resultaram em uma experiência mais confiável para os clientes, fortalecendo a reputação do banco.
+- **Confiabilidade e Estabilidade:** Automação de processos e **testes automatizados** melhoraram a qualidade e estabilidade dos sistemas. A detecção precoce de erros resultou em uma experiência mais confiável para os clientes.
 
-- **Escalabilidade e Flexibilidade:** A arquitetura baseada em nuvem adotada pelo DevOps permitiu ao Banco Ótimo dimensionar facilmente sua infraestrutura para atender às demandas crescentes. Com recursos como a elasticidade dos servidores e o provisionamento automatizado, a empresa pôde lidar com picos de tráfego e adaptar-se rapidamente às mudanças nas necessidades do negócio.
+- **Escalabilidade e Flexibilidade:** A arquitetura em nuvem permite **dimensionar facilmente** a infraestrutura para atender demandas crescentes, com elasticidade de servidores e provisionamento automatizado.
 
-- **Colaboração e Comunicação:** O DevOps promoveu uma cultura de colaboração entre as equipes de desenvolvimento, operações e segurança do Banco Ótimo. A implementação de processos de integração e comunicação contínuos permitiu a troca eficiente de conhecimentos e a resolução colaborativa de problemas, melhorando a eficiência e a produtividade da equipe.
+- **Colaboração e Comunicação:** O DevOps promoveu uma cultura de **colaboração entre desenvolvimento, operações e segurança**, com processos de integração e comunicação contínuos.
 
-- **Segurança e Conformidade:** O DevOps ajudou o Banco Ótimo a fortalecer suas práticas de segurança e conformidade. A automação de testes de segurança, monitoramento contínuo e implementação de controles de acesso granulares garantiram a proteção dos dados dos clientes e o cumprimento dos regulamentos financeiros.
+- **Segurança e Conformidade:** Automação de **testes de segurança**, monitoramento contínuo e controles de acesso granulares garantem a proteção dos dados e o cumprimento dos regulamentos financeiros.

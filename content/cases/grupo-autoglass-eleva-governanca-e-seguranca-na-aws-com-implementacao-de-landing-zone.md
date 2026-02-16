@@ -2,11 +2,15 @@
 title: "Grupo Autoglass Eleva Governança e Segurança na AWS com Implementação de Landing Zone  "
 date: "2025-10-14T09:41:09"
 slug: "grupo-autoglass-eleva-governanca-e-seguranca-na-aws-com-implementacao-de-landing-zone"
-excerpt: "A dataRain, membro premiado da AWS Partner Network (APN), é uma empresa 100% orientada à computação em nuvem com experiência real, está certificada e preparada para disponibilizar para as empresas treinamento, ferramentas, segurança e especialização em todas as etapas de implantações de todos os portes."
+excerpt: "Como o Grupo Autoglass implementou uma Landing Zone na AWS para segmentar cinco unidades de negócio em contas dedicadas, elevando governança, segurança e rastreabilidade de custos com AWS Control Tower e Organizations."
 featuredImage: "/content-images/cases/grupo-autoglass-eleva-governanca-e-seguranca-na-aws-com-implementacao-de-landing-zone/logo-autoglass-RGB_LOGO-ORIGINAL-para-fundos-claros-3.png"
 categories: [33,17,19,20]
 tags: []
 author: 4
+youtubeVideoId: "Q8w1PnnrjaA"
+pilar: "Cybersecurity"
+oferta: "Landing Zone"
+setor: "Indústria"
 ---
 
 O Grupo Autoglass é um ecossistema de soluções que vai além do setor automotivo. Sua história começou com a **Autoglass**, referência em vidros e peças automotivas, presente em mais de 85 lojas no Brasil e na Colômbia e com um e-commerce em constante crescimento. 

@@ -1,12 +1,15 @@
 ---
 title: "DevOps garante sucesso na migração do Bitz, carteira digital do Bradesco"
-date: "2024-02-06T17:07:08"
+date: "2021-11-01T00:00:00"
 slug: "devops-garante-sucesso-na-migracao-do-bitz-carteira-digital-do-bradesco"
 excerpt: "Como a dataRain implementou uma infraestrutura DevOps escalável e altamente disponível para o Bitz em apenas 60 dias, garantindo a continuidade das operações financeiras na AWS."
 featuredImage: "/content-images/cases/devops-garante-sucesso-na-migracao-do-bitz-carteira-digital-do-bradesco/5.png.webp"
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Financeiro"
 ---
 
 O **Bitz** é a carteira digital do **Banco Bradesco**. Uma inovação da instituição financeira tradicional que conta com quase 80 anos de mercado. A plataforma moderna de conta de pagamento grátis é operada via aplicativo de smartphone, com isso busca oferecer uma experiência contemporânea e segura para seus usuários, refletindo os valores de confiabilidade e credibilidade do Bradesco.

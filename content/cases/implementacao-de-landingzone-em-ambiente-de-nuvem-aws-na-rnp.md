@@ -1,12 +1,15 @@
 ---
 title: "Implementação de LandingZone em ambiente de nuvem AWS na RNP"
-date: "2024-06-25T20:41:44"
+date: "2022-09-01T00:00:00"
 slug: "implementacao-de-landingzone-em-ambiente-de-nuvem-aws-na-rnp"
 excerpt: "Como a dataRain reestruturou a Landing Zone da RNP na AWS, elevando a maturidade de segurança e alcançando 200% mais eficiência na configuração de contas com AWS Control Tower e Organizations."
 featuredImage: "/content-images/cases/implementacao-de-landingzone-em-ambiente-de-nuvem-aws-na-rnp/rnp-logo.png"
 categories: [17,19,20]
 tags: []
 author: 4
+pilar: "Cybersecurity"
+oferta: "Landing Zone"
+setor: "Educação"
 ---
 
 A **Rede Nacional de Ensino e Pesquisa (RNP)** é uma plataforma de comunicação e colaboração digital que trabalha para promover e implementar a inovação em aplicações de tecnologia da informação. Sua atuação abrange o setor público, focando especialmente na área de Educação, e está intimamente ligada ao uso de tecnologia.

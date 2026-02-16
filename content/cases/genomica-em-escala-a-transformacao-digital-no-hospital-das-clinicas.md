@@ -1,12 +1,15 @@
 ---
 title: "Genômica em escala: a transformação digital no Hospital das Clínicas"
-date: "2026-01-20T14:31:51"
+date: "2026-01-01T00:00:00"
 slug: "genomica-em-escala-a-transformacao-digital-no-hospital-das-clinicas"
 excerpt: "Como o HCFMUSP migrou 367 TB de dados genômicos para a AWS com apoio da dataRain, criando uma base moderna e escalável para pesquisa genômica e medicina personalizada."
 featuredImage: "/content-images/cases/genomica-em-escala-a-transformacao-digital-no-hospital-das-clinicas/logo-hc.png"
 categories: [18,17,19]
 tags: []
 author: 9
+pilar: "GenAI e Dados"
+oferta: "Arquitetura e Engenharia de Dados"
+setor: "Saúde"
 ---
 
 O setor de saúde enfrenta um desafio crescente: lidar com a explosão de dados genômicos e clínicos e transformá-los em conhecimento aplicável. Nesse cenário, o Hospital das Clínicas da Faculdade de Medicina da Universidade de São Paulo (HCFMUSP) reconheceu a necessidade de modernizar seu ambiente de dados para manter a excelência em pesquisa e no cuidado ao paciente. 

@@ -8,9 +8,13 @@ export interface MarkdownPost {
   excerpt: string;
   featuredImage: string;
   categories: number[];
-  tags: number[];
+  tags: (string | number)[];
   author: number;
   content: string;
+  youtubeVideoId?: string;
+  pilar?: string;
+  oferta?: string;
+  setor?: string;
 }
 
 export interface MarkdownPostMetadata {
@@ -20,7 +24,7 @@ export interface MarkdownPostMetadata {
   excerpt: string;
   featuredImage: string;
   categories: number[];
-  tags: number[];
+  tags: (string | number)[];
   author: number;
 }
 
@@ -102,6 +106,10 @@ function processMarkdownFiles(files: Record<string, string>): MarkdownPost[] {
       tags: data.tags || [],
       author: data.author || 0,
       content: markdownContent,
+      youtubeVideoId: data.youtubeVideoId || undefined,
+      pilar: data.pilar || undefined,
+      oferta: data.oferta || undefined,
+      setor: data.setor || undefined,
     };
   });
 }

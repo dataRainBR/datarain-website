@@ -1,12 +1,15 @@
 ---
 title: "Melhorando o MTTI e MTTR através de uma plataforma de observabilidade"
-date: "2024-02-06T17:30:56"
+date: "2021-11-01T00:00:00"
 slug: "melhorando-o-mtti-e-mttr-atraves-de-uma-plataforma-de-observabilidade"
 excerpt: "Como o Bitz implementou uma plataforma de observabilidade integrada à AWS para reduzir significativamente o tempo de identificação e resolução de incidentes em sua plataforma de pagamentos com 12 milhões de clientes."
 featuredImage: "/content-images/cases/melhorando-o-mtti-e-mttr-atraves-de-uma-plataforma-de-observabilidade/5.png.webp"
 categories: [17,21]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Financeiro"
 ---
 
 O **Bitz**, carteira digital do **Banco Bradesco**, chegou para facilitar e organizar a vida financeira de seus clientes. Por meio de um aplicativo, é possível guardar dinheiro e cartões, da mesma forma que em uma carteira física. Mas, além de reunir estas vantagens, com o Bitz é possível realizar transações, como por exemplo receber pagamentos, transferir dinheiro e outros benefícios, como descontos exclusivos.
@@ -17,22 +20,33 @@ Prático, o Bitz oferece a opção de pagamento via QRCode, nas máquinas de car
 
 ## Desafio
 
-Melhorar o acompanhamento das fases de **desenvolvimento, testes, homologação e produção**, através do monitoramento e rastreamento contínuos dos microserviços internos e de terceiros, para preditivamente identificar comportamentos anômalos, erros e ineficiências que afetavam a qualidade de serviço.
+O Bitz precisava melhorar o acompanhamento das fases de **desenvolvimento, testes, homologação e produção** da sua plataforma de pagamentos. Os principais pontos de dor incluíam:
 
-## Por que migrar para a nuvem AWS com dataRain?
+- **Monitoramento fragmentado** dos microserviços internos e de terceiros
+- Dificuldade em **identificar proativamente** comportamentos anômalos e erros
+- Falta de **correlação entre causa e efeito** nos incidentes
+- Impacto negativo nas **métricas de qualidade** por incidentes detectados apenas em "post-mortem"
 
-A **dataRain**, membro premiado da AWS Partner Network (APN), é uma empresa 100% orientada à computação em nuvem com experiência real, está certificada e preparada para disponibilizar para as empresas treinamento, ferramentas, segurança e especialização em todas as etapas de implantações de todos os portes.
+## Por que a dataRain?
 
-Usando as melhores práticas, testadas e comprovadas, tem expertise necessária para a execução de migrações de forma rápida e segura.
+A **dataRain**, membro premiado da **AWS Partner Network (APN)**, é uma empresa 100% orientada à computação em nuvem, com experiência comprovada em projetos de observabilidade e monitoramento para ambientes de missão crítica.
 
-Por já ser prestadora de serviços da **Prodesp**, a **Desenvolve SP** confiou na dataRain para conduzir este processo de migração e escolheu a AWS pela ampla gama de serviços em nuvem oferecidos, após avaliar as outras soluções de cloud disponíveis no mercado.
-
-Com tantos requisitos, a dataRain realizou a migração completa do Desenvolve SP em apenas **45 dias**, de maneira segura e eficiente.
+Com profundo conhecimento em arquiteturas de microserviços e ferramentas de observabilidade integradas à **AWS**, a dataRain foi a parceira ideal para desenhar e implementar a plataforma que o Bitz precisava para ganhar visibilidade sobre toda a sua stack de pagamentos.
 
 ## A solução
 
-A partir de fevereiro de 2022, após análise de diferentes cenários técnicos, optamos por utilizar a solução **Best-of-The-Breed de observabilidade**, integrada à nossa plataforma de pagamentos, residente na nuvem computacional da **Amazon Web Services**, com serviços de suporte e sustentação da **dataRain S.A.** para o monitoramento dos microserviços e as dependências entre **APIs, Bancos de Dados e Containers**, entre outros serviços, gerando **alarmes proativos** e **dashboards técnicos e de negócios**, que permitem identificar e antecipar com precisão ações corretivas de situações que, anteriormente, só eram identificadas em "post-mortem".
+A partir de fevereiro de 2022, após análise de diferentes cenários técnicos, foi implementada uma solução **Best-of-The-Breed de observabilidade**, integrada à plataforma de pagamentos na **Amazon Web Services**, com suporte e sustentação da **dataRain**. A solução abrange:
+
+- Monitoramento completo dos **microserviços** e suas dependências entre **APIs**, **Bancos de Dados** e **Containers**
+- **Alarmes proativos** que antecipam situações antes que impactem os clientes
+- **Dashboards técnicos e de negócios** com visibilidade em tempo real
+- **Correlação automática** entre eventos para identificação precisa de causa-raiz
 
 ## Resultados
 
-Ao utilizarmos uma solução de observabilidade na nossa plataforma de pagamentos que hoje abrange **12 milhões de clientes cadastrados**, conseguimos reduzir significativamente o **MTTI** e **MTTR**, e estabelecer uma **correlação superior a 95%** entre causa-e-efeito de incidentes, comportamentos anômalos e eventuais erros de microserviços, o que nos permitiu minimizar o impacto sobre os serviços prestados aos nossos clientes, identificando proativamente anomalias e se antecipando a eventos que, no contexto anterior, impactavam negativamente nossas métricas de qualidade.
+Com a plataforma de observabilidade cobrindo **12 milhões de clientes cadastrados**, os resultados foram expressivos:
+
+- **Redução significativa do MTTI e MTTR** — tempo de identificação e resolução de incidentes caiu drasticamente
+- **Correlação superior a 95%** entre causa e efeito de incidentes, comportamentos anômalos e erros de microserviços
+- **Identificação proativa de anomalias**, antecipando eventos que antes só eram detectados em "post-mortem"
+- **Minimização do impacto** sobre os serviços prestados aos clientes, com melhoria direta nas métricas de qualidade

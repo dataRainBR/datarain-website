@@ -1,12 +1,15 @@
 ---
 title: "Integração eficiente de dados médicos no hospital Sírio-Libanês"
-date: "2025-11-03T09:55:30"
+date: "2022-08-01T00:00:00"
 slug: "integracao-eficiente-de-dados-medicos-no-hospital-sirio-libanes"
 excerpt: "Como o Hospital Sírio-Libanês integrou seu sistema interno ao padrão global FHIR usando arquitetura serverless na AWS, com AWS Lambda e AWS HealthLake."
 featuredImage: "/content-images/cases/integracao-eficiente-de-dados-medicos-no-hospital-sirio-libanes/HSL_PH_rgb_pos.jpg"
 categories: [17,19,21,26]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "DevOps e Modernization"
+setor: "Saúde"
 ---
 
 O **Hospital Sírio-Libanês**, uma instituição de saúde de renome, é reconhecido por sua excelência médica e compromisso com a qualidade dos cuidados médicos no Brasil. Desde sua fundação em 1921, o hospital se destacou por sua busca contínua por inovação, proporcionando tratamentos de alta qualidade aos pacientes. Com uma equipe médica altamente qualificada e infraestrutura moderna, o HSL oferece uma ampla gama de especialidades médicas, garantindo diagnósticos precisos e tratamentos eficazes. Sua dedicação à pesquisa médica e à adoção constante de tecnologias avançadas solidifica sua posição como centro de excelência, tanto nacional quanto internacionalmente.

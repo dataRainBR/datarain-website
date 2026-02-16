@@ -2,7 +2,8 @@ import React from 'react';
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
-import { Shield, TrendingDown, Lock, Cloud, FileText, CheckCircle2, ArrowRight } from "lucide-react";
+import { Shield, TrendingDown, Lock, Cloud, FileText, CheckCircle2, ArrowRight, Sparkles, Rocket } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Servicos = () => {
@@ -108,6 +109,48 @@ const Servicos = () => {
                 <a href="/fale-conosco">Falar com um Especialista</a>
               </Button>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Desenvolvimento 360 Destaque */}
+      <section className="py-12 sm:py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-background to-accent/5"></div>
+        <div className="absolute top-0 left-1/4 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="max-w-6xl mx-auto">
+            <Link to="/servicos/desenvolvimento-360" className="block group">
+              <div className="bg-gradient-to-br from-primary/10 via-card to-accent/10 rounded-3xl p-8 sm:p-10 md:p-12 border border-primary/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-1 backdrop-blur-sm relative overflow-hidden">
+                <div className="absolute top-4 right-4 sm:top-6 sm:right-6">
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-accent/20 rounded-full text-accent text-xs sm:text-sm font-semibold">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Novo</span>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-105 transition-transform duration-300">
+                    <Rocket className="w-10 h-10 md:w-12 md:h-12 text-white" />
+                  </div>
+                  
+                  <div className="flex-1">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 group-hover:text-accent transition-colors">
+                      Desenvolvimento 360°
+                    </h3>
+                    <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl">
+                      Da ideia ao produto digital em produção. Design, engenharia, IA e cloud — tudo integrado, 
+                      com velocidade 10x. Powered by evnture labs.
+                    </p>
+                    <div className="inline-flex items-center gap-2 text-primary font-semibold group-hover:text-accent transition-colors">
+                      Conhecer o Desenvolvimento 360
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

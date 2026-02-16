@@ -1,12 +1,15 @@
 ---
 title: "Sair do modelo de Colocation, sem possibilidade de escalar e alto custo, para nuvem AWS de forma otimizada"
-date: "2024-02-06T17:29:33"
+date: "2023-02-01T00:00:00"
 slug: "sair-do-modelo-de-colocation-sem-possibilidade-de-escalar-e-alto-custo-para-nuvem-aws-de-forma-otimizada"
 excerpt: "Como o Desenvolve SP migrou de um modelo de colocation para a nuvem AWS em apenas 45 dias com a dataRain, alcançando 20% de economia anual e escalabilidade para seus R$ 736 milhões em desembolsos de crédito."
 featuredImage: "/content-images/cases/sair-do-modelo-de-colocation-sem-possibilidade-de-escalar-e-alto-custo-para-nuvem-aws-de-forma-otimizada/11.png.webp"
 categories: [17,19]
 tags: []
 author: 4
+pilar: "Cloud"
+oferta: "Migração e Disaster Recovery"
+setor: "Governo"
 ---
 
 O **Desenvolve SP** é o Banco do Empreendedor, uma instituição financeira do Estado de São Paulo, que oferece as melhores opções de financiamento para transformar o projeto de crescimento de empresas em realidade.
@@ -74,3 +77,9 @@ Com tantos requisitos, a dataRain realizou a migração completa do Desenvolve S
 - Ajuste no ambiente de forma rápida e transparente
 - Migração rápida e segura: feita em **45 dias**, levando todos os sistemas e com ajustes nos sistemas principais
 - Modernização do ambiente
+
+## Evolução: Assessment de Segurança
+
+Após a migração bem-sucedida, a parceria entre Desenvolve SP e dataRain evoluiu para um **Assessment de Segurança** completo do ambiente AWS. A avaliação cobriu seis domínios críticos: **IAM** (gestão de identidades e acessos), **General Security** (padrões técnicos e gerenciamento de configuração), **Data Protection** (classificação de dados, criptografia e backups), **Infrastructure Security** (hardening, patching e segmentação de rede), **Detective Controls** (CloudTrail, CloudWatch, AWS Config) e **Incident Response** (runbooks e alta disponibilidade).
+
+O assessment identificou oportunidades de melhoria e resultou em um plano de ação priorizado, elevando a maturidade de segurança do ambiente e reforçando a conformidade exigida por uma instituição financeira do Estado de São Paulo.
