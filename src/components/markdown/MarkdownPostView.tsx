@@ -10,6 +10,7 @@ import { ptBR } from 'date-fns/locale';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import Footer from '@/components/Footer';
 import { CaseDemo } from '@/components/cases-demos/CaseDemo';
+import { SEO } from '@/components/SEO';
 
 interface MarkdownPostViewProps {
   type: 'blog' | 'cases';
@@ -64,6 +65,18 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background/95 to-background">
+      <SEO
+        title={post.title}
+        description={post.excerpt}
+        canonical={`/${type}/${slug}`}
+        ogImage={post.featuredImage || undefined}
+        ogType="article"
+        article={{
+          publishedTime: post.date,
+          author: 'dataRain Consulting',
+          tags: post.tags?.map(String),
+        }}
+      />
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section with Featured Image */}

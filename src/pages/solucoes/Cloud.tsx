@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
 import { Cloud as CloudIcon, TrendingUp, Zap, Shield } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Cloud = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Soluções Cloud" description="Migração, FinOps, DevOps e arquitetura cloud na AWS. Transforme sua infraestrutura com segurança e eficiência." canonical="/solucoes/cloud" />
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}

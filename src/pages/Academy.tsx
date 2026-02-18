@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
 import { BookOpen, Cloud, Lightbulb, ShieldCheck } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 type PillarKey = "cloud" | "data" | "cyber";
 
@@ -232,6 +233,7 @@ function TrackCard({
 const Academy = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Academy" description="Treinamentos e capacitação em cloud AWS, dados e cybersecurity. Aprenda com especialistas certificados." canonical="/academy" />
       <UniversalHeader showHeroSection={false} />
 
       <SolutionHero

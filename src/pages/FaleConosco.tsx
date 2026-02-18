@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import { MessageCircle } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 declare global {
   interface Window {
@@ -35,6 +36,11 @@ const FaleConosco = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Fale Conosco"
+        description="Entre em contato com a dataRain Consulting. Fale com nossos especialistas em cloud, dados e segurança."
+        canonical="/fale-conosco"
+      />
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}

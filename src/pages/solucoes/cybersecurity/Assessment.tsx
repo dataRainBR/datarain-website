@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { ShieldCheck, CheckCircle2, Search, Lock, FileCheck, Target, AlertTriangle, Lightbulb } from "lucide-react";
 
 const Assessment = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Assessment de Segurança" description="Avaliação completa de segurança do seu ambiente cloud. Antecipe riscos e implemente governança eficiente." canonical="/solucoes/cybersecurity/assessment" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

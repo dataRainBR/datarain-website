@@ -2,10 +2,16 @@ import React from 'react';
 import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
+import { SEO } from "@/components/SEO";
 
 const Solucoes = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Soluções"
+        description="Soluções em Cloud, Dados, IA e Cybersecurity para transformar sua empresa com tecnologia de ponta."
+        canonical="/solucoes"
+      />
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}

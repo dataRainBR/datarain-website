@@ -3,47 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>dataRain Consulting</title>
-    <meta name="description" content="Arquitetamos e desenvolvemos soluções de nuvem, IA, dados e segurança, juntamente com a AWS e os softwares mais avançados do mercado.">
     <meta name="author" content="dataRain Consulting" />
+
+    <!-- Fallback meta tags (overridden by react-helmet-async per page) -->
+    <title>dataRain Consulting</title>
+    <meta name="description" content="Arquitetamos e desenvolvemos soluções de nuvem, IA, dados e segurança, juntamente com a AWS e os softwares mais avançados do mercado." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://datarain.com.br" />
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://datarain.com.br" />
-    
-    
-    <meta property="og:image" content="https://datarain.com.br/og-image.png" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="dataRain Consulting" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://datarain.com.br" />
-    
-    
-    <meta name="twitter:image" content="https://datarain.com.br/og-image.png" />
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
-    
+
+    <!-- Google Analytics (GA4) — substitua G-XXXXXXXXXX pelo seu ID -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WLMX9JRLPJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WLMX9JRLPJ');
+    </script>
+
     <!-- Preconnect to external domains for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-  
-  
-  
-  <meta property="og:title" content="dataRain Consulting">
-  <meta name="twitter:title" content="dataRain Consulting">
-  <meta property="og:description" content="Arquitetamos e desenvolvemos soluções de nuvem, IA, dados e segurança, juntamente com a AWS e os softwares mais avançados do mercado.">
-  <meta name="twitter:description" content="Arquitetamos e desenvolvemos soluções de nuvem, IA, dados e segurança, juntamente com a AWS e os softwares mais avançados do mercado.">
-</head>
-
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

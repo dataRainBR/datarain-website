@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { Cloud, CheckCircle2, TrendingDown, Eye, Target, BarChart3, Coins, LineChart } from "lucide-react";
 
 const FinOps = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Gestão de FinOps" description="Otimize custos na nuvem AWS com visibilidade completa e estratégias eficientes de FinOps." canonical="/solucoes/cloud/finops" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { Cloud, CheckCircle2, Zap, Shield, TrendingUp, Rocket, Settings, BarChart3 } from "lucide-react";
 
 const Migracao = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Migração e Disaster Recovery" description="Migre sua infraestrutura para a AWS com segurança e agilidade. Planejamento, execução e disaster recovery completo." canonical="/solucoes/cloud/migracao" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

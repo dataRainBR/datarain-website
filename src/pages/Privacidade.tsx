@@ -3,10 +3,12 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, Mail, MapPin, FileText } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Privacidade = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Política de Privacidade" description="Política de privacidade da dataRain Consulting. Saiba como tratamos seus dados em conformidade com a LGPD." canonical="/privacidade" noindex />
       <UniversalHeader />
 
       {/* Hero Section */}

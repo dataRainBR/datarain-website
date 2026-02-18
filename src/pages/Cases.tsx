@@ -7,6 +7,7 @@ import { Search, ChevronDown, X, LayoutGrid, Table, Sparkles } from "lucide-reac
 import { Link } from "react-router-dom";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
+import { SEO } from "@/components/SEO";
 
 const ALL = "Todos";
 
@@ -116,6 +117,11 @@ const Cases = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Cases de Sucesso"
+        description="Conheça os cases de sucesso da dataRain. Projetos reais de cloud, dados e segurança que transformaram empresas."
+        canonical="/cases"
+      />
       <UniversalHeader />
 
       {/* Hero */}

@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
 import { Shield, Lock, Eye, CheckCircle2 } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Cybersecurity = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Cybersecurity" description="Landing Zone, governança como serviço e assessment de segurança. Proteja seu ambiente cloud com especialistas." canonical="/solucoes/cybersecurity" />
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}

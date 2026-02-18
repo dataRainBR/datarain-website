@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { Lightbulb, Sparkles, Target, Clock, TrendingUp, CheckCircle2, Stethoscope, Landmark, Factory } from "lucide-react";
 
 const PilotAI = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Pilot.AI" description="IA Generativa aplicada ao seu desafio de negócio. Projeto prático desenvolvido sob medida e financiado pela AWS." canonical="/solucoes/dados/pilot-ai" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

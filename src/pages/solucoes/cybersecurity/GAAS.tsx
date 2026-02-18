@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { ShieldCheck, Eye, FileCheck, Settings, Users, Clock, CheckCircle, TrendingUp, AlertTriangle, FileText, Headphones, Calendar, Target, Shield } from "lucide-react";
 
 const GAAS = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="GaaS — Governança como Serviço" description="Governança completa do seu ambiente AWS com visibilidade, controle, conformidade e monitoramento contínuo." canonical="/solucoes/cybersecurity/gaas" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

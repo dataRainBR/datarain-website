@@ -3,6 +3,7 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { 
   Lightbulb, 
   Brain, 
@@ -21,6 +22,7 @@ import {
 const IAML = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="IA e Machine Learning" description="Soluções de inteligência artificial e machine learning na AWS para transformar dados em vantagem competitiva." canonical="/solucoes/dados/ia-ml" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

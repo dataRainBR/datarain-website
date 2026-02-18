@@ -8,6 +8,7 @@ import {
   CheckCircle2, ArrowRight, Layers, Eye, Timer,
   Cpu, Lightbulb, Target, TrendingUp, Infinity
 } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Desenvolvimento360 = () => {
   const capacidades = [
@@ -111,9 +112,8 @@ const Desenvolvimento360 = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Desenvolvimento 360" description="Desenvolvimento web, mobile, IA e cloud sob medida. Do conceito ao deploy com tecnologia de ponta." canonical="/servicos/desenvolvimento-360" />
       <UniversalHeader showHeroSection={false} />
-      
-      {/* Hero Section — Impactante e diferente */}
       <section className="relative min-h-[70vh] sm:min-h-[80vh] md:min-h-[90vh] flex items-center justify-center overflow-hidden">
         {/* Background animado mais elaborado */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/15 via-background to-accent/15"></div>
@@ -135,11 +135,6 @@ const Desenvolvimento360 = () => {
         <div className="relative z-10 container mx-auto px-4 py-12 sm:py-16 md:py-20 lg:py-24 pt-40 sm:pt-44 md:pt-48 lg:pt-52">
           <div className="max-w-6xl mx-auto text-center">
             <div className="backdrop-blur-sm bg-card/20 rounded-3xl p-8 sm:p-10 md:p-16 border border-border/10 shadow-2xl">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full text-accent text-sm font-semibold mb-6 sm:mb-8">
-                <Sparkles className="w-4 h-4" />
-                <span>Powered by evnture labs</span>
-              </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-6 sm:mb-8 text-foreground">
                 Desenvolvimento

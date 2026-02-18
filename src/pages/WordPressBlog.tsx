@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { BookOpen, Search, TrendingUp, Clock, Users, ArrowRight } from 'lucide-react';
 import UniversalHeader from '@/components/layout/UniversalHeader';
 import Footer from '@/components/Footer';
+import { SEO } from '@/components/SEO';
 
 const WordPressBlog: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,8 +39,13 @@ const WordPressBlog: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Blog"
+        description="Artigos sobre cloud computing, IA, dados, cybersecurity e transformação digital. Insights e tendências do mercado de tecnologia."
+        canonical="/blog"
+      />
       <UniversalHeader showHeroSection={false} />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[65vh] flex items-center justify-center overflow-hidden bg-white">
         {/* Modern Background with Large Splashes */}

@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { Lightbulb, CheckCircle2, Database, Shield, Lock, BarChart3, Users, Layers, Server, Zap } from "lucide-react";
 
 const ArquiteturaDados = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Arquitetura e Engenharia de Dados" description="Construa uma arquitetura de dados robusta e escalável. Informações certas, no momento certo, para as pessoas certas." canonical="/solucoes/dados/arquitetura" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

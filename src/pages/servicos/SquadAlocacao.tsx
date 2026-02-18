@@ -3,6 +3,7 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Database, Brain, Shield, Cloud, Layers, CheckCircle2, Users, Zap, TrendingUp, Target } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const SquadAlocacao = () => {
   const diferenciais = [
@@ -61,8 +62,9 @@ const SquadAlocacao = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Squad e Alocação" description="Squads especializados em cloud, dados e segurança, montados sob medida para o seu projeto." canonical="/servicos/squad-alocacao" />
       <UniversalHeader showHeroSection={false} />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Cloud, Database, Brain, Shield, Settings, Clock, CheckCircle2, AlertCircle, Zap, Target } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Suporte = () => {
   const catalogoServicos = [
@@ -182,8 +183,9 @@ const Suporte = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Suporte Gerenciado" description="Monitoramento e suporte 24x7 para sua infraestrutura cloud. Detectamos e resolvemos incidentes antes que impactem seu negócio." canonical="/servicos/suporte" />
       <UniversalHeader showHeroSection={false} />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>

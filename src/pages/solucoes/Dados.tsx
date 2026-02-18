@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import SolutionCard from "@/components/SolutionCard";
 import CTA from "@/components/CTA";
 import { Brain, BarChart3, Sparkles, Database } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const Dados = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="GenAI e Dados" description="Arquitetura de dados, IA generativa e machine learning. Transforme dados em decisões estratégicas para seu negócio." canonical="/solucoes/dados" />
       <UniversalHeader showHeroSection={false} />
       
       {/* Hero Section */}

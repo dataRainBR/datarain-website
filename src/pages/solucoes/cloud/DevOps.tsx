@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { Cloud, CheckCircle2, Zap, Users, Settings, GitBranch, Wrench, Layers } from "lucide-react";
 
 const DevOps = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="DevOps e Modernization" description="Revolucione o desenvolvimento e operação de software com práticas DevOps e modernização na AWS." canonical="/solucoes/cloud/devops" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

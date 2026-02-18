@@ -7,6 +7,7 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import SolutionServiceCard from "@/components/SolutionServiceCard";
 import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
+import { SEO } from "@/components/SEO";
 import astronautImage from "@/assets/astronauta-venturelabs.png";
 import wagnerPhoto from "@/assets/team/wagner-andrade.jpg";
 import guilhermePhoto from "@/assets/team/guilherme-belinelo.jpg";
@@ -102,6 +103,11 @@ const QuemSomos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Quem Somos"
+        description="Conheça a dataRain Consulting. Somos especialistas em soluções AWS, cloud computing, dados e cybersecurity."
+        canonical="/quem-somos"
+      />
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Moderna e Humanizada */}

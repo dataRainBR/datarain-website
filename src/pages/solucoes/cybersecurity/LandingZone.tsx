@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { ShieldCheck, CheckCircle2, Lock, Settings, Eye, Target, Layers, Server } from "lucide-react";
 
 const LandingZone = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Landing Zone" description="Configuração segura e escalável de ambientes cloud na AWS desde o início, com conformidade e melhores práticas." canonical="/solucoes/cybersecurity/landing-zone" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

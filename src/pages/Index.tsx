@@ -7,10 +7,12 @@ import ServicesSection from "@/components/ServicesSection";
 import CertificationsSection from "@/components/sections/CertificationsSection";
 import ClientsSection from "@/components/sections/ClientsSection";
 import Footer from "@/components/Footer";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO canonical="/" />
       {/* Hero Section */}
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={true} />
 

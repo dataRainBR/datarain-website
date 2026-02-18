@@ -3,11 +3,13 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import CTA from "@/components/CTA";
 import SolutionHero from "@/components/solutions/SolutionHero";
+import { SEO } from "@/components/SEO";
 import { Cloud, CheckCircle2, Search, Shield, TrendingUp, Target, FileCheck, Lightbulb } from "lucide-react";
 
 const ArquiteturaCloud = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Assessment de Arquitetura Cloud" description="Avaliação completa da sua arquitetura cloud para garantir segurança, eficiência e escalabilidade na AWS." canonical="/solucoes/cloud/arquitetura" />
       <UniversalHeader showHeroSection={false} />
       
       <SolutionHero

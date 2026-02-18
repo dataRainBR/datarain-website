@@ -5,6 +5,7 @@ import CTA from "@/components/CTA";
 import { Shield, TrendingDown, Lock, Cloud, FileText, CheckCircle2, ArrowRight, Sparkles, Rocket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { SEO } from "@/components/SEO";
 
 const Servicos = () => {
   const servicos = [
@@ -79,8 +80,13 @@ const Servicos = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Serviços"
+        description="Serviços de suporte 24x7, FinOps, DevOps, squad alocado e desenvolvimento 360 para sua infraestrutura cloud."
+        canonical="/servicos"
+      />
       <UniversalHeader showHeroSection={false} />
-      
+
       {/* Hero Section */}
       <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10"></div>
@@ -141,7 +147,7 @@ const Servicos = () => {
                     </h3>
                     <p className="text-base sm:text-lg text-muted-foreground leading-relaxed mb-4 max-w-3xl">
                       Da ideia ao produto digital em produção. Design, engenharia, IA e cloud — tudo integrado, 
-                      com velocidade 10x. Powered by evnture labs.
+                      com velocidade 10x.
                     </p>
                     <div className="inline-flex items-center gap-2 text-primary font-semibold group-hover:text-accent transition-colors">
                       Conhecer o Desenvolvimento 360
