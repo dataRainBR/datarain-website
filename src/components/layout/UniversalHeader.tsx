@@ -43,8 +43,9 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
     { type: 'dropdown', label: "Soluções", href: "/solucoes", items: solucoesItems },
     { type: 'simple', label: "Cases", href: "/cases" },
     { type: 'simple', label: "Blog", href: "/blog" },
-    { type: 'dropdown', label: "Serviços Gerenciados", href: "/servicos", items: servicosItems },
-    { type: 'simple', label: "Academy", href: "/academy" }
+    { type: 'dropdown', label: "Serviços", href: "/servicos", items: servicosItems },
+    { type: 'simple', label: "Academy", href: "/academy" },
+    { type: 'simple', label: "RainConsole", href: "/console" }
   ];
 
   useEffect(() => {
