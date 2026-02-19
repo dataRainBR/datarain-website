@@ -11,26 +11,47 @@ declare global {
   }
 }
 
+const FORM_ID = 'site-datarain-73a5ac52fca43b4abd57';
+const RD_SCRIPT_URL = 'https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js';
+
 const FaleConosco = () => {
   useEffect(() => {
-    // Load RD Station script
-    const script = document.createElement('script');
-    script.src = 'https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js';
-    script.async = true;
-    script.onload = () => {
-      // Initialize form after script loads
+    const formContainer = document.getElementById(FORM_ID);
+    if (!formContainer) return;
+
+    // Always clear previous form content so RDStation can re-render cleanly
+    formContainer.innerHTML = '';
+
+    const initForm = () => {
       if (window.RDStationForms) {
-        new window.RDStationForms('site-datarain-73a5ac52fca43b4abd57', 'null').createForm();
+        // Clear again right before init in case of race conditions
+        formContainer.innerHTML = '';
+        new window.RDStationForms(FORM_ID, 'null').createForm();
       }
     };
+
+    const existingScript = document.querySelector(`script[src="${RD_SCRIPT_URL}"]`) as HTMLScriptElement | null;
+    if (existingScript) {
+      if (window.RDStationForms) {
+        // Script loaded and RDStationForms available — init with a small delay
+        // to ensure the DOM container is fully mounted
+        setTimeout(initForm, 100);
+      } else {
+        existingScript.addEventListener('load', initForm);
+      }
+      return () => {
+        formContainer.innerHTML = '';
+      };
+    }
+
+    const script = document.createElement('script');
+    script.src = RD_SCRIPT_URL;
+    script.async = true;
+    script.onload = initForm;
     document.body.appendChild(script);
 
     return () => {
-      // Cleanup script on unmount
-      const existingScript = document.querySelector(`script[src="${script.src}"]`);
-      if (existingScript) {
-        existingScript.remove();
-      }
+      formContainer.innerHTML = '';
     };
   }, []);
 
