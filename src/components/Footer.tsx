@@ -89,7 +89,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <h3 className="text-base font-semibold mb-6 text-foreground">Produtos</h3>
             <ul className="space-y-4">
-              <li><a href="/produtos/rainconsole" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">RainConsole</span></a></li>
+              <li><a href="/console" className="text-sm text-muted-foreground hover:text-primary transition-colors relative group"><span className="relative after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all group-hover:after:w-full">RainConsole</span></a></li>
             </ul>
           </div>
 
