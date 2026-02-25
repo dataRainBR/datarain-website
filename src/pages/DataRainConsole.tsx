@@ -541,7 +541,7 @@ const ArchitectureDiagram = () => {
 /* ═══════════════════════════════════════════════════════════════════ */
 const DataRainConsole = () => {
   const [activeModule, setActiveModule] = useState(1);
-  const [consoleUser, setConsoleUser] = useState<string | null>(null);
+  const [consoleUser, setConsoleUser] = useState<string | null>("cliente@empresa.com.br");
   const demoRef = useRef<HTMLDivElement>(null);
   const [cursor, setCursor] = useState<{ x: number; y: number; visible: boolean }>({ x: 0, y: 0, visible: false });
   const [cursorTarget, setCursorTarget] = useState<{ x: number; y: number } | null>(null);
@@ -740,7 +740,7 @@ const DataRainConsole = () => {
                 <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
                   {/* Demo interativo */}
                   <div ref={demoRef} className="min-w-0 rounded-2xl relative">
-                    {getDemoComponent(mod.id, handleSidebarNavigate, consoleUser, setConsoleUser, () => setConsoleUser(null))}
+                    {getDemoComponent(mod.id, handleSidebarNavigate, consoleUser, setConsoleUser, () => {})}
                     {/* Animated cursor */}
                     {cursor.visible && (
                       <div

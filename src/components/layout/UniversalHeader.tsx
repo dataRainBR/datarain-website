@@ -4,14 +4,6 @@ import { Menu, X, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "@/components/Logo";
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-} from "@/components/ui/navigation-menu";
 
 interface UniversalHeaderProps {
   backgroundImage?: string;
@@ -22,29 +14,33 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const solucoesItems = [
-    { label: "GenAI e Dados", href: "/solucoes/dados" },
-    { label: "Cybersecurity", href: "/solucoes/cybersecurity" },
-    { label: "Cloud", href: "/solucoes/cloud" }
-  ];
-
-  const servicosItems = [
-    { label: "Desenvolvimento 360", href: "/servicos/desenvolvimento-360" },
-    { label: "Squad & Alocação", href: "/servicos/squad-alocacao" },
-    { label: "Suporte e Sustentação", href: "/servicos/suporte" }
-  ];
-
-  const navItems = [
-    { label: "Sobre Nós", href: "/quem-somos", isRoute: true },
+  const oQueFazemosGroups = [
+    {
+      heading: "Soluções",
+      href: "/solucoes",
+      items: [
+        { label: "GenAI e Dados", href: "/solucoes/dados" },
+        { label: "Cybersecurity", href: "/solucoes/cybersecurity" },
+        { label: "Cloud", href: "/solucoes/cloud" },
+      ],
+    },
+    {
+      heading: "Serviços",
+      href: "/servicos",
+      items: [
+        { label: "Desenvolvimento 360", href: "/servicos/desenvolvimento-360" },
+        { label: "Squad & Alocação", href: "/servicos/squad-alocacao" },
+        { label: "Suporte e Sustentação", href: "/servicos/suporte" },
+        { label: "Academy", href: "/academy" },
+      ],
+    },
   ];
 
   const menuItemsOrder = [
     { type: 'simple', label: "Sobre Nós", href: "/quem-somos" },
-    { type: 'dropdown', label: "Soluções", href: "/solucoes", items: solucoesItems },
+    { type: 'mega', label: "O que fazemos?", href: "/solucoes", groups: oQueFazemosGroups },
     { type: 'simple', label: "Cases", href: "/cases" },
     { type: 'simple', label: "Blog", href: "/blog" },
-    { type: 'dropdown', label: "Serviços", href: "/servicos", items: servicosItems },
-    { type: 'simple', label: "Academy", href: "/academy" },
     { type: 'simple', label: "RainConsole", href: "/console" }
   ];
 
@@ -97,6 +93,46 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                             : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
                         }`}></div>
                       </Link>
+                    ) : menuItem.type === 'mega' ? (
+                      <div key={menuItem.label} className="relative group">
+                        <Link 
+                          to={menuItem.href}
+                          className={`transition-all duration-300 relative px-4 py-2 rounded-lg flex items-center gap-1 ${
+                            isScrolled 
+                              ? 'text-gray-700 hover:text-primary' 
+                              : 'text-gray-700 hover:text-primary'
+                          }`}
+                        >
+                          <span className="relative z-10">{menuItem.label}</span>
+                          <ChevronDown className="h-4 w-4" />
+                          <div className={`absolute inset-0 rounded-lg scale-95 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300 ${
+                            isScrolled
+                              ? 'bg-primary/10 border border-primary/20'
+                              : 'bg-primary/10 backdrop-blur-sm border border-primary/20'
+                          }`}></div>
+                        </Link>
+                        <div className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-xl border border-border/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 flex">
+                          {menuItem.groups?.map((group) => (
+                            <div key={group.heading} className="min-w-[200px] py-3 px-2">
+                              <Link
+                                to={group.href}
+                                className="block px-3 pb-2 mb-1 text-xs font-semibold text-gray-400 uppercase tracking-wider hover:text-primary transition-colors border-b border-gray-100"
+                              >
+                                {group.heading}
+                              </Link>
+                              {group.items.map((item) => (
+                                <Link
+                                  key={item.label}
+                                  to={item.href}
+                                  className="block px-3 py-2 text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors rounded-md"
+                                >
+                                  {item.label}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
                     ) : (
                       <div key={menuItem.label} className="relative group">
                         <Link 
@@ -191,6 +227,37 @@ const UniversalHeader = ({ backgroundImage, showHeroSection = false }: Universal
                       >
                         {menuItem.label}
                       </Link>
+                    ) : menuItem.type === 'mega' ? (
+                      <div key={menuItem.label} className="border-t border-gray-300 pt-4 mt-2">
+                        <Link
+                          to={menuItem.href}
+                          className="font-semibold text-gray-900 block mb-2"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {menuItem.label}
+                        </Link>
+                        {menuItem.groups?.map((group) => (
+                          <div key={group.heading} className="mb-3">
+                            <Link
+                              to={group.href}
+                              className="block pl-4 py-1 text-xs font-semibold text-gray-400 uppercase tracking-wider hover:text-primary"
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              {group.heading}
+                            </Link>
+                            {group.items.map((item) => (
+                              <Link
+                                key={item.label}
+                                to={item.href}
+                                className="block py-2 pl-8 text-gray-700 hover:text-primary"
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {item.label}
+                              </Link>
+                            ))}
+                          </div>
+                        ))}
+                      </div>
                     ) : (
                       <div key={menuItem.label} className="border-t border-gray-300 pt-4 mt-2">
                         <Link

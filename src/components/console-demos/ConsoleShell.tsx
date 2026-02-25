@@ -177,7 +177,7 @@ const ConsoleShell = ({ activeId, children, title, subtitle, onNavigate, user, o
           <div className="flex items-center gap-2 px-2.5 py-1.5 text-[10px] text-white/30 cursor-default hover:text-white/50 transition-colors">
             <Settings className="w-3.5 h-3.5" /><span>Configurações</span>
           </div>
-          <div onClick={onLogout} className="flex items-center gap-2 px-2.5 py-1.5 text-[10px] text-red-400/50 cursor-pointer hover:text-red-400/70 hover:bg-red-500/5 rounded-lg transition-colors">
+          <div onClick={onLogout} className="flex items-center gap-2 px-2.5 py-1.5 text-[10px] text-white/30 cursor-default transition-colors">
             <LogOut className="w-3.5 h-3.5" /><span>Sair</span>
           </div>
         </div>
