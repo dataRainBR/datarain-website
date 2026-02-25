@@ -700,16 +700,20 @@ const QuemSomos = () => {
               </div>
             </div>
             
-            {/* Lado direito - Imagem com fundo escuro para contraste do logo Amazon Bedrock */}
+            {/* Lado direito - Imagem Amazon Bedrock com design moderno */}
             <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-6 group-hover:rotate-3 transition-transform duration-500"></div>
-                <div className="relative bg-slate-900 border border-slate-700 rounded-3xl p-6 hover-scale shadow-xl">
-                  <img 
-                    src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Amazon+Bedrock.jpg" 
-                    alt="Primeiras empresas habilitadas para Amazon Bedrock" 
-                    className="w-full max-w-md lg:max-w-lg h-auto rounded-2xl"
-                  />
+                {/* Glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                {/* Card container */}
+                <div className="relative bg-white/95 backdrop-blur-sm border-2 border-gray-100 rounded-3xl p-4 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+                  <div className="overflow-hidden rounded-2xl">
+                    <img 
+                      src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Amazon+Bedrock.jpg" 
+                      alt="Primeiras empresas habilitadas para Amazon Bedrock" 
+                      className="w-full max-w-md lg:max-w-lg h-auto transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -720,21 +724,28 @@ const QuemSomos = () => {
       {/* Separador visual */}
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
-      {/* Section com certificações AWS */}
-      <section className="pt-48 pb-0 relative overflow-hidden min-h-[500px]">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-top bg-no-repeat"
-          style={{ backgroundImage: `url(${awsCertificationsBg})` }}
-        />
-        <div className="absolute inset-0 bg-black/20" />
+      {/* Section com certificações AWS - Troféu */}
+      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-[#3893af]/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#f78504]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        </div>
+        
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex justify-center items-end">
-            <img 
-              src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/trofeu2.png" 
-              alt="Homem certificado AWS" 
-              className="max-w-xs lg:max-w-sm h-auto"
-            />
+          <div className="flex justify-center items-center">
+            <div className="relative group">
+              {/* Animated glow */}
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
+              {/* Image container */}
+              <div className="relative">
+                <img 
+                  src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/trofeu2.png" 
+                  alt="Homem certificado AWS" 
+                  className="max-w-xs lg:max-w-md h-auto drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -876,25 +887,27 @@ const QuemSomos = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16 items-center">
             
-            {/* Coluna esquerda - Selo de feedback */}
+            {/* Coluna esquerda - Selo de feedback com design moderno */}
             <div className="text-center lg:text-left animate-fade-in">
               <div className="inline-block">
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
-                  <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
+                  {/* Glow effect */}
+                  <div className="absolute -inset-2 bg-gradient-to-br from-white/30 to-white/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
+                  {/* Card with glass effect */}
+                  <div className="relative backdrop-blur-md bg-white/15 border-2 border-white/30 rounded-3xl p-6 shadow-2xl hover:shadow-3xl hover:bg-white/20 transition-all duration-300 hover:-translate-y-1">
                     <img 
                       src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Untitled+design.png" 
                       alt="Selo de Feedback - 12ª Edição" 
-                      className="w-32 md:w-40 lg:w-48 h-auto mx-auto lg:mx-0"
+                      className="w-40 md:w-48 lg:w-56 h-auto mx-auto lg:mx-0 drop-shadow-xl transform group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
                 </div>
               </div>
               <div className="mt-6 space-y-2">
-                <h4 className="text-xl md:text-2xl font-bold text-white">
+                <h4 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">
                   Reconhecimento
                 </h4>
-                <p className="text-white/70">
+                <p className="text-white/90 drop-shadow-md">
                   Avaliação excepcional dos nossos clientes
                 </p>
               </div>
