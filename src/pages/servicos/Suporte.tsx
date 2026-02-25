@@ -211,7 +211,7 @@ const Suporte = () => {
                 Para quem é: empresas em AWS (ou híbridas) que precisam de agilidade, rastreabilidade e confiança na operação, com visão de negócio.
               </p>
               <Button variant="hero" size="xl" asChild>
-                <a href="/fale-conosco">Conhecer Planos de Suporte</a>
+                <a href="#planos">Conhecer Planos de Suporte</a>
               </Button>
             </div>
           </div>
@@ -367,7 +367,7 @@ const Suporte = () => {
       </section>
 
       {/* Planos de Suporte */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+      <section id="planos" className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5"></div>
         
         <div className="container mx-auto px-4 relative z-10">
