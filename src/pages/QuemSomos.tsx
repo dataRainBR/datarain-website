@@ -706,7 +706,7 @@ const QuemSomos = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl transform rotate-6 group-hover:rotate-3 transition-transform duration-500"></div>
                 <div className="relative bg-slate-900 border border-slate-700 rounded-3xl p-6 hover-scale shadow-xl">
                   <img 
-                    src="https://datarain.com.br/wp-content/uploads/2024/01/Copy-of-Home-5.png" 
+                    src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Amazon+Bedrock.jpg" 
                     alt="Primeiras empresas habilitadas para Amazon Bedrock" 
                     className="w-full max-w-md lg:max-w-lg h-auto rounded-2xl"
                   />
@@ -731,7 +731,7 @@ const QuemSomos = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-center items-end">
             <img 
-              src="https://datarain.com.br/wp-content/uploads/2024/02/homem-certificado.png" 
+              src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Trofeu.png" 
               alt="Homem certificado AWS" 
               className="max-w-xs lg:max-w-sm h-auto"
             />
@@ -883,7 +883,7 @@ const QuemSomos = () => {
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-primary/20 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
                   <div className="relative backdrop-blur-sm bg-white/10 border border-white/20 rounded-3xl p-6 hover-scale">
                     <img 
-                      src="https://datarain.com.br/wp-content/uploads/2024/09/Selo-de-Feedback-12a-Edicao-1024x1024.png" 
+                      src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Untitled+design.png" 
                       alt="Selo de Feedback - 12ª Edição" 
                       className="w-32 md:w-40 lg:w-48 h-auto mx-auto lg:mx-0"
                     />
