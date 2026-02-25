@@ -725,15 +725,16 @@ const QuemSomos = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
       {/* Section com certificações AWS - Troféu */}
-      <section className="py-20 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-50">
-        {/* Decorative background elements */}
-        <div className="absolute inset-0">
-          <div className="absolute top-10 right-10 w-[300px] h-[300px] bg-[#3893af]/10 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-10 left-10 w-[400px] h-[400px] bg-[#f78504]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
+      <section className="pt-48 pb-0 relative overflow-hidden min-h-[500px]">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-top bg-no-repeat"
+          style={{ backgroundImage: `url(${awsCertificationsBg})` }}
+        />
+        <div className="absolute inset-0 bg-black/20" />
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-end">
             <div className="relative group">
               {/* Animated glow */}
               <div className="absolute -inset-4 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
