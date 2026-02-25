@@ -731,7 +731,7 @@ const QuemSomos = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="flex justify-center items-end">
             <img 
-              src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Trofeu.png" 
+              src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/trofeu2.png" 
               alt="Homem certificado AWS" 
               className="max-w-xs lg:max-w-sm h-auto"
             />
