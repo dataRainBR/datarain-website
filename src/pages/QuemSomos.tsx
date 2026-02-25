@@ -111,33 +111,33 @@ const QuemSomos = () => {
       <UniversalHeader backgroundImage={heroBackground} showHeroSection={false} />
 
       {/* Hero Section Moderna e Humanizada */}
-      <header className="relative pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-20 md:pb-24 lg:pb-28 overflow-hidden bg-gradient-to-b from-white via-white to-muted/30">
+      <header className="relative pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-16 sm:pb-20 md:pb-24 overflow-hidden bg-gradient-to-b from-white via-white to-muted/30">
         {/* Modern Background with Large Splashes */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 overflow-hidden">
           {/* Large Blue splash - top right */}
-          <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-20 sm:-top-32 -right-20 sm:-right-32 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-[#3893af]/20 rounded-full blur-3xl animate-pulse"></div>
           
           {/* Large Orange splash - bottom left */}
-          <div className="absolute -bottom-32 -left-32 w-[700px] h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute -bottom-20 sm:-bottom-32 -left-20 sm:-left-32 w-[350px] sm:w-[500px] md:w-[700px] h-[350px] sm:h-[500px] md:h-[700px] bg-[#f78504]/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
           
-          {/* Medium accent splashes */}
-          <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
+          {/* Medium accent splashes - hidden on mobile */}
+          <div className="hidden md:block absolute top-1/3 right-1/4 w-[400px] h-[400px] bg-[#3893af]/15 rounded-full blur-2xl"></div>
+          <div className="hidden md:block absolute bottom-1/3 left-1/3 w-[450px] h-[450px] bg-[#f78504]/15 rounded-full blur-2xl"></div>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             
             {/* Main content */}
-            <div className="text-center space-y-8 md:space-y-12">
+            <div className="text-center space-y-6 sm:space-y-8 md:space-y-10">
               
               {/* Heading section */}
-              <div className="space-y-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight">
+              <div className="space-y-4 sm:space-y-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-tight px-4">
                   Quem <span style={{ color: '#f78504' }}>Somos</span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
                   Por trás da dataRain estão pessoas apaixonadas por tecnologia, 
                   inovação e pela oportunidade de fazer a diferença no mundo dos negócios.
                 </p>
@@ -150,30 +150,30 @@ const QuemSomos = () => {
       </header>
 
       {/* Nossa Historia - Cards com estatísticas */}
-      <section className="py-16 sm:py-20 bg-gradient-to-b from-muted/30 via-muted/20 to-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-primary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-b from-muted/30 via-muted/20 to-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-primary/8 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 left-0 w-[350px] sm:w-[500px] md:w-[700px] h-[350px] sm:h-[500px] md:h-[700px] bg-primary/8 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
             
             {/* Lado esquerdo - Texto principal */}
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-6">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight">
+            <div className="space-y-6 sm:space-y-8 animate-fade-in">
+              <div className="space-y-4 sm:space-y-6">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary leading-tight">
                   Nossa História
                 </h2>
-                <div className="w-24 h-1 bg-gradient-modern rounded-full"></div>
+                <div className="w-20 sm:w-24 h-1 bg-gradient-modern rounded-full"></div>
               </div>
               
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                 É nisso que a dataRain acredita. É por isso que somos a referência N°1 em nuvem AWS no Brasil. 
                 Com os melhores profissionais em GenAI e Dados, Cybersecurity e Cloud.
               </p>
               
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
                 Ajudamos você a não apenas resolver problemas com a tecnologia da sua empresa, mas nos tornamos 
                 sua parceira estratégica, traçando um plano de desenvolvimento de maturidade para sua empresa 
                 <span className="font-semibold text-primary"> ganhar mais</span>, 
@@ -183,38 +183,38 @@ const QuemSomos = () => {
             </div>
             
             {/* Lado direito - Cards de estatísticas */}
-            <div className="grid grid-cols-2 gap-4 md:gap-6">
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">#1</div>
-                  <div className="text-sm md:text-base text-muted-foreground font-medium">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 md:gap-6">
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.1s' }}>
+                <div className="text-center space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">#1</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-tight">
                     Referência AWS<br />no Brasil
                   </div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">100%</div>
-                  <div className="text-sm md:text-base text-muted-foreground font-medium">
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.2s' }}>
+                <div className="text-center space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">100%</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-tight">
                     Certificados<br />AWS
                   </div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">200+</div>
-                  <div className="text-sm md:text-base text-muted-foreground font-medium">
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.3s' }}>
+                <div className="text-center space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">200+</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-tight">
                     Projetos<br />Entregues
                   </div>
                 </div>
               </div>
               
-              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
-                <div className="text-center space-y-2">
-                  <div className="text-3xl md:text-4xl font-bold text-primary">10</div>
-                  <div className="text-sm md:text-base text-muted-foreground font-medium">
+              <div className="backdrop-blur-sm bg-white/70 border border-border/30 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-scale animate-fade-in" style={{ animationDelay: '0.4s' }}>
+                <div className="text-center space-y-1 sm:space-y-2">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary">10</div>
+                  <div className="text-xs sm:text-sm md:text-base text-muted-foreground font-medium leading-tight">
                     Anos de<br />Experiência
                   </div>
                 </div>
@@ -223,11 +223,11 @@ const QuemSomos = () => {
           </div>
           
           {/* AWS Partner Badge - Integrado na seção */}
-          <div className="mt-12 sm:mt-16 flex justify-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+          <div className="mt-10 sm:mt-12 md:mt-16 flex justify-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
             <img 
               src={awsPartnerBadge} 
               alt="AWS Partner Advanced Tier Services Badge" 
-              className="max-w-full h-auto max-h-32 sm:max-h-40 md:max-h-48 lg:max-h-56 object-contain hover:scale-105 transition-transform duration-300"
+              className="max-w-full h-auto max-h-24 sm:max-h-32 md:max-h-40 lg:max-h-48 object-contain hover:scale-105 transition-transform duration-300 px-4"
             />
           </div>
         </div>
@@ -392,25 +392,25 @@ const QuemSomos = () => {
       </section>
 
       {/* Team Section - Reorganizada para vir antes */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
+      <section className="py-12 sm:py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-3 sm:mb-4 px-4">
               Conheça nossa equipe
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground px-4">
               Os especialistas que fazem a dataRain ser referência em tecnologia
             </p>
           </div>
 
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto px-2 sm:px-4">
             <Carousel className="w-full">
-              <CarouselContent>
+              <CarouselContent className="-ml-2 sm:-ml-4">
                 {teamMembers.map((member, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/4">
-                    <div className="p-4 h-full">
-                      <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-3xl p-8 shadow-primary hover:shadow-accent transition-all duration-300 text-center group h-full flex flex-col justify-between">
-                        <Avatar className="w-24 h-24 mx-auto mb-4 ring-2 ring-primary/20 group-hover:ring-accent/40 transition-all duration-300">
+                  <CarouselItem key={index} className="pl-2 sm:pl-4 basis-full sm:basis-1/2 md:basis-1/3 lg:basis-1/4">
+                    <div className="p-2 sm:p-3 md:p-4 h-full">
+                      <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 shadow-primary hover:shadow-accent transition-all duration-300 text-center group h-full flex flex-col justify-between">
+                        <Avatar className="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-3 sm:mb-4 ring-2 ring-primary/20 group-hover:ring-accent/40 transition-all duration-300">
                           <AvatarImage 
                             src={member.image} 
                             alt={member.name} 
@@ -421,23 +421,23 @@ const QuemSomos = () => {
                                 : "center top" 
                             }}
                           />
-                          <AvatarFallback className="bg-primary/10 text-primary text-lg font-semibold">
+                          <AvatarFallback className="bg-primary/10 text-primary text-base sm:text-lg font-semibold">
                             {member.name.split(' ').map(n => n[0]).join('')}
                           </AvatarFallback>
                         </Avatar>
-                        <h3 className="text-xl font-bold text-primary mb-2">{member.name}</h3>
-                        <p className="text-muted-foreground mb-4">{member.role}</p>
+                        <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary mb-1 sm:mb-2">{member.name}</h3>
+                        <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">{member.role}</p>
                         <div className="flex justify-center">
                           <a 
                             href={member.linkedin} 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-primary hover:text-accent transition-colors"
+                            className="inline-flex items-center gap-1 sm:gap-2 text-sm sm:text-base text-primary hover:text-accent transition-colors"
                           >
-                            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                             </svg>
-                            LinkedIn
+                            <span className="hidden sm:inline">LinkedIn</span>
                           </a>
                         </div>
                       </div>
@@ -445,97 +445,97 @@ const QuemSomos = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
             </Carousel>
           </div>
         </div>
       </section>
 
       {/* Nossa Metodologia - Layout moderno com steps */}
-      <section className="py-20 bg-background relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-black text-primary mb-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-primary mb-4 sm:mb-6 px-4">
               Nossa Metodologia
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"></div>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-4 sm:mb-6 md:mb-8"></div>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto px-4">
               Se o processo com o desenvolvimento tecnológico da sua empresa parece complexo, 
               aqui nós facilitamos através de um método construído e validado com dezenas de clientes.
             </p>
           </div>
           
           {/* Steps da metodologia */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-8 mb-10 sm:mb-12 md:mb-16">
             {/* Step 1 */}
-            <div className="text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="text-center space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <div className="relative">
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
-                  <Target className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
+                  <Target className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse"></div>
+                <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse"></div>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary">Diagnóstico</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary px-2">Diagnóstico</h3>
+              <p className="text-sm sm:text-sm md:text-base text-muted-foreground px-2">
                 Análise completa da infraestrutura atual
               </p>
             </div>
             
             {/* Step 2 */}
-            <div className="text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            <div className="text-center space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.2s' }}>
               <div className="relative">
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
-                  <Lightbulb className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
+                  <Lightbulb className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+                <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '0.5s' }}></div>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary">Planejamento</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary px-2">Planejamento</h3>
+              <p className="text-sm sm:text-sm md:text-base text-muted-foreground px-2">
                 Estratégia personalizada para sua empresa
               </p>
             </div>
             
             {/* Step 3 */}
-            <div className="text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <div className="text-center space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.3s' }}>
               <div className="relative">
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
-                  <Rocket className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
+                  <Rocket className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '1s' }}></div>
+                <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '1s' }}></div>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary">Implementação</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary px-2">Implementação</h3>
+              <p className="text-sm sm:text-sm md:text-base text-muted-foreground px-2">
                 Execução com acompanhamento contínuo
               </p>
             </div>
             
             {/* Step 4 */}
-            <div className="text-center space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+            <div className="text-center space-y-3 sm:space-y-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <div className="relative">
-                <div className="w-20 h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
-                  <Award className="w-8 h-8 text-white" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary rounded-full flex items-center justify-center mx-auto shadow-lg">
+                  <Award className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
                 </div>
-                <div className="absolute inset-0 w-20 h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+                <div className="absolute inset-0 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-primary/20 rounded-full mx-auto animate-pulse" style={{ animationDelay: '1.5s' }}></div>
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-primary">Evolução</h3>
-              <p className="text-sm md:text-base text-muted-foreground">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold text-primary px-2">Evolução</h3>
+              <p className="text-sm sm:text-sm md:text-base text-muted-foreground px-2">
                 Melhoria contínua e inovação
               </p>
             </div>
           </div>
           
           {/* CTA destacada */}
-          <div className="max-w-4xl mx-auto">
-            <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-3xl p-8 md:p-12 shadow-2xl text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
-              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
+          <div className="max-w-4xl mx-auto px-4">
+            <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl text-center animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary mb-3 sm:mb-4">
                 Jornada do Zero à IA Avançada
               </h3>
-              <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
                 Entre em contato agora e ganhe uma <span className="font-bold text-accent">consultoria de 5h</span> para 
                 receber o seu diagnóstico gratuito e descubra onde a sua empresa está nessa jornada!
               </p>
-              <Button variant="hero" size="xl" className="hover-scale" asChild>
+              <Button variant="hero" size="xl" className="hover-scale text-sm sm:text-base" asChild>
                 <a href="/fale-conosco">Fazer Avaliação Gratuita</a>
               </Button>
             </div>
@@ -544,21 +544,21 @@ const QuemSomos = () => {
       </section>
 
       {/* Resultados Comprovados - Integrado com Projetos */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center space-y-8 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">
+      <section className="py-12 sm:py-16 md:py-20 bg-background">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8 mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary px-4">
               Resultados Comprovados
             </h2>
-            <p className="text-lg md:text-xl font-semibold text-primary">
+            <p className="text-base sm:text-lg md:text-xl font-semibold text-primary px-4">
               E quem afirma isso não somos nós, mas todos que já passaram por esse processo:
             </p>
           </div>
           
           {/* Carrossel de projetos integrado */}
-          <div className="backdrop-blur-md bg-white/30 p-4 md:p-8 rounded-2xl border border-white/40 shadow-lg overflow-hidden">
+          <div className="backdrop-blur-md bg-white/30 p-3 sm:p-4 md:p-6 lg:p-8 rounded-xl sm:rounded-2xl border border-white/40 shadow-lg overflow-hidden">
             <div className="overflow-hidden">
-              <div className="marquee items-center gap-6 md:gap-8 lg:gap-12">
+              <div className="marquee items-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
                 {[
                   { 
                     src: "https://d335luupugsy2.cloudfront.net/cms/files/734817/1750179431/$qg47aiybhz", 
@@ -632,7 +632,7 @@ const QuemSomos = () => {
                     key={index}
                     src={logo.src} 
                     alt={`${logo.alt} ${Math.floor(index / 4) + 1}`} 
-                    className="h-8 sm:h-10 md:h-14 lg:h-16 xl:h-20 w-auto opacity-80 flex-shrink-0" 
+                    className="h-6 sm:h-8 md:h-10 lg:h-14 xl:h-16 w-auto opacity-80 flex-shrink-0" 
                   />
                 ))}
               </div>
@@ -645,55 +645,55 @@ const QuemSomos = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
       {/* Amazon Bedrock - Design original com logo contrastado */}
-      <section className="py-20 bg-background relative">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="py-12 sm:py-16 md:py-20 bg-background relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 xl:gap-16 items-center">
             
             {/* Lado esquerdo - Texto */}
-            <div className="space-y-8 animate-fade-in">
-              <div className="space-y-6">
+            <div className="space-y-6 sm:space-y-8 animate-fade-in">
+              <div className="space-y-4 sm:space-y-6">
                 <div className="inline-block">
-                  <span className="bg-primary text-white px-6 py-3 rounded-full text-sm font-bold tracking-wide uppercase shadow-lg">
+                  <span className="bg-primary text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-bold tracking-wide uppercase shadow-lg">
                     PIONEIROS NO MUNDO
                   </span>
                 </div>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground leading-tight">
                   Líder no desenvolvimento de soluções com:
                 </h3>
-                <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
+                <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full"></div>
               </div>
               
               {/* Technology badges originais */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Brain className="w-6 h-6 text-white" />
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="text-foreground font-bold text-sm md:text-base">AWS GenAI</div>
+                  <div className="text-foreground font-bold text-xs sm:text-sm md:text-base">AWS GenAI</div>
                 </div>
-                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Target className="w-6 h-6 text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Target className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="text-foreground font-bold text-sm md:text-base">Machine Learning</div>
+                  <div className="text-foreground font-bold text-xs sm:text-sm md:text-base">Machine Learning</div>
                 </div>
-                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Cloud className="w-6 h-6 text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Cloud className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="text-foreground font-bold text-sm md:text-base">Cloud Native</div>
+                  <div className="text-foreground font-bold text-xs sm:text-sm md:text-base">Cloud Native</div>
                 </div>
-                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-2xl p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="w-12 h-12 bg-primary rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
-                    <Rocket className="w-6 h-6 text-white" />
+                <div className="backdrop-blur-sm bg-white/60 border border-border/20 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 text-center hover-scale group shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3 group-hover:bg-accent transition-colors duration-300 shadow-md">
+                    <Rocket className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <div className="text-foreground font-bold text-sm md:text-base">Data Management Solutions</div>
+                  <div className="text-foreground font-bold text-xs sm:text-sm md:text-base leading-tight">Data Management Solutions</div>
                 </div>
               </div>
               
               {/* Destaque adicional */}
-              <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 rounded-2xl p-6 shadow-lg">
-                <p className="text-muted-foreground text-lg leading-relaxed">
+              <div className="backdrop-blur-sm bg-primary/10 border border-primary/20 rounded-xl sm:rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg">
+                <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed">
                   <span className="font-bold text-primary">Primeiro parceiro AWS</span> no Brasil 
                   habilitado para Amazon Bedrock e soluções de IA Generativa
                 </p>
@@ -702,16 +702,16 @@ const QuemSomos = () => {
             
             {/* Lado direito - Imagem Amazon Bedrock com design moderno */}
             <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="relative group">
+              <div className="relative group w-full max-w-md lg:max-w-lg">
                 {/* Glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-2xl sm:rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity duration-500"></div>
                 {/* Card container */}
-                <div className="relative bg-white/95 backdrop-blur-sm border-2 border-gray-100 rounded-3xl p-4 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
-                  <div className="overflow-hidden rounded-2xl">
+                <div className="relative bg-white/95 backdrop-blur-sm border-2 border-gray-100 rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
+                  <div className="overflow-hidden rounded-xl sm:rounded-2xl">
                     <img 
                       src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/Amazon+Bedrock.jpg" 
                       alt="Primeiras empresas habilitadas para Amazon Bedrock" 
-                      className="w-full max-w-md lg:max-w-lg h-auto transform group-hover:scale-105 transition-transform duration-500"
+                      className="w-full h-auto transform group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 </div>
@@ -725,7 +725,7 @@ const QuemSomos = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
       {/* Section com certificações AWS - Troféu */}
-      <section className="pt-48 pb-0 relative overflow-hidden min-h-[500px]">
+      <section className="pt-32 sm:pt-40 md:pt-48 pb-0 relative overflow-hidden min-h-[400px] sm:min-h-[500px]">
         {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-top bg-no-repeat"
@@ -733,17 +733,17 @@ const QuemSomos = () => {
         />
         <div className="absolute inset-0 bg-black/20" />
         
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex justify-center items-end">
             <div className="relative group">
               {/* Animated glow */}
-              <div className="absolute -inset-4 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
+              <div className="absolute -inset-2 sm:-inset-4 bg-gradient-to-r from-[#3893af] via-[#f78504] to-[#3893af] rounded-full blur-xl sm:blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-pulse"></div>
               {/* Image container */}
               <div className="relative">
                 <img 
                   src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/trofeu2.png" 
                   alt="Homem certificado AWS" 
-                  className="max-w-xs lg:max-w-md h-auto drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
+                  className="max-w-[200px] sm:max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -755,55 +755,55 @@ const QuemSomos = () => {
       <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent"></div>
       
       {/* Girls in Cloud Section - Design mais limpo e focado */}
-      <section className="py-20 bg-gradient-to-br from-white via-slate-50 to-white relative overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent/8 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/8 rounded-full blur-3xl"></div>
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white via-slate-50 to-white relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 right-0 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-accent/8 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-primary/8 rounded-full blur-3xl"></div>
         </div>
         
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-6 sm:space-y-8">
             
             {/* Conteúdo centralizado */}
-            <div className="space-y-6 animate-fade-in">
+            <div className="space-y-4 sm:space-y-6 animate-fade-in">
               <div className="inline-block">
-                <span className="bg-accent text-white px-6 py-3 rounded-full text-sm font-bold tracking-wide uppercase shadow-lg">
+                <span className="bg-accent text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-bold tracking-wide uppercase shadow-lg">
                   PROJETO SOCIAL
                 </span>
               </div>
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+              <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight px-4">
                 <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
                   Girls in Cloud
                 </span>
               </h3>
-              <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto"></div>
-              <p className="text-lg md:text-xl text-slate-700 leading-relaxed max-w-2xl mx-auto">
+              <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto"></div>
+              <p className="text-base sm:text-lg md:text-xl text-slate-700 leading-relaxed max-w-2xl mx-auto px-4">
                 Nosso projeto que <span className="font-bold text-accent">impulsiona mulheres</span> a entrarem na área da tecnologia e 
                 <span className="font-bold text-primary"> capacita-las para o mercado de trabalho</span>.
               </p>
             </div>
             
             {/* Estatísticas em grid horizontal mais limpo */}
-            <div className="grid grid-cols-3 gap-4 max-w-lg mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
-              <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
-                <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">3.600</div>
-                <div className="text-sm text-slate-600 font-medium">Inscritas</div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 max-w-lg mx-auto animate-fade-in px-4" style={{ animationDelay: '0.2s' }}>
+              <div className="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center hover-scale group shadow-lg">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-1">3.600</div>
+                <div className="text-xs sm:text-sm text-slate-600 font-medium">Inscritas</div>
               </div>
               
-              <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
-                <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">200</div>
-                <div className="text-sm text-slate-600 font-medium">Selecionadas</div>
+              <div className="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center hover-scale group shadow-lg">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-1">200</div>
+                <div className="text-xs sm:text-sm text-slate-600 font-medium">Selecionadas</div>
               </div>
               
-              <div className="bg-white border border-slate-200 rounded-2xl p-4 text-center hover-scale group shadow-lg">
-                <div className="text-2xl md:text-3xl font-black text-slate-900 mb-1">180</div>
-                <div className="text-sm text-slate-600 font-medium">Formadas</div>
+              <div className="bg-white border border-slate-200 rounded-xl sm:rounded-2xl p-3 sm:p-4 text-center hover-scale group shadow-lg">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-slate-900 mb-1">180</div>
+                <div className="text-xs sm:text-sm text-slate-600 font-medium">Formadas</div>
               </div>
             </div>
             
             {/* Call-to-action simplificado */}
-            <div className="bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-2xl p-6 max-w-2xl mx-auto animate-fade-in shadow-lg" style={{ animationDelay: '0.4s' }}>
-              <p className="text-slate-700 text-base md:text-lg leading-relaxed">
+            <div className="bg-gradient-to-r from-accent/10 to-primary/10 border border-accent/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 max-w-2xl mx-auto animate-fade-in shadow-lg" style={{ animationDelay: '0.4s' }}>
+              <p className="text-slate-700 text-sm sm:text-base md:text-lg leading-relaxed px-2">
                 <span className="font-bold text-accent">Transformando vidas</span> através da tecnologia e 
                 <span className="font-bold text-primary"> criando oportunidades</span> no mercado de trabalho.
               </p>
@@ -813,19 +813,19 @@ const QuemSomos = () => {
       </section>
 
       {/* Áreas de Atuação - Design moderno com SolutionServiceCard */}
-      <section className="py-16 sm:py-20 bg-gradient-to-br from-white to-muted/20">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16 animate-fade-in">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-foreground mb-4 sm:mb-6">
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-white to-muted/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16 animate-fade-in">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-3 sm:mb-4 md:mb-6 px-4">
               Muito além da nuvem
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-4 sm:mb-6"></div>
-            <h3 className="text-lg sm:text-xl md:text-2xl text-muted-foreground font-light">
+            <div className="w-20 sm:w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-3 sm:mb-4 md:mb-6"></div>
+            <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground font-light px-4">
               Explore nossas áreas de atuação
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto mb-10 sm:mb-12 md:mb-16">
             {/* GenAI e Dados Card */}
             <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
               <SolutionServiceCard
@@ -864,13 +864,13 @@ const QuemSomos = () => {
           </div>
           
           {/* Quote destaque */}
-          <div className="text-center animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-6 md:p-8 max-w-3xl mx-auto">
-              <blockquote className="text-lg md:text-xl text-muted-foreground italic font-light leading-relaxed">
+          <div className="text-center animate-fade-in px-4" style={{ animationDelay: '0.4s' }}>
+            <div className="backdrop-blur-sm bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-xl sm:rounded-2xl p-4 sm:p-6 md:p-8 max-w-3xl mx-auto">
+              <blockquote className="text-base sm:text-lg md:text-xl text-muted-foreground italic font-light leading-relaxed">
                 "Aqui todos somos certificados AWS, desde o estagiário até o CEO!"
               </blockquote>
-              <div className="mt-4">
-                <div className="w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto"></div>
+              <div className="mt-3 sm:mt-4">
+                <div className="w-12 sm:w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto"></div>
               </div>
             </div>
           </div>

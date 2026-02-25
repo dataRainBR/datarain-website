@@ -124,58 +124,28 @@ const Cases = () => {
       />
       <UniversalHeader />
 
-      {/* Hero */}
-      <section className="relative min-h-[50vh] sm:min-h-[60vh] md:min-h-[70vh] flex flex-col overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/10">
-          <div className="absolute -top-20 -right-20 sm:-top-32 sm:-right-32 w-[300px] sm:w-[400px] md:w-[600px] h-[300px] sm:h-[400px] md:h-[600px] bg-primary/20 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute -bottom-20 -left-20 sm:-bottom-32 sm:-left-32 w-[350px] sm:w-[500px] md:w-[700px] h-[350px] sm:h-[500px] md:h-[700px] bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1s" }} />
-        </div>
-        <div className="flex-1 flex items-center relative z-10 pt-40 sm:pt-44 md:pt-48 lg:pt-52 pb-12 sm:pb-16 md:pb-20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto text-center">
-              <div className="backdrop-blur-sm bg-card/30 rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-10 border border-border/20 shadow-2xl">
-                <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-4">
-                  Portfólio
-                </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4 sm:mb-6 text-foreground">
-                  Cases de Transformação Digital
-                </h1>
-                <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-4 sm:mb-6">
-                  Descubra como revolucionamos negócios através de soluções tecnológicas inovadoras que geram resultados mensuráveis
-                </p>
-                <div className="flex items-center justify-center gap-4 md:gap-6 opacity-70">
-                  <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-accent to-primary rounded-full" />
-                  <p className="text-xs md:text-sm text-muted-foreground uppercase tracking-wider font-medium">Resultados Comprovados</p>
-                  <div className="w-12 md:w-16 h-1 bg-gradient-to-r from-primary to-accent rounded-full" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Main */}
-      <main className="relative bg-background py-12 sm:py-16 md:py-20">
+      <main className="relative bg-background pt-32 sm:pt-36 md:pt-40 lg:pt-44 pb-12 sm:pb-16 md:pb-20">
         <div className="absolute inset-0 bg-gradient-to-b from-background to-primary/5" />
-        <div className="relative z-10 container mx-auto px-4">
-          <div className="text-center mb-12 md:mb-16">
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
             <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-4">
               Explore
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6 px-4">
               Nossos Cases
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Cada projeto conta uma história única de transformação e inovação
             </p>
           </div>
 
-          <div className="bg-card/50 backdrop-blur-sm rounded-3xl border border-border/20 shadow-xl p-6 sm:p-8 md:p-10">
+          <div className="bg-card/50 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-border/20 shadow-xl p-4 sm:p-6 md:p-8 lg:p-10">
             {/* Filter bar — single compact row */}
-            <div className="flex flex-col gap-4 mb-8">
+            <div className="flex flex-col gap-4 mb-6 sm:mb-8">
               {/* Search + dropdowns */}
-              <div className="flex flex-wrap items-center gap-3">
-                <div className="relative flex-1 min-w-[200px]">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                <div className="relative flex-1 min-w-[180px] sm:min-w-[200px]">
                   <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                   <input
                     type="text"
@@ -193,7 +163,7 @@ const Cases = () => {
                 <div className="flex items-center border border-border/50 rounded-xl overflow-hidden ml-auto">
                   <button
                     onClick={() => setViewMode("cards")}
-                    className={`flex items-center gap-1.5 px-3 py-2.5 text-sm transition-all ${
+                    className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-2.5 text-sm transition-all ${
                       viewMode === "cards"
                         ? "bg-primary text-primary-foreground"
                         : "bg-card text-muted-foreground hover:text-foreground"
@@ -205,7 +175,7 @@ const Cases = () => {
                   </button>
                   <button
                     onClick={() => setViewMode("table")}
-                    className={`flex items-center gap-1.5 px-3 py-2.5 text-sm transition-all ${
+                    className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-2.5 text-sm transition-all ${
                       viewMode === "table"
                         ? "bg-primary text-primary-foreground"
                         : "bg-card text-muted-foreground hover:text-foreground"
@@ -254,33 +224,33 @@ const Cases = () => {
             </div>
 
             {/* Count */}
-            <p className="text-sm text-muted-foreground mb-6">
+            <p className="text-sm text-muted-foreground mb-4 sm:mb-6">
               {filtered.length} {filtered.length === 1 ? "case encontrado" : "cases encontrados"}
             </p>
 
             {/* Grid / Table */}
             {filtered.length === 0 ? (
-              <div className="text-center py-16">
-                <p className="text-muted-foreground text-lg mb-2">Nenhum case encontrado.</p>
+              <div className="text-center py-12 sm:py-16">
+                <p className="text-muted-foreground text-base sm:text-lg mb-2">Nenhum case encontrado.</p>
                 <button onClick={clear} className="text-primary text-sm hover:underline">Limpar filtros</button>
               </div>
             ) : viewMode === "cards" ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {metadata.map((post) => (
                   <MarkdownPostCard key={post.slug} post={post} routePrefix="/cases" />
                 ))}
               </div>
             ) : (
-              <div className="overflow-x-auto rounded-xl border border-border/50">
-                <table className="w-full text-sm">
+              <div className="overflow-x-auto rounded-xl border border-border/50 -mx-4 sm:mx-0">
+                <table className="w-full text-sm min-w-[600px]">
                   <thead>
                     <tr className="bg-muted/50 border-b border-border/50">
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground">Logo</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground">Case</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground hidden md:table-cell">Pilar</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground hidden lg:table-cell">Oferta</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground hidden sm:table-cell">Setor</th>
-                      <th className="text-left px-4 py-3 font-medium text-muted-foreground hidden sm:table-cell">Data</th>
+                      <th className="text-left px-3 sm:px-4 py-3 font-medium text-muted-foreground text-xs sm:text-sm">Logo</th>
+                      <th className="text-left px-3 sm:px-4 py-3 font-medium text-muted-foreground text-xs sm:text-sm">Case</th>
+                      <th className="text-left px-3 sm:px-4 py-3 font-medium text-muted-foreground text-xs sm:text-sm hidden md:table-cell">Pilar</th>
+                      <th className="text-left px-3 sm:px-4 py-3 font-medium text-muted-foreground text-xs sm:text-sm hidden lg:table-cell">Oferta</th>
+                      <th className="text-left px-3 sm:px-4 py-3 font-medium text-muted-foreground text-xs sm:text-sm hidden sm:table-cell">Setor</th>
+                      <th className="text-left px-3 sm:px-4 py-3 font-medium text-muted-foreground text-xs sm:text-sm hidden sm:table-cell">Data</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -288,19 +258,19 @@ const Cases = () => {
                       const isSuperCase = post.tags?.includes("Super Case");
                       return (
                       <tr key={post.slug} className={`border-b border-border/30 hover:bg-muted/30 transition-colors ${isSuperCase ? 'bg-accent/[0.03]' : ''}`}>
-                        <td className="px-4 py-3">
+                        <td className="px-3 sm:px-4 py-3">
                           <Link to={`/cases/${post.slug}`} className="flex items-center gap-2">
                             {post.featuredImage ? (
-                              <img src={post.featuredImage} alt="" className="h-8 w-14 object-contain" loading="lazy" />
+                              <img src={post.featuredImage} alt="" className="h-6 sm:h-8 w-10 sm:w-14 object-contain" loading="lazy" />
                             ) : (
-                              <div className="h-8 w-14 bg-muted rounded" />
+                              <div className="h-6 sm:h-8 w-10 sm:w-14 bg-muted rounded" />
                             )}
                           </Link>
                         </td>
-                        <td className="px-4 py-3">
+                        <td className="px-3 sm:px-4 py-3">
                           <Link to={`/cases/${post.slug}`} className="hover:text-primary transition-colors">
                             <div className="flex items-center gap-2">
-                              <p className="font-medium line-clamp-1">{post.title}</p>
+                              <p className="font-medium line-clamp-1 text-xs sm:text-sm">{post.title}</p>
                               {isSuperCase && (
                                 <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold text-accent bg-accent/10 flex-shrink-0">
                                   <Sparkles className="w-2.5 h-2.5" />
@@ -311,10 +281,10 @@ const Cases = () => {
                             <p className="text-xs text-muted-foreground line-clamp-1 mt-0.5">{post.excerpt}</p>
                           </Link>
                         </td>
-                        <td className="px-4 py-3 text-muted-foreground hidden md:table-cell">{post.pilar || "—"}</td>
-                        <td className="px-4 py-3 text-muted-foreground hidden lg:table-cell">{post.oferta || "—"}</td>
-                        <td className="px-4 py-3 text-muted-foreground hidden sm:table-cell">{post.setor || "—"}</td>
-                        <td className="px-4 py-3 text-muted-foreground hidden sm:table-cell whitespace-nowrap">
+                        <td className="px-3 sm:px-4 py-3 text-muted-foreground text-xs sm:text-sm hidden md:table-cell">{post.pilar || "—"}</td>
+                        <td className="px-3 sm:px-4 py-3 text-muted-foreground text-xs sm:text-sm hidden lg:table-cell">{post.oferta || "—"}</td>
+                        <td className="px-3 sm:px-4 py-3 text-muted-foreground text-xs sm:text-sm hidden sm:table-cell">{post.setor || "—"}</td>
+                        <td className="px-3 sm:px-4 py-3 text-muted-foreground text-xs sm:text-sm hidden sm:table-cell whitespace-nowrap">
                           {format(new Date(post.date), "MMM yyyy", { locale: ptBR })}
                         </td>
                       </tr>
