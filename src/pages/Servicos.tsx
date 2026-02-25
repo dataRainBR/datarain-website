@@ -59,22 +59,26 @@ const Servicos = () => {
     {
       number: "01",
       title: "Avaliação inicial",
-      description: "Diagnóstico gratuito da maturidade do seu ambiente."
+      description: "Diagnóstico gratuito da maturidade do seu ambiente.",
+      color: "primary"
     },
     {
       number: "02",
       title: "Onboarding rápido",
-      description: "Integração do seu ambiente às nossas plataformas de monitoramento."
+      description: "Integração do seu ambiente às nossas plataformas de monitoramento.",
+      color: "primary"
     },
     {
       number: "03",
       title: "Gestão contínua",
-      description: "Operação diária, relatórios e recomendações de melhoria."
+      description: "Operação diária, relatórios e recomendações de melhoria.",
+      color: "primary"
     },
     {
       number: "04",
       title: "Evolução constante",
-      description: "Revisões periódicas para alinhar tecnologia e estratégia de negócio."
+      description: "Revisões periódicas para alinhar tecnologia e estratégia de negócio.",
+      color: "primary"
     }
   ];
 
@@ -137,7 +141,7 @@ const Servicos = () => {
                 </div>
                 
                 <div className="flex flex-col md:flex-row items-start md:items-center gap-6 md:gap-10">
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-105 transition-transform duration-300">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0 shadow-xl group-hover:scale-105 transition-transform duration-300">
                     <Rocket className="w-10 h-10 md:w-12 md:h-12 text-white" />
                   </div>
                   
@@ -170,7 +174,7 @@ const Servicos = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
                 Nossa Oferta
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -191,7 +195,7 @@ const Servicos = () => {
                   >
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 p-6 md:p-8">
                       <div className="flex items-center gap-4 md:gap-6 flex-1">
-                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                        <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-105 transition-transform duration-300">
                           <Icon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                         </div>
                         
@@ -227,7 +231,7 @@ const Servicos = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Diferenciais
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -268,7 +272,7 @@ const Servicos = () => {
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Jornada
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -282,7 +286,7 @@ const Servicos = () => {
             {/* Timeline Grid */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 relative">
               {/* Linha conectora horizontal (desktop) */}
-              <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-20"></div>
+              <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-primary/20"></div>
               
               {processoSteps.map((step, index) => (
                 <div key={index} className="relative">
@@ -294,7 +298,7 @@ const Servicos = () => {
                         <div className="text-7xl md:text-8xl font-bold text-primary/10 leading-none">
                           {step.number}
                         </div>
-                        <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-accent to-accent/70 shadow-xl flex items-center justify-center">
+                        <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary shadow-xl flex items-center justify-center">
                           <span className="text-white font-bold text-xl md:text-2xl">{step.number}</span>
                         </div>
                       </div>
@@ -302,7 +306,7 @@ const Servicos = () => {
 
                     {/* Conteúdo */}
                     <div className="flex-1">
-                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-xl md:text-2xl font-bold text-primary mb-4">
                         {step.title}
                       </h3>
                       <p className="text-sm md:text-base text-muted-foreground leading-relaxed">

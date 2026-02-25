@@ -16,37 +16,37 @@ const Desenvolvimento360 = () => {
       icon: Globe,
       title: "Plataformas Web",
       description: "Aplicações web modernas, responsivas e escaláveis — do SaaS ao marketplace.",
-      gradient: "from-blue-500 to-cyan-500"
+      color: "primary"
     },
     {
       icon: Smartphone,
       title: "Apps Mobile",
       description: "Experiências nativas e cross-platform que seus usuários vão amar.",
-      gradient: "from-purple-500 to-pink-500"
+      color: "primary"
     },
     {
       icon: Brain,
       title: "Inteligência Artificial",
       description: "Agentes de IA, automações inteligentes e modelos customizados integrados ao seu produto.",
-      gradient: "from-amber-500 to-orange-500"
+      color: "primary"
     },
     {
       icon: BarChart3,
       title: "BI & Analytics",
       description: "Dashboards, pipelines de dados e insights que transformam decisões.",
-      gradient: "from-emerald-500 to-teal-500"
+      color: "primary"
     },
     {
       icon: Cloud,
       title: "Infraestrutura Cloud",
       description: "Arquitetura AWS nativa, serverless, escalável e otimizada desde o dia zero.",
-      gradient: "from-sky-500 to-indigo-500"
+      color: "primary"
     },
     {
       icon: Shield,
       title: "Segurança by Design",
       description: "Cada linha de código nasce com segurança, compliance e boas práticas embarcadas.",
-      gradient: "from-rose-500 to-red-500"
+      color: "primary"
     }
   ];
 
@@ -82,25 +82,29 @@ const Desenvolvimento360 = () => {
       number: "01",
       title: "Discovery & Ideação",
       description: "Mergulhamos no seu negócio. Entendemos o problema, mapeamos oportunidades e desenhamos a solução ideal.",
-      icon: Lightbulb
+      icon: Lightbulb,
+      color: "primary"
     },
     {
       number: "02",
       title: "Design & Prototipação",
       description: "Criamos protótipos interativos e validamos com usuários reais antes de escrever uma linha de código.",
-      icon: Palette
+      icon: Palette,
+      color: "primary"
     },
     {
       number: "03",
       title: "Desenvolvimento Acelerado",
       description: "Engenharia moderna com IA como copiloto. Sprints curtos, entregas frequentes, qualidade inegociável.",
-      icon: Code2
+      icon: Code2,
+      color: "primary"
     },
     {
       number: "04",
       title: "Deploy & Evolução",
       description: "Lançamento em produção com monitoramento, otimização contínua e evolução orientada por dados.",
-      icon: Rocket
+      icon: Rocket,
+      color: "primary"
     }
   ];
 
@@ -120,8 +124,8 @@ const Desenvolvimento360 = () => {
         <div className="absolute inset-0">
           <div className="absolute -top-32 -right-32 w-[500px] sm:w-[700px] md:w-[900px] h-[500px] sm:h-[700px] md:h-[900px] bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-32 -left-32 w-[600px] sm:w-[800px] md:w-[1000px] h-[600px] sm:h-[800px] md:h-[1000px] bg-accent/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="absolute top-1/3 left-1/4 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute bottom-1/3 right-1/4 w-[150px] sm:w-[250px] md:w-[350px] h-[150px] sm:h-[250px] md:h-[350px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
+          <div className="absolute top-1/3 left-1/4 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-primary/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute bottom-1/3 right-1/4 w-[150px] sm:w-[250px] md:w-[350px] h-[150px] sm:h-[250px] md:h-[350px] bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
         </div>
 
         {/* Grid pattern sutil */}
@@ -139,7 +143,7 @@ const Desenvolvimento360 = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-6 sm:mb-8 text-foreground">
                 Desenvolvimento
                 <br />
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                <span className="text-primary">
                   360°
                 </span>
               </h1>
@@ -200,20 +204,20 @@ const Desenvolvimento360 = () => {
               </div>
               
               <div className="grid grid-cols-2 gap-4">
-                <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-6 border border-primary/10 text-center">
+                <div className="bg-primary/10 rounded-2xl p-6 border border-primary/20 text-center">
                   <div className="text-4xl md:text-5xl font-bold text-primary mb-2">40+</div>
                   <div className="text-sm text-muted-foreground">anos de legado em design & tech</div>
                 </div>
-                <div className="bg-gradient-to-br from-accent/10 to-accent/5 rounded-2xl p-6 border border-accent/10 text-center">
+                <div className="bg-accent/10 rounded-2xl p-6 border border-accent/20 text-center">
                   <div className="text-4xl md:text-5xl font-bold text-accent mb-2">200+</div>
                   <div className="text-sm text-muted-foreground">projetos AWS entregues</div>
                 </div>
-                <div className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 rounded-2xl p-6 border border-purple-500/10 text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-purple-500 mb-2">10x</div>
+                <div className="bg-primary/10 rounded-2xl p-6 border border-primary/20 text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-primary mb-2">10x</div>
                   <div className="text-sm text-muted-foreground">mais rápido com IA generativa</div>
                 </div>
-                <div className="bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 rounded-2xl p-6 border border-cyan-500/10 text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-cyan-500 mb-2">360°</div>
+                <div className="bg-accent/10 rounded-2xl p-6 border border-accent/20 text-center">
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">360°</div>
                   <div className="text-sm text-muted-foreground">cobertura completa</div>
                 </div>
               </div>
@@ -245,12 +249,13 @@ const Desenvolvimento360 = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
               {capacidades.map((cap, index) => {
                 const Icon = cap.icon;
+                const bgColor = cap.color === "primary" ? "bg-primary" : "bg-accent";
                 return (
                   <div 
                     key={index}
-                    className="group bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
+                    className="group bg-card/80 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-primary/20 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 backdrop-blur-sm"
                   >
-                    <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${cap.gradient} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-14 h-14 rounded-2xl ${bgColor} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
@@ -288,9 +293,9 @@ const Desenvolvimento360 = () => {
                 return (
                   <div 
                     key={index}
-                    className="group bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-6 sm:p-8 border border-border/20 shadow-2xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm text-center"
+                    className="group bg-card/80 rounded-3xl p-6 sm:p-8 border border-primary/20 shadow-2xl hover:border-primary/40 transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm text-center"
                   >
-                    <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-4">
+                    <div className="text-5xl md:text-6xl font-bold text-primary mb-4">
                       {item.stat}
                     </div>
                     <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -333,22 +338,27 @@ const Desenvolvimento360 = () => {
               
               {processoSteps.map((step, index) => {
                 const StepIcon = step.icon;
+                const bgColor = step.color === "primary" ? "bg-primary" : "bg-accent";
+                const textColor = step.color === "primary" ? "text-primary" : "text-accent";
+                const hoverColor = step.color === "primary" ? "group-hover:text-accent" : "group-hover:text-primary";
+                const borderColor = step.color === "primary" ? "border-primary/20" : "border-accent/20";
+                
                 return (
                   <div key={index} className="relative">
-                    <div className="bg-gradient-to-br from-card to-card/50 rounded-3xl p-6 md:p-8 border border-border/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm group h-full flex flex-col">
+                    <div className={`bg-card/80 rounded-3xl p-6 md:p-8 border ${borderColor} shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm group h-full flex flex-col`}>
                       <div className="flex items-start justify-between mb-6">
                         <div className="relative">
-                          <div className="text-7xl md:text-8xl font-bold text-primary/10 leading-none">
+                          <div className={`text-7xl md:text-8xl font-bold ${textColor}/10 leading-none`}>
                             {step.number}
                           </div>
-                          <div className="absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-gradient-to-br from-primary to-accent shadow-xl flex items-center justify-center">
+                          <div className={`absolute top-0 left-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl ${bgColor} shadow-xl flex items-center justify-center`}>
                             <StepIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />
                           </div>
                         </div>
                       </div>
 
                       <div className="flex-1">
-                        <h3 className="text-xl md:text-2xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                        <h3 className={`text-xl md:text-2xl font-bold ${textColor} mb-4 ${hoverColor} transition-colors duration-300`}>
                           {step.title}
                         </h3>
                         <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -359,8 +369,8 @@ const Desenvolvimento360 = () => {
 
                     {index < processoSteps.length - 1 && (
                       <div className="lg:hidden flex justify-center my-4">
-                        <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                          <svg className="w-4 h-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <div className={`w-8 h-8 rounded-full ${bgColor}/10 flex items-center justify-center`}>
+                          <svg className={`w-4 h-4 ${textColor}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                           </svg>
                         </div>
@@ -411,7 +421,7 @@ const Desenvolvimento360 = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-border/20 backdrop-blur-sm">
+            <div className="bg-card/80 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-primary/20 backdrop-blur-sm">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full text-accent text-sm font-semibold mb-6">
                 <Infinity className="w-4 h-4" />
                 <span>Possibilidades infinitas</span>
@@ -420,7 +430,7 @@ const Desenvolvimento360 = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
                 Sua próxima grande ideia
                 <br />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                <span className="text-accent">
                   começa aqui.
                 </span>
               </h2>

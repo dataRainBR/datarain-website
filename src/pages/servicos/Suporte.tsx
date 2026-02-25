@@ -226,7 +226,7 @@ const Suporte = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
                 Cobertura Completa
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -282,7 +282,7 @@ const Suporte = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Processo
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -293,7 +293,7 @@ const Suporte = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-card to-card/50 rounded-3xl p-6 md:p-10 border border-border/20 shadow-2xl backdrop-blur-sm">
+            <div className="bg-card/80 rounded-3xl p-6 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
@@ -373,7 +373,7 @@ const Suporte = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
                 Planos
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -388,7 +388,7 @@ const Suporte = () => {
               {planos.map((plano, index) => (
                 <div 
                   key={index}
-                  className={`bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-6 md:p-8 border ${plano.destaque ? 'border-primary shadow-2xl scale-105' : 'border-border/20 shadow-xl'} backdrop-blur-sm hover:shadow-3xl transition-all duration-300`}
+                  className={`bg-card/80 rounded-3xl p-6 md:p-8 border ${plano.destaque ? 'border-primary shadow-2xl scale-105' : 'border-primary/20 shadow-xl'} backdrop-blur-sm hover:shadow-3xl transition-all duration-300`}
                 >
                   {plano.destaque && (
                     <div className="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-xs font-semibold mb-4">
@@ -457,7 +457,7 @@ const Suporte = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Diferenciais
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -471,7 +471,7 @@ const Suporte = () => {
                 return (
                   <div 
                     key={index}
-                    className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl backdrop-blur-sm hover:border-primary/30 transition-all duration-300"
+                    className="bg-card/80 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-primary/20 shadow-xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -507,7 +507,7 @@ const Suporte = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Implantação Rápida
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -519,7 +519,7 @@ const Suporte = () => {
               {processoSteps.map((step, index) => (
                 <div 
                   key={index}
-                  className="bg-gradient-to-br from-card to-card/50 rounded-2xl p-6 border border-border/20 shadow-xl backdrop-blur-sm"
+                  className="bg-card/80 rounded-2xl p-6 border border-primary/20 shadow-xl backdrop-blur-sm"
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
@@ -546,7 +546,7 @@ const Suporte = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
                 Dúvidas
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -579,7 +579,7 @@ const Suporte = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl border border-border/20 backdrop-blur-sm">
+            <div className="bg-card/80 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl border border-primary/20 backdrop-blur-sm">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Pronto para ter suporte de excelência?
               </h2>

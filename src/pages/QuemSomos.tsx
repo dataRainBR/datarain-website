@@ -253,16 +253,16 @@ const QuemSomos = () => {
         {/* Interactive background effects */}
         <div className="absolute inset-0" style={{ zIndex: 1 }}>
           {/* Gradient orbs with animation */}
-          <div className="absolute top-10 right-10 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-gradient-radial from-purple-400/20 via-purple-500/10 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
-          <div className="absolute bottom-20 left-20 w-[180px] sm:w-[280px] md:w-[350px] h-[180px] sm:h-[280px] md:h-[350px] bg-gradient-radial from-purple-600/15 via-purple-400/8 to-transparent rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
+          <div className="absolute top-10 right-10 w-[200px] sm:w-[300px] md:w-[400px] h-[200px] sm:h-[300px] md:h-[400px] bg-primary/20 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '4s' }}></div>
+          <div className="absolute bottom-20 left-20 w-[180px] sm:w-[280px] md:w-[350px] h-[180px] sm:h-[280px] md:h-[350px] bg-accent/15 rounded-full blur-3xl animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }}></div>
           
           {/* Interactive geometric shapes - VentureLabs style - hidden on mobile */}
-          <div className="geometric-shape absolute top-[20%] left-[8%] w-24 h-32 border-2 border-purple-400/40 hidden md:block" style={{ transform: 'skewY(-8deg)', animationDelay: '0s' }}></div>
-          <div className="geometric-shape absolute top-[50%] left-[12%] w-20 h-28 border-2 border-purple-500/40 hidden md:block" style={{ transform: 'skewY(6deg)', animationDelay: '1.2s' }}></div>
-          <div className="geometric-shape absolute top-[70%] left-[6%] w-28 h-36 border-2 border-purple-400/40 hidden lg:block" style={{ transform: 'skewY(-10deg)', animationDelay: '2.4s' }}></div>
-          <div className="geometric-shape absolute top-[15%] right-[38%] w-22 h-30 border-2 border-purple-500/40 hidden lg:block" style={{ transform: 'skewY(8deg)', animationDelay: '0.8s' }}></div>
-          <div className="geometric-shape absolute top-[45%] right-[42%] w-26 h-34 border-2 border-purple-400/40 hidden lg:block" style={{ transform: 'skewY(-6deg)', animationDelay: '1.6s' }}></div>
-          <div className="geometric-shape absolute top-[65%] left-[20%] w-24 h-30 border-2 border-purple-500/40 hidden md:block" style={{ transform: 'skewY(10deg)', animationDelay: '0.4s' }}></div>
+          <div className="geometric-shape absolute top-[20%] left-[8%] w-24 h-32 border-2 border-primary/40 hidden md:block" style={{ transform: 'skewY(-8deg)', animationDelay: '0s' }}></div>
+          <div className="geometric-shape absolute top-[50%] left-[12%] w-20 h-28 border-2 border-accent/40 hidden md:block" style={{ transform: 'skewY(6deg)', animationDelay: '1.2s' }}></div>
+          <div className="geometric-shape absolute top-[70%] left-[6%] w-28 h-36 border-2 border-primary/40 hidden lg:block" style={{ transform: 'skewY(-10deg)', animationDelay: '2.4s' }}></div>
+          <div className="geometric-shape absolute top-[15%] right-[38%] w-22 h-30 border-2 border-accent/40 hidden lg:block" style={{ transform: 'skewY(8deg)', animationDelay: '0.8s' }}></div>
+          <div className="geometric-shape absolute top-[45%] right-[42%] w-26 h-34 border-2 border-primary/40 hidden lg:block" style={{ transform: 'skewY(-6deg)', animationDelay: '1.6s' }}></div>
+          <div className="geometric-shape absolute top-[65%] left-[20%] w-24 h-30 border-2 border-accent/40 hidden md:block" style={{ transform: 'skewY(10deg)', animationDelay: '0.4s' }}></div>
           
           {/* Astronaut positioned on the right side */}
           <img 
@@ -280,14 +280,14 @@ const QuemSomos = () => {
             {/* Header */}
             <div className="text-center mb-10 sm:mb-16 md:mb-20 animate-fade-in">
               <div className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mb-6 group">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-purple-600 to-purple-700 rounded-xl sm:rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 shadow-lg">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-xl sm:rounded-2xl flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300 shadow-lg">
                   <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-black tracking-tight text-center">
-                  Nossa Holding: <span className="bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">VentureLabs</span>
+                  Nossa Holding: <span className="text-primary">VentureLabs</span>
                 </h2>
               </div>
-              <div className="w-24 sm:w-32 h-1 sm:h-1.5 bg-gradient-to-r from-purple-600 via-purple-500 to-purple-600 rounded-full mx-auto shadow-lg shadow-purple-500/50"></div>
+              <div className="w-24 sm:w-32 h-1 sm:h-1.5 bg-primary rounded-full mx-auto shadow-lg"></div>
             </div>
 
             {/* Main content grid - Balanced layout */}
@@ -295,45 +295,45 @@ const QuemSomos = () => {
               
               {/* Left side - Main content */}
               <div className="space-y-6 animate-fade-in">
-                <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2">
+                <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:border-primary/30 transition-all duration-500 hover:-translate-y-2">
                   <div className="flex items-start gap-4 sm:gap-5 mb-4 sm:mb-6">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-black to-gray-800 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                       <Rocket className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors duration-300">Estúdio de Inovação</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3 group-hover:text-primary transition-colors duration-300">Estúdio de Inovação</h3>
                       <p className="text-gray-700 leading-relaxed text-base">
                         Por trás da dataRain, pulsa a VentureLabs — um estúdio de inovação que atua na 
                         interseção entre tecnologia, design e negócios.
                       </p>
                     </div>
                   </div>
-                  <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transition-all duration-500"></div>
+                  <div className="h-1 w-0 group-hover:w-full bg-primary rounded-full transition-all duration-500"></div>
                 </div>
 
-                <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:border-purple-500/30 transition-all duration-500 hover:-translate-y-2">
+                <div className="group bg-white/80 backdrop-blur-sm border-2 border-black/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl hover:shadow-2xl hover:border-accent/30 transition-all duration-500 hover:-translate-y-2">
                   <div className="flex items-start gap-4 sm:gap-5">
-                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-black to-gray-800 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-accent rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                       <Award className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                     </div>
                     <div>
-                      <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3 group-hover:text-purple-600 transition-colors duration-300">40+ Anos de Legado</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3 group-hover:text-accent transition-colors duration-300">40+ Anos de Legado</h3>
                       <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
                         Com mais de 40 anos de legado em projetos tecnológicos e espírito "maker" no DNA, 
                         oferecemos suporte estratégico, operacional e criativo.
                       </p>
                     </div>
                   </div>
-                  <div className="h-1 w-0 group-hover:w-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full transition-all duration-500"></div>
+                  <div className="h-1 w-0 group-hover:w-full bg-accent rounded-full transition-all duration-500"></div>
                 </div>
 
-                <div className="relative bg-gradient-to-br from-purple-50 to-white border-2 border-purple-200/50 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative bg-card border-2 border-primary/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-500">
+                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   <p className="text-center text-gray-700 italic font-light text-sm sm:text-base leading-relaxed relative z-10">
                     "Quando você escolhe trabalhar conosco, você está conectado a uma rede 
                     que fortalece nossas entregas"
                   </p>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-gradient-to-r from-transparent via-purple-600 to-transparent rounded-full"></div>
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 sm:w-24 h-1 bg-primary rounded-full"></div>
                 </div>
               </div>
 
@@ -772,7 +772,7 @@ const QuemSomos = () => {
                 </span>
               </div>
               <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 leading-tight px-4">
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                <span className="text-accent">
                   Girls in Cloud
                 </span>
               </h3>

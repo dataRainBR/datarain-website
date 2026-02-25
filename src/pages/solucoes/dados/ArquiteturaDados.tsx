@@ -94,9 +94,9 @@ const ArquiteturaDados = () => {
                 { icon: BarChart3, title: "Qualidade e Integridade", desc: "Taxonomia unificada mantém a consistência" },
                 { icon: Zap, title: "Eficiência Operacional", desc: "Automação do gerenciamento de dados" }
               ].map((item, index) => (
-                <div key={index} className="group bg-card rounded-2xl p-6 border border-border/50 hover:border-[#3893af]/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  <div className="w-12 h-12 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#3893af]/20 transition-colors">
-                    <item.icon className="w-6 h-6 text-[#3893af]" />
+                <div key={index} className="group bg-card rounded-2xl p-6 border border-border/50 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                    <item.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>

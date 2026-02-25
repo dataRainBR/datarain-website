@@ -139,8 +139,8 @@ const modules = [
     title: "dataRain Console",
     description: "A plataforma que centraliza a gestão do seu ambiente AWS e o relacionamento com a DataRain. Otimização automática, billing detalhado, acompanhamento de projetos, profissionais alocados e suporte técnico com IA. Tudo em uma interface moderna e segura.",
     highlights: ["Autenticação segura com Cognito + MFA", "RBAC: cada cliente vê apenas seus dados", "IA generativa via AWS Bedrock (Claude)", "Tema claro e escuro", "Suporte a múltiplas organizações AWS", "Multi-tenant com isolamento total"],
-    gradient: "from-blue-500 to-cyan-500",
-    bgGradient: "from-blue-500/10 to-cyan-500/5",
+    color: "bg-primary",
+    bgColor: "bg-primary/10",
   },
   {
     id: "autofix",
@@ -149,8 +149,8 @@ const modules = [
     title: "AutoFix: Otimização Automática",
     description: "Escaneia sua conta AWS, identifica desperdícios e aplica correções automaticamente. EC2, EBS, RDS, S3, Savings Plans, Network e CloudWatch. Tudo otimizado com um clique.",
     highlights: ["EC2 Rightsizing & Spot & Liga/Desliga", "EBS GP2→GP3 + delete de órfãos", "RDS Rightsizing automático", "S3 Lifecycle policies", "Savings Plans simulação", "Dashboard de savings consolidado"],
-    gradient: "from-emerald-500 to-green-600",
-    bgGradient: "from-emerald-500/10 to-green-500/5",
+    color: "bg-accent",
+    bgColor: "bg-accent/10",
   },
   {
     id: "selfservice",
@@ -159,8 +159,8 @@ const modules = [
     title: "Deploy com CloudFormation",
     description: "Catálogo de templates prontos para deploy com poucos cliques. CI/CD, ECS Fargate, Serverless, EKS, Budgets com alertas automáticos e mais.",
     highlights: ["CI/CD, ECS, Lambda, EKS", "Budget com alertas 80/100/120%", "Custo estimado por template", "Formulário parametrizado", "Download YAML"],
-    gradient: "from-violet-500 to-purple-600",
-    bgGradient: "from-violet-500/10 to-purple-500/5",
+    color: "bg-primary",
+    bgColor: "bg-primary/10",
   },
   {
     id: "billing",
@@ -169,8 +169,8 @@ const modules = [
     title: "Billing Detalhado",
     description: "Visão completa das faturas e custos AWS. Tabela de invoices com filtros avançados, contas vinculadas, monitor de performance e suporte multi-conta.",
     highlights: ["Invoices com filtros avançados", "Multi-conta e multi-org", "Performance de queries", "Contas vinculadas ao usuário"],
-    gradient: "from-amber-500 to-orange-500",
-    bgGradient: "from-amber-500/10 to-orange-500/5",
+    color: "bg-accent",
+    bgColor: "bg-accent/10",
   },
   {
     id: "projetos",
@@ -179,8 +179,8 @@ const modules = [
     title: "Acompanhamento e Solicitação de Projetos",
     description: "Acompanhe os projetos que a DataRain executa para sua empresa em tempo real. Solicite novos projetos diretamente pela plataforma com formulários técnicos específicos para cada tipo de serviço.",
     highlights: ["Status em tempo real", "Catálogo de 8 tipos de serviço", "Formulários técnicos detalhados", "Fluxo: Formulário → Proposta → Kickoff"],
-    gradient: "from-sky-500 to-indigo-600",
-    bgGradient: "from-sky-500/10 to-indigo-500/5",
+    color: "bg-primary",
+    bgColor: "bg-primary/10",
   },
   {
     id: "profissionais",
@@ -189,8 +189,8 @@ const modules = [
     title: "Gestão de Profissionais Alocados",
     description: "Visualize todos os profissionais DataRain alocados na sua empresa. Currículo, escopo de trabalho, atividades semanais, KPIs e solicitação de novos profissionais direto pela plataforma.",
     highlights: ["Perfil completo (L4-L8)", "Timeline de atividades semanais", "KPIs: custo, horas, alocação", "Solicitar novos profissionais"],
-    gradient: "from-teal-500 to-cyan-600",
-    bgGradient: "from-teal-500/10 to-cyan-500/5",
+    color: "bg-accent",
+    bgColor: "bg-accent/10",
   },
   {
     id: "suporte",
@@ -199,8 +199,8 @@ const modules = [
     title: "Suporte Técnico Integrado",
     description: "Canal direto com o time DataRain. Abertura de tickets com IA que analisa o chamado automaticamente, histórico de conversas, filtros por status e acompanhamento completo. Disponível 24/7.",
     highlights: ["IA analisa chamados automaticamente", "Histórico de conversas", "Filtros e busca por texto", "Disponível 24/7"],
-    gradient: "from-rose-500 to-pink-600",
-    bgGradient: "from-rose-500/10 to-pink-500/5",
+    color: "bg-primary",
+    bgColor: "bg-primary/10",
   },
 ];
 
@@ -217,12 +217,12 @@ const diferenciais = [
 
 /* ───────────────────────── action pills ───────────────────────── */
 const actionPills = [
-  { id: "fix-ec2", label: "Corrigir EC2 ocioso", icon: Wrench, moduleId: "autofix", actionTarget: "fix-first", gradient: "from-emerald-500 to-green-600" },
-  { id: "fix-all", label: "Corrigir Tudo", icon: Zap, moduleId: "autofix", actionTarget: "fix-all", gradient: "from-emerald-500 to-green-600" },
-  { id: "deploy-cicd", label: "Deploy CI/CD", icon: Boxes, moduleId: "selfservice", actionTarget: "deploy-cicd", gradient: "from-violet-500 to-purple-600" },
-  { id: "ver-fatura", label: "Ver Faturas", icon: Receipt, moduleId: "billing", actionTarget: "tab-tabela", gradient: "from-amber-500 to-orange-500" },
-  { id: "abrir-ticket", label: "Abrir Ticket", icon: Headphones, moduleId: "suporte", actionTarget: "new-ticket", gradient: "from-rose-500 to-pink-600" },
-  { id: "ver-projetos", label: "Ver Projetos", icon: FolderKanban, moduleId: "projetos", actionTarget: "tab-acompanhamento", gradient: "from-sky-500 to-indigo-600" },
+  { id: "fix-ec2", label: "Corrigir EC2 ocioso", icon: Wrench, moduleId: "autofix", actionTarget: "fix-first", color: "bg-accent" },
+  { id: "fix-all", label: "Corrigir Tudo", icon: Zap, moduleId: "autofix", actionTarget: "fix-all", color: "bg-accent" },
+  { id: "deploy-cicd", label: "Deploy CI/CD", icon: Boxes, moduleId: "selfservice", actionTarget: "deploy-cicd", color: "bg-primary" },
+  { id: "ver-fatura", label: "Ver Faturas", icon: Receipt, moduleId: "billing", actionTarget: "tab-tabela", color: "bg-accent" },
+  { id: "abrir-ticket", label: "Abrir Ticket", icon: Headphones, moduleId: "suporte", actionTarget: "new-ticket", color: "bg-primary" },
+  { id: "ver-projetos", label: "Ver Projetos", icon: FolderKanban, moduleId: "projetos", actionTarget: "tab-acompanhamento", color: "bg-primary" },
 ];
 
 /* demo component factory */
@@ -282,10 +282,10 @@ const AntesDepoisSection = () => {
         </span>
         <button
           onClick={handleToggle}
-          className={`relative w-16 h-8 rounded-full transition-all duration-500 shadow-inner ${showDepois ? "bg-primary/20 border-primary/30" : "bg-red-500/15 border-red-500/25"} border`}
+          className={`relative w-16 h-8 rounded-full transition-all duration-500 shadow-inner ${showDepois ? "bg-primary/20 border-primary/30" : "bg-accent/15 border-accent/25"} border`}
           aria-label="Alternar entre antes e depois"
         >
-          <div className={`absolute top-1 w-6 h-6 rounded-full transition-all duration-500 shadow-lg ${showDepois ? "left-[calc(100%-28px)] bg-primary" : "left-1 bg-red-400"}`} />
+          <div className={`absolute top-1 w-6 h-6 rounded-full transition-all duration-500 shadow-lg ${showDepois ? "left-[calc(100%-28px)] bg-primary" : "left-1 bg-accent"}`} />
         </button>
         <span className={`text-sm font-semibold transition-colors duration-500 ${showDepois ? "text-primary" : "text-muted-foreground/30"}`}>
           Com o Console
@@ -311,14 +311,14 @@ const AntesDepoisSection = () => {
                 animation: `fadeSlideUp 0.5s cubic-bezier(0.16,1,0.3,1) ${idx * 80}ms both`,
               }}
             >
-              {/* Background gradient on hover */}
-              <div className={`absolute inset-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-br ${h ? "opacity-100" : "opacity-0"} ${
-                showDepois ? "from-primary/10 via-primary/5 to-transparent" : "from-red-500/10 via-red-500/5 to-transparent"
+              {/* Background on hover */}
+              <div className={`absolute inset-0 transition-opacity duration-500 group-hover:opacity-100 ${h ? "opacity-100" : "opacity-0"} ${
+                showDepois ? "bg-primary/10" : "bg-accent/10"
               }`} />
 
               {/* Accent line top */}
               <div className={`absolute top-0 left-0 h-1 group-hover:w-full transition-all duration-500 ease-out ${h ? "w-full" : "w-0"} ${
-                showDepois ? "bg-gradient-to-r from-primary to-accent" : "bg-gradient-to-r from-red-400 to-red-500"
+                showDepois ? "bg-primary" : "bg-accent"
               }`} />
 
               {/* Decorative orb */}
@@ -329,7 +329,7 @@ const AntesDepoisSection = () => {
               {/* Content */}
               <div className="relative z-10 p-6 sm:p-7">
                 <div className={`w-12 h-12 rounded-xl sm:rounded-2xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 ${h ? "scale-110 rotate-3" : ""} ${
-                  showDepois ? "bg-primary" : "bg-gradient-to-br from-red-400 to-red-500"
+                  showDepois ? "bg-primary" : "bg-accent"
                 }`}>
                   <Icon className="w-5 h-5 text-white" />
                 </div>
@@ -439,11 +439,11 @@ const ArchitectureDiagram = () => {
                       : "border-border/30 hover:border-primary/30 hover:shadow-md"
                   }`}
                 >
-                  {/* Gradient bar left */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${layer.color} transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-30 group-hover:opacity-60"}`} />
+                  {/* Color bar left */}
+                  <div className={`absolute left-0 top-0 bottom-0 w-1 ${layer.color} transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-30 group-hover:opacity-60"}`} />
 
                   <div className="relative z-10 flex items-center gap-3 sm:gap-4 p-3 sm:p-4 pl-4 sm:pl-5">
-                    <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 bg-gradient-to-br ${layer.color} ${isActive ? "shadow-md scale-105" : "opacity-70 group-hover:opacity-100"}`}>
+                    <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${layer.color} ${isActive ? "shadow-md scale-105" : "opacity-70 group-hover:opacity-100"}`}>
                       <LayerIcon className="w-4 h-4 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
@@ -493,7 +493,7 @@ const ArchitectureDiagram = () => {
         <div className={`bg-card rounded-2xl sm:rounded-3xl border border-border/30 p-6 transition-all duration-500 ${active ? "shadow-lg border-primary/20" : ""}`}>
           {active ? (
             <div className="space-y-4" key={active.id} style={{ animation: "fadeSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) both" }}>
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center bg-gradient-to-br ${active.color} shadow-lg`}>
+              <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${active.color} shadow-lg`}>
                 {React.createElement(active.icon, { className: "w-5 h-5 text-white" })}
               </div>
               <h3 className="text-lg font-bold text-foreground">{active.label}</h3>
@@ -519,7 +519,7 @@ const ArchitectureDiagram = () => {
       {active && (
         <div className="md:hidden bg-card rounded-2xl border border-primary/20 p-5 shadow-lg" style={{ animation: "fadeSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) both" }}>
           <div className="flex items-center gap-3 mb-3">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center bg-gradient-to-br ${active.color} shadow-md`}>
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${active.color} shadow-md`}>
               {React.createElement(active.icon, { className: "w-4 h-4 text-white" })}
             </div>
             <h3 className="text-base font-bold text-foreground">{active.label}</h3>
@@ -650,7 +650,7 @@ const DataRainConsole = () => {
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.92] mb-6 sm:mb-8 text-foreground tracking-tight">
                 Seu ambiente AWS.
                 <br />
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent bg-[length:200%_auto] animate-[gradient_3s_ease-in-out_infinite]">
+                <span className="text-primary">
                   Sua parceria DataRain.
                 </span>
               </h1>
@@ -699,7 +699,7 @@ const DataRainConsole = () => {
               { value: 24, suffix: "/7", label: "Suporte com IA" },
             ].map((stat, i) => (
               <div key={i} className="text-center group">
-                <div className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-br from-primary to-accent bg-clip-text text-transparent mb-2">
+                <div className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-2">
                   <AnimatedCounter end={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
                 </div>
                 <div className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{stat.label}</div>
@@ -719,17 +719,21 @@ const DataRainConsole = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 sm:mb-10">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
-                <LayoutDashboard className="w-4 h-4" />
-                <span>Módulos Integrados</span>
+                <Play className="w-4 h-4" />
+                <span>Demo Interativa</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
-                Tudo que você precisa.
+                Explore o Console.
                 <br className="hidden sm:block" />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent"> Nada que você não precisa.</span>
+                <span className="text-accent"> Clique, navegue e teste.</span>
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                Gestão AWS e relacionamento com a DataRain em um só lugar
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
+                Essa é uma demo 100% funcional do dataRain Console. Clique nos botões abaixo para testar cada módulo na prática.
               </p>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+                <Zap className="w-4 h-4" />
+                <span>Totalmente interativo — experimente agora</span>
+              </div>
             </div>
 
             {/* Active module spotlight */}
@@ -760,7 +764,7 @@ const DataRainConsole = () => {
                   </div>
                   {/* Description */}
                   <div className="hidden lg:block">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4 bg-gradient-to-r ${mod.gradient} text-white`}>
+                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4 ${mod.color} text-white`}>
                       <Icon className="w-3.5 h-3.5" />
                       {mod.badge}
                     </div>
@@ -781,7 +785,7 @@ const DataRainConsole = () => {
                   </div>
                   {/* Mobile description (below demo) */}
                   <div className="lg:hidden text-center">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4 bg-gradient-to-r ${mod.gradient} text-white`}>
+                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4 ${mod.color} text-white`}>
                       <Icon className="w-3.5 h-3.5" />
                       {mod.badge}
                     </div>
@@ -805,24 +809,31 @@ const DataRainConsole = () => {
             })()}
 
             {/* Action pills */}
-            <div className="flex flex-wrap justify-center gap-2 mt-6">
-              {actionPills.map((pill) => {
-                const PillIcon = pill.icon;
-                return (
-                  <button
-                    key={pill.id}
-                    onClick={() => handleActionPill(pill)}
-                    className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                      activePill === pill.id
-                        ? "bg-primary text-white shadow-lg shadow-primary/25 scale-105"
-                        : "bg-card border border-border/20 text-muted-foreground hover:border-primary/30 hover:text-primary"
-                    }`}
-                  >
-                    <PillIcon className="w-4 h-4" />
-                    <span className="hidden sm:inline">{pill.label}</span>
-                  </button>
-                );
-              })}
+            <div className="mt-8 space-y-3">
+              <div className="text-center">
+                <p className="text-sm font-semibold text-muted-foreground mb-3">
+                  👇 Atalhos rápidos — clique para testar cada funcionalidade
+                </p>
+              </div>
+              <div className="flex flex-wrap justify-center gap-2">
+                {actionPills.map((pill) => {
+                  const PillIcon = pill.icon;
+                  return (
+                    <button
+                      key={pill.id}
+                      onClick={() => handleActionPill(pill)}
+                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
+                        activePill === pill.id
+                          ? "bg-primary text-white shadow-lg shadow-primary/25 scale-105"
+                          : "bg-card border border-border/20 text-muted-foreground hover:border-primary/30 hover:text-primary hover:scale-105"
+                      }`}
+                    >
+                      <PillIcon className="w-4 h-4" />
+                      <span className="hidden sm:inline">{pill.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -846,7 +857,7 @@ const DataRainConsole = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
                 Como era.
                 <br />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Como é com o Console.</span>
+                <span className="text-accent">Como é com o Console.</span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Alterne o toggle e veja a diferença na prática.
@@ -874,7 +885,7 @@ const DataRainConsole = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
                 Por que o Console muda o jogo
                 <br />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">para nossos clientes?</span>
+                <span className="text-accent">para nossos clientes?</span>
               </h2>
             </div>
             </ScrollReveal>
@@ -905,8 +916,8 @@ const DataRainConsole = () => {
                       <div className={`md:w-1/2 ${isLeft ? "md:pr-12 md:text-right" : "md:pr-12 md:invisible"}`}>
                         {isLeft && (
                           <div className={`group relative bg-card rounded-2xl sm:rounded-3xl overflow-hidden border transition-all duration-500 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 ${h ? "border-primary/40 shadow-xl -translate-y-1" : "border-border/50"}`}>
-                            <div className={`absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent transition-opacity duration-500 group-hover:opacity-100 ${h ? "opacity-100" : "opacity-0"}`} />
-                            <div className={`absolute top-0 right-0 h-0.5 bg-gradient-to-l from-primary to-accent transition-all duration-500 ease-out group-hover:w-full ${h ? "w-full" : "w-0"}`} />
+                            <div className={`absolute inset-0 bg-primary/5 transition-opacity duration-500 group-hover:opacity-100 ${h ? "opacity-100" : "opacity-0"}`} />
+                            <div className={`absolute top-0 right-0 h-0.5 bg-primary transition-all duration-500 ease-out group-hover:w-full ${h ? "w-full" : "w-0"}`} />
                             <div className={`absolute -bottom-12 -left-12 w-24 h-24 bg-primary/15 rounded-full blur-2xl transition-opacity duration-500 group-hover:opacity-50 ${h ? "opacity-50" : "opacity-0"}`} />
                             <div className="relative z-10 p-4 sm:p-5 flex items-center gap-3 md:flex-row-reverse">
                               <div className={`w-10 h-10 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 shadow-md md:hidden transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 ${h ? "scale-110 rotate-3" : ""}`}>
@@ -925,8 +936,8 @@ const DataRainConsole = () => {
                       <div className={`md:w-1/2 ${!isLeft ? "md:pl-12" : "md:pl-12 md:invisible"}`}>
                         {!isLeft && (
                           <div className={`group relative bg-card rounded-2xl sm:rounded-3xl overflow-hidden border transition-all duration-500 hover:border-primary/40 hover:shadow-xl hover:-translate-y-1 ${h ? "border-primary/40 shadow-xl -translate-y-1" : "border-border/50"}`}>
-                            <div className={`absolute inset-0 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent transition-opacity duration-500 group-hover:opacity-100 ${h ? "opacity-100" : "opacity-0"}`} />
-                            <div className={`absolute top-0 left-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-500 ease-out group-hover:w-full ${h ? "w-full" : "w-0"}`} />
+                            <div className={`absolute inset-0 bg-primary/5 transition-opacity duration-500 group-hover:opacity-100 ${h ? "opacity-100" : "opacity-0"}`} />
+                            <div className={`absolute top-0 left-0 h-0.5 bg-primary transition-all duration-500 ease-out group-hover:w-full ${h ? "w-full" : "w-0"}`} />
                             <div className={`absolute -bottom-12 -right-12 w-24 h-24 bg-primary/15 rounded-full blur-2xl transition-opacity duration-500 group-hover:opacity-50 ${h ? "opacity-50" : "opacity-0"}`} />
                             <div className="relative z-10 p-4 sm:p-5 flex items-center gap-3">
                               <div className={`w-10 h-10 rounded-xl bg-primary flex items-center justify-center flex-shrink-0 shadow-md md:hidden transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 ${h ? "scale-110 rotate-3" : ""}`}>
@@ -967,7 +978,7 @@ const DataRainConsole = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
                 Segurança em cada camada.
                 <br />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">Do login ao dado.</span>
+                <span className="text-accent">Do login ao dado.</span>
               </h2>
               <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Clique em cada camada para entender como o Console protege seus dados.
@@ -990,7 +1001,7 @@ const DataRainConsole = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-border/20 backdrop-blur-sm">
+            <div className="bg-card/80 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-primary/20 backdrop-blur-sm">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full text-accent text-sm font-semibold mb-6">
                 <Sparkles className="w-4 h-4" />
                 <span>Gestão AWS + Parceria DataRain</span>
@@ -999,7 +1010,7 @@ const DataRainConsole = () => {
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
                 Seu ambiente e sua parceria.
                 <br />
-                <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                <span className="text-accent">
                   Em um só lugar.
                 </span>
               </h2>

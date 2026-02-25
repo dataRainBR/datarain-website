@@ -77,7 +77,7 @@ const LandingZone = () => {
                     { title: "Gestão Centralizada", desc: "AWS IAM Identity Center e Organizations para gestão simplificada." }
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-2 h-2 rounded-full bg-[#e63946] mt-2.5 flex-shrink-0"></div>
+                      <div className="w-2 h-2 rounded-full bg-accent mt-2.5 flex-shrink-0"></div>
                       <div>
                         <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>

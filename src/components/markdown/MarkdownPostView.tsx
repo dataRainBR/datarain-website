@@ -100,9 +100,9 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
           <div className="max-w-4xl mx-auto">
             <div className="mb-6">
               <Badge variant="secondary" className="mb-4">
-                {type === 'blog' ? '📝 Artigo' : '💼 Case de Sucesso'}
+                {type === 'blog' ? 'Artigo' : 'Case de Sucesso'}
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
                 {post.title}
               </h1>
               {post.excerpt && (
@@ -165,6 +165,28 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
       {/* Content */}
       <article className="container mx-auto px-4 pb-20">
         <div className="max-w-4xl mx-auto">
+          {/* Video Card - Apenas para cases com vídeo */}
+          {type === 'cases' && post.youtubeVideoId && (
+            <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 shadow-xl p-6 md:p-8 mb-8">
+              <div className="mb-6">
+                <h2 className="text-2xl md:text-3xl font-bold mb-2 text-primary tracking-tight flex items-center gap-3">
+                  <span className="w-1 h-8 bg-primary rounded-full inline-block shrink-0" />
+                  Veja o case em vídeo
+                </h2>
+                <p className="text-sm text-muted-foreground ml-[1.15rem]">Assista ao depoimento completo sobre este projeto</p>
+              </div>
+              <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-border/50" style={{ paddingBottom: '56.25%' }}>
+                <iframe
+                  className="absolute inset-0 w-full h-full"
+                  src={`https://www.youtube.com/embed/${post.youtubeVideoId}`}
+                  title={`Vídeo do case: ${post.title}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
+
           {/* Content Card */}
           <div className="bg-card/50 backdrop-blur-sm rounded-2xl border border-border/50 shadow-xl p-8 md:p-12">
             <div className="prose prose-lg prose-slate dark:prose-invert max-w-none text-justify
@@ -204,26 +226,6 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
                           <CaseDemo slug={slug} />
                         </div>
                         <MarkdownRenderer content={rest} />
-                        {post.youtubeVideoId && (
-                          <div className="not-prose my-10">
-                            <div className="mb-6">
-                              <h2 className="text-3xl font-bold mt-10 mb-2 text-primary tracking-tight flex items-center gap-3">
-                                <span className="w-1 h-8 bg-primary rounded-full inline-block shrink-0" />
-                                Veja o case em vídeo
-                              </h2>
-                              <p className="text-sm text-muted-foreground ml-[1.15rem]">Assista ao depoimento completo sobre este projeto</p>
-                            </div>
-                            <div className="relative w-full rounded-2xl overflow-hidden shadow-xl border border-border/50" style={{ paddingBottom: '56.25%' }}>
-                              <iframe
-                                className="absolute inset-0 w-full h-full"
-                                src={`https://www.youtube.com/embed/${post.youtubeVideoId}`}
-                                title={`Vídeo do case: ${post.title}`}
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowFullScreen
-                              />
-                            </div>
-                          </div>
-                        )}
                       </>
                     );
                   }
@@ -248,7 +250,7 @@ export const MarkdownPostView: React.FC<MarkdownPostViewProps> = ({
           )}
 
           {/* Share Section */}
-          <div className="mt-12 p-8 bg-gradient-to-r from-primary/10 via-primary/5 to-secondary/10 rounded-2xl border border-primary/20">
+          <div className="mt-12 p-8 bg-primary/10 rounded-2xl border border-primary/20">
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-3">Gostou deste conteúdo?</h3>
               <p className="text-muted-foreground mb-6">

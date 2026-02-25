@@ -4,7 +4,7 @@ import {
   ChevronRight, Bell,
   LogOut, ChevronDown, Lock, Mail, Eye, EyeOff
 } from "lucide-react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const sidebarItems = [
   { id: "dashboard", icon: LayoutDashboard, label: "Dashboard" },

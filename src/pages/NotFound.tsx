@@ -32,7 +32,7 @@ const NotFound = () => {
 
         <div className="relative z-10 container mx-auto px-4 py-16 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-8xl md:text-9xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text text-transparent">
+            <h1 className="text-8xl md:text-9xl font-bold leading-tight mb-6 text-foreground">
               404
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8">

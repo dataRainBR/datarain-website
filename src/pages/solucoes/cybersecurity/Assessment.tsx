@@ -87,8 +87,8 @@ const Assessment = () => {
                     "Roadmap de segurança para curto, médio e longo prazo"
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4 group">
-                      <div className="w-8 h-8 rounded-full bg-[#e63946]/10 flex items-center justify-center flex-shrink-0 group-hover:bg-[#e63946]/20 transition-colors">
-                        <div className="w-3 h-3 rounded-full bg-[#e63946]"></div>
+                      <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+                        <div className="w-3 h-3 rounded-full bg-accent"></div>
                       </div>
                       <span className="text-foreground">{item}</span>
                     </div>

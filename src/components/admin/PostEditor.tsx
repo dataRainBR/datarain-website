@@ -261,9 +261,9 @@ export const PostEditor: React.FC<PostEditorProps> = ({
         <div className="relative w-full bg-gradient-to-br from-primary/5 via-background to-secondary/5 p-8 mb-8">
           <div className="max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-4">
-              {type === 'blog' ? '📝 Artigo' : '💼 Case de Sucesso'}
+              {type === 'blog' ? 'Artigo' : 'Case de Sucesso'}
             </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+            <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-foreground">
               {title || 'Título do Post'}
             </h1>
             {excerpt && (

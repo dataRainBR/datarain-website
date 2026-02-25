@@ -81,9 +81,9 @@ const IAML = () => {
               { icon: Zap, title: "Otimização de Operações", desc: "Ajudar as empresas a otimizarem suas operações, reduzindo custos e aumentando a eficiência." },
               { icon: Sparkles, title: "Novos Produtos e Serviços", desc: "Desenvolvem novos produtos e serviços que atendam às necessidades dos clientes." }
             ].map((item, index) => (
-              <div key={index} className="group bg-card rounded-2xl p-8 border border-border/50 hover:border-[#3893af]/40 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
-                <div className="w-14 h-14 bg-[#3893af]/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#3893af]/20 transition-colors">
-                  <item.icon className="w-7 h-7 text-[#3893af]" />
+              <div key={index} className="group bg-card rounded-2xl p-8 border border-border/50 hover:border-primary/40 transition-all duration-500 hover:shadow-xl hover:-translate-y-1">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <item.icon className="w-7 h-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
                 <p className="text-muted-foreground">{item.desc}</p>

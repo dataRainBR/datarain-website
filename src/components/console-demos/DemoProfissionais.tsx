@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ConsoleShell from "./ConsoleShell";
 import { Briefcase, ChevronDown, Plus, MousePointerClick } from "lucide-react";
 

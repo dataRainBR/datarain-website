@@ -102,7 +102,7 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Diferenciais
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -116,7 +116,7 @@ const SquadAlocacao = () => {
                 return (
                   <div 
                     key={index}
-                    className="bg-gradient-to-br from-card to-card/50 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-border/20 shadow-xl backdrop-blur-sm hover:border-primary/30 transition-all duration-300"
+                    className="bg-card/80 rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-primary/20 shadow-xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
@@ -147,7 +147,7 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 rounded-full text-primary text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
                 Flexibilidade Total
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -157,9 +157,9 @@ const SquadAlocacao = () => {
 
             <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               {/* Alocação de Profissionais */}
-              <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                  <Users className="w-8 h-8 text-primary" />
+              <div className="bg-card/80 rounded-3xl p-8 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center mb-6">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                   Alocação de Profissionais
@@ -170,9 +170,9 @@ const SquadAlocacao = () => {
               </div>
 
               {/* Squads Multidisciplinares */}
-              <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
-                  <Target className="w-8 h-8 text-primary" />
+              <div className="bg-card/80 rounded-3xl p-8 md:p-10 border border-primary/20 shadow-2xl backdrop-blur-sm hover:border-primary/40 transition-all duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-accent flex items-center justify-center mb-6">
+                  <Target className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4">
                   Squads Multidisciplinares
@@ -196,7 +196,7 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Expertise
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -210,7 +210,7 @@ const SquadAlocacao = () => {
                 return (
                   <div 
                     key={index}
-                    className="bg-gradient-to-br from-card to-card/50 rounded-2xl p-6 md:p-8 border border-border/20 shadow-xl hover:shadow-2xl hover:border-primary/30 transition-all duration-300 flex flex-col items-center justify-center text-center group backdrop-blur-sm"
+                    className="bg-card/80 rounded-2xl p-6 md:p-8 border border-primary/20 shadow-xl hover:shadow-2xl hover:border-primary/40 transition-all duration-300 flex flex-col items-center justify-center text-center group backdrop-blur-sm"
                   >
                     <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                       <Icon className="w-8 h-8 md:w-10 md:h-10 text-primary" />
@@ -239,7 +239,7 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 rounded-full text-accent text-xs sm:text-sm font-semibold mb-3 sm:mb-4">
+              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
                 Jornada
               </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
@@ -255,7 +255,7 @@ const SquadAlocacao = () => {
               {processoSteps.map((step, index) => (
                 <div key={index} className="relative">
                   {/* Card */}
-                  <div className="bg-gradient-to-br from-card to-card/50 rounded-3xl p-6 md:p-8 border border-border/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm group h-full flex flex-col">
+                  <div className="bg-card/80 rounded-3xl p-6 md:p-8 border border-primary/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:-translate-y-3 backdrop-blur-sm group h-full flex flex-col">
                     {/* Número grande no topo */}
                     <div className="flex items-start justify-between mb-6">
                       <div className="relative">
@@ -302,7 +302,7 @@ const SquadAlocacao = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-card via-card to-card/50 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl border border-border/20 backdrop-blur-sm">
+            <div className="bg-card/80 rounded-3xl p-8 sm:p-10 md:p-12 shadow-2xl border border-primary/20 backdrop-blur-sm">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Precisa acelerar resultados com tecnologia?
               </h2>
