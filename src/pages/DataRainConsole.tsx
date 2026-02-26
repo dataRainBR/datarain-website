@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight, Brain, Zap, Shield,
-  Eye, Lock, Sparkles,
+  Lock, Sparkles,
   Database, Globe, ChevronRight, Play,
   Boxes, Wrench, Users, Receipt,
   Headphones, CheckCircle2,
@@ -405,11 +405,9 @@ const archLayers = [
 
 const ArchitectureDiagram = () => {
   const [activeLayer, setActiveLayer] = useState<string | null>(null);
-  const active = archLayers.find((l) => l.id === activeLayer);
 
   return (
-    <div className="grid md:grid-cols-[1fr_320px] gap-6 items-start">
-      {/* Diagram */}
+    <div className="max-w-2xl mx-auto">
       <div className="relative bg-card/50 rounded-2xl sm:rounded-3xl border border-border/30 p-6 sm:p-8 overflow-hidden">
         {/* Background decoration */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
@@ -421,8 +419,8 @@ const ArchitectureDiagram = () => {
               <Users className="w-3.5 h-3.5" />
               Cliente acessa o Console
             </div>
-            <div className="w-2 h-2 rounded-full bg-primary/40 mt-3" />
-            <div className="w-px h-6 bg-border/40" />
+            <div className="w-2 h-2 rounded-full bg-primary mt-3" />
+            <div className="w-0.5 h-6 bg-primary/50" />
           </div>
 
           {/* Layers */}
@@ -435,41 +433,56 @@ const ArchitectureDiagram = () => {
                   onClick={() => setActiveLayer(isActive ? null : layer.id)}
                   className={`w-full text-left group relative rounded-xl sm:rounded-2xl overflow-hidden border transition-all duration-500 ${
                     isActive
-                      ? "border-primary/50 shadow-lg shadow-primary/10 -translate-y-0.5"
+                      ? "border-primary/50 shadow-lg shadow-primary/10"
                       : "border-border/30 hover:border-primary/30 hover:shadow-md"
                   }`}
                 >
                   {/* Color bar left */}
-                  <div className={`absolute left-0 top-0 bottom-0 w-1 ${layer.color} transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-30 group-hover:opacity-60"}`} />
+                  <div className={`absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b ${layer.color} transition-opacity duration-300 ${isActive ? "opacity-100" : "opacity-30 group-hover:opacity-60"}`} />
 
-                  <div className="relative z-10 flex items-center gap-3 sm:gap-4 p-3 sm:p-4 pl-4 sm:pl-5">
-                    <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 ${layer.color} ${isActive ? "shadow-md scale-105" : "opacity-70 group-hover:opacity-100"}`}>
-                      <LayerIcon className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className={`text-sm font-bold transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground group-hover:text-primary"}`}>
-                          {layer.label}
-                        </span>
+                  <div className="relative z-10 p-3 sm:p-4 pl-4 sm:pl-5">
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className={`w-9 h-9 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-300 bg-gradient-to-r ${layer.color} ${isActive ? "shadow-md scale-105" : "opacity-70 group-hover:opacity-100"}`}>
+                        <LayerIcon className="w-4 h-4 text-white" />
                       </div>
-                      <div className="flex flex-wrap gap-1.5 mt-1">
-                        {layer.techs.map((t) => (
-                          <span key={t} className={`text-[10px] sm:text-xs px-2 py-0.5 rounded-full transition-colors duration-300 ${
-                            isActive ? "bg-primary/15 text-primary" : "bg-foreground/5 text-muted-foreground"
-                          }`}>
-                            {t}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-center gap-2">
+                          <span className={`text-sm font-bold transition-colors duration-300 ${isActive ? "text-primary" : "text-foreground group-hover:text-primary"}`}>
+                            {layer.label}
                           </span>
-                        ))}
+                        </div>
+                        <div className="flex flex-wrap gap-1.5 mt-1">
+                          {layer.techs.map((t) => (
+                            <span key={t} className={`text-[10px] sm:text-xs px-2 py-0.5 rounded-full transition-colors duration-300 ${
+                              isActive ? "bg-primary/15 text-primary" : "bg-foreground/5 text-muted-foreground"
+                            }`}>
+                              {t}
+                            </span>
+                          ))}
+                        </div>
                       </div>
+                      <ChevronRight className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 flex-shrink-0 ${isActive ? "rotate-90 text-primary" : ""}`} />
                     </div>
-                    <ChevronRight className={`w-4 h-4 text-muted-foreground/40 transition-transform duration-300 flex-shrink-0 ${isActive ? "rotate-90 text-primary" : ""}`} />
+
+                    {/* Expanded description */}
+                    <div
+                      className="overflow-hidden transition-all duration-500 ease-out"
+                      style={{
+                        maxHeight: isActive ? "120px" : "0px",
+                        opacity: isActive ? 1 : 0,
+                      }}
+                    >
+                      <p className="text-sm text-muted-foreground leading-relaxed mt-3 pl-12 sm:pl-14">
+                        {layer.description}
+                      </p>
+                    </div>
                   </div>
                 </button>
 
                 {/* Arrow between layers */}
                 {idx < archLayers.length - 1 && (
                   <div className="flex justify-center">
-                    <div className={`w-px h-2.5 transition-colors duration-300 ${isActive ? "bg-primary/40" : "bg-border/40"}`} />
+                    <div className={`w-0.5 h-2.5 transition-colors duration-300 ${isActive ? "bg-primary" : "bg-primary/50"}`} />
                   </div>
                 )}
               </div>
@@ -478,8 +491,8 @@ const ArchitectureDiagram = () => {
 
           {/* Bottom: protected data */}
           <div className="flex flex-col items-center mt-1">
-            <div className="w-px h-6 bg-border/40" />
-            <div className="w-2 h-2 rounded-full bg-primary/40 mb-3" />
+            <div className="w-0.5 h-6 bg-primary/50" />
+            <div className="w-2 h-2 rounded-full bg-primary mb-3" />
             <div className="flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-xs font-medium text-primary border border-primary/20">
               <Lock className="w-3.5 h-3.5" />
               Dados protegidos e isolados por tenant
@@ -487,54 +500,10 @@ const ArchitectureDiagram = () => {
           </div>
         </div>
       </div>
-
-      {/* Detail panel */}
-      <div className="hidden md:block">
-        <div className={`bg-card rounded-2xl sm:rounded-3xl border border-border/30 p-6 transition-all duration-500 ${active ? "shadow-lg border-primary/20" : ""}`}>
-          {active ? (
-            <div className="space-y-4" key={active.id} style={{ animation: "fadeSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) both" }}>
-              <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${active.color} shadow-lg`}>
-                {React.createElement(active.icon, { className: "w-5 h-5 text-white" })}
-              </div>
-              <h3 className="text-lg font-bold text-foreground">{active.label}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{active.description}</p>
-              <div className="flex flex-wrap gap-1.5 pt-2">
-                {active.techs.map((t) => (
-                  <span key={t} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{t}</span>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <div className="text-center py-8 space-y-3">
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto">
-                <Eye className="w-5 h-5 text-primary" />
-              </div>
-              <p className="text-sm text-muted-foreground">Clique em uma camada para ver os detalhes</p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Mobile detail (below diagram) */}
-      {active && (
-        <div className="md:hidden bg-card rounded-2xl border border-primary/20 p-5 shadow-lg" style={{ animation: "fadeSlideUp 0.4s cubic-bezier(0.16,1,0.3,1) both" }}>
-          <div className="flex items-center gap-3 mb-3">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center ${active.color} shadow-md`}>
-              {React.createElement(active.icon, { className: "w-4 h-4 text-white" })}
-            </div>
-            <h3 className="text-base font-bold text-foreground">{active.label}</h3>
-          </div>
-          <p className="text-sm text-muted-foreground leading-relaxed mb-3">{active.description}</p>
-          <div className="flex flex-wrap gap-1.5">
-            {active.techs.map((t) => (
-              <span key={t} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary font-medium">{t}</span>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 };
+
 
 /* ═══════════════════════════════════════════════════════════════════ */
 /*                         MAIN COMPONENT                            */
