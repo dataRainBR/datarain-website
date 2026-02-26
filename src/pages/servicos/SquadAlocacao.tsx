@@ -102,9 +102,6 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
-                Diferenciais
-              </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Por que escolher a dataRain?
               </h2>
@@ -147,9 +144,6 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
-                Flexibilidade Total
-              </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Modelos de Atuação
               </h2>
@@ -196,9 +190,6 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
-                Expertise
-              </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Áreas Disponíveis
               </h2>
@@ -239,9 +230,6 @@ const SquadAlocacao = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
-                Jornada
-              </div>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">
                 Como Funciona?
               </h2>

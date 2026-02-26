@@ -185,9 +185,6 @@ const Desenvolvimento360 = () => {
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
               <div>
-                <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
-                  Nosso DNA
-                </div>
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight">
                   Não somos uma fábrica de software.
                 </h2>
@@ -235,9 +232,6 @@ const Desenvolvimento360 = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
-                O que criamos
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
                 Tudo que seu produto digital precisa
               </h2>
@@ -279,9 +273,6 @@ const Desenvolvimento360 = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4">
-                Por que somos diferentes
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
                 O que nos torna únicos
               </h2>
@@ -322,9 +313,6 @@ const Desenvolvimento360 = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12 sm:mb-16">
-              <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
-                Nossa Jornada
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
                 Do zero ao produto em produção
               </h2>
@@ -390,9 +378,6 @@ const Desenvolvimento360 = () => {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
-              Tech Stack
-            </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary mb-8">
               Tecnologias que usamos
             </h2>
@@ -422,11 +407,6 @@ const Desenvolvimento360 = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-card/80 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-primary/20 backdrop-blur-sm">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full text-accent text-sm font-semibold mb-6">
-                <Infinity className="w-4 h-4" />
-                <span>Possibilidades infinitas</span>
-              </div>
-              
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
                 Sua próxima grande ideia
                 <br />

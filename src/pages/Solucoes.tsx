@@ -53,9 +53,6 @@ const Solucoes = () => {
 
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
-              Pilares
-            </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Três Pilares, Uma Visão</h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Integramos GenAI e Dados, Cybersecurity e Cloud para entregar transformação digital de ponta a ponta

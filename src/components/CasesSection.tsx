@@ -126,9 +126,6 @@ export default function CasesSection() {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12 md:mb-16">
-          <div className="inline-block px-4 py-2 bg-white/10 rounded-full text-white text-sm font-semibold mb-6 backdrop-blur-sm border border-white/10">
-            Cases de Sucesso
-          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
             Transformações que Inspiram
           </h2>

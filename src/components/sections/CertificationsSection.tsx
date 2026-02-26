@@ -42,9 +42,6 @@ const CertificationsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Header with distinctive styling */}
         <div className="text-center mb-10 sm:mb-12 md:mb-16">
-          <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
-            Reconhecimento
-          </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6 leading-tight">
             Algumas de nossas conquistas
           </h2>

@@ -19,9 +19,6 @@ const ServicesSection = () => {
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-16 lg:mb-20">
-          <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
-            Expertise
-          </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Nossas Soluções
           </h2>

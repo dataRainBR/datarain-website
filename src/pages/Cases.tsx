@@ -136,10 +136,6 @@ const Cases = () => {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header com gradiente */}
           <div className="text-center mb-10 sm:mb-12 md:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-accent/10 via-primary/10 to-accent/10 rounded-full border border-accent/20 text-accent text-xs sm:text-sm font-semibold mb-6 shadow-lg backdrop-blur-sm">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-              Portfólio de Transformação
-            </div>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-primary mb-4 sm:mb-6 px-4 leading-tight">
               Cases de Sucesso
             </h1>

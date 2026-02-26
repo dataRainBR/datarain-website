@@ -20,10 +20,6 @@ const Privacidade = () => {
 
         <div className="relative z-10 container mx-auto px-4 py-16 text-center pt-40">
           <div className="max-w-4xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-6">
-              <Shield className="w-4 h-4" />
-              LGPD Compliance
-            </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-foreground">
               Política de Privacidade
             </h1>

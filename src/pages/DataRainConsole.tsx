@@ -687,10 +687,6 @@ const DataRainConsole = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
-                <Play className="w-4 h-4" />
-                <span>Demo Interativa</span>
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-6">
                 Explore o Console.
                 <br className="hidden sm:block" />
@@ -705,15 +701,62 @@ const DataRainConsole = () => {
               </div>
             </div>
 
-            {/* Active module spotlight */}
-            {(() => {
-              const mod = modules[activeModule];
-              const Icon = mod.icon;
-              return (
-                <div className="grid lg:grid-cols-[1fr_320px] gap-8 items-start">
-                  {/* Demo interativo */}
-                  <div ref={demoRef} className="min-w-0 rounded-2xl relative">
-                    {getDemoComponent(mod.id, handleSidebarNavigate, consoleUser, setConsoleUser, () => {})}
+            {/* Quick actions bar - Horizontal at top */}
+            <div className="bg-card/80 rounded-2xl border border-border/20 p-4 shadow-lg backdrop-blur-sm mb-6">
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center">
+                  <Zap className="w-4 h-4 text-accent" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-foreground">Ações Rápidas</h3>
+                  <p className="text-xs text-muted-foreground">Clique para testar funcionalidades específicas</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {actionPills.map((pill) => {
+                  const PillIcon = pill.icon;
+                  return (
+                    <button
+                      key={pill.id}
+                      onClick={() => handleActionPill(pill)}
+                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 ${
+                        activePill === pill.id
+                          ? "bg-primary text-white shadow-md shadow-primary/20"
+                          : "bg-card border border-border/20 text-foreground hover:border-primary/30 hover:bg-primary/5 hover:scale-105 active:scale-100"
+                      }`}
+                    >
+                      <PillIcon className="w-4 h-4" />
+                      <span>{pill.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+
+            {/* Demo layout - Console on left, Module info on right */}
+            <div className="grid lg:grid-cols-[1fr_380px] gap-6 items-start">
+              {/* Demo container - Left side */}
+              <div className="space-y-4">
+                {/* Demo box */}
+                <div className="group/demo bg-gradient-to-br from-card/50 to-card/30 rounded-2xl border-2 border-border/20 p-4 shadow-xl backdrop-blur-sm hover:border-primary/30 transition-all duration-500">
+                  {/* Interactive indicator */}
+                  <div className="flex items-center justify-between mb-3 px-2">
+                    <div className="flex items-center gap-2">
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+                        <div className="w-2 h-2 rounded-full bg-primary/60 animate-pulse" style={{ animationDelay: "0.2s" }}></div>
+                        <div className="w-2 h-2 rounded-full bg-primary/30 animate-pulse" style={{ animationDelay: "0.4s" }}></div>
+                      </div>
+                      <span className="text-xs font-medium text-primary">Demo Interativa</span>
+                    </div>
+                    <span className="flex items-center gap-1.5 text-xs text-muted-foreground">
+                      <span className="inline-block w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                      Ativo
+                    </span>
+                  </div>
+                  
+                  <div ref={demoRef} className="min-w-0 rounded-xl overflow-hidden relative bg-background shadow-inner border border-border/10">
+                    {getDemoComponent(modules[activeModule].id, handleSidebarNavigate, consoleUser, setConsoleUser, () => {})}
                     {/* Animated cursor */}
                     {cursor.visible && (
                       <div
@@ -731,77 +774,62 @@ const DataRainConsole = () => {
                       </div>
                     )}
                   </div>
-                  {/* Description */}
-                  <div className="hidden lg:block">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4 ${mod.color} text-white`}>
-                      <Icon className="w-3.5 h-3.5" />
-                      {mod.badge}
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground mb-3 leading-tight">
-                      {mod.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                      {mod.description}
-                    </p>
-                    <div className="flex flex-col gap-2">
-                      {mod.highlights.map((h, hi) => (
-                        <div key={hi} className="flex items-center gap-2 text-sm text-foreground/80">
-                          <CheckCircle2 className="w-4 h-4 flex-shrink-0 text-primary" />
-                          {h}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  {/* Mobile description (below demo) */}
-                  <div className="lg:hidden text-center">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold mb-4 ${mod.color} text-white`}>
-                      <Icon className="w-3.5 h-3.5" />
-                      {mod.badge}
-                    </div>
-                    <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 leading-tight">
-                      {mod.title}
-                    </h3>
-                    <p className="text-base text-muted-foreground leading-relaxed mb-5">
-                      {mod.description}
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-2">
-                      {mod.highlights.map((h, hi) => (
-                        <div key={hi} className="flex items-center gap-2 text-sm text-foreground/80 bg-card/50 px-3 py-1.5 rounded-full border border-border/20">
-                          <CheckCircle2 className="w-4 h-4 flex-shrink-0 text-primary" />
-                          {h}
-                        </div>
-                      ))}
-                    </div>
+                  
+                  {/* Interaction hint */}
+                  <div className="mt-3 px-2 flex items-center gap-4 text-xs text-muted-foreground">
+                    <span className="flex items-center gap-1.5">
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                      </svg>
+                      Clique nos elementos para interagir
+                    </span>
                   </div>
                 </div>
-              );
-            })()}
-
-            {/* Action pills */}
-            <div className="mt-8 space-y-3">
-              <div className="text-center">
-                <p className="text-sm font-semibold text-muted-foreground mb-3">
-                  👇 Atalhos rápidos — clique para testar cada funcionalidade
-                </p>
               </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                {actionPills.map((pill) => {
-                  const PillIcon = pill.icon;
-                  return (
-                    <button
-                      key={pill.id}
-                      onClick={() => handleActionPill(pill)}
-                      className={`inline-flex items-center gap-2 px-4 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
-                        activePill === pill.id
-                          ? "bg-primary text-white shadow-lg shadow-primary/25 scale-105"
-                          : "bg-card border border-border/20 text-muted-foreground hover:border-primary/30 hover:text-primary hover:scale-105"
-                      }`}
-                    >
-                      <PillIcon className="w-4 h-4" />
-                      <span className="hidden sm:inline">{pill.label}</span>
-                    </button>
-                  );
-                })}
+
+              {/* Module info - Right side */}
+              <div className="order-1 lg:order-2">
+                <div className="bg-card/80 rounded-2xl border border-border/20 p-6 shadow-lg backdrop-blur-sm sticky top-24">
+                  {(() => {
+                    const mod = modules[activeModule];
+                    const Icon = mod.icon;
+                    return (
+                      <>
+                        {/* Header */}
+                        <div className="flex items-start gap-4 mb-5 pb-5 border-b border-border/20">
+                          <div className={`relative w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 ${mod.color} shadow-lg`}>
+                            <Icon className="w-7 h-7 text-white" />
+                            {/* Pulse ring */}
+                            <div className={`absolute inset-0 rounded-xl ${mod.color} opacity-50 animate-ping`} style={{ animationDuration: "2s" }} />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-2 ${mod.bgColor} text-primary border border-primary/20`}>
+                              {mod.badge}
+                            </div>
+                            <h3 className="text-xl font-bold text-foreground leading-tight">
+                              {mod.title}
+                            </h3>
+                          </div>
+                        </div>
+
+                        {/* Description */}
+                        <p className="text-sm text-muted-foreground leading-relaxed mb-5">
+                          {mod.description}
+                        </p>
+
+                        {/* Highlights */}
+                        <div className="space-y-2.5">
+                          {mod.highlights.map((h, hi) => (
+                            <div key={hi} className="flex items-start gap-2.5 text-sm text-foreground/80 group/item">
+                              <CheckCircle2 className="w-4 h-4 flex-shrink-0 text-primary mt-0.5 group-hover/item:scale-110 transition-transform duration-200" />
+                              <span className="leading-relaxed">{h}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </>
+                    );
+                  })()}
+                </div>
               </div>
             </div>
           </div>
@@ -819,10 +847,6 @@ const DataRainConsole = () => {
             {/* Header */}
             <ScrollReveal>
             <div className="text-center mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-4">
-                <Sparkles className="w-4 h-4" />
-                <span>Antes vs Depois</span>
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
                 Como era.
                 <br />
@@ -848,9 +872,6 @@ const DataRainConsole = () => {
           <div className="max-w-5xl mx-auto">
             <ScrollReveal>
             <div className="text-center mb-8 sm:mb-10">
-              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4">
-                Diferenciais
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4">
                 Por que o Console muda o jogo
                 <br />
@@ -940,10 +961,6 @@ const DataRainConsole = () => {
           <div className="max-w-5xl mx-auto">
             <ScrollReveal>
             <div className="text-center mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4">
-                <Shield className="w-4 h-4" />
-                <span>Arquitetura & Segurança</span>
-              </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 leading-tight">
                 Segurança em cada camada.
                 <br />
@@ -971,11 +988,6 @@ const DataRainConsole = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-card/80 rounded-3xl p-8 sm:p-12 md:p-16 shadow-2xl border border-primary/20 backdrop-blur-sm">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/20 rounded-full text-accent text-sm font-semibold mb-6">
-                <Sparkles className="w-4 h-4" />
-                <span>Gestão AWS + Parceria DataRain</span>
-              </div>
-
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 leading-tight">
                 Seu ambiente e sua parceria.
                 <br />

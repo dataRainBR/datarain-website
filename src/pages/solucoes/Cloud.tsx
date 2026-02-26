@@ -59,9 +59,6 @@ const Cloud = () => {
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="inline-block px-4 py-2 bg-accent/10 rounded-full text-accent text-sm font-semibold mb-6">
-              Benefícios
-            </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Por que Cloud?</h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               A transformação digital começa com uma infraestrutura sólida e escalável
