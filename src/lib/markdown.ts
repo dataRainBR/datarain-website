@@ -15,6 +15,7 @@ export interface MarkdownPost {
   pilar?: string;
   oferta?: string;
   setor?: string;
+  hidden?: boolean;
 }
 
 export interface MarkdownPostMetadata {
@@ -110,6 +111,7 @@ function processMarkdownFiles(files: Record<string, string>): MarkdownPost[] {
       pilar: data.pilar || undefined,
       oferta: data.oferta || undefined,
       setor: data.setor || undefined,
+      hidden: data.hidden || false,
     };
   });
 }
@@ -149,7 +151,10 @@ export function getAllCases(): MarkdownPost[] {
     }
   });
   
-  return allCases.sort((a, b) => 
+  // Filtrar cases ocultos
+  const visibleCases = allCases.filter(c => !c.hidden);
+  
+  return visibleCases.sort((a, b) => 
     new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 }

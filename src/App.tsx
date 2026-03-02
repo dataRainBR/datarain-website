@@ -82,6 +82,7 @@ const App = () => (
           <Route path="/fale-conosco" element={<FaleConosco />} />
           <Route path="/blog" element={<WordPressBlog />} />
           <Route path="/blog/:slug" element={<MarkdownPostView type="blog" backRoute="/blog" />} />
+          <Route path="/sem-categoria/:slug" element={<MarkdownPostView type="cases" backRoute="/cases" />} />
           <Route path="/privacidade" element={<Privacidade />} />
           
           {/* Admin Routes */}
