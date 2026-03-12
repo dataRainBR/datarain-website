@@ -125,6 +125,6 @@ O resultado é tornar viável IA generativa em produção em ambientes regulados
 
 ## Quer implementar IA generativa com soberania de dados?
 
-A dataRain é AWS Premier Partner e especialista em arquiteturas híbridas de IA. Ajudamos empresas a desenhar e operar soluções de GenAI que atendem requisitos regulatórios sem comprometer performance.
+A dataRain é AWS Advanced Partner e especialista em arquiteturas híbridas de IA. Ajudamos empresas a desenhar e operar soluções de GenAI que atendem requisitos regulatórios sem comprometer performance.
 
 [Fale com nossos especialistas](/fale-conosco)

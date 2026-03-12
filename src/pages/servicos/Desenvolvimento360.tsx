@@ -194,9 +194,9 @@ const Desenvolvimento360 = () => {
                   de uma empresa de tecnologia de ponta.
                 </p>
                 <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-                  Com a incorporação da evnture labs à dataRain, unimos o melhor dos dois mundos: 
+                  Com a incorporação da Venture Labs à dataRain, unimos o melhor dos dois mundos: 
                   a capacidade de criar experiências digitais memoráveis com a solidez de quem é 
-                  AWS Premier Partner e já entregou mais de 200 projetos em nuvem.
+                  AWS Advanced Partner e já entregou mais de 200 projetos em nuvem.
                 </p>
               </div>
               
