@@ -10,6 +10,7 @@ author: 4
 pilar: "GenAI e Dados"
 oferta: "Arquitetura e Engenharia de Dados"
 setor: "Indústria"
+hidden: true
 ---
 
 A **FIEMG** (Federação das Indústrias do Estado de Minas Gerais) é uma das maiores federações industriais do Brasil, representando e apoiando o desenvolvimento do setor industrial mineiro. Com o objetivo de gerar inteligência a partir de dados para apoiar decisões estratégicas, a FIEMG buscou a dataRain para construir um pipeline completo de Data Analytics e Machine Learning na AWS.

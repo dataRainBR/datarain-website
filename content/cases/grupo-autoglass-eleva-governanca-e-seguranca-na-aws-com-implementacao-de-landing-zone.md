@@ -11,6 +11,7 @@ youtubeVideoId: "Q8w1PnnrjaA"
 pilar: "Cybersecurity"
 oferta: "Landing Zone"
 setor: "Indústria"
+hidden: true
 ---
 
 O Grupo Autoglass é um ecossistema de soluções que vai além do setor automotivo. Sua história começou com a **Autoglass**, referência em vidros e peças automotivas, presente em mais de 85 lojas no Brasil e na Colômbia e com um e-commerce em constante crescimento. 

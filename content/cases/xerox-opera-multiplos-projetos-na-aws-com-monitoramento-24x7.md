@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "Managed Services e Migração"
 setor: "Tecnologia"
+hidden: true
 ---
 
 A **Xerox** é uma multinacional de tecnologia reconhecida globalmente por suas soluções de impressão, documentos e serviços de TI. No Brasil, a empresa opera múltiplos projetos na AWS para diferentes clientes e linhas de negócio, exigindo uma gestão unificada de infraestrutura com monitoramento contínuo.

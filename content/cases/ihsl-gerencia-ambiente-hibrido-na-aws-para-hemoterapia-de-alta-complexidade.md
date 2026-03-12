@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud"
 oferta: "DevOps e Modernization"
 setor: "Saúde"
+hidden: true
 ---
 
 O **IHSL** (Instituto de Hemoterapia e Terapia Celular Hospital Sírio-Libanês) atua em captação, doação, coleta, armazenamento, interfaces e transfusão sanguínea, além de imunohematologia e tipagem. O instituto processa aproximadamente **4.000 bolsas de sangue por mês** em **2 laboratórios** que operam **24 horas por dia, 7 dias por semana**. Entre seus clientes estão o **Hospital Sírio-Libanês**, **AC Camargo**, **Beneficência Portuguesa** e **Oswaldo Cruz**.

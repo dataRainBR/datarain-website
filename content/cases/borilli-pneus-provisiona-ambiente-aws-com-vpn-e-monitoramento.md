@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "Infraestrutura"
 setor: "Indústria"
+hidden: true
 ---
 
 A **Borilli Pneus** é uma empresa do setor automotivo especializada em pneus, com operações que dependem de sistemas ERP e aplicações de gestão para o dia a dia do negócio. Com a necessidade de modernizar sua infraestrutura de TI, a empresa buscou a dataRain para provisionar um ambiente completo na AWS.

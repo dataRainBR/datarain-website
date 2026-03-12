@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "Infraestrutura e Containers"
 setor: "Saúde"
+hidden: true
 ---
 
 A **BippCare** (bipp.care) é uma plataforma digital de saúde do Grupo Bipp que conecta pacientes a profissionais de saúde, oferecendo serviços de telemedicina e gestão de atendimentos. Com uma stack moderna baseada em TypeScript, a empresa precisava de infraestrutura confiável e segura na AWS para operar seus serviços de saúde.

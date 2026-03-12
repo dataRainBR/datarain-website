@@ -11,6 +11,7 @@ youtubeVideoId: "Y7-GcDu9LyI"
 pilar: "Cloud"
 oferta: "Migração e Disaster Recovery"
 setor: "Saúde"
+hidden: true
 ---
 
 A **Universidade Estadual de Campinas**, comumente conhecida como **Unicamp**, é uma instituição de ensino superior pública localizada na cidade de Campinas, estado de São Paulo, Brasil. Fundada em 1966, a Unicamp é reconhecida nacional e internacionalmente por sua excelência acadêmica, compromisso com a pesquisa de ponta e contribuições significativas para o desenvolvimento científico, tecnológico e cultural do país.

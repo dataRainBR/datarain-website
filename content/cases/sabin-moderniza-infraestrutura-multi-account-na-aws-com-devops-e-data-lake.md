@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "DevOps e Engenharia de Dados"
 setor: "Saúde"
+hidden: true
 ---
 
 O **Grupo Sabin** é uma das maiores redes de medicina diagnóstica do Brasil, com presença em diversas regiões do país e um portfólio que abrange análises clínicas, diagnóstico por imagem e serviços de saúde. Com operações em escala nacional, a empresa precisava de uma infraestrutura cloud robusta, segura e multi-frente para suportar suas diversas linhas de negócio.

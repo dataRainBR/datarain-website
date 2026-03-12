@@ -10,6 +10,7 @@ author: 4
 pilar: "GenAI e Dados"
 oferta: "Arquitetura e Engenharia de Dados"
 setor: "Indústria"
+hidden: true
 ---
 
 ## Como a PQ Corp modernizou a coleta de dados industriais

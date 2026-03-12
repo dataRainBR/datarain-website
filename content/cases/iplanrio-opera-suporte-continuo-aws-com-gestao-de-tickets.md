@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "Suporte Gerenciado"
 setor: "Governo"
+hidden: true
 ---
 
 O **IplanRio** (Empresa Municipal de Informática) é o braço tecnológico da **Prefeitura do Rio de Janeiro**, responsável por toda a infraestrutura de TI que suporta os serviços públicos da cidade. Com múltiplos projetos rodando na AWS — incluindo o Instituto Pereira Passos (IPP) e o Instituto Municipal João Goulart — o IplanRio precisa de gestão contínua e especializada de sua infraestrutura cloud.

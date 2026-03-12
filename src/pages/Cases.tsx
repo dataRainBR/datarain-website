@@ -257,7 +257,6 @@ const Cases = () => {
                       <th className="text-left px-3 sm:px-4 py-3 font-semibold text-slate-700 text-xs sm:text-sm hidden md:table-cell">Pilar</th>
                       <th className="text-left px-3 sm:px-4 py-3 font-semibold text-slate-700 text-xs sm:text-sm hidden lg:table-cell">Oferta</th>
                       <th className="text-left px-3 sm:px-4 py-3 font-semibold text-slate-700 text-xs sm:text-sm hidden sm:table-cell">Setor</th>
-                      <th className="text-left px-3 sm:px-4 py-3 font-semibold text-slate-700 text-xs sm:text-sm hidden sm:table-cell">Data</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -291,9 +290,6 @@ const Cases = () => {
                         <td className="px-3 sm:px-4 py-3 text-slate-600 text-xs sm:text-sm hidden md:table-cell font-medium">{post.pilar || "—"}</td>
                         <td className="px-3 sm:px-4 py-3 text-slate-600 text-xs sm:text-sm hidden lg:table-cell font-medium">{post.oferta || "—"}</td>
                         <td className="px-3 sm:px-4 py-3 text-slate-600 text-xs sm:text-sm hidden sm:table-cell font-medium">{post.setor || "—"}</td>
-                        <td className="px-3 sm:px-4 py-3 text-slate-600 text-xs sm:text-sm hidden sm:table-cell whitespace-nowrap font-medium">
-                          {format(new Date(post.date), "MMM yyyy", { locale: ptBR })}
-                        </td>
                       </tr>
                       );
                     })}

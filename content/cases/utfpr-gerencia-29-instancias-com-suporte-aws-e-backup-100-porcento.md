@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "Managed Services"
 setor: "Educação"
+hidden: true
 ---
 
 A **Universidade Tecnológica Federal do Paraná (UTFPR)** é a única universidade tecnológica federal do Brasil, com 13 câmpus distribuídos pelo estado do Paraná. Com mais de 35 mil alunos e uma infraestrutura de TI que suporta sistemas acadêmicos, administrativos e de pesquisa, a universidade precisa de operação contínua e confiável de seus serviços na nuvem.

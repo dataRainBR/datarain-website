@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud"
 oferta: "DevOps e Modernization"
 setor: "Saúde"
+hidden: true
 ---
 
 A **CordVida** é uma empresa brasileira especializada em coleta e armazenamento de **células-tronco do cordão umbilical**, oferecendo serviços de criopreservação para famílias que desejam garantir uma reserva biológica para o futuro. Com portais web que atendem tanto a CordVida quanto a **CordCell**, a empresa depende de alta disponibilidade para manter seus serviços acessíveis a clientes e parceiros.

@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud & AWS"
 oferta: "Containers e Kubernetes"
 setor: "Governo"
+hidden: true
 ---
 
 O **Ministério Público do Rio Grande do Norte (MPRN)** é o órgão responsável pela defesa da ordem jurídica, do regime democrático e dos interesses sociais no estado. Com a crescente digitalização dos serviços públicos e a necessidade de conformidade com a LGPD, o MPRN buscou modernizar sua infraestrutura de TI com containers Kubernetes na AWS.

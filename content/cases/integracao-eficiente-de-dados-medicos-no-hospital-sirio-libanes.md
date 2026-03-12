@@ -10,6 +10,7 @@ author: 4
 pilar: "Cloud"
 oferta: "DevOps e Modernization"
 setor: "Saúde"
+hidden: true
 ---
 
 O **Hospital Sírio-Libanês**, uma instituição de saúde de renome, é reconhecido por sua excelência médica e compromisso com a qualidade dos cuidados médicos no Brasil. Desde sua fundação em 1921, o hospital se destacou por sua busca contínua por inovação, proporcionando tratamentos de alta qualidade aos pacientes. Com uma equipe médica altamente qualificada e infraestrutura moderna, o HSL oferece uma ampla gama de especialidades médicas, garantindo diagnósticos precisos e tratamentos eficazes. Sua dedicação à pesquisa médica e à adoção constante de tecnologias avançadas solidifica sua posição como centro de excelência, tanto nacional quanto internacionalmente.
