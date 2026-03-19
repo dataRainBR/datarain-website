@@ -97,33 +97,33 @@ const Solucoes = () => {
               </div>
             </a>
 
-            {/* Cybersecurity Pillar - Use accent color */}
-            <a href="/solucoes/cybersecurity" className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-accent/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block">
-              <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            {/* Cybersecurity Pillar - Vermelho #e63946 */}
+            <a href="/solucoes/cybersecurity" className="group relative bg-card rounded-3xl overflow-hidden border border-border/50 hover:border-[#e63946]/60 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 block">
+              <div className="absolute inset-0 bg-[#e63946]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="absolute inset-0 overflow-hidden opacity-50 group-hover:opacity-100 transition-opacity duration-500">
-                <svg className="absolute right-0 top-0 w-32 h-32 text-accent/10" viewBox="0 0 100 100" fill="currentColor">
+                <svg className="absolute right-0 top-0 w-32 h-32 text-[#e63946]/10" viewBox="0 0 100 100" fill="currentColor">
                   <path d="M50 10 L70 25 L70 50 L50 65 L30 50 L30 25 Z" strokeWidth="2" stroke="currentColor" fill="none" />
                   <path d="M50 20 L60 28 L60 45 L50 53 L40 45 L40 28 Z" />
                 </svg>
               </div>
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-accent/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-[#e63946]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-50 transition-opacity duration-500" />
               <div className="relative z-10 p-8 md:p-10">
-                <div className="absolute top-0 left-0 w-0 h-1 bg-accent group-hover:w-full transition-all duration-500 ease-out" />
-                <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
+                <div className="absolute top-0 left-0 w-0 h-1 bg-[#e63946] group-hover:w-full transition-all duration-500 ease-out" />
+                <div className="w-16 h-16 bg-[#e63946] rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-accent transition-colors duration-300">Cybersecurity</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4 group-hover:text-[#e63946] transition-colors duration-300">Cybersecurity</h3>
                 <p className="text-base text-muted-foreground leading-relaxed mb-6">
                   Segurança cloud, governança e compliance. Proteja seus ativos desde o design.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">Landing Zone</span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">GaaS</span>
-                  <span className="text-xs px-3 py-1 rounded-full bg-accent/10 text-accent">Assessment</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-[#e63946]/10 text-[#e63946]">Landing Zone</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-[#e63946]/10 text-[#e63946]">GaaS</span>
+                  <span className="text-xs px-3 py-1 rounded-full bg-[#e63946]/10 text-[#e63946]">Assessment</span>
                 </div>
-                <div className="flex items-center gap-2 text-accent font-semibold group-hover:gap-4 transition-all duration-300">
+                <div className="flex items-center gap-2 text-[#e63946] font-semibold group-hover:gap-4 transition-all duration-300">
                   <span>Explorar soluções</span>
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -211,9 +211,9 @@ const Solucoes = () => {
           {/* Cybersecurity Solutions */}
           <div className="mb-14 sm:mb-16 md:mb-20">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
-              <div className="w-12 h-1 bg-accent rounded-full"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-accent">Cybersecurity</h3>
-              <div className="flex-1 h-1 bg-accent/20 rounded-full"></div>
+              <div className="w-12 h-1 bg-[#e63946] rounded-full"></div>
+              <h3 className="text-2xl md:text-3xl font-bold text-[#e63946]">Cybersecurity</h3>
+              <div className="flex-1 h-1 bg-[#e63946]/20 rounded-full"></div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
               <SolutionCard

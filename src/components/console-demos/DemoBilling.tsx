@@ -5,13 +5,13 @@ import {
 } from "lucide-react";
 
 const invoices = [
-  { month: "Jan/2026", account: "Produção (1234)", org: "DataRain Corp", total: 48520, change: 3.2 },
-  { month: "Dez/2025", account: "Produção (1234)", org: "DataRain Corp", total: 47015, change: -2.1 },
-  { month: "Nov/2025", account: "Produção (1234)", org: "DataRain Corp", total: 48025, change: 5.4 },
-  { month: "Jan/2026", account: "Staging (5678)", org: "DataRain Corp", total: 12340, change: 1.8 },
-  { month: "Dez/2025", account: "Staging (5678)", org: "DataRain Corp", total: 12120, change: -0.5 },
-  { month: "Jan/2026", account: "Dev (9012)", org: "DataRain Labs", total: 5680, change: 12.3 },
-  { month: "Dez/2025", account: "Dev (9012)", org: "DataRain Labs", total: 5055, change: -1.2 },
+  { month: "Jan/2026", account: "Produção (1234)", org: "dataRain Corp", total: 48520, change: 3.2 },
+  { month: "Dez/2025", account: "Produção (1234)", org: "dataRain Corp", total: 47015, change: -2.1 },
+  { month: "Nov/2025", account: "Produção (1234)", org: "dataRain Corp", total: 48025, change: 5.4 },
+  { month: "Jan/2026", account: "Staging (5678)", org: "dataRain Corp", total: 12340, change: 1.8 },
+  { month: "Dez/2025", account: "Staging (5678)", org: "dataRain Corp", total: 12120, change: -0.5 },
+  { month: "Jan/2026", account: "Dev (9012)", org: "dataRain Labs", total: 5680, change: 12.3 },
+  { month: "Dez/2025", account: "Dev (9012)", org: "dataRain Labs", total: 5055, change: -1.2 },
 ];
 
 const barData = [

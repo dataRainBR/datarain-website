@@ -91,7 +91,7 @@ const ConsoleShell = ({ activeId, children, title, subtitle, onNavigate, user, o
 
           <div className="relative z-10 text-center px-8" style={{ animation: "fadeSlideUp 0.8s cubic-bezier(0.16,1,0.3,1) both" }}>
             <img src="https://s3.sa-east-1.amazonaws.com/datarain.marketing/Site/DR_LOGO_WHITE.png" alt="dataRain" className="w-44 mx-auto mb-6" style={{ animation: "fadeSlideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both" }} />
-            <h2 className="text-lg font-bold text-white mb-1.5" style={{ animation: "fadeSlideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s both" }}>DataRain Console</h2>
+            <h2 className="text-lg font-bold text-white mb-1.5" style={{ animation: "fadeSlideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s both" }}>dataRain Console</h2>
             <p className="text-[11px] text-white/30 leading-relaxed max-w-[200px] mx-auto" style={{ animation: "fadeSlideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both" }}>Plataforma de Gestão Inteligente</p>
             <div className="flex items-center justify-center gap-3 mt-6" style={{ animation: "fadeSlideUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.6s both" }}>
               <div className="w-8 h-[2px] rounded-full bg-white/10" />

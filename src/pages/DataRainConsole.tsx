@@ -137,7 +137,7 @@ const modules = [
     badge: "Página Inicial",
     icon: LayoutDashboard,
     title: "dataRain Console",
-    description: "A plataforma que centraliza a gestão do seu ambiente AWS e o relacionamento com a DataRain. Otimização automática, billing detalhado, acompanhamento de projetos, profissionais alocados e suporte técnico com IA. Tudo em uma interface moderna e segura.",
+    description: "A plataforma que centraliza a gestão do seu ambiente AWS e o relacionamento com a dataRain. Otimização automática, billing detalhado, acompanhamento de projetos, profissionais alocados e suporte técnico com IA. Tudo em uma interface moderna e segura.",
     highlights: ["Autenticação segura com Cognito + MFA", "RBAC: cada cliente vê apenas seus dados", "IA generativa via AWS Bedrock (Claude)", "Tema claro e escuro", "Suporte a múltiplas organizações AWS", "Multi-tenant com isolamento total"],
     color: "bg-primary",
     bgColor: "bg-primary/10",
@@ -177,7 +177,7 @@ const modules = [
     badge: "Projetos",
     icon: FolderKanban,
     title: "Acompanhamento e Solicitação de Projetos",
-    description: "Acompanhe os projetos que a DataRain executa para sua empresa em tempo real. Solicite novos projetos diretamente pela plataforma com formulários técnicos específicos para cada tipo de serviço.",
+    description: "Acompanhe os projetos que a dataRain executa para sua empresa em tempo real. Solicite novos projetos diretamente pela plataforma com formulários técnicos específicos para cada tipo de serviço.",
     highlights: ["Status em tempo real", "Catálogo de 8 tipos de serviço", "Formulários técnicos detalhados", "Fluxo: Formulário → Proposta → Kickoff"],
     color: "bg-primary",
     bgColor: "bg-primary/10",
@@ -187,7 +187,7 @@ const modules = [
     badge: "Serviços Profissionais",
     icon: Users,
     title: "Gestão de Profissionais Alocados",
-    description: "Visualize todos os profissionais DataRain alocados na sua empresa. Currículo, escopo de trabalho, atividades semanais, KPIs e solicitação de novos profissionais direto pela plataforma.",
+    description: "Visualize todos os profissionais dataRain alocados na sua empresa. Currículo, escopo de trabalho, atividades semanais, KPIs e solicitação de novos profissionais direto pela plataforma.",
     highlights: ["Perfil completo (L4-L8)", "Timeline de atividades semanais", "KPIs: custo, horas, alocação", "Solicitar novos profissionais"],
     color: "bg-accent",
     bgColor: "bg-accent/10",
@@ -197,7 +197,7 @@ const modules = [
     badge: "Suporte 24/7",
     icon: Headphones,
     title: "Suporte Técnico Integrado",
-    description: "Canal direto com o time DataRain. Abertura de tickets com IA que analisa o chamado automaticamente, histórico de conversas, filtros por status e acompanhamento completo. Disponível 24/7.",
+    description: "Canal direto com o time dataRain. Abertura de tickets com IA que analisa o chamado automaticamente, histórico de conversas, filtros por status e acompanhamento completo. Disponível 24/7.",
     highlights: ["IA analisa chamados automaticamente", "Histórico de conversas", "Filtros e busca por texto", "Disponível 24/7"],
     color: "bg-primary",
     bgColor: "bg-primary/10",
@@ -207,9 +207,9 @@ const modules = [
 const diferenciais = [
   { icon: Zap, title: "AutoFix", description: "Economiza dinheiro automaticamente, sem intervenção manual." },
   { icon: Boxes, title: "Self-Service", description: "Deploys padronizados sem depender de engenheiros." },
-  { icon: FolderKanban, title: "Projetos & Profissionais", description: "Acompanhe projetos, alocações e custos da sua parceria com a DataRain." },
+  { icon: FolderKanban, title: "Projetos & Profissionais", description: "Acompanhe projetos, alocações e custos da sua parceria com a dataRain." },
   { icon: Brain, title: "IA no Suporte", description: "IA analisa chamados e acelera a resolução automaticamente." },
-  { icon: ClipboardList, title: "Sem E-mail", description: "Solicite projetos e profissionais à DataRain direto pela plataforma." },
+  { icon: ClipboardList, title: "Sem E-mail", description: "Solicite projetos e profissionais à dataRain direto pela plataforma." },
   { icon: Receipt, title: "Billing Transparente", description: "Visibilidade total dos custos AWS sem navegar no console da AWS." },
   { icon: Shield, title: "Multi-Tenant Seguro", description: "Cada cliente isolado com seus dados e permissões (RBAC + MFA)." },
   { icon: Sparkles, title: "IA Nativa", description: "AWS Bedrock (Claude) integrado nativamente em toda a plataforma." },
@@ -373,7 +373,7 @@ const archLayers = [
     id: "rbac",
     label: "Controle de Acesso",
     icon: Shield,
-    color: "from-[#3893af] to-[#5a9a8f]",
+    color: "from-[#3893af] to-[#4a93a0]",
     techs: ["RBAC", "Policies", "Tenant Isolation"],
     description: "Permissões granulares por papel. Cada cliente acessa apenas seus dados, com isolamento total entre tenants.",
   },
@@ -381,7 +381,7 @@ const archLayers = [
     id: "api",
     label: "API & Backend",
     icon: Globe,
-    color: "from-[#5a9a8f] to-[#8a9a60]",
+    color: "from-[#4a93a0] to-[#7a9070]",
     techs: ["API Gateway", "Lambda", "Step Functions"],
     description: "APIs serverless com escalabilidade automática. Cada requisição é autenticada e autorizada antes de processar.",
   },
@@ -389,7 +389,7 @@ const archLayers = [
     id: "ai",
     label: "IA Generativa",
     icon: Brain,
-    color: "from-[#b89040] to-[#d88a20]",
+    color: "from-[#c08520] to-[#f78504]",
     techs: ["AWS Bedrock", "Claude", "RAG"],
     description: "IA nativa em toda a plataforma. Análise de chamados, sugestões de otimização e insights automáticos via Bedrock.",
   },
@@ -397,7 +397,7 @@ const archLayers = [
     id: "data",
     label: "Dados & Storage",
     icon: Database,
-    color: "from-[#d88a20] to-[#f78504]",
+    color: "from-[#f78504] to-[#f78504]",
     techs: ["DynamoDB", "S3", "Athena"],
     description: "Dados criptografados em repouso e em trânsito. Queries otimizadas com Athena para billing e analytics.",
   },
@@ -620,12 +620,12 @@ const DataRainConsole = () => {
                 Seu ambiente AWS.
                 <br />
                 <span className="text-primary">
-                  Sua parceria DataRain.
+                  Sua parceria dataRain.
                 </span>
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-8 sm:mb-10">
-                A plataforma que centraliza a gestão do seu ambiente AWS e o relacionamento com a DataRain.
+                A plataforma que centraliza a gestão do seu ambiente AWS e o relacionamento com a dataRain.
                 Otimização automática, billing detalhado, acompanhamento de projetos,
                 profissionais alocados e suporte técnico com IA. Tudo em uma interface única.
               </p>

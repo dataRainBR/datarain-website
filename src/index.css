@@ -13,7 +13,7 @@ All colors MUST be HSL.
     --glass-border: 1px solid rgba(255, 255, 255, 0.1);
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-    /* DataRain Color Palette - 60% branco, 30% azul, 10% laranja */
+    /* dataRain Color Palette - 60% branco, 30% azul, 10% laranja */
     --background: 0 0% 100%;
     --foreground: 0 0% 25%;
 
@@ -23,7 +23,7 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 25%;
 
-    /* Azul DataRain como cor primária (#3893af) */
+    /* Azul dataRain como cor primária (#3893af) */
     --primary: 194 51% 45%;
     --primary-foreground: 0 0% 100%;
 
@@ -34,7 +34,7 @@ All colors MUST be HSL.
     --muted: 194 20% 95%;
     --muted-foreground: 0 0% 30%;
 
-    /* Laranja DataRain como accent (#f78504) */
+    /* Laranja dataRain como accent (#f78504) */
     --accent: 25 95% 49%;
     --accent-foreground: 0 0% 100%;
 
@@ -51,7 +51,7 @@ All colors MUST be HSL.
     --input: 194 30% 90%;
     --ring: 194 51% 45%;
 
-    /* Gradientes DataRain - Apenas para texto usando laranja oficial */
+    /* Gradientes dataRain - Apenas para texto usando laranja oficial */
     --gradient-text-orange: linear-gradient(to right, hsl(25, 95%, 49%), hsl(25, 85%, 55%));
     --gradient-hero: linear-gradient(135deg, hsl(205, 63%, 35%) 0%, hsl(190, 70%, 45%) 35%, hsl(25, 95%, 49%) 100%);
     --gradient-subtle: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(194, 30%, 98%) 100%);

@@ -24,7 +24,7 @@ const Privacidade = () => {
               Política de Privacidade
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A DATARAIN respeita a sua privacidade e está comprometida em proteger seus dados pessoais
+              A dataRain respeita a sua privacidade e está comprometida em proteger seus dados pessoais
             </p>
           </div>
         </div>
@@ -38,10 +38,10 @@ const Privacidade = () => {
           <Card className="mb-8">
             <CardContent className="p-8">
               <p className="text-muted-foreground leading-relaxed mb-4">
-                A <strong className="text-foreground">DATARAIN</strong> respeita a sua privacidade e está comprometida em evoluir continuamente para proteger seus dados pessoais de acordo com a Lei nº 13.709/2018 – "Lei Geral de Proteção de Dados Pessoais (LGPD)" e regulamentos e normas aplicáveis.
+                A <strong className="text-foreground">dataRain</strong> respeita a sua privacidade e está comprometida em evoluir continuamente para proteger seus dados pessoais de acordo com a Lei nº 13.709/2018 – "Lei Geral de Proteção de Dados Pessoais (LGPD)" e regulamentos e normas aplicáveis.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Buscaremos formas de proteger todos que possuem dados pessoais coletados, tratados, utilizados e/ou processados pela <strong className="text-foreground">DATARAIN</strong>.
+                Buscaremos formas de proteger todos que possuem dados pessoais coletados, tratados, utilizados e/ou processados pela <strong className="text-foreground">dataRain</strong>.
               </p>
             </CardContent>
           </Card>
@@ -54,7 +54,7 @@ const Privacidade = () => {
                 Encarregada de Proteção de Dados (DPO)
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Nomeamos <strong className="text-foreground">Aline Turim</strong> como Encarregada de Proteção de Dados pessoais (DPO) que é responsável por supervisionar questões relacionadas à legislação e normas aplicáveis, bem como questões de proteção de dados em geral, atuando como canal de comunicação entre a DATARAIN, os Titulares e a Autoridade Nacional de Proteção de Dados.
+                Nomeamos <strong className="text-foreground">Aline Turim</strong> como Encarregada de Proteção de Dados pessoais (DPO) que é responsável por supervisionar questões relacionadas à legislação e normas aplicáveis, bem como questões de proteção de dados em geral, atuando como canal de comunicação entre a dataRain, os Titulares e a Autoridade Nacional de Proteção de Dados.
               </p>
               
               <h3 className="text-lg font-semibold text-foreground mb-4">Atribuições do DPO:</h3>
