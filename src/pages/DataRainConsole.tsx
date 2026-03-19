@@ -2,9 +2,9 @@ import UniversalHeader from "@/components/layout/UniversalHeader";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import {
-  ArrowRight, Brain, Zap, Shield,
+  Brain, Zap, Shield,
   Lock, Sparkles,
-  Database, Globe, ChevronRight, Play,
+  Database, Globe, ChevronRight,
   Boxes, Wrench, Users, Receipt,
   Headphones, CheckCircle2,
   LayoutDashboard,
@@ -631,12 +631,6 @@ const DataRainConsole = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
-                  <a href="/fale-conosco">
-                    Solicitar Acesso
-                    <Play className="w-5 h-5 ml-2" />
-                  </a>
-                </Button>
                 <Button variant="outline" size="xl" asChild className="border-primary/30 hover:bg-primary/5">
                   <a href="#modulos">
                     Explorar Módulos
@@ -1000,12 +994,6 @@ const DataRainConsole = () => {
                 dos projetos em andamento e dos profissionais alocados na sua empresa.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="hero" size="xl" asChild>
-                  <a href="/fale-conosco">
-                    Solicitar Acesso
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </a>
-                </Button>
                 <Button variant="outline" size="xl" asChild className="border-primary/30 hover:bg-primary/5">
                   <a href="/fale-conosco">
                     Falar com Especialista
